@@ -14,10 +14,9 @@ The first step of the project was to develop optimized operators to compute divi
 
 The GeCoS (Generic Compiler Suite) project is an open source compiler infrastructure developed in the CAIRN group since 2004. GeCoS is mainly a Source to Source compiler targeting HLS tools (Vivado HLS, Catapult-C, etc.).
 
-For more information about GeCoS, here is the official website :
-http://gecos.gforge.inria.fr/doku/doku.php
+For more information about GeCoS, here is the official website : http://gecos.gforge.inria.fr/doku/doku.php
 
 ### Automation of the optimization
+To automate the substitution of the division or multiplication by the optimized operator we integretate it to the GeCoS compiler. We create a new compilation pass for the GeCoS compiler wich will do this substitutions. GeCoS uses the Eclipse plug-in framework and to integrate a new pass we just have to add an extension to the GeCoS framework extension point. The folder optimized_operators_GeCoS stocked this java project.
 
-To automate the substitution of the division or multiplication by the optimized operator we integretate it to the GeCoS compiler. 
 
