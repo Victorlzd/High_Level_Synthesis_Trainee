@@ -1,0 +1,8 @@
+script build_operator.cs {
+    pass Build_operators:Build_operators {
+    }
+    pass SetBitAccurateBackend:SetBitAccurateBackend {
+    }
+    pass SaveGecosProject:SaveGecosProject {
+    }
+}

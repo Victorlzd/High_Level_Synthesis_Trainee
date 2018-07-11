@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Optimized_operators_GeCoS
+Bundle-SymbolicName: optimized_operators_GeCoS;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: fr.irisa.r2d2.gecos.framework,
+ fr.irisa.cairn.gecos.model;bundle-version="0.3.0"
+Automatic-Module-Name: optimized_operators_GeCoS
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

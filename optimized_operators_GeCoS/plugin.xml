@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="fr.irisa.r2d2.gecos.framework.modules">
+      <module
+            class="extensions.Build_operators"
+            iterative="false"
+            name="Build_operators">
+      </module>
+      <module
+            class="extensions.Replace_Operator"
+            iterative="false"
+            name="replace_operator">
+      </module>
+   </extension>
+
+
+</plugin>
