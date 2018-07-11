@@ -1,0 +1,12 @@
+script replace_operator.cs {
+    pass CreateGecosProject:CreateProject {
+    }
+    pass AddSourceToGecosProject:AddSourceToGecosProject {
+    }
+    pass CDTFrontend:CDTFrontEnd {
+    }
+    pass replace_operator:Replace_Operator {
+    }
+    pass SetBitAccurateBackend:SetBitAccurateBackend {
+    }
+}
