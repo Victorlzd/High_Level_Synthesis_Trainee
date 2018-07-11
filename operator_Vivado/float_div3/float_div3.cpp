@@ -783,7 +783,7 @@ void LUT_div3(ap_uint<4> D, ap_uint<2> r_in, ap_uint<4>* q, ap_uint<2>* r_out)
     *q = LUT_q(D,r_in);
 }
 
-void intDiv3(ap_uint<26> xf, ap_uint<26>* mant)
+void int_div3(ap_uint<26> xf, ap_uint<26>* mant)
 // cette fonction iplémente une division euclidienne par 3 d'entier
 {
     ap_uint<2> r=0;
@@ -891,7 +891,8 @@ void floatDiv3(float x, float* res){
 
         xf++; //On ajoute 1 pour ramener l'arrondi au plus proche à un arrondi à l'inférieur qui est gratuit
 
-        intDiv3(xf, &new_mant);
+        int_div3
+    (xf, &new_mant);
     }
 
     recomposeFloat(s, new_exp, new_mant, res);
