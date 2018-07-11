@@ -1,0 +1,64 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Jul  9 14:48:39 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.4 LTS
+| Command      : report_timing -file ./report/float_div2_timing_synth.rpt
+| Design       : float_div2
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             7.392ns  (required time - arrival time)
+  Source:                 in_r[2]
+                            (input port)
+  Destination:            ap_return[22]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        2.608ns  (logic 0.917ns (35.161%)  route 1.691ns (64.839%))
+  Logic Levels:           7  (CARRY4=6 LUT4=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  in_r[2] (IN)
+                         net (fo=2, unset)            0.672     0.672    in_r[2]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.368     1.040 r  ap_return[3]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.008     1.048    ap_return[3]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.108 r  ap_return[7]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.108    ap_return[7]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.168 r  ap_return[11]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.168    ap_return[11]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.228 r  ap_return[15]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.228    ap_return[15]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.288 r  ap_return[19]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.288    ap_return[19]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.149     1.437 r  ap_return[22]_INST_0_i_1/CO[2]
+                         net (fo=1, unplaced)         0.339     1.776    new_mant_V_2_fu_216_p3[22]
+                         LUT4 (Prop_lut4_I1_O)        0.160     1.936 r  ap_return[22]_INST_0/O
+                         net (fo=0)                   0.672     2.608    ap_return[22]
+                                                                      r  ap_return[22] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -2.608    
+  -------------------------------------------------------------------
+                         slack                                  7.392    
+
+
+
+

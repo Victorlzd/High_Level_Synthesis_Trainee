@@ -1,0 +1,4 @@
+sv work "glbl.v"
+sv xil_defaultlib "float_div2.v"
+sv xil_defaultlib "float_div2.autotb.v"
+

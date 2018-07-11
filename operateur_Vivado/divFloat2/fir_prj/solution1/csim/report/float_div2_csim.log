@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../test_divFloat2.cpp in debug mode
+   Compiling ../../../../divFloat2.cpp in debug mode
+   Generating csim.exe
+j=0
+j=1
+j=2
+j=254
+j=255
+j=0
+j=1
+j=2
+j=254
+j=255
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

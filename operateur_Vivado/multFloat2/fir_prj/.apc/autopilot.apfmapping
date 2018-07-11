@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="multFloat2.cpp" path="/home/duazel/Documents/stage3IF/vivado/multFloat2/multFloat2.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="top_test.cpp" path="/home/duazel/Documents/stage3IF/vivado/multFloat2/top_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

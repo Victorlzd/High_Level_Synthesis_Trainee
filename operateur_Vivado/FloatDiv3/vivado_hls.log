@@ -1,0 +1,445 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/duazel/Xilinx/Vivado/2018.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/duazel/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'duazel' on host 'duazel' (Linux_x86_64 version 4.13.0-45-generic) on Fri Jun 22 08:18:33 CEST 2018
+INFO: [HLS 200-10] On os Ubuntu 16.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/duazel/Documents/stage3IF/vivado/FloatDiv3'
+INFO: [HLS 200-10] Opening and resetting project '/home/duazel/Documents/stage3IF/vivado/FloatDiv3/fir_prj'.
+INFO: [HLS 200-10] Adding design file 'floatDiv3.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'test_floatDiv3.cpp' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/duazel/Documents/stage3IF/vivado/FloatDiv3/fir_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../test_floatDiv3.cpp in debug mode
+   Compiling ../../../../floatDiv3.cpp in debug mode
+   Generating csim.exe
+exp = 20
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'floatDiv3.cpp' ...
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 351.605 ; gain = 0.117 ; free physical = 4682 ; free virtual = 14441
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 351.605 ; gain = 0.117 ; free physical = 4669 ; free virtual = 14442
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 351.961 ; gain = 0.473 ; free physical = 4644 ; free virtual = 14427
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'LUT_r' into 'LUT_div3' (floatDiv3.cpp:782) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_q' into 'LUT_div3' (floatDiv3.cpp:783) automatically.
+INFO: [XFORM 203-602] Inlining function 'decomposeFloat' into 'floatDiv3' (floatDiv3.cpp:856) automatically.
+INFO: [XFORM 203-602] Inlining function 'intDiv3' into 'floatDiv3' (floatDiv3.cpp:894) automatically.
+INFO: [XFORM 203-602] Inlining function 'recomposeFloat' into 'floatDiv3' (floatDiv3.cpp:897) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4637 ; free virtual = 14420
+INFO: [XFORM 203-602] Inlining function 'LUT_r1' into 'LUT_r' (floatDiv3.cpp:757) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_r2' into 'LUT_r' (floatDiv3.cpp:758) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_q1' into 'LUT_q' (floatDiv3.cpp:766) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_q2' into 'LUT_q' (floatDiv3.cpp:767) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_q3' into 'LUT_q' (floatDiv3.cpp:768) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_q4' into 'LUT_q' (floatDiv3.cpp:769) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_r' into 'LUT_div3' (floatDiv3.cpp:782) automatically.
+INFO: [XFORM 203-602] Inlining function 'LUT_q' into 'LUT_div3' (floatDiv3.cpp:783) automatically.
+INFO: [XFORM 203-602] Inlining function 'decomposeFloat' into 'floatDiv3' (floatDiv3.cpp:856) automatically.
+INFO: [XFORM 203-602] Inlining function 'intDiv3' into 'floatDiv3' (floatDiv3.cpp:894) automatically.
+INFO: [XFORM 203-602] Inlining function 'recomposeFloat' into 'floatDiv3' (floatDiv3.cpp:897) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (floatDiv3.cpp:877:8) in function 'floatDiv3'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (floatDiv3.cpp:879:12) to (floatDiv3.cpp:895:5) in function 'floatDiv3'... converting 10 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'LUT_div3' into 'floatDiv3' (floatDiv3.cpp:794->floatDiv3.cpp:894) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4601 ; free virtual = 14393
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:21 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4597 ; free virtual = 14390
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'floatDiv3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'floatDiv3'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 21.53 seconds; current allocated memory: 92.446 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 94.985 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'floatDiv3'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'floatDiv3/x' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'floatDiv3/res' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'floatDiv3' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'floatDiv3_mux_646_1_1_1' to 'floatDiv3_mux_646bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'floatDiv3_mux_646bkb': 42 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'floatDiv3'.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 105.272 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:35 ; elapsed = 00:00:23 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4573 ; free virtual = 14371
+INFO: [SYSC 207-301] Generating SystemC RTL for floatDiv3.
+INFO: [VHDL 208-304] Generating VHDL RTL for floatDiv3.
+INFO: [VLOG 209-307] Generating Verilog RTL for floatDiv3.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using ""
+   Compiling test_floatDiv3.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:62 : la recette pour la cible « obj/test_floatDiv3.cpp_pre.cpp.tb.o » a échouée
+which: /home/duazel/Xilinx/Vivado/2018.1/lnx64/tools/gcc/bin/g++: u k ow  comma d
+In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
+                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:181:9: error: ‘__gmp_const’ does not name a type
+In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
+                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:244:2: error: ‘__gmp_const’ does not name a type
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:245:2: error: ‘__gmp_const’ does not name a type
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:260:2: error: ‘__gmp_const’ does not name a type
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:19: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:42: error: expected primary-expression before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:54: error: expected primary-expression before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:66: error: expected primary-expression before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:79: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:79: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:301:29: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:303:27: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:305:29: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:329:24: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:27: error: ‘__gmp_const’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:44: error: two or more data types in declaration of ‘parameter’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:45: error: expected ‘)’ before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:47: error: expected unqualified-id before ‘int’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:32: error: ‘__gmp_const’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:49: error: two or more data types in declaration of ‘parameter’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:50: error: expected ‘)’ before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:52: error: expected unqualified-id before ‘int’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:345:24: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:347:23: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:349:23: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:350:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:351:20: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:353:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:355:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:355:41: error: ‘mpfr_srcptr’ has not been declared
+In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
+                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:370:32: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:370:55: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:370:55: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:371:33: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:371:56: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:371:56: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:374:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:375:22: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:375:45: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:375:45: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:376:21: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:376:44: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:376:44: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:381:27: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:381:50: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:381:50: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:383:22: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:384:33: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:386:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:388:20: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:388:43: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:388:43: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:389:29: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:389:52: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:389:52: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:391:54: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:393:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:404:34: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:411:46: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:30: error: ‘__gmp_const’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:46: error: two or more data types in declaration of ‘parameter’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:47: error: expected ‘)’ before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:49: error: expected unqualified-id before ‘...’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:417:19: error: ‘__gmp_const’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:417:38: error: expected primary-expression before ‘...’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:417:41: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:29: error: ‘__gmp_const’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:45: error: two or more data types in declaration of ‘parameter’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:46: error: expected ‘)’ before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:48: error: expected unqualified-id before ‘...’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:27: error: ‘__gmp_const’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:43: error: two or more data types in declaration of ‘parameter’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:44: error: expected ‘)’ before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:46: error: expected unqualified-id before ‘...’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:36: error: ‘__gmp_const’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:52: error: two or more data types in declaration of ‘parameter’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:53: error: expected ‘)’ before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:55: error: expected unqualified-id before ‘...’ token
+In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
+                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:444:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:444:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:446:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:448:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:452:48: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:454:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:457:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:461:31: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:464:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:464:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:466:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:466:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:468:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:468:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:470:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:470:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:473:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:475:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:477:44: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:479:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:481:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:483:44: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:486:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:488:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:490:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:492:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:494:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:496:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:499:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:501:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:503:36: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:505:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:507:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:509:36: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:512:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:519:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:519:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:522:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:523:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:524:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:526:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:529:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:530:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:531:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:533:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:535:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:536:25: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:538:16: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:538:29: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:538:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:17: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:30: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:43: error: expected primary-expression before ‘int’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:46: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:540:18: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:540:31: error: expected primary-expression before ‘double’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:540:37: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:541:19: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:541:32: error: expected primary-expression before ‘long’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:541:43: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:542:19: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:542:32: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:542:43: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:543:19: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:543:32: error: expected primary-expression before ‘unsigned’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:543:45: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:544:19: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:544:32: error: expected primary-expression before ‘long’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:544:36: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:24: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:37: error: expected primary-expression before ‘unsigned’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:62: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:62: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:24: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:37: error: expected primary-expression before ‘long’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:53: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:53: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:549:31: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:549:44: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:15: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:28: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:41: error: expected primary-expression before ‘unsigned’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:54: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:553:16: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:555:31: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:557:31: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:559:30: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:561:30: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:563:30: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:565:30: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:568:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:569:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:570:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:571:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:572:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:573:33: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:575:33: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:577:32: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:579:33: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:581:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:582:37: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:584:36: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:584:49: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:586:32: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:586:45: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:588:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:588:40: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:591:25: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:591:48: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:591:48: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:592:25: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:592:48: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:592:48: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:593:24: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:593:47: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:593:47: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:594:24: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:594:47: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:594:47: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:595:26: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:595:49: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:595:49: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:596:26: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:596:49: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:596:49: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:597:27: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:597:49: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:597:49: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:598:26: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:598:49: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:598:49: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:600:30: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:603:29: error: variable or field ‘mpfr_dump’ declared void
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:603:18: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:605:18: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:606:18: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:607:21: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:608:22: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:609:19: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:610:22: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:612:22: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:612:35: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:612:46: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:613:27: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:613:40: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:613:51: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:615:19: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:615:32: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:615:43: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:616:24: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:616:37: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:616:48: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:617:26: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:617:38: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:617:49: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:618:20: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:618:33: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:618:44: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:619:24: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:619:37: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:619:48: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:621:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:622:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:623:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:624:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:625:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:626:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:627:42: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:630:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:631:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:632:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:634:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:635:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:636:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:637:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:638:40: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:640:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:641:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:642:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:642:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:644:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:645:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:646:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:648:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:648:41: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:650:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:651:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:652:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:653:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:654:27: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:655:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:656:33: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:657:29: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:658:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:662:25: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:663:25: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:664:31: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:666:25: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:667:25: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:668:31: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:671:25: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:673:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:673:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:675:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:675:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:677:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:677:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:680:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:682:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:684:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:686:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:688:18: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:688:41: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:688:41: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:690:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:692:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:694:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:696:28: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:698:18: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:698:41: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:698:41: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:700:18: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:700:41: error: expected primary-expression before ‘)’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:700:41: error: expression list treated as compound expression in initializer [-fpermissive]
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:702:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:702:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:702:52: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:704:26: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:704:39: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:704:52: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:30: error: ‘__gmp_const’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:47: error: two or more data types in declaration of ‘parameter’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:48: error: expected ‘)’ before ‘,’ token
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:50: error: expected unqualified-id before ‘char’
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:719:38: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:720:34: error: ‘mpfr_srcptr’ was not declared in this scope
+/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:724:28: error: ‘mpfr_srcptr’ was not declared in this scope
+In file included from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172:0,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
+                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
+                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
+/home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:245:45: error: ‘mpfr_srcptr’ has not been declared
+/home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:246:53: error: ‘mpfr_srcptr’ has not been declared
+make: *** [obj/test_floatDiv3.cpp_pre.cpp.tb.o] Erreur 1
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+command 'ap_source' returned error code
+    while executing
+"source [lindex $::argv 1] "
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 { source [lindex $::argv 1] } "
+
+INFO: [HLS 200-112] Total elapsed time: 55.98 seconds; peak allocated memory: 105.272 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Jun 22 08:19:28 2018...
