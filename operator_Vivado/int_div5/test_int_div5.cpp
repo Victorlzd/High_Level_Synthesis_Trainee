@@ -1,12 +1,13 @@
 #include <iostream>
 #include "ap_int.h"
 
-int int_div5(int in);
+//int int_div5(int in);
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	int result=0;
+	
+	int result=0;/*
 	ap_uint<32> D; 
 
 	ap_uint<32> q;
@@ -34,7 +35,8 @@ int main(int argc, char const *argv[])
 			cout << endl << endl;
 		}
 		
-	}
+	}*/
+	cout << 5/3 << endl;
 
 	return result;
 }

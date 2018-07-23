@@ -27,7 +27,7 @@ public class Div {
 	private static ProcedureSymbol[] proc_symbol_int = new ProcedureSymbol[64];
 	private static ProcedureSymbol[] proc_symbol_long = new ProcedureSymbol[64];
 	
-	public static ProcedureSymbol build_long_div(ProcedureSet ps, int div)
+	public static ProcedureSymbol build_long_div_odd(ProcedureSet ps, int div)
 	// This function provides a function which implement an optimized
 	// operator for the division by a small integer constant of an int
 	// return the symbol of the function
@@ -171,10 +171,9 @@ public class Div {
 		return proc_symbol_long[div];
 	}
 	
-
-	public static ProcedureSymbol build_int_div(ProcedureSet ps, int div)
+	public static ProcedureSymbol build_int_div_odd(ProcedureSet ps, int div)
 	// This function provides a function which implement an optimized
-	// operator for the division by a small integer constant of an int
+	// operator for the division by a small odd integer constant of an int
 	// return the symbol of the function
 	{
 		if(proc_symbol_int[div] == null) // We need to define the function if it isn't yet

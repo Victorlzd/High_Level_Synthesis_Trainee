@@ -1,0 +1,4 @@
+<annotationInfo>
+<item  id="6" filename="int_div2.cpp" linenumber="5" name="tmp_2" contextFuncName="int_div2" moduleName="int_div2" rtlName="tmp_2_fu_24_p4" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div2"><\/item>
+<item  id="7" filename="int_div2.cpp" linenumber="5" name="tmp" contextFuncName="int_div2" moduleName="int_div2" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div2"><\/item>
+</annotationInfo>
