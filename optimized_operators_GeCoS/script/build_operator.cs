@@ -1,6 +1,6 @@
 echo("Executing script");
 
-echo("Executing buildDivFloat2... ");
+echo("Executing build_operators... ");
 project = Build_operators(); # Call the script command which correspond to our GeCoS module
 echo("Done");
 

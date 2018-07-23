@@ -354,3 +354,173 @@ Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -de
 
 !ENTRY org.eclipse.core.resources 2 10035 2018-07-23 11:38:00.561
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 14:50:46.099 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 14:50:48.135
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 14:51:52.923 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 14:51:54.966
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 14:52:48.028 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 14:52:50.099
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 14:52:58.265 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 14:53:00.600
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 14:53:54.078 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 14:53:56.260
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 14:55:31.179 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 14:55:33.269
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 14:57:10.823 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 14:57:12.763
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:04:34.597 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:04:36.676
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:08:40.431 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:08:42.410
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:11:42.064 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:11:44.133
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:12:22.514 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:12:24.305
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:22:39.508 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:22:41.786
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:23:49.002 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:23:50.974
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:24:23.927 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:24:25.810
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:24:45.775 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:24:47.824
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:26:19.997 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:26:23.244
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-07-23 15:26:27.567 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -c build_operator.cs
+Command-line arguments:  -application fr.irisa.r2d2.gecos.framework.compiler -dev file:/home/duazel/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Gecos Script build_operator.cs (1)/dev.properties -os linux -ws gtk -arch x86_64 -c build_operator.cs
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-23 15:26:29.344
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
