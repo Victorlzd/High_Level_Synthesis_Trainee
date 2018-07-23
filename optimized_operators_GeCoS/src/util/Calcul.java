@@ -10,4 +10,17 @@ public class Calcul {
 		}
 		return res;
 	}
+	
+	public static int log2(int n)
+	{
+		int count = 0;
+		
+		while(n>=2)
+		{
+			n = n/2;
+			count++;
+		}
+		
+		return count;
+	}
 }
