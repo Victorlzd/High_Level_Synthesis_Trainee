@@ -5,8 +5,7 @@ The purpose of this project is to develop optimized operators to compute the div
 fhzhie
 ## Develop Vivado HLS operator
 
-The first step of the project was to develop optimized operators to compute division or multiplication by two or three with the tool Vivado HLS. This work is stocked in the folder operator_vivado. 
-lemf,oze
+The first step of the project was to develop optimized operators to compute division or multiplication by two or three with the tool Vivado HLS. This work is stocked in the folder operator_vivado.
 ## GeCoS compilation pass
 ### GeCoS Presentation
 
@@ -16,8 +15,3 @@ For morefepz information about GeCoS, here is the official website : http://geco
 
 ### Automation of the optimization
 To automate the substitution of the division or multiplication by the optimized operator we integretate it to the GeCoS compiler. We create a new compilation pass for the GeCoS compiler wich will do this substitutions. GeCoS uses the Eclipse plug-in framework and to integrate a new pass we just have to add an extension to the GeCoS framework extension point. The folder optimized_operators_GeCoS stocked this java project.
-
-fezihfiohze
-vezojvzlmù;
-ezhfkez,$efzn
-fjezop

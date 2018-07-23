@@ -48,13 +48,13 @@
     "IP": []
   },
   "Interfaces": {
-    "a": {
+    "a_V": {
       "type": "data",
       "dir": "in",
-      "width": "32",
+      "width": "4",
       "ctype": {"DATA": {
-          "Type": "integer signed",
-          "Width": "32"
+          "Type": "integer unsigned",
+          "Width": "4"
         }}
     },
     "ap_ctrl": {
@@ -67,13 +67,22 @@
         "ready": {"Type": "bool"}
       }
     },
-    "res": {
+    "ap_return": {
       "type": "data",
       "dir": "out",
-      "width": "32",
+      "width": "1",
       "ctype": {"DATA": {
-          "Type": "integer signed",
-          "Width": "32"
+          "Type": "integer unsigned",
+          "Width": "1"
+        }}
+    },
+    "b_V": {
+      "type": "data",
+      "dir": "in",
+      "width": "2",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "2"
         }}
     }
   },
@@ -94,17 +103,18 @@
       "dir": "out",
       "width": "1"
     },
-    "a": {
+    "ap_return": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "a_V": {
       "dir": "in",
-      "width": "32"
+      "width": "4"
     },
-    "res": {
-      "dir": "out",
-      "width": "32"
-    },
-    "res_ap_vld": {
-      "dir": "out",
-      "width": "1"
+    "b_V": {
+      "dir": "in",
+      "width": "2"
     }
   },
   "CPorts": {
@@ -112,18 +122,22 @@
       "interfaceRef": "ap_ctrl",
       "dir": "out"
     },
-    "a": {
-      "interfaceRef": "a",
+    "ap_return": {
+      "interfaceRef": "ap_return",
+      "dir": "out",
+      "dataWidth": "1"
+    },
+    "a_V": {
+      "interfaceRef": "a_V",
       "dir": "in",
-      "dataWidth": "32",
+      "dataWidth": "4",
       "handshakeRef": "ap_none"
     },
-    "res": {
-      "interfaceRef": "res",
-      "dir": "out",
-      "dataWidth": "32",
-      "handshakeRef": "ap_vld",
-      "firstOutLatency": "0"
+    "b_V": {
+      "interfaceRef": "b_V",
+      "dir": "in",
+      "dataWidth": "2",
+      "handshakeRef": "ap_none"
     }
   },
   "ModuleInfo": {
@@ -140,20 +154,25 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "6.58"
+          "Estimate": "3.290"
         },
         "Area": {
-          "DSP48E": "3",
+          "DSP48E": "0",
           "FF": "0",
-          "LUT": "21",
+          "LUT": "32",
           "BRAM_18K": "0"
         }
       }}
   },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none"
+  },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-06-22 15:06:42 CEST",
+    "Time": "2018-07-23 09:41:11 CEST",
     "ToolName": "vivado_hls",
-    "ToolVersion": "2018.1"
+    "ToolVersion": "2018.2"
   }
 }

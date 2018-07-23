@@ -13,6 +13,6 @@ create_clock -period 10 -name default
 #source "./fir_prj/solution1/directives.tcl"
 csim_design -clean -compiler clang
 csynth_design
-cosim_design -rtl vhdl
-#export_design -flow impl -rtl vhdl -format ip_catalog
+#cosim_design -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
 exit

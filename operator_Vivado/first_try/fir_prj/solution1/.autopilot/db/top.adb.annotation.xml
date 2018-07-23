@@ -1,0 +1,6 @@
+<annotationInfo>
+<item  id="9" filename="top.cpp" linenumber="7" name="p_Result_s" contextFuncName="top" moduleName="top" rtlName="p_Result_s_fu_36_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/first_try"><\/item>
+<item  id="10" filename="top.cpp" linenumber="8" name="zext_cast" contextFuncName="top" moduleName="top" rtlName="mul_fu_48_p00" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/first_try"><\/item>
+<item  id="11" filename="top.cpp" linenumber="8" name="mul" contextFuncName="top" moduleName="top" rtlName="mul_fu_48_p2" latency="0" BRAM="-1" DSP="0" FF="0" LUT="32" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/first_try"><\/item>
+<item  id="12" filename="top.cpp" linenumber="8" name="tmp" contextFuncName="top" moduleName="top" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/first_try"><\/item>
+</annotationInfo>
