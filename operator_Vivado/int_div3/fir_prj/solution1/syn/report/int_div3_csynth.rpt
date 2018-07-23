@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vivado HLS Report for 'int_div3'
+================================================================
+* Date:           Mon Jul 23 16:09:39 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.832|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       0|   13104|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      15|
+|Register         |        -|      -|      36|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|      36|   13119|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|   ~0   |      12|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT |
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |int_div3_mux_646_bkb_U1   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U2   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U3   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U4   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U5   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U6   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U7   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U8   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U9   |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U10  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U11  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U12  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U13  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U14  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U15  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U16  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U17  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U18  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U19  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U20  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U21  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U22  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U23  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U24  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U25  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U26  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U27  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U28  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U29  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U30  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U31  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U32  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U33  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U34  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U35  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U36  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U37  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U38  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U39  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U40  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U41  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U42  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U43  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U44  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U45  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U46  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U47  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    |int_div3_mux_646_bkb_U48  |int_div3_mux_646_bkb  |        0|      0|  0|  273|
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |Total                     |                      |        0|      0|  0|13104|
+    +--------------------------+----------------------+---------+-------+---+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  15|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  15|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+---+----+-----+-----------+
+    |             Name            | FF| LUT| Bits| Const Bits|
+    +-----------------------------+---+----+-----+-----------+
+    |agg_result_V_i1_i1_reg_6749  |  1|   0|    1|          0|
+    |agg_result_V_i1_i2_reg_6779  |  1|   0|    1|          0|
+    |agg_result_V_i1_i8_reg_6729  |  1|   0|    1|          0|
+    |agg_result_V_i1_i_reg_6709   |  1|   0|    1|          0|
+    |agg_result_V_i2_i2_reg_6759  |  1|   0|    1|          0|
+    |agg_result_V_i4_i1_reg_6734  |  1|   0|    1|          0|
+    |agg_result_V_i4_i2_reg_6764  |  1|   0|    1|          0|
+    |agg_result_V_i4_i5_reg_6714  |  1|   0|    1|          0|
+    |agg_result_V_i4_i_reg_6694   |  1|   0|    1|          0|
+    |agg_result_V_i6_i1_reg_6739  |  1|   0|    1|          0|
+    |agg_result_V_i6_i2_reg_6769  |  1|   0|    1|          0|
+    |agg_result_V_i6_i6_reg_6719  |  1|   0|    1|          0|
+    |agg_result_V_i6_i_reg_6699   |  1|   0|    1|          0|
+    |agg_result_V_i8_i1_reg_6744  |  1|   0|    1|          0|
+    |agg_result_V_i8_i2_reg_6774  |  1|   0|    1|          0|
+    |agg_result_V_i8_i7_reg_6724  |  1|   0|    1|          0|
+    |agg_result_V_i8_i_reg_6704   |  1|   0|    1|          0|
+    |agg_result_V_i_i3_reg_6754   |  1|   0|    1|          0|
+    |ap_CS_fsm                    |  2|   0|    2|          0|
+    |p_Repl2_4_reg_6784           |  4|   0|    4|          0|
+    |p_Repl2_5_reg_6789           |  4|   0|    4|          0|
+    |p_Repl2_6_reg_6794           |  4|   0|    4|          0|
+    |p_Repl2_7_reg_6799           |  4|   0|    4|          0|
+    +-----------------------------+---+----+-----+-----------+
+    |Total                        | 36|   0|   36|          0|
+    +-----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_clk     |  in |    1| ap_ctrl_hs |   int_div3   | return value |
+|ap_rst     |  in |    1| ap_ctrl_hs |   int_div3   | return value |
+|ap_start   |  in |    1| ap_ctrl_hs |   int_div3   | return value |
+|ap_done    | out |    1| ap_ctrl_hs |   int_div3   | return value |
+|ap_idle    | out |    1| ap_ctrl_hs |   int_div3   | return value |
+|ap_ready   | out |    1| ap_ctrl_hs |   int_div3   | return value |
+|ap_return  | out |   32| ap_ctrl_hs |   int_div3   | return value |
+|in_r       |  in |   32|   ap_none  |     in_r     |    scalar    |
++-----------+-----+-----+------------+--------------+--------------+
+

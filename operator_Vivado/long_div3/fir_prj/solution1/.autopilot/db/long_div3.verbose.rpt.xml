@@ -1,0 +1,146 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'long_div3'" level="0">
+<item name = "Date">Mon Jul 23 16:23:07 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">fir_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 7.106, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">7, 7, 7, 7, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_lut_div3_chunk_fu_86">lut_div3_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div3_chunk_fu_93">lut_div3_chunk, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 0, 3276</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 147</column>
+<column name="Register">-, -, 122, -</column>
+<specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_lut_div3_chunk_fu_86">lut_div3_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div3_chunk_fu_93">lut_div3_chunk, 0, 0, 0, 1638</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">44, 9, 1, 9</column>
+<column name="grp_lut_div3_chunk_fu_86_d_V">44, 9, 4, 36</column>
+<column name="grp_lut_div3_chunk_fu_86_r_in_V">15, 3, 2, 6</column>
+<column name="grp_lut_div3_chunk_fu_93_d_V">44, 9, 4, 36</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="p_Result_10_reg_354">4, 0, 4, 0</column>
+<column name="p_Result_11_reg_359">4, 0, 4, 0</column>
+<column name="p_Result_12_reg_364">4, 0, 4, 0</column>
+<column name="p_Result_13_reg_369">4, 0, 4, 0</column>
+<column name="p_Result_2_reg_309">4, 0, 4, 0</column>
+<column name="p_Result_3_reg_314">4, 0, 4, 0</column>
+<column name="p_Result_4_reg_319">4, 0, 4, 0</column>
+<column name="p_Result_5_reg_324">4, 0, 4, 0</column>
+<column name="p_Result_6_reg_329">4, 0, 4, 0</column>
+<column name="p_Result_7_reg_334">4, 0, 4, 0</column>
+<column name="p_Result_8_reg_339">4, 0, 4, 0</column>
+<column name="p_Result_9_reg_344">4, 0, 4, 0</column>
+<column name="p_Result_s_4_reg_349">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_10_reg_424">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_11_reg_429">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_12_reg_434">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_1_reg_304">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_2_reg_379">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_3_reg_384">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_4_reg_389">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_5_reg_394">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_6_reg_399">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_7_reg_404">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_8_reg_409">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_9_reg_414">4, 0, 4, 0</column>
+<column name="q_chunk_V_0_s_reg_419">4, 0, 4, 0</column>
+<column name="q_chunk_V_reg_299">4, 0, 4, 0</column>
+<column name="reg_116">2, 0, 2, 0</column>
+<column name="tmp_reg_374">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, long_div3, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, long_div3, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, long_div3, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, long_div3, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, long_div3, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, long_div3, return value</column>
+<column name="ap_return">out, 64, ap_ctrl_hs, long_div3, return value</column>
+<column name="in_r">in, 64, ap_none, in_r, scalar</column>
+</table>
+</item>
+</section>
+</profile>

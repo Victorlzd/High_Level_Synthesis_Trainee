@@ -1,0 +1,234 @@
+<stg><name>lut_div5_chunk</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+:0  %r_in_V_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %r_in_V)
+
+]]></Node>
+<StgValue><ssdm name="r_in_V_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+:1  %d_V_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %d_V)
+
+]]></Node>
+<StgValue><ssdm name="d_V_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="6" op_0_bw="6" op_1_bw="3" op_2_bw="3">
+<![CDATA[
+:2  %p_Result_8 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %r_in_V_read, i3 %d_V_read)
+
+]]></Node>
+<StgValue><ssdm name="p_Result_8"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1" op_16_bw="1" op_17_bw="1" op_18_bw="1" op_19_bw="1" op_20_bw="1" op_21_bw="1" op_22_bw="1" op_23_bw="1" op_24_bw="1" op_25_bw="1" op_26_bw="1" op_27_bw="1" op_28_bw="1" op_29_bw="1" op_30_bw="1" op_31_bw="1" op_32_bw="1" op_33_bw="1" op_34_bw="1" op_35_bw="1" op_36_bw="1" op_37_bw="1" op_38_bw="1" op_39_bw="1" op_40_bw="1" op_41_bw="1" op_42_bw="1" op_43_bw="1" op_44_bw="1" op_45_bw="1" op_46_bw="1" op_47_bw="1" op_48_bw="1" op_49_bw="1" op_50_bw="1" op_51_bw="1" op_52_bw="1" op_53_bw="1" op_54_bw="1" op_55_bw="1" op_56_bw="1" op_57_bw="1" op_58_bw="1" op_59_bw="1" op_60_bw="1" op_61_bw="1" op_62_bw="1" op_63_bw="1" op_64_bw="1" op_65_bw="6">
+<![CDATA[
+:3  %agg_result_V_i = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i6 %p_Result_8)
+
+]]></Node>
+<StgValue><ssdm name="agg_result_V_i"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1" op_16_bw="1" op_17_bw="1" op_18_bw="1" op_19_bw="1" op_20_bw="1" op_21_bw="1" op_22_bw="1" op_23_bw="1" op_24_bw="1" op_25_bw="1" op_26_bw="1" op_27_bw="1" op_28_bw="1" op_29_bw="1" op_30_bw="1" op_31_bw="1" op_32_bw="1" op_33_bw="1" op_34_bw="1" op_35_bw="1" op_36_bw="1" op_37_bw="1" op_38_bw="1" op_39_bw="1" op_40_bw="1" op_41_bw="1" op_42_bw="1" op_43_bw="1" op_44_bw="1" op_45_bw="1" op_46_bw="1" op_47_bw="1" op_48_bw="1" op_49_bw="1" op_50_bw="1" op_51_bw="1" op_52_bw="1" op_53_bw="1" op_54_bw="1" op_55_bw="1" op_56_bw="1" op_57_bw="1" op_58_bw="1" op_59_bw="1" op_60_bw="1" op_61_bw="1" op_62_bw="1" op_63_bw="1" op_64_bw="1" op_65_bw="6">
+<![CDATA[
+:4  %agg_result_V_i2 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i6 %p_Result_8)
+
+]]></Node>
+<StgValue><ssdm name="agg_result_V_i2"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1" op_16_bw="1" op_17_bw="1" op_18_bw="1" op_19_bw="1" op_20_bw="1" op_21_bw="1" op_22_bw="1" op_23_bw="1" op_24_bw="1" op_25_bw="1" op_26_bw="1" op_27_bw="1" op_28_bw="1" op_29_bw="1" op_30_bw="1" op_31_bw="1" op_32_bw="1" op_33_bw="1" op_34_bw="1" op_35_bw="1" op_36_bw="1" op_37_bw="1" op_38_bw="1" op_39_bw="1" op_40_bw="1" op_41_bw="1" op_42_bw="1" op_43_bw="1" op_44_bw="1" op_45_bw="1" op_46_bw="1" op_47_bw="1" op_48_bw="1" op_49_bw="1" op_50_bw="1" op_51_bw="1" op_52_bw="1" op_53_bw="1" op_54_bw="1" op_55_bw="1" op_56_bw="1" op_57_bw="1" op_58_bw="1" op_59_bw="1" op_60_bw="1" op_61_bw="1" op_62_bw="1" op_63_bw="1" op_64_bw="1" op_65_bw="6">
+<![CDATA[
+:5  %agg_result_V_i4 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i6 %p_Result_8)
+
+]]></Node>
+<StgValue><ssdm name="agg_result_V_i4"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="3" op_0_bw="3" op_1_bw="1" op_2_bw="1" op_3_bw="1">
+<![CDATA[
+:6  %p_Result_s = call i3 @_ssdm_op_BitConcatenate.i3.i1.i1.i1(i1 %agg_result_V_i4, i1 %agg_result_V_i2, i1 %agg_result_V_i)
+
+]]></Node>
+<StgValue><ssdm name="p_Result_s"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1" op_16_bw="1" op_17_bw="1" op_18_bw="1" op_19_bw="1" op_20_bw="1" op_21_bw="1" op_22_bw="1" op_23_bw="1" op_24_bw="1" op_25_bw="1" op_26_bw="1" op_27_bw="1" op_28_bw="1" op_29_bw="1" op_30_bw="1" op_31_bw="1" op_32_bw="1" op_33_bw="1" op_34_bw="1" op_35_bw="1" op_36_bw="1" op_37_bw="1" op_38_bw="1" op_39_bw="1" op_40_bw="1" op_41_bw="1" op_42_bw="1" op_43_bw="1" op_44_bw="1" op_45_bw="1" op_46_bw="1" op_47_bw="1" op_48_bw="1" op_49_bw="1" op_50_bw="1" op_51_bw="1" op_52_bw="1" op_53_bw="1" op_54_bw="1" op_55_bw="1" op_56_bw="1" op_57_bw="1" op_58_bw="1" op_59_bw="1" op_60_bw="1" op_61_bw="1" op_62_bw="1" op_63_bw="1" op_64_bw="1" op_65_bw="6">
+<![CDATA[
+:7  %agg_result_V_i6 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i6 %p_Result_8)
+
+]]></Node>
+<StgValue><ssdm name="agg_result_V_i6"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1" op_16_bw="1" op_17_bw="1" op_18_bw="1" op_19_bw="1" op_20_bw="1" op_21_bw="1" op_22_bw="1" op_23_bw="1" op_24_bw="1" op_25_bw="1" op_26_bw="1" op_27_bw="1" op_28_bw="1" op_29_bw="1" op_30_bw="1" op_31_bw="1" op_32_bw="1" op_33_bw="1" op_34_bw="1" op_35_bw="1" op_36_bw="1" op_37_bw="1" op_38_bw="1" op_39_bw="1" op_40_bw="1" op_41_bw="1" op_42_bw="1" op_43_bw="1" op_44_bw="1" op_45_bw="1" op_46_bw="1" op_47_bw="1" op_48_bw="1" op_49_bw="1" op_50_bw="1" op_51_bw="1" op_52_bw="1" op_53_bw="1" op_54_bw="1" op_55_bw="1" op_56_bw="1" op_57_bw="1" op_58_bw="1" op_59_bw="1" op_60_bw="1" op_61_bw="1" op_62_bw="1" op_63_bw="1" op_64_bw="1" op_65_bw="6">
+<![CDATA[
+:8  %agg_result_V_i8 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i6 %p_Result_8)
+
+]]></Node>
+<StgValue><ssdm name="agg_result_V_i8"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1" op_16_bw="1" op_17_bw="1" op_18_bw="1" op_19_bw="1" op_20_bw="1" op_21_bw="1" op_22_bw="1" op_23_bw="1" op_24_bw="1" op_25_bw="1" op_26_bw="1" op_27_bw="1" op_28_bw="1" op_29_bw="1" op_30_bw="1" op_31_bw="1" op_32_bw="1" op_33_bw="1" op_34_bw="1" op_35_bw="1" op_36_bw="1" op_37_bw="1" op_38_bw="1" op_39_bw="1" op_40_bw="1" op_41_bw="1" op_42_bw="1" op_43_bw="1" op_44_bw="1" op_45_bw="1" op_46_bw="1" op_47_bw="1" op_48_bw="1" op_49_bw="1" op_50_bw="1" op_51_bw="1" op_52_bw="1" op_53_bw="1" op_54_bw="1" op_55_bw="1" op_56_bw="1" op_57_bw="1" op_58_bw="1" op_59_bw="1" op_60_bw="1" op_61_bw="1" op_62_bw="1" op_63_bw="1" op_64_bw="1" op_65_bw="6">
+<![CDATA[
+:9  %agg_result_V_i1 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i1 undef, i6 %p_Result_8)
+
+]]></Node>
+<StgValue><ssdm name="agg_result_V_i1"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="3" op_0_bw="3" op_1_bw="1" op_2_bw="1" op_3_bw="1">
+<![CDATA[
+:10  %p_Result_1 = call i3 @_ssdm_op_BitConcatenate.i3.i1.i1.i1(i1 %agg_result_V_i1, i1 %agg_result_V_i8, i1 %agg_result_V_i6)
+
+]]></Node>
+<StgValue><ssdm name="p_Result_1"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="6" op_0_bw="6" op_1_bw="3">
+<![CDATA[
+:11  %mrv = insertvalue { i3, i3 } undef, i3 %p_Result_1, 0
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="6" op_0_bw="6" op_1_bw="3">
+<![CDATA[
+:12  %mrv_1 = insertvalue { i3, i3 } %mrv, i3 %p_Result_s, 1
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="6">
+<![CDATA[
+:13  ret { i3, i3 } %mrv_1
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

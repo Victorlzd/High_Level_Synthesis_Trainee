@@ -1,0 +1,6 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "int_div3.vhd"
+vhdl xil_defaultlib "int_div3.autotb.vhd"
+vhdl xil_defaultlib "int_div3_mux_646_bkb.vhd"
+

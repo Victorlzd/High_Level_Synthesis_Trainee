@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"long_div3": {
+			"proto_instances": {
+			}
+		}
+	}
+}
