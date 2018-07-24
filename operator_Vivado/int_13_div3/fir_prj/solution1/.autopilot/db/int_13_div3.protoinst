@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"int_13_div3": {
+			"proto_instances": {
+			}
+		}
+	}
+}

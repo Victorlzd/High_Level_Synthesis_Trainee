@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vivado HLS Report for 'int_13_div3'
+================================================================
+* Date:           Tue Jul 24 11:50:22 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.832|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       0|    6552|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|       -|
+|Register         |        -|      -|       -|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|       0|    6552|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|       0|       6|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT |
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |int_13_div3_mux_6bkb_U1   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U2   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U3   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U4   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U5   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U6   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U7   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U8   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U9   |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U10  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U11  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U12  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U13  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U14  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U15  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U16  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U17  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U18  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U19  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U20  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U21  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U22  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U23  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    |int_13_div3_mux_6bkb_U24  |int_13_div3_mux_6bkb  |        0|      0|  0|  273|
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |Total                     |                      |        0|      0|  0| 6552|
+    +--------------------------+----------------------+---------+-------+---+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_start   |  in |    1| ap_ctrl_hs |  int_13_div3 | return value |
+|ap_done    | out |    1| ap_ctrl_hs |  int_13_div3 | return value |
+|ap_idle    | out |    1| ap_ctrl_hs |  int_13_div3 | return value |
+|ap_ready   | out |    1| ap_ctrl_hs |  int_13_div3 | return value |
+|ap_return  | out |   13| ap_ctrl_hs |  int_13_div3 | return value |
+|in_V       |  in |   13|   ap_none  |     in_V     |    scalar    |
++-----------+-----+-----+------------+--------------+--------------+
+
