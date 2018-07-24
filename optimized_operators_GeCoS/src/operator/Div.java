@@ -24,16 +24,22 @@ import java.util.TreeMap;
 
 public class Div {
 	
-	// This arrays contains the ProcedureSymbols of the already builded functions
+	// This maps contains the ProcedureSymbols of the already builded functions
 	// It permits to avoid multiple definitions
 	private static Map<Integer, ProcedureSymbol> builded_lut_chunk_divider = new TreeMap<Integer,ProcedureSymbol>();
 	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider_by_small_odd_constant = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
 	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
-	private static final int[] known_divider = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
+	
+	private static final int[] known_divider = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
 	
 	
 	public static ProcedureSymbol int_div(ProcedureSet ps, int div, int size)
+	/* this function provides operators for division by integer constants optimized for FPGA
+	 * return the ProccedureSymbol of the operator or null if the division cannot be optimized
+	 */
 	{
+		// to avoid multiple definitions we use map that stock the already builded operators
+		// and we build it only if it hasn't been build before
 		boolean builded = false;
 		if(builded_int_divider.containsKey(div))
 		{
@@ -42,12 +48,13 @@ public class Div {
 				builded = true;
 			}
 		}
-
-		if(!builded) // We need to define the function if it isn't yet
+		
+		
+		if(!builded) 
 		{
 			ProcedureSymbol proc_symbol;
 
-			if(can_optimize(div))
+			if(can_optimize(div)) // we verify if we are able to optimize this division
 			{
 				GecosUserTypeFactory.setScope(ps.getScope());
 				
@@ -64,11 +71,8 @@ public class Div {
 				CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
 				GecosUserTypeFactory.setScope(mainblock.getScope());
 				
+				// this returns the optimized computation of the division
 				Instruction compute_div = div_builder_eratosthene(ps, GecosUserInstructionFactory.symbref(parameters.get(0)), div, size);
-				if (compute_div == null)
-				{
-					compute_div = GecosUserInstructionFactory.div(GecosUserInstructionFactory.symbref(parameters.get(0)), GecosUserInstructionFactory.Int(div));
-				}
 				Instruction ret = GecosUserInstructionFactory.ret(compute_div);
 				
 				BasicBlock block = GecosUserBlockFactory.BBlock(ret);
@@ -79,9 +83,11 @@ public class Div {
 			}
 			else
 			{
+				// if we cannot optimize this division return and stock null
 				proc_symbol = null;
 			}
 			
+			// stock the ProcedureSymbol in the map
 			if(builded_int_divider.containsKey(div))
 			{
 				builded_int_divider.get(div).put(size, proc_symbol);
@@ -97,17 +103,26 @@ public class Div {
 	}
 
 	private static boolean can_optimize(int div)
+	// This function determines if we are able to optimize this division or not
 	{
+		/* Our optimization is based on sieve of Eratosthène
+		 * We are able to optimize the division by all integers with inly the known_divider's elements
+		 * in their factorization
+		 */
 		for (int i = 0; i < known_divider.length; i++) {
 			if(div%known_divider[i]==0)
 			{
 				return can_optimize(div/known_divider[i]);
 			}
 		}
+		// if we come to div==1 it means that the integer factorization of the original divider
+		// is composed only by known_divider's element
 		if(div == 1)
 		{
 			return true;
 		}
+		// if div!=1 and had no divider in known_divider it means that there is another prime number
+		// in its factorization and we will not be able to optimize the division
 		else
 		{
 			return false;
@@ -115,8 +130,12 @@ public class Div {
 	}
 		
 	private static Instruction div_builder_eratosthene(ProcedureSet ps, Instruction instr_to_divide, int div, int size)
+	/* To optimize the division we use a succession of optimized division by the prime numbers of the integer factorization
+	 * of the divider
+	 */
 	{
 		if(div%2 == 0)
+		// The case of 2 is particular because we don't use the same optimization
 		{
 			int pow_2 = Calcul.pow_2_integer_factorization(div);
 			int new_div = (int) (div/Calcul.pow2(pow_2));
@@ -126,30 +145,15 @@ public class Div {
 		for (int i = 0; i < known_divider.length; i++) {
 			if(div%known_divider[i]==0)
 			{
+				// we use the optimized division by knwon_divider[i]
 				ProcedureSymbol ps_div = int_div_by_small_odd_constant(ps, known_divider[i], size);
 				Instruction intstr_div = GecosUserInstructionFactory.call(ps_div, instr_to_divide);
 				return div_builder_eratosthene(ps, intstr_div, div/known_divider[i], size);
 			}
 		}
-		/*else if(div%7 == 0)
-		{
-			ProcedureSymbol ps_div7 = int_div_by_small_odd_constant(ps, 7, size);
-			Instruction intstr_div7 = GecosUserInstructionFactory.call(ps_div7, instr_to_divide);
-			return div_builder_eratosthene(ps, intstr_div7, div/7, size);
-		}
-		else if(div%5 == 0)
-		{
-			ProcedureSymbol ps_div5 = int_div_by_small_odd_constant(ps, 5, size);
-			Instruction intstr_div5 = GecosUserInstructionFactory.call(ps_div5, instr_to_divide);
-			return div_builder_eratosthene(ps, intstr_div5, div/5, size);
-		}
-		else if(div%3 == 0)
-		{
-			ProcedureSymbol ps_div3 = int_div_by_small_odd_constant(ps, 3, size);
-			Instruction intstr_div3 = GecosUserInstructionFactory.call(ps_div3, instr_to_divide);
-			return div_builder_eratosthene(ps, intstr_div3, div/3, size);
-		}*/
+		
 		if(div == 1)
+		// end of recursivity
 		{
 			return instr_to_divide;
 		}
@@ -307,7 +311,6 @@ public class Div {
 			mainblock.addChildren(for_block);
 			mainblock.addChildren(return_q);
 			GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
-			File_builder.add_operator(proc_symbol);
 			
 			if(builded_int_divider_by_small_odd_constant.containsKey(div))
 			{
