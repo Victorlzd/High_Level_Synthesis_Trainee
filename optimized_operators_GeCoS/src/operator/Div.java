@@ -26,21 +26,148 @@ public class Div {
 	
 	// This arrays contains the ProcedureSymbols of the already builded functions
 	// It permits to avoid multiple definitions
-	private static ProcedureSymbol[] proc_symbol_lut_chunk = new ProcedureSymbol[64];
-	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_divider = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
+	private static Map<Integer, ProcedureSymbol> builded_lut_chunk_divider = new TreeMap<Integer,ProcedureSymbol>();
+	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider_by_small_odd_constant = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
+	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
+	private static final int[] known_divider = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
 	
 	
-	//public static ProcedureSymbol
+	public static ProcedureSymbol int_div(ProcedureSet ps, int div, int size)
+	{
+		boolean builded = false;
+		if(builded_int_divider.containsKey(div))
+		{
+			if(builded_int_divider.get(div).containsKey(size))
+			{
+				builded = true;
+			}
+		}
+
+		if(!builded) // We need to define the function if it isn't yet
+		{
+			ProcedureSymbol proc_symbol;
+
+			if(can_optimize(div))
+			{
+				GecosUserTypeFactory.setScope(ps.getScope());
+				
+				// Parameter definition
+				ArrayList<ParameterSymbol> parameters = new ArrayList<ParameterSymbol>();
+				// int in
+				parameters.add(GecosUserCoreFactory.paramSymbol("in", GecosUserTypeFactory.ACINT(size, false)));
+				// ap_uint<size> int_<size>_div<div>(ap_uint<size> in)
+				proc_symbol = GecosUserCoreFactory.procSymbol("operator_int_"+size+"_div"+div, GecosUserTypeFactory.ACINT(size, false), parameters);
+				
+				// add a comment which describes the function
+				GecosUserAnnotationFactory.comment(proc_symbol, "operator_int_"+size+"_div"+div+" implements a division by "+div+" of the integer "+size+" bits in, optimized for Vivado HLS");
+				
+				CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
+				GecosUserTypeFactory.setScope(mainblock.getScope());
+				
+				Instruction compute_div = div_builder_eratosthene(ps, GecosUserInstructionFactory.symbref(parameters.get(0)), div, size);
+				if (compute_div == null)
+				{
+					compute_div = GecosUserInstructionFactory.div(GecosUserInstructionFactory.symbref(parameters.get(0)), GecosUserInstructionFactory.Int(div));
+				}
+				Instruction ret = GecosUserInstructionFactory.ret(compute_div);
+				
+				BasicBlock block = GecosUserBlockFactory.BBlock(ret);
+				mainblock.addBlock(block);
+				
+				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
+				File_builder.add_operator(proc_symbol);
+			}
+			else
+			{
+				proc_symbol = null;
+			}
+			
+			if(builded_int_divider.containsKey(div))
+			{
+				builded_int_divider.get(div).put(size, proc_symbol);
+			}
+			else
+			{
+				Map<Integer,ProcedureSymbol> pair = new TreeMap<Integer,ProcedureSymbol>();
+				pair.put(size, proc_symbol);
+				builded_int_divider.put(div, pair);
+			}
+		}
+		return builded_int_divider.get(div).get(size);
+	}
+
+	private static boolean can_optimize(int div)
+	{
+		for (int i = 0; i < known_divider.length; i++) {
+			if(div%known_divider[i]==0)
+			{
+				return can_optimize(div/known_divider[i]);
+			}
+		}
+		if(div == 1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+		
+	private static Instruction div_builder_eratosthene(ProcedureSet ps, Instruction instr_to_divide, int div, int size)
+	{
+		if(div%2 == 0)
+		{
+			int pow_2 = Calcul.pow_2_integer_factorization(div);
+			int new_div = (int) (div/Calcul.pow2(pow_2));
+			Instruction shr_in = GecosUserInstructionFactory.shr(instr_to_divide, GecosUserInstructionFactory.Int(pow_2));
+			return div_builder_eratosthene(ps, shr_in, new_div, size-pow_2);
+		}
+		for (int i = 0; i < known_divider.length; i++) {
+			if(div%known_divider[i]==0)
+			{
+				ProcedureSymbol ps_div = int_div_by_small_odd_constant(ps, known_divider[i], size);
+				Instruction intstr_div = GecosUserInstructionFactory.call(ps_div, instr_to_divide);
+				return div_builder_eratosthene(ps, intstr_div, div/known_divider[i], size);
+			}
+		}
+		/*else if(div%7 == 0)
+		{
+			ProcedureSymbol ps_div7 = int_div_by_small_odd_constant(ps, 7, size);
+			Instruction intstr_div7 = GecosUserInstructionFactory.call(ps_div7, instr_to_divide);
+			return div_builder_eratosthene(ps, intstr_div7, div/7, size);
+		}
+		else if(div%5 == 0)
+		{
+			ProcedureSymbol ps_div5 = int_div_by_small_odd_constant(ps, 5, size);
+			Instruction intstr_div5 = GecosUserInstructionFactory.call(ps_div5, instr_to_divide);
+			return div_builder_eratosthene(ps, intstr_div5, div/5, size);
+		}
+		else if(div%3 == 0)
+		{
+			ProcedureSymbol ps_div3 = int_div_by_small_odd_constant(ps, 3, size);
+			Instruction intstr_div3 = GecosUserInstructionFactory.call(ps_div3, instr_to_divide);
+			return div_builder_eratosthene(ps, intstr_div3, div/3, size);
+		}*/
+		if(div == 1)
+		{
+			return instr_to_divide;
+		}
+		else
+		{
+			return null;
+		}
+	}
 	
-	public static ProcedureSymbol build_int_div_by_small_odd_constant(ProcedureSet ps, int div, int size)
+	private static ProcedureSymbol int_div_by_small_odd_constant(ProcedureSet ps, int div, int size)
 	// This function provides a function which implement optimized operators
 	// for the division by a small odd integer constant of any arbitrary sized integer
 	// return the symbol of the function
 	{
 		boolean builded = false;
-		if(builded_divider.containsKey(div))
+		if(builded_int_divider_by_small_odd_constant.containsKey(div))
 		{
-			if(builded_divider.get(div).containsKey(size))
+			if(builded_int_divider_by_small_odd_constant.get(div).containsKey(size))
 			{
 				builded = true;
 			}
@@ -58,11 +185,11 @@ public class Div {
 			ArrayList<ParameterSymbol> parameters = new ArrayList<ParameterSymbol>();
 			// int in
 			parameters.add(GecosUserCoreFactory.paramSymbol("in", GecosUserTypeFactory.ACINT(size, false)));
-			// int int_div<div>(int in)
+			// ap_uint<size> int_<size>_div<div>(ap_uint<size> in)
 			proc_symbol = GecosUserCoreFactory.procSymbol("int_"+size+"_div"+div, GecosUserTypeFactory.ACINT(size, false), parameters);
 			
 			// add a comment which describes the function
-			GecosUserAnnotationFactory.comment(proc_symbol, "int_"+size+"_div"+div+" implements a division by "+div+" of the int in, optimized for Vivado HLS");
+			GecosUserAnnotationFactory.comment(proc_symbol, "int_"+size+"_div"+div+" implements a division by "+div+" of the integer "+size+" bits in, optimized for Vivado HLS");
 			
 			CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
 			GecosUserTypeFactory.setScope(mainblock.getScope());
@@ -96,10 +223,10 @@ public class Div {
 			if(size%width_chunk != 0) // if the result isn't round we need to do one uncomplete step before the loop
 			{
 				Instruction[] args_d_range = {GecosUserInstructionFactory.Int(size-1), GecosUserInstructionFactory.Int(it_number*width_chunk)};
-				// d.range(31, it_number*width_chunk)
+				// d.range(size-1, it_number*width_chunk)
 				Instruction d_range = GecosUserInstructionFactory.methodCallInstruction("range", 
 						GecosUserInstructionFactory.symbref(d_symbol), args_d_range);
-				// d_chunk = d.range(31, it_number*width_chunk)
+				// d_chunk = d.range(size-1, it_number*width_chunk)
 				Instruction d_chunk_d_range = GecosUserInstructionFactory.set(d_chunk_symbol, d_range);
 				adjust_block.addInstruction(d_chunk_d_range);
 
@@ -107,22 +234,22 @@ public class Div {
 				Instruction[] args_lut_div = {GecosUserInstructionFactory.symbref(d_chunk_symbol), GecosUserInstructionFactory.symbref(r_symbol),
 				              GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(q_chunk_symbol)),
 				              GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(r_symbol))};
-				build_lut_div_chunk(ps, div);
+				
 				// lut_div<div>(d_chunk, r, &q_chunk, &r)
-				Instruction call_lut_div = GecosUserInstructionFactory.call(proc_symbol_lut_chunk[div], args_lut_div);
+				Instruction call_lut_div = GecosUserInstructionFactory.call(lut_div_chunk(ps, div), args_lut_div);
 				adjust_block.addInstruction(call_lut_div);
 				
-				// (31, it_number*width_chunk)
+				// (size-1, it_number*width_chunk)
 				Instruction[] args_q_range = {GecosUserInstructionFactory.Int(size-1), GecosUserInstructionFactory.Int(it_number*width_chunk)};
 				// q.range(31, it_number*width_chunk)
 				Instruction q_range = GecosUserInstructionFactory.methodCallInstruction("range", 
 						GecosUserInstructionFactory.symbref(q_symbol), args_q_range);
-				// (31-it_number*width_chunk, 0)
+				// (size-1-it_number*width_chunk, 0)
 				Instruction[] args_q_chunk_range = {GecosUserInstructionFactory.Int(size-1-it_number*width_chunk), GecosUserInstructionFactory.Int(0)};
-				// range(31-it_number*width_chunk, 0)
+				// range(size-1-it_number*width_chunk, 0)
 				Instruction q_chunk_range = GecosUserInstructionFactory.methodCallInstruction("range", 
 						GecosUserInstructionFactory.symbref(q_chunk_symbol), args_q_chunk_range);
-				// q.range(i*4+3,i*4) = q_chunk.range(31-it_number*width_chunk, 0)
+				// q.range(i*4+3,i*4) = q_chunk.range(size-1-it_number*width_chunk, 0)
 				Instruction q_range_q_chunk = GecosUserInstructionFactory.set(q_range, q_chunk_range);
 				adjust_block.addInstruction(q_range_q_chunk);
 			}
@@ -155,9 +282,8 @@ public class Div {
 			Instruction[] args_lut_div = {GecosUserInstructionFactory.symbref(d_chunk_symbol), GecosUserInstructionFactory.symbref(r_symbol),
 			              GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(q_chunk_symbol)),
 			              GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(r_symbol))};
-			build_lut_div_chunk(ps, div);
 			// lut_div3(d_chunk, r, &q_chunk, &r)
-			Instruction call_lut_div = GecosUserInstructionFactory.call(proc_symbol_lut_chunk[div], args_lut_div);
+			Instruction call_lut_div = GecosUserInstructionFactory.call(lut_div_chunk(ps, div), args_lut_div);
 			for_body_bb.addInstruction(call_lut_div);
 			
 			// (i*width_chunk+width_chunk-1,i*width_chunk)
@@ -183,21 +309,21 @@ public class Div {
 			GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
 			File_builder.add_operator(proc_symbol);
 			
-			if(builded_divider.containsKey(div))
+			if(builded_int_divider_by_small_odd_constant.containsKey(div))
 			{
-				builded_divider.get(div).put(size, proc_symbol);
+				builded_int_divider_by_small_odd_constant.get(div).put(size, proc_symbol);
 			}
 			else
 			{
 				Map<Integer,ProcedureSymbol> pair = new TreeMap<Integer,ProcedureSymbol>();
 				pair.put(size, proc_symbol);
-				builded_divider.put(div, pair);
+				builded_int_divider_by_small_odd_constant.put(div, pair);
 			}
 		}
-		return builded_divider.get(div).get(size);
+		return builded_int_divider_by_small_odd_constant.get(div).get(size);
 	}
 	
-	private static ProcedureSymbol build_lut_div_chunk(ProcedureSet ps, int div)
+	private static ProcedureSymbol lut_div_chunk(ProcedureSet ps, int div)
 	/* This function build a group of functions which compute the division of a chunk
 	 * of the dividend with only 6 LUTs
 	 * it returns the quotient and the remainders on 6 bits so the width of the chunk depends
@@ -205,8 +331,9 @@ public class Div {
 	 */
 	{
 		// We build the function only if it hasn't been builded yet
-		if(proc_symbol_lut_chunk[div] == null)
+		if(!builded_lut_chunk_divider.containsKey(div))
 		{
+			ProcedureSymbol proc_symbol;
 			String name = "lut_div"+div+"_chunk";
 			
 			// We compute the width of the remainder
@@ -225,7 +352,7 @@ public class Div {
 			// ap_uint<width_r> r_in
 			parameters.add(GecosUserCoreFactory.paramSymbol("r_out", GecosUserTypeFactory.PTR(GecosUserTypeFactory.ACINT(width_r, false))));
 			// void lut_r1(ap_uint<6-width_r> d, ap_uint<width_r> r, ap_uint<6-width_r> * d, ap_uint<width_r> * r)
-			proc_symbol_lut_chunk[div] = GecosUserCoreFactory.procSymbol(name, GecosUserTypeFactory.VOID(), parameters);
+			proc_symbol = GecosUserCoreFactory.procSymbol(name, GecosUserTypeFactory.VOID(), parameters);
 			
 			CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
 			GecosUserTypeFactory.setScope(mainblock.getScope());
@@ -237,7 +364,7 @@ public class Div {
 				//(d,r_in)
 				Instruction[] args_lut = {GecosUserInstructionFactory.symbref(parameters.get(0)), GecosUserInstructionFactory.symbref(parameters.get(1))};
 				// lut_div<div>_r<i>
-				ProcedureSymbol lut_proc_symbol = build_single_lut(ps, div, i, true);
+				ProcedureSymbol lut_proc_symbol = single_lut(ps, div, i, true);
 				// (*r_out)[i]
 				Instruction instr_r_select_i = GecosUserInstructionFactory.array(GecosUserInstructionFactory.indir(
 						GecosUserInstructionFactory.symbref(parameters.get(3))), GecosUserInstructionFactory.Int(i));
@@ -253,7 +380,7 @@ public class Div {
 				//(d,r_in)
 				Instruction[] args_lut = {GecosUserInstructionFactory.symbref(parameters.get(0)), GecosUserInstructionFactory.symbref(parameters.get(1))};
 				// lut_div<div>_q<i>
-				ProcedureSymbol lut_proc_symbol = build_single_lut(ps, div, i, false);
+				ProcedureSymbol lut_proc_symbol = single_lut(ps, div, i, false);
 				// (*q)[i]
 				Instruction instr_r_select_i = GecosUserInstructionFactory.array(GecosUserInstructionFactory.indir(
 						GecosUserInstructionFactory.symbref(parameters.get(2))), GecosUserInstructionFactory.Int(i));
@@ -265,14 +392,15 @@ public class Div {
 			}
 			
 			mainblock.addChildren(block);
-			GecosUserCoreFactory.proc(ps, proc_symbol_lut_chunk[div], mainblock);
+			GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
+			
+			builded_lut_chunk_divider.put(div, proc_symbol);
 		}
 		
-		return proc_symbol_lut_chunk[div];
+		return builded_lut_chunk_divider.get(div);
 	}
 	
-	
-	private static ProcedureSymbol build_single_lut(ProcedureSet ps, int div, int n, boolean isRemainder)
+	private static ProcedureSymbol single_lut(ProcedureSet ps, int div, int n, boolean isRemainder)
 	/* This function build functions which computes one of the bit of the remainder or the quotient of
 	 * the division by <div>
 	 * 

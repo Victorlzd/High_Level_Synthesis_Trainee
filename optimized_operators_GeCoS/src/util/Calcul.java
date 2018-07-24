@@ -23,4 +23,17 @@ public class Calcul {
 		
 		return count;
 	}
+	
+	public static int pow_2_integer_factorization(int n)
+	{
+		int count = 0;
+		
+		while(n%2 == 0 & n!=0)
+		{
+			n = n/2;
+			count++;
+		}
+		
+		return count;
+	}
 }

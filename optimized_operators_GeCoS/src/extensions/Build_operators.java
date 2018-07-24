@@ -17,7 +17,8 @@ public class Build_operators {
 		GecosProject project = GecosUserCoreFactory.project("build_operators");
 		ProcedureSet ps = File_builder.create_ps();
 		
-		Div.build_int_div_by_small_odd_constant(ps, 3, 13);
+		Div.int_div(ps, 29, 32);
+		Div.int_div(ps, 69, 32);
 		
 		return File_builder.add_files(project);		
 	}
