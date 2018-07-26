@@ -1,899 +1,3842 @@
-#include "ap_int.h"
-using namespace std;
+#include <ap_int.h>
 
-ap_uint<1> LUT_r1(ap_uint<4> D, ap_uint<2> r_in) 
-//cette fonction décrit la LUT retournant le bit 1 du reste
-{
-    ap_uint<6> in = r_in.concat(D);
+union fix_to_float {
+	float f;
+	unsigned int i;
+};
+typedef union fix_to_float fix_to_float;
+void decompose_float(float in, ap_uint<1> (* s), ap_uint<8> (* exp), ap_uint<23> (* mant));
+ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in);
+ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in);
+ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in);
+ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in);
+ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in);
+ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in);
+void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out));
+/* int_33_div3 implements a division by 3 of the integer 33 bits in, optimized for Vivado HLS */
+ap_uint<33> int_33_div3(ap_uint<33> in);
+ap_uint<1> lut_r0_div7(ap_uint<3> d, ap_uint<3> r_in);
+ap_uint<1> lut_r1_div7(ap_uint<3> d, ap_uint<3> r_in);
+ap_uint<1> lut_r2_div7(ap_uint<3> d, ap_uint<3> r_in);
+ap_uint<1> lut_q0_div7(ap_uint<3> d, ap_uint<3> r_in);
+ap_uint<1> lut_q1_div7(ap_uint<3> d, ap_uint<3> r_in);
+ap_uint<1> lut_q2_div7(ap_uint<3> d, ap_uint<3> r_in);
+void lut_div7_chunk(ap_uint<3> d, ap_uint<3> r_in, ap_uint<3> (* q), ap_uint<3> (* r_out));
+/* int_33_div7 implements a division by 7 of the integer 33 bits in, optimized for Vivado HLS */
+ap_uint<33> int_33_div7(ap_uint<33> in);
+ap_uint<1> lut_r0_div13(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_r1_div13(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_r2_div13(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_r3_div13(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_q0_div13(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_q1_div13(ap_uint<2> d, ap_uint<4> r_in);
+void lut_div13_chunk(ap_uint<2> d, ap_uint<4> r_in, ap_uint<2> (* q), ap_uint<4> (* r_out));
+/* int_33_div13 implements a division by 13 of the integer 33 bits in, optimized for Vivado HLS */
+ap_uint<33> int_33_div13(ap_uint<33> in);
+/* operator_int_33_div273 implements a division by 273 of the integer 33 bits in, optimized for Vivado HLS */
+ap_uint<33> operator_int_33_div273(ap_uint<33> in);
+void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float * out);
+/* float_div3 implements a division by three of the float in, optimized for Vivado HLS */
+float float_div3(float in);
 
-    switch(in)
-    {
-        case 0:
-            return 0;
-        case 1:
-            return 1;
-        case 2:
-            return 0;
 
-        case 3:
-            return 0;
-        case 4:
-            return 1;
-        case 5:
-            return 0;
-
-        case 6:
-            return 0;
-        case 7:
-            return 1;
-        case 8:
-            return 0;
-
-        case 9:
-            return 0;
-        case 10:
-            return 1;
-        case 11:
-            return 0;
-
-        case 12:
-            return 0;
-        case 13:
-            return 1;
-        case 14:
-            return 0;
-
-        case 15:
-            return 0;
-        case 16:
-            return 1;
-        case 17:
-            return 0;
-
-        case 18:
-            return 0;
-        case 19:
-            return 1;
-        case 20:
-            return 0;
-
-        case 21:
-            return 0;
-        case 22:
-            return 1;
-        case 23:
-            return 0;
-
-        case 24:
-            return 0;
-        case 25:
-            return 1;
-        case 26:
-            return 0;
-
-        case 27:
-            return 0;
-        case 28:
-            return 1;
-        case 29:
-            return 0;
-
-        case 30:
-            return 0;
-        case 31:
-            return 1;
-        case 32:
-            return 0;
-
-        case 33:
-            return 0;
-        case 34:
-            return 1;
-        case 35:
-            return 0;
-
-        case 36:
-            return 0;
-        case 37:
-            return 1;
-        case 38:
-            return 0;
-
-        case 39:
-            return 0;
-        case 40:
-            return 1;
-        case 41:
-            return 0;
-
-        case 42:
-            return 0;
-        case 43:
-            return 1;
-        case 44:
-            return 0;
-
-        case 45:
-            return 0;
-        case 46:
-            return 1;
-        case 47:
-            return 0;
-
-        default:
-            return 0;
-
-    }
+void decompose_float(float in, ap_uint<1> (* s), ap_uint<8> (* exp), ap_uint<23> (* mant)) {
+	fix_to_float conv;
+	ap_uint<32> in_bits;
+	
+	conv.f = in;
+	in_bits = conv.i;
+	*s = in_bits[31];
+	*exp = in_bits.range(30, 23);
+	*mant = in_bits.range(22, 0);
 }
 
-ap_uint<1> LUT_r2(ap_uint<4> D, ap_uint<2> r_in)
-//cette fonction décrit la LUT retournant le bit 2 du reste
-{
-    ap_uint<6> in = r_in.concat(D);
-
-    switch(in)
-    {
-        case 0:
-            return 0;
-        case 1:
-            return 0;
-        case 2:
-            return 1;
-
-        case 3:
-            return 0;
-        case 4:
-            return 0;
-        case 5:
-            return 1;
-
-        case 6:
-            return 0;
-        case 7:
-            return 0;
-        case 8:
-            return 1;
-
-        case 9:
-            return 0;
-        case 10:
-            return 0;
-        case 11:
-            return 1;
-
-        case 12:
-            return 0;
-        case 13:
-            return 0;
-        case 14:
-            return 1;
-
-        case 15:
-            return 0;
-        case 16:
-            return 0;
-        case 17:
-            return 1;
-
-        case 18:
-            return 0;
-        case 19:
-            return 0;
-        case 20:
-            return 1;
-
-        case 21:
-            return 0;
-        case 22:
-            return 0;
-        case 23:
-            return 1;
-
-        case 24:
-            return 0;
-        case 25:
-            return 0;
-        case 26:
-            return 1;
-
-        case 27:
-            return 0;
-        case 28:
-            return 0;
-        case 29:
-            return 1;
-
-        case 30:
-            return 0;
-        case 31:
-            return 0;
-        case 32:
-            return 1;
-
-        case 33:
-            return 0;
-        case 34:
-            return 0;
-        case 35:
-            return 1;
-
-        case 36:
-            return 0;
-        case 37:
-            return 0;
-        case 38:
-            return 1;
-
-        case 39:
-            return 0;
-        case 40:
-            return 0;
-        case 41:
-            return 1;
-
-        case 42:
-            return 0;
-        case 43:
-            return 0;
-        case 44:
-            return 1;
-
-        case 45:
-            return 0;
-        case 46:
-            return 0;
-        case 47:
-            return 1;
-
-        default:
-            return 0;
-
-    }
+ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 1;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 1;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 1;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 1;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 1;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 0;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 0;
+		break;
+		case 45 :
+		ret_value = 0;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 0;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 1;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 1;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 1;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
 }
 
-ap_uint<1> LUT_q1(ap_uint<4> D, ap_uint<2> r_in)
-//cette fonction décrit la LUT retournant le bit 1 du quotient
-{
-    ap_uint<6> in = r_in.concat(D);
-
-    switch(in)
-    {
-        case 0:
-            return 0;
-        case 1:
-            return 0;
-        case 2:
-            return 0;
-
-        case 3:
-            return 1;
-        case 4:
-            return 1;
-        case 5:
-            return 1;
-
-        case 6:
-            return 0;
-        case 7:
-            return 0;
-        case 8:
-            return 0;
-
-        case 9:
-            return 1;
-        case 10:
-            return 1;
-        case 11:
-            return 1;
-
-        case 12:
-            return 0;
-        case 13:
-            return 0;
-        case 14:
-            return 0;
-
-        case 15:
-            return 1;
-        case 16:
-            return 1;
-        case 17:
-            return 1;
-
-        case 18:
-            return 0;
-        case 19:
-            return 0;
-        case 20:
-            return 0;
-
-        case 21:
-            return 1;
-        case 22:
-            return 1;
-        case 23:
-            return 1;
-
-        case 24:
-            return 0;
-        case 25:
-            return 0;
-        case 26:
-            return 0;
-
-        case 27:
-            return 1;
-        case 28:
-            return 1;
-        case 29:
-            return 1;
-
-        case 30:
-            return 0;
-        case 31:
-            return 0;
-        case 32:
-            return 0;
-
-        case 33:
-            return 1;
-        case 34:
-            return 1;
-        case 35:
-            return 1;
-
-        case 36:
-            return 0;
-        case 37:
-            return 0;
-        case 38:
-            return 0;
-
-        case 39:
-            return 1;
-        case 40:
-            return 1;
-        case 41:
-            return 1;
-
-        case 42:
-            return 0;
-        case 43:
-            return 0;
-        case 44:
-            return 0;
-
-        case 45:
-            return 1;
-        case 46:
-            return 1;
-        case 47:
-            return 1;
-
-        default:
-            return 0;
-
-    }
+ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 1;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 1;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 1;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 1;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 1;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 0;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 0;
+		break;
+		case 46 :
+		ret_value = 0;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 1;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 1;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 1;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
 }
 
-ap_uint<1> LUT_q2(ap_uint<4> D, ap_uint<2> r_in)
-//cette fonction décrit la LUT retournant le bit 2 du quotient
-{
-    ap_uint<6> in = r_in.concat(D);
-
-    switch(in)
-    {
-        case 0:
-            return 0;
-        case 1:
-            return 0;
-        case 2:
-            return 0;
-
-        case 3:
-            return 0;
-        case 4:
-            return 0;
-        case 5:
-            return 0;
-
-        case 6:
-            return 1;
-        case 7:
-            return 1;
-        case 8:
-            return 1;
-
-        case 9:
-            return 1;
-        case 10:
-            return 1;
-        case 11:
-            return 1;
-
-        case 12:
-            return 0;
-        case 13:
-            return 0;
-        case 14:
-            return 0;
-
-        case 15:
-            return 0;
-        case 16:
-            return 0;
-        case 17:
-            return 0;
-
-        case 18:
-            return 1;
-        case 19:
-            return 1;
-        case 20:
-            return 1;
-
-        case 21:
-            return 1;
-        case 22:
-            return 1;
-        case 23:
-            return 1;
-
-        case 24:
-            return 0;
-        case 25:
-            return 0;
-        case 26:
-            return 0;
-
-        case 27:
-            return 0;
-        case 28:
-            return 0;
-        case 29:
-            return 0;
-
-        case 30:
-            return 1;
-        case 31:
-            return 1;
-        case 32:
-            return 1;
-
-        case 33:
-            return 1;
-        case 34:
-            return 1;
-        case 35:
-            return 1;
-
-        case 36:
-            return 0;
-        case 37:
-            return 0;
-        case 38:
-            return 0;
-
-        case 39:
-            return 0;
-        case 40:
-            return 0;
-        case 41:
-            return 0;
-
-        case 42:
-            return 1;
-        case 43:
-            return 1;
-        case 44:
-            return 1;
-
-        case 45:
-            return 1;
-        case 46:
-            return 1;
-        case 47:
-            return 1;
-
-        default:
-            return 0;
-
-    }
+ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 1;
+		break;
+		case 4 :
+		ret_value = 1;
+		break;
+		case 5 :
+		ret_value = 1;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 1;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 1;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 1;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 1;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 0;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 1;
+		break;
+		case 53 :
+		ret_value = 1;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 1;
+		break;
+		case 58 :
+		ret_value = 1;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 1;
+		break;
+	}
+	return ret_value;
 }
 
-ap_uint<1> LUT_q3(ap_uint<4> D, ap_uint<2> r_in)
-//cette fonction décrit la LUT retournant le bit 3 du quotient
-{
-    ap_uint<6> in = r_in.concat(D);
-
-    switch(in)
-    {
-        case 0:
-            return 0;
-        case 1:
-            return 0;
-        case 2:
-            return 0;
-
-        case 3:
-            return 0;
-        case 4:
-            return 0;
-        case 5:
-            return 0;
-
-        case 6:
-            return 0;
-        case 7:
-            return 0;
-        case 8:
-            return 0;
-
-        case 9:
-            return 0;
-        case 10:
-            return 0;
-        case 11:
-            return 0;
-
-        case 12:
-            return 1;
-        case 13:
-            return 1;
-        case 14:
-            return 1;
-
-        case 15:
-            return 1;
-        case 16:
-            return 1;
-        case 17:
-            return 1;
-
-        case 18:
-            return 1;
-        case 19:
-            return 1;
-        case 20:
-            return 1;
-
-        case 21:
-            return 1;
-        case 22:
-            return 1;
-        case 23:
-            return 1;
-
-        case 24:
-            return 0;
-        case 25:
-            return 0;
-        case 26:
-            return 0;
-
-        case 27:
-            return 0;
-        case 28:
-            return 0;
-        case 29:
-            return 0;
-
-        case 30:
-            return 0;
-        case 31:
-            return 0;
-        case 32:
-            return 0;
-
-        case 33:
-            return 0;
-        case 34:
-            return 0;
-        case 35:
-            return 0;
-
-        case 36:
-            return 1;
-        case 37:
-            return 1;
-        case 38:
-            return 1;
-
-        case 39:
-            return 1;
-        case 40:
-            return 1;
-        case 41:
-            return 1;
-
-        case 42:
-            return 1;
-        case 43:
-            return 1;
-        case 44:
-            return 1;
-
-        case 45:
-            return 1;
-        case 46:
-            return 1;
-        case 47:
-            return 1;
-
-        default:
-            return 0;
-
-    }
+ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 1;
+		break;
+		case 7 :
+		ret_value = 1;
+		break;
+		case 8 :
+		ret_value = 1;
+		break;
+		case 9 :
+		ret_value = 1;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 1;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 1;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 1;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 0;
+		break;
+		case 41 :
+		ret_value = 0;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 1;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 1;
+		break;
+		case 57 :
+		ret_value = 1;
+		break;
+		case 58 :
+		ret_value = 1;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
 }
 
-ap_uint<1> LUT_q4(ap_uint<4> D, ap_uint<2> r_in)
-//cette fonction décrit la LUT retournant le bit 4 du quotient
-{
-    ap_uint<6> in = r_in.concat(D);
-
-    switch(in)
-    {
-        case 0:
-            return 0;
-        case 1:
-            return 0;
-        case 2:
-            return 0;
-
-        case 3:
-            return 0;
-        case 4:
-            return 0;
-        case 5:
-            return 0;
-
-        case 6:
-            return 0;
-        case 7:
-            return 0;
-        case 8:
-            return 0;
-
-        case 9:
-            return 0;
-        case 10:
-            return 0;
-        case 11:
-            return 0;
-
-        case 12:
-            return 0;
-        case 13:
-            return 0;
-        case 14:
-            return 0;
-
-        case 15:
-            return 0;
-        case 16:
-            return 0;
-        case 17:
-            return 0;
-
-        case 18:
-            return 0;
-        case 19:
-            return 0;
-        case 20:
-            return 0;
-
-        case 21:
-            return 0;
-        case 22:
-            return 0;
-        case 23:
-            return 0;
-
-        case 24:
-            return 1;
-        case 25:
-            return 1;
-        case 26:
-            return 1;
-
-        case 27:
-            return 1;
-        case 28:
-            return 1;
-        case 29:
-            return 1;
-
-        case 30:
-            return 1;
-        case 31:
-            return 1;
-        case 32:
-            return 1;
-
-        case 33:
-            return 1;
-        case 34:
-            return 1;
-        case 35:
-            return 1;
-
-        case 36:
-            return 1;
-        case 37:
-            return 1;
-        case 38:
-            return 1;
-
-        case 39:
-            return 1;
-        case 40:
-            return 1;
-        case 41:
-            return 1;
-
-        case 42:
-            return 1;
-        case 43:
-            return 1;
-        case 44:
-            return 1;
-
-        case 45:
-            return 1;
-        case 46:
-            return 1;
-        case 47:
-            return 1;
-
-        default:
-            return 0;
-
-    }
+ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 1;
+		break;
+		case 13 :
+		ret_value = 1;
+		break;
+		case 14 :
+		ret_value = 1;
+		break;
+		case 15 :
+		ret_value = 1;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 1;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 1;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 1;
+		break;
+		case 61 :
+		ret_value = 1;
+		break;
+		case 62 :
+		ret_value = 1;
+		break;
+		case 63 :
+		ret_value = 1;
+		break;
+	}
+	return ret_value;
 }
 
-ap_uint<2> LUT_r(ap_uint<4> D, ap_uint<2> r_in)
-//cette fonction regroupe les LUT du reste
-{
-    ap_uint<1> r1 = LUT_r1(D,r_in);
-    ap_uint<1> r2 = LUT_r2(D,r_in);
-
-    return r2.concat(r1);
+ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 1;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 1;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 1;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
 }
 
-ap_uint<4> LUT_q(ap_uint<4> D, ap_uint<2> r_in)
-//cette fonction regroupe les LUT du quotient
-{
-    ap_uint<1> q1 = LUT_q1(D,r_in);
-    ap_uint<1> q2 = LUT_q2(D,r_in);
-    ap_uint<1> q3 = LUT_q3(D,r_in);
-    ap_uint<1> q4 = LUT_q4(D,r_in);
-
-    ap_uint<2> q43 = q4.concat(q3);
-    ap_uint<2> q21 = q2.concat(q1);
-
-    ap_uint<4> q = q43.concat(q21);
-
-    return q;
+void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out)) {
+	(*r_out)[0] = lut_r0_div3(d, r_in);
+	(*r_out)[1] = lut_r1_div3(d, r_in);
+	(*q)[0] = lut_q0_div3(d, r_in);
+	(*q)[1] = lut_q1_div3(d, r_in);
+	(*q)[2] = lut_q2_div3(d, r_in);
+	(*q)[3] = lut_q3_div3(d, r_in);
 }
 
-void LUT_div3(ap_uint<4> D, ap_uint<2> r_in, ap_uint<4>* q, ap_uint<2>* r_out)
-//cette fonction effectue la division euclidienne par 3 d'un groupe de 4 bits
-{
-    *r_out = LUT_r(D,r_in);
-    *q = LUT_q(D,r_in);
+ap_uint<33> int_33_div3(ap_uint<33> in) {
+	ap_uint<33> d;
+	ap_uint<33> q;
+	ap_uint<4> d_chunk;
+	ap_uint<4> q_chunk;
+	ap_uint<2> r;
+	int i;
+	
+	r = 0;
+	d = in;
+	d_chunk = d.range(32, 32);
+	lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(32, 32) = q_chunk.range(0, 0);
+	for(i = 7; i >= 0; i = i - 1) {
+		#pragma HLS unroll
+		{
+		d_chunk = d.range(i*4 + 3, i*4);
+		lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+		q.range(i*4 + 3, i*4) = q_chunk;
+		}
+	}
+	return q;
 }
 
-void int_div3(ap_uint<26> xf, ap_uint<26>* mant)
-// cette fonction iplémente une division euclidienne par 3 d'entier
-{
-    ap_uint<2> r=0;
-    ap_uint<4> D_chunk=0;
-    ap_uint<4> q_chunk=0;
-
-    D_chunk = xf.range(25,22);
-    LUT_div3(D_chunk, r, &q_chunk, &r);
-    (*mant).range(25,22) = q_chunk;
-
-    D_chunk = xf.range(21,18);
-    LUT_div3(D_chunk, r, &q_chunk, &r);
-    (*mant).range(21,18) = q_chunk;
-
-    D_chunk = xf.range(17,14);
-    LUT_div3(D_chunk, r, &q_chunk, &r);
-    (*mant).range(17,14) = q_chunk;
-
-    D_chunk = xf.range(13,10);
-    LUT_div3(D_chunk, r, &q_chunk, &r);
-    (*mant).range(13,10) = q_chunk;
-
-
-    D_chunk = xf.range(9,6);
-    LUT_div3(D_chunk, r, &q_chunk, &r);
-    (*mant).range(9,6) = q_chunk;
-
-
-    D_chunk = xf.range(5,2);
-    LUT_div3(D_chunk, r, &q_chunk, &r);
-    (*mant).range(5,2) = q_chunk;
-
-    D_chunk = xf.range(1,0);
-    LUT_div3(D_chunk, r, &q_chunk, &r);
-    (*mant).range(1,0) = q_chunk.range(1,0);
+ap_uint<1> lut_r0_div7(ap_uint<3> d, ap_uint<3> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 1;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 1;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 1;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 1;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 1;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 1;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 1;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 0;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 0;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 0;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 1;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 1;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 1;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 1;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
 }
 
-typedef union {
-  unsigned int i;
-  float f;
-} float_to_fix;
-
-void decomposeFloat(float in, ap_uint<1> * s, ap_uint<8> * exp, ap_uint<23> * mant)
-{
-    float_to_fix conv;
-    conv.f = in;
-    ap_uint<32> in_bits = conv.i;
-
-    *s = in_bits[31]; // Selection d'un bit comme dans un tableau
-    *exp = in_bits.range(30,23); // Selection d'une plage de bits 
-    *mant = in_bits.range(22,0);
+ap_uint<1> lut_r1_div7(ap_uint<3> d, ap_uint<3> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 1;
+		break;
+		case 3 :
+		ret_value = 1;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 1;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 1;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 1;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 1;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 0;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 0;
+		break;
+		case 47 :
+		ret_value = 0;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 1;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 1;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 1;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
 }
 
-void recomposeFloat(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float* out)
-{
-    float_to_fix conv;
-
-    ap_uint<31> exp_plus_mant = exp.concat(mant); 
-    ap_uint<32> res = s.concat(exp_plus_mant);
-
-    conv.i = res;
-    *out = conv.f;
+ap_uint<1> lut_r2_div7(ap_uint<3> d, ap_uint<3> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 1;
+		break;
+		case 5 :
+		ret_value = 1;
+		break;
+		case 6 :
+		ret_value = 1;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 1;
+		break;
+		case 13 :
+		ret_value = 1;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 1;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 1;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 0;
+		break;
+		case 45 :
+		ret_value = 0;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 1;
+		break;
+		case 54 :
+		ret_value = 1;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 1;
+		break;
+		case 61 :
+		ret_value = 1;
+		break;
+		case 62 :
+		ret_value = 1;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
 }
 
-void floatDiv3(float x, float* res){
-    ap_uint<1> s;
-    ap_uint<8> exp;
-    ap_uint<23> mant;
-
-    decomposeFloat(x, &s, &exp, &mant);
-    ap_uint<8> new_exp=exp;
-    ap_uint<26> new_mant=mant;
-
-    if(exp!=255 && exp!=0) //on ne modifie pas l'exposant des sous-normaux et des infinis/NaN
-    {
-        if(mant[22] || exp==1) {
-        // Si la mantisse est supérieure à 1.5 la division de celle-ci par la mantisse de 3 (1.5 donc)
-        // donnera une mantisse valide (entre 1 et 2)
-        // dans ce cas on réduit l'exposant de l'exposant de 3 soit 1
-        // Si l'exposant est 1 on ne peut le diminuer de 2
-            new_exp = exp-1;
-        }else{
-        // Sinon on va multiplier par 2 la mantisse pour obtenir une mantisse valide lors de la division
-        // Il faut donc diminuer la mantisse de 2 et non 1 pour compenser et garder un résultat égal
-            new_exp = exp-2;
-        }
-    }
-
-    ap_uint<26> xf = mant;
-
-    if(exp!=255){// On modifie pas la mantisse des infinis et des NaN
-
-        if(exp!=0) xf.set(23); // Sauf pour les sous-normaux on ajoute le 1, non codé dans la mantisse
-
-        if((mant[22] || exp==2) && exp != 0 && exp!=1)
-            // On shift la mantisse de l'exposant de 3 soit 1 pour diviser par 3 et non 1.5
-            // On ne shift pas les nombres d'exposant 1 ou 0 car dans ce cas le résultat est directement celui
-            // de la division de la mantisse par 3 (l'exposant ne varie pas)
-            // On plafonne le shift des nombres d'exposant 2 car leur exposant ne peut baisser que de 1
-            xf = xf << 1;
-        else if(exp!=0 && exp!=1)
-            // Si la mantisse est inférieure à 1.5 on shift de 1 bit supplémentaire afin de retomber sur
-            // une mantisse valable. Cette multiplication est compensé par la baisse de l'exposant réalisé ci-dessus
-            xf = xf << 2;
-
-        xf++; //On ajoute 1 pour ramener l'arrondi au plus proche à un arrondi à l'inférieur qui est gratuit
-
-        int_div3
-    (xf, &new_mant);
-    }
-
-    recomposeFloat(s, new_exp, new_mant, res);
+ap_uint<1> lut_q0_div7(ap_uint<3> d, ap_uint<3> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 1;
+		break;
+		case 8 :
+		ret_value = 1;
+		break;
+		case 9 :
+		ret_value = 1;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 1;
+		break;
+		case 13 :
+		ret_value = 1;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 1;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 1;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 0;
+		break;
+		case 45 :
+		ret_value = 0;
+		break;
+		case 46 :
+		ret_value = 0;
+		break;
+		case 47 :
+		ret_value = 0;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 1;
+		break;
+		case 53 :
+		ret_value = 1;
+		break;
+		case 54 :
+		ret_value = 1;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 1;
+		break;
+	}
+	return ret_value;
 }
+
+ap_uint<1> lut_q1_div7(ap_uint<3> d, ap_uint<3> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 1;
+		break;
+		case 15 :
+		ret_value = 1;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 1;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 1;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 1;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 0;
+		break;
+		case 41 :
+		ret_value = 0;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 1;
+		break;
+		case 53 :
+		ret_value = 1;
+		break;
+		case 54 :
+		ret_value = 1;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
+}
+
+ap_uint<1> lut_q2_div7(ap_uint<3> d, ap_uint<3> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 1;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 1;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 1;
+		break;
+		case 53 :
+		ret_value = 1;
+		break;
+		case 54 :
+		ret_value = 1;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
+}
+
+void lut_div7_chunk(ap_uint<3> d, ap_uint<3> r_in, ap_uint<3> (* q), ap_uint<3> (* r_out)) {
+	(*r_out)[0] = lut_r0_div7(d, r_in);
+	(*r_out)[1] = lut_r1_div7(d, r_in);
+	(*r_out)[2] = lut_r2_div7(d, r_in);
+	(*q)[0] = lut_q0_div7(d, r_in);
+	(*q)[1] = lut_q1_div7(d, r_in);
+	(*q)[2] = lut_q2_div7(d, r_in);
+}
+
+ap_uint<33> int_33_div7(ap_uint<33> in) {
+	ap_uint<33> d;
+	ap_uint<33> q;
+	ap_uint<3> d_chunk;
+	ap_uint<3> q_chunk;
+	ap_uint<3> r;
+	int i;
+	
+	r = 0;
+	d = in;
+	for(i = 10; i >= 0; i = i - 1) {
+		#pragma HLS unroll
+		{
+		d_chunk = d.range(i*3 + 2, i*3);
+		lut_div7_chunk(d_chunk, r, &q_chunk, &r);
+		q.range(i*3 + 2, i*3) = q_chunk;
+		}
+	}
+	return q;
+}
+
+ap_uint<1> lut_r0_div13(ap_uint<2> d, ap_uint<4> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 1;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 1;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 1;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 1;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 1;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 1;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 1;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 0;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 0;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 0;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 1;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 1;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 1;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 1;
+		break;
+	}
+	return ret_value;
+}
+
+ap_uint<1> lut_r1_div13(ap_uint<2> d, ap_uint<4> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 1;
+		break;
+		case 3 :
+		ret_value = 1;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 1;
+		break;
+		case 7 :
+		ret_value = 1;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 1;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 1;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 0;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 0;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 0;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 0;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 1;
+		break;
+		case 55 :
+		ret_value = 1;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 1;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 1;
+		break;
+		case 63 :
+		ret_value = 1;
+		break;
+	}
+	return ret_value;
+}
+
+ap_uint<1> lut_r2_div13(ap_uint<2> d, ap_uint<4> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 1;
+		break;
+		case 5 :
+		ret_value = 1;
+		break;
+		case 6 :
+		ret_value = 1;
+		break;
+		case 7 :
+		ret_value = 1;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 1;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 1;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 1;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 0;
+		break;
+		case 41 :
+		ret_value = 0;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 0;
+		break;
+		case 48 :
+		ret_value = 0;
+		break;
+		case 49 :
+		ret_value = 0;
+		break;
+		case 50 :
+		ret_value = 0;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 1;
+		break;
+		case 57 :
+		ret_value = 1;
+		break;
+		case 58 :
+		ret_value = 1;
+		break;
+		case 59 :
+		ret_value = 1;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
+}
+
+ap_uint<1> lut_r3_div13(ap_uint<2> d, ap_uint<4> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 1;
+		break;
+		case 9 :
+		ret_value = 1;
+		break;
+		case 10 :
+		ret_value = 1;
+		break;
+		case 11 :
+		ret_value = 1;
+		break;
+		case 12 :
+		ret_value = 1;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 1;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 0;
+		break;
+		case 40 :
+		ret_value = 0;
+		break;
+		case 41 :
+		ret_value = 0;
+		break;
+		case 42 :
+		ret_value = 0;
+		break;
+		case 43 :
+		ret_value = 0;
+		break;
+		case 44 :
+		ret_value = 0;
+		break;
+		case 45 :
+		ret_value = 0;
+		break;
+		case 46 :
+		ret_value = 0;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 1;
+		break;
+		case 61 :
+		ret_value = 1;
+		break;
+		case 62 :
+		ret_value = 1;
+		break;
+		case 63 :
+		ret_value = 1;
+		break;
+	}
+	return ret_value;
+}
+
+ap_uint<1> lut_q0_div13(ap_uint<2> d, ap_uint<4> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 1;
+		break;
+		case 14 :
+		ret_value = 1;
+		break;
+		case 15 :
+		ret_value = 1;
+		break;
+		case 16 :
+		ret_value = 1;
+		break;
+		case 17 :
+		ret_value = 1;
+		break;
+		case 18 :
+		ret_value = 1;
+		break;
+		case 19 :
+		ret_value = 1;
+		break;
+		case 20 :
+		ret_value = 1;
+		break;
+		case 21 :
+		ret_value = 1;
+		break;
+		case 22 :
+		ret_value = 1;
+		break;
+		case 23 :
+		ret_value = 1;
+		break;
+		case 24 :
+		ret_value = 1;
+		break;
+		case 25 :
+		ret_value = 1;
+		break;
+		case 26 :
+		ret_value = 0;
+		break;
+		case 27 :
+		ret_value = 0;
+		break;
+		case 28 :
+		ret_value = 0;
+		break;
+		case 29 :
+		ret_value = 0;
+		break;
+		case 30 :
+		ret_value = 0;
+		break;
+		case 31 :
+		ret_value = 0;
+		break;
+		case 32 :
+		ret_value = 0;
+		break;
+		case 33 :
+		ret_value = 0;
+		break;
+		case 34 :
+		ret_value = 0;
+		break;
+		case 35 :
+		ret_value = 0;
+		break;
+		case 36 :
+		ret_value = 0;
+		break;
+		case 37 :
+		ret_value = 0;
+		break;
+		case 38 :
+		ret_value = 0;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
+}
+
+ap_uint<1> lut_q1_div13(ap_uint<2> d, ap_uint<4> r_in) {
+	ap_uint<1> ret_value;
+	ap_uint<6> in;
+	
+	in = r_in.concat(d);
+	switch (in){
+		case 0 :
+		ret_value = 0;
+		break;
+		case 1 :
+		ret_value = 0;
+		break;
+		case 2 :
+		ret_value = 0;
+		break;
+		case 3 :
+		ret_value = 0;
+		break;
+		case 4 :
+		ret_value = 0;
+		break;
+		case 5 :
+		ret_value = 0;
+		break;
+		case 6 :
+		ret_value = 0;
+		break;
+		case 7 :
+		ret_value = 0;
+		break;
+		case 8 :
+		ret_value = 0;
+		break;
+		case 9 :
+		ret_value = 0;
+		break;
+		case 10 :
+		ret_value = 0;
+		break;
+		case 11 :
+		ret_value = 0;
+		break;
+		case 12 :
+		ret_value = 0;
+		break;
+		case 13 :
+		ret_value = 0;
+		break;
+		case 14 :
+		ret_value = 0;
+		break;
+		case 15 :
+		ret_value = 0;
+		break;
+		case 16 :
+		ret_value = 0;
+		break;
+		case 17 :
+		ret_value = 0;
+		break;
+		case 18 :
+		ret_value = 0;
+		break;
+		case 19 :
+		ret_value = 0;
+		break;
+		case 20 :
+		ret_value = 0;
+		break;
+		case 21 :
+		ret_value = 0;
+		break;
+		case 22 :
+		ret_value = 0;
+		break;
+		case 23 :
+		ret_value = 0;
+		break;
+		case 24 :
+		ret_value = 0;
+		break;
+		case 25 :
+		ret_value = 0;
+		break;
+		case 26 :
+		ret_value = 1;
+		break;
+		case 27 :
+		ret_value = 1;
+		break;
+		case 28 :
+		ret_value = 1;
+		break;
+		case 29 :
+		ret_value = 1;
+		break;
+		case 30 :
+		ret_value = 1;
+		break;
+		case 31 :
+		ret_value = 1;
+		break;
+		case 32 :
+		ret_value = 1;
+		break;
+		case 33 :
+		ret_value = 1;
+		break;
+		case 34 :
+		ret_value = 1;
+		break;
+		case 35 :
+		ret_value = 1;
+		break;
+		case 36 :
+		ret_value = 1;
+		break;
+		case 37 :
+		ret_value = 1;
+		break;
+		case 38 :
+		ret_value = 1;
+		break;
+		case 39 :
+		ret_value = 1;
+		break;
+		case 40 :
+		ret_value = 1;
+		break;
+		case 41 :
+		ret_value = 1;
+		break;
+		case 42 :
+		ret_value = 1;
+		break;
+		case 43 :
+		ret_value = 1;
+		break;
+		case 44 :
+		ret_value = 1;
+		break;
+		case 45 :
+		ret_value = 1;
+		break;
+		case 46 :
+		ret_value = 1;
+		break;
+		case 47 :
+		ret_value = 1;
+		break;
+		case 48 :
+		ret_value = 1;
+		break;
+		case 49 :
+		ret_value = 1;
+		break;
+		case 50 :
+		ret_value = 1;
+		break;
+		case 51 :
+		ret_value = 1;
+		break;
+		case 52 :
+		ret_value = 0;
+		break;
+		case 53 :
+		ret_value = 0;
+		break;
+		case 54 :
+		ret_value = 0;
+		break;
+		case 55 :
+		ret_value = 0;
+		break;
+		case 56 :
+		ret_value = 0;
+		break;
+		case 57 :
+		ret_value = 0;
+		break;
+		case 58 :
+		ret_value = 0;
+		break;
+		case 59 :
+		ret_value = 0;
+		break;
+		case 60 :
+		ret_value = 0;
+		break;
+		case 61 :
+		ret_value = 0;
+		break;
+		case 62 :
+		ret_value = 0;
+		break;
+		case 63 :
+		ret_value = 0;
+		break;
+	}
+	return ret_value;
+}
+
+void lut_div13_chunk(ap_uint<2> d, ap_uint<4> r_in, ap_uint<2> (* q), ap_uint<4> (* r_out)) {
+	(*r_out)[0] = lut_r0_div13(d, r_in);
+	(*r_out)[1] = lut_r1_div13(d, r_in);
+	(*r_out)[2] = lut_r2_div13(d, r_in);
+	(*r_out)[3] = lut_r3_div13(d, r_in);
+	(*q)[0] = lut_q0_div13(d, r_in);
+	(*q)[1] = lut_q1_div13(d, r_in);
+}
+
+ap_uint<33> int_33_div13(ap_uint<33> in) {
+	ap_uint<33> d;
+	ap_uint<33> q;
+	ap_uint<2> d_chunk;
+	ap_uint<2> q_chunk;
+	ap_uint<4> r;
+	int i;
+	
+	r = 0;
+	d = in;
+	d_chunk = d.range(32, 32);
+	lut_div13_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(32, 32) = q_chunk.range(0, 0);
+	for(i = 15; i >= 0; i = i - 1) {
+		#pragma HLS unroll
+		{
+		d_chunk = d.range(i*2 + 1, i*2);
+		lut_div13_chunk(d_chunk, r, &q_chunk, &r);
+		q.range(i*2 + 1, i*2) = q_chunk;
+		}
+	}
+	return q;
+}
+
+ap_uint<33> operator_int_33_div273(ap_uint<33> in) {
+	return int_33_div13(int_33_div7(int_33_div3(in)));
+}
+
+void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float * out) {
+	fix_to_float conv;
+	ap_uint<31> exp_plus_mant;
+	ap_uint<32> res;
+	
+	exp_plus_mant = exp.concat(mant);
+	res = s.concat(exp_plus_mant);
+	conv.i = res;
+	*out = conv.f;
+}
+
+float float_div3(float in) {
+	ap_uint<1> s;
+	ap_uint<8> exp;
+	ap_uint<23> mant;
+	ap_uint<8> new_exp;
+	ap_uint<23> new_mant;
+	ap_uint<33> xf;
+	float out;
+	ap_uint<8> shift;
+	ap_uint<8> div_exp;
+	
+	decompose_float(in, &s, &exp, &mant);
+	new_exp = exp;
+	new_mant = mant;
+	shift = 0;
+	div_exp = 8;
+	xf = mant;
+	if (mant < 557056)
+		div_exp = 9;
+	if (exp != 255)
+		if (div_exp > exp)
+			new_exp = 0;
+		else
+			new_exp = exp - div_exp;
+	if (exp != 255) {
+		if (exp == 0)
+			shift = 0;
+		else
+			if (div_exp >= exp)
+				shift = exp - 1;
+			else
+				shift = div_exp;
+		if (exp != 0)
+			xf.set(23);
+		xf = xf << shift;
+		xf = xf + 136;
+		new_mant = operator_int_33_div273(xf);
+	}
+	rebuild_float(s, new_exp, new_mant, &out);
+	return out;
+}
+

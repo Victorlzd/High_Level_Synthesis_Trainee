@@ -6,7 +6,7 @@
 
 
 open_project -reset fir_prj
-set_top int_13_div3
+set_top operator_int_32_div7
 add_files int_13_div3.cpp
 add_files -tb test_int_13_div3.cpp
 open_solution -reset 	"solution1"

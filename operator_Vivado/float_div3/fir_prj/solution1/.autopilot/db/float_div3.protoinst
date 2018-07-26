@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"float_div3": {
+			"proto_instances": {
+			}
+		}
+	}
+}

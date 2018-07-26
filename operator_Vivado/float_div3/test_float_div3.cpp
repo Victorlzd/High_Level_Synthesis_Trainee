@@ -1,9 +1,9 @@
 #include <iostream>
 #include "ap_int.h"
 
-void recomposeFloat(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float* out);
-void decomposeFloat(float in, ap_uint<1> * s, ap_uint<8> * exp, ap_uint<23> * mant);
-void floatDiv3(float x, float* res);
+void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float* out);
+void decompose_float(float in, ap_uint<1> * s, ap_uint<8> * exp, ap_uint<23> * mant);
+float float_div3(float x);
 
 using namespace std;
 
@@ -22,22 +22,23 @@ int main(int argc, char const *argv[])
     ap_uint<23> mant_out;
 
 
-    for (int i = 1; i < 2; ++i)
+    for (int i = 0; i < 1; ++i)
     {
+		int div = 273;
     	s=i;
-    	for (int j = 20; j < 21; ++j)
+    	for (int j = 0; j <= 255; ++j)
     	{
     		cerr << "exp = " << j << endl;
-    		//if(j>1 && j<250) j+=10;
+    		if(j>3 && j<250) j+=5;
     		exp = j;
-    		for (int k = 0; k < 8388608; k+=1000)
+    		for (int k = 0; k < 8388608; k+=10000)
     		{
     			mant = k;
 
-    			recomposeFloat(s,exp,mant,&f);
-    			floatDiv3(f, &out);
+    			rebuild_float(s,exp,mant,&f);
+    			out = float_div3(f);
 
-    			if(f/3!=out && out==out) 
+    			if(f/div!=out && out==out) 
 				{
 					cerr << "PROBLEME" << endl;
 					cout << "------------ Probleme -----------" << endl;
@@ -47,14 +48,14 @@ int main(int argc, char const *argv[])
 					cout << "   exposant = " << exp << endl;
 					cout << "   mantisse = " << mant << endl;
 
-					decomposeFloat(f/3, &s_out, &exp_out, &mant_out);
+					decompose_float(f/div, &s_out, &exp_out, &mant_out);
 					cout << "resultat attendu = " << endl;
-					cout << "   float = " << f/3 << endl;
+					cout << "   float = " << f/div << endl;
 					cout << "   signe = " << s_out << endl;
 					cout << "   exposant = " << exp_out << endl;
 					cout << "   mantisse = " << mant_out << endl;
 
-					decomposeFloat(out, &s_out, &exp_out, &mant_out);
+					decompose_float(out, &s_out, &exp_out, &mant_out);
 					cout << "resultat obtenu = " << endl;
 					cout << "   float = " << out << endl;
 					cout << "   signe = " << s_out << endl;

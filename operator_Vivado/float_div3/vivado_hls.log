@@ -1,445 +1,1036 @@
 
-****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.1 (64-bit)
-  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
-  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source /home/duazel/Xilinx/Vivado/2018.1/scripts/vivado_hls/hls.tcl -notrace
-INFO: [HLS 200-10] Running '/home/duazel/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'duazel' on host 'duazel' (Linux_x86_64 version 4.13.0-45-generic) on Fri Jun 22 08:18:33 CEST 2018
-INFO: [HLS 200-10] On os Ubuntu 16.04.4 LTS
-INFO: [HLS 200-10] In directory '/home/duazel/Documents/stage3IF/vivado/FloatDiv3'
-INFO: [HLS 200-10] Opening and resetting project '/home/duazel/Documents/stage3IF/vivado/FloatDiv3/fir_prj'.
-INFO: [HLS 200-10] Adding design file 'floatDiv3.cpp' to the project
-INFO: [HLS 200-10] Adding test bench file 'test_floatDiv3.cpp' to the project
-INFO: [HLS 200-10] Opening and resetting solution '/home/duazel/Documents/stage3IF/vivado/FloatDiv3/fir_prj/solution1'.
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'duazel' on host 'duazel-portable' (Linux_x86_64 version 4.15.0-29-generic) on Wed Jul 25 16:30:23 CEST 2018
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3'
+INFO: [HLS 200-10] Opening and resetting project '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj'.
+INFO: [HLS 200-10] Adding design file 'float_div3.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'float_div3.cpp' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../test_floatDiv3.cpp in debug mode
-   Compiling ../../../../floatDiv3.cpp in debug mode
-   Generating csim.exe
-exp = 20
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-10] Analyzing design file 'floatDiv3.cpp' ...
-INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 351.605 ; gain = 0.117 ; free physical = 4682 ; free virtual = 14441
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 351.605 ; gain = 0.117 ; free physical = 4669 ; free virtual = 14442
+INFO: [HLS 200-10] Analyzing design file 'float_div3.cpp' ... 
+WARNING: [HLS 200-40] In file included from float_div3.cpp:1:
+float_div3.cpp:1028:3: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  else
+  ^
+1 warning generated.\n
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 372.703 ; gain = 0.102 ; free physical = 2133 ; free virtual = 10241
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 372.703 ; gain = 0.102 ; free physical = 2133 ; free virtual = 10241
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 351.961 ; gain = 0.473 ; free physical = 4644 ; free virtual = 14427
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 373.027 ; gain = 0.426 ; free physical = 2131 ; free virtual = 10229
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'LUT_r' into 'LUT_div3' (floatDiv3.cpp:782) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_q' into 'LUT_div3' (floatDiv3.cpp:783) automatically.
-INFO: [XFORM 203-602] Inlining function 'decomposeFloat' into 'floatDiv3' (floatDiv3.cpp:856) automatically.
-INFO: [XFORM 203-602] Inlining function 'intDiv3' into 'floatDiv3' (floatDiv3.cpp:894) automatically.
-INFO: [XFORM 203-602] Inlining function 'recomposeFloat' into 'floatDiv3' (floatDiv3.cpp:897) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4637 ; free virtual = 14420
-INFO: [XFORM 203-602] Inlining function 'LUT_r1' into 'LUT_r' (floatDiv3.cpp:757) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_r2' into 'LUT_r' (floatDiv3.cpp:758) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_q1' into 'LUT_q' (floatDiv3.cpp:766) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_q2' into 'LUT_q' (floatDiv3.cpp:767) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_q3' into 'LUT_q' (floatDiv3.cpp:768) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_q4' into 'LUT_q' (floatDiv3.cpp:769) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_r' into 'LUT_div3' (floatDiv3.cpp:782) automatically.
-INFO: [XFORM 203-602] Inlining function 'LUT_q' into 'LUT_div3' (floatDiv3.cpp:783) automatically.
-INFO: [XFORM 203-602] Inlining function 'decomposeFloat' into 'floatDiv3' (floatDiv3.cpp:856) automatically.
-INFO: [XFORM 203-602] Inlining function 'intDiv3' into 'floatDiv3' (floatDiv3.cpp:894) automatically.
-INFO: [XFORM 203-602] Inlining function 'recomposeFloat' into 'floatDiv3' (floatDiv3.cpp:897) automatically.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (floatDiv3.cpp:877:8) in function 'floatDiv3'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (floatDiv3.cpp:879:12) to (floatDiv3.cpp:895:5) in function 'floatDiv3'... converting 10 basic blocks.
-INFO: [XFORM 203-602] Inlining function 'LUT_div3' into 'floatDiv3' (floatDiv3.cpp:794->floatDiv3.cpp:894) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4601 ; free virtual = 14393
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:21 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4597 ; free virtual = 14390
+INFO: [XFORM 203-602] Inlining function 'decompose_float' into 'float_div3' (float_div3.cpp:1018) automatically.
+INFO: [XFORM 203-602] Inlining function 'rebuild_float' into 'float_div3' (float_div3.cpp:1043) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 500.949 ; gain = 128.348 ; free physical = 2124 ; free virtual = 10223
+INFO: [XFORM 203-602] Inlining function 'decompose_float' into 'float_div3' (float_div3.cpp:1018) automatically.
+INFO: [XFORM 203-602] Inlining function 'rebuild_float' into 'float_div3' (float_div3.cpp:1043) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (float_div3.cpp:1030:6) in function 'float_div3'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (float_div3.cpp:1031:12) to (float_div3.cpp:1042:2) in function 'float_div3'... converting 5 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 500.949 ; gain = 128.348 ; free physical = 2100 ; free virtual = 10199
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 500.949 ; gain = 128.348 ; free physical = 2096 ; free virtual = 10196
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'floatDiv3' ...
+INFO: [HLS 200-10] Synthesizing 'float_div3' ...
+WARNING: [SYN 201-107] Renaming port name 'float_div3/in' to 'float_div3/in_r' to avoid the conflict with HDL keywords or other object names.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'floatDiv3'
+INFO: [HLS 200-42] -- Implementing module 'float_div3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 21.53 seconds; current allocated memory: 92.446 MB.
+INFO: [HLS 200-111]  Elapsed time: 14.28 seconds; current allocated memory: 86.159 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 94.985 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 86.329 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'floatDiv3'
+INFO: [HLS 200-10] -- Generating RTL for module 'float_div3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'floatDiv3/x' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'floatDiv3/res' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'floatDiv3' to 'ap_ctrl_hs'.
-INFO: [SYN 201-210] Renamed object name 'floatDiv3_mux_646_1_1_1' to 'floatDiv3_mux_646bkb' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'floatDiv3_mux_646bkb': 42 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'floatDiv3'.
-INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 105.272 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:35 ; elapsed = 00:00:23 . Memory (MB): peak = 479.867 ; gain = 128.379 ; free physical = 4573 ; free virtual = 14371
-INFO: [SYSC 207-301] Generating SystemC RTL for floatDiv3.
-INFO: [VHDL 208-304] Generating VHDL RTL for floatDiv3.
-INFO: [VLOG 209-307] Generating Verilog RTL for floatDiv3.
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-   Build using ""
-   Compiling test_floatDiv3.cpp_pre.cpp.tb.cpp
-cosim.tv.mk:62 : la recette pour la cible « obj/test_floatDiv3.cpp_pre.cpp.tb.o » a échouée
-which: /home/duazel/Xilinx/Vivado/2018.1/lnx64/tools/gcc/bin/g++: u k ow  comma d
-In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
-                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:181:9: error: ‘__gmp_const’ does not name a type
-In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
-                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:244:2: error: ‘__gmp_const’ does not name a type
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:245:2: error: ‘__gmp_const’ does not name a type
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:260:2: error: ‘__gmp_const’ does not name a type
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:19: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:42: error: expected primary-expression before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:54: error: expected primary-expression before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:66: error: expected primary-expression before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:79: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:299:79: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:301:29: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:303:27: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:305:29: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:329:24: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:27: error: ‘__gmp_const’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:44: error: two or more data types in declaration of ‘parameter’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:45: error: expected ‘)’ before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:340:47: error: expected unqualified-id before ‘int’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:32: error: ‘__gmp_const’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:49: error: two or more data types in declaration of ‘parameter’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:50: error: expected ‘)’ before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:342:52: error: expected unqualified-id before ‘int’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:345:24: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:347:23: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:349:23: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:350:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:351:20: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:353:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:355:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:355:41: error: ‘mpfr_srcptr’ has not been declared
-In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
-                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:370:32: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:370:55: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:370:55: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:371:33: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:371:56: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:371:56: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:374:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:375:22: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:375:45: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:375:45: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:376:21: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:376:44: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:376:44: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:381:27: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:381:50: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:381:50: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:383:22: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:384:33: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:386:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:388:20: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:388:43: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:388:43: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:389:29: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:389:52: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:389:52: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:391:54: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:393:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:404:34: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:411:46: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:30: error: ‘__gmp_const’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:46: error: two or more data types in declaration of ‘parameter’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:47: error: expected ‘)’ before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:414:49: error: expected unqualified-id before ‘...’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:417:19: error: ‘__gmp_const’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:417:38: error: expected primary-expression before ‘...’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:417:41: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:29: error: ‘__gmp_const’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:45: error: two or more data types in declaration of ‘parameter’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:46: error: expected ‘)’ before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:418:48: error: expected unqualified-id before ‘...’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:27: error: ‘__gmp_const’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:43: error: two or more data types in declaration of ‘parameter’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:44: error: expected ‘)’ before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:420:46: error: expected unqualified-id before ‘...’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:36: error: ‘__gmp_const’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:52: error: two or more data types in declaration of ‘parameter’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:53: error: expected ‘)’ before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:422:55: error: expected unqualified-id before ‘...’ token
-In file included from /home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:148:0,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
-                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:444:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:444:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:446:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:448:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:452:48: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:454:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:457:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:461:31: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:464:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:464:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:466:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:466:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:468:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:468:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:470:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:470:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:473:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:475:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:477:44: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:479:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:481:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:483:44: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:486:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:488:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:490:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:492:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:494:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:496:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:499:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:501:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:503:36: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:505:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:507:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:509:36: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:512:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:519:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:519:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:522:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:523:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:524:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:526:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:529:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:530:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:531:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:533:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:535:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:536:25: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:538:16: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:538:29: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:538:40: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:17: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:30: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:43: error: expected primary-expression before ‘int’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:539:46: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:540:18: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:540:31: error: expected primary-expression before ‘double’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:540:37: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:541:19: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:541:32: error: expected primary-expression before ‘long’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:541:43: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:542:19: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:542:32: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:542:43: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:543:19: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:543:32: error: expected primary-expression before ‘unsigned’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:543:45: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:544:19: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:544:32: error: expected primary-expression before ‘long’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:544:36: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:24: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:37: error: expected primary-expression before ‘unsigned’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:62: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:545:62: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:24: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:37: error: expected primary-expression before ‘long’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:53: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:547:53: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:549:31: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:549:44: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:15: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:28: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:41: error: expected primary-expression before ‘unsigned’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:551:54: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:553:16: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:555:31: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:557:31: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:559:30: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:561:30: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:563:30: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:565:30: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:568:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:569:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:570:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:571:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:572:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:573:33: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:575:33: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:577:32: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:579:33: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:581:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:582:37: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:584:36: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:584:49: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:586:32: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:586:45: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:588:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:588:40: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:591:25: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:591:48: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:591:48: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:592:25: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:592:48: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:592:48: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:593:24: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:593:47: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:593:47: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:594:24: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:594:47: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:594:47: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:595:26: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:595:49: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:595:49: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:596:26: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:596:49: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:596:49: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:597:27: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:597:49: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:597:49: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:598:26: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:598:49: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:598:49: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:600:30: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:603:29: error: variable or field ‘mpfr_dump’ declared void
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:603:18: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:605:18: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:606:18: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:607:21: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:608:22: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:609:19: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:610:22: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:612:22: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:612:35: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:612:46: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:613:27: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:613:40: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:613:51: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:615:19: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:615:32: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:615:43: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:616:24: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:616:37: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:616:48: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:617:26: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:617:38: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:617:49: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:618:20: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:618:33: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:618:44: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:619:24: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:619:37: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:619:48: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:621:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:622:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:623:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:624:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:625:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:626:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:627:42: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:630:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:631:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:632:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:634:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:635:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:636:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:637:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:638:40: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:640:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:641:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:642:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:642:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:644:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:645:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:646:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:648:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:648:41: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:650:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:651:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:652:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:653:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:654:27: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:655:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:656:33: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:657:29: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:658:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:662:25: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:663:25: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:664:31: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:666:25: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:667:25: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:668:31: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:671:25: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:673:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:673:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:675:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:675:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:677:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:677:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:680:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:682:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:684:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:686:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:688:18: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:688:41: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:688:41: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:690:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:692:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:694:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:696:28: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:698:18: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:698:41: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:698:41: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:700:18: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:700:41: error: expected primary-expression before ‘)’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:700:41: error: expression list treated as compound expression in initializer [-fpermissive]
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:702:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:702:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:702:52: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:704:26: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:704:39: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:704:52: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:30: error: ‘__gmp_const’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:47: error: two or more data types in declaration of ‘parameter’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:48: error: expected ‘)’ before ‘,’ token
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:714:50: error: expected unqualified-id before ‘char’
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:719:38: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:720:34: error: ‘mpfr_srcptr’ was not declared in this scope
-/home/duazel/Xilinx/Vivado/2018.1/include/mpfr.h:724:28: error: ‘mpfr_srcptr’ was not declared in this scope
-In file included from /home/duazel/Xilinx/Vivado/2018.1/include/hls_fpo.h:172:0,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/hls_half.h:57,
-                 from /home/duazel/Xilinx/Vivado/2018.1/include/ap_int.h:74,
-                 from /home/duazel/Documents/stage3IF/vivado/FloatDiv3/test_floatDiv3.cpp:2:
-/home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:245:45: error: ‘mpfr_srcptr’ has not been declared
-/home/duazel/Xilinx/Vivado/2018.1/include/floating_point_v7_0_bitacc_cmodel.h:246:53: error: ‘mpfr_srcptr’ has not been declared
-make: *** [obj/test_floatDiv3.cpp_pre.cpp.tb.o] Erreur 1
-ERROR: [COSIM 212-317] C++ compile error.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
-ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
-command 'ap_source' returned error code
-    while executing
-"source [lindex $::argv 1] "
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel \#0 { source [lindex $::argv 1] } "
+INFO: [RTGEN 206-500] Setting interface mode on port 'float_div3/in_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'float_div3' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_div3'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 86.726 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 500.949 ; gain = 128.348 ; free physical = 2098 ; free virtual = 10193
+INFO: [SYSC 207-301] Generating SystemC RTL for float_div3.
+INFO: [VHDL 208-304] Generating VHDL RTL for float_div3.
+INFO: [VLOG 209-307] Generating Verilog RTL for float_div3.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
-INFO: [HLS 200-112] Total elapsed time: 55.98 seconds; peak allocated memory: 105.272 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Fri Jun 22 08:19:28 2018...
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 25 16:30:48 2018...
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado.tcl -notrace
+[Wed Jul 25 16:30:57 2018] Launched synth_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/synth_1/runme.log
+[Wed Jul 25 16:30:57 2018] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log float_div3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source float_div3.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source float_div3.tcl -notrace
+Command: synth_design -top float_div3 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23009 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.848 ; gain = 77.898 ; free physical = 1613 ; free virtual = 9736
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'float_div3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:55]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:58]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'float_div3' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.473 ; gain = 122.523 ; free physical = 1624 ; free virtual = 9749
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.473 ; gain = 122.523 ; free physical = 1639 ; free virtual = 9749
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.473 ; gain = 122.523 ; free physical = 1639 ; free virtual = 9749
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1633.957 ; gain = 0.000 ; free physical = 1340 ; free virtual = 9482
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1633.957 ; gain = 445.008 ; free physical = 1405 ; free virtual = 9562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1633.957 ; gain = 445.008 ; free physical = 1405 ; free virtual = 9562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1633.957 ; gain = 445.008 ; free physical = 1407 ; free virtual = 9564
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_1_fu_129_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_169_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1633.957 ; gain = 445.008 ; free physical = 1398 ; free virtual = 9556
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x33  Multipliers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module float_div3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x33  Multipliers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "tmp_1_fu_129_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_169_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:217]
+WARNING: [Synth 8-6014] Unused sequential element xf_V_2_reg_304_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:142]
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:217]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:217]
+DSP Report: Generating DSP mul_fu_256_p2, operation Mode is: (A:0x15556)*B2.
+DSP Report: register B is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+DSP Report: Generating DSP mul_fu_256_p2, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register B is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+DSP Report: Generating DSP mul_fu_256_p2, operation Mode is: A2*(B:0x15556).
+DSP Report: register A is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+DSP Report: Generating DSP mul_fu_256_p2, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register A is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+DSP Report: operator mul_fu_256_p2 is absorbed into DSP mul_fu_256_p2.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1633.957 ; gain = 445.008 ; free physical = 1376 ; free virtual = 9542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|float_div3  | (A:0x15556)*B2  | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|float_div3  | (PCIN>>17)+A*B2 | 17     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|float_div3  | A2*(B:0x15556)  | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|float_div3  | (PCIN>>17)+A2*B | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1663.957 ; gain = 475.008 ; free physical = 1229 ; free virtual = 9381
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1223 ; free virtual = 9375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    18|
+|2     |DSP48E1   |     2|
+|3     |DSP48E1_1 |     2|
+|4     |LUT1      |     2|
+|5     |LUT2      |    45|
+|6     |LUT3      |     4|
+|7     |LUT4      |    30|
+|8     |LUT5      |     8|
+|9     |LUT6      |    47|
+|10    |FDRE      |    35|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   193|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.988 ; gain = 500.039 ; free physical = 1222 ; free virtual = 9374
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1688.988 ; gain = 177.555 ; free physical = 1299 ; free virtual = 9451
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.996 ; gain = 500.039 ; free physical = 1299 ; free virtual = 9451
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 1688.996 ; gain = 500.148 ; free physical = 1296 ; free virtual = 9457
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/synth_1/float_div3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file float_div3_utilization_synth.rpt -pb float_div3_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1713.000 ; gain = 0.000 ; free physical = 1294 ; free virtual = 9457
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 25 16:31:47 2018...
+[Wed Jul 25 16:31:47 2018] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1185.461 ; gain = 0.000 ; free physical = 1861 ; free virtual = 10022
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k160tfbg484-1
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1482.809 ; gain = 297.348 ; free physical = 1563 ; free virtual = 9743
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1482.809 ; gain = 0.000 ; free physical = 1562 ; free virtual = 9741
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1952.391 ; gain = 469.582 ; free physical = 1158 ; free virtual = 9339
+INFO: [Timing 38-480] Writing timing data to binary archive.
+[Wed Jul 25 16:32:32 2018] Launched impl_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/runme.log
+[Wed Jul 25 16:32:32 2018] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log float_div3.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source float_div3.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source float_div3.tcl -notrace
+Command: open_checkpoint /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1183.340 ; gain = 0.000 ; free physical = 997 ; free virtual = 9183
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.2 (64-bit) build 2258646
+open_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 1921.949 ; gain = 738.609 ; free physical = 270 ; free virtual = 8454
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1970.965 ; gain = 49.016 ; free physical = 261 ; free virtual = 8445
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 11a9b8a47
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 262 ; free virtual = 8446
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: a8c61c58
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: e09240c4
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: b5d4438c
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: b5d4438c
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 13d47a9ed
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 13d47a9ed
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+Ending Logic Optimization Task | Checksum: 13d47a9ed
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 287 ; free virtual = 8471
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 13d47a9ed
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 286 ; free virtual = 8471
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 13d47a9ed
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1970.965 ; gain = 0.000 ; free physical = 286 ; free virtual = 8471
+INFO: [Common 17-83] Releasing license: Implementation
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file float_div3_drc_opted.rpt -pb float_div3_drc_opted.pb -rpx float_div3_drc_opted.rpx
+Command: report_drc -file float_div3_drc_opted.rpt -pb float_div3_drc_opted.pb -rpx float_div3_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2011.281 ; gain = 0.000 ; free physical = 257 ; free virtual = 8440
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 62f376c1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2011.281 ; gain = 0.000 ; free physical = 257 ; free virtual = 8440
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2011.281 ; gain = 0.000 ; free physical = 257 ; free virtual = 8440
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13273661
+
+Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.72 . Memory (MB): peak = 2011.281 ; gain = 0.000 ; free physical = 252 ; free virtual = 8435
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 8f2ff11a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2021.926 ; gain = 10.645 ; free physical = 250 ; free virtual = 8434
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 8f2ff11a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2021.926 ; gain = 10.645 ; free physical = 250 ; free virtual = 8434
+Phase 1 Placer Initialization | Checksum: 8f2ff11a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2021.926 ; gain = 10.645 ; free physical = 250 ; free virtual = 8434
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 6788d53a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.98 . Memory (MB): peak = 2053.941 ; gain = 42.660 ; free physical = 248 ; free virtual = 8432
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2077.953 ; gain = 0.000 ; free physical = 232 ; free virtual = 8415
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 10cc3cf14
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 232 ; free virtual = 8415
+Phase 2 Global Placement | Checksum: 51e3b053
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 232 ; free virtual = 8416
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 51e3b053
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 232 ; free virtual = 8416
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1718dd370
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 231 ; free virtual = 8415
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 190feccc2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 231 ; free virtual = 8415
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 190feccc2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 231 ; free virtual = 8415
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 16fed62e4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 226 ; free virtual = 8410
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 11a6df2aa
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 226 ; free virtual = 8410
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 11a6df2aa
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 226 ; free virtual = 8410
+Phase 3 Detail Placement | Checksum: 11a6df2aa
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 226 ; free virtual = 8410
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 23ba4bf4a
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 23ba4bf4a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 227 ; free virtual = 8411
+INFO: [Place 30-746] Post Placement Timing Summary WNS=2.609. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 17ca12d2c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 227 ; free virtual = 8411
+Phase 4.1 Post Commit Optimization | Checksum: 17ca12d2c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 227 ; free virtual = 8411
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 17ca12d2c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 229 ; free virtual = 8413
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 17ca12d2c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 229 ; free virtual = 8413
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 114f0fd8b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 229 ; free virtual = 8413
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 114f0fd8b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 229 ; free virtual = 8413
+Ending Placer Task | Checksum: e8de5c5f
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2077.953 ; gain = 66.672 ; free physical = 246 ; free virtual = 8431
+INFO: [Common 17-83] Releasing license: Implementation
+50 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2077.953 ; gain = 0.000 ; free physical = 243 ; free virtual = 8429
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file float_div3_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2077.953 ; gain = 0.000 ; free physical = 232 ; free virtual = 8417
+INFO: [runtcl-4] Executing : report_utilization -file float_div3_utilization_placed.rpt -pb float_div3_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2077.953 ; gain = 0.000 ; free physical = 231 ; free virtual = 8427
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file float_div3_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2077.953 ; gain = 0.000 ; free physical = 231 ; free virtual = 8427
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+59 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2077.953 ; gain = 0.000 ; free physical = 227 ; free virtual = 8425
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: 5597e73a ConstDB: 0 ShapeSum: 93467525 RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "ap_clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "in_r[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: 16c3e4ff0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2233.766 ; gain = 155.812 ; free physical = 149 ; free virtual = 8236
+Post Restoration Checksum: NetGraph: f31c4d82 NumContArr: 7922026e Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 16c3e4ff0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2233.766 ; gain = 155.812 ; free physical = 149 ; free virtual = 8236
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 16c3e4ff0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2248.766 ; gain = 170.812 ; free physical = 131 ; free virtual = 8218
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 16c3e4ff0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2248.766 ; gain = 170.812 ; free physical = 131 ; free virtual = 8218
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1ed9fd9bd
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 132 ; free virtual = 8215
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.631  | TNS=0.000  | WHS=0.139  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 1613a234e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 133 ; free virtual = 8215
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1d3c6032e
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 126 ; free virtual = 8209
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.135  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 15f778cd3
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+Phase 4 Rip-up And Reroute | Checksum: 15f778cd3
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 15f778cd3
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 15f778cd3
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+Phase 5 Delay and Skew Optimization | Checksum: 15f778cd3
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 14f008021
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.135  | TNS=0.000  | WHS=0.158  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 14f008021
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+Phase 6 Post Hold Fix | Checksum: 14f008021
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0172085 %
+  Global Horizontal Routing Utilization  = 0.0114663 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 14f008021
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.586 ; gain = 181.633 ; free physical = 127 ; free virtual = 8210
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 14f008021
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2260.586 ; gain = 182.633 ; free physical = 126 ; free virtual = 8209
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 15dd8fb33
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2260.586 ; gain = 182.633 ; free physical = 126 ; free virtual = 8209
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.135  | TNS=0.000  | WHS=0.158  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 15dd8fb33
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2260.586 ; gain = 182.633 ; free physical = 127 ; free virtual = 8210
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2260.586 ; gain = 182.633 ; free physical = 148 ; free virtual = 8230
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+73 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:20 . Memory (MB): peak = 2260.586 ; gain = 182.633 ; free physical = 148 ; free virtual = 8230
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2260.586 ; gain = 0.000 ; free physical = 144 ; free virtual = 8228
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file float_div3_drc_routed.rpt -pb float_div3_drc_routed.pb -rpx float_div3_drc_routed.rpx
+Command: report_drc -file float_div3_drc_routed.rpt -pb float_div3_drc_routed.pb -rpx float_div3_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file float_div3_methodology_drc_routed.rpt -pb float_div3_methodology_drc_routed.pb -rpx float_div3_methodology_drc_routed.rpx
+Command: report_methodology -file float_div3_methodology_drc_routed.rpt -pb float_div3_methodology_drc_routed.pb -rpx float_div3_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/impl_1/float_div3_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file float_div3_power_routed.rpt -pb float_div3_power_summary_routed.pb -rpx float_div3_power_routed.rpx
+Command: report_power -file float_div3_power_routed.rpt -pb float_div3_power_summary_routed.pb -rpx float_div3_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+85 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file float_div3_route_status.rpt -pb float_div3_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file float_div3_timing_summary_routed.rpt -pb float_div3_timing_summary_routed.pb -rpx float_div3_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file float_div3_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file float_div3_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file float_div3_bus_skew_routed.rpt -pb float_div3_bus_skew_routed.pb -rpx float_div3_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 25 16:34:00 2018...
+[Wed Jul 25 16:34:00 2018] impl_1 finished
+wait_on_run: Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1998.555 ; gain = 4.000 ; free physical = 1262 ; free virtual = 9338
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2105.883 ; gain = 0.000 ; free physical = 1164 ; free virtual = 9241
+Restored from archive | CPU: 0.030000 secs | Memory: 0.343330 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2105.883 ; gain = 0.000 ; free physical = 1164 ; free virtual = 9241
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2161.910 ; gain = 56.027 ; free physical = 1162 ; free virtual = 9239
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             fir_prj
+Solution:            solution1
+Device target:       xc7k160tfbg484-1
+Report date:         Wed Jul 25 16:34:02 CEST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:           41
+LUT:            126
+FF:              35
+DSP:              4
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    7.055
+CP achieved post-implementation:    7.864
+Timing met
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 25 16:34:02 2018...
+INFO: [HLS 200-112] Total elapsed time: 218.47 seconds; peak allocated memory: 86.726 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Wed Jul 25 16:34:02 2018...
