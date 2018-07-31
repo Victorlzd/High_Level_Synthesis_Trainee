@@ -1,6 +1,5 @@
 package operator;
 
-import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 
 import fr.irisa.cairn.gecos.model.factory.GecosUserAnnotationFactory;
