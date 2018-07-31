@@ -4,17 +4,17 @@ Implementation tool: Xilinx Vivado v.2018.2
 Project:             fir_prj
 Solution:            solution1
 Device target:       xc7k160tfbg484-1
-Report date:         Wed Jul 25 16:34:02 CEST 2018
+Report date:         Mon Jul 30 12:03:34 CEST 2018
 
 #=== Post-Implementation Resource usage ===
-SLICE:           41
-LUT:            126
-FF:              35
-DSP:              4
+SLICE:           58
+LUT:            170
+FF:              92
+DSP:              0
 BRAM:             0
 SRL:              0
 #=== Final timing ===
 CP required:    10.000
-CP achieved post-synthesis:    7.055
-CP achieved post-implementation:    7.864
+CP achieved post-synthesis:    3.870
+CP achieved post-implementation:    4.668
 Timing met

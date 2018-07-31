@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Jul 25 16:32:32 2018
+| Date         : Mon Jul 30 12:02:07 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_timing -file ./report/float_div3_timing_synth.rpt
 | Design       : float_div3
@@ -11,16 +11,16 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (MET) :             2.945ns  (required time - arrival time)
-  Source:                 mul_fu_256_p2__1/CLK
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            p_Repl2_s_reg_66_reg[21]/D
+Slack (MET) :             6.130ns  (required time - arrival time)
+  Source:                 p_Result_16_11_i_i_reg_654_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            q_chunk_V_0_3_i_i_reg_664_reg[0]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.035ns  (logic 6.024ns (85.634%)  route 1.011ns (14.366%))
-  Logic Levels:           13  (CARRY4=10 DSP48E1=1 LUT2=1 LUT6=1)
+  Data Path Delay:        3.850ns  (logic 0.702ns (18.234%)  route 3.148ns (81.766%))
+  Logic Levels:           6  (LUT3=2 LUT6=4)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
     Source Clock Delay      (SCD):    0.672ns
@@ -35,64 +35,38 @@ Slack (MET) :             2.945ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=38, unset)           0.672     0.672    ap_clk
-                         DSP48E1                                      r  mul_fu_256_p2__1/CLK
+                         net (fo=91, unset)           0.672     0.672    ap_clk
+                         FDRE                                         r  p_Result_16_11_i_i_reg_654_reg[1]/C
   -------------------------------------------------------------------    -------------------
-                         DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
-                                                      3.564     4.236 r  mul_fu_256_p2__1/PCOUT[47]
-                         net (fo=1, unplaced)         0.050     4.286    mul_fu_256_p2__1_n_106
-                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
-                                                      1.286     5.572 r  mul_fu_256_p2__2/P[0]
-                         net (fo=2, unplaced)         0.584     6.156    mul_fu_256_p2__2_n_105
-                         LUT2 (Prop_lut2_I0_O)        0.053     6.209 r  ap_return[1]_INST_0_i_24/O
-                         net (fo=1, unplaced)         0.000     6.209    ap_return[1]_INST_0_i_24_n_0
-                         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.310     6.519 r  ap_return[1]_INST_0_i_17/CO[3]
-                         net (fo=1, unplaced)         0.008     6.527    ap_return[1]_INST_0_i_17_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     6.587 r  ap_return[1]_INST_0_i_12/CO[3]
-                         net (fo=1, unplaced)         0.000     6.587    ap_return[1]_INST_0_i_12_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     6.647 r  ap_return[1]_INST_0_i_7/CO[3]
-                         net (fo=1, unplaced)         0.000     6.647    ap_return[1]_INST_0_i_7_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     6.707 r  ap_return[1]_INST_0_i_2/CO[3]
-                         net (fo=1, unplaced)         0.000     6.707    ap_return[1]_INST_0_i_2_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     6.767 r  ap_return[1]_INST_0_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     6.767    ap_return[1]_INST_0_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     6.827 r  ap_return[5]_INST_0_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     6.827    ap_return[5]_INST_0_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     6.887 r  ap_return[9]_INST_0_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     6.887    ap_return[9]_INST_0_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     6.947 r  ap_return[13]_INST_0_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     6.947    ap_return[13]_INST_0_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     7.007 r  ap_return[17]_INST_0_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     7.007    ap_return[17]_INST_0_i_1_n_0
-                         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.189     7.196 r  ap_return[21]_INST_0_i_1/O[3]
-                         net (fo=2, unplaced)         0.369     7.565    mul_fu_256_p2__3[55]
-                         LUT6 (Prop_lut6_I2_O)        0.142     7.707 r  p_Repl2_s_reg_66[21]_i_1/O
-                         net (fo=1, unplaced)         0.000     7.707    p_Repl2_s_reg_66[21]_i_1_n_0
-                         FDRE                                         r  p_Repl2_s_reg_66_reg[21]/D
+                         FDRE (Prop_fdre_C_Q)         0.281     0.953 r  p_Result_16_11_i_i_reg_654_reg[1]/Q
+                         net (fo=1, unplaced)         0.532     1.485    p_Result_16_11_i_i_reg_654[1]
+                         LUT3 (Prop_lut3_I0_O)        0.153     1.638 r  ap_return[3]_INST_0_i_5/O
+                         net (fo=1, unplaced)         0.664     2.302    ap_return[3]_INST_0_i_5_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.053     2.355 r  ap_return[3]_INST_0_i_3/O
+                         net (fo=13, unplaced)        0.571     2.926    ap_return[3]_INST_0_i_3_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.053     2.979 f  ap_return[1]_INST_0_i_13/O
+                         net (fo=1, unplaced)         0.664     3.643    ap_return[1]_INST_0_i_13_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.053     3.696 r  ap_return[1]_INST_0_i_5/O
+                         net (fo=6, unplaced)         0.342     4.038    ap_return[1]_INST_0_i_5_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.053     4.091 r  ap_return[0]_INST_0_i_1/O
+                         net (fo=7, unplaced)         0.375     4.466    grp_lut_div9_chunk_fu_128_ap_return_0[0]
+                         LUT3 (Prop_lut3_I0_O)        0.056     4.522 r  q_chunk_V_0_3_i_i_reg_664[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     4.522    q_chunk_V_0_3_i_i_reg_664[0]_i_1_n_0
+                         FDRE                                         r  q_chunk_V_0_3_i_i_reg_664_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=38, unset)           0.638    10.638    ap_clk
-                         FDRE                                         r  p_Repl2_s_reg_66_reg[21]/C
+                         net (fo=91, unset)           0.638    10.638    ap_clk
+                         FDRE                                         r  q_chunk_V_0_3_i_i_reg_664_reg[0]/C
                          clock pessimism              0.000    10.638    
                          clock uncertainty           -0.035    10.603    
-                         FDRE (Setup_fdre_C_D)        0.049    10.652    p_Repl2_s_reg_66_reg[21]
+                         FDRE (Setup_fdre_C_D)        0.049    10.652    q_chunk_V_0_3_i_i_reg_664_reg[0]
   -------------------------------------------------------------------
                          required time                         10.652    
-                         arrival time                          -7.707    
+                         arrival time                          -4.522    
   -------------------------------------------------------------------
-                         slack                                  2.945    
+                         slack                                  6.130    
 
 
 

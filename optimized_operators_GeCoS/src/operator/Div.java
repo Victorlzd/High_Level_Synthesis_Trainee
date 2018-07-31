@@ -14,6 +14,7 @@ import gecos.core.ProcedureSymbol;
 import gecos.core.Symbol;
 import gecos.instrs.Instruction;
 import gecos.instrs.SetInstruction;
+import gecos.types.Type;
 import util.Calcul;
 import util.File_builder;
 import util.Float_fix;
@@ -30,29 +31,51 @@ public class Div {
 	private static Map<Integer, ProcedureSymbol> builded_lut_chunk_divider = new TreeMap<Integer,ProcedureSymbol>();
 	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider_by_small_odd_constant = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
 	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
+	private static Map<Integer, ProcedureSymbol> builded_float_divider = new TreeMap<Integer,ProcedureSymbol>();
+	private static Map<Integer, ProcedureSymbol> builded_double_divider = new TreeMap<Integer,ProcedureSymbol>();
 	
-	private static final int[] known_divider = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
+	private static final int[] known_divider = {2, 9, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
 	
-	public static ProcedureSymbol build_float_div3(ProcedureSet ps, int div)
+	public static ProcedureSymbol build_float_div_by_constant(ProcedureSet ps, int div, boolean is_double)
 	// This function provides a function which implement an optimized
 	// operator for the division by 3 of a float
 	// return the symbol of the function
 	{
-		//if(ps_float_div3 == null) { // We need to define the function if it isn't yet
+		if((!builded_float_divider.containsKey(div) & !is_double) | (!builded_double_divider.containsKey(div) & is_double)) { // We need to define the function if it isn't yet
 			ProcedureSymbol proc_symbol;
 			GecosUserTypeFactory.setScope(ps.getScope());
 			
-			int size_xf = 24+Calcul.log2(div)+1;
+			int size_exp;
+			int size_mant;
+			Type type_in_out;
+			String name;
+			
+			if(is_double)
+			{
+				size_exp = 11;
+				size_mant = 52;
+				type_in_out = GecosUserTypeFactory.DOUBLE();
+				name = "operator_double_div"+div;
+			}
+			else
+			{
+				size_exp = 8;
+				size_mant = 23;
+				type_in_out = GecosUserTypeFactory.FLOAT();	
+				name = "operator_float_div"+div;
+			}
+
+			int size_xf = size_mant+2+Calcul.log2(div);
+			int pow2_in_div_fact = Calcul.pow_2_integer_factorization(div);
+			
 			
 			// Parameter definition
 			ArrayList<ParameterSymbol> param_float_div3 = new ArrayList<ParameterSymbol>();
 			// float in
-			param_float_div3.add(GecosUserCoreFactory.paramSymbol("in", GecosUserTypeFactory.FLOAT()));
+			param_float_div3.add(GecosUserCoreFactory.paramSymbol("in", type_in_out));
 			// float float_div3(float in)
-			proc_symbol = GecosUserCoreFactory.procSymbol("float_div3", GecosUserTypeFactory.FLOAT(), param_float_div3);
+			proc_symbol = GecosUserCoreFactory.procSymbol(name, type_in_out, param_float_div3);
 			
-			// add a comment which describes the function
-			GecosUserAnnotationFactory.comment(proc_symbol, "float_div3 implements a division by three of the float in, optimized for Vivado HLS");
 			
 			CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
 			GecosUserTypeFactory.setScope(mainblock.getScope()); 
@@ -61,21 +84,21 @@ public class Div {
 			// ap_uint<1> s
 			Symbol s_symbol = GecosUserCoreFactory.symbol("s", GecosUserTypeFactory.ACINT(1, false));
 			// ap_uint<8> exp
-			Symbol exp_symbol = GecosUserCoreFactory.symbol("exp", GecosUserTypeFactory.ACINT(8, false));
+			Symbol exp_symbol = GecosUserCoreFactory.symbol("exp", GecosUserTypeFactory.ACINT(size_exp, false));
 			// ap_uint<23> mant
-			Symbol mant_symbol = GecosUserCoreFactory.symbol("mant", GecosUserTypeFactory.ACINT(23, false));
+			Symbol mant_symbol = GecosUserCoreFactory.symbol("mant", GecosUserTypeFactory.ACINT(size_mant, false));
 			// ap_uint<8> new_exp
-			Symbol new_exp_symbol = GecosUserCoreFactory.symbol("new_exp", GecosUserTypeFactory.ACINT(8, false));
+			Symbol new_exp_symbol = GecosUserCoreFactory.symbol("new_exp", GecosUserTypeFactory.ACINT(size_exp, false));
 			// ap_uint<23> new_mant
-			Symbol new_mant_symbol = GecosUserCoreFactory.symbol("new_mant", GecosUserTypeFactory.ACINT(23, false));
+			Symbol new_mant_symbol = GecosUserCoreFactory.symbol("new_mant", GecosUserTypeFactory.ACINT(size_mant, false));
 			// ap_uint<32> xf
 			Symbol xf_symbol = GecosUserCoreFactory.symbol("xf", GecosUserTypeFactory.ACINT(size_xf, false));
 			// float out
-			Symbol out_symbol = GecosUserCoreFactory.symbol("out", GecosUserTypeFactory.FLOAT());
+			Symbol out_symbol = GecosUserCoreFactory.symbol("out", type_in_out);
 			// ap_uint<8> new_exp
-			Symbol shift_symbol = GecosUserCoreFactory.symbol("shift", GecosUserTypeFactory.ACINT(8, false));
+			Symbol shift_symbol = GecosUserCoreFactory.symbol("shift", GecosUserTypeFactory.ACINT(size_exp, false));
 			// ap_uint<8> new_exp
-			Symbol div_exp_symbol = GecosUserCoreFactory.symbol("div_exp", GecosUserTypeFactory.ACINT(8, false));
+			Symbol div_exp_symbol = GecosUserCoreFactory.symbol("div_exp", GecosUserTypeFactory.ACINT(size_exp, false));
 			
 			mainblock.addSymbol(s_symbol);
 			mainblock.addSymbol(exp_symbol);
@@ -94,7 +117,15 @@ public class Div {
 			        GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(s_symbol)),
 			        GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(exp_symbol)),
 			        GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(mant_symbol))};
-			ProcedureSymbol decompose = Float_fix.build_decompose_float(ps);
+			ProcedureSymbol decompose;
+			if(is_double)
+			{
+				decompose = Float_fix.build_decompose_double(ps);
+			}
+			else
+			{
+				decompose = Float_fix.build_decompose_float(ps);
+			}
 			// decompose_float(in, &s, &exp, &mant)
 			Instruction decompose_call = GecosUserInstructionFactory.call(decompose, args_decomposition);
 			bb_decompose.addInstruction(decompose_call);
@@ -107,77 +138,179 @@ public class Div {
 			SetInstruction new_mant_mant = GecosUserInstructionFactory.set(new_mant_symbol, GecosUserInstructionFactory.symbref(mant_symbol));
 			bb_decompose.addInstruction(new_mant_mant);
 			
-			Instruction decal_subnorm_set_0 = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.Int(0));
-			bb_decompose.addInstruction(decal_subnorm_set_0);
+			// shift = 0;
+			Instruction shift_set_0 = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.Int(0));
+			bb_decompose.addInstruction(shift_set_0);
+			
+			// div_exp = log2(div)
 			Instruction div_exp_set_log2_div = GecosUserInstructionFactory.set(div_exp_symbol, GecosUserInstructionFactory.Int(Calcul.log2(div)));
 			bb_decompose.addInstruction(div_exp_set_log2_div);
+			
+			// xf = mant
 			Instruction xf_set_mant = GecosUserInstructionFactory.set(xf_symbol, GecosUserInstructionFactory.symbref(mant_symbol));
 			bb_decompose.addInstruction(xf_set_mant);
 			
-			Integer div_mant = (int) (Float.floatToIntBits(div)%Calcul.pow2(23));
+			// begin if
+			// condition :
+			// div_mant is the mantissa of the float writing of the integer div
+			long div_mant;// (int) (Float.floatToIntBits(div)%Calcul.pow2(23));
+			if(is_double)
+			{
+				div_mant = (long) (Double.doubleToLongBits(div)%Calcul.pow2(52));
+			}
+			else
+			{
+				div_mant = (long) (Float.floatToIntBits(div)%Calcul.pow2(23));
+			}
+			// mant < div_mant
 			Instruction mant_lt_div_mant = GecosUserInstructionFactory.lt(GecosUserInstructionFactory.symbref(mant_symbol), GecosUserInstructionFactory.Int(div_mant));
 			
+			// begin then
+			// div_exp = log2(div)+1
 			Instruction div_exp_set_log2_div_plus_1 = GecosUserInstructionFactory.set(div_exp_symbol, GecosUserInstructionFactory.Int(Calcul.log2(div)+1));
 			BasicBlock then_mant_lt_div_mant = GecosUserBlockFactory.BBlock(div_exp_set_log2_div_plus_1);
+			// end then
+			
 			IfBlock if_mant_lt_div_mant = GecosUserBlockFactory.IfThen(mant_lt_div_mant, then_mant_lt_div_mant);
+			// end if
 			
-			Instruction exp_neq_255 = GecosUserInstructionFactory.ne(GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(255));
+			// begin if exp_compute
+			// condition :
+			// exp != 255
+			Instruction is_not_inf_or_nan = GecosUserInstructionFactory.ne(GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(Calcul.pow2(size_exp)-1));
 			
+			// begin if div_exp > exp
+			// div_exp > exp
 			Instruction div_exp_gt_exp = GecosUserInstructionFactory.gt(GecosUserInstructionFactory.symbref(div_exp_symbol), 
 					                      GecosUserInstructionFactory.symbref(exp_symbol));
-			
+			// begin then div_exp > exp
 			BasicBlock then_div_exp_gt_exp = GecosUserBlockFactory.BBlock();
+			// new_exp = 0
 			Instruction new_exp_set_0 = GecosUserInstructionFactory.set(new_exp_symbol, GecosUserInstructionFactory.Int(0));
 			then_div_exp_gt_exp.addInstruction(new_exp_set_0);
+			// end then
 			
+			// begin else div_exp > exp
 			BasicBlock else_div_exp_gt_exp = GecosUserBlockFactory.BBlock();
+			// new_exp = exp-div_exp;
 			Instruction new_exp_set_exp_sub_div_exp = GecosUserInstructionFactory.set(new_exp_symbol, GecosUserInstructionFactory.sub(
 					GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.symbref(div_exp_symbol)));
 			else_div_exp_gt_exp.addInstruction(new_exp_set_exp_sub_div_exp);
+			// enf else
 			
 			IfBlock if_div_exp_gt_exp = GecosUserBlockFactory.IfThenElse(div_exp_gt_exp.copy(), then_div_exp_gt_exp, else_div_exp_gt_exp);
+			// end if div_exp > exp
 			
-			IfBlock if_exp_compute = GecosUserBlockFactory.IfThen(exp_neq_255.copy(), if_div_exp_gt_exp);
+			IfBlock if_exp_compute = GecosUserBlockFactory.IfThen(is_not_inf_or_nan.copy(), if_div_exp_gt_exp);
+			// end if exp_compute
 			
+			// begin if mant_compute
+			// Condition exp != 255
+			// is_not_inf_or_nan.copy()
+			
+			// begin then mant_compute
 			CompositeBlock mant_compute = GecosUserBlockFactory.CompositeBlock();
 			
+			// begin if_shift
+			// condition exp==0
 			Instruction exp_eq_0 = GecosUserInstructionFactory.eq(GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(0));
-			Instruction shift_set_0 = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.Int(0));
-			BasicBlock then_shift = GecosUserBlockFactory.BBlock(shift_set_0);
 			
+			// begin then if_shift
+			// shift = pow2_in_div_fact
+			Instruction shift_set_pow2_in_div_fact = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.Int(pow2_in_div_fact));
+			BasicBlock then_shift = GecosUserBlockFactory.BBlock(shift_set_pow2_in_div_fact);
+			// end then if_shift
+			
+			// begin else if_shift
+			// begin if became_subnorm
+			// condition : div_exp >= exp
 			Instruction div_exp_ge_exp = GecosUserInstructionFactory.ge(GecosUserInstructionFactory.symbref(div_exp_symbol), 
                     GecosUserInstructionFactory.symbref(exp_symbol));
-			Instruction shift_set_exp_sub_1 = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.sub(
-					GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(1)));
-			BasicBlock then_became_subnorm = GecosUserBlockFactory.BBlock(shift_set_exp_sub_1);
+			// begin then became_subnorm
+			// begin if divide_xf
+			// condition : pow2_in_div_fact+1 >= exp
+			Instruction pow2_in_div_fact_plus_1_ge_exp = GecosUserInstructionFactory.ge(GecosUserInstructionFactory.Int(pow2_in_div_fact+1), 
+					GecosUserInstructionFactory.symbref(exp_symbol)); 
+			// begin then divide_xf
+			Instruction shift_set_pow2_div_fact_plus_1_sub_exp = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.sub(
+					GecosUserInstructionFactory.Int(pow2_in_div_fact+1), GecosUserInstructionFactory.symbref(exp_symbol)));
+			BasicBlock shift_set_pow2_div_fact_sub_exp_bb = GecosUserBlockFactory.BBlock(shift_set_pow2_div_fact_plus_1_sub_exp);
+			// end then
 			
-			Instruction shift_set_div_exp = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.symbref(div_exp_symbol));
+			// begin else divide_xf
+			Instruction shift_set_exp_sub_pow2_div_fact = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.sub(
+					GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(pow2_in_div_fact+1)));
+			BasicBlock shift_set_exp_sub_pow2_div_fact_bb = GecosUserBlockFactory.BBlock(shift_set_exp_sub_pow2_div_fact);
+			// end else
+
+			IfBlock if_divide_xf = GecosUserBlockFactory.IfThenElse(pow2_in_div_fact_plus_1_ge_exp, shift_set_pow2_div_fact_sub_exp_bb, shift_set_exp_sub_pow2_div_fact_bb);
+			// end if divide_xf
+			
+			// begin else became_subnorm
+			Instruction shift_set_div_exp = GecosUserInstructionFactory.set(shift_symbol, GecosUserInstructionFactory.sub(
+					GecosUserInstructionFactory.symbref(div_exp_symbol), GecosUserInstructionFactory.Int(pow2_in_div_fact)));
 			BasicBlock else_became_subnorm = GecosUserBlockFactory.BBlock(shift_set_div_exp);
-			IfBlock if_became_subnorm = GecosUserBlockFactory.IfThenElse(div_exp_ge_exp, then_became_subnorm, else_became_subnorm);
+			// end else
+			
+			IfBlock if_became_subnorm = GecosUserBlockFactory.IfThenElse(div_exp_ge_exp, if_divide_xf, else_became_subnorm);
+			// end if became_subnorm
 			
 			IfBlock if_shift = GecosUserBlockFactory.IfThenElse(exp_eq_0, then_shift, if_became_subnorm);
 			mant_compute.addBlock(if_shift);
+			// end if_shift
 			
+			// begin if not_subnorm
+			// condition : exp != 0
 			Instruction exp_ne_0 = GecosUserInstructionFactory.ne(GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(0));
-			Instruction xf_set_23 = GecosUserInstructionFactory.methodCallInstruction("set", GecosUserInstructionFactory.symbref(xf_symbol), GecosUserInstructionFactory.Int(23));
-			BasicBlock xf_set_23_bb = GecosUserBlockFactory.BBlock(xf_set_23);
-			IfBlock if_not_subnorm = GecosUserBlockFactory.IfThen(exp_ne_0, xf_set_23_bb);
+			
+			// begin then not_subnorm
+			// xf.set(23)
+			Instruction xf_set_size_mant = GecosUserInstructionFactory.methodCallInstruction("set", GecosUserInstructionFactory.symbref(xf_symbol), GecosUserInstructionFactory.Int(size_mant));
+			BasicBlock xf_set_size_mant_bb = GecosUserBlockFactory.BBlock(xf_set_size_mant);
+			// end then
+			
+			IfBlock if_not_subnorm = GecosUserBlockFactory.IfThen(exp_ne_0, xf_set_size_mant_bb);
 			mant_compute.addBlock(if_not_subnorm);
+			// end if not_subnorm
+			
+			// begin if shift_xf
+			// condition : pow2_in_div_fact+1 >= exp
+			// pow2_in_div_fact_plus_1_ge_exp.copy()
+			
+			// begin then shift_xf
+			// xf = xf >> shift
+			Instruction xf_shr_shift = GecosUserInstructionFactory.shr(GecosUserInstructionFactory.symbref(xf_symbol),GecosUserInstructionFactory.symbref(shift_symbol));
+			Instruction xf_set_shr_shift = GecosUserInstructionFactory.set(xf_symbol, xf_shr_shift);
+			BasicBlock then_shift_xf = GecosUserBlockFactory.BBlock(xf_set_shr_shift);
+			// end then
+			
+			// begin else shift_xf
+			// xf = xf << shift
+			Instruction xf_shl_shift = GecosUserInstructionFactory.shl(GecosUserInstructionFactory.symbref(xf_symbol),GecosUserInstructionFactory.symbref(shift_symbol));
+			Instruction xf_set_shl_shift = GecosUserInstructionFactory.set(xf_symbol, xf_shl_shift);
+			BasicBlock else_shift_xf = GecosUserBlockFactory.BBlock(xf_set_shl_shift);
+			// end else
+			
+			IfBlock if_shift_xf = GecosUserBlockFactory.IfThenElse(pow2_in_div_fact_plus_1_ge_exp.copy(), then_shift_xf, else_shift_xf);
+			mant_compute.addBlock(if_shift_xf);
+			// end if shift_xf
 			
 			BasicBlock mant_compute_bb = GecosUserBlockFactory.BBlock();
-			Instruction xf_shl_shift = GecosUserInstructionFactory.shl(GecosUserInstructionFactory.symbref(xf_symbol),GecosUserInstructionFactory.symbref(shift_symbol));
-			Instruction xf_set_shift = GecosUserInstructionFactory.set(xf_symbol, xf_shl_shift);
-			mant_compute_bb.addInstruction(xf_set_shift);
-			
+			// we add the half of the divider to transform the rounding in a truncature
+			// xf = xf + div/2
 			Instruction xf_set_xf_plus_half_div = GecosUserInstructionFactory.set(xf_symbol, GecosUserInstructionFactory.add(
-					GecosUserInstructionFactory.symbref(xf_symbol),GecosUserInstructionFactory.Int(div/2)));
+					GecosUserInstructionFactory.symbref(xf_symbol),GecosUserInstructionFactory.Int((int) (div/Calcul.pow2(pow2_in_div_fact))/2)));
 			mant_compute_bb.addInstruction(xf_set_xf_plus_half_div);
 			
-			Instruction int_div_xf = GecosUserInstructionFactory.call(int_div(ps, div, size_xf), GecosUserInstructionFactory.symbref(xf_symbol));
+			// new_mant = operator_int_div(xf);
+			Instruction int_div_xf = GecosUserInstructionFactory.call(int_div_by_constant(ps, (int) (div/Calcul.pow2(pow2_in_div_fact)), size_xf), GecosUserInstructionFactory.symbref(xf_symbol));
 			Instruction new_mant_set_xf_div = GecosUserInstructionFactory.set(new_mant_symbol, int_div_xf);
 			mant_compute_bb.addInstruction(new_mant_set_xf_div);
 			mant_compute.addBlock(mant_compute_bb);
-			IfBlock if_mant_compute = GecosUserBlockFactory.IfThen(exp_neq_255, mant_compute);
+			// end then mant_compute
+			
+			IfBlock if_mant_compute = GecosUserBlockFactory.IfThen(is_not_inf_or_nan, mant_compute);
+			// end if mant_compute
 			
 			BasicBlock bb_rebuild = GecosUserBlockFactory.BBlock();
 			// (s, exp, mant, &out)
@@ -186,6 +319,14 @@ public class Div {
 			                       GecosUserInstructionFactory.symbref(new_mant_symbol),
 			                       GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(out_symbol))};
 			ProcedureSymbol rebuild = Float_fix.build_rebuild_float(ps);
+			if(is_double)
+			{
+				rebuild = Float_fix.build_rebuild_double(ps);
+			}
+			else
+			{
+				rebuild = Float_fix.build_rebuild_float(ps);
+			}
 			// rebuild_float(s, exp, mant, &out)
 			Instruction rebuild_call = GecosUserInstructionFactory.call(rebuild, args_recomposition);
 			bb_rebuild.addInstruction(rebuild_call);
@@ -204,11 +345,27 @@ public class Div {
 
 			GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
 			File_builder.add_operator(proc_symbol);	
-		
-		return proc_symbol;
+			
+			if(is_double)
+			{
+				return builded_double_divider.put(div, proc_symbol);
+			}
+			else
+			{
+				return builded_float_divider.put(div, proc_symbol);
+			}
+		}
+		if(is_double)
+		{
+			return builded_double_divider.get(div);
+		}
+		else
+		{
+			return builded_float_divider.get(div);
+		}
 	}
 
-	public static ProcedureSymbol int_div(ProcedureSet ps, int div, int size)
+	public static ProcedureSymbol int_div_by_constant(ProcedureSet ps, int div, int size)
 	/* this function provides operators for division by integer constants optimized for FPGA
 	 * return the ProccedureSymbol of the operator or null if the division cannot be optimized
 	 */

@@ -28910,25 +28910,23 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 # 69 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h" 2
 # 2 "float_div3.cpp" 2
 
-using namespace std;
-
 union fix_to_float {
  float f;
  unsigned int i;
 };
 typedef union fix_to_float fix_to_float;
 void decompose_float(float in, ap_uint<1> (* s), ap_uint<8> (* exp), ap_uint<23> (* mant));
-ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in);
-void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out));
+ap_uint<1> lut_r0_div9(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_r1_div9(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_r2_div9(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_r3_div9(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_q0_div9(ap_uint<2> d, ap_uint<4> r_in);
+ap_uint<1> lut_q1_div9(ap_uint<2> d, ap_uint<4> r_in);
+void lut_div9_chunk(ap_uint<2> d, ap_uint<4> r_in, ap_uint<2> (* q), ap_uint<4> (* r_out));
 
-ap_uint<32> int_32_div3(ap_uint<32> in);
+ap_uint<28> int_28_div9(ap_uint<28> in);
 
-ap_uint<32> operator_int_32_div3(ap_uint<32> in);
+ap_uint<28> operator_int_28_div9(ap_uint<28> in);
 void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float * out);
 
 float float_div3(float in);
@@ -28945,7 +28943,7 @@ void decompose_float(float in, ap_uint<1> (* s), ap_uint<8> (* exp), ap_uint<23>
  *mant = in_bits.range(22, 0);
 }
 
-ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
+ap_uint<1> lut_r0_div9(ap_uint<2> d, ap_uint<4> r_in) {
  ap_uint<1> ret_value;
  ap_uint<6> in;
 
@@ -28961,13 +28959,13 @@ ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 3 :
-  ret_value = 0;
-  break;
-  case 4 :
   ret_value = 1;
   break;
-  case 5 :
+  case 4 :
   ret_value = 0;
+  break;
+  case 5 :
+  ret_value = 1;
   break;
   case 6 :
   ret_value = 0;
@@ -28988,13 +28986,13 @@ ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 12 :
-  ret_value = 0;
-  break;
-  case 13 :
   ret_value = 1;
   break;
-  case 14 :
+  case 13 :
   ret_value = 0;
+  break;
+  case 14 :
+  ret_value = 1;
   break;
   case 15 :
   ret_value = 0;
@@ -29015,13 +29013,13 @@ ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 21 :
-  ret_value = 0;
-  break;
-  case 22 :
   ret_value = 1;
   break;
-  case 23 :
+  case 22 :
   ret_value = 0;
+  break;
+  case 23 :
+  ret_value = 1;
   break;
   case 24 :
   ret_value = 0;
@@ -29042,13 +29040,13 @@ ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 30 :
-  ret_value = 0;
-  break;
-  case 31 :
   ret_value = 1;
   break;
-  case 32 :
+  case 31 :
   ret_value = 0;
+  break;
+  case 32 :
+  ret_value = 1;
   break;
   case 33 :
   ret_value = 0;
@@ -29069,13 +29067,13 @@ ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 39 :
-  ret_value = 0;
-  break;
-  case 40 :
   ret_value = 1;
   break;
-  case 41 :
+  case 40 :
   ret_value = 0;
+  break;
+  case 41 :
+  ret_value = 1;
   break;
   case 42 :
   ret_value = 0;
@@ -29095,11 +29093,59 @@ ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   case 47 :
   ret_value = 0;
   break;
+  case 48 :
+  ret_value = 1;
+  break;
+  case 49 :
+  ret_value = 0;
+  break;
+  case 50 :
+  ret_value = 1;
+  break;
+  case 51 :
+  ret_value = 0;
+  break;
+  case 52 :
+  ret_value = 1;
+  break;
+  case 53 :
+  ret_value = 0;
+  break;
+  case 54 :
+  ret_value = 0;
+  break;
+  case 55 :
+  ret_value = 1;
+  break;
+  case 56 :
+  ret_value = 0;
+  break;
+  case 57 :
+  ret_value = 1;
+  break;
+  case 58 :
+  ret_value = 0;
+  break;
+  case 59 :
+  ret_value = 1;
+  break;
+  case 60 :
+  ret_value = 0;
+  break;
+  case 61 :
+  ret_value = 1;
+  break;
+  case 62 :
+  ret_value = 0;
+  break;
+  case 63 :
+  ret_value = 0;
+  break;
  }
  return ret_value;
 }
 
-ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in) {
+ap_uint<1> lut_r1_div9(ap_uint<2> d, ap_uint<4> r_in) {
  ap_uint<1> ret_value;
  ap_uint<6> in;
 
@@ -29115,22 +29161,22 @@ ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 3 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 4 :
   ret_value = 0;
   break;
   case 5 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 6 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 7 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 8 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 9 :
   ret_value = 0;
@@ -29142,161 +29188,7 @@ ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 12 :
-  ret_value = 0;
-  break;
-  case 13 :
-  ret_value = 0;
-  break;
-  case 14 :
   ret_value = 1;
-  break;
-  case 15 :
-  ret_value = 0;
-  break;
-  case 16 :
-  ret_value = 0;
-  break;
-  case 17 :
-  ret_value = 1;
-  break;
-  case 18 :
-  ret_value = 0;
-  break;
-  case 19 :
-  ret_value = 0;
-  break;
-  case 20 :
-  ret_value = 1;
-  break;
-  case 21 :
-  ret_value = 0;
-  break;
-  case 22 :
-  ret_value = 0;
-  break;
-  case 23 :
-  ret_value = 1;
-  break;
-  case 24 :
-  ret_value = 0;
-  break;
-  case 25 :
-  ret_value = 0;
-  break;
-  case 26 :
-  ret_value = 1;
-  break;
-  case 27 :
-  ret_value = 0;
-  break;
-  case 28 :
-  ret_value = 0;
-  break;
-  case 29 :
-  ret_value = 1;
-  break;
-  case 30 :
-  ret_value = 0;
-  break;
-  case 31 :
-  ret_value = 0;
-  break;
-  case 32 :
-  ret_value = 1;
-  break;
-  case 33 :
-  ret_value = 0;
-  break;
-  case 34 :
-  ret_value = 0;
-  break;
-  case 35 :
-  ret_value = 1;
-  break;
-  case 36 :
-  ret_value = 0;
-  break;
-  case 37 :
-  ret_value = 0;
-  break;
-  case 38 :
-  ret_value = 1;
-  break;
-  case 39 :
-  ret_value = 0;
-  break;
-  case 40 :
-  ret_value = 0;
-  break;
-  case 41 :
-  ret_value = 1;
-  break;
-  case 42 :
-  ret_value = 0;
-  break;
-  case 43 :
-  ret_value = 0;
-  break;
-  case 44 :
-  ret_value = 1;
-  break;
-  case 45 :
-  ret_value = 0;
-  break;
-  case 46 :
-  ret_value = 0;
-  break;
-  case 47 :
-  ret_value = 1;
-  break;
- }
- return ret_value;
-}
-
-ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in) {
- ap_uint<1> ret_value;
- ap_uint<6> in;
-
- in = r_in.concat(d);
- switch (in){
-  case 0 :
-  ret_value = 0;
-  break;
-  case 1 :
-  ret_value = 0;
-  break;
-  case 2 :
-  ret_value = 0;
-  break;
-  case 3 :
-  ret_value = 1;
-  break;
-  case 4 :
-  ret_value = 1;
-  break;
-  case 5 :
-  ret_value = 1;
-  break;
-  case 6 :
-  ret_value = 0;
-  break;
-  case 7 :
-  ret_value = 0;
-  break;
-  case 8 :
-  ret_value = 0;
-  break;
-  case 9 :
-  ret_value = 1;
-  break;
-  case 10 :
-  ret_value = 1;
-  break;
-  case 11 :
-  ret_value = 1;
-  break;
-  case 12 :
-  ret_value = 0;
   break;
   case 13 :
   ret_value = 0;
@@ -29311,7 +29203,7 @@ ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 17 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 18 :
   ret_value = 0;
@@ -29320,37 +29212,37 @@ ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 20 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 21 :
   ret_value = 1;
   break;
   case 22 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 23 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 24 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 25 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 26 :
   ret_value = 0;
   break;
   case 27 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 28 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 29 :
   ret_value = 1;
   break;
   case 30 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 31 :
   ret_value = 0;
@@ -29365,7 +29257,7 @@ ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 35 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 36 :
   ret_value = 0;
@@ -29374,40 +29266,88 @@ ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 38 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 39 :
   ret_value = 1;
   break;
   case 40 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 41 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 42 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 43 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 44 :
   ret_value = 0;
   break;
   case 45 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 46 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 47 :
   ret_value = 1;
+  break;
+  case 48 :
+  ret_value = 1;
+  break;
+  case 49 :
+  ret_value = 0;
+  break;
+  case 50 :
+  ret_value = 0;
+  break;
+  case 51 :
+  ret_value = 1;
+  break;
+  case 52 :
+  ret_value = 1;
+  break;
+  case 53 :
+  ret_value = 0;
+  break;
+  case 54 :
+  ret_value = 0;
+  break;
+  case 55 :
+  ret_value = 0;
+  break;
+  case 56 :
+  ret_value = 1;
+  break;
+  case 57 :
+  ret_value = 1;
+  break;
+  case 58 :
+  ret_value = 0;
+  break;
+  case 59 :
+  ret_value = 0;
+  break;
+  case 60 :
+  ret_value = 1;
+  break;
+  case 61 :
+  ret_value = 1;
+  break;
+  case 62 :
+  ret_value = 0;
+  break;
+  case 63 :
+  ret_value = 0;
   break;
  }
  return ret_value;
 }
 
-ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
+ap_uint<1> lut_r2_div9(ap_uint<2> d, ap_uint<4> r_in) {
  ap_uint<1> ret_value;
  ap_uint<6> in;
 
@@ -29426,10 +29366,10 @@ ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 4 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 5 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 6 :
   ret_value = 1;
@@ -29438,46 +29378,46 @@ ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 8 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 9 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 10 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 11 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 12 :
   ret_value = 0;
   break;
   case 13 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 14 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 15 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 16 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 17 :
   ret_value = 0;
   break;
   case 18 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 19 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 20 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 21 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 22 :
   ret_value = 1;
@@ -29486,10 +29426,10 @@ ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 24 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 25 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 26 :
   ret_value = 0;
@@ -29504,7 +29444,7 @@ ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 30 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 31 :
   ret_value = 1;
@@ -29519,7 +29459,7 @@ ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 35 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 36 :
   ret_value = 0;
@@ -29534,10 +29474,10 @@ ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 40 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 41 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 42 :
   ret_value = 1;
@@ -29546,22 +29486,70 @@ ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 44 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 45 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 46 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 47 :
+  ret_value = 0;
+  break;
+  case 48 :
+  ret_value = 0;
+  break;
+  case 49 :
   ret_value = 1;
+  break;
+  case 50 :
+  ret_value = 1;
+  break;
+  case 51 :
+  ret_value = 1;
+  break;
+  case 52 :
+  ret_value = 1;
+  break;
+  case 53 :
+  ret_value = 0;
+  break;
+  case 54 :
+  ret_value = 0;
+  break;
+  case 55 :
+  ret_value = 0;
+  break;
+  case 56 :
+  ret_value = 0;
+  break;
+  case 57 :
+  ret_value = 0;
+  break;
+  case 58 :
+  ret_value = 1;
+  break;
+  case 59 :
+  ret_value = 1;
+  break;
+  case 60 :
+  ret_value = 1;
+  break;
+  case 61 :
+  ret_value = 1;
+  break;
+  case 62 :
+  ret_value = 0;
+  break;
+  case 63 :
+  ret_value = 0;
   break;
  }
  return ret_value;
 }
 
-ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
+ap_uint<1> lut_r3_div9(ap_uint<2> d, ap_uint<4> r_in) {
  ap_uint<1> ret_value;
  ap_uint<6> in;
 
@@ -29592,7 +29580,7 @@ ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 8 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 9 :
   ret_value = 0;
@@ -29604,40 +29592,40 @@ ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 12 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 13 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 14 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 15 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 16 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 17 :
   ret_value = 1;
   break;
   case 18 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 19 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 20 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 21 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 22 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 23 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 24 :
   ret_value = 0;
@@ -29646,7 +29634,7 @@ ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 26 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 27 :
   ret_value = 0;
@@ -29673,34 +29661,236 @@ ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 35 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 36 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 37 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 38 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 39 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 40 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 41 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 42 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 43 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 44 :
   ret_value = 1;
+  break;
+  case 45 :
+  ret_value = 0;
+  break;
+  case 46 :
+  ret_value = 0;
+  break;
+  case 47 :
+  ret_value = 0;
+  break;
+  case 48 :
+  ret_value = 0;
+  break;
+  case 49 :
+  ret_value = 0;
+  break;
+  case 50 :
+  ret_value = 0;
+  break;
+  case 51 :
+  ret_value = 0;
+  break;
+  case 52 :
+  ret_value = 0;
+  break;
+  case 53 :
+  ret_value = 1;
+  break;
+  case 54 :
+  ret_value = 0;
+  break;
+  case 55 :
+  ret_value = 0;
+  break;
+  case 56 :
+  ret_value = 0;
+  break;
+  case 57 :
+  ret_value = 0;
+  break;
+  case 58 :
+  ret_value = 0;
+  break;
+  case 59 :
+  ret_value = 0;
+  break;
+  case 60 :
+  ret_value = 0;
+  break;
+  case 61 :
+  ret_value = 0;
+  break;
+  case 62 :
+  ret_value = 1;
+  break;
+  case 63 :
+  ret_value = 0;
+  break;
+ }
+ return ret_value;
+}
+
+ap_uint<1> lut_q0_div9(ap_uint<2> d, ap_uint<4> r_in) {
+ ap_uint<1> ret_value;
+ ap_uint<6> in;
+
+ in = r_in.concat(d);
+ switch (in){
+  case 0 :
+  ret_value = 0;
+  break;
+  case 1 :
+  ret_value = 0;
+  break;
+  case 2 :
+  ret_value = 0;
+  break;
+  case 3 :
+  ret_value = 0;
+  break;
+  case 4 :
+  ret_value = 0;
+  break;
+  case 5 :
+  ret_value = 0;
+  break;
+  case 6 :
+  ret_value = 0;
+  break;
+  case 7 :
+  ret_value = 0;
+  break;
+  case 8 :
+  ret_value = 0;
+  break;
+  case 9 :
+  ret_value = 1;
+  break;
+  case 10 :
+  ret_value = 1;
+  break;
+  case 11 :
+  ret_value = 1;
+  break;
+  case 12 :
+  ret_value = 1;
+  break;
+  case 13 :
+  ret_value = 1;
+  break;
+  case 14 :
+  ret_value = 1;
+  break;
+  case 15 :
+  ret_value = 1;
+  break;
+  case 16 :
+  ret_value = 1;
+  break;
+  case 17 :
+  ret_value = 1;
+  break;
+  case 18 :
+  ret_value = 0;
+  break;
+  case 19 :
+  ret_value = 0;
+  break;
+  case 20 :
+  ret_value = 0;
+  break;
+  case 21 :
+  ret_value = 0;
+  break;
+  case 22 :
+  ret_value = 0;
+  break;
+  case 23 :
+  ret_value = 0;
+  break;
+  case 24 :
+  ret_value = 0;
+  break;
+  case 25 :
+  ret_value = 0;
+  break;
+  case 26 :
+  ret_value = 0;
+  break;
+  case 27 :
+  ret_value = 1;
+  break;
+  case 28 :
+  ret_value = 1;
+  break;
+  case 29 :
+  ret_value = 1;
+  break;
+  case 30 :
+  ret_value = 1;
+  break;
+  case 31 :
+  ret_value = 1;
+  break;
+  case 32 :
+  ret_value = 1;
+  break;
+  case 33 :
+  ret_value = 1;
+  break;
+  case 34 :
+  ret_value = 1;
+  break;
+  case 35 :
+  ret_value = 1;
+  break;
+  case 36 :
+  ret_value = 0;
+  break;
+  case 37 :
+  ret_value = 0;
+  break;
+  case 38 :
+  ret_value = 0;
+  break;
+  case 39 :
+  ret_value = 0;
+  break;
+  case 40 :
+  ret_value = 0;
+  break;
+  case 41 :
+  ret_value = 0;
+  break;
+  case 42 :
+  ret_value = 0;
+  break;
+  case 43 :
+  ret_value = 0;
+  break;
+  case 44 :
+  ret_value = 0;
   break;
   case 45 :
   ret_value = 1;
@@ -29711,11 +29901,59 @@ ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
   case 47 :
   ret_value = 1;
   break;
+  case 48 :
+  ret_value = 1;
+  break;
+  case 49 :
+  ret_value = 1;
+  break;
+  case 50 :
+  ret_value = 1;
+  break;
+  case 51 :
+  ret_value = 1;
+  break;
+  case 52 :
+  ret_value = 1;
+  break;
+  case 53 :
+  ret_value = 1;
+  break;
+  case 54 :
+  ret_value = 0;
+  break;
+  case 55 :
+  ret_value = 0;
+  break;
+  case 56 :
+  ret_value = 0;
+  break;
+  case 57 :
+  ret_value = 0;
+  break;
+  case 58 :
+  ret_value = 0;
+  break;
+  case 59 :
+  ret_value = 0;
+  break;
+  case 60 :
+  ret_value = 0;
+  break;
+  case 61 :
+  ret_value = 0;
+  break;
+  case 62 :
+  ret_value = 0;
+  break;
+  case 63 :
+  ret_value = 1;
+  break;
  }
  return ret_value;
 }
 
-ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in) {
+ap_uint<1> lut_q1_div9(ap_uint<2> d, ap_uint<4> r_in) {
  ap_uint<1> ret_value;
  ap_uint<6> in;
 
@@ -29776,22 +30014,22 @@ ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 0;
   break;
   case 18 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 19 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 20 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 21 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 22 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 23 :
-  ret_value = 0;
+  ret_value = 1;
   break;
   case 24 :
   ret_value = 1;
@@ -29830,77 +30068,125 @@ ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in) {
   ret_value = 1;
   break;
   case 36 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 37 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 38 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 39 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 40 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 41 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 42 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 43 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 44 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 45 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 46 :
-  ret_value = 1;
+  ret_value = 0;
   break;
   case 47 :
+  ret_value = 0;
+  break;
+  case 48 :
+  ret_value = 0;
+  break;
+  case 49 :
+  ret_value = 0;
+  break;
+  case 50 :
+  ret_value = 0;
+  break;
+  case 51 :
+  ret_value = 0;
+  break;
+  case 52 :
+  ret_value = 0;
+  break;
+  case 53 :
+  ret_value = 0;
+  break;
+  case 54 :
+  ret_value = 1;
+  break;
+  case 55 :
+  ret_value = 1;
+  break;
+  case 56 :
+  ret_value = 1;
+  break;
+  case 57 :
+  ret_value = 1;
+  break;
+  case 58 :
+  ret_value = 1;
+  break;
+  case 59 :
+  ret_value = 1;
+  break;
+  case 60 :
+  ret_value = 1;
+  break;
+  case 61 :
+  ret_value = 1;
+  break;
+  case 62 :
+  ret_value = 1;
+  break;
+  case 63 :
   ret_value = 1;
   break;
  }
  return ret_value;
 }
 
-void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out)) {
- (*r_out)[0] = lut_r0_div3(d, r_in);
- (*r_out)[1] = lut_r1_div3(d, r_in);
- (*q)[0] = lut_q0_div3(d, r_in);
- (*q)[1] = lut_q1_div3(d, r_in);
- (*q)[2] = lut_q2_div3(d, r_in);
- (*q)[3] = lut_q3_div3(d, r_in);
+void lut_div9_chunk(ap_uint<2> d, ap_uint<4> r_in, ap_uint<2> (* q), ap_uint<4> (* r_out)) {
+ (*r_out)[0] = lut_r0_div9(d, r_in);
+ (*r_out)[1] = lut_r1_div9(d, r_in);
+ (*r_out)[2] = lut_r2_div9(d, r_in);
+ (*r_out)[3] = lut_r3_div9(d, r_in);
+ (*q)[0] = lut_q0_div9(d, r_in);
+ (*q)[1] = lut_q1_div9(d, r_in);
 }
 
-ap_uint<32> int_32_div3(ap_uint<32> in) {
- ap_uint<32> d;
- ap_uint<32> q;
- ap_uint<4> d_chunk;
- ap_uint<4> q_chunk;
- ap_uint<2> r;
+ap_uint<28> int_28_div9(ap_uint<28> in) {
+ ap_uint<28> d;
+ ap_uint<28> q;
+ ap_uint<2> d_chunk;
+ ap_uint<2> q_chunk;
+ ap_uint<4> r;
  int i;
 
  r = 0;
  d = in;
- for(i = 7; i >= 0; i = i - 1) {
+ for(i = 13; i >= 0; i = i - 1) {
 _ssdm_Unroll(0,0,0, "");
  {
-  d_chunk = d.range(i*4 + 3, i*4);
-  lut_div3_chunk(d_chunk, r, &q_chunk, &r);
-  q.range(i*4 + 3, i*4) = q_chunk;
+  d_chunk = d.range(i*2 + 1, i*2);
+  lut_div9_chunk(d_chunk, r, &q_chunk, &r);
+  q.range(i*2 + 1, i*2) = q_chunk;
   }
  }
  return q;
 }
 
-ap_uint<32> operator_int_32_div3(ap_uint<32> in) {
- return int_32_div3(in);
+ap_uint<28> operator_int_28_div9(ap_uint<28> in) {
+ return int_28_div9(in);
 }
 
 void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float * out) {
@@ -29920,35 +30206,43 @@ float float_div3(float in) {
  ap_uint<23> mant;
  ap_uint<8> new_exp;
  ap_uint<23> new_mant;
- ap_uint<32> xf;
+ ap_uint<28> xf;
  float out;
- ap_uint<8> decal_subnorm;
+ ap_uint<8> shift;
  ap_uint<8> div_exp;
 
  decompose_float(in, &s, &exp, &mant);
  new_exp = exp;
  new_mant = mant;
- div_exp = 1;
+ shift = 0;
+ div_exp = 3;
  xf = mant;
- if (mant < 4194304)
-  div_exp = 2;
+ if (mant < 1048576)
+  div_exp = 4;
  if (exp != 255)
   if (div_exp > exp)
    new_exp = 0;
   else
    new_exp = exp - div_exp;
  if (exp != 255) {
-        if(exp == 0)
-            decal_subnorm = 0;
-  else if (div_exp >= exp)
-   decal_subnorm = exp-1;
-        else
-            decal_subnorm = div_exp;
+  if (exp == 0)
+   shift = 0;
+  else
+   if (div_exp >= exp)
+    if (1 >= exp)
+     shift = 1 - exp;
+    else
+     shift = exp - 1;
+   else
+    shift = div_exp - 0;
   if (exp != 0)
    xf.set(23);
-  xf = xf << decal_subnorm;
-  xf = xf + 1;
-  new_mant = xf/3;
+  if (1 >= exp)
+   xf = xf >> shift;
+  else
+   xf = xf << shift;
+  xf = xf + 4;
+  new_mant = operator_int_28_div9(xf);
  }
  rebuild_float(s, new_exp, new_mant, &out);
  return out;

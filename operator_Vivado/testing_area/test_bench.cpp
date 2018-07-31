@@ -1,7 +1,7 @@
 #include <iostream>
 #include "ap_int.h"
 
-ap_uint<32> operator_int_32_div30(ap_uint<32> in);
+ap_uint<32> operator_int_32_div3(ap_uint<32> in);
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 	{
 		D = i;
 		q_test = D/30;
-		q = operator_int_32_div30(D);
+		q = operator_int_32_div3(D);
 		if(q!=q_test)
 		{
 			cout << "-------- PROBLEME --------" << endl;

@@ -24,12 +24,12 @@ int main(int argc, char const *argv[])
 
     for (int i = 0; i < 1; ++i)
     {
-		int div = 273;
+		int div = 9;
     	s=i;
     	for (int j = 0; j <= 255; ++j)
     	{
-    		cerr << "exp = " << j << endl;
-    		if(j>3 && j<250) j+=5;
+    		if(j>6 && j<240) j+=15;
+			cerr << "exp = " << j << endl;
     		exp = j;
     		for (int k = 0; k < 8388608; k+=10000)
     		{
@@ -55,12 +55,14 @@ int main(int argc, char const *argv[])
 					cout << "   exposant = " << exp_out << endl;
 					cout << "   mantisse = " << mant_out << endl;
 
-					decompose_float(out, &s_out, &exp_out, &mant_out);
+					decompose_float(out, &s_out, &exp_out, &mant);
 					cout << "resultat obtenu = " << endl;
 					cout << "   float = " << out << endl;
 					cout << "   signe = " << s_out << endl;
 					cout << "   exposant = " << exp_out << endl;
-					cout << "   mantisse = " << mant_out << endl;
+					cout << "   mantisse = " << mant << endl;
+
+					cout << "   diff_mantisse = " << mant - mant_out << endl;
     				result = 1;
     			}
     		}

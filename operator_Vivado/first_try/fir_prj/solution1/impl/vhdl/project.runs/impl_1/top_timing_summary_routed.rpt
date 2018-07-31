@@ -1,0 +1,570 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Jul 26 11:32:55 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 65 input ports with partial input delay specified. (HIGH)
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      5.467        0.000                      0                   34           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group        From Clock        To Clock              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------        ----------        --------              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**default**       input port clock                          5.467        0.000                      0                   34                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **default**
+From Clock:  input port clock
+  To Clock:  
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.467ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.467ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[13]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.533ns  (logic 0.265ns (5.845%)  route 4.268ns (94.155%))
+  Logic Levels:           5  (LUT4=1 LUT5=2 LUT6=2)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.950     2.207    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y56         LUT5 (Prop_lut5_I3_O)        0.053     2.260 r  ap_return[13]_INST_0_i_4/O
+                         net (fo=4, routed)           0.621     2.881    ap_return[13]_INST_0_i_4_n_0
+    SLICE_X19Y56         LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  ap_return[13]_INST_0_i_2/O
+                         net (fo=4, routed)           0.874     3.808    ap_return[13]_INST_0_i_2_n_0
+    SLICE_X20Y57         LUT6 (Prop_lut6_I5_O)        0.053     3.861 r  ap_return[13]_INST_0/O
+                         net (fo=0)                   0.672     4.533    ap_return[13]
+                                                                      r  ap_return[13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.533    
+  -------------------------------------------------------------------
+                         slack                                  5.467    
+
+Slack (MET) :             5.545ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[6]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.455ns  (logic 0.392ns (8.799%)  route 4.063ns (91.201%))
+  Logic Levels:           5  (LUT4=2 LUT6=3)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.840     2.097    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y55         LUT4 (Prop_lut4_I2_O)        0.065     2.162 r  ap_return[11]_INST_0_i_2/O
+                         net (fo=2, routed)           0.553     2.715    ap_return[11]_INST_0_i_2_n_0
+    SLICE_X18Y54         LUT6 (Prop_lut6_I0_O)        0.168     2.883 r  ap_return[7]_INST_0_i_1/O
+                         net (fo=4, routed)           0.847     3.730    ap_return[7]_INST_0_i_1_n_0
+    SLICE_X16Y57         LUT6 (Prop_lut6_I1_O)        0.053     3.783 r  ap_return[6]_INST_0/O
+                         net (fo=0)                   0.672     4.455    ap_return[6]
+                                                                      r  ap_return[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.455    
+  -------------------------------------------------------------------
+                         slack                                  5.545    
+
+Slack (MET) :             5.546ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[5]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.454ns  (logic 0.392ns (8.801%)  route 4.062ns (91.199%))
+  Logic Levels:           5  (LUT4=2 LUT6=3)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.840     2.097    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y55         LUT4 (Prop_lut4_I2_O)        0.065     2.162 r  ap_return[11]_INST_0_i_2/O
+                         net (fo=2, routed)           0.553     2.715    ap_return[11]_INST_0_i_2_n_0
+    SLICE_X18Y54         LUT6 (Prop_lut6_I0_O)        0.168     2.883 r  ap_return[7]_INST_0_i_1/O
+                         net (fo=4, routed)           0.846     3.729    ap_return[7]_INST_0_i_1_n_0
+    SLICE_X16Y57         LUT6 (Prop_lut6_I3_O)        0.053     3.782 r  ap_return[5]_INST_0/O
+                         net (fo=0)                   0.672     4.454    ap_return[5]
+                                                                      r  ap_return[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.454    
+  -------------------------------------------------------------------
+                         slack                                  5.546    
+
+Slack (MET) :             5.594ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[7]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.406ns  (logic 0.265ns (6.015%)  route 4.141ns (93.985%))
+  Logic Levels:           5  (LUT4=2 LUT6=3)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.956     2.213    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y56         LUT4 (Prop_lut4_I2_O)        0.053     2.266 r  ap_return[9]_INST_0_i_2/O
+                         net (fo=2, routed)           0.629     2.895    ap_return[9]_INST_0_i_2_n_0
+    SLICE_X18Y56         LUT6 (Prop_lut6_I3_O)        0.053     2.948 r  ap_return[9]_INST_0_i_1/O
+                         net (fo=4, routed)           0.733     3.681    ap_return[9]_INST_0_i_1_n_0
+    SLICE_X16Y57         LUT6 (Prop_lut6_I3_O)        0.053     3.734 r  ap_return[7]_INST_0/O
+                         net (fo=0)                   0.672     4.406    ap_return[7]
+                                                                      r  ap_return[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.406    
+  -------------------------------------------------------------------
+                         slack                                  5.594    
+
+Slack (MET) :             5.615ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[16]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.385ns  (logic 0.265ns (6.044%)  route 4.120ns (93.956%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT6=3)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.921     2.178    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X21Y58         LUT6 (Prop_lut6_I4_O)        0.053     2.231 r  ap_return[21]_INST_0_i_2/O
+                         net (fo=3, routed)           0.676     2.907    ap_return[21]_INST_0_i_2_n_0
+    SLICE_X20Y56         LUT6 (Prop_lut6_I3_O)        0.053     2.960 r  ap_return[17]_INST_0_i_1/O
+                         net (fo=2, routed)           0.700     3.660    ap_return[17]_INST_0_i_1_n_0
+    SLICE_X22Y57         LUT3 (Prop_lut3_I0_O)        0.053     3.713 r  ap_return[16]_INST_0/O
+                         net (fo=0)                   0.672     4.385    ap_return[16]
+                                                                      r  ap_return[16] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.385    
+  -------------------------------------------------------------------
+                         slack                                  5.615    
+
+Slack (MET) :             5.639ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[4]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.361ns  (logic 0.265ns (6.076%)  route 4.096ns (93.924%))
+  Logic Levels:           5  (LUT4=2 LUT6=3)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          1.022     2.279    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y57         LUT4 (Prop_lut4_I2_O)        0.053     2.332 r  ap_return[8]_INST_0_i_2/O
+                         net (fo=2, routed)           0.558     2.891    ap_return[8]_INST_0_i_2_n_0
+    SLICE_X17Y57         LUT6 (Prop_lut6_I0_O)        0.053     2.944 r  ap_return[4]_INST_0_i_1/O
+                         net (fo=4, routed)           0.693     3.636    ap_return[4]_INST_0_i_1_n_0
+    SLICE_X16Y57         LUT6 (Prop_lut6_I5_O)        0.053     3.689 r  ap_return[4]_INST_0/O
+                         net (fo=0)                   0.672     4.361    ap_return[4]
+                                                                      r  ap_return[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.361    
+  -------------------------------------------------------------------
+                         slack                                  5.639    
+
+Slack (MET) :             5.660ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[10]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.340ns  (logic 0.265ns (6.106%)  route 4.075ns (93.894%))
+  Logic Levels:           5  (LUT4=1 LUT5=2 LUT6=2)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.950     2.207    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y56         LUT5 (Prop_lut5_I3_O)        0.053     2.260 r  ap_return[13]_INST_0_i_4/O
+                         net (fo=4, routed)           0.621     2.881    ap_return[13]_INST_0_i_4_n_0
+    SLICE_X19Y56         LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  ap_return[13]_INST_0_i_2/O
+                         net (fo=4, routed)           0.681     3.615    ap_return[13]_INST_0_i_2_n_0
+    SLICE_X19Y57         LUT6 (Prop_lut6_I0_O)        0.053     3.668 r  ap_return[10]_INST_0/O
+                         net (fo=0)                   0.672     4.340    ap_return[10]
+                                                                      r  ap_return[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.340    
+  -------------------------------------------------------------------
+                         slack                                  5.660    
+
+Slack (MET) :             5.669ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[11]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.331ns  (logic 0.265ns (6.119%)  route 4.066ns (93.881%))
+  Logic Levels:           5  (LUT4=1 LUT5=2 LUT6=2)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.950     2.207    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y56         LUT5 (Prop_lut5_I3_O)        0.053     2.260 r  ap_return[13]_INST_0_i_4/O
+                         net (fo=4, routed)           0.621     2.881    ap_return[13]_INST_0_i_4_n_0
+    SLICE_X19Y56         LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  ap_return[13]_INST_0_i_2/O
+                         net (fo=4, routed)           0.672     3.606    ap_return[13]_INST_0_i_2_n_0
+    SLICE_X19Y57         LUT6 (Prop_lut6_I3_O)        0.053     3.659 r  ap_return[11]_INST_0/O
+                         net (fo=0)                   0.672     4.331    ap_return[11]
+                                                                      r  ap_return[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.331    
+  -------------------------------------------------------------------
+                         slack                                  5.669    
+
+Slack (MET) :             5.687ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[8]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.313ns  (logic 0.383ns (8.880%)  route 3.930ns (91.120%))
+  Logic Levels:           5  (LUT4=1 LUT5=2 LUT6=2)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.589     1.846    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X20Y54         LUT5 (Prop_lut5_I3_O)        0.056     1.902 r  ap_return[11]_INST_0_i_3/O
+                         net (fo=3, routed)           0.696     2.598    ap_return[11]_INST_0_i_3_n_0
+    SLICE_X18Y55         LUT5 (Prop_lut5_I4_O)        0.168     2.766 r  ap_return[11]_INST_0_i_1/O
+                         net (fo=4, routed)           0.822     3.588    ap_return[11]_INST_0_i_1_n_0
+    SLICE_X17Y57         LUT6 (Prop_lut6_I0_O)        0.053     3.641 r  ap_return[8]_INST_0/O
+                         net (fo=0)                   0.672     4.313    ap_return[8]
+                                                                      r  ap_return[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.313    
+  -------------------------------------------------------------------
+                         slack                                  5.687    
+
+Slack (MET) :             5.698ns  (required time - arrival time)
+  Source:                 b[25]
+                            (input port)
+  Destination:            ap_return[9]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.302ns  (logic 0.392ns (9.112%)  route 3.910ns (90.888%))
+  Logic Levels:           5  (LUT4=2 LUT6=3)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[25] (IN)
+                         net (fo=0)                   0.672     0.672    b[25]
+    SLICE_X18Y51         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_8/O
+                         net (fo=1, routed)           0.479     1.204    ap_return[27]_INST_0_i_8_n_0
+    SLICE_X19Y51         LUT6 (Prop_lut6_I4_O)        0.053     1.257 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, routed)          0.956     2.213    ap_return[27]_INST_0_i_3_n_0
+    SLICE_X18Y56         LUT4 (Prop_lut4_I2_O)        0.065     2.278 r  ap_return[14]_INST_0_i_3/O
+                         net (fo=2, routed)           0.549     2.827    ap_return[14]_INST_0_i_3_n_0
+    SLICE_X18Y57         LUT6 (Prop_lut6_I0_O)        0.168     2.995 r  ap_return[10]_INST_0_i_1/O
+                         net (fo=4, routed)           0.582     3.577    ap_return[10]_INST_0_i_1_n_0
+    SLICE_X17Y57         LUT6 (Prop_lut6_I1_O)        0.053     3.630 r  ap_return[9]_INST_0/O
+                         net (fo=0)                   0.672     4.302    ap_return[9]
+                                                                      r  ap_return[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.302    
+  -------------------------------------------------------------------
+                         slack                                  5.698    
+
+
+
+
+

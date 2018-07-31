@@ -1,4 +1,7 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="fir_prj" top="operator_int_32_div30">
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="fir_prj" top="operator_int_32_div3">
+    <Simulation argv="">
+        <SimFlow name="csim" setup="false" optimizeCompile="false" clean="true" ldflags="" mflags=""/>
+    </Simulation>
     <includePaths/>
     <libraryFlag/>
     <files>
@@ -8,8 +11,5 @@
     <solutions>
         <solution name="solution1" status=""/>
     </solutions>
-    <Simulation argv="">
-        <SimFlow name="csim" setup="false" optimizeCompile="false" clean="true" ldflags="" mflags=""/>
-    </Simulation>
 </AutoPilot:project>
 

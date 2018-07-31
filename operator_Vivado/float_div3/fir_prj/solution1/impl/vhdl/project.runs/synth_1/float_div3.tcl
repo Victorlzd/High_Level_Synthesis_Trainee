@@ -28,7 +28,11 @@ set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd
+read_vhdl -library xil_defaultlib {
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

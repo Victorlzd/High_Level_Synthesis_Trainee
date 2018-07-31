@@ -1,0 +1,54 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Jul 26 11:31:28 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/top_timing_synth.rpt
+| Design       : top
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             6.222ns  (required time - arrival time)
+  Source:                 b[28]
+                            (input port)
+  Destination:            ap_return[7]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.778ns  (logic 0.265ns (7.014%)  route 3.513ns (92.986%))
+  Logic Levels:           5  (LUT4=1 LUT5=1 LUT6=3)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[28] (IN)
+                         net (fo=0)                   0.672     0.672    b[28]
+                         LUT4 (Prop_lut4_I3_O)        0.053     0.725 r  ap_return[27]_INST_0_i_4/O
+                         net (fo=1, unplaced)         0.665     1.390    ap_return[27]_INST_0_i_4_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.053     1.443 r  ap_return[27]_INST_0_i_3/O
+                         net (fo=36, unplaced)        0.414     1.857    ap_return[27]_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I3_O)        0.053     1.910 r  ap_return[12]_INST_0_i_3/O
+                         net (fo=4, unplaced)         0.545     2.455    ap_return[12]_INST_0_i_3_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.053     2.508 r  ap_return[8]_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.545     3.053    ap_return[8]_INST_0_i_1_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.053     3.106 r  ap_return[7]_INST_0/O
+                         net (fo=0)                   0.672     3.778    ap_return[7]
+                                                                      r  ap_return[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.778    
+  -------------------------------------------------------------------
+                         slack                                  6.222    
+
+
+
+

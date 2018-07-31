@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'float_div3'" level="0">
-<item name = "Date">Wed Jul 25 16:30:38 2018
+<item name = "Date">Mon Jul 30 12:00:11 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">fir_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.651, 1.25</column>
+<column name="ap_clk">10.00, 8.063, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,13 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 1, 1, 1, none</column>
+<column name="">1, 7, 1, 7, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_lut_div9_chunk_fu_121">lut_div9_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div9_chunk_fu_128">lut_div9_chunk, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -47,20 +49,22 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, 4, 0, 267</column>
+<column name="Expression">-, -, 0, 418</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, -, -, -</column>
+<column name="Instance">-, -, 0, 3276</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 33</column>
-<column name="Register">-, -, 67, -</column>
+<column name="Multiplexer">-, -, -, 159</column>
+<column name="Register">-, -, 92, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
-<specialColumn name="Utilization (%)">0, ~0, ~0, ~0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 3</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_lut_div9_chunk_fu_121">lut_div9_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div9_chunk_fu_128">lut_div9_chunk, 0, 0, 0, 1638</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -77,40 +81,76 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="mul_fu_256_p2">*, 4, 0, 22, 32, 33</column>
-<column name="decal_subnorm_V_1_ca_fu_191_p2">+, 0, 0, 12, 3, 2</column>
-<column name="xf_V_2_fu_247_p2">+, 0, 0, 39, 32, 1</column>
-<column name="new_exp_V_1_fu_141_p2">-, 0, 0, 15, 8, 8</column>
-<column name="tmp_1_fu_129_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="tmp_2_fu_135_p2">icmp, 0, 0, 11, 8, 8</column>
-<column name="tmp_4_fu_169_p2">icmp, 0, 0, 11, 8, 1</column>
-<column name="tmp_5_fu_175_p2">icmp, 0, 0, 11, 8, 8</column>
-<column name="tmp_6_fu_155_p2">or, 0, 0, 6, 1, 1</column>
-<column name="decal_subnorm_V_cast_1_fu_121_p3">select, 0, 0, 2, 1, 1</column>
-<column name="decal_subnorm_V_cast_fu_113_p3">select, 0, 0, 2, 1, 1</column>
-<column name="decal_subnorm_V_deca_fu_197_p3">select, 0, 0, 3, 1, 3</column>
-<column name="p_0201_1_fu_205_p3">select, 0, 0, 3, 1, 1</column>
-<column name="p_Repl2_1_fu_161_p3">select, 0, 0, 8, 1, 8</column>
-<column name="p_new_exp_V_1_fu_147_p3">select, 0, 0, 2, 1, 2</column>
-<column name="xf_V_fu_225_p3">select, 0, 0, 24, 1, 24</column>
-<column name="r_V_fu_241_p2">shl, 0, 0, 85, 32, 32</column>
+<column name="shift_V_1_fu_284_p2">+, 0, 0, 15, 2, 8</column>
+<column name="xf_V_fu_400_p2">+, 0, 0, 35, 3, 28</column>
+<column name="new_exp_V_1_fu_222_p2">-, 0, 0, 15, 8, 8</column>
+<column name="shift_V_fu_278_p2">-, 0, 0, 15, 1, 8</column>
+<column name="sel_tmp4_fu_302_p2">and, 0, 0, 6, 1, 1</column>
+<column name="sel_tmp8_fu_330_p2">and, 0, 0, 6, 1, 1</column>
+<column name="icmp4_fu_272_p2">icmp, 0, 0, 11, 7, 1</column>
+<column name="icmp_fu_196_p2">icmp, 0, 0, 9, 3, 1</column>
+<column name="tmp_5_fu_210_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="tmp_6_fu_216_p2">icmp, 0, 0, 11, 8, 8</column>
+<column name="tmp_8_fu_250_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="tmp_9_fu_256_p2">icmp, 0, 0, 11, 8, 8</column>
+<column name="tmp_4_fu_372_p2">lshr, 0, 0, 64, 24, 24</column>
+<column name="sel_tmp3_demorgan_fu_290_p2">or, 0, 0, 6, 1, 1</column>
+<column name="tmp_1_fu_236_p2">or, 0, 0, 6, 1, 1</column>
+<column name="p_Repl2_1_fu_242_p3">select, 0, 0, 8, 1, 8</column>
+<column name="p_new_exp_V_1_fu_228_p3">select, 0, 0, 2, 1, 2</column>
+<column name="shift_V_2_fu_308_p3">select, 0, 0, 8, 1, 8</column>
+<column name="shift_V_3_fu_316_p3">select, 0, 0, 8, 1, 1</column>
+<column name="shift_V_4_fu_336_p3">select, 0, 0, 8, 1, 8</column>
+<column name="shift_V_cast_cast_fu_202_p3">select, 0, 0, 3, 1, 3</column>
+<column name="xf_V_1_fu_352_p3">select, 0, 0, 24, 1, 24</column>
+<column name="xf_V_2_fu_392_p3">select, 0, 0, 28, 1, 28</column>
+<column name="tmp_s_fu_378_p2">shl, 0, 0, 85, 32, 32</column>
+<column name="sel_tmp3_fu_296_p2">xor, 0, 0, 6, 1, 2</column>
+<column name="sel_tmp7_fu_324_p2">xor, 0, 0, 6, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">15, 3, 1, 3</column>
-<column name="ap_phi_mux_p_Repl2_s_phi_fu_69_p4">9, 2, 23, 46</column>
-<column name="p_Repl2_s_reg_66">9, 2, 23, 46</column>
+<column name="ap_NS_fsm">44, 9, 1, 9</column>
+<column name="ap_phi_mux_p_Repl2_s_phi_fu_115_p4">9, 2, 23, 46</column>
+<column name="grp_lut_div9_chunk_fu_121_d_V">41, 8, 2, 16</column>
+<column name="grp_lut_div9_chunk_fu_121_r_in_V">15, 3, 4, 12</column>
+<column name="grp_lut_div9_chunk_fu_128_d_V">41, 8, 2, 16</column>
+<column name="p_Repl2_s_reg_112">9, 2, 23, 46</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">2, 0, 2, 0</column>
-<column name="p_Repl2_1_reg_299">8, 0, 8, 0</column>
-<column name="p_Repl2_2_reg_285">1, 0, 1, 0</column>
-<column name="p_Repl2_s_reg_66">23, 0, 23, 0</column>
-<column name="tmp_1_reg_295">1, 0, 1, 0</column>
-<column name="xf_V_2_reg_304">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="p_Repl2_1_reg_589">8, 0, 8, 0</column>
+<column name="p_Repl2_2_reg_575">1, 0, 1, 0</column>
+<column name="p_Repl2_s_reg_112">23, 0, 23, 0</column>
+<column name="p_Result_16_10_i_i_reg_649">2, 0, 2, 0</column>
+<column name="p_Result_16_11_i_i_reg_654">2, 0, 2, 0</column>
+<column name="p_Result_16_1_i_i_reg_599">2, 0, 2, 0</column>
+<column name="p_Result_16_2_i_i_reg_604">2, 0, 2, 0</column>
+<column name="p_Result_16_3_i_i_reg_609">2, 0, 2, 0</column>
+<column name="p_Result_16_4_i_i_reg_614">2, 0, 2, 0</column>
+<column name="p_Result_16_5_i_i_reg_619">2, 0, 2, 0</column>
+<column name="p_Result_16_6_i_i_reg_624">2, 0, 2, 0</column>
+<column name="p_Result_16_7_i_i_reg_629">2, 0, 2, 0</column>
+<column name="p_Result_16_8_i_i_reg_634">2, 0, 2, 0</column>
+<column name="p_Result_16_9_i_i_reg_639">2, 0, 2, 0</column>
+<column name="p_Result_16_i_i_10_reg_644">2, 0, 2, 0</column>
+<column name="p_Result_16_i_i_reg_594">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_10_i_i_reg_709">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_3_i_i_reg_664">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_4_i_i_reg_674">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_5_i_i_reg_679">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_6_i_i_reg_684">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_7_i_i_reg_689">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_8_i_i_reg_694">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_9_i_i_reg_699">2, 0, 2, 0</column>
+<column name="q_chunk_V_0_i_i_reg_704">2, 0, 2, 0</column>
+<column name="reg_151">4, 0, 4, 0</column>
+<column name="tmp_15_reg_659">2, 0, 2, 0</column>
+<column name="tmp_16_reg_669">1, 0, 1, 0</column>
+<column name="tmp_5_reg_585">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

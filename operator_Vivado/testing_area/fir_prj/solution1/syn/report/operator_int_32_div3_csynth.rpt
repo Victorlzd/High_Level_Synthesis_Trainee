@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_int_32_div3'
+================================================================
+* Date:           Mon Jul 30 14:38:44 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.832|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       0|   13104|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      15|
+|Register         |        -|      -|      36|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|      36|   13119|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|   ~0   |      12|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT |
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |operator_int_32_dbkb_U1   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U2   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U3   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U4   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U5   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U6   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U7   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U8   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U9   |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U10  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U11  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U12  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U13  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U14  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U15  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U16  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U17  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U18  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U19  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U20  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U21  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U22  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U23  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U24  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U25  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U26  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U27  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U28  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U29  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U30  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U31  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U32  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U33  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U34  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U35  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U36  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U37  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U38  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U39  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U40  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U41  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U42  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U43  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U44  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U45  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U46  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U47  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    |operator_int_32_dbkb_U48  |operator_int_32_dbkb  |        0|      0|  0|  273|
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |Total                     |                      |        0|      0|  0|13104|
+    +--------------------------+----------------------+---------+-------+---+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  15|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  15|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+---+----+-----+-----------+
+    |             Name            | FF| LUT| Bits| Const Bits|
+    +-----------------------------+---+----+-----+-----------+
+    |agg_result_V_i1_i1_reg_6747  |  1|   0|    1|          0|
+    |agg_result_V_i1_i2_reg_6777  |  1|   0|    1|          0|
+    |agg_result_V_i1_i8_reg_6727  |  1|   0|    1|          0|
+    |agg_result_V_i1_i_reg_6707   |  1|   0|    1|          0|
+    |agg_result_V_i2_i2_reg_6757  |  1|   0|    1|          0|
+    |agg_result_V_i4_i1_reg_6732  |  1|   0|    1|          0|
+    |agg_result_V_i4_i2_reg_6762  |  1|   0|    1|          0|
+    |agg_result_V_i4_i5_reg_6712  |  1|   0|    1|          0|
+    |agg_result_V_i4_i_reg_6692   |  1|   0|    1|          0|
+    |agg_result_V_i6_i1_reg_6737  |  1|   0|    1|          0|
+    |agg_result_V_i6_i2_reg_6767  |  1|   0|    1|          0|
+    |agg_result_V_i6_i6_reg_6717  |  1|   0|    1|          0|
+    |agg_result_V_i6_i_reg_6697   |  1|   0|    1|          0|
+    |agg_result_V_i8_i1_reg_6742  |  1|   0|    1|          0|
+    |agg_result_V_i8_i2_reg_6772  |  1|   0|    1|          0|
+    |agg_result_V_i8_i7_reg_6722  |  1|   0|    1|          0|
+    |agg_result_V_i8_i_reg_6702   |  1|   0|    1|          0|
+    |agg_result_V_i_i3_reg_6752   |  1|   0|    1|          0|
+    |ap_CS_fsm                    |  2|   0|    2|          0|
+    |p_Repl2_4_reg_6782           |  4|   0|    4|          0|
+    |p_Repl2_5_reg_6787           |  4|   0|    4|          0|
+    |p_Repl2_6_reg_6792           |  4|   0|    4|          0|
+    |p_Repl2_7_reg_6797           |  4|   0|    4|          0|
+    +-----------------------------+---+----+-----+-----------+
+    |Total                        | 36|   0|   36|          0|
+    +-----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+----------------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------+-----+-----+------------+----------------------+--------------+
+|ap_clk     |  in |    1| ap_ctrl_hs | operator_int_32_div3 | return value |
+|ap_rst     |  in |    1| ap_ctrl_hs | operator_int_32_div3 | return value |
+|ap_start   |  in |    1| ap_ctrl_hs | operator_int_32_div3 | return value |
+|ap_done    | out |    1| ap_ctrl_hs | operator_int_32_div3 | return value |
+|ap_idle    | out |    1| ap_ctrl_hs | operator_int_32_div3 | return value |
+|ap_ready   | out |    1| ap_ctrl_hs | operator_int_32_div3 | return value |
+|ap_return  | out |   32| ap_ctrl_hs | operator_int_32_div3 | return value |
+|in_V       |  in |   32|   ap_none  |         in_V         |    scalar    |
++-----------+-----+-----+------------+----------------------+--------------+
+

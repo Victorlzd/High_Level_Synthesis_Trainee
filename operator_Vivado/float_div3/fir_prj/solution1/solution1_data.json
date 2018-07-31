@@ -36,8 +36,16 @@
   },
   "Files": {
     "CSource": ["..\/..\/float_div3.cpp"],
-    "Vhdl": ["impl\/vhdl\/float_div3.vhd"],
-    "Verilog": ["impl\/verilog\/float_div3.v"],
+    "Vhdl": [
+      "impl\/vhdl\/float_div3_mux_64bkb.vhd",
+      "impl\/vhdl\/lut_div9_chunk.vhd",
+      "impl\/vhdl\/float_div3.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/float_div3_mux_64bkb.v",
+      "impl\/verilog\/lut_div9_chunk.v",
+      "impl\/verilog\/float_div3.v"
+    ],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -137,28 +145,65 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "float_div3"},
-    "Metrics": {"float_div3": {
+    "Hierarchy": {
+      "ModuleName": "float_div3",
+      "Instances": [
+        {
+          "ModuleName": "lut_div9_chunk",
+          "InstanceName": "grp_lut_div9_chunk_fu_121"
+        },
+        {
+          "ModuleName": "lut_div9_chunk",
+          "InstanceName": "grp_lut_div9_chunk_fu_128"
+        }
+      ]
+    },
+    "Metrics": {
+      "lut_div9_chunk": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "1",
-          "LatencyWorst": "1",
-          "PipelineII": "2",
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.651"
+          "Estimate": "1.958"
         },
         "Area": {
-          "DSP48E": "4",
-          "FF": "67",
-          "LUT": "300",
-          "BRAM_18K": "0"
+          "FF": "0",
+          "LUT": "1638",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
         }
-      }}
+      },
+      "float_div3": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "4",
+          "LatencyWorst": "7",
+          "PipelineIIMin": "2",
+          "PipelineIIMax": "8",
+          "PipelineII": "2 ~ 8",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.063"
+        },
+        "Area": {
+          "FF": "92",
+          "LUT": "3853",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      }
+    }
   },
   "Sdx": {
     "Target": "none",
@@ -167,7 +212,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-07-25 16:30:38 CEST",
+    "Time": "2018-07-30 12:00:12 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

@@ -1,8 +1,0 @@
-vhdl xil_defaultlib "AESL_sim_pkg.vhd"
-sv work "glbl.v"
-vhdl xil_defaultlib "operator_int_32_div30.vhd"
-vhdl xil_defaultlib "operator_int_32_dbkb.vhd"
-vhdl xil_defaultlib "operator_int_32_dbkb_x.vhd"
-vhdl xil_defaultlib "operator_int_32_div30.autotb.vhd"
-vhdl xil_defaultlib "lut_div5_chunk.vhd"
-
