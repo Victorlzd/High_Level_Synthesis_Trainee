@@ -1,8 +1,8 @@
 <InterfaceSummary>
 <RtlPorts>
-<name>in_V</name>
+<name>in_r</name>
 <CType>
-<TypeName>ap_uint 32</TypeName>
+<TypeName>int</TypeName>
 <TypeWidth>32</TypeWidth>
 <PhysicalWidth>32</PhysicalWidth>
 </CType>
@@ -12,7 +12,7 @@
 <RtlPorts>
 <name>ap_return</name>
 <CType>
-<TypeName>ap_uint 32</TypeName>
+<TypeName>int</TypeName>
 <TypeWidth>32</TypeWidth>
 <PhysicalWidth>32</PhysicalWidth>
 </CType>

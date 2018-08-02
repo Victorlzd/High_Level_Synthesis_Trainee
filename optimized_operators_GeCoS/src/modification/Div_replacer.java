@@ -18,20 +18,28 @@ public class Div_replacer {
 		{
 			IntInstruction constant = (IntInstruction) g.getChild(1);
 			if(g.getChild(0).getType().isEqual(GecosUserTypeFactory.FLOAT(), true, true, true))
+			{
 				replace_const_float(g, constant, g.getChild(0));
+			}
 			else if(g.getChild(0).getType().isEqual(GecosUserTypeFactory.INT(), true, true, true))
+			{
 				replace_const_int(g, constant, g.getChild(0));
+			}
 			else if(g.getChild(0).getType().isEqual(GecosUserTypeFactory.DOUBLE(), true, true, true))
+			{
 				replace_const_double(g, constant, g.getChild(0));
+			}
 			else if(g.getChild(0).getType().isEqual(GecosUserTypeFactory.LONG(), true, true, true))
+			{
 				replace_const_long(g, constant, g.getChild(0));
+			}
 		}
 	}
 
 	private static void replace_const_int(GenericInstruction g, IntInstruction constant, Instruction intExpression) 
 	{
 		
-		ProcedureSymbol optimized_divider = Div.int_div_by_constant(File_builder.ps_impl, (int) constant.getValue(), 32);
+		ProcedureSymbol optimized_divider = Div.arbitrary_sized_int_div_by_constant(File_builder.ps_impl, (int) constant.getValue(), 32);
 		
 		if(optimized_divider != null)
 		{
@@ -61,6 +69,7 @@ public class Div_replacer {
 			// we need to include the header file of the optimized operator
 			GecosUserAnnotationFactory.pragma(g.getContainingProcedureSet(), "S2S4HLS:MODULE:PRINT:#include \""+File_builder.filename+".h\"");
 			// substitute old instruction with the new one
+			
 			g.substituteWith(call_optimized_divider);
 		}
 	}
@@ -84,7 +93,7 @@ public class Div_replacer {
 	
 	private static void replace_const_long(GenericInstruction g, IntInstruction constant, Instruction longExpression) 
 	{
-		ProcedureSymbol optimized_divider = Div.int_div_by_constant(File_builder.ps_impl, (int) constant.getValue(), 64);
+		ProcedureSymbol optimized_divider = Div.arbitrary_sized_int_div_by_constant(File_builder.ps_impl, (int) constant.getValue(), 64);
 		
 		if(optimized_divider != null)
 		{

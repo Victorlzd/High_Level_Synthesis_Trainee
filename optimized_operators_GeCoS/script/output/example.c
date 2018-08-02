@@ -12,34 +12,31 @@ int main() {
 	
 	a = 1;
 	d = 2;
-	d = double_mul2(double_mul2(d));
-	d = double_div3(double_div3(double_div3(double_div2(d))));
-	b = float_div2(a);
-	c = float_div3(b);
-	a = float_mul2(b);
-	c = float_mul2(c);
+	d = operator_double_div54(d);
+	b = operator_float_div2(a);
+	c = operator_float_div3(b);
 	e = 12;
-	e = long_div3(long_div3(e));
-	e = long_div3(e);
-	a = float_div3(float_div3(a));
-	b = float_div2(float_div2(float_div2(c)));
-	c = float_div3(float_div2(b));
+	e = operator_int_64_div9(e);
+	e = operator_int_64_div3(e);
+	a = operator_float_div9(a);
+	b = operator_float_div8(c);
+	c = operator_float_div6(b);
 	if (b >= 2) {
 		if (c < a) {
 			a = a + 1;
 			if (b == a) {
-				a = float_div2(c);
+				a = operator_float_div2(c);
 				if (c < a) {
 					b = a + 3;
 					if (c < 2) {
-						a = float_div2(b);
+						a = operator_float_div2(b);
 					} else {
-						a = float_div3(c);
+						a = operator_float_div3(c);
 					}
 				} else {
 					if (c == 3) {
 						c = float_mul2(a);
-						a = long_div3(e);
+						a = operator_int_64_div3(e);
 					}
 				}
 			}
@@ -49,8 +46,8 @@ int main() {
 					c = b + 2;
 				} else {
 					if (c >= 4) {
-						a = float_div3(a);
-						e = long_div3(e);
+						a = operator_float_div3(a);
+						e = operator_int_64_div3(e);
 					}
 				}
 			}

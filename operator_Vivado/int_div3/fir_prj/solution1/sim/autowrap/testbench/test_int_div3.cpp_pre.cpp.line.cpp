@@ -64372,7 +64372,7 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 #pragma line 69 "/opt/Xilinx/Vivado/2018.2/include/ap_int.h" 2
 #pragma line 3 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp" 2
 #pragma empty_line
-int int_div3(int in);
+int operator_int_div29(int in);
 using namespace std;
 #pragma empty_line
 int main(int argc, char const *argv[])
@@ -64386,11 +64386,12 @@ int main(int argc, char const *argv[])
  ap_uint<32> q_test;
  ap_uint<2> r_out_test;
 #pragma empty_line
- for (int i = 0; i < 10; ++i)
+ for (int i = 0; i < 1000; ++i)
  {
+  if(i%100==0) cout << "i = " << i << endl;
   D = i;
-  q_test = D/3;
-  q = int_div3(D);
+  q_test = D/29;
+  q = operator_int_div29(D);
   if(q!=q_test)
   {
    cout << "-------- PROBLEME --------" << endl;

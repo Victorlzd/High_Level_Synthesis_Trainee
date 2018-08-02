@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_int_div3'
+================================================================
+* Date:           Thu Aug  2 10:00:29 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  40.00|    15.664|        5.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       0|   13104|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|       -|
+|Register         |        -|      -|       -|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|       0|   13104|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|       0|      12|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT |
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |operator_int_div3bkb_U1   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U2   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U3   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U4   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U5   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U6   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U7   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U8   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U9   |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U10  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U11  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U12  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U13  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U14  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U15  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U16  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U17  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U18  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U19  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U20  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U21  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U22  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U23  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U24  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U25  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U26  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U27  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U28  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U29  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U30  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U31  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U32  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U33  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U34  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U35  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U36  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U37  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U38  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U39  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U40  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U41  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U42  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U43  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U44  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U45  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U46  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U47  |operator_int_div3bkb  |        0|      0|  0|  273|
+    |operator_int_div3bkb_U48  |operator_int_div3bkb  |        0|      0|  0|  273|
+    +--------------------------+----------------------+---------+-------+---+-----+
+    |Total                     |                      |        0|      0|  0|13104|
+    +--------------------------+----------------------+---------+-------+---+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+-------------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-----------+-----+-----+------------+-------------------+--------------+
+|ap_start   |  in |    1| ap_ctrl_hs | operator_int_div3 | return value |
+|ap_done    | out |    1| ap_ctrl_hs | operator_int_div3 | return value |
+|ap_idle    | out |    1| ap_ctrl_hs | operator_int_div3 | return value |
+|ap_ready   | out |    1| ap_ctrl_hs | operator_int_div3 | return value |
+|ap_return  | out |   32| ap_ctrl_hs | operator_int_div3 | return value |
+|in_r       |  in |   32|   ap_none  |        in_r       |    scalar    |
++-----------+-----+-----+------------+-------------------+--------------+
+

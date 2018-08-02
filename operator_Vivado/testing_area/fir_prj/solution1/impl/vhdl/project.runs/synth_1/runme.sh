@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log operator_int_32_div3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_int_32_div3.tcl
+EAStep vivado -log operator_int_div3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_int_div3.tcl

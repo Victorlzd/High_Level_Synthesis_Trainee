@@ -6,7 +6,7 @@
 
 
 open_project -reset fir_prj
-set_top int_div3
+set_top operator_int_div29
 add_files int_div3.cpp
 add_files -tb test_int_div3.cpp
 open_solution -reset 	"solution1"
@@ -16,5 +16,5 @@ create_clock -period 10 -name default
 csim_design -clean -compiler gcc
 csynth_design
 cosim_design -O -compiler gcc -rtl vhdl
-export_design -flow impl -rtl vhdl -format ip_catalog
+#export_design -flow impl -rtl vhdl -format ip_catalog
 exit

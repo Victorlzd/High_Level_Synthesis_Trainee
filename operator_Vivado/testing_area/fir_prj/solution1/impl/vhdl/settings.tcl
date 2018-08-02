@@ -8,13 +8,13 @@
 #
 # Settings for Vivado implementation flow
 #
-set top_module operator_int_32_div3
+set top_module operator_int_div3
 set language vhdl
 set family kintex7
 set device xc7k160t
 set package fbg484
 set speed -1
-set clock ap_clk
+set clock ""
 set fsm_ext "off"
 
 # For customizing the implementation flow

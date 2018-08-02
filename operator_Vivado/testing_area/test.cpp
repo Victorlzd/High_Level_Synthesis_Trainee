@@ -11,6 +11,7 @@ void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> 
 ap_uint<32> int_32_div3(ap_uint<32> in);
 /* operator_int_32_div3 implements a division by 3 of the integer 32 bits in, optimized for Vivado HLS */
 ap_uint<32> operator_int_32_div3(ap_uint<32> in);
+int operator_int_div3(int in);
 
 
 ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
@@ -1257,5 +1258,9 @@ ap_uint<32> int_32_div3(ap_uint<32> in) {
 
 ap_uint<32> operator_int_32_div3(ap_uint<32> in) {
 	return int_32_div3(in);
+}
+
+int operator_int_div3(int in) {
+	return operator_int_32_div3(in);
 }
 

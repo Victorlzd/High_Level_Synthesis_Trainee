@@ -35,12 +35,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile int_div3.autotvin.dat]} {
-	file delete -force int_div3.autotvin.dat
+if {[file isfile operator_int_div29.autotvin.dat]} {
+	file delete -force operator_int_div29.autotvin.dat
 }
 
-if {[file isfile int_div3.autotvout.dat]} {
-	file delete -force int_div3.autotvout.dat
+if {[file isfile operator_int_div29.autotvout.dat]} {
+	file delete -force operator_int_div29.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"

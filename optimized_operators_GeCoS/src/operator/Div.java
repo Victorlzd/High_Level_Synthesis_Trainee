@@ -29,9 +29,11 @@ public class Div {
 	// It permits to avoid multiple definitions
 	private static Map<Integer, ProcedureSymbol> builded_lut_chunk_divider = new TreeMap<Integer,ProcedureSymbol>();
 	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider_by_small_odd_constant = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
-	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_int_divider = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
+	private static Map<Integer,Map<Integer,ProcedureSymbol>> builded_arbitary_sized_int_divider = new TreeMap<Integer,Map<Integer,ProcedureSymbol>>();
 	private static Map<Integer, ProcedureSymbol> builded_float_divider = new TreeMap<Integer,ProcedureSymbol>();
 	private static Map<Integer, ProcedureSymbol> builded_double_divider = new TreeMap<Integer,ProcedureSymbol>();
+	private static Map<Integer, ProcedureSymbol> builded_int_divider = new TreeMap<Integer,ProcedureSymbol>();
+	private static Map<Integer, ProcedureSymbol> builded_long_divider = new TreeMap<Integer,ProcedureSymbol>();
 	
 	private static final int[] known_divider = {2, 9, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
 	
@@ -43,7 +45,6 @@ public class Div {
 		if((!builded_float_divider.containsKey(div) & !is_double) | (!builded_double_divider.containsKey(div) & is_double)) 
 		{
 			ProcedureSymbol proc_symbol;
-			
 			if(can_optimize(div))
 			{
 				GecosUserTypeFactory.setScope(ps.getScope());
@@ -306,7 +307,7 @@ public class Div {
 				mant_compute_bb.addInstruction(xf_set_xf_plus_half_div);
 				
 				// new_mant = operator_int_div(xf);
-				Instruction int_div_xf = GecosUserInstructionFactory.call(int_div_by_constant(ps, (int) (div/Calcul.pow2(pow2_in_div_fact)), size_xf), GecosUserInstructionFactory.symbref(xf_symbol));
+				Instruction int_div_xf = GecosUserInstructionFactory.call(arbitrary_sized_int_div_by_constant(ps, (int) (div/Calcul.pow2(pow2_in_div_fact)), size_xf), GecosUserInstructionFactory.symbref(xf_symbol));
 				Instruction new_mant_set_xf_div = GecosUserInstructionFactory.set(new_mant_symbol, int_div_xf);
 				mant_compute_bb.addInstruction(new_mant_set_xf_div);
 				mant_compute.addBlock(mant_compute_bb);
@@ -356,11 +357,11 @@ public class Div {
 			
 			if(is_double)
 			{
-				return builded_double_divider.put(div, proc_symbol);
+				builded_double_divider.put(div, proc_symbol);
 			}
 			else
 			{
-				return builded_float_divider.put(div, proc_symbol);
+				builded_float_divider.put(div, proc_symbol);
 			}
 		}
 		if(is_double)
@@ -373,7 +374,75 @@ public class Div {
 		}
 	}
 
-	public static ProcedureSymbol int_div_by_constant(ProcedureSet ps, int div, int size)
+	public static ProcedureSymbol build_int_div_by_constant(ProcedureSet ps, int div, boolean is_long)
+	{
+		if((!builded_int_divider.containsKey(div) & !is_long) | (!builded_long_divider.containsKey(div) & is_long)) 
+		{
+			Type type_in_out;
+			String name;
+			int size;
+			GecosUserTypeFactory.setScope(ps.getScope());
+			if(is_long)
+			{
+				type_in_out = GecosUserTypeFactory.LONG();
+				name = "operator_long_div"+div;
+				size = 64;
+			}
+			else
+			{
+				type_in_out = GecosUserTypeFactory.INT();
+				name = "operator_int_div"+div;
+				size = 32;
+			}
+			
+			ProcedureSymbol proc_symbol;
+			if(can_optimize(div))
+			{
+				
+				ArrayList<ParameterSymbol> parameters = new ArrayList<ParameterSymbol>();
+				// int in
+				parameters.add(GecosUserCoreFactory.paramSymbol("in", type_in_out));
+				// ap_uint<size> int_<size>_div<div>(ap_uint<size> in)
+				proc_symbol = GecosUserCoreFactory.procSymbol(name, type_in_out, parameters);
+				
+				CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
+				GecosUserTypeFactory.setScope(mainblock.getScope());
+				
+				ProcedureSymbol operator = arbitrary_sized_int_div_by_constant(ps, div, size);
+				Instruction operator_call = GecosUserInstructionFactory.call(operator, GecosUserInstructionFactory.symbref(parameters.get(0)));
+				Instruction ret = GecosUserInstructionFactory.ret(operator_call);
+				BasicBlock ret_bb = GecosUserBlockFactory.BBlock(ret);
+				
+				mainblock.addBlock(ret_bb);
+				
+				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
+				File_builder.add_operator(proc_symbol);
+			}
+			else
+			{
+				proc_symbol = null;
+			}
+			if(is_long)
+			{
+				builded_long_divider.put(div, proc_symbol);
+			}
+			else
+			{
+				builded_int_divider.put(div, proc_symbol);
+			}
+			
+		}
+		if(is_long)
+		{
+			return builded_double_divider.get(div);
+		}
+		else
+		{
+			return builded_float_divider.get(div);
+		}
+	}
+	
+	public static ProcedureSymbol arbitrary_sized_int_div_by_constant(ProcedureSet ps, int div, int size)
 	/* this function provides operators for division by integer constants optimized for FPGA
 	 * return the ProccedureSymbol of the operator or null if the division cannot be optimized
 	 */
@@ -381,9 +450,9 @@ public class Div {
 		// to avoid multiple definitions we use map that stock the already builded operators
 		// and we build it only if it hasn't been build before
 		boolean builded = false;
-		if(builded_int_divider.containsKey(div))
+		if(builded_arbitary_sized_int_divider.containsKey(div))
 		{
-			if(builded_int_divider.get(div).containsKey(size))
+			if(builded_arbitary_sized_int_divider.get(div).containsKey(size))
 			{
 				builded = true;
 			}
@@ -419,7 +488,6 @@ public class Div {
 				mainblock.addBlock(block);
 				
 				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
-				File_builder.add_operator(proc_symbol);
 			}
 			else
 			{
@@ -428,18 +496,18 @@ public class Div {
 			}
 			
 			// stock the ProcedureSymbol in the map
-			if(builded_int_divider.containsKey(div))
+			if(builded_arbitary_sized_int_divider.containsKey(div))
 			{
-				builded_int_divider.get(div).put(size, proc_symbol);
+				builded_arbitary_sized_int_divider.get(div).put(size, proc_symbol);
 			}
 			else
 			{
 				Map<Integer,ProcedureSymbol> pair = new TreeMap<Integer,ProcedureSymbol>();
 				pair.put(size, proc_symbol);
-				builded_int_divider.put(div, pair);
+				builded_arbitary_sized_int_divider.put(div, pair);
 			}
 		}
-		return builded_int_divider.get(div).get(size);
+		return builded_arbitary_sized_int_divider.get(div).get(size);
 	}
 
 	private static boolean can_optimize(int div)
@@ -817,4 +885,5 @@ public class Div {
 		
 		return proc_symbol;
 	}
+
 }

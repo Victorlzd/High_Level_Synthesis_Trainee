@@ -64379,7 +64379,7 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 #69 "/opt/Xilinx/Vivado/2018.2/include/ap_int.h" 2
 #3 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp" 2
 
-int int_div3(int in);
+int operator_int_div29(int in);
 using namespace std;
 
 
@@ -64387,7 +64387,7 @@ using namespace std;
 #7 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"
 
 #ifndef HLS_FASTSIM
-#include "apatb_int_div3.h"
+#include "apatb_operator_int_div29.h"
 #endif
 
 #7 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"
@@ -64402,19 +64402,20 @@ int main(int argc, char const *argv[])
  ap_uint<32> q_test;
  ap_uint<2> r_out_test;
 
- for (int i = 0; i < 10; ++i)
+ for (int i = 0; i < 1000; ++i)
  {
+  if(i%100==0) cout << "i = " << i << endl;
   D = i;
-  q_test = D/3;
+  q_test = D/29;
   q = 
 #ifndef HLS_FASTSIM
-#define int_div3 AESL_WRAP_int_div3
+#define operator_int_div29 AESL_WRAP_operator_int_div29
 #endif
 
-#22 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"
-int_div3
-#undef int_div3
-#22 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"
+#23 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"
+operator_int_div29
+#undef operator_int_div29
+#23 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"
 (D);
   if(q!=q_test)
   {
@@ -64435,4 +64436,4 @@ int_div3
  return result;
 }
 #endif
-#40 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"
+#41 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/test_int_div3.cpp"

@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Aug  2 10:00:55 2018
+# Process ID: 5473
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/fir_prj/solution1/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log operator_int_div3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_int_div3.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/fir_prj/solution1/impl/vhdl/project.runs/synth_1/operator_int_div3.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/fir_prj/solution1/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source operator_int_div3.tcl -notrace
+Command: synth_design -top operator_int_div3 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5476 

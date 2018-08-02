@@ -1,12 +1,12 @@
 
-set TopModule "operator_int_32_div3"
-set ClockPeriod "10.000000"
-set ClockList {ap_clk}
+set TopModule "operator_int_div3"
+set ClockPeriod "40.000000"
+set ClockList {}
 set multiClockList {}
 set PortClockMap {}
-set CombLogicFlag 0
+set CombLogicFlag 1
 set PipelineFlag 0
-set DataflowTaskPipelineFlag  1
+set DataflowTaskPipelineFlag  0
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 0
