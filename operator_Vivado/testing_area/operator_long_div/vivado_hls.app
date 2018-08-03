@@ -1,4 +1,4 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="operator_long_div" top="operator_long_div11">
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="operator_long_div" top="operator_long_div2">
     <includePaths/>
     <libraryFlag/>
     <files>
@@ -6,7 +6,7 @@
         <file name="test.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions>
-        <solution name="div11" status=""/>
+        <solution name="div2" status=""/>
     </solutions>
 </AutoPilot:project>
 

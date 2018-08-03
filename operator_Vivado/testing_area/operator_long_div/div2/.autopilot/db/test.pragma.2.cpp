@@ -34128,6 +34128,7 @@ void lut_div9_chunk(ap_uint<2> d, ap_uint<4> r_in, ap_uint<2> (* q), ap_uint<4> 
 }
 
 ap_uint<64> int_64_div9(ap_uint<64> in) {
+
  ap_uint<64> d;
  ap_uint<64> q;
  ap_uint<2> d_chunk;
