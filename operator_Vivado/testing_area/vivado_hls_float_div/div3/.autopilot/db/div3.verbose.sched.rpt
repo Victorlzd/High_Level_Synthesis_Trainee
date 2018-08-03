@@ -1,0 +1,122 @@
+
+
+================================================================
+== Vivado HLS Report for 'div3'
+================================================================
+* Date:           Fri Aug  3 16:47:40 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        vivado_hls_float_div
+* Solution:       div3
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  60.00|    52.398|        7.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 52.3>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%a_read = call float @_ssdm_op_Read.ap_auto.float(float %a) nounwind"   --->   Operation 3 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [2/2] (52.3ns)   --->   "%tmp = fdiv float %a_read, 3.000000e+00" [test.cpp:10]   --->   Operation 4 'fdiv' 'tmp' <Predicate = true> <Delay = 52.3> <Core = "FDiv">   --->   Core 101 'FDiv' <Latency = 1> <II = 1> <Delay = 52.3> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 52.3>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %a) nounwind, !map !8"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float 0.000000e+00) nounwind, !map !14"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @div3_str) nounwind"   --->   Operation 7 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [test.cpp:9]   --->   Operation 8 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (52.3ns)   --->   "%tmp = fdiv float %a_read, 3.000000e+00" [test.cpp:10]   --->   Operation 9 'fdiv' 'tmp' <Predicate = true> <Delay = 52.3> <Core = "FDiv">   --->   Core 101 'FDiv' <Latency = 1> <II = 1> <Delay = 52.3> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "ret float %tmp" [test.cpp:10]   --->   Operation 10 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 60ns, clock uncertainty: 7.5ns.
+
+ <State 1>: 52.4ns
+The critical path consists of the following:
+	wire read on port 'a' [5]  (0 ns)
+	'fdiv' operation ('tmp', test.cpp:10) [7]  (52.4 ns)
+
+ <State 2>: 52.4ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', test.cpp:10) [7]  (52.4 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

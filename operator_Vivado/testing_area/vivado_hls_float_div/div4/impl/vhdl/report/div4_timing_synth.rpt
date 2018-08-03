@@ -1,0 +1,57 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Aug  3 16:53:40 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/div4_timing_synth.rpt
+| Design       : div4
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             6.092ns  (required time - arrival time)
+  Source:                 a[22]
+                            (input port)
+  Destination:            ap_return[23]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            15.000ns  (MaxDelay Path 15.000ns)
+  Data Path Delay:        8.908ns  (logic 6.265ns (70.333%)  route 2.643ns (29.667%))
+  Logic Levels:           5  (DSP48E1=3 LUT5=1 LUT6=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 15.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[22] (IN)
+                         net (fo=1, unset)            0.672     0.672    div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/s_axis_a_tdata[22]
+                         DSP48E1 (Prop_dsp48e1_A[22]_PCOUT[47])
+                                                      3.421     4.093 r  div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.143    div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/PCOUT[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.452     5.595 r  div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[47]
+                         net (fo=1, unplaced)         0.000     5.595    div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/RESULT_CASC[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[32])
+                                                      1.286     6.881 r  div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[32]
+                         net (fo=1, unplaced)         0.584     7.465    div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/dsp_p_op[32]
+                         LUT5 (Prop_lut5_I4_O)        0.053     7.518 r  div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/m_axis_result_tdata[23]_INST_0_i_1/O
+                         net (fo=1, unplaced)         0.665     8.183    div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/DSP_0
+                         LUT6 (Prop_lut6_I4_O)        0.053     8.236 r  div4_fmul_32ns_32bkb_U1/div4_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/m_axis_result_tdata[23]_INST_0/O
+                         net (fo=0)                   0.672     8.908    ap_return[23]
+                                                                      r  ap_return[23] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   15.000    15.000    
+                         clock pessimism              0.000    15.000    
+                         output delay                -0.000    15.000    
+  -------------------------------------------------------------------
+                         required time                         15.000    
+                         arrival time                          -8.908    
+  -------------------------------------------------------------------
+                         slack                                  6.092    
+
+
+
+

@@ -1,0 +1,497 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug  3 16:00:02 2018
+# Process ID: 14255
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log div7.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source div7.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/project.runs/synth_1/div7.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source div7.tcl -notrace
+Command: synth_design -top div7 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14258 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.848 ; gain = 77.895 ; free physical = 1672 ; free virtual = 9196
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'div7' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.vhd:43]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.vhd:46]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.vhd:52]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 66 - type: integer 
+	Parameter dout_WIDTH bound to: 129 - type: integer 
+INFO: [Synth 8-3491] module 'div7_mul_64s_66nsbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:47' bound to instance 'div7_mul_64s_66nsbkb_U1' of component 'div7_mul_64s_66nsbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'div7_mul_64s_66nsbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:63]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 66 - type: integer 
+	Parameter dout_WIDTH bound to: 129 - type: integer 
+INFO: [Synth 8-3491] module 'div7_mul_64s_66nsbkb_Mul2S_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:12' bound to instance 'div7_mul_64s_66nsbkb_Mul2S_0_U' of component 'div7_mul_64s_66nsbkb_Mul2S_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'div7_mul_64s_66nsbkb_Mul2S_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'div7_mul_64s_66nsbkb_Mul2S_0' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'div7_mul_64s_66nsbkb' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'div7' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.vhd:25]
+WARNING: [Synth 8-3331] design div7_mul_64s_66nsbkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.473 ; gain = 122.520 ; free physical = 1684 ; free virtual = 9209
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.473 ; gain = 122.520 ; free physical = 1685 ; free virtual = 9210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.473 ; gain = 122.520 ; free physical = 1685 ; free virtual = 9210
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1634.949 ; gain = 0.000 ; free physical = 1411 ; free virtual = 8936
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1634.949 ; gain = 445.996 ; free physical = 1490 ; free virtual = 9014
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1634.949 ; gain = 445.996 ; free physical = 1489 ; free virtual = 9014
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1634.949 ; gain = 445.996 ; free physical = 1491 ; free virtual = 9016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1634.949 ; gain = 445.996 ; free physical = 1483 ; free virtual = 9008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
++---Registers : 
+	              129 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                64x67  Multipliers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module div7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+Module div7_mul_64s_66nsbkb_Mul2S_0 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 1     
++---Multipliers : 
+	                64x67  Multipliers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/div7_mul_64s_66nsbkb.vhd:30]
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: PCIN+A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: PCIN+(A:0x12493)*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg, operation Mode is: (PCIN+A*B)'.
+DSP Report: register div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: PCIN+A*(B:0x12493).
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg, operation Mode is: (PCIN+A*B)'.
+DSP Report: register div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: A*(B:0x12493).
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product, operation Mode is: PCIN+A*(B:0x12493).
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product.
+DSP Report: Generating DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+DSP Report: operator div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/tmp_product is absorbed into DSP div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[47]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[46]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[45]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[44]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[43]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[42]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[41]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[40]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[39]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[38]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[37]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[36]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[35]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[34]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[33]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[32]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[31]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[30]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[29]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[28]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[27]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[26]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[25]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[24]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[23]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[22]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[21]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[20]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[19]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[18]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[17]) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[47]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[46]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[45]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[44]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[43]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[42]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[41]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[40]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[39]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[38]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[37]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[36]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[35]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[34]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[33]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[32]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[31]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[30]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[29]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[28]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[27]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[26]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[25]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[24]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[23]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[22]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[21]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[20]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[19]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[18]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[17]__0) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[47]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[46]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[45]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[44]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[43]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[42]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[41]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[40]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[39]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[38]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[37]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[36]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[35]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[34]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[33]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[32]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[31]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[30]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[29]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[28]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[27]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[26]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[25]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[24]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[23]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[22]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[21]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[20]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[19]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[18]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[17]__1) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[47]__2) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[46]__2) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[45]__2) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[44]__2) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[43]__2) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[42]__2) is unused and will be removed from module div7.
+WARNING: [Synth 8-3332] Sequential element (div7_mul_64s_66nsbkb_U1/div7_mul_64s_66nsbkb_Mul2S_0_U/p_tmp_reg[41]__2) is unused and will be removed from module div7.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1634.949 ; gain = 445.996 ; free physical = 1461 ; free virtual = 8987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|div7        | A*B                | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN>>17)+A*B     | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | PCIN+A*B           | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN>>17)+A*B     | 15     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|div7        | A*B                | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | PCIN+(A:0x12493)*B | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN>>17)+A*B     | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN+A*B)'        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|div7        | A*B                | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | PCIN+A*(B:0x12493) | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN>>17)+A*B     | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN+A*B)'        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|div7        | A*(B:0x12493)      | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN>>17)+A*B     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | PCIN+A*(B:0x12493) | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|div7        | (PCIN>>17)+A*B     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 1665.949 ; gain = 476.996 ; free physical = 1316 ; free virtual = 8842
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 1676.965 ; gain = 488.012 ; free physical = 1313 ; free virtual = 8839
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1310 ; free virtual = 8836
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1311 ; free virtual = 8838
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1311 ; free virtual = 8838
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1311 ; free virtual = 8838
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1311 ; free virtual = 8838
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1311 ; free virtual = 8838
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1311 ; free virtual = 8838
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    73|
+|2     |DSP48E1   |    12|
+|3     |DSP48E1_1 |     4|
+|4     |LUT1      |   128|
+|5     |LUT2      |    47|
+|6     |LUT3      |   160|
+|7     |LUT4      |    40|
+|8     |LUT5      |    51|
+|9     |LUT6      |    45|
+|10    |FDRE      |   105|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+-----------------------------+------+
+|      |Instance                           |Module                       |Cells |
++------+-----------------------------------+-----------------------------+------+
+|1     |top                                |                             |   665|
+|2     |  div7_mul_64s_66nsbkb_U1          |div7_mul_64s_66nsbkb         |   658|
+|3     |    div7_mul_64s_66nsbkb_Mul2S_0_U |div7_mul_64s_66nsbkb_Mul2S_0 |   658|
++------+-----------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1685.973 ; gain = 497.020 ; free physical = 1311 ; free virtual = 8838
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 187 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1685.973 ; gain = 173.543 ; free physical = 1383 ; free virtual = 8910
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1685.980 ; gain = 497.020 ; free physical = 1383 ; free virtual = 8910
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 1685.980 ; gain = 497.133 ; free physical = 1386 ; free virtual = 8913
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_long_div/div7/impl/vhdl/project.runs/synth_1/div7.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file div7_utilization_synth.rpt -pb div7_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1709.984 ; gain = 0.000 ; free physical = 1388 ; free virtual = 8915
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 16:00:49 2018...

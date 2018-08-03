@@ -1,0 +1,69 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Aug  3 14:31:36 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file operator_double_div3_control_sets_placed.rpt
+| Design       : operator_double_div3
+| Device       : xc7k160t
+-------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |    14 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|    16+ |            3 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             110 |           35 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               2 |            1 |
+| Yes          | No                    | No                     |             108 |           20 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              22 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-----------------------------------------+-------------------------------+------------------+----------------+
+| Clock Signal |              Enable Signal              |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------+-----------------------------------------+-------------------------------+------------------+----------------+
+|  ap_clk      |                                         | ap_rst                        |                1 |              2 |
+|  ap_clk      | ap_NS_fsm1                              | p_Repl2_1_reg_677[10]_i_1_n_0 |                2 |             22 |
+|  ap_clk      | q_chunk_V_ret2_4_i_i_reg_702[3]_i_1_n_0 |                               |               20 |            108 |
+|  ap_clk      |                                         |                               |               35 |            110 |
++--------------+-----------------------------------------+-------------------------------+------------------+----------------+
+
+

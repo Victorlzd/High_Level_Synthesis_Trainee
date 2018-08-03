@@ -17,13 +17,13 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "30",
+    "ClockPeriod": "5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "1",
-    "Uncertainty": "3.75"
+    "Latency": "2",
+    "Uncertainty": "0.625"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 30.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
@@ -155,27 +155,63 @@
           "Instances": [
             {
               "ModuleName": "lut_div11_chunk",
-              "InstanceName": "grp_lut_div11_chunk_fu_130"
+              "InstanceName": "grp_lut_div11_chunk_fu_138"
             },
             {
               "ModuleName": "lut_div11_chunk",
-              "InstanceName": "grp_lut_div11_chunk_fu_137"
+              "InstanceName": "grp_lut_div11_chunk_fu_145"
             },
             {
               "ModuleName": "lut_div11_chunk",
-              "InstanceName": "grp_lut_div11_chunk_fu_143"
+              "InstanceName": "grp_lut_div11_chunk_fu_151"
             },
             {
               "ModuleName": "lut_div11_chunk",
-              "InstanceName": "grp_lut_div11_chunk_fu_149"
+              "InstanceName": "grp_lut_div11_chunk_fu_157"
             },
             {
               "ModuleName": "lut_div11_chunk",
-              "InstanceName": "grp_lut_div11_chunk_fu_155"
+              "InstanceName": "grp_lut_div11_chunk_fu_163"
             },
             {
               "ModuleName": "lut_div11_chunk",
-              "InstanceName": "grp_lut_div11_chunk_fu_161"
+              "InstanceName": "grp_lut_div11_chunk_fu_169"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_175"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_181"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_187"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_193"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_199"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_205"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_211"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "grp_lut_div11_chunk_fu_217"
+            },
+            {
+              "ModuleName": "lut_div11_chunk",
+              "InstanceName": "call_ret4_26_lut_div11_chunk_fu_223"
             }
           ]
         }]
@@ -191,8 +227,8 @@
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "30.00",
-          "Uncertainty": "3.75",
+          "Target": "5.00",
+          "Uncertainty": "0.62",
           "Estimate": "1.958"
         },
         "Area": {
@@ -204,44 +240,44 @@
       },
       "int_57_div11": {
         "Latency": {
-          "LatencyBest": "4",
-          "LatencyAvg": "4",
-          "LatencyWorst": "4",
-          "PipelineII": "4",
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "30.00",
-          "Uncertainty": "3.75",
-          "Estimate": "24.311"
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "60.778"
         },
         "Area": {
-          "FF": "106",
-          "LUT": "10074",
+          "FF": "63",
+          "LUT": "24810",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
       },
       "operator_double_div11": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "3",
-          "LatencyWorst": "5",
-          "PipelineIIMin": "2",
-          "PipelineIIMax": "6",
-          "PipelineII": "2 ~ 6",
+          "LatencyBest": "2",
+          "LatencyAvg": "4",
+          "LatencyWorst": "6",
+          "PipelineIIMin": "3",
+          "PipelineIIMax": "7",
+          "PipelineII": "3 ~ 7",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "30.00",
-          "Uncertainty": "3.75",
-          "Estimate": "24.311"
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "60.778"
         },
         "Area": {
-          "FF": "231",
-          "LUT": "10848",
+          "FF": "437",
+          "LUT": "25601",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
@@ -255,7 +291,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-03 10:00:12 CEST",
+    "Time": "2018-08-03 14:23:36 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

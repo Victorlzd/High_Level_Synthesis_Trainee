@@ -1,0 +1,214 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_double_div5'
+================================================================
+* Date:           Fri Aug  3 14:36:22 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        operator_double_div
+* Solution:       div5
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|    41.410|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------+----------------+-----+-----+-----+-----+---------+
+        |                                        |                |  Latency  |  Interval | Pipeline|
+        |                Instance                |     Module     | min | max | min | max |   Type  |
+        +----------------------------------------+----------------+-----+-----+-----+-----+---------+
+        |grp_lut_div5_chunk_fu_153               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |grp_lut_div5_chunk_fu_160               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |grp_lut_div5_chunk_fu_166               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |grp_lut_div5_chunk_fu_172               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |grp_lut_div5_chunk_fu_178               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |grp_lut_div5_chunk_fu_184               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |grp_lut_div5_chunk_fu_190               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |grp_lut_div5_chunk_fu_196               |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |call_ret4_14_i_i_lut_div5_chunk_fu_202  |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |call_ret4_15_i_i_lut_div5_chunk_fu_208  |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        |call_ret4_16_i_i_lut_div5_chunk_fu_214  |lut_div5_chunk  |    0|    0|    0|    0|   none  |
+        +----------------------------------------+----------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     709|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       0|   18018|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     168|
+|Register         |        -|      -|     122|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|     122|   18895|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|   ~0   |      18|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------+----------------+---------+-------+---+------+
+    |                Instance                |     Module     | BRAM_18K| DSP48E| FF|  LUT |
+    +----------------------------------------+----------------+---------+-------+---+------+
+    |grp_lut_div5_chunk_fu_153               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |grp_lut_div5_chunk_fu_160               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |grp_lut_div5_chunk_fu_166               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |grp_lut_div5_chunk_fu_172               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |grp_lut_div5_chunk_fu_178               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |grp_lut_div5_chunk_fu_184               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |grp_lut_div5_chunk_fu_190               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |grp_lut_div5_chunk_fu_196               |lut_div5_chunk  |        0|      0|  0|  1638|
+    |call_ret4_14_i_i_lut_div5_chunk_fu_202  |lut_div5_chunk  |        0|      0|  0|  1638|
+    |call_ret4_15_i_i_lut_div5_chunk_fu_208  |lut_div5_chunk  |        0|      0|  0|  1638|
+    |call_ret4_16_i_i_lut_div5_chunk_fu_214  |lut_div5_chunk  |        0|      0|  0|  1638|
+    +----------------------------------------+----------------+---------+-------+---+------+
+    |Total                                   |                |        0|      0|  0| 18018|
+    +----------------------------------------+----------------+---------+-------+---+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+-------+---+-----+------------+------------+
+    |        Variable Name        | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+-------+---+-----+------------+------------+
+    |shift_V_1_fu_416_p2          |     +    |      0|  0|   18|           2|          11|
+    |xf_V_fu_528_p2               |     +    |      0|  0|   63|           2|          56|
+    |new_exp_V_1_fu_354_p2        |     -    |      0|  0|   18|          11|          11|
+    |shift_V_fu_410_p2            |     -    |      0|  0|   18|           1|          11|
+    |sel_tmp4_fu_434_p2           |    and   |      0|  0|    6|           1|           1|
+    |sel_tmp8_fu_462_p2           |    and   |      0|  0|    6|           1|           1|
+    |icmp4_fu_404_p2              |   icmp   |      0|  0|   13|          10|           1|
+    |icmp_fu_328_p2               |   icmp   |      0|  0|    8|           2|           1|
+    |tmp_1_fu_342_p2              |   icmp   |      0|  0|   13|          11|           2|
+    |tmp_2_fu_348_p2              |   icmp   |      0|  0|   13|          11|          11|
+    |tmp_4_fu_382_p2              |   icmp   |      0|  0|   13|          11|           1|
+    |tmp_5_fu_388_p2              |   icmp   |      0|  0|   13|          11|          11|
+    |r_V_3_fu_504_p2              |   lshr   |      0|  0|  160|          53|          53|
+    |sel_tmp3_demorgan_fu_422_p2  |    or    |      0|  0|    6|           1|           1|
+    |tmp_7_fu_368_p2              |    or    |      0|  0|    6|           1|           1|
+    |p_Repl2_1_fu_374_p3          |  select  |      0|  0|   11|           1|          11|
+    |p_new_exp_V_1_fu_360_p3      |  select  |      0|  0|    2|           1|           2|
+    |shift_V_2_fu_440_p3          |  select  |      0|  0|   11|           1|          11|
+    |shift_V_3_fu_448_p3          |  select  |      0|  0|   11|           1|           1|
+    |shift_V_4_fu_468_p3          |  select  |      0|  0|   11|           1|          11|
+    |shift_V_cast_cast_fu_334_p3  |  select  |      0|  0|    2|           1|           2|
+    |xf_V_1_fu_484_p3             |  select  |      0|  0|   53|           1|          53|
+    |xf_V_3_fu_520_p3             |  select  |      0|  0|   56|           1|          56|
+    |r_V_4_fu_514_p2              |    shl   |      0|  0|  166|          56|          56|
+    |sel_tmp3_fu_428_p2           |    xor   |      0|  0|    6|           1|           2|
+    |sel_tmp7_fu_456_p2           |    xor   |      0|  0|    6|           1|           2|
+    +-----------------------------+----------+-------+---+-----+------------+------------+
+    |Total                        |          |      0|  0|  709|         195|         380|
+    +-----------------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------+----+-----------+-----+-----------+
+    |                Name                | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                           |  15|          3|    1|          3|
+    |ap_phi_mux_p_Repl2_s_phi_fu_147_p4  |   9|          2|   52|        104|
+    |grp_lut_div5_chunk_fu_153_d_V       |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_153_r_in_V    |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_160_d_V       |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_166_d_V       |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_172_d_V       |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_178_d_V       |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_184_d_V       |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_190_d_V       |  15|          3|    3|          9|
+    |grp_lut_div5_chunk_fu_196_d_V       |  15|          3|    3|          9|
+    |p_Repl2_s_reg_144                   |   9|          2|   52|        104|
+    +------------------------------------+----+-----------+-----+-----------+
+    |Total                               | 168|         34|  132|        292|
+    +------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                     |   2|   0|    2|          0|
+    |p_Repl2_1_reg_820             |  11|   0|   11|          0|
+    |p_Repl2_2_reg_806             |   1|   0|    1|          0|
+    |p_Repl2_s_reg_144             |  52|   0|   52|          0|
+    |p_Result_22_10_i_i_reg_880    |   3|   0|    3|          0|
+    |p_Result_22_11_i_i_reg_885    |   3|   0|    3|          0|
+    |p_Result_22_12_i_i_reg_890    |   3|   0|    3|          0|
+    |p_Result_22_13_i_i_reg_895    |   3|   0|    3|          0|
+    |p_Result_22_14_i_i_reg_900    |   3|   0|    3|          0|
+    |p_Result_22_15_i_i_reg_905    |   3|   0|    3|          0|
+    |p_Result_22_7_i_i_reg_860     |   3|   0|    3|          0|
+    |p_Result_22_8_i_i_reg_865     |   3|   0|    3|          0|
+    |p_Result_22_9_i_i_reg_870     |   3|   0|    3|          0|
+    |p_Result_22_i_i_10_reg_875    |   3|   0|    3|          0|
+    |q_chunk_V_ret2_1_i_i_reg_825  |   3|   0|    3|          0|
+    |q_chunk_V_ret2_2_i_i_reg_830  |   3|   0|    3|          0|
+    |q_chunk_V_ret2_3_i_i_reg_835  |   3|   0|    3|          0|
+    |q_chunk_V_ret2_4_i_i_reg_840  |   3|   0|    3|          0|
+    |q_chunk_V_ret2_5_i_i_reg_845  |   3|   0|    3|          0|
+    |q_chunk_V_ret2_6_i_i_reg_850  |   3|   0|    3|          0|
+    |r_V_ret3_6_i_i_reg_855        |   3|   0|    3|          0|
+    |tmp_10_reg_915                |   1|   0|    1|          0|
+    |tmp_1_reg_816                 |   1|   0|    1|          0|
+    |tmp_9_reg_910                 |   3|   0|    3|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         | 122|   0|  122|          0|
+    +------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+----------------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------+-----+-----+------------+----------------------+--------------+
+|ap_clk     |  in |    1| ap_ctrl_hs | operator_double_div5 | return value |
+|ap_rst     |  in |    1| ap_ctrl_hs | operator_double_div5 | return value |
+|ap_start   |  in |    1| ap_ctrl_hs | operator_double_div5 | return value |
+|ap_done    | out |    1| ap_ctrl_hs | operator_double_div5 | return value |
+|ap_idle    | out |    1| ap_ctrl_hs | operator_double_div5 | return value |
+|ap_ready   | out |    1| ap_ctrl_hs | operator_double_div5 | return value |
+|ap_return  | out |   64| ap_ctrl_hs | operator_double_div5 | return value |
+|in_r       |  in |   64|   ap_none  |         in_r         |    scalar    |
++-----------+-----+-----+------------+----------------------+--------------+
+

@@ -1,0 +1,132 @@
+
+
+================================================================
+== Vivado HLS Report for 'div4'
+================================================================
+* Date:           Fri Aug  3 15:49:11 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        vivado_hls_long_div
+* Solution:       div4
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   1.00|     3.570|        0.12|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.57>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%a_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %a) nounwind"   --->   Operation 3 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %a_read, i32 63)" [test.cpp:16]   --->   Operation 4 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.98ns)   --->   "%p_neg = sub i64 0, %a_read" [test.cpp:16]   --->   Operation 5 'sub' 'p_neg' <Predicate = true> <Delay = 1.98> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp_1 = call i62 @_ssdm_op_PartSelect.i62.i64.i32.i32(i64 %p_neg, i32 2, i32 63)" [test.cpp:16]   --->   Operation 6 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_lshr_cast = zext i62 %tmp_1 to i63" [test.cpp:16]   --->   Operation 7 'zext' 'p_lshr_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (1.58ns)   --->   "%p_neg_t = sub i63 0, %p_lshr_cast" [test.cpp:16]   --->   Operation 8 'sub' 'p_neg_t' <Predicate = true> <Delay = 1.58> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 2> <II = 1> <Delay = 1.50> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_2 = call i62 @_ssdm_op_PartSelect.i62.i64.i32.i32(i64 %a_read, i32 2, i32 63)" [test.cpp:16]   --->   Operation 9 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.34>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %a) nounwind, !map !8"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 0) nounwind, !map !14"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @div4_str) nounwind"   --->   Operation 12 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [test.cpp:15]   --->   Operation 13 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/2] (1.58ns)   --->   "%p_neg_t = sub i63 0, %p_lshr_cast" [test.cpp:16]   --->   Operation 14 'sub' 'p_neg_t' <Predicate = true> <Delay = 1.58> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 2> <II = 1> <Delay = 1.50> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%p_lshr_f_cast = zext i62 %tmp_2 to i63" [test.cpp:16]   --->   Operation 15 'zext' 'p_lshr_f_cast' <Predicate = (!tmp_3)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.76ns)   --->   "%tmp = select i1 %tmp_3, i63 %p_neg_t, i63 %p_lshr_f_cast" [test.cpp:16]   --->   Operation 16 'select' 'tmp' <Predicate = true> <Delay = 0.76> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_cast = sext i63 %tmp to i64" [test.cpp:16]   --->   Operation 17 'sext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "ret i64 %tmp_cast" [test.cpp:16]   --->   Operation 18 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 1ns, clock uncertainty: 0.125ns.
+
+ <State 1>: 3.57ns
+The critical path consists of the following:
+	wire read on port 'a' [5]  (0 ns)
+	'sub' operation ('p_neg', test.cpp:16) [8]  (1.99 ns)
+	'sub' operation ('p_neg_t', test.cpp:16) [11]  (1.58 ns)
+
+ <State 2>: 2.35ns
+The critical path consists of the following:
+	'sub' operation ('p_neg_t', test.cpp:16) [11]  (1.58 ns)
+	'select' operation ('tmp', test.cpp:16) [14]  (0.764 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

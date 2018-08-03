@@ -1,6 +1,6 @@
 
 set TopModule "operator_long_div2"
-set ClockPeriod "10.000000"
+set ClockPeriod "1.000000"
 set ClockList {}
 set multiClockList {}
 set PortClockMap {}

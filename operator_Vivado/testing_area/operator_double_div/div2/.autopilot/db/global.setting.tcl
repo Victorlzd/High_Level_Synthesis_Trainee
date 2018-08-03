@@ -1,12 +1,12 @@
 
 set TopModule "operator_double_div2"
-set ClockPeriod "10.000000"
-set ClockList {}
+set ClockPeriod "5.000000"
+set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}
-set CombLogicFlag 1
+set CombLogicFlag 0
 set PipelineFlag 0
-set DataflowTaskPipelineFlag  0
+set DataflowTaskPipelineFlag  1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 0
