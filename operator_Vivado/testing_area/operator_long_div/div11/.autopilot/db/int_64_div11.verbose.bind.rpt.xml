@@ -1,0 +1,70 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'int_64_div11'" level="0">
+<item name = "Date">Fri Aug  3 14:13:06 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">operator_long_div</item>
+<item name = "Solution">div11</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">120.00, 104.175, 15.00</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_lut_div11_chunk_fu_142">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div11_chunk_fu_149">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div11_chunk_fu_155">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div11_chunk_fu_161">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div11_chunk_fu_167">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div11_chunk_fu_173">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div11_chunk_fu_179">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_13_lut_div11_chunk_fu_185">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_14_lut_div11_chunk_fu_191">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_15_lut_div11_chunk_fu_197">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_16_lut_div11_chunk_fu_203">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_17_lut_div11_chunk_fu_209">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_18_lut_div11_chunk_fu_215">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_19_lut_div11_chunk_fu_221">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_20_lut_div11_chunk_fu_227">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_21_lut_div11_chunk_fu_233">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_22_lut_div11_chunk_fu_239">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_23_lut_div11_chunk_fu_245">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_24_lut_div11_chunk_fu_251">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_25_lut_div11_chunk_fu_257">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_26_lut_div11_chunk_fu_263">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_27_lut_div11_chunk_fu_269">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_28_lut_div11_chunk_fu_275">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_29_lut_div11_chunk_fu_281">lut_div11_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_30_lut_div11_chunk_fu_287">lut_div11_chunk, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

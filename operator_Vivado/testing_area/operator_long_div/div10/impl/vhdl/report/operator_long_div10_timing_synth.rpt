@@ -1,0 +1,83 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Aug  3 12:03:57 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/operator_long_div10_timing_synth.rpt
+| Design       : operator_long_div10
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.935ns  (required time - arrival time)
+  Source:                 p_Result_13_i_i_4_reg_592_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            q_chunk_V_0_9_i_i_reg_582_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.045ns  (logic 0.976ns (13.854%)  route 6.069ns (86.146%))
+  Logic Levels:           11  (LUT3=1 LUT6=10)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.672ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=67, unset)           0.672     0.672    ap_clk
+                         FDRE                                         r  p_Result_13_i_i_4_reg_592_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.281     0.953 r  p_Result_13_i_i_4_reg_592_reg[2]/Q
+                         net (fo=2, unplaced)         0.543     1.496    p_Result_13_i_i_4_reg_592[2]
+                         LUT3 (Prop_lut3_I0_O)        0.165     1.661 r  ap_return[31]_INST_0_i_2/O
+                         net (fo=5, unplaced)         0.549     2.210    d_V[2]
+                         LUT6 (Prop_lut6_I3_O)        0.053     2.263 r  ap_return[29]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     2.816    grp_lut_div5_chunk_fu_116_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     2.869 r  ap_return[26]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     3.422    grp_lut_div5_chunk_fu_123_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     3.475 r  ap_return[23]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     4.028    grp_lut_div5_chunk_fu_129_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     4.081 r  ap_return[20]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     4.634    grp_lut_div5_chunk_fu_135_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     4.687 r  ap_return[17]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     5.240    grp_lut_div5_chunk_fu_141_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     5.293 r  ap_return[14]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     5.846    grp_lut_div5_chunk_fu_147_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     5.899 r  ap_return[11]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     6.452    grp_lut_div5_chunk_fu_153_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     6.505 r  ap_return[8]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     7.058    grp_lut_div5_chunk_fu_159_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     7.111 r  ap_return[5]_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.553     7.664    grp_lut_div5_chunk_fu_165_ap_return_1[2]
+                         LUT6 (Prop_lut6_I0_O)        0.053     7.717 r  ap_return[3]_INST_0/O
+                         net (fo=1, unplaced)         0.000     7.717    ap_return[3]
+                         FDRE                                         r  q_chunk_V_0_9_i_i_reg_582_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=67, unset)           0.638    10.638    ap_clk
+                         FDRE                                         r  q_chunk_V_0_9_i_i_reg_582_reg[0]/C
+                         clock pessimism              0.000    10.638    
+                         clock uncertainty           -0.035    10.603    
+                         FDRE (Setup_fdre_C_D)        0.049    10.652    q_chunk_V_0_9_i_i_reg_582_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.652    
+                         arrival time                          -7.717    
+  -------------------------------------------------------------------
+                         slack                                  2.935    
+
+
+
+

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"operator_float_div5": {
+			"proto_instances": {
+			}
+		}
+	}
+}

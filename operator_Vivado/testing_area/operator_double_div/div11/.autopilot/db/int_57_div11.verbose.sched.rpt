@@ -1,0 +1,285 @@
+
+
+================================================================
+== Vivado HLS Report for 'int_57_div11'
+================================================================
+* Date:           Fri Aug  3 10:00:11 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        operator_double_div
+* Solution:       div11
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  30.00|    24.311|        3.75|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    4|    4|    4|    4|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 20.2>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%in_V_read = call i57 @_ssdm_op_Read.ap_auto.i57(i57 %in_V)"   --->   Operation 6 'read' 'in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i57.i32(i57 %in_V_read, i32 56)" [test.cpp:7158]   --->   Operation 7 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%d_chunk_V = zext i1 %tmp to i2" [test.cpp:7158]   --->   Operation 8 'zext' 'd_chunk_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (4.05ns)   --->   "%call_ret = call fastcc { i2, i4 } @lut_div11_chunk(i2 %d_chunk_V, i4 0)" [test.cpp:7159]   --->   Operation 9 'call' 'call_ret' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%q_chunk_V = extractvalue { i2, i4 } %call_ret, 0" [test.cpp:7159]   --->   Operation 10 'extractvalue' 'q_chunk_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%r_V = extractvalue { i2, i4 } %call_ret, 1" [test.cpp:7159]   --->   Operation 11 'extractvalue' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_11 = trunc i2 %q_chunk_V to i1" [test.cpp:7160]   --->   Operation 12 'trunc' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_Result_2 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 54, i32 55)" [test.cpp:7164]   --->   Operation 13 'partselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (4.05ns)   --->   "%call_ret4 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_2, i4 %r_V)" [test.cpp:7165]   --->   Operation 14 'call' 'call_ret4' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2 = extractvalue { i2, i4 } %call_ret4, 0" [test.cpp:7165]   --->   Operation 15 'extractvalue' 'q_chunk_V_ret2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%r_V_ret3 = extractvalue { i2, i4 } %call_ret4, 1" [test.cpp:7165]   --->   Operation 16 'extractvalue' 'r_V_ret3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_Result_22_1 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 52, i32 53)" [test.cpp:7164]   --->   Operation 17 'partselect' 'p_Result_22_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (4.05ns)   --->   "%call_ret4_1 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_1, i4 %r_V_ret3)" [test.cpp:7165]   --->   Operation 18 'call' 'call_ret4_1' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_1 = extractvalue { i2, i4 } %call_ret4_1, 0" [test.cpp:7165]   --->   Operation 19 'extractvalue' 'q_chunk_V_ret2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%r_V_ret3_1 = extractvalue { i2, i4 } %call_ret4_1, 1" [test.cpp:7165]   --->   Operation 20 'extractvalue' 'r_V_ret3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_Result_22_2 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 50, i32 51)" [test.cpp:7164]   --->   Operation 21 'partselect' 'p_Result_22_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (4.05ns)   --->   "%call_ret4_2 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_2, i4 %r_V_ret3_1)" [test.cpp:7165]   --->   Operation 22 'call' 'call_ret4_2' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_2 = extractvalue { i2, i4 } %call_ret4_2, 0" [test.cpp:7165]   --->   Operation 23 'extractvalue' 'q_chunk_V_ret2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%r_V_ret3_2 = extractvalue { i2, i4 } %call_ret4_2, 1" [test.cpp:7165]   --->   Operation 24 'extractvalue' 'r_V_ret3_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_Result_22_3 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 48, i32 49)" [test.cpp:7164]   --->   Operation 25 'partselect' 'p_Result_22_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (4.05ns)   --->   "%call_ret4_3 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_3, i4 %r_V_ret3_2)" [test.cpp:7165]   --->   Operation 26 'call' 'call_ret4_3' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_3 = extractvalue { i2, i4 } %call_ret4_3, 0" [test.cpp:7165]   --->   Operation 27 'extractvalue' 'q_chunk_V_ret2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%r_V_ret3_3 = extractvalue { i2, i4 } %call_ret4_3, 1" [test.cpp:7165]   --->   Operation 28 'extractvalue' 'r_V_ret3_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_Result_22_4 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 46, i32 47)" [test.cpp:7164]   --->   Operation 29 'partselect' 'p_Result_22_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_Result_22_5 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 44, i32 45)" [test.cpp:7164]   --->   Operation 30 'partselect' 'p_Result_22_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_Result_22_6 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 42, i32 43)" [test.cpp:7164]   --->   Operation 31 'partselect' 'p_Result_22_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_Result_22_7 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 40, i32 41)" [test.cpp:7164]   --->   Operation 32 'partselect' 'p_Result_22_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_Result_22_8 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 38, i32 39)" [test.cpp:7164]   --->   Operation 33 'partselect' 'p_Result_22_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_Result_22_9 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 36, i32 37)" [test.cpp:7164]   --->   Operation 34 'partselect' 'p_Result_22_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_Result_22_s = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 34, i32 35)" [test.cpp:7164]   --->   Operation 35 'partselect' 'p_Result_22_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%p_Result_22_10 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 32, i32 33)" [test.cpp:7164]   --->   Operation 36 'partselect' 'p_Result_22_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_Result_22_11 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 30, i32 31)" [test.cpp:7164]   --->   Operation 37 'partselect' 'p_Result_22_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%p_Result_22_12 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 28, i32 29)" [test.cpp:7164]   --->   Operation 38 'partselect' 'p_Result_22_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%p_Result_22_13 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 26, i32 27)" [test.cpp:7164]   --->   Operation 39 'partselect' 'p_Result_22_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%p_Result_22_14 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 24, i32 25)" [test.cpp:7164]   --->   Operation 40 'partselect' 'p_Result_22_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%p_Result_22_15 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 22, i32 23)" [test.cpp:7164]   --->   Operation 41 'partselect' 'p_Result_22_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_Result_22_16 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 20, i32 21)" [test.cpp:7164]   --->   Operation 42 'partselect' 'p_Result_22_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_Result_22_17 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 18, i32 19)" [test.cpp:7164]   --->   Operation 43 'partselect' 'p_Result_22_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_Result_22_18 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 16, i32 17)" [test.cpp:7164]   --->   Operation 44 'partselect' 'p_Result_22_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_Result_22_19 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 14, i32 15)" [test.cpp:7164]   --->   Operation 45 'partselect' 'p_Result_22_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_Result_22_20 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 12, i32 13)" [test.cpp:7164]   --->   Operation 46 'partselect' 'p_Result_22_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_Result_22_21 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 10, i32 11)" [test.cpp:7164]   --->   Operation 47 'partselect' 'p_Result_22_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_Result_22_22 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 8, i32 9)" [test.cpp:7164]   --->   Operation 48 'partselect' 'p_Result_22_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_Result_22_23 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 6, i32 7)" [test.cpp:7164]   --->   Operation 49 'partselect' 'p_Result_22_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_Result_22_24 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 4, i32 5)" [test.cpp:7164]   --->   Operation 50 'partselect' 'p_Result_22_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_Result_22_25 = call i2 @_ssdm_op_PartSelect.i2.i57.i32.i32(i57 %in_V_read, i32 2, i32 3)" [test.cpp:7164]   --->   Operation 51 'partselect' 'p_Result_22_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_12 = trunc i57 %in_V_read to i2" [test.cpp:7164]   --->   Operation 52 'trunc' 'tmp_12' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 24.3>
+ST_2 : Operation 53 [1/1] (4.05ns)   --->   "%call_ret4_4 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_4, i4 %r_V_ret3_3)" [test.cpp:7165]   --->   Operation 53 'call' 'call_ret4_4' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_4 = extractvalue { i2, i4 } %call_ret4_4, 0" [test.cpp:7165]   --->   Operation 54 'extractvalue' 'q_chunk_V_ret2_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%r_V_ret3_4 = extractvalue { i2, i4 } %call_ret4_4, 1" [test.cpp:7165]   --->   Operation 55 'extractvalue' 'r_V_ret3_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (4.05ns)   --->   "%call_ret4_5 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_5, i4 %r_V_ret3_4)" [test.cpp:7165]   --->   Operation 56 'call' 'call_ret4_5' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_5 = extractvalue { i2, i4 } %call_ret4_5, 0" [test.cpp:7165]   --->   Operation 57 'extractvalue' 'q_chunk_V_ret2_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%r_V_ret3_5 = extractvalue { i2, i4 } %call_ret4_5, 1" [test.cpp:7165]   --->   Operation 58 'extractvalue' 'r_V_ret3_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (4.05ns)   --->   "%call_ret4_6 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_6, i4 %r_V_ret3_5)" [test.cpp:7165]   --->   Operation 59 'call' 'call_ret4_6' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_6 = extractvalue { i2, i4 } %call_ret4_6, 0" [test.cpp:7165]   --->   Operation 60 'extractvalue' 'q_chunk_V_ret2_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%r_V_ret3_6 = extractvalue { i2, i4 } %call_ret4_6, 1" [test.cpp:7165]   --->   Operation 61 'extractvalue' 'r_V_ret3_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (4.05ns)   --->   "%call_ret4_7 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_7, i4 %r_V_ret3_6)" [test.cpp:7165]   --->   Operation 62 'call' 'call_ret4_7' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_7 = extractvalue { i2, i4 } %call_ret4_7, 0" [test.cpp:7165]   --->   Operation 63 'extractvalue' 'q_chunk_V_ret2_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%r_V_ret3_7 = extractvalue { i2, i4 } %call_ret4_7, 1" [test.cpp:7165]   --->   Operation 64 'extractvalue' 'r_V_ret3_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (4.05ns)   --->   "%call_ret4_8 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_8, i4 %r_V_ret3_7)" [test.cpp:7165]   --->   Operation 65 'call' 'call_ret4_8' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_8 = extractvalue { i2, i4 } %call_ret4_8, 0" [test.cpp:7165]   --->   Operation 66 'extractvalue' 'q_chunk_V_ret2_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%r_V_ret3_8 = extractvalue { i2, i4 } %call_ret4_8, 1" [test.cpp:7165]   --->   Operation 67 'extractvalue' 'r_V_ret3_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (4.05ns)   --->   "%call_ret4_9 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_9, i4 %r_V_ret3_8)" [test.cpp:7165]   --->   Operation 68 'call' 'call_ret4_9' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_9 = extractvalue { i2, i4 } %call_ret4_9, 0" [test.cpp:7165]   --->   Operation 69 'extractvalue' 'q_chunk_V_ret2_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%r_V_ret3_9 = extractvalue { i2, i4 } %call_ret4_9, 1" [test.cpp:7165]   --->   Operation 70 'extractvalue' 'r_V_ret3_9' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 24.3>
+ST_3 : Operation 71 [1/1] (4.05ns)   --->   "%call_ret4_s = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_s, i4 %r_V_ret3_9)" [test.cpp:7165]   --->   Operation 71 'call' 'call_ret4_s' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_s = extractvalue { i2, i4 } %call_ret4_s, 0" [test.cpp:7165]   --->   Operation 72 'extractvalue' 'q_chunk_V_ret2_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%r_V_ret3_s = extractvalue { i2, i4 } %call_ret4_s, 1" [test.cpp:7165]   --->   Operation 73 'extractvalue' 'r_V_ret3_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (4.05ns)   --->   "%call_ret4_10 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_10, i4 %r_V_ret3_s)" [test.cpp:7165]   --->   Operation 74 'call' 'call_ret4_10' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_10 = extractvalue { i2, i4 } %call_ret4_10, 0" [test.cpp:7165]   --->   Operation 75 'extractvalue' 'q_chunk_V_ret2_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%r_V_ret3_10 = extractvalue { i2, i4 } %call_ret4_10, 1" [test.cpp:7165]   --->   Operation 76 'extractvalue' 'r_V_ret3_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (4.05ns)   --->   "%call_ret4_11 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_11, i4 %r_V_ret3_10)" [test.cpp:7165]   --->   Operation 77 'call' 'call_ret4_11' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_11 = extractvalue { i2, i4 } %call_ret4_11, 0" [test.cpp:7165]   --->   Operation 78 'extractvalue' 'q_chunk_V_ret2_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%r_V_ret3_11 = extractvalue { i2, i4 } %call_ret4_11, 1" [test.cpp:7165]   --->   Operation 79 'extractvalue' 'r_V_ret3_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (4.05ns)   --->   "%call_ret4_12 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_12, i4 %r_V_ret3_11)" [test.cpp:7165]   --->   Operation 80 'call' 'call_ret4_12' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_12 = extractvalue { i2, i4 } %call_ret4_12, 0" [test.cpp:7165]   --->   Operation 81 'extractvalue' 'q_chunk_V_ret2_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%r_V_ret3_12 = extractvalue { i2, i4 } %call_ret4_12, 1" [test.cpp:7165]   --->   Operation 82 'extractvalue' 'r_V_ret3_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (4.05ns)   --->   "%call_ret4_13 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_13, i4 %r_V_ret3_12)" [test.cpp:7165]   --->   Operation 83 'call' 'call_ret4_13' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_13 = extractvalue { i2, i4 } %call_ret4_13, 0" [test.cpp:7165]   --->   Operation 84 'extractvalue' 'q_chunk_V_ret2_13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%r_V_ret3_13 = extractvalue { i2, i4 } %call_ret4_13, 1" [test.cpp:7165]   --->   Operation 85 'extractvalue' 'r_V_ret3_13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (4.05ns)   --->   "%call_ret4_14 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_14, i4 %r_V_ret3_13)" [test.cpp:7165]   --->   Operation 86 'call' 'call_ret4_14' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_14 = extractvalue { i2, i4 } %call_ret4_14, 0" [test.cpp:7165]   --->   Operation 87 'extractvalue' 'q_chunk_V_ret2_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%r_V_ret3_14 = extractvalue { i2, i4 } %call_ret4_14, 1" [test.cpp:7165]   --->   Operation 88 'extractvalue' 'r_V_ret3_14' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 24.3>
+ST_4 : Operation 89 [1/1] (4.05ns)   --->   "%call_ret4_15 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_15, i4 %r_V_ret3_14)" [test.cpp:7165]   --->   Operation 89 'call' 'call_ret4_15' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_15 = extractvalue { i2, i4 } %call_ret4_15, 0" [test.cpp:7165]   --->   Operation 90 'extractvalue' 'q_chunk_V_ret2_15' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%r_V_ret3_15 = extractvalue { i2, i4 } %call_ret4_15, 1" [test.cpp:7165]   --->   Operation 91 'extractvalue' 'r_V_ret3_15' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (4.05ns)   --->   "%call_ret4_16 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_16, i4 %r_V_ret3_15)" [test.cpp:7165]   --->   Operation 92 'call' 'call_ret4_16' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_16 = extractvalue { i2, i4 } %call_ret4_16, 0" [test.cpp:7165]   --->   Operation 93 'extractvalue' 'q_chunk_V_ret2_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%r_V_ret3_16 = extractvalue { i2, i4 } %call_ret4_16, 1" [test.cpp:7165]   --->   Operation 94 'extractvalue' 'r_V_ret3_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (4.05ns)   --->   "%call_ret4_17 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_17, i4 %r_V_ret3_16)" [test.cpp:7165]   --->   Operation 95 'call' 'call_ret4_17' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_17 = extractvalue { i2, i4 } %call_ret4_17, 0" [test.cpp:7165]   --->   Operation 96 'extractvalue' 'q_chunk_V_ret2_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 97 [1/1] (0.00ns)   --->   "%r_V_ret3_17 = extractvalue { i2, i4 } %call_ret4_17, 1" [test.cpp:7165]   --->   Operation 97 'extractvalue' 'r_V_ret3_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (4.05ns)   --->   "%call_ret4_18 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_18, i4 %r_V_ret3_17)" [test.cpp:7165]   --->   Operation 98 'call' 'call_ret4_18' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_18 = extractvalue { i2, i4 } %call_ret4_18, 0" [test.cpp:7165]   --->   Operation 99 'extractvalue' 'q_chunk_V_ret2_18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%r_V_ret3_18 = extractvalue { i2, i4 } %call_ret4_18, 1" [test.cpp:7165]   --->   Operation 100 'extractvalue' 'r_V_ret3_18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (4.05ns)   --->   "%call_ret4_19 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_19, i4 %r_V_ret3_18)" [test.cpp:7165]   --->   Operation 101 'call' 'call_ret4_19' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_19 = extractvalue { i2, i4 } %call_ret4_19, 0" [test.cpp:7165]   --->   Operation 102 'extractvalue' 'q_chunk_V_ret2_19' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "%r_V_ret3_19 = extractvalue { i2, i4 } %call_ret4_19, 1" [test.cpp:7165]   --->   Operation 103 'extractvalue' 'r_V_ret3_19' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (4.05ns)   --->   "%call_ret4_20 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_20, i4 %r_V_ret3_19)" [test.cpp:7165]   --->   Operation 104 'call' 'call_ret4_20' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_20 = extractvalue { i2, i4 } %call_ret4_20, 0" [test.cpp:7165]   --->   Operation 105 'extractvalue' 'q_chunk_V_ret2_20' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "%r_V_ret3_20 = extractvalue { i2, i4 } %call_ret4_20, 1" [test.cpp:7165]   --->   Operation 106 'extractvalue' 'r_V_ret3_20' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 24.3>
+ST_5 : Operation 107 [1/1] (4.05ns)   --->   "%call_ret4_21 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_21, i4 %r_V_ret3_20)" [test.cpp:7165]   --->   Operation 107 'call' 'call_ret4_21' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 108 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_21 = extractvalue { i2, i4 } %call_ret4_21, 0" [test.cpp:7165]   --->   Operation 108 'extractvalue' 'q_chunk_V_ret2_21' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 109 [1/1] (0.00ns)   --->   "%r_V_ret3_21 = extractvalue { i2, i4 } %call_ret4_21, 1" [test.cpp:7165]   --->   Operation 109 'extractvalue' 'r_V_ret3_21' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 110 [1/1] (4.05ns)   --->   "%call_ret4_22 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_22, i4 %r_V_ret3_21)" [test.cpp:7165]   --->   Operation 110 'call' 'call_ret4_22' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 111 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_22 = extractvalue { i2, i4 } %call_ret4_22, 0" [test.cpp:7165]   --->   Operation 111 'extractvalue' 'q_chunk_V_ret2_22' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 112 [1/1] (0.00ns)   --->   "%r_V_ret3_22 = extractvalue { i2, i4 } %call_ret4_22, 1" [test.cpp:7165]   --->   Operation 112 'extractvalue' 'r_V_ret3_22' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 113 [1/1] (4.05ns)   --->   "%call_ret4_23 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_23, i4 %r_V_ret3_22)" [test.cpp:7165]   --->   Operation 113 'call' 'call_ret4_23' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 114 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_23 = extractvalue { i2, i4 } %call_ret4_23, 0" [test.cpp:7165]   --->   Operation 114 'extractvalue' 'q_chunk_V_ret2_23' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 115 [1/1] (0.00ns)   --->   "%r_V_ret3_23 = extractvalue { i2, i4 } %call_ret4_23, 1" [test.cpp:7165]   --->   Operation 115 'extractvalue' 'r_V_ret3_23' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 116 [1/1] (4.05ns)   --->   "%call_ret4_24 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_24, i4 %r_V_ret3_23)" [test.cpp:7165]   --->   Operation 116 'call' 'call_ret4_24' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 117 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_24 = extractvalue { i2, i4 } %call_ret4_24, 0" [test.cpp:7165]   --->   Operation 117 'extractvalue' 'q_chunk_V_ret2_24' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%r_V_ret3_24 = extractvalue { i2, i4 } %call_ret4_24, 1" [test.cpp:7165]   --->   Operation 118 'extractvalue' 'r_V_ret3_24' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 119 [1/1] (4.05ns)   --->   "%call_ret4_25 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %p_Result_22_25, i4 %r_V_ret3_24)" [test.cpp:7165]   --->   Operation 119 'call' 'call_ret4_25' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 120 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_25 = extractvalue { i2, i4 } %call_ret4_25, 0" [test.cpp:7165]   --->   Operation 120 'extractvalue' 'q_chunk_V_ret2_25' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%r_V_ret3_25 = extractvalue { i2, i4 } %call_ret4_25, 1" [test.cpp:7165]   --->   Operation 121 'extractvalue' 'r_V_ret3_25' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 122 [1/1] (4.05ns)   --->   "%call_ret4_26 = call fastcc { i2, i4 } @lut_div11_chunk(i2 %tmp_12, i4 %r_V_ret3_25)" [test.cpp:7165]   --->   Operation 122 'call' 'call_ret4_26' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%q_chunk_V_ret2_26 = extractvalue { i2, i4 } %call_ret4_26, 0" [test.cpp:7165]   --->   Operation 123 'extractvalue' 'q_chunk_V_ret2_26' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%p_Result_19_s = call i57 @_ssdm_op_BitConcatenate.i57.i1.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2.i2(i1 %tmp_11, i2 %q_chunk_V_ret2, i2 %q_chunk_V_ret2_1, i2 %q_chunk_V_ret2_2, i2 %q_chunk_V_ret2_3, i2 %q_chunk_V_ret2_4, i2 %q_chunk_V_ret2_5, i2 %q_chunk_V_ret2_6, i2 %q_chunk_V_ret2_7, i2 %q_chunk_V_ret2_8, i2 %q_chunk_V_ret2_9, i2 %q_chunk_V_ret2_s, i2 %q_chunk_V_ret2_10, i2 %q_chunk_V_ret2_11, i2 %q_chunk_V_ret2_12, i2 %q_chunk_V_ret2_13, i2 %q_chunk_V_ret2_14, i2 %q_chunk_V_ret2_15, i2 %q_chunk_V_ret2_16, i2 %q_chunk_V_ret2_17, i2 %q_chunk_V_ret2_18, i2 %q_chunk_V_ret2_19, i2 %q_chunk_V_ret2_20, i2 %q_chunk_V_ret2_21, i2 %q_chunk_V_ret2_22, i2 %q_chunk_V_ret2_23, i2 %q_chunk_V_ret2_24, i2 %q_chunk_V_ret2_25, i2 %q_chunk_V_ret2_26)" [test.cpp:7166]   --->   Operation 124 'bitconcatenate' 'p_Result_19_s' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "ret i57 %p_Result_19_s" [test.cpp:7169]   --->   Operation 125 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 30ns, clock uncertainty: 3.75ns.
+
+ <State 1>: 20.3ns
+The critical path consists of the following:
+	wire read on port 'in_V' [2]  (0 ns)
+	'call' operation ('call_ret', test.cpp:7159) to 'lut_div11_chunk' [5]  (4.05 ns)
+	'call' operation ('call_ret4', test.cpp:7165) to 'lut_div11_chunk' [10]  (4.05 ns)
+	'call' operation ('call_ret4_1', test.cpp:7165) to 'lut_div11_chunk' [14]  (4.05 ns)
+	'call' operation ('call_ret4_2', test.cpp:7165) to 'lut_div11_chunk' [18]  (4.05 ns)
+	'call' operation ('call_ret4_3', test.cpp:7165) to 'lut_div11_chunk' [22]  (4.05 ns)
+
+ <State 2>: 24.3ns
+The critical path consists of the following:
+	'call' operation ('call_ret4_4', test.cpp:7165) to 'lut_div11_chunk' [26]  (4.05 ns)
+	'call' operation ('call_ret4_5', test.cpp:7165) to 'lut_div11_chunk' [30]  (4.05 ns)
+	'call' operation ('call_ret4_6', test.cpp:7165) to 'lut_div11_chunk' [34]  (4.05 ns)
+	'call' operation ('call_ret4_7', test.cpp:7165) to 'lut_div11_chunk' [38]  (4.05 ns)
+	'call' operation ('call_ret4_8', test.cpp:7165) to 'lut_div11_chunk' [42]  (4.05 ns)
+	'call' operation ('call_ret4_9', test.cpp:7165) to 'lut_div11_chunk' [46]  (4.05 ns)
+
+ <State 3>: 24.3ns
+The critical path consists of the following:
+	'call' operation ('call_ret4_s', test.cpp:7165) to 'lut_div11_chunk' [50]  (4.05 ns)
+	'call' operation ('call_ret4_10', test.cpp:7165) to 'lut_div11_chunk' [54]  (4.05 ns)
+	'call' operation ('call_ret4_11', test.cpp:7165) to 'lut_div11_chunk' [58]  (4.05 ns)
+	'call' operation ('call_ret4_12', test.cpp:7165) to 'lut_div11_chunk' [62]  (4.05 ns)
+	'call' operation ('call_ret4_13', test.cpp:7165) to 'lut_div11_chunk' [66]  (4.05 ns)
+	'call' operation ('call_ret4_14', test.cpp:7165) to 'lut_div11_chunk' [70]  (4.05 ns)
+
+ <State 4>: 24.3ns
+The critical path consists of the following:
+	'call' operation ('call_ret4_15', test.cpp:7165) to 'lut_div11_chunk' [74]  (4.05 ns)
+	'call' operation ('call_ret4_16', test.cpp:7165) to 'lut_div11_chunk' [78]  (4.05 ns)
+	'call' operation ('call_ret4_17', test.cpp:7165) to 'lut_div11_chunk' [82]  (4.05 ns)
+	'call' operation ('call_ret4_18', test.cpp:7165) to 'lut_div11_chunk' [86]  (4.05 ns)
+	'call' operation ('call_ret4_19', test.cpp:7165) to 'lut_div11_chunk' [90]  (4.05 ns)
+	'call' operation ('call_ret4_20', test.cpp:7165) to 'lut_div11_chunk' [94]  (4.05 ns)
+
+ <State 5>: 24.3ns
+The critical path consists of the following:
+	'call' operation ('call_ret4_21', test.cpp:7165) to 'lut_div11_chunk' [98]  (4.05 ns)
+	'call' operation ('call_ret4_22', test.cpp:7165) to 'lut_div11_chunk' [102]  (4.05 ns)
+	'call' operation ('call_ret4_23', test.cpp:7165) to 'lut_div11_chunk' [106]  (4.05 ns)
+	'call' operation ('call_ret4_24', test.cpp:7165) to 'lut_div11_chunk' [110]  (4.05 ns)
+	'call' operation ('call_ret4_25', test.cpp:7165) to 'lut_div11_chunk' [114]  (4.05 ns)
+	'call' operation ('call_ret4_26', test.cpp:7165) to 'lut_div11_chunk' [118]  (4.05 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

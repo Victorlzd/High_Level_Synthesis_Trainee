@@ -1,0 +1,165 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'operator_long_div10'" level="0">
+<item name = "Date">Fri Aug  3 12:02:01 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">operator_long_div</item>
+<item name = "Solution">div10</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 41.194, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_lut_div5_chunk_fu_116">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_123">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_129">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_135">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_141">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_147">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_153">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_159">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_165">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div5_chunk_fu_171">lut_div5_chunk, 0, 0, 0, 0, none</column>
+<column name="call_ret_19_i_i_lut_div5_chunk_fu_177">lut_div5_chunk, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 0, 18018</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 180</column>
+<column name="Register">-, -, 68, -</column>
+<specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 17</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_lut_div5_chunk_fu_116">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_123">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_129">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_135">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_141">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_147">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_153">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_159">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_165">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div5_chunk_fu_171">lut_div5_chunk, 0, 0, 0, 1638</column>
+<column name="call_ret_19_i_i_lut_div5_chunk_fu_177">lut_div5_chunk, 0, 0, 0, 1638</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">15, 3, 1, 3</column>
+<column name="grp_lut_div5_chunk_fu_116_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_116_r_in_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_123_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_129_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_135_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_141_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_147_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_153_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_159_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_165_d_V">15, 3, 3, 9</column>
+<column name="grp_lut_div5_chunk_fu_171_d_V">15, 3, 3, 9</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="p_Result_13_10_i_i_reg_597">3, 0, 3, 0</column>
+<column name="p_Result_13_11_i_i_reg_602">3, 0, 3, 0</column>
+<column name="p_Result_13_12_i_i_reg_607">3, 0, 3, 0</column>
+<column name="p_Result_13_13_i_i_reg_612">3, 0, 3, 0</column>
+<column name="p_Result_13_14_i_i_reg_617">3, 0, 3, 0</column>
+<column name="p_Result_13_15_i_i_reg_622">3, 0, 3, 0</column>
+<column name="p_Result_13_16_i_i_reg_627">3, 0, 3, 0</column>
+<column name="p_Result_13_17_i_i_reg_632">3, 0, 3, 0</column>
+<column name="p_Result_13_18_i_i_reg_637">3, 0, 3, 0</column>
+<column name="p_Result_13_19_i_i_reg_642">3, 0, 3, 0</column>
+<column name="p_Result_13_i_i_4_reg_592">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_1_i_i_reg_542">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_2_i_i_reg_547">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_3_i_i_reg_552">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_4_i_i_reg_557">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_5_i_i_reg_562">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_6_i_i_reg_567">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_7_i_i_reg_572">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_8_i_i_reg_577">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_9_i_i_reg_582">3, 0, 3, 0</column>
+<column name="q_chunk_V_0_i_i_reg_537">3, 0, 3, 0</column>
+<column name="r_V_ret_9_i_i_reg_587">3, 0, 3, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, operator_long_div10, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, operator_long_div10, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, operator_long_div10, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, operator_long_div10, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, operator_long_div10, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, operator_long_div10, return value</column>
+<column name="ap_return">out, 64, ap_ctrl_hs, operator_long_div10, return value</column>
+<column name="in_r">in, 64, ap_none, in_r, scalar</column>
+</table>
+</item>
+</section>
+</profile>

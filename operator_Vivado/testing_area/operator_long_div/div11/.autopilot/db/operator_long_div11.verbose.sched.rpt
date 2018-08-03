@@ -1,0 +1,123 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_long_div11'
+================================================================
+* Date:           Fri Aug  3 14:13:06 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        operator_long_div
+* Solution:       div11
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+--------+----------+------------+
+    |  Clock | Target | Estimated| Uncertainty|
+    +--------+--------+----------+------------+
+    |ap_clk  |  120.00|   104.175|       15.00|
+    +--------+--------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    2|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 13.7>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%in_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %in_r) nounwind"   --->   Operation 3 'read' 'in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [2/2] (13.7ns)   --->   "%agg_result_V_i = call fastcc i64 @int_64_div11(i64 %in_read) nounwind" [test.cpp:6529->test.cpp:6535]   --->   Operation 4 'call' 'agg_result_V_i' <Predicate = true> <Delay = 13.7> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 101.>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %in_r) nounwind, !map !362"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 0) nounwind, !map !368"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([20 x i8]* @operator_long_div11_s) nounwind"   --->   Operation 7 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [test.cpp:6533]   --->   Operation 8 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [test.cpp:6533]   --->   Operation 9 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (101.ns)   --->   "%agg_result_V_i = call fastcc i64 @int_64_div11(i64 %in_read) nounwind" [test.cpp:6529->test.cpp:6535]   --->   Operation 10 'call' 'agg_result_V_i' <Predicate = true> <Delay = 101.> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "ret i64 %agg_result_V_i" [test.cpp:6535]   --->   Operation 11 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 120ns, clock uncertainty: 15ns.
+
+ <State 1>: 13.7ns
+The critical path consists of the following:
+	wire read on port 'in_r' [5]  (0 ns)
+	'call' operation ('agg_result_V_i', test.cpp:6529->test.cpp:6535) to 'int_64_div11' [8]  (13.7 ns)
+
+ <State 2>: 102ns
+The critical path consists of the following:
+	'call' operation ('agg_result_V_i', test.cpp:6529->test.cpp:6535) to 'int_64_div11' [8]  (102 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

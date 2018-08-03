@@ -80,9 +80,9 @@ public class Div {
 				// float float_div3(float in)
 				proc_symbol = GecosUserCoreFactory.procSymbol(name, type_in_out, param_float_div3);
 				
-				
 				CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
-				GecosUserTypeFactory.setScope(mainblock.getScope()); 
+				CompositeBlock mainblock2 = GecosUserBlockFactory.CompositeBlock();
+				GecosUserTypeFactory.setScope(mainblock2.getScope()); 
 				
 				// Variable definition
 				// ap_uint<1> s
@@ -104,15 +104,15 @@ public class Div {
 				// ap_uint<8> new_exp
 				Symbol div_exp_symbol = GecosUserCoreFactory.symbol("div_exp", GecosUserTypeFactory.ACINT(size_exp, false));
 				
-				mainblock.addSymbol(s_symbol);
-				mainblock.addSymbol(exp_symbol);
-				mainblock.addSymbol(mant_symbol);
-				mainblock.addSymbol(new_exp_symbol);
-				mainblock.addSymbol(new_mant_symbol);
-				mainblock.addSymbol(xf_symbol);
-				mainblock.addSymbol(out_symbol);
-				mainblock.addSymbol(shift_symbol);
-				mainblock.addSymbol(div_exp_symbol);
+				mainblock2.addSymbol(s_symbol);
+				mainblock2.addSymbol(exp_symbol);
+				mainblock2.addSymbol(mant_symbol);
+				mainblock2.addSymbol(new_exp_symbol);
+				mainblock2.addSymbol(new_mant_symbol);
+				mainblock2.addSymbol(xf_symbol);
+				mainblock2.addSymbol(out_symbol);
+				mainblock2.addSymbol(shift_symbol);
+				mainblock2.addSymbol(div_exp_symbol);
 				
 				BasicBlock bb_decompose = GecosUserBlockFactory.BBlock();
 				
@@ -339,13 +339,14 @@ public class Div {
 				Instruction ret_out = GecosUserInstructionFactory.ret(GecosUserInstructionFactory.symbref(out_symbol));
 				bb_rebuild.addInstruction(ret_out);
 				
-	
-				mainblock.addBlock(bb_decompose);
-				mainblock.addBlock(if_mant_lt_div_mant);
-				mainblock.addBlock(if_exp_compute);
-				mainblock.addBlock(if_mant_compute);
-				mainblock.addBlock(bb_rebuild);
+				GecosUserAnnotationFactory.pragma(mainblock2, "HLS latency max=1");
+				mainblock2.addBlock(bb_decompose);
+				mainblock2.addBlock(if_mant_lt_div_mant);
+				mainblock2.addBlock(if_exp_compute);
+				mainblock2.addBlock(if_mant_compute);
+				mainblock2.addBlock(bb_rebuild);
 				
+				mainblock.addBlock(mainblock2);
 	
 				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
 				File_builder.add_operator(proc_symbol);	
@@ -413,6 +414,7 @@ public class Div {
 				Instruction ret = GecosUserInstructionFactory.ret(operator_call);
 				BasicBlock ret_bb = GecosUserBlockFactory.BBlock(ret);
 				
+				GecosUserAnnotationFactory.pragma(ret_bb, "HLS latency max=1");
 				mainblock.addBlock(ret_bb);
 				
 				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug  3 12:03:59 2018
+# Process ID: 29916
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div10/impl/vhdl/project.runs/impl_1
+# Command line: vivado -log operator_long_div10.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source operator_long_div10.tcl -notrace
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div10/impl/vhdl/project.runs/impl_1/operator_long_div10.vdi
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div10/impl/vhdl/project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source operator_long_div10.tcl -notrace
