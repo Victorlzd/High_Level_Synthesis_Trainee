@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 set TopModule "div2"
+=======
+set TopModule "test"
+>>>>>>> origin/master
 set ClockPeriod "1.000000"
 set ClockList {ap_clk}
 set multiClockList {}

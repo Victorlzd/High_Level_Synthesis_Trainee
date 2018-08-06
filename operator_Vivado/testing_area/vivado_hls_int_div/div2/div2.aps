@@ -19,7 +19,15 @@
         <clock name="default" period="1" default="false"/>
     </clockList>
     <config>
+<<<<<<< HEAD
         <schedule model="div2"/>
     </config>
+=======
+        <schedule model="test"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
+    </ExportDesign>
+>>>>>>> origin/master
 </AutoPilot:solution>
 

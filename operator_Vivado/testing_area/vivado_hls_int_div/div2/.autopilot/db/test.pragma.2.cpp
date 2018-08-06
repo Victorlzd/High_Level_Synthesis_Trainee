@@ -292,6 +292,7 @@ extern "C" {
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "test.cpp" 2
+<<<<<<< HEAD
 long div2(long a)
 {
 _ssdm_op_SpecLatency(0, 1, "");
@@ -344,4 +345,10 @@ long div11(long a)
 {
 _ssdm_op_SpecLatency(0, 1, "");
  return a/11;
+=======
+int test(int a)
+{
+_ssdm_op_SpecLatency(0, 1, "");
+ return a/2;
+>>>>>>> origin/master
 }

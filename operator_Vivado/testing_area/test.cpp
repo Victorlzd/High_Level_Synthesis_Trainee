@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 float div2(float a)
 {
 	#pragma HLS LATENCY max=1
@@ -50,4 +51,10 @@ float div11(float a)
 {
 	#pragma HLS LATENCY max=1
 	return a/11;
+=======
+int test(int a)
+{
+	#pragma HLS LATENCY max=1
+	return a/2;
+>>>>>>> origin/master
 }

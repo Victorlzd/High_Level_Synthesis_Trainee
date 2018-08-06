@@ -145,6 +145,7 @@ extern "C" {
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "test.cpp" 2
+<<<<<<< HEAD
 long div2(long a)
 {
 #pragma HLS LATENCY max=1
@@ -197,4 +198,10 @@ long div11(long a)
 {
 #pragma HLS LATENCY max=1
  return a/11;
+=======
+int test(int a)
+{
+#pragma HLS LATENCY max=1
+ return a/2;
+>>>>>>> origin/master
 }

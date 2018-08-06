@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 div2_sub_63ns_63nbkb
 div2
+=======
+test_sub_32ns_32nbkb
+test
+>>>>>>> origin/master

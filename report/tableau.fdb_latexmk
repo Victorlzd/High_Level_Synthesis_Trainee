@@ -1,7 +1,13 @@
 # Fdb version 3
+<<<<<<< HEAD
 ["pdflatex"] 1533305452 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" "tableau.pdf" "tableau" 1533305452
   "/etc/texmf/web2c/texmf.cnf" 1533117798 1101 af7716885e081ab43982cab7b4672c1a ""
   "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" 1533305452 3401 2f34c7fb155a6c31259c346084b6e10c ""
+=======
+["pdflatex"] 1533301803 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" "tableau.pdf" "tableau" 1533301804
+  "/etc/texmf/web2c/texmf.cnf" 1533117798 1101 af7716885e081ab43982cab7b4672c1a ""
+  "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" 1533301803 3458 d190de7347e24824a3c87468aac6ed85 ""
+>>>>>>> origin/master
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -27,9 +33,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1533117805 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1533117818 3854477 da835413660e20785a48af6255b7b3ae ""
+<<<<<<< HEAD
   "tableau.aux" 1533305452 386 ea512b178b60357249ceadba468397e2 ""
   "tableau.tex" 1533305452 3401 2f34c7fb155a6c31259c346084b6e10c ""
+=======
+  "tableau.aux" 1533301804 386 ea512b178b60357249ceadba468397e2 ""
+  "tableau.tex" 1533301803 3458 d190de7347e24824a3c87468aac6ed85 ""
+>>>>>>> origin/master
   (generated)
-  "tableau.log"
   "tableau.pdf"
+  "tableau.log"
   "tableau.aux"

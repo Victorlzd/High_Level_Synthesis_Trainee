@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="vivado_hls_int_div" top="div11">
+=======
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="vivado_hls_int_div" top="test">
+>>>>>>> origin/master
     <includePaths/>
     <libraryFlag/>
     <files>
@@ -6,7 +10,11 @@
         <file name="test.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions>
+<<<<<<< HEAD
         <solution name="div11" status=""/>
+=======
+        <solution name="div2" status=""/>
+>>>>>>> origin/master
     </solutions>
 </AutoPilot:project>
 

@@ -4,19 +4,29 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 
+<<<<<<< HEAD
 open_project -reset vivado_hls_float_div
 set_top div2
+=======
+open_project -reset vivado_hls_int_div
+set_top test
+>>>>>>> origin/master
 add_files test.cpp
 add_files -tb test_bench.cpp
 open_solution -reset 	"div2"
 #set_directive_latency -max=1 operator_long_div11
 set_part {xc7k160tfbg484-1} -tool vivado
+<<<<<<< HEAD
 create_clock -period 12 -name default
+=======
+create_clock -period 1 -name default
+>>>>>>> origin/master
 #source "./fir_prj/solution1/directives.tcl"
 #csim_design -clean -compiler gcc
 csynth_design
 #cosim_design -O -compiler gcc -rtl vhdl
 export_design -flow impl -rtl vhdl -format ip_catalog
+<<<<<<< HEAD
 
 open_project -reset vivado_hls_float_div
 set_top div3
@@ -129,4 +139,6 @@ create_clock -period 60 -name default
 csynth_design
 #cosim_design -O -compiler gcc -rtl vhdl
 export_design -flow impl -rtl vhdl -format ip_catalog
+=======
+>>>>>>> origin/master
 exit
