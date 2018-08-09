@@ -339,7 +339,7 @@ public class Div {
 				Instruction ret_out = GecosUserInstructionFactory.ret(GecosUserInstructionFactory.symbref(out_symbol));
 				bb_rebuild.addInstruction(ret_out);
 				
-				GecosUserAnnotationFactory.pragma(mainblock2, "HLS latency max=1");
+				//GecosUserAnnotationFactory.pragma(mainblock2, "HLS latency max=1");
 				mainblock2.addBlock(bb_decompose);
 				mainblock2.addBlock(if_mant_lt_div_mant);
 				mainblock2.addBlock(if_exp_compute);
@@ -414,7 +414,7 @@ public class Div {
 				Instruction ret = GecosUserInstructionFactory.ret(operator_call);
 				BasicBlock ret_bb = GecosUserBlockFactory.BBlock(ret);
 				
-				GecosUserAnnotationFactory.pragma(ret_bb, "HLS latency max=1");
+				//GecosUserAnnotationFactory.pragma(ret_bb, "HLS latency max=1");
 				mainblock.addBlock(ret_bb);
 				
 				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);

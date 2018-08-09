@@ -1,0 +1,116 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Aug  7 14:06:23 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/kernel_jacobi_1d_imper_timing_synth.rpt
+| Design       : kernel_jacobi_1d_imper
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+--------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             4.032ns  (required time - arrival time)
+  Source:                 reg_148_reg[57]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            grp_operator_double_div3_fu_133/p_Result_i_i_reg_573_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.961ns  (logic 1.998ns (33.518%)  route 3.963ns (66.482%))
+  Logic Levels:           21  (CARRY4=13 LUT2=1 LUT5=4 LUT6=3)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.672ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1011, unset)         0.672     0.672    ap_clk
+                         FDRE                                         r  reg_148_reg[57]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.281     0.953 f  reg_148_reg[57]/Q
+                         net (fo=13, unplaced)        0.708     1.661    grp_operator_double_div3_fu_133/Q[57]
+                         LUT6 (Prop_lut6_I0_O)        0.153     1.814 r  grp_operator_double_div3_fu_133/tmp_9_reg_638[0]_i_41/O
+                         net (fo=4, unplaced)         0.364     2.178    grp_operator_double_div3_fu_133/tmp_9_reg_638[0]_i_41_n_2
+                         LUT5 (Prop_lut5_I2_O)        0.053     2.231 f  grp_operator_double_div3_fu_133/tmp_9_reg_638[0]_i_39/O
+                         net (fo=1, unplaced)         0.664     2.895    grp_operator_double_div3_fu_133/tmp_9_reg_638[0]_i_39_n_2
+                         LUT5 (Prop_lut5_I0_O)        0.053     2.948 f  grp_operator_double_div3_fu_133/tmp_9_reg_638[0]_i_16/O
+                         net (fo=2, unplaced)         0.532     3.480    grp_operator_double_div3_fu_133/COUNT[10]
+                         LUT5 (Prop_lut5_I2_O)        0.053     3.533 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__6_i_20/O
+                         net (fo=61, unplaced)        0.427     3.960    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__6_i_20_n_2
+                         LUT6 (Prop_lut6_I4_O)        0.053     4.013 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry_i_28/O
+                         net (fo=6, unplaced)         0.553     4.566    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry_i_28_n_2
+                         LUT5 (Prop_lut5_I0_O)        0.053     4.619 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__0_i_20/O
+                         net (fo=4, unplaced)         0.364     4.983    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__0_i_20_n_2
+                         LUT2 (Prop_lut2_I0_O)        0.056     5.039 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__0_i_10/O
+                         net (fo=2, unplaced)         0.351     5.390    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__0_i_10_n_2
+                         LUT6 (Prop_lut6_I3_O)        0.053     5.443 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__0_i_3/O
+                         net (fo=1, unplaced)         0.000     5.443    grp_operator_double_div3_fu_133/xf_V_3_fu_370_p3[6]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.310     5.753 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.753    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__0_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     5.813 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.813    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__1_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     5.873 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     5.873    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__2_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     5.933 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     5.933    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__3_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     5.993 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     5.993    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__4_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     6.053 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.053    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__5_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     6.113 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.113    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__6_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     6.173 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__7/CO[3]
+                         net (fo=1, unplaced)         0.000     6.173    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__7_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     6.233 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.233    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__8_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     6.293 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__9/CO[3]
+                         net (fo=1, unplaced)         0.000     6.293    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__9_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     6.353 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__10/CO[3]
+                         net (fo=1, unplaced)         0.000     6.353    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__10_n_2
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     6.413 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__11/CO[3]
+                         net (fo=1, unplaced)         0.000     6.413    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__11_n_2
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     6.633 r  grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__12/O[1]
+                         net (fo=1, unplaced)         0.000     6.633    grp_operator_double_div3_fu_133/xf_V_fu_378_p2_carry__12_n_8
+                         FDRE                                         r  grp_operator_double_div3_fu_133/p_Result_i_i_reg_573_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1011, unset)         0.638    10.638    grp_operator_double_div3_fu_133/ap_clk
+                         FDRE                                         r  grp_operator_double_div3_fu_133/p_Result_i_i_reg_573_reg[2]/C
+                         clock pessimism              0.000    10.638    
+                         clock uncertainty           -0.035    10.603    
+                         FDRE (Setup_fdre_C_D)        0.062    10.665    grp_operator_double_div3_fu_133/p_Result_i_i_reg_573_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.665    
+                         arrival time                          -6.633    
+  -------------------------------------------------------------------
+                         slack                                  4.032    
+
+
+
+

@@ -1,0 +1,82 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Aug  7 14:13:34 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file kernel_jacobi_1d_imper_control_sets_placed.rpt
+| Design       : kernel_jacobi_1d_imper
+| Device       : xc7k160t
+---------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    36 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|     14 |            2 |
+|    16+ |           13 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            3032 |          433 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             200 |           31 |
+| Yes          | No                    | No                     |             638 |          114 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              70 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |   Enable Signal   |                                                                       Set/Reset Signal                                                                       | Slice Load Count | Bel Load Count |
++--------------+-------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      |                   | kernel_jacobi_1d_cud_U2/kernel_jacobi_1d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DELAY/i_pipe/first_q[0]                             |                1 |              2 |
+|  ap_clk      | ap_CS_fsm_state2  |                                                                                                                                                              |                1 |             14 |
+|  ap_clk      | ap_NS_fsm1        | t_reg_99                                                                                                                                                     |                3 |             14 |
+|  ap_clk      |                   | kernel_jacobi_1d_cud_U2/kernel_jacobi_1d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/p_1_in12_out                        |                2 |             18 |
+|  ap_clk      | A_we1             | ap_NS_fsm10_out                                                                                                                                              |                4 |             28 |
+|  ap_clk      | B_we0             | i_reg_1100                                                                                                                                                   |                4 |             28 |
+|  ap_clk      | ap_CS_fsm_state8  |                                                                                                                                                              |                5 |             28 |
+|  ap_clk      | tmp_2_reg_2321    |                                                                                                                                                              |                6 |             28 |
+|  ap_clk      | ap_NS_fsm[38]     |                                                                                                                                                              |               13 |             56 |
+|  ap_clk      |                   | ap_rst                                                                                                                                                       |               14 |             78 |
+|  ap_clk      |                   | kernel_jacobi_1d_cud_U2/kernel_jacobi_1d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op_reg[50]_0 |               14 |            102 |
+|  ap_clk      | ap_CS_fsm_state36 |                                                                                                                                                              |               20 |            128 |
+|  ap_clk      | ap_CS_fsm_state4  |                                                                                                                                                              |               26 |            128 |
+|  ap_clk      | reg_1420          |                                                                                                                                                              |               29 |            128 |
+|  ap_clk      | reg_1480          |                                                                                                                                                              |               14 |            128 |
+|  ap_clk      |                   |                                                                                                                                                              |              455 |           3162 |
++--------------+-------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

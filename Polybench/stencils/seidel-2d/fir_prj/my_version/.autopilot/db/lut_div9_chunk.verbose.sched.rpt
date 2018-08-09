@@ -1,0 +1,119 @@
+
+
+================================================================
+== Vivado HLS Report for 'lut_div9_chunk'
+================================================================
+* Date:           Wed Aug  8 16:47:33 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       my_version
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.958|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.95>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%r_in_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %r_in_V)"   --->   Operation 2 'read' 'r_in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%d_V_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %d_V)"   --->   Operation 3 'read' 'd_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_Result_8 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %r_in_V_read, i2 %d_V_read)" [seidel-2d.cpp:64->seidel-2d.cpp:1273]   --->   Operation 4 'bitconcatenate' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.95ns)   --->   "%agg_result_V_i = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i6 %p_Result_8)" [seidel-2d.cpp:64->seidel-2d.cpp:1273]   --->   Operation 5 'mux' 'agg_result_V_i' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (1.95ns)   --->   "%agg_result_V_i2 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i6 %p_Result_8)" [seidel-2d.cpp:64->seidel-2d.cpp:1273]   --->   Operation 6 'mux' 'agg_result_V_i2' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (1.95ns)   --->   "%agg_result_V_i4 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i6 %p_Result_8)" [seidel-2d.cpp:64->seidel-2d.cpp:1273]   --->   Operation 7 'mux' 'agg_result_V_i4' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (1.95ns)   --->   "%agg_result_V_i6 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 false, i6 %p_Result_8)" [seidel-2d.cpp:64->seidel-2d.cpp:1273]   --->   Operation 8 'mux' 'agg_result_V_i6' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_Result_s = call i4 @_ssdm_op_BitConcatenate.i4.i1.i1.i1.i1(i1 %agg_result_V_i6, i1 %agg_result_V_i4, i1 %agg_result_V_i2, i1 %agg_result_V_i)" [seidel-2d.cpp:1276]   --->   Operation 9 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.95ns)   --->   "%agg_result_V_i8 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i6 %p_Result_8)" [seidel-2d.cpp:64->seidel-2d.cpp:1273]   --->   Operation 10 'mux' 'agg_result_V_i8' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (1.95ns)   --->   "%agg_result_V_i1 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i6 %p_Result_8)" [seidel-2d.cpp:64->seidel-2d.cpp:1273]   --->   Operation 11 'mux' 'agg_result_V_i1' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_Result_1 = call i2 @_ssdm_op_BitConcatenate.i2.i1.i1(i1 %agg_result_V_i1, i1 %agg_result_V_i8)" [seidel-2d.cpp:1278]   --->   Operation 12 'bitconcatenate' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i2, i4 } undef, i2 %p_Result_1, 0" [seidel-2d.cpp:1279]   --->   Operation 13 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i2, i4 } %mrv, i4 %p_Result_s, 1" [seidel-2d.cpp:1279]   --->   Operation 14 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "ret { i2, i4 } %mrv_1" [seidel-2d.cpp:1279]   --->   Operation 15 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.96ns
+The critical path consists of the following:
+	wire read on port 'r_in_V' [3]  (0 ns)
+	'mux' operation ('agg_result_V_i2', seidel-2d.cpp:64->seidel-2d.cpp:1273) [7]  (1.96 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

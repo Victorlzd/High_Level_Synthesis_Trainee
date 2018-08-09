@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kernel_jacobi_2d_imper'" level="0">
+<item name = "Date">Tue Aug  7 14:18:49 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">fir_prj</item>
+<item name = "Solution">my_version</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 41.410, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">677362621, 677362621, 677362621, 677362621, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_operator_double_div5_fu_173">operator_double_div5, 1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">677362620, 677362620, 33868131, -, -, 20, no</column>
+<column name=" + Loop 1.1">28886112, 28886112, 28944, -, -, 998, no</column>
+<column name="  ++ Loop 1.1.1">28942, 28942, 29, -, -, 998, no</column>
+<column name=" + Loop 1.2">4982016, 4982016, 4992, -, -, 998, no</column>
+<column name="  ++ Loop 1.2.1">4990, 4990, 5, -, -, 998, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

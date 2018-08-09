@@ -1,0 +1,97 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Wed Aug  8 16:51:25 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file kernel_seidel_2d_my_version_control_sets_placed.rpt
+| Design       : kernel_seidel_2d_my_version
+| Device       : xc7k160t
+--------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    31 |
+| Unused register locations in slices containing registers |    42 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |           13 |
+|     10 |            2 |
+|    16+ |           16 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             788 |          118 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             134 |           16 |
+| Yes          | No                    | No                     |            1244 |          203 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              72 |            7 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------------------------+-------------------------------+------------------+----------------+
+| Clock Signal |               Enable Signal              |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------+-------------------------------+------------------+----------------+
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state9  |                               |                1 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state11 |                               |                1 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state5  |                               |                1 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state14 |                               |                1 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state12 |                               |                1 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state10 |                               |                3 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state3  |                               |                2 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/reg_1600          |                               |                3 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state7  |                               |                1 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state6  |                               |                2 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state13 |                               |                2 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state8  |                               |                1 |              8 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_CS_fsm_state4  |                               |                2 |              8 |
+|  ap_clk      | ap_CS_fsm_state2                         |                               |                1 |             10 |
+|  ap_clk      | ap_NS_fsm13_out                          | t_reg_159                     |                1 |             10 |
+|  ap_clk      | ap_CS_fsm_state51                        | j_reg_1810                    |                2 |             20 |
+|  ap_clk      | ap_NS_fsm12_out                          | i_reg_1700                    |                2 |             20 |
+|  ap_clk      | ap_CS_fsm_state9                         |                               |                4 |             20 |
+|  ap_clk      | j_reg_1810                               |                               |                3 |             20 |
+|  ap_clk      | ap_CS_fsm_state48                        | p_Repl2_1_reg_816[10]_i_1_n_2 |                2 |             22 |
+|  ap_clk      | tmp_7_cast_reg_6861                      |                               |                7 |             40 |
+|  ap_clk      | grp_int_57_div9_fu_202/E[0]              |                               |               14 |            104 |
+|  ap_clk      | ap_start0                                |                               |               15 |            114 |
+|  ap_clk      | grp_int_57_div9_fu_202/ap_NS_fsm1        |                               |               16 |            120 |
+|  ap_clk      | ap_CS_fsm_state7                         |                               |               23 |            128 |
+|  ap_clk      | ap_CS_fsm_state47                        |                               |               28 |            128 |
+|  ap_clk      | reg_211[63]_i_1_n_2                      |                               |               26 |            128 |
+|  ap_clk      | reg_2180                                 |                               |               20 |            128 |
+|  ap_clk      |                                          | ap_rst                        |               16 |            134 |
+|  ap_clk      | ap_CS_fsm_state19                        |                               |               25 |            200 |
+|  ap_clk      |                                          |                               |              118 |            788 |
++--------------+------------------------------------------+-------------------------------+------------------+----------------+
+
+

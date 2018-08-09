@@ -1,0 +1,4 @@
+kernel_seidel_2d_bkb
+kernel_seidel_2d_cud
+kernel_seidel_2d_dEe
+kernel_seidel_2d

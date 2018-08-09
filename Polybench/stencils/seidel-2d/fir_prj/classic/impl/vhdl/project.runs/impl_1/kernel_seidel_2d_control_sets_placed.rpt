@@ -1,0 +1,83 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Wed Aug  8 16:39:48 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file kernel_seidel_2d_control_sets_placed.rpt
+| Design       : kernel_seidel_2d
+| Device       : xc7k160t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    44 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|     10 |            2 |
+|    16+ |           14 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            3032 |          442 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             264 |           38 |
+| Yes          | No                    | No                     |             802 |          132 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              50 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |    Enable Signal    |                                                                    Set/Reset Signal                                                                    | Slice Load Count | Bel Load Count |
++--------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      |                     | kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DELAY/i_pipe/first_q[0]                             |                1 |              2 |
+|  ap_clk      | ap_NS_fsm10_out     | t_reg_117                                                                                                                                              |                1 |             10 |
+|  ap_clk      | ap_CS_fsm_state2    |                                                                                                                                                        |                2 |             10 |
+|  ap_clk      |                     | kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/p_1_in12_out                        |                2 |             18 |
+|  ap_clk      | j_reg_1390          |                                                                                                                                                        |                5 |             20 |
+|  ap_clk      | ap_NS_fsm1          | i_reg_1280                                                                                                                                             |                4 |             20 |
+|  ap_clk      | ap_CS_fsm_state9    |                                                                                                                                                        |                6 |             20 |
+|  ap_clk      | ap_CS_fsm_state71   | j_reg_1390                                                                                                                                             |                3 |             20 |
+|  ap_clk      | tmp_6_cast_reg_3831 |                                                                                                                                                        |                8 |             40 |
+|  ap_clk      |                     | kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op_reg[50]_0 |               14 |            102 |
+|  ap_clk      | ap_CS_fsm_state7    |                                                                                                                                                        |               27 |            128 |
+|  ap_clk      | ap_CS_fsm_state69   |                                                                                                                                                        |               17 |            128 |
+|  ap_clk      | reg_160[63]_i_1_n_2 |                                                                                                                                                        |               28 |            128 |
+|  ap_clk      | reg_1670            |                                                                                                                                                        |               14 |            128 |
+|  ap_clk      |                     | ap_rst                                                                                                                                                 |               21 |            142 |
+|  ap_clk      | ap_CS_fsm_state19   |                                                                                                                                                        |               25 |            200 |
+|  ap_clk      |                     |                                                                                                                                                        |              464 |           3162 |
++--------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

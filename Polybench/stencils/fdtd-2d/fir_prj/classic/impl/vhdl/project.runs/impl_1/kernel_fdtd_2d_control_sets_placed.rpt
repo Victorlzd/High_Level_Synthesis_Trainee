@@ -1,0 +1,95 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Aug  7 15:10:51 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file kernel_fdtd_2d_control_sets_placed.rpt
+| Design       : kernel_fdtd_2d
+| Device       : xc7k160t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    30 |
+| Unused register locations in slices containing registers |    82 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|     12 |            3 |
+|    16+ |           27 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1036 |          170 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             282 |           43 |
+| Yes          | No                    | No                     |            1320 |          209 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             232 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |    Enable Signal   |                                                              Set/Reset Signal                                                             | Slice Load Count | Bel Load Count |
++--------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | j_reg_1940         |                                                                                                                                           |                2 |             12 |
+|  ap_clk      | ap_CS_fsm_state2   |                                                                                                                                           |                2 |             12 |
+|  ap_clk      | ap_NS_fsm10_out    | t_reg_183                                                                                                                                 |                1 |             12 |
+|  ap_clk      |                    | kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/EXP/STATE_DELAY/i_pipe/p_1_in12_out                      |                4 |             18 |
+|  ap_clk      | p_fict_s_ce0       |                                                                                                                                           |                3 |             20 |
+|  ap_clk      | ap_NS_fsm13_out    | ap_NS_fsm15_out                                                                                                                           |                4 |             20 |
+|  ap_clk      | ap_CS_fsm_state81  | j_3_reg_2860                                                                                                                              |                4 |             20 |
+|  ap_clk      | ap_CS_fsm_state7   |                                                                                                                                           |                2 |             20 |
+|  ap_clk      | ap_CS_fsm_state51  |                                                                                                                                           |                5 |             20 |
+|  ap_clk      | ap_CS_fsm_state5   | j_reg_1940                                                                                                                                |                2 |             20 |
+|  ap_clk      | ap_CS_fsm_state49  | j_2_reg_2520                                                                                                                              |                2 |             20 |
+|  ap_clk      | ap_CS_fsm_state27  | j_1_reg_2180                                                                                                                              |                4 |             20 |
+|  ap_clk      | ey_addr_1_reg_6490 |                                                                                                                                           |                5 |             40 |
+|  ap_clk      | ap_CS_fsm_state61  |                                                                                                                                           |                8 |             40 |
+|  ap_clk      | ap_CS_fsm_state50  |                                                                                                                                           |                8 |             60 |
+|  ap_clk      | ap_CS_fsm_state28  |                                                                                                                                           |                8 |             60 |
+|  ap_clk      | ap_NS_fsm1         | ap_NS_fsm12_out                                                                                                                           |                8 |             60 |
+|  ap_clk      | ap_NS_fsm11_out    | ap_NS_fsm14_out                                                                                                                           |                6 |             60 |
+|  ap_clk      | ex_addr_reg_6850   |                                                                                                                                           |                9 |             60 |
+|  ap_clk      | tmp_17_reg_7420    |                                                                                                                                           |               10 |             80 |
+|  ap_clk      |                    | kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op_reg[50] |               13 |            102 |
+|  ap_clk      | ap_CS_fsm_state54  |                                                                                                                                           |               24 |            128 |
+|  ap_clk      | reg_3070           |                                                                                                                                           |               19 |            128 |
+|  ap_clk      | reg_3120           |                                                                                                                                           |               24 |            128 |
+|  ap_clk      | reg_3170           |                                                                                                                                           |               18 |            128 |
+|  ap_clk      | reg_3260           |                                                                                                                                           |               24 |            128 |
+|  ap_clk      | reg_3320           |                                                                                                                                           |               17 |            128 |
+|  ap_clk      | reg_3370           |                                                                                                                                           |               21 |            128 |
+|  ap_clk      |                    | ap_rst                                                                                                                                    |               26 |            162 |
+|  ap_clk      |                    |                                                                                                                                           |              170 |           1036 |
++--------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
