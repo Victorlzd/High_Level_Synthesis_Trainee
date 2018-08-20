@@ -1414,7 +1414,7 @@ void kernel_seidel_2d(int tsteps,
 
 /* Main computational kernel. The whole function will be timed,
    including the call and return. */
-void kernel_seidel_2d_my_version(int tsteps,
+void kernel_seidel_2d_optimized(int tsteps,
 		      int n,
 		      DATA_TYPE POLYBENCH_2D(A,N,N,n,n))
 {
