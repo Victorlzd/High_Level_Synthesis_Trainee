@@ -15,147 +15,190 @@
 \title{}
 \begin{document}
 
-\section{My results}
-\begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+\section{Benchmarks}
+\subsection{Stencils}
+
+\subsubsection{Jacobi-1d-imper}
+
+\begin{tabular}{c|c|c|c}
+     & classic & my\_version & diff \\
     \hline
-     & \multicolumn{4}{|c}{INT} & \multicolumn{4}{|c||}{LONG}\\
-    const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+    LUT & 3875 & 1378 & $-67\%$ \\
     \hline
-    2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    FF & 1970 & 1005 & $-49\%$ \\
     \hline
-    3 & 0 & 43 & 35 & 1.971 & 0 & 68 & 68 & 5.750 \\
+    DSP & 3 & 3 & $0\%$ \\
     \hline
-    4 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    BRAM & 0 & 0 & $0\%$ \\
     \hline
-    5 & 0 & 45 & 37 & 5.657 & 0 & 87 & 69 & 7.570 \\
+    SRL & 64 & 0 & $-100\%$ \\
     \hline
-    6 & 0 & 42 & 34 & 1.736 & 0 & 68 & 67 & 6.080 \\
+    Cycles & $37 \times 10^6$ & $24 \times 10^6$ & $-35\%$ \\
     \hline
-    7 & 0 & 45 & 37 & 5.657 & 0 & 87 & 69 & 7.570 \\
-    \hline
-    9 & 0 & 62 & 38 & 6.589 & 0 & ?? & ?? & ?? \\
-    \hline
-    10 & 0 & 45 & 36 & 4.374 & 0 & 83 & 68 & 7.393 \\
-    \hline
-    11 & 0 & 61 & 38 & 6.387 & 0 & ?? & ?? & ?? \\
-    \hline
+    Frequency & 114MHz & 134MHz &  $+18\%$\\
 \end{tabular}
 
-\begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+\subsubsection{Seidel-2d}
+
+\begin{tabular}{c|c|c|c}
+     & classic & my\_version & diff \\
     \hline
-     & \multicolumn{4}{|c|}{FLOAT} &  \multicolumn{4}{|c|}{DOUBLE}\\
-    const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+    LUT & 4075 & 1586 & $-61\%$ \\
     \hline
-    2 & 0 & 63 & 37 & 1.589 & 0 & 76 & 69 & 1.530 \\
+    FF & 2074 & 1119 & $-46\%$ \\
     \hline
-    3 & 0 & 110 & 63 & 4.035 & 0 & 601 & 121 & 4.601 \\
+    DSP & 7 & 7 & $0\%$ \\
     \hline
-    4 & 0 & 87 & 39 & 1.768 & 0 & 182 & 71 & 1.994 \\
+    BRAM & 0 & 0 & $0\%$ \\
     \hline
-    5 & 0 & 127 & 65 & 5.431 & 0 & 619 & 127 & 7.017 \\
+    SRL & 65 & 0 & $-100\%$ \\
     \hline
-    6 & 0 & 132 & 63 & 3.868 & 0 & 606 & 121 & 4.765 \\
+    Cycles & $1.35 \times 10^9$ & $1.24 \times 10^9$ & $-8\%$ \\
     \hline
-    7 & 0 & 142 & 65 & 6.226 & 0 & 619 & 132 & 6.773 \\
-    \hline
-    9 & 0 & 229 & 62 & 8.795 & 0 &  ?? & ?? & ? \\
-    \hline
-    10 & 0 & 215 & 61 & 6.650 & 0 & 623 & 126 & 7.001 \\
-    \hline
-    11 & 0 & 61 & 38 & 9.695 & 0 & ?? & ?? & ? \\
-    \hline
+    Frequency & 119MHz & 146MHz &  $+23\%$\\
 \end{tabular}
 
-\section{Vivado HLS}
-\begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+\subsubsection{Fdtd-2d}
+
+\begin{tabular}{c|c|c|c}
+     & classic & my\_version & diff \\
     \hline
-     & \multicolumn{4}{|c}{INT} & \multicolumn{4}{|c||}{LONG}\\
-    const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+    LUT & 1398 & 1477 & $+6\%$ \\
     \hline
-<<<<<<< HEAD
-    2 & 0 & 82 & 65 & 1.098 & 0 & 161 & 128 & 1.205 \\
+    FF & 1435 & 1556 & $+8\%$ \\
     \hline
-    3 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+    DSP & 17 & 17 & $0\%$ \\
     \hline
-    4 & 0 & 81 & 63 & 1.096 & 0 & 161 & 128 & 1.205 \\
+    BRAM & 0 & 0 & $0\%$ \\
     \hline
-    5 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+    SRL & 0 & 0 & $0\%$ \\
     \hline
-    6 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+    Cycles & $3.65 \times 10^9$ & $3.25 \times 10^9$ & $-11\%$ \\
     \hline
-    7 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
-    \hline
-    9 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
-    \hline
-    10 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
-    \hline
-    11 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825\\
-=======
-    2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-    \hline
-    3 & 0 & 43 & 35 & 1.971 & 0 & 68 & 68 & 5.750 \\
-    \hline
-    4 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-    \hline
-    5 & 0 & 45 & 37 & 5.657 & 0 & 87 & 69 & 7.570 \\
-    \hline
-    6 & 0 & 42 & 34 & 1.736 & 0 & 68 & 67 & 6.080 \\
-    \hline
-    7 & 0 & 45 & 37 & 5.657 & 0 & 87 & 69 & 7.570 \\
-    \hline
-    9 & 0 & 62 & 38 & 6.589 & 0 & ?? & ?? & ?? \\
-    \hline
-    10 & 0 & 45 & 36 & 4.374 & 0 & 83 & 68 & 7.393 \\
-    \hline
-    11 & 0 & 61 & 38 & 6.387 & 0 & ?? & ?? & ?? \\
->>>>>>> origin/master
-    \hline
+    Frequency & 116MHz & 117MHz & $+1\%$ \\
 \end{tabular}
 
-\begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+\subsubsection{Jacobi-2d-imper}
+
+\begin{tabular}{c|c|c|c}
+     & classic & my\_version & diff \\
     \hline
-     & \multicolumn{4}{|c|}{FLOAT} &  \multicolumn{4}{|c|}{DOUBLE}\\
-    const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+    LUT & 1118 & 1743 & $+55\%$ \\
     \hline
-<<<<<<< HEAD
-    2 & ? & ? & ? & ? & ? & ? & ? & ? \\
+    FF & 1052 & 1072 & $+2\%$ \\
     \hline
-    3 & ? & ? & ? & ? & ? & ? & ? & ? \\
+    DSP & 18 & 7 & $-61\%$ \\
     \hline
-    4 & ? & ? & ? & ? & ? & ? & ? & ? \\
+    BRAM & 0 & 0 & $0\%$ \\
     \hline
-    5 & ? & ? & ? & ? & ? & ? & ? & ? \\
+    SRL & 0 & 0 & $0\%$ \\
     \hline
-    6 & ? & ? & ? & ? & ? & ? & ? & ? \\
+    Cycles & $717 \times 10^6$ & $677 \times 10^6$ & $-6\%$ \\
     \hline
-    7 & ? & ? & ? & ? & ? & ? & ? & ? \\
-    \hline
-    9 & ? & ? & ? & ? & ? & ? & ? & ? \\
-    \hline
-    10 & ? & ? & ? & ? & ? & ? & ? & ? \\
-    \hline
-    11 & ? & ? & ? & ? & ? & ? & ? & ? \\
-=======
-    2 & 0 & 63 & 37 & 1.589 & 0 & 76 & 69 & 1.530 \\
-    \hline
-    3 & 0 & 110 & 63 & 4.035 & 0 & 601 & 121 & 4.601 \\
-    \hline
-    4 & 0 & 87 & 39 & 1.768 & 0 & 182 & 71 & 1.994 \\
-    \hline
-    5 & 0 & 127 & 65 & 5.431 & 0 & 619 & 127 & 7.017 \\
-    \hline
-    6 & 0 & 132 & 63 & 3.868 & 0 & 606 & 121 & 4.765 \\
-    \hline
-    7 & 0 & 142 & 65 & 6.226 & 0 & 619 & 132 & 6.773 \\
-    \hline
-    9 & 0 & 229 & 62 & 8.795 & 0 &  ?? & ?? & ? \\
-    \hline
-    10 & 0 & 215 & 61 & 6.650 & 0 & 623 & 126 & 7.001 \\
-    \hline
-    11 & 0 & 61 & 38 & 9.695 & 0 & ?? & ?? & ? \\
->>>>>>> origin/master
-    \hline
+    Frequency & 111MHz & 79MHz &  $-29\%$\\
 \end{tabular}
+
+% \section{My results}
+% \begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+%     \hline
+%      & \multicolumn{4}{|c}{INT} & \multicolumn{4}{|c||}{LONG}\\
+%     const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+%     \hline
+%     2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+%     \hline
+%     3 & 0 & 43 & 35 & 1.971 & 0 & 68 & 68 & 5.750 \\
+%     \hline
+%     4 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+%     \hline
+%     5 & 0 & 45 & 37 & 5.657 & 0 & 87 & 69 & 7.570 \\
+%     \hline
+%     6 & 0 & 42 & 34 & 1.736 & 0 & 68 & 67 & 6.080 \\
+%     \hline
+%     7 & 0 & 45 & 37 & 5.657 & 0 & 87 & 69 & 7.570 \\
+%     \hline
+%     9 & 0 & 62 & 38 & 6.589 & 0 & ?? & ?? & ?? \\
+%     \hline
+%     10 & 0 & 45 & 36 & 4.374 & 0 & 83 & 68 & 7.393 \\
+%     \hline
+%     11 & 0 & 61 & 38 & 6.387 & 0 & ?? & ?? & ?? \\
+%     \hline
+% \end{tabular}
+
+% \begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+%     \hline
+%      & \multicolumn{4}{|c|}{FLOAT} &  \multicolumn{4}{|c|}{DOUBLE}\\
+%     const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+%     \hline
+%     2 & 0 & 63 & 37 & 1.589 & 0 & 76 & 69 & 1.530 \\
+%     \hline
+%     3 & 0 & 110 & 63 & 4.035 & 0 & 601 & 121 & 4.601 \\
+%     \hline
+%     4 & 0 & 87 & 39 & 1.768 & 0 & 182 & 71 & 1.994 \\
+%     \hline
+%     5 & 0 & 127 & 65 & 5.431 & 0 & 619 & 127 & 7.017 \\
+%     \hline
+%     6 & 0 & 132 & 63 & 3.868 & 0 & 606 & 121 & 4.765 \\
+%     \hline
+%     7 & 0 & 142 & 65 & 6.226 & 0 & 619 & 132 & 6.773 \\
+%     \hline
+%     9 & 0 & 229 & 62 & 8.795 & 0 &  ?? & ?? & ? \\
+%     \hline
+%     10 & 0 & 215 & 61 & 6.650 & 0 & 623 & 126 & 7.001 \\
+%     \hline
+%     11 & 0 & 61 & 38 & 9.695 & 0 & ?? & ?? & ? \\
+%     \hline
+% \end{tabular}
+
+% \section{Vivado HLS}
+% \begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+%     \hline
+%      & \multicolumn{4}{|c}{INT} & \multicolumn{4}{|c||}{LONG}\\
+%     const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+%     \hline
+%     2 & 0 & 82 & 65 & 1.098 & 0 & 161 & 128 & 1.205 \\
+%     \hline
+%     3 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+%     \hline
+%     4 & 0 & 81 & 63 & 1.096 & 0 & 161 & 128 & 1.205 \\
+%     \hline
+%     5 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+%     \hline
+%     6 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+%     \hline
+%     7 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+%     \hline
+%     9 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+%     \hline
+%     10 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825 \\
+%     \hline
+%     11 & 4 & 163 & 37 & 1.825 & 16 & 390 & 105 & 1.825\\
+%     \hline
+% \end{tabular}
+
+% \begin{tabular}{|c||c|c|c|c|c|c|c|c|}
+%     \hline
+%      & \multicolumn{4}{|c|}{FLOAT} &  \multicolumn{4}{|c|}{DOUBLE}\\
+%     const & DSP & LUT & FF & CP & DSP & LUT & FF & CP \\
+%     \hline
+%     2 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     3 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     4 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     5 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     6 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     7 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     9 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     10 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+%     11 & ? & ? & ? & ? & ? & ? & ? & ? \\
+%     \hline
+% \end{tabular}
 
 
 \end{document}

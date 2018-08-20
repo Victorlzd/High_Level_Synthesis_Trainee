@@ -1,17 +1,18 @@
 # Fdb version 3
-<<<<<<< HEAD
-["pdflatex"] 1533305452 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" "tableau.pdf" "tableau" 1533305452
+["pdflatex"] 1533808650 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" "tableau.pdf" "tableau" 1533808651
   "/etc/texmf/web2c/texmf.cnf" 1533117798 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" 1533305452 3401 2f34c7fb155a6c31259c346084b6e10c ""
-=======
-["pdflatex"] 1533301803 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" "tableau.pdf" "tableau" 1533301804
-  "/etc/texmf/web2c/texmf.cnf" 1533117798 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" 1533301803 3458 d190de7347e24824a3c87468aac6ed85 ""
->>>>>>> origin/master
+  "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/report/tableau.tex" 1533808650 5431 beb80d38485e127098e02c96affd5cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1136768653 3584 3169d30142b88a27d4ab0e3468e963a2 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf" 1455403055 58204 69818f4ea335fd36ee39adb849889bda ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def" 1456440043 50112 f44490c2cb959606ae206a8f9f3f70e2 ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty" 1456440043 13499 cfeb1da37929c37eb2a356b8abd63f74 ""
@@ -28,19 +29,16 @@
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1428932888 2594 d18d5e19aa8239cf867fa670c556d2e9 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1367930684 2971 def0b6c1f0b107b3b936def894055589 ""
+  "/usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb" 1367930684 145408 43d44302ca7d82d487f511f83e309505 ""
+  "/usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb" 1531846152 140176 d4962f948b4cc0adf4d3dde77a128c95 ""
   "/usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb" 1531846152 135942 859a90cad7494a1e79c94baf546d7de5 ""
   "/usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb" 1367930684 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1533117805 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1533117818 3854477 da835413660e20785a48af6255b7b3ae ""
-<<<<<<< HEAD
-  "tableau.aux" 1533305452 386 ea512b178b60357249ceadba468397e2 ""
-  "tableau.tex" 1533305452 3401 2f34c7fb155a6c31259c346084b6e10c ""
-=======
-  "tableau.aux" 1533301804 386 ea512b178b60357249ceadba468397e2 ""
-  "tableau.tex" 1533301803 3458 d190de7347e24824a3c87468aac6ed85 ""
->>>>>>> origin/master
+  "tableau.aux" 1533808651 723 256512982d2c5db06ed750cb6328b127 ""
+  "tableau.tex" 1533808650 5431 beb80d38485e127098e02c96affd5cab ""
   (generated)
-  "tableau.pdf"
-  "tableau.log"
   "tableau.aux"
+  "tableau.log"
+  "tableau.pdf"
