@@ -1,5 +1,5 @@
 
-set TopModule "kernel_jacobi_2d_imper"
+set TopModule "kernel_jacobi_2d_imper_optimized"
 set ClockPeriod "10.000000"
 set ClockList {ap_clk}
 set multiClockList {}
@@ -41,7 +41,7 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
-set SourceFiles {sc {} c ../../my_version/jacobi-2d-imper.cpp}
+set SourceFiles {sc {} c ../../jacobi-2d-imper.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/my_version.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

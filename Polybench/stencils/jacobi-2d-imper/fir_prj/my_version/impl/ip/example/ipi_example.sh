@@ -6,4 +6,4 @@
 # ==============================================================
 
 
-/opt/Xilinx/Vivado/2018.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7k160tfbg484-1 ../xilinx_com_hls_kernel_jacobi_2d_imper_1_0.zip
+/opt/Xilinx/Vivado/2018.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7k160tfbg484-1 ../xilinx_com_hls_kernel_jacobi_2d_imper_optimized_1_0.zip

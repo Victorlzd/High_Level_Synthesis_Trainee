@@ -9,4 +9,6 @@ script replace_operator.cs {
     }
     pass SetBitAccurateBackend:SetBitAccurateBackend {
     }
+    pass GecosDAGToTreeIRConversion:DAGToTreeConvertion {
+    }
 }

@@ -15,9 +15,10 @@ public class Build_operators {
 	
 	public GecosProject compute() {
 		GecosProject project = GecosUserCoreFactory.project("build_operators");
+		//project.listProcedures()
 		ProcedureSet ps = File_builder.create_ps();
 		
-		Div.build_float_div_by_constant(ps, 9, true);
+		Div.build_float_div_by_constant(ps, 3, true);
 		
 		
 		

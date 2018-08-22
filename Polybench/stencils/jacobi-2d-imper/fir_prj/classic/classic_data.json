@@ -2,7 +2,7 @@
   "Top": "kernel_jacobi_2d_imper",
   "RtlTop": "kernel_jacobi_2d_imper",
   "RtlPrefix": "",
-  "SourceLanguage": "c",
+  "SourceLanguage": "cpp",
   "ResetStyle": "control",
   "GenerateBdFiles": "0",
   "HostMachineBits": "64",
@@ -20,7 +20,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "717202781",
+    "Latency": "1055844141",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -35,7 +35,7 @@
     "Taxonomy": "\/VIVADO_HLS_IP"
   },
   "Files": {
-    "CSource": ["..\/..\/classic\/jacobi-2d-imper.c"],
+    "CSource": ["..\/..\/jacobi-2d-imper.cpp"],
     "Vhdl": [
       "impl\/vhdl\/kernel_jacobi_2d_bkb.vhd",
       "impl\/vhdl\/kernel_jacobi_2d_cud.vhd",
@@ -51,7 +51,7 @@
     "Misc": ["impl\/misc\/logo.png"],
     "Subcore": [
       "impl\/misc\/kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64_ip.tcl",
-      "impl\/misc\/kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64_ip.tcl"
+      "impl\/misc\/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_ip.tcl"
     ]
   },
   "SubcoreInfo": {
@@ -64,9 +64,9 @@
         "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
       },
       {
-        "name": "kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64",
+        "name": "kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64",
         "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
+        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 20 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
       }
     ]
   },
@@ -330,37 +330,37 @@
     "Hierarchy": {"ModuleName": "kernel_jacobi_2d_imper"},
     "Metrics": {"kernel_jacobi_2d_imper": {
         "Latency": {
-          "LatencyBest": "717202781",
-          "LatencyAvg": "717202781",
-          "LatencyWorst": "717202781",
-          "PipelineII": "717202782",
+          "LatencyBest": "1055844141",
+          "LatencyAvg": "1055844141",
+          "LatencyWorst": "1055844141",
+          "PipelineII": "1055844142",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.334"
+          "Estimate": "7.288"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "20",
-            "Latency": "717202780",
+            "Latency": "1055844140",
             "PipelineII": "",
-            "PipelineDepth": "35860139",
+            "PipelineDepth": "52792207",
             "Loops": [
               {
                 "Name": "Loop 1.1",
                 "TripCount": "998",
-                "Latency": "30878120",
+                "Latency": "47810188",
                 "PipelineII": "",
-                "PipelineDepth": "30940",
+                "PipelineDepth": "47906",
                 "Loops": [{
                     "Name": "Loop 1.1.1",
                     "TripCount": "998",
-                    "Latency": "30938",
+                    "Latency": "47904",
                     "PipelineII": "",
-                    "PipelineDepth": "31"
+                    "PipelineDepth": "48"
                   }]
               },
               {
@@ -380,9 +380,9 @@
             ]
           }],
         "Area": {
-          "DSP48E": "18",
-          "FF": "1300",
-          "LUT": "1648",
+          "DSP48E": "7",
+          "FF": "3266",
+          "LUT": "4755",
           "BRAM_18K": "0"
         }
       }}
@@ -394,7 +394,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-07 11:15:19 CEST",
+    "Time": "2018-08-22 14:39:59 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

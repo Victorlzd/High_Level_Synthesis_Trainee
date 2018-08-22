@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k160tfbg484-1" LaunchTime="1533633469">
+<GenRun Id="impl_1" LaunchPart="xc7k160tfbg484-1" LaunchTime="1534941772">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="kernel_jacobi_2d_imper.drc"/>
   <File Type="BG-BGN" Name="kernel_jacobi_2d_imper.bgn"/>
@@ -72,7 +72,7 @@
   <File Type="ROUTE-METHODOLOGY-DRC" Name="kernel_jacobi_2d_imper_methodology_drc_routed.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64/kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64.xci">
+    <File Path="$PSRCDIR/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

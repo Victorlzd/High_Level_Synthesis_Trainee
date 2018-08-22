@@ -8,4 +8,4 @@ kernel_jacobi_2d_cud
 kernel_jacobi_2d_dEe
 lut_div5_chunk
 operator_double_div5
-kernel_jacobi_2d_imper
+kernel_jacobi_2d_imper_optimized

@@ -41,7 +41,7 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
-set SourceFiles {sc {} c ../../classic/jacobi-2d-imper.c}
+set SourceFiles {sc {} c ../../jacobi-2d-imper.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/classic.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -38,7 +38,7 @@ reg                   ce_r;
 wire [dout_WIDTH-1:0] dout_i;
 reg  [dout_WIDTH-1:0] dout_r;
 //------------------------Instantiation------------------
-kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64 kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64_u (
+kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64 kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u (
     .aclk                 ( aclk ),
     .aclken               ( aclken ),
     .s_axis_a_tvalid      ( a_tvalid ),

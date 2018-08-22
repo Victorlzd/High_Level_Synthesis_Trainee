@@ -28,7 +28,7 @@ end entity;
 
 architecture arch of kernel_jacobi_2d_cud is
     --------------------- Component ---------------------
-    component kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64 is
+    component kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64 is
         port (
             aclk                 : in  std_logic;
             aclken               : in  std_logic;
@@ -56,7 +56,7 @@ architecture arch of kernel_jacobi_2d_cud is
     signal dout_r    : std_logic_vector(dout_WIDTH-1 downto 0);
 begin
     --------------------- Instantiation -----------------
-    kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64_u : component kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64
+    kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u : component kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64
     port map (
         aclk                 => aclk,
         aclken               => aclken,

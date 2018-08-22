@@ -1,0 +1,119 @@
+
+
+================================================================
+== Vivado HLS Report for 'lut_div3_chunk'
+================================================================
+* Date:           Wed Aug 22 16:10:55 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        test_with_tab
+* Solution:       lut_div3_origin
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  12.00|     1.958|        1.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       0|    1638|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|       -|
+|Register         |        -|      -|       -|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|       0|    1638|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|       0|       1|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+---+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E| FF| LUT |
+    +-------------------------+----------------------+---------+-------+---+-----+
+    |lut_div3_chunk_mubkb_U1  |lut_div3_chunk_mubkb  |        0|      0|  0|  273|
+    |lut_div3_chunk_mubkb_U2  |lut_div3_chunk_mubkb  |        0|      0|  0|  273|
+    |lut_div3_chunk_mubkb_U3  |lut_div3_chunk_mubkb  |        0|      0|  0|  273|
+    |lut_div3_chunk_mubkb_U4  |lut_div3_chunk_mubkb  |        0|      0|  0|  273|
+    |lut_div3_chunk_mubkb_U5  |lut_div3_chunk_mubkb  |        0|      0|  0|  273|
+    |lut_div3_chunk_mubkb_U6  |lut_div3_chunk_mubkb  |        0|      0|  0|  273|
+    +-------------------------+----------------------+---------+-------+---+-----+
+    |Total                    |                      |        0|      0|  0| 1638|
+    +-------------------------+----------------------+---------+-------+---+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+----------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++----------------+-----+-----+------------+----------------+--------------+
+|ap_start        |  in |    1| ap_ctrl_hs | lut_div3_chunk | return value |
+|ap_done         | out |    1| ap_ctrl_hs | lut_div3_chunk | return value |
+|ap_idle         | out |    1| ap_ctrl_hs | lut_div3_chunk | return value |
+|ap_ready        | out |    1| ap_ctrl_hs | lut_div3_chunk | return value |
+|d_V             |  in |    4|   ap_none  |       d_V      |    scalar    |
+|r_in_V          |  in |    2|   ap_none  |     r_in_V     |    scalar    |
+|q_V             | out |    4|   ap_vld   |       q_V      |    pointer   |
+|q_V_ap_vld      | out |    1|   ap_vld   |       q_V      |    pointer   |
+|r_out_V         | out |    2|   ap_vld   |     r_out_V    |    pointer   |
+|r_out_V_ap_vld  | out |    1|   ap_vld   |     r_out_V    |    pointer   |
++----------------+-----+-----+------------+----------------+--------------+
+

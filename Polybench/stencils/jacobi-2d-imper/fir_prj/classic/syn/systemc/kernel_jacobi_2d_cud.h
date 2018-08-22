@@ -7,7 +7,7 @@
 
 #ifndef __kernel_jacobi_2d_cud__HH__
 #define __kernel_jacobi_2d_cud__HH__
-#include "ACMP_dmul.h"
+#include "ACMP_ddiv.h"
 #include <systemc>
 
 template<
@@ -26,15 +26,15 @@ SC_MODULE(kernel_jacobi_2d_cud) {
 
 
 
-    ACMP_dmul<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_dmul_U;
+    ACMP_ddiv<ID, 22, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_ddiv_U;
 
-    SC_CTOR(kernel_jacobi_2d_cud):  ACMP_dmul_U ("ACMP_dmul_U") {
-        ACMP_dmul_U.clk(clk);
-        ACMP_dmul_U.reset(reset);
-        ACMP_dmul_U.ce(ce);
-        ACMP_dmul_U.din0(din0);
-        ACMP_dmul_U.din1(din1);
-        ACMP_dmul_U.dout(dout);
+    SC_CTOR(kernel_jacobi_2d_cud):  ACMP_ddiv_U ("ACMP_ddiv_U") {
+        ACMP_ddiv_U.clk(clk);
+        ACMP_ddiv_U.reset(reset);
+        ACMP_ddiv_U.ce(ce);
+        ACMP_ddiv_U.din0(din0);
+        ACMP_ddiv_U.din1(din1);
+        ACMP_ddiv_U.dout(dout);
 
     }
 

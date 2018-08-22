@@ -1,0 +1,1177 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Aug 22 14:46:06 2018
+# Process ID: 16069
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log kernel_jacobi_2d_imper_optimized.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_2d_imper_optimized.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1/kernel_jacobi_2d_imper_optimized.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source kernel_jacobi_2d_imper_optimized.tcl -notrace
+Command: synth_design -top kernel_jacobi_2d_imper_optimized -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16079 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.805 ; gain = 82.895 ; free physical = 292 ; free virtual = 8718
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_imper_optimized' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:128]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:131]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:134]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:136]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:138]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:140]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:144]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:148]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:152]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:163]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:166]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:170]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:175]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:179]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:181]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:183]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:185]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:189]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:194]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:201]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:205]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:210]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:217]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:221]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:224]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:230]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:232]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:234]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:236]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:238]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:240]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:242]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:244]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:246]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:248]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:252]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:254]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:256]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:258]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:262]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:266]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:270]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-3491] module 'operator_double_div5' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:12' bound to instance 'grp_operator_double_div5_fu_172' of component 'operator_double_div5' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:332]
+INFO: [Synth 8-638] synthesizing module 'operator_double_div5' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:85]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:88]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:162]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_145' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:22]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:13' bound to instance 'kernel_jacobi_2d_bkb_U1' of component 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:152]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_bkb' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:152]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:13' bound to instance 'kernel_jacobi_2d_bkb_U2' of component 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:319]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:13' bound to instance 'kernel_jacobi_2d_bkb_U3' of component 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:457]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:13' bound to instance 'kernel_jacobi_2d_bkb_U4' of component 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:595]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:13' bound to instance 'kernel_jacobi_2d_bkb_U5' of component 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:733]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd:13' bound to instance 'kernel_jacobi_2d_bkb_U6' of component 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:871]
+INFO: [Synth 8-256] done synthesizing module 'lut_div5_chunk' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:22]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_152' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:225]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_158' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:233]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_164' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:241]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_170' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:249]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_176' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:257]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_182' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:265]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'grp_lut_div5_chunk_fu_188' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:273]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'call_ret4_14_i_i_lut_div5_chunk_fu_194' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:281]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'call_ret4_15_i_i_lut_div5_chunk_fu_200' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:289]
+INFO: [Synth 8-3491] module 'lut_div5_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd:12' bound to instance 'call_ret4_16_i_i_lut_div5_chunk_fu_206' of component 'lut_div5_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:297]
+INFO: [Synth 8-256] done synthesizing module 'operator_double_div5' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_cud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_cud.vhd:11' bound to instance 'kernel_jacobi_2d_cud_U16' of component 'kernel_jacobi_2d_cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:343]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_cud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64/synth/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64.vhd:59' bound to instance 'kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u' of component 'kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_cud.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64/synth/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64/synth/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64' (30#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64/synth/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_cud' (31#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_cud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:32' bound to instance 'kernel_jacobi_2d_dEe_U17' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe_DSP48_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:6' bound to instance 'kernel_jacobi_2d_dEe_DSP48_0_U' of component 'kernel_jacobi_2d_dEe_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_dEe_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_dEe_DSP48_0' (32#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_dEe' (33#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:32' bound to instance 'kernel_jacobi_2d_dEe_U18' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:370]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:32' bound to instance 'kernel_jacobi_2d_dEe_U19' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:382]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd:32' bound to instance 'kernel_jacobi_2d_dEe_U20' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:394]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_imper_optimized' (34#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd:38]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port CLK
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized81 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized81 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized81 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized8 has unconnected port B[11]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized71 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized71 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized71 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[9]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[8]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[7]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[6]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[5]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[4]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[3]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[2]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[1]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[14]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[13]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[12]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[11]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[10]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[9]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[8]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[7]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[6]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[5]
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[4]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.430 ; gain = 185.520 ; free physical = 346 ; free virtual = 8785
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1395.430 ; gain = 185.520 ; free physical = 350 ; free virtual = 8788
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1395.430 ; gain = 185.520 ; free physical = 350 ; free virtual = 8788
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.xdc]
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  FDE => FDRE: 5 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1655.922 ; gain = 0.000 ; free physical = 130 ; free virtual = 8511
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1655.922 ; gain = 446.012 ; free physical = 226 ; free virtual = 8608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1655.922 ; gain = 446.012 ; free physical = 226 ; free virtual = 8608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1655.922 ; gain = 446.012 ; free physical = 227 ; free virtual = 8609
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "icmp4_fu_396_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_374_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "icmp_fu_320_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_1_fu_334_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond4_fu_194_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_206_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_236_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_313_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_323_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 1663.930 ; gain = 454.020 ; free physical = 221 ; free virtual = 8603
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/SUB_DELAY' (delay__parameterized1) to 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/SUBTRACT_PREADD_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/YES_DIST_1.DIST_1_PREADD_DEL' (delay__parameterized1) to 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/YES_DIST_1.DIST_1_ADD_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_DEL' (delay__parameterized7) to 'kernel_jacobi_2d_cud_U16/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_RND1_DEL'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "tmp_1_fu_334_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp4_fu_396_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_4_fu_374_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_323_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_313_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_236_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_206_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_jacobi_2d_cud_U16/ce_r_reg )
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/ce_r_reg) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[63]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[62]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[61]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[60]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[59]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[58]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[57]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[56]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[55]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[54]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[53]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[52]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[51]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[50]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[49]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[48]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[47]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[46]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[45]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[44]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[43]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[42]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[41]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[40]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[39]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[38]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[37]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[36]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[35]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[34]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[33]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[32]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[31]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[30]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[29]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[28]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[27]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[26]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[25]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[24]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[23]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[22]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[21]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[20]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[19]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[18]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[17]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[16]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[15]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[14]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[13]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[12]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[11]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[10]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[9]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[8]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[7]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[6]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[5]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[4]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[3]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[2]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[1]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U16/dout_r_reg[0]) is unused and will be removed from module kernel_jacobi_2d_imper_optimized.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.945 ; gain = 478.035 ; free physical = 231 ; free virtual = 8576
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 1717.945 ; gain = 508.035 ; free physical = 127 ; free virtual = 8436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:28 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 220 ; free virtual = 8435
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:01:30 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 212 ; free virtual = 8427
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 213 ; free virtual = 8427
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 213 ; free virtual = 8427
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 213 ; free virtual = 8427
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 213 ; free virtual = 8427
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 213 ; free virtual = 8427
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 213 ; free virtual = 8427
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    64|
+|2     |DSP48E1   |     2|
+|3     |DSP48E1_1 |     1|
+|4     |DSP48E1_3 |     4|
+|5     |LUT1      |    22|
+|6     |LUT2      |   183|
+|7     |LUT3      |   302|
+|8     |LUT4      |   294|
+|9     |LUT5      |   453|
+|10    |LUT6      |   704|
+|11    |MUXCY     |   131|
+|12    |MUXF7     |    10|
+|13    |MUXF8     |     1|
+|14    |XORCY     |    44|
+|15    |FDE       |     5|
+|16    |FDRE      |  1100|
+|17    |FDSE      |    17|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.367 ; gain = 638.457 ; free physical = 213 ; free virtual = 8427
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 254 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 1848.367 ; gain = 377.965 ; free physical = 277 ; free virtual = 8491
+Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:31 . Memory (MB): peak = 1848.375 ; gain = 638.457 ; free physical = 277 ; free virtual = 8491
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 262 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 46 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 41 instances
+  FDE => FDRE: 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+172 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:33 . Memory (MB): peak = 1848.375 ; gain = 650.023 ; free physical = 308 ; free virtual = 8524
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1/kernel_jacobi_2d_imper_optimized.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file kernel_jacobi_2d_imper_optimized_utilization_synth.rpt -pb kernel_jacobi_2d_imper_optimized_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1872.379 ; gain = 0.000 ; free physical = 305 ; free virtual = 8522
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 22 14:47:48 2018...

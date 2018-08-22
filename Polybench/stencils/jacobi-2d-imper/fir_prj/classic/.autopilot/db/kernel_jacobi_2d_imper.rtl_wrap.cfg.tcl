@@ -1,4 +1,4 @@
-set lang "C"
+set lang "C++"
 set moduleName "kernel_jacobi_2d_imper"
 set moduleIsExternC "0"
 set rawDecl ""

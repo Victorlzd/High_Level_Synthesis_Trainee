@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log kernel_jacobi_2d_imper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_2d_imper.tcl -notrace
+vivado -log kernel_jacobi_2d_imper_optimized.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_2d_imper_optimized.tcl -notrace

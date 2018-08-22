@@ -6,7 +6,7 @@ import gecos.instrs.*;
 
 public class Visitor_op_replacer extends GecosBlocksInstructionsDefaultVisitor{
 
-	@Override
+	/*@Override
 	public void visitGenericInstruction(GenericInstruction g) 
 	{
 		if(g.getName().equals(ArithmeticOperator.MUL.getLiteral())) 
@@ -20,7 +20,9 @@ public class Visitor_op_replacer extends GecosBlocksInstructionsDefaultVisitor{
 		}
 		
 		super.visitGenericInstruction(g);
-	}
+	}*/
+	
+	
 	
 	
 }

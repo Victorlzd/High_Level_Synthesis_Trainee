@@ -3,8 +3,8 @@
 
 # XDC: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.xdc
 
-# IP: ip/kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64/kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64 || ORIG_REF_NAME==kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64} -quiet] -quiet
+# IP: ip/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64 || ORIG_REF_NAME==kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64} -quiet] -quiet
 
 # IP: ip/kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64/kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64 || ORIG_REF_NAME==kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64} -quiet] -quiet

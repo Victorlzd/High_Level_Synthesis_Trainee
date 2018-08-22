@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"lut_div3_chunk": {
+			"proto_instances": {
+			}
+		}
+	}
+}

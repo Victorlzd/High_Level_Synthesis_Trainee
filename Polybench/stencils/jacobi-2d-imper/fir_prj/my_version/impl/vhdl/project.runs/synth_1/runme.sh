@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log kernel_jacobi_2d_imper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_2d_imper.tcl
+EAStep vivado -log kernel_jacobi_2d_imper_optimized.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_2d_imper_optimized.tcl

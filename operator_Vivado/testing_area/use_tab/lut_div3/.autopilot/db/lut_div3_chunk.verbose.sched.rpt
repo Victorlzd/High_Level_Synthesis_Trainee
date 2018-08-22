@@ -1,0 +1,147 @@
+
+
+================================================================
+== Vivado HLS Report for 'lut_div3_chunk'
+================================================================
+* Date:           Wed Aug 22 16:06:06 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        use_tab
+* Solution:       lut_div3
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  12.00|     2.664|        1.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.66>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%r_in_V_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %r_in_V)"   --->   Operation 3 'read' 'r_in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%d_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %d_V)"   --->   Operation 4 'read' 'd_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_Result_3 = call i6 @_ssdm_op_BitConcatenate.i6.i2.i4(i2 %r_in_V_read, i4 %d_V_read)" [test.cpp:1283]   --->   Operation 5 'bitconcatenate' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp = zext i6 %p_Result_3 to i64" [test.cpp:1285]   --->   Operation 6 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%r0_addr = getelementptr [64 x i1]* @r0, i64 0, i64 %tmp" [test.cpp:1285]   --->   Operation 7 'getelementptr' 'r0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (2.66ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [test.cpp:1285]   --->   Operation 8 'load' 'r0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%r1_addr = getelementptr [64 x i1]* @r1, i64 0, i64 %tmp" [test.cpp:1286]   --->   Operation 9 'getelementptr' 'r1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (2.66ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [test.cpp:1286]   --->   Operation 10 'load' 'r1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%q0_addr = getelementptr [64 x i1]* @q0, i64 0, i64 %tmp" [test.cpp:1287]   --->   Operation 11 'getelementptr' 'q0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (2.66ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [test.cpp:1287]   --->   Operation 12 'load' 'q0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%q1_addr = getelementptr [64 x i1]* @q1, i64 0, i64 %tmp" [test.cpp:1288]   --->   Operation 13 'getelementptr' 'q1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (2.66ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [test.cpp:1288]   --->   Operation 14 'load' 'q1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%q2_addr = getelementptr [64 x i1]* @q2, i64 0, i64 %tmp" [test.cpp:1289]   --->   Operation 15 'getelementptr' 'q2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (2.66ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [test.cpp:1289]   --->   Operation 16 'load' 'q2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%q3_addr = getelementptr [64 x i1]* @q3, i64 0, i64 %tmp" [test.cpp:1290]   --->   Operation 17 'getelementptr' 'q3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (2.66ns)   --->   "%q3_load = load i1* %q3_addr, align 1" [test.cpp:1290]   --->   Operation 18 'load' 'q3_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+
+State 2 <SV = 1> <Delay = 2.66>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %d_V), !map !188"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2 %r_in_V), !map !194"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %q_V), !map !198"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %r_out_V), !map !202"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @lut_div3_chunk_str) nounwind"   --->   Operation 23 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/2] (2.66ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [test.cpp:1285]   --->   Operation 24 'load' 'r0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 25 [1/2] (2.66ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [test.cpp:1286]   --->   Operation 25 'load' 'r1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%p_Result_s = call i2 @_ssdm_op_BitConcatenate.i2.i1.i1(i1 %r1_load, i1 %r0_load)" [test.cpp:1286]   --->   Operation 26 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i2P(i2* %r_out_V, i2 %p_Result_s)" [test.cpp:1286]   --->   Operation 27 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/2] (2.66ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [test.cpp:1287]   --->   Operation 28 'load' 'q0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 29 [1/2] (2.66ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [test.cpp:1288]   --->   Operation 29 'load' 'q1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 30 [1/2] (2.66ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [test.cpp:1289]   --->   Operation 30 'load' 'q2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 31 [1/2] (2.66ns)   --->   "%q3_load = load i1* %q3_addr, align 1" [test.cpp:1290]   --->   Operation 31 'load' 'q3_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%p_Result_2 = call i4 @_ssdm_op_BitConcatenate.i4.i1.i1.i1.i1(i1 %q3_load, i1 %q2_load, i1 %q1_load, i1 %q0_load)" [test.cpp:1290]   --->   Operation 32 'bitconcatenate' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i4P(i4* %q_V, i4 %p_Result_2)" [test.cpp:1290]   --->   Operation 33 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "ret void" [test.cpp:1291]   --->   Operation 34 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 12ns, clock uncertainty: 1.5ns.
+
+ <State 1>: 2.66ns
+The critical path consists of the following:
+	wire read on port 'r_in_V' [16]  (0 ns)
+	'getelementptr' operation ('r0_addr', test.cpp:1285) [20]  (0 ns)
+	'load' operation ('r0_load', test.cpp:1285) on array 'r0' [21]  (2.66 ns)
+
+ <State 2>: 2.66ns
+The critical path consists of the following:
+	'load' operation ('r0_load', test.cpp:1285) on array 'r0' [21]  (2.66 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

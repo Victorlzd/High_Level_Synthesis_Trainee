@@ -145,8 +145,8 @@ extern "C" {
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/.autopilot/db/jacobi-2d-imper.pragma.1.cpp" 2
-# 1 "my_version/jacobi-2d-imper.cpp"
-# 1 "my_version/jacobi-2d-imper.cpp" 1
+# 1 "jacobi-2d-imper.cpp"
+# 1 "jacobi-2d-imper.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -291,7 +291,7 @@ extern "C" {
 }
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "my_version/jacobi-2d-imper.cpp" 2
+# 1 "jacobi-2d-imper.cpp" 2
 
 
 
@@ -1154,7 +1154,7 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 # 942 "/usr/include/stdio.h" 3 4
 }
-# 9 "my_version/jacobi-2d-imper.cpp" 2
+# 9 "jacobi-2d-imper.cpp" 2
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
 extern "C" {
@@ -2516,7 +2516,7 @@ extern void swab (const void *__restrict __from, void *__restrict __to,
     ssize_t __n) throw () __attribute__ ((__nonnull__ (1, 2)));
 # 1154 "/usr/include/unistd.h" 3 4
 }
-# 10 "my_version/jacobi-2d-imper.cpp" 2
+# 10 "jacobi-2d-imper.cpp" 2
 # 1 "/usr/include/string.h" 1 3 4
 # 27 "/usr/include/string.h" 3 4
 extern "C" {
@@ -2842,7 +2842,7 @@ extern void *memfrob (void *__s, size_t __n) throw () __attribute__ ((__nonnull_
 extern char *basename (const char *__filename) throw () __attribute__ ((__nonnull__ (1)));
 # 658 "/usr/include/string.h" 3 4
 }
-# 11 "my_version/jacobi-2d-imper.cpp" 2
+# 11 "jacobi-2d-imper.cpp" 2
 # 1 "/usr/include/math.h" 1 3 4
 # 28 "/usr/include/math.h" 3 4
 extern "C" {
@@ -3851,11 +3851,11 @@ struct __exception
 extern int matherr (struct __exception *__exc) throw ();
 # 534 "/usr/include/math.h" 3 4
 }
-# 12 "my_version/jacobi-2d-imper.cpp" 2
+# 12 "jacobi-2d-imper.cpp" 2
 
 
-# 1 "./my_version/polybench.h" 1
-# 26 "./my_version/polybench.h"
+# 1 "./polybench.h" 1
+# 26 "./polybench.h"
 # 1 "/usr/include/stdlib.h" 1 3 4
 # 32 "/usr/include/stdlib.h" 3 4
 # 1 "/opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
@@ -4998,15 +4998,15 @@ extern int getloadavg (double __loadavg[], int __nelem)
 # 955 "/usr/include/stdlib.h" 2 3 4
 # 967 "/usr/include/stdlib.h" 3 4
 }
-# 27 "./my_version/polybench.h" 2
-# 199 "./my_version/polybench.h"
+# 27 "./polybench.h" 2
+# 199 "./polybench.h"
 extern void* polybench_alloc_data(unsigned long long int n, int elt_size);
-# 15 "my_version/jacobi-2d-imper.cpp" 2
+# 15 "jacobi-2d-imper.cpp" 2
 
 
 
-# 1 "my_version/jacobi-2d-imper.h" 1
-# 19 "my_version/jacobi-2d-imper.cpp" 2
+# 1 "./jacobi-2d-imper.h" 1
+# 19 "jacobi-2d-imper.cpp" 2
 
 # 1 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h" 1
 # 63 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h"
@@ -29261,7 +29261,7 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 
 }
 # 69 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h" 2
-# 21 "my_version/jacobi-2d-imper.cpp" 2
+# 21 "jacobi-2d-imper.cpp" 2
 
 union fix_to_double {
  double d;
@@ -30643,7 +30643,7 @@ void init_array (int n,
 
 
 
-void kernel_jacobi_2d_imper(int tsteps,
+void kernel_jacobi_2d_imper_optimized(int tsteps,
        int n,
        double A[1000 + 0][1000 + 0],
        double B[1000 + 0][1000 + 0])
@@ -30655,10 +30655,34 @@ void kernel_jacobi_2d_imper(int tsteps,
     {
       for (i = 1; i < 1000 - 1; i++)
  for (j = 1; j < 1000 - 1; j++)
-   B[i][j] = operator_double_div5(A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
+   B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
       for (i = 1; i < 1000-1; i++)
  for (j = 1; j < 1000-1; j++)
-   A[i][j] = B[i][j];
+   A[i][j] = operator_double_div5(B[i][j]);
+    }
+#pragma endscop
+
+}
+
+void kernel_jacobi_2d_imper(int tsteps,
+       int n,
+       double A[1000 + 0][1000 + 0],
+       double B[1000 + 0][1000 + 0])
+{_ssdm_SpecArrayDimSize(A, 1000);_ssdm_SpecArrayDimSize(B, 1000);
+  int t, i, j;
+
+#pragma scop
+ for (t = 0; t < 20; t++)
+    {
+      for (i = 1; i < 1000 - 1; i++){
+  for (j = 1; j < 1000 - 1; j++){
+   B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j])/5;
+  }
+   }
+
+ for (i = 1; i < 1000-1; i++)
+  for (j = 1; j < 1000-1; j++)
+     A[i][j] = B[i][j];
     }
 #pragma endscop
 

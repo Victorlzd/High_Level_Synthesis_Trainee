@@ -11,7 +11,7 @@
 module kernel_jacobi_2d_cud
 #(parameter
     ID         = 2,
-    NUM_STAGE  = 5,
+    NUM_STAGE  = 22,
     din0_WIDTH = 64,
     din1_WIDTH = 64,
     dout_WIDTH = 64
@@ -38,7 +38,7 @@ reg                   ce_r;
 wire [dout_WIDTH-1:0] dout_i;
 reg  [dout_WIDTH-1:0] dout_r;
 //------------------------Instantiation------------------
-kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64 kernel_jacobi_2d_imper_ap_dmul_3_max_dsp_64_u (
+kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64 kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u (
     .aclk                 ( aclk ),
     .aclken               ( aclken ),
     .s_axis_a_tvalid      ( a_tvalid ),

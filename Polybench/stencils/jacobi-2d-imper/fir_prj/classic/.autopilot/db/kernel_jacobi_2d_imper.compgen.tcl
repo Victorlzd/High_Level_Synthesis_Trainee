@@ -93,12 +93,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 set id 2
 set name kernel_jacobi_2d_cud
-set corename simcore_dmul
-set op dmul
-set stage_num 5
+set corename simcore_ddiv
+set op ddiv
+set stage_num 22
 set max_latency -1
 set registered_input 1
-set impl_style max_dsp
 set Futype4reduceCEFanout 1
 set clk_width 1
 set clk_signed 0
@@ -112,8 +111,8 @@ set ce_width 1
 set ce_signed 0
 set out_width 64
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_dmul] == "ap_gen_simcore_dmul"} {
-eval "ap_gen_simcore_dmul { \
+if {[info proc ap_gen_simcore_ddiv] == "ap_gen_simcore_ddiv"} {
+eval "ap_gen_simcore_ddiv { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -123,7 +122,6 @@ eval "ap_gen_simcore_dmul { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
-    style ${impl_style} \
     Futype4reduceCEFanout ${Futype4reduceCEFanout} \
     clk_width ${clk_width} \
     clk_signed ${clk_signed} \
@@ -138,7 +136,7 @@ eval "ap_gen_simcore_dmul { \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_dmul, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_ddiv, check your AutoPilot builtin lib"
 }
 }
 
@@ -148,8 +146,8 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op dmul
-set corename DMul
+set op ddiv
+set corename DDiv
 if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
@@ -162,7 +160,6 @@ eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
-    style ${impl_style} \
     Futype4reduceCEFanout ${Futype4reduceCEFanout} \
     clk_width ${clk_width} \
     clk_signed ${clk_signed} \

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k160tfbg484-1" LaunchTime="1533644355">
-  <File Type="VDS-TIMING-PB" Name="kernel_jacobi_2d_imper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="kernel_jacobi_2d_imper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="kernel_jacobi_2d_imper.dcp"/>
-  <File Type="REPORTS-TCL" Name="kernel_jacobi_2d_imper_reports.tcl"/>
-  <File Type="PA-TCL" Name="kernel_jacobi_2d_imper.tcl"/>
-  <File Type="RDS-RDS" Name="kernel_jacobi_2d_imper.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="kernel_jacobi_2d_imper_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="kernel_jacobi_2d_imper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="kernel_jacobi_2d_imper_utilization_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7k160tfbg484-1" LaunchTime="1534941964">
+  <File Type="VDS-TIMING-PB" Name="kernel_jacobi_2d_imper_optimized_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="kernel_jacobi_2d_imper_optimized_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="kernel_jacobi_2d_imper_optimized.dcp"/>
+  <File Type="REPORTS-TCL" Name="kernel_jacobi_2d_imper_optimized_reports.tcl"/>
+  <File Type="PA-TCL" Name="kernel_jacobi_2d_imper_optimized.tcl"/>
+  <File Type="RDS-RDS" Name="kernel_jacobi_2d_imper_optimized.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="kernel_jacobi_2d_imper_optimized_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="kernel_jacobi_2d_imper_optimized_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="kernel_jacobi_2d_imper_optimized_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64/kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64.xci">
+    <File Path="$PSRCDIR/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -36,7 +36,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/kernel_jacobi_2d_imper.vhd">
+    <File Path="$PPRDIR/kernel_jacobi_2d_imper_optimized.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -56,13 +56,13 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="kernel_jacobi_2d_imper"/>
+      <Option Name="TopModule" Val="kernel_jacobi_2d_imper_optimized"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/kernel_jacobi_2d_imper.xdc">
+    <File Path="$PPRDIR/kernel_jacobi_2d_imper_optimized.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Aug  7 14:21:52 2018
-# Process ID: 20243
+# Start of session at: Wed Aug 22 14:49:04 2018
+# Process ID: 16680
 # Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/impl_1
-# Command line: vivado -log kernel_jacobi_2d_imper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_2d_imper.tcl -notrace
-# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper.vdi
+# Command line: vivado -log kernel_jacobi_2d_imper_optimized.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_2d_imper_optimized.tcl -notrace
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_optimized.vdi
 # Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
-source kernel_jacobi_2d_imper.tcl -notrace
+source kernel_jacobi_2d_imper_optimized.tcl -notrace

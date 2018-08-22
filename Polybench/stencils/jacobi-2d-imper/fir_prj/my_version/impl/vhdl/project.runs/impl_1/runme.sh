@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log kernel_jacobi_2d_imper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_2d_imper.tcl -notrace
+EAStep vivado -log kernel_jacobi_2d_imper_optimized.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_2d_imper_optimized.tcl -notrace
 
 

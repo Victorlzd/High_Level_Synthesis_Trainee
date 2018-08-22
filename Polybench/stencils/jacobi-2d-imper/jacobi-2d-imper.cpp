@@ -11,7 +11,7 @@
 #include <math.h>
 
 /* Include polybench common header. */
-#include <my_version/polybench.h>
+#include <polybench.h>
 
 /* Include benchmark-specific header. */
 /* Default data type is double, default size is 20x1000. */
@@ -1411,10 +1411,10 @@ void kernel_jacobi_2d_imper_optimized(int tsteps,
     {
       for (i = 1; i < 1000 - 1; i++)
 	for (j = 1; j < 1000 - 1; j++)
-	  B[i][j] = operator_double_div5(A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
+	  B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
       for (i = 1; i < 1000-1; i++)
 	for (j = 1; j < 1000-1; j++)
-	  A[i][j] = B[i][j];
+	  A[i][j] = operator_double_div5(B[i][j]);
     }
 #pragma endscop
 
@@ -1430,12 +1430,15 @@ void kernel_jacobi_2d_imper(int tsteps,
 #pragma scop
   for (t = 0; t < 20; t++)
     {
-      for (i = 1; i < 1000 - 1; i++)
-	for (j = 1; j < 1000 - 1; j++)
-	  B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j])/5;
-      for (i = 1; i < 1000-1; i++)
-	for (j = 1; j < 1000-1; j++)
-	  A[i][j] = B[i][j];
+      for (i = 1; i < 1000 - 1; i++){
+		for (j = 1; j < 1000 - 1; j++){
+			B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j])/5;
+		}
+	  }
+    
+	for (i = 1; i < 1000-1; i++)
+		for (j = 1; j < 1000-1; j++)
+	  		A[i][j] = B[i][j];
     }
 #pragma endscop
 
