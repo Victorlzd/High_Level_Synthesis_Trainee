@@ -7,6 +7,8 @@ CDTFrontend(p); # Generate the GeCoS IR from the C source added
 echo("Done");
 
 #GecosTreeToDAGIRConversion(p);
+#output(p,"dot","/tmp/test");
+#GecosTreeToDAGIRConversion(p);
 echo("appel replace_operator");
 p = replace_operator(p);
 echo("Done");

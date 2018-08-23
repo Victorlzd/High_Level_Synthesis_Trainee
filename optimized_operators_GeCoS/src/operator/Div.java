@@ -11,6 +11,7 @@ import gecos.core.ParameterSymbol;
 import gecos.core.ProcedureSet;
 import gecos.core.ProcedureSymbol;
 import gecos.core.Symbol;
+import gecos.instrs.ArrayValueInstruction;
 import gecos.instrs.Instruction;
 import gecos.instrs.SetInstruction;
 import gecos.types.Type;
@@ -770,41 +771,42 @@ public class Div {
 			CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
 			GecosUserTypeFactory.setScope(mainblock.getScope());
 			
-			BasicBlock block = GecosUserBlockFactory.BBlock();
+			Symbol in_symbol = GecosUserCoreFactory.symbol("in", GecosUserTypeFactory.ACINT(6, false));
+			mainblock.addSymbol(in_symbol);
+
+			// r_in.concat(d)
+			Instruction r_in_concat_d = GecosUserInstructionFactory.methodCallInstruction("concat", 
+					GecosUserInstructionFactory.symbref(parameters.get(1)),
+					GecosUserInstructionFactory.symbref(parameters.get(0)));
+			// in = r_in.concat(d);
+			Instruction in_def = GecosUserInstructionFactory.set(in_symbol, r_in_concat_d);
+			
+			BasicBlock basic_block = GecosUserBlockFactory.BBlock(in_def);
+			
 			
 			for (int i = 0; i < width_r; i++) 
 			{
-				//(d,r_in)
-				Instruction[] args_lut = {GecosUserInstructionFactory.symbref(parameters.get(0)), GecosUserInstructionFactory.symbref(parameters.get(1))};
-				// lut_div<div>_r<i>
-				ProcedureSymbol lut_proc_symbol = single_lut(ps, div, i, true);
-				// (*r_out)[i]
-				Instruction instr_r_select_i = GecosUserInstructionFactory.array(GecosUserInstructionFactory.indir(
-						GecosUserInstructionFactory.symbref(parameters.get(3))), GecosUserInstructionFactory.Int(i));
-				// lut_div<div>_r<i>(d,r_in)
-				Instruction lut_function_call = GecosUserInstructionFactory.call(lut_proc_symbol, args_lut);
-				// (*r_out)[i] = lut_div<div>_r<i>(d,r_in)
-				Instruction set_instr = GecosUserInstructionFactory.set(instr_r_select_i, lut_function_call);
-				block.addInstruction(set_instr);
+				Symbol r_i = single_lut(div, i, true);
+				mainblock.addSymbol(r_i);
+				
+				Instruction select_rout = GecosUserInstructionFactory.array(GecosUserInstructionFactory.indir(GecosUserInstructionFactory.symbref(parameters.get(3))), GecosUserInstructionFactory.Int(i));
+				Instruction select_ri = GecosUserInstructionFactory.array(r_i, GecosUserInstructionFactory.symbref(in_symbol));
+				Instruction set_rout_ri = GecosUserInstructionFactory.set(select_rout, select_ri);
+				basic_block.addInstruction(set_rout_ri);
 			}
 			
 			for (int i = 0; i < 6-width_r; i++) 
 			{
-				//(d,r_in)
-				Instruction[] args_lut = {GecosUserInstructionFactory.symbref(parameters.get(0)), GecosUserInstructionFactory.symbref(parameters.get(1))};
-				// lut_div<div>_q<i>
-				ProcedureSymbol lut_proc_symbol = single_lut(ps, div, i, false);
-				// (*q)[i]
-				Instruction instr_r_select_i = GecosUserInstructionFactory.array(GecosUserInstructionFactory.indir(
-						GecosUserInstructionFactory.symbref(parameters.get(2))), GecosUserInstructionFactory.Int(i));
-				// lut_div<div>_q<i>(d,r_in)
-				Instruction lut_function_call = GecosUserInstructionFactory.call(lut_proc_symbol, args_lut);
-				// (*q)[i] = lut_div<div>_r<i>(d,r_in)
-				Instruction set_instr = GecosUserInstructionFactory.set(instr_r_select_i, lut_function_call);
-				block.addInstruction(set_instr);
+				Symbol q_i = single_lut(div, i, false);
+				mainblock.addSymbol(q_i);
+				
+				Instruction select_qout = GecosUserInstructionFactory.array(GecosUserInstructionFactory.indir(GecosUserInstructionFactory.symbref(parameters.get(2))), GecosUserInstructionFactory.Int(i));
+				Instruction select_qi = GecosUserInstructionFactory.array(q_i, GecosUserInstructionFactory.symbref(in_symbol));
+				Instruction set_qout_qi = GecosUserInstructionFactory.set(select_qout, select_qi);
+				basic_block.addInstruction(set_qout_qi);
 			}
 			
-			mainblock.addChildren(block);
+			mainblock.addChildren(basic_block);
 			GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
 			
 			builded_lut_chunk_divider.put(div, proc_symbol);
@@ -813,7 +815,7 @@ public class Div {
 		return builded_lut_chunk_divider.get(div);
 	}
 	
-	private static ProcedureSymbol single_lut(ProcedureSet ps, int div, int n, boolean isRemainder)
+	private static Symbol single_lut(int div, int n, boolean isRemainder)
 	/* This function build functions which computes one of the bit of the remainder or the quotient of
 	 * the division by <div>
 	 * 
@@ -822,70 +824,27 @@ public class Div {
 	{
 		ProcedureSymbol proc_symbol;
 		
-		String name = "lut_"+(isRemainder?"r":"q")+n+"_div"+div;
+		String name = (isRemainder?"r":"q")+n;
 		
 		// we compute the width of the remainder
 		int width_r = Calcul.log2(div-1)+1;
 		
-		GecosUserTypeFactory.setScope(ps.getScope());
-		
-		// Parameter definition
-		ArrayList<ParameterSymbol> parameters = new ArrayList<ParameterSymbol>();
-		// ap_uint<6-width_r> d
-		parameters.add(GecosUserCoreFactory.paramSymbol("d", GecosUserTypeFactory.ACINT(6-width_r, false)));
-		// ap_uint<width_r> r_in
-		parameters.add(GecosUserCoreFactory.paramSymbol("r_in", GecosUserTypeFactory.ACINT(width_r, false)));
-		// ap_uint<1> lut_r1(ap_uint<6-width_r> d, ap_uint<width_r> r)
-		proc_symbol = GecosUserCoreFactory.procSymbol(name, GecosUserTypeFactory.ACINT(1, false), parameters);
-		
-		CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
-		GecosUserTypeFactory.setScope(mainblock.getScope());
-		
-		// ap_uint<6> in
-		Symbol in_symbol = GecosUserCoreFactory.symbol("in", GecosUserTypeFactory.ACINT(6, false));
-		// ap_uint<1> ret_value
-		Symbol ret_value_symbol = GecosUserCoreFactory.symbol("ret_value", GecosUserTypeFactory.ACINT(1, false));
-		mainblock.addSymbol(ret_value_symbol);
-		mainblock.addSymbol(in_symbol);
+		Symbol array_symbol = GecosUserCoreFactory.symbol(name, GecosUserTypeFactory.ARRAY(GecosUserTypeFactory.ACINT(1, false), 64));
 		
 		
-		// r_in.concat(d)
-		Instruction r_in_concat_d = GecosUserInstructionFactory.methodCallInstruction("concat", 
-				GecosUserInstructionFactory.symbref(parameters.get(1)),
-				GecosUserInstructionFactory.symbref(parameters.get(0)));
-		// in = r_in.concat(d);
-		Instruction in_def = GecosUserInstructionFactory.set(in_symbol, r_in_concat_d);
-		
-		BasicBlock in_concat_bb = GecosUserBlockFactory.BBlock(in_def);
-		
-		// begin switch
-		BasicBlock[] cases = new BasicBlock[64];
+
+		Instruction[] cases = new Instruction[64];
 		for(int i=0; i<64; i++)
 		{
-			// case i
 			int res = isRemainder ? i%div : i/div;
 			res = (res >> n) % 2;
-			// ret_value = (0 or 1)
-			Instruction set_ret_value = GecosUserInstructionFactory.set(ret_value_symbol, GecosUserInstructionFactory.Int(res));
-			// break;
-			Instruction break_instr = GecosUserInstructionFactory.breakInst();
-			
-			cases[i] = GecosUserBlockFactory.BBlock(set_ret_value);
-			cases[i].addInstruction(break_instr);
+			cases[i] = GecosUserInstructionFactory.Int(res);
 		}
-		SwitchBlock switch_block = GecosUserBlockFactory.Switch(GecosUserInstructionFactory.symbref(in_symbol), cases);
-		// end switch
+		Instruction array_value = GecosUserInstructionFactory.arrayValue(cases);
 		
-		// return ret_value
-		BasicBlock return_ret_value = GecosUserBlockFactory.BBlock(GecosUserInstructionFactory.ret(
-				GecosUserInstructionFactory.symbref(ret_value_symbol)));
+		array_symbol.setValue(array_value);
 		
-		mainblock.addChildren(in_concat_bb);
-		mainblock.addChildren(switch_block);
-		mainblock.addChildren(return_ret_value);
-		GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
-		
-		return proc_symbol;
+		return array_symbol;
 	}
 
 }

@@ -22,7 +22,12 @@ public class Visitor_op_replacer extends GecosBlocksInstructionsDefaultVisitor{
 		super.visitGenericInstruction(g);
 	}*/
 	
-	
+	@Override
+	public void visitInstruction(Instruction i) 
+	{
+		System.out.println(i);
+		super.visitInstruction(i);
+	}
 	
 	
 }

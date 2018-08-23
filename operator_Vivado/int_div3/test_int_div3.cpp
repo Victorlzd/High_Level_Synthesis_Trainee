@@ -1,7 +1,7 @@
 #include <iostream>
 #include "ap_int.h"
 
-int operator_int_div29(int in);
+int operator_int_div3(int in);
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -19,8 +19,8 @@ int main(int argc, char const *argv[])
 	{
 		if(i%100==0) cout << "i = " << i << endl;
 		D = i;
-		q_test = D/29;
-		q = operator_int_div29(D);
+		q_test = D/3;
+		q = operator_int_div3(D);
 		if(q!=q_test)
 		{
 			cout << "-------- PROBLEME --------" << endl;
