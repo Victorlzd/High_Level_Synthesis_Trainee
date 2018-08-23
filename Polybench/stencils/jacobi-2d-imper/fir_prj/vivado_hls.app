@@ -7,7 +7,7 @@
         <file name="jacobi-2d-imper.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions>
-        <solution name="my_version" status=""/>
+        <solution name="my_version_with_table" status=""/>
     </solutions>
 </AutoPilot:project>
 

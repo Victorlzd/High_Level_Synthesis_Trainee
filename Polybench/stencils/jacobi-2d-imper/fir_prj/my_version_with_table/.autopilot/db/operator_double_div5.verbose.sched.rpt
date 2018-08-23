@@ -1,0 +1,449 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_double_div5'
+================================================================
+* Date:           Thu Aug 23 10:03:56 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       my_version_with_table
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.525|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|   57|    1|   57|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 20
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!tmp_1)
+	20  / (tmp_1)
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.52>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%in_read = call double @_ssdm_op_Read.ap_auto.double(double %in_r) nounwind"   --->   Operation 21 'read' 'in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast double %in_read to i64" [jacobi-2d-imper.cpp:48->jacobi-2d-imper.cpp:134]   --->   Operation 22 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_Repl2_2 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_s, i32 63)" [jacobi-2d-imper.cpp:49->jacobi-2d-imper.cpp:134]   --->   Operation 23 'bitselect' 'p_Repl2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%new_exp_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62) nounwind" [jacobi-2d-imper.cpp:50->jacobi-2d-imper.cpp:134]   --->   Operation 24 'partselect' 'new_exp_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%new_mant_V = trunc i64 %p_Val2_s to i52" [jacobi-2d-imper.cpp:51->jacobi-2d-imper.cpp:134]   --->   Operation 25 'trunc' 'new_mant_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%xf_V_5_cast = zext i52 %new_mant_V to i53" [jacobi-2d-imper.cpp:139]   --->   Operation 26 'zext' 'xf_V_5_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp = call i2 @_ssdm_op_PartSelect.i2.i64.i32.i32(i64 %p_Val2_s, i32 50, i32 51)" [jacobi-2d-imper.cpp:140]   --->   Operation 27 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.64ns)   --->   "%icmp = icmp eq i2 %tmp, 0" [jacobi-2d-imper.cpp:140]   --->   Operation 28 'icmp' 'icmp' <Predicate = true> <Delay = 0.64> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.65ns)   --->   "%shift_V_cast_cast = select i1 %icmp, i11 3, i11 2" [jacobi-2d-imper.cpp:140]   --->   Operation 29 'select' 'shift_V_cast_cast' <Predicate = true> <Delay = 0.65> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (1.32ns)   --->   "%tmp_1 = icmp eq i11 %new_exp_V, -1" [jacobi-2d-imper.cpp:142]   --->   Operation 30 'icmp' 'tmp_1' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (1.32ns)   --->   "%tmp_2 = icmp ugt i11 %shift_V_cast_cast, %new_exp_V" [jacobi-2d-imper.cpp:143]   --->   Operation 31 'icmp' 'tmp_2' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (1.42ns)   --->   "%new_exp_V_1 = sub i11 %new_exp_V, %shift_V_cast_cast" [jacobi-2d-imper.cpp:146]   --->   Operation 32 'sub' 'new_exp_V_1' <Predicate = true> <Delay = 1.42> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_1)   --->   "%p_new_exp_V_1 = select i1 %tmp_1, i11 -1, i11 0" [jacobi-2d-imper.cpp:116->jacobi-2d-imper.cpp:167]   --->   Operation 33 'select' 'p_new_exp_V_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_1)   --->   "%tmp_7 = or i1 %tmp_1, %tmp_2" [jacobi-2d-imper.cpp:116->jacobi-2d-imper.cpp:167]   --->   Operation 34 'or' 'tmp_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.63ns) (out node of the LUT)   --->   "%p_Repl2_1 = select i1 %tmp_7, i11 %p_new_exp_V_1, i11 %new_exp_V_1" [jacobi-2d-imper.cpp:116->jacobi-2d-imper.cpp:167]   --->   Operation 35 'select' 'p_Repl2_1' <Predicate = true> <Delay = 0.63> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (1.06ns)   --->   "br i1 %tmp_1, label %._crit_edge416, label %_ifconv1" [jacobi-2d-imper.cpp:147]   --->   Operation 36 'br' <Predicate = true> <Delay = 1.06>
+ST_1 : Operation 37 [1/1] (1.32ns)   --->   "%tmp_4 = icmp eq i11 %new_exp_V, 0" [jacobi-2d-imper.cpp:148]   --->   Operation 37 'icmp' 'tmp_4' <Predicate = (!tmp_1)> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (1.32ns)   --->   "%tmp_5 = icmp ult i11 %shift_V_cast_cast, %new_exp_V" [jacobi-2d-imper.cpp:151]   --->   Operation 38 'icmp' 'tmp_5' <Predicate = (!tmp_1)> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_8 = call i10 @_ssdm_op_PartSelect.i10.i64.i32.i32(i64 %p_Val2_s, i32 53, i32 62)" [jacobi-2d-imper.cpp:152]   --->   Operation 39 'partselect' 'tmp_8' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (1.29ns)   --->   "%icmp4 = icmp eq i10 %tmp_8, 0" [jacobi-2d-imper.cpp:152]   --->   Operation 40 'icmp' 'icmp4' <Predicate = (!tmp_1)> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (1.42ns)   --->   "%shift_V = sub i11 1, %new_exp_V" [jacobi-2d-imper.cpp:153]   --->   Operation 41 'sub' 'shift_V' <Predicate = (!tmp_1)> <Delay = 1.42> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (1.42ns)   --->   "%shift_V_1 = add i11 -1, %new_exp_V" [jacobi-2d-imper.cpp:155]   --->   Operation 42 'add' 'shift_V_1' <Predicate = (!tmp_1)> <Delay = 1.42> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node shift_V_3)   --->   "%sel_tmp3_demorgan = or i1 %tmp_4, %tmp_5" [jacobi-2d-imper.cpp:148]   --->   Operation 43 'or' 'sel_tmp3_demorgan' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node shift_V_3)   --->   "%sel_tmp3 = xor i1 %sel_tmp3_demorgan, true" [jacobi-2d-imper.cpp:148]   --->   Operation 44 'xor' 'sel_tmp3' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node shift_V_3)   --->   "%sel_tmp4 = and i1 %icmp4, %sel_tmp3" [jacobi-2d-imper.cpp:152]   --->   Operation 45 'and' 'sel_tmp4' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node shift_V_3)   --->   "%shift_V_2 = select i1 %sel_tmp4, i11 %shift_V, i11 %shift_V_1" [jacobi-2d-imper.cpp:152]   --->   Operation 46 'select' 'shift_V_2' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.63ns) (out node of the LUT)   --->   "%shift_V_3 = select i1 %tmp_4, i11 0, i11 %shift_V_2" [jacobi-2d-imper.cpp:148]   --->   Operation 47 'select' 'shift_V_3' <Predicate = (!tmp_1)> <Delay = 0.63> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node shift_V_4)   --->   "%sel_tmp7 = xor i1 %tmp_4, true" [jacobi-2d-imper.cpp:148]   --->   Operation 48 'xor' 'sel_tmp7' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node shift_V_4)   --->   "%sel_tmp8 = and i1 %tmp_5, %sel_tmp7" [jacobi-2d-imper.cpp:151]   --->   Operation 49 'and' 'sel_tmp8' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.63ns) (out node of the LUT)   --->   "%shift_V_4 = select i1 %sel_tmp8, i11 %shift_V_cast_cast, i11 %shift_V_3" [jacobi-2d-imper.cpp:151]   --->   Operation 50 'select' 'shift_V_4' <Predicate = (!tmp_1)> <Delay = 0.63> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_3 = call i53 @_ssdm_op_BitConcatenate.i53.i1.i52(i1 true, i52 %new_mant_V)" [jacobi-2d-imper.cpp:159]   --->   Operation 51 'bitconcatenate' 'tmp_3' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.70ns)   --->   "%xf_V_1 = select i1 %tmp_4, i53 %xf_V_5_cast, i53 %tmp_3" [jacobi-2d-imper.cpp:148]   --->   Operation 52 'select' 'xf_V_1' <Predicate = (!tmp_1)> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node xf_V)   --->   "%p_cast = zext i53 %xf_V_1 to i56" [jacobi-2d-imper.cpp:148]   --->   Operation 53 'zext' 'p_cast' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node xf_V)   --->   "%tmp_s = zext i11 %shift_V_4 to i56" [jacobi-2d-imper.cpp:161]   --->   Operation 54 'zext' 'tmp_s' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node xf_V)   --->   "%tmp_cast = zext i11 %shift_V_4 to i53" [jacobi-2d-imper.cpp:161]   --->   Operation 55 'zext' 'tmp_cast' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns) (grouped into LUT with out node xf_V)   --->   "%r_V_20 = lshr i53 %xf_V_1, %tmp_cast" [jacobi-2d-imper.cpp:161]   --->   Operation 56 'lshr' 'r_V_20' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 2.92> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node xf_V)   --->   "%r_V_18_cast = zext i53 %r_V_20 to i56" [jacobi-2d-imper.cpp:161]   --->   Operation 57 'zext' 'r_V_18_cast' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node xf_V)   --->   "%r_V_21 = shl i56 %p_cast, %tmp_s" [jacobi-2d-imper.cpp:163]   --->   Operation 58 'shl' 'r_V_21' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 2.92> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node xf_V)   --->   "%xf_V_3 = select i1 %icmp4, i56 %r_V_18_cast, i56 %r_V_21" [jacobi-2d-imper.cpp:160]   --->   Operation 59 'select' 'xf_V_3' <Predicate = (!tmp_1)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (2.92ns) (out node of the LUT)   --->   "%xf_V = add i56 2, %xf_V_3" [jacobi-2d-imper.cpp:164]   --->   Operation 60 'add' 'xf_V' <Predicate = (!tmp_1)> <Delay = 2.92> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_Result_i_i = call i2 @_ssdm_op_PartSelect.i2.i56.i32.i32(i56 %xf_V, i32 54, i32 55) nounwind" [jacobi-2d-imper.cpp:82->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 61 'partselect' 'p_Result_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%d_chunk_V = zext i2 %p_Result_i_i to i3" [jacobi-2d-imper.cpp:82->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 62 'zext' 'd_chunk_V' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 63 [2/2] (1.71ns)   --->   "%call_ret1_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %d_chunk_V, i3 0) nounwind" [jacobi-2d-imper.cpp:83->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 63 'call' 'call_ret1_i_i' <Predicate = (!tmp_1)> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_Result_24_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 51, i32 53) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 64 'partselect' 'p_Result_24_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_24_1_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 48, i32 50) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 65 'partselect' 'p_Result_24_1_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%p_Result_24_2_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 45, i32 47) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 66 'partselect' 'p_Result_24_2_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%p_Result_24_3_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 42, i32 44) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 67 'partselect' 'p_Result_24_3_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%p_Result_24_4_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 39, i32 41) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 68 'partselect' 'p_Result_24_4_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_Result_24_5_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 36, i32 38) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 69 'partselect' 'p_Result_24_5_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%p_Result_24_6_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 33, i32 35) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 70 'partselect' 'p_Result_24_6_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%p_Result_24_7_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 30, i32 32) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 71 'partselect' 'p_Result_24_7_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%p_Result_24_8_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 27, i32 29) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 72 'partselect' 'p_Result_24_8_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%p_Result_24_9_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 24, i32 26) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 73 'partselect' 'p_Result_24_9_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%p_Result_24_i_i_10 = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 21, i32 23) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 74 'partselect' 'p_Result_24_i_i_10' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_Result_24_10_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 18, i32 20) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 75 'partselect' 'p_Result_24_10_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%p_Result_24_11_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 15, i32 17) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 76 'partselect' 'p_Result_24_11_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_Result_24_12_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 12, i32 14) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 77 'partselect' 'p_Result_24_12_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%p_Result_24_13_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 9, i32 11) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 78 'partselect' 'p_Result_24_13_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%p_Result_24_14_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 6, i32 8) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 79 'partselect' 'p_Result_24_14_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%p_Result_24_15_i_i = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %xf_V, i32 3, i32 5) nounwind" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 80 'partselect' 'p_Result_24_15_i_i' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_9 = trunc i56 %xf_V to i3" [jacobi-2d-imper.cpp:88->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 81 'trunc' 'tmp_9' <Predicate = (!tmp_1)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.37>
+ST_2 : Operation 82 [1/2] (2.66ns)   --->   "%call_ret1_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %d_chunk_V, i3 0) nounwind" [jacobi-2d-imper.cpp:83->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 82 'call' 'call_ret1_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%r_V = extractvalue { i3, i3 } %call_ret1_i_i, 1" [jacobi-2d-imper.cpp:83->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 83 'extractvalue' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [2/2] (1.71ns)   --->   "%call_ret2_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_i_i, i3 %r_V) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 84 'call' 'call_ret2_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 4.37>
+ST_3 : Operation 85 [1/2] (2.66ns)   --->   "%call_ret2_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_i_i, i3 %r_V) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 85 'call' 'call_ret2_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%q_chunk_V = extractvalue { i3, i3 } %call_ret2_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 86 'extractvalue' 'q_chunk_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%r_V_1 = extractvalue { i3, i3 } %call_ret2_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 87 'extractvalue' 'r_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [2/2] (1.71ns)   --->   "%call_ret3_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_1_i_i, i3 %r_V_1) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 88 'call' 'call_ret3_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_10 = trunc i3 %q_chunk_V to i1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 89 'trunc' 'tmp_10' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.37>
+ST_4 : Operation 90 [1/2] (2.66ns)   --->   "%call_ret3_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_1_i_i, i3 %r_V_1) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 90 'call' 'call_ret3_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%q_chunk_V_1 = extractvalue { i3, i3 } %call_ret3_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 91 'extractvalue' 'q_chunk_V_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%r_V_2 = extractvalue { i3, i3 } %call_ret3_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 92 'extractvalue' 'r_V_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 93 [2/2] (1.71ns)   --->   "%call_ret4_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_2_i_i, i3 %r_V_2) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 93 'call' 'call_ret4_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 4.37>
+ST_5 : Operation 94 [1/2] (2.66ns)   --->   "%call_ret4_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_2_i_i, i3 %r_V_2) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 94 'call' 'call_ret4_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%q_chunk_V_2 = extractvalue { i3, i3 } %call_ret4_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 95 'extractvalue' 'q_chunk_V_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%r_V_3 = extractvalue { i3, i3 } %call_ret4_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 96 'extractvalue' 'r_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 97 [2/2] (1.71ns)   --->   "%call_ret5_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_3_i_i, i3 %r_V_3) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 97 'call' 'call_ret5_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 4.37>
+ST_6 : Operation 98 [1/2] (2.66ns)   --->   "%call_ret5_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_3_i_i, i3 %r_V_3) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 98 'call' 'call_ret5_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "%q_chunk_V_3 = extractvalue { i3, i3 } %call_ret5_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 99 'extractvalue' 'q_chunk_V_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%r_V_4 = extractvalue { i3, i3 } %call_ret5_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 100 'extractvalue' 'r_V_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 101 [2/2] (1.71ns)   --->   "%call_ret6_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_4_i_i, i3 %r_V_4) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 101 'call' 'call_ret6_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 4.37>
+ST_7 : Operation 102 [1/2] (2.66ns)   --->   "%call_ret6_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_4_i_i, i3 %r_V_4) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 102 'call' 'call_ret6_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%q_chunk_V_4 = extractvalue { i3, i3 } %call_ret6_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 103 'extractvalue' 'q_chunk_V_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 104 [1/1] (0.00ns)   --->   "%r_V_5 = extractvalue { i3, i3 } %call_ret6_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 104 'extractvalue' 'r_V_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 105 [2/2] (1.71ns)   --->   "%call_ret7_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_5_i_i, i3 %r_V_5) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 105 'call' 'call_ret7_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 4.37>
+ST_8 : Operation 106 [1/2] (2.66ns)   --->   "%call_ret7_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_5_i_i, i3 %r_V_5) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 106 'call' 'call_ret7_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 107 [1/1] (0.00ns)   --->   "%q_chunk_V_5 = extractvalue { i3, i3 } %call_ret7_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 107 'extractvalue' 'q_chunk_V_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 108 [1/1] (0.00ns)   --->   "%r_V_6 = extractvalue { i3, i3 } %call_ret7_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 108 'extractvalue' 'r_V_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 109 [2/2] (1.71ns)   --->   "%call_ret8_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_6_i_i, i3 %r_V_6) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 109 'call' 'call_ret8_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 4.37>
+ST_9 : Operation 110 [1/2] (2.66ns)   --->   "%call_ret8_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_6_i_i, i3 %r_V_6) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 110 'call' 'call_ret8_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 111 [1/1] (0.00ns)   --->   "%q_chunk_V_6 = extractvalue { i3, i3 } %call_ret8_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 111 'extractvalue' 'q_chunk_V_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%r_V_7 = extractvalue { i3, i3 } %call_ret8_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 112 'extractvalue' 'r_V_7' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 113 [2/2] (1.71ns)   --->   "%call_ret9_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_7_i_i, i3 %r_V_7) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 113 'call' 'call_ret9_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 4.37>
+ST_10 : Operation 114 [1/2] (2.66ns)   --->   "%call_ret9_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_7_i_i, i3 %r_V_7) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 114 'call' 'call_ret9_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%q_chunk_V_7 = extractvalue { i3, i3 } %call_ret9_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 115 'extractvalue' 'q_chunk_V_7' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%r_V_8 = extractvalue { i3, i3 } %call_ret9_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 116 'extractvalue' 'r_V_8' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 117 [2/2] (1.71ns)   --->   "%call_ret10_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_8_i_i, i3 %r_V_8) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 117 'call' 'call_ret10_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 4.37>
+ST_11 : Operation 118 [1/2] (2.66ns)   --->   "%call_ret10_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_8_i_i, i3 %r_V_8) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 118 'call' 'call_ret10_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 119 [1/1] (0.00ns)   --->   "%q_chunk_V_8 = extractvalue { i3, i3 } %call_ret10_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 119 'extractvalue' 'q_chunk_V_8' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 120 [1/1] (0.00ns)   --->   "%r_V_9 = extractvalue { i3, i3 } %call_ret10_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 120 'extractvalue' 'r_V_9' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 121 [2/2] (1.71ns)   --->   "%call_ret11_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_9_i_i, i3 %r_V_9) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 121 'call' 'call_ret11_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 4.37>
+ST_12 : Operation 122 [1/2] (2.66ns)   --->   "%call_ret11_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_9_i_i, i3 %r_V_9) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 122 'call' 'call_ret11_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 123 [1/1] (0.00ns)   --->   "%q_chunk_V_9 = extractvalue { i3, i3 } %call_ret11_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 123 'extractvalue' 'q_chunk_V_9' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 124 [1/1] (0.00ns)   --->   "%r_V_12 = extractvalue { i3, i3 } %call_ret11_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 124 'extractvalue' 'r_V_12' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 125 [2/2] (1.71ns)   --->   "%call_ret12_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_i_i_10, i3 %r_V_12) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 125 'call' 'call_ret12_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 4.37>
+ST_13 : Operation 126 [1/2] (2.66ns)   --->   "%call_ret12_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_i_i_10, i3 %r_V_12) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 126 'call' 'call_ret12_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 127 [1/1] (0.00ns)   --->   "%q_chunk_V_10 = extractvalue { i3, i3 } %call_ret12_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 127 'extractvalue' 'q_chunk_V_10' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 128 [1/1] (0.00ns)   --->   "%r_V_13 = extractvalue { i3, i3 } %call_ret12_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 128 'extractvalue' 'r_V_13' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 129 [2/2] (1.71ns)   --->   "%call_ret13_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_10_i_i, i3 %r_V_13) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 129 'call' 'call_ret13_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 4.37>
+ST_14 : Operation 130 [1/2] (2.66ns)   --->   "%call_ret13_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_10_i_i, i3 %r_V_13) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 130 'call' 'call_ret13_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 131 [1/1] (0.00ns)   --->   "%q_chunk_V_11 = extractvalue { i3, i3 } %call_ret13_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 131 'extractvalue' 'q_chunk_V_11' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 132 [1/1] (0.00ns)   --->   "%r_V_14 = extractvalue { i3, i3 } %call_ret13_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 132 'extractvalue' 'r_V_14' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 133 [2/2] (1.71ns)   --->   "%call_ret14_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_11_i_i, i3 %r_V_14) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 133 'call' 'call_ret14_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 4.37>
+ST_15 : Operation 134 [1/2] (2.66ns)   --->   "%call_ret14_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_11_i_i, i3 %r_V_14) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 134 'call' 'call_ret14_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 135 [1/1] (0.00ns)   --->   "%q_chunk_V_12 = extractvalue { i3, i3 } %call_ret14_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 135 'extractvalue' 'q_chunk_V_12' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 136 [1/1] (0.00ns)   --->   "%r_V_15 = extractvalue { i3, i3 } %call_ret14_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 136 'extractvalue' 'r_V_15' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 137 [2/2] (1.71ns)   --->   "%call_ret15_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_12_i_i, i3 %r_V_15) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 137 'call' 'call_ret15_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 4.37>
+ST_16 : Operation 138 [1/2] (2.66ns)   --->   "%call_ret15_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_12_i_i, i3 %r_V_15) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 138 'call' 'call_ret15_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 139 [1/1] (0.00ns)   --->   "%q_chunk_V_13 = extractvalue { i3, i3 } %call_ret15_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 139 'extractvalue' 'q_chunk_V_13' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 140 [1/1] (0.00ns)   --->   "%r_V_16 = extractvalue { i3, i3 } %call_ret15_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 140 'extractvalue' 'r_V_16' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 141 [2/2] (1.71ns)   --->   "%call_ret16_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_13_i_i, i3 %r_V_16) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 141 'call' 'call_ret16_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 4.37>
+ST_17 : Operation 142 [1/2] (2.66ns)   --->   "%call_ret16_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_13_i_i, i3 %r_V_16) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 142 'call' 'call_ret16_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 143 [1/1] (0.00ns)   --->   "%q_chunk_V_14 = extractvalue { i3, i3 } %call_ret16_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 143 'extractvalue' 'q_chunk_V_14' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 144 [1/1] (0.00ns)   --->   "%r_V_17 = extractvalue { i3, i3 } %call_ret16_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 144 'extractvalue' 'r_V_17' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 145 [2/2] (1.71ns)   --->   "%call_ret17_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_14_i_i, i3 %r_V_17) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 145 'call' 'call_ret17_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 4.37>
+ST_18 : Operation 146 [1/2] (2.66ns)   --->   "%call_ret17_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_14_i_i, i3 %r_V_17) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 146 'call' 'call_ret17_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 147 [1/1] (0.00ns)   --->   "%q_chunk_V_15 = extractvalue { i3, i3 } %call_ret17_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 147 'extractvalue' 'q_chunk_V_15' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 148 [1/1] (0.00ns)   --->   "%r_V_18 = extractvalue { i3, i3 } %call_ret17_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 148 'extractvalue' 'r_V_18' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 149 [2/2] (1.71ns)   --->   "%call_ret18_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_15_i_i, i3 %r_V_18) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 149 'call' 'call_ret18_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 4.37>
+ST_19 : Operation 150 [1/2] (2.66ns)   --->   "%call_ret18_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %p_Result_24_15_i_i, i3 %r_V_18) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 150 'call' 'call_ret18_i_i' <Predicate = true> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 151 [1/1] (0.00ns)   --->   "%q_chunk_V_16 = extractvalue { i3, i3 } %call_ret18_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 151 'extractvalue' 'q_chunk_V_16' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 152 [1/1] (0.00ns)   --->   "%r_V_19 = extractvalue { i3, i3 } %call_ret18_i_i, 1" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 152 'extractvalue' 'r_V_19' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 153 [2/2] (1.71ns)   --->   "%call_ret_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %tmp_9, i3 %r_V_19) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 153 'call' 'call_ret_i_i' <Predicate = true> <Delay = 1.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 3.72>
+ST_20 : Operation 154 [1/2] (2.66ns)   --->   "%call_ret_i_i = call fastcc { i3, i3 } @lut_div5_chunk(i3 %tmp_9, i3 %r_V_19) nounwind" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 154 'call' 'call_ret_i_i' <Predicate = (!tmp_1)> <Delay = 2.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 155 [1/1] (0.00ns)   --->   "%q_chunk_V_17 = extractvalue { i3, i3 } %call_ret_i_i, 0" [jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165]   --->   Operation 155 'extractvalue' 'q_chunk_V_17' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_20 : Operation 156 [1/1] (0.00ns)   --->   "%new_mant_V_1 = call i52 @_ssdm_op_BitConcatenate.i52.i1.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3.i3(i1 %tmp_10, i3 %q_chunk_V_1, i3 %q_chunk_V_2, i3 %q_chunk_V_3, i3 %q_chunk_V_4, i3 %q_chunk_V_5, i3 %q_chunk_V_6, i3 %q_chunk_V_7, i3 %q_chunk_V_8, i3 %q_chunk_V_9, i3 %q_chunk_V_10, i3 %q_chunk_V_11, i3 %q_chunk_V_12, i3 %q_chunk_V_13, i3 %q_chunk_V_14, i3 %q_chunk_V_15, i3 %q_chunk_V_16, i3 %q_chunk_V_17)" [jacobi-2d-imper.cpp:165]   --->   Operation 156 'bitconcatenate' 'new_mant_V_1' <Predicate = (!tmp_1)> <Delay = 0.00>
+ST_20 : Operation 157 [1/1] (1.06ns)   --->   "br label %._crit_edge416" [jacobi-2d-imper.cpp:166]   --->   Operation 157 'br' <Predicate = (!tmp_1)> <Delay = 1.06>
+ST_20 : Operation 158 [1/1] (0.00ns)   --->   "%p_Repl2_s = phi i52 [ %new_mant_V_1, %_ifconv1 ], [ %new_mant_V, %_ifconv ]"   --->   Operation 158 'phi' 'p_Repl2_s' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 159 [1/1] (0.00ns)   --->   "%p_Result_s = call i64 @_ssdm_op_BitConcatenate.i64.i1.i11.i52(i1 %p_Repl2_2, i11 %p_Repl2_1, i52 %p_Repl2_s) nounwind" [jacobi-2d-imper.cpp:117->jacobi-2d-imper.cpp:167]   --->   Operation 159 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 160 [1/1] (0.00ns)   --->   "%out = bitcast i64 %p_Result_s to double" [jacobi-2d-imper.cpp:118->jacobi-2d-imper.cpp:167]   --->   Operation 160 'bitcast' 'out' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 161 [1/1] (0.00ns)   --->   "ret double %out" [jacobi-2d-imper.cpp:168]   --->   Operation 161 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.53ns
+The critical path consists of the following:
+	wire read on port 'in_r' [8]  (0 ns)
+	'icmp' operation ('icmp', jacobi-2d-imper.cpp:140) [15]  (0.644 ns)
+	'select' operation ('shift_V_cast_cast', jacobi-2d-imper.cpp:140) [16]  (0.654 ns)
+	'icmp' operation ('tmp_5', jacobi-2d-imper.cpp:151) [26]  (1.33 ns)
+	'or' operation ('sel_tmp3_demorgan', jacobi-2d-imper.cpp:148) [31]  (0 ns)
+	'xor' operation ('sel_tmp3', jacobi-2d-imper.cpp:148) [32]  (0 ns)
+	'and' operation ('sel_tmp4', jacobi-2d-imper.cpp:152) [33]  (0 ns)
+	'select' operation ('shift.V', jacobi-2d-imper.cpp:152) [34]  (0 ns)
+	'select' operation ('shift.V', jacobi-2d-imper.cpp:148) [35]  (0.633 ns)
+	'select' operation ('shift.V', jacobi-2d-imper.cpp:151) [38]  (0.633 ns)
+	'lshr' operation ('r.V', jacobi-2d-imper.cpp:161) [44]  (0 ns)
+	'select' operation ('xf.V', jacobi-2d-imper.cpp:160) [47]  (0 ns)
+	'add' operation ('xf.V', jacobi-2d-imper.cpp:164) [48]  (2.93 ns)
+	'call' operation ('call_ret1_i_i', jacobi-2d-imper.cpp:83->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [51]  (1.71 ns)
+
+ <State 2>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret1_i_i', jacobi-2d-imper.cpp:83->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [51]  (2.66 ns)
+	'call' operation ('call_ret2_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [54]  (1.71 ns)
+
+ <State 3>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret2_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [54]  (2.66 ns)
+	'call' operation ('call_ret3_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [58]  (1.71 ns)
+
+ <State 4>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret3_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [58]  (2.66 ns)
+	'call' operation ('call_ret4_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [62]  (1.71 ns)
+
+ <State 5>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret4_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [62]  (2.66 ns)
+	'call' operation ('call_ret5_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [66]  (1.71 ns)
+
+ <State 6>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret5_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [66]  (2.66 ns)
+	'call' operation ('call_ret6_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [70]  (1.71 ns)
+
+ <State 7>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret6_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [70]  (2.66 ns)
+	'call' operation ('call_ret7_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [74]  (1.71 ns)
+
+ <State 8>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret7_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [74]  (2.66 ns)
+	'call' operation ('call_ret8_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [78]  (1.71 ns)
+
+ <State 9>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret8_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [78]  (2.66 ns)
+	'call' operation ('call_ret9_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [82]  (1.71 ns)
+
+ <State 10>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret9_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [82]  (2.66 ns)
+	'call' operation ('call_ret10_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [86]  (1.71 ns)
+
+ <State 11>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret10_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [86]  (2.66 ns)
+	'call' operation ('call_ret11_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [90]  (1.71 ns)
+
+ <State 12>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret11_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [90]  (2.66 ns)
+	'call' operation ('call_ret12_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [94]  (1.71 ns)
+
+ <State 13>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret12_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [94]  (2.66 ns)
+	'call' operation ('call_ret13_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [98]  (1.71 ns)
+
+ <State 14>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret13_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [98]  (2.66 ns)
+	'call' operation ('call_ret14_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [102]  (1.71 ns)
+
+ <State 15>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret14_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [102]  (2.66 ns)
+	'call' operation ('call_ret15_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [106]  (1.71 ns)
+
+ <State 16>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret15_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [106]  (2.66 ns)
+	'call' operation ('call_ret16_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [110]  (1.71 ns)
+
+ <State 17>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret16_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [110]  (2.66 ns)
+	'call' operation ('call_ret17_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [114]  (1.71 ns)
+
+ <State 18>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret17_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [114]  (2.66 ns)
+	'call' operation ('call_ret18_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [118]  (1.71 ns)
+
+ <State 19>: 4.37ns
+The critical path consists of the following:
+	'call' operation ('call_ret18_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [118]  (2.66 ns)
+	'call' operation ('call_ret_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [122]  (1.71 ns)
+
+ <State 20>: 3.73ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i_i', jacobi-2d-imper.cpp:89->jacobi-2d-imper.cpp:97->jacobi-2d-imper.cpp:165) to 'lut_div5_chunk' [122]  (2.66 ns)
+	multiplexor before 'phi' operation ('mant.V') with incoming values : ('ssdm_int<52 + 1024 * 0, false>.V', jacobi-2d-imper.cpp:51->jacobi-2d-imper.cpp:134) ('new_mant.V', jacobi-2d-imper.cpp:165) [128]  (1.06 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
