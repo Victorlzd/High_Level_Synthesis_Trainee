@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vivado HLS Report for 'lut_mul3_chunk'
+================================================================
+* Date:           Thu Aug 23 12:23:50 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        result
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.664|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.66>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%in_V_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %in_V)"   --->   Operation 3 'read' 'in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%tmp = zext i6 %in_V_read to i64" [int_mul3.cpp:18]   --->   Operation 4 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%mem_0_addr = getelementptr [64 x i1]* @mem_0, i64 0, i64 %tmp" [int_mul3.cpp:18]   --->   Operation 5 'getelementptr' 'mem_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (2.66ns)   --->   "%mem_0_load = load i1* %mem_0_addr, align 1" [int_mul3.cpp:18]   --->   Operation 6 'load' 'mem_0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%mem_1_addr = getelementptr [64 x i1]* @mem_1, i64 0, i64 %tmp" [int_mul3.cpp:19]   --->   Operation 7 'getelementptr' 'mem_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (2.66ns)   --->   "%mem_1_load = load i1* %mem_1_addr, align 1" [int_mul3.cpp:19]   --->   Operation 8 'load' 'mem_1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%mem_2_addr = getelementptr [64 x i1]* @mem_2, i64 0, i64 %tmp" [int_mul3.cpp:20]   --->   Operation 9 'getelementptr' 'mem_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (2.66ns)   --->   "%mem_2_load = load i1* %mem_2_addr, align 1" [int_mul3.cpp:20]   --->   Operation 10 'load' 'mem_2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mem_3_addr = getelementptr [64 x i1]* @mem_3, i64 0, i64 %tmp" [int_mul3.cpp:21]   --->   Operation 11 'getelementptr' 'mem_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (2.66ns)   --->   "%mem_3_load = load i1* %mem_3_addr, align 1" [int_mul3.cpp:21]   --->   Operation 12 'load' 'mem_3_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%mem_4_addr = getelementptr [64 x i1]* @mem_4, i64 0, i64 %tmp" [int_mul3.cpp:22]   --->   Operation 13 'getelementptr' 'mem_4_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (2.66ns)   --->   "%mem_4_load = load i1* %mem_4_addr, align 1" [int_mul3.cpp:22]   --->   Operation 14 'load' 'mem_4_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%mem_5_addr = getelementptr [64 x i1]* @mem_5, i64 0, i64 %tmp" [int_mul3.cpp:23]   --->   Operation 15 'getelementptr' 'mem_5_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (2.66ns)   --->   "%mem_5_load = load i1* %mem_5_addr, align 1" [int_mul3.cpp:23]   --->   Operation 16 'load' 'mem_5_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%mem_6_addr = getelementptr [64 x i1]* @mem_6, i64 0, i64 %tmp" [int_mul3.cpp:24]   --->   Operation 17 'getelementptr' 'mem_6_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (2.66ns)   --->   "%mem_6_load = load i1* %mem_6_addr, align 1" [int_mul3.cpp:24]   --->   Operation 18 'load' 'mem_6_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%mem_7_addr = getelementptr [64 x i1]* @mem_7, i64 0, i64 %tmp" [int_mul3.cpp:25]   --->   Operation 19 'getelementptr' 'mem_7_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [2/2] (2.66ns)   --->   "%mem_7_load = load i1* %mem_7_addr, align 1" [int_mul3.cpp:25]   --->   Operation 20 'load' 'mem_7_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+
+State 2 <SV = 1> <Delay = 2.66>
+ST_2 : Operation 21 [1/2] (2.66ns)   --->   "%mem_0_load = load i1* %mem_0_addr, align 1" [int_mul3.cpp:18]   --->   Operation 21 'load' 'mem_0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 22 [1/2] (2.66ns)   --->   "%mem_1_load = load i1* %mem_1_addr, align 1" [int_mul3.cpp:19]   --->   Operation 22 'load' 'mem_1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 23 [1/2] (2.66ns)   --->   "%mem_2_load = load i1* %mem_2_addr, align 1" [int_mul3.cpp:20]   --->   Operation 23 'load' 'mem_2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 24 [1/2] (2.66ns)   --->   "%mem_3_load = load i1* %mem_3_addr, align 1" [int_mul3.cpp:21]   --->   Operation 24 'load' 'mem_3_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 25 [1/2] (2.66ns)   --->   "%mem_4_load = load i1* %mem_4_addr, align 1" [int_mul3.cpp:22]   --->   Operation 25 'load' 'mem_4_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 26 [1/2] (2.66ns)   --->   "%mem_5_load = load i1* %mem_5_addr, align 1" [int_mul3.cpp:23]   --->   Operation 26 'load' 'mem_5_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 27 [1/2] (2.66ns)   --->   "%mem_6_load = load i1* %mem_6_addr, align 1" [int_mul3.cpp:24]   --->   Operation 27 'load' 'mem_6_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 28 [1/2] (2.66ns)   --->   "%mem_7_load = load i1* %mem_7_addr, align 1" [int_mul3.cpp:25]   --->   Operation 28 'load' 'mem_7_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%p_Result_s = call i8 @_ssdm_op_BitConcatenate.i8.i1.i1.i1.i1.i1.i1.i1.i1(i1 %mem_7_load, i1 %mem_6_load, i1 %mem_5_load, i1 %mem_4_load, i1 %mem_3_load, i1 %mem_2_load, i1 %mem_1_load, i1 %mem_0_load)" [int_mul3.cpp:25]   --->   Operation 29 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "ret i8 %p_Result_s" [int_mul3.cpp:26]   --->   Operation 30 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.66ns
+The critical path consists of the following:
+	wire read on port 'in_V' [10]  (0 ns)
+	'getelementptr' operation ('mem_1_addr', int_mul3.cpp:19) [14]  (0 ns)
+	'load' operation ('mem_1_load', int_mul3.cpp:19) on array 'mem_1' [15]  (2.66 ns)
+
+ <State 2>: 2.66ns
+The critical path consists of the following:
+	'load' operation ('mem_0_load', int_mul3.cpp:18) on array 'mem_0' [13]  (2.66 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vivado HLS Report for 'lut_div5_chunk'
+================================================================
+* Date:           Fri Aug 24 14:51:50 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       test
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.664|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.66>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%r_in_V_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %r_in_V)"   --->   Operation 3 'read' 'r_in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%d_V_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %d_V)"   --->   Operation 4 'read' 'd_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_Result_3 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %r_in_V_read, i3 %d_V_read)" [jacobi-2d-imper.cpp:63]   --->   Operation 5 'bitconcatenate' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp = zext i6 %p_Result_3 to i64" [jacobi-2d-imper.cpp:64]   --->   Operation 6 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%r0_addr = getelementptr [64 x i1]* @r0, i64 0, i64 %tmp" [jacobi-2d-imper.cpp:64]   --->   Operation 7 'getelementptr' 'r0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (2.66ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [jacobi-2d-imper.cpp:64]   --->   Operation 8 'load' 'r0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%r1_addr = getelementptr [64 x i1]* @r1, i64 0, i64 %tmp" [jacobi-2d-imper.cpp:65]   --->   Operation 9 'getelementptr' 'r1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (2.66ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [jacobi-2d-imper.cpp:65]   --->   Operation 10 'load' 'r1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%r2_addr = getelementptr [64 x i1]* @r2, i64 0, i64 %tmp" [jacobi-2d-imper.cpp:66]   --->   Operation 11 'getelementptr' 'r2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (2.66ns)   --->   "%r2_load = load i1* %r2_addr, align 1" [jacobi-2d-imper.cpp:66]   --->   Operation 12 'load' 'r2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%q0_addr = getelementptr [64 x i1]* @q0, i64 0, i64 %tmp" [jacobi-2d-imper.cpp:67]   --->   Operation 13 'getelementptr' 'q0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (2.66ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [jacobi-2d-imper.cpp:67]   --->   Operation 14 'load' 'q0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%q1_addr = getelementptr [64 x i1]* @q1, i64 0, i64 %tmp" [jacobi-2d-imper.cpp:68]   --->   Operation 15 'getelementptr' 'q1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (2.66ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [jacobi-2d-imper.cpp:68]   --->   Operation 16 'load' 'q1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%q2_addr = getelementptr [64 x i1]* @q2, i64 0, i64 %tmp" [jacobi-2d-imper.cpp:69]   --->   Operation 17 'getelementptr' 'q2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (2.66ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [jacobi-2d-imper.cpp:69]   --->   Operation 18 'load' 'q2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+
+State 2 <SV = 1> <Delay = 2.66>
+ST_2 : Operation 19 [1/2] (2.66ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [jacobi-2d-imper.cpp:64]   --->   Operation 19 'load' 'r0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 20 [1/2] (2.66ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [jacobi-2d-imper.cpp:65]   --->   Operation 20 'load' 'r1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 21 [1/2] (2.66ns)   --->   "%r2_load = load i1* %r2_addr, align 1" [jacobi-2d-imper.cpp:66]   --->   Operation 21 'load' 'r2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_Result_s = call i3 @_ssdm_op_BitConcatenate.i3.i1.i1.i1(i1 %r2_load, i1 %r1_load, i1 %r0_load)" [jacobi-2d-imper.cpp:66]   --->   Operation 22 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (2.66ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [jacobi-2d-imper.cpp:67]   --->   Operation 23 'load' 'q0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 24 [1/2] (2.66ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [jacobi-2d-imper.cpp:68]   --->   Operation 24 'load' 'q1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 25 [1/2] (2.66ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [jacobi-2d-imper.cpp:69]   --->   Operation 25 'load' 'q2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%p_Result_1 = call i3 @_ssdm_op_BitConcatenate.i3.i1.i1.i1(i1 %q2_load, i1 %q1_load, i1 %q0_load)" [jacobi-2d-imper.cpp:69]   --->   Operation 26 'bitconcatenate' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i3, i3 } undef, i3 %p_Result_1, 0" [jacobi-2d-imper.cpp:70]   --->   Operation 27 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i3, i3 } %mrv, i3 %p_Result_s, 1" [jacobi-2d-imper.cpp:70]   --->   Operation 28 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "ret { i3, i3 } %mrv_1" [jacobi-2d-imper.cpp:70]   --->   Operation 29 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.66ns
+The critical path consists of the following:
+	wire read on port 'r_in_V' [9]  (0 ns)
+	'getelementptr' operation ('r2_addr', jacobi-2d-imper.cpp:66) [17]  (0 ns)
+	'load' operation ('r2_load', jacobi-2d-imper.cpp:66) on array 'r2' [18]  (2.66 ns)
+
+ <State 2>: 2.66ns
+The critical path consists of the following:
+	'load' operation ('r0_load', jacobi-2d-imper.cpp:64) on array 'r0' [14]  (2.66 ns)
+	'insertvalue' operation ('mrv_1', jacobi-2d-imper.cpp:70) [28]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

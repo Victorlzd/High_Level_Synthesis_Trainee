@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"mul10": {
+			"proto_instances": {
+			}
+		}
+	}
+}

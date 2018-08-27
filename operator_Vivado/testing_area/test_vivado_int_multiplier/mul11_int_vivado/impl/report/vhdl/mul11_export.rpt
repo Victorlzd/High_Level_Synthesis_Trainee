@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             test_vivado_int_multiplier
+Solution:            mul11_int_vivado
+Device target:       xc7k160tfbg484-1
+Report date:         Thu Aug 23 12:54:58 CEST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:           15
+LUT:              4
+FF:              71
+DSP:              2
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    2.500
+CP achieved post-synthesis:    1.712
+CP achieved post-implementation:    1.825
+Timing met

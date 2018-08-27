@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vivado HLS Report for 'int_56_div5'
+================================================================
+* Date:           Fri Aug 24 16:30:11 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       int_56_div5
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.328|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    3|    3|    3|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.66>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%in_V_read = call i56 @_ssdm_op_Read.ap_auto.i56(i56 %in_V)"   --->   Operation 5 'read' 'in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_Result_s = call i2 @_ssdm_op_PartSelect.i2.i56.i32.i32(i56 %in_V_read, i32 54, i32 55)" [jacobi-2d-imper.cpp:83]   --->   Operation 6 'partselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%d_chunk_V = zext i2 %p_Result_s to i3" [jacobi-2d-imper.cpp:83]   --->   Operation 7 'zext' 'd_chunk_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_Result_s_7 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 0, i3 %d_chunk_V)" [jacobi-2d-imper.cpp:63->jacobi-2d-imper.cpp:84]   --->   Operation 8 'bitconcatenate' 'p_Result_s_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_i = zext i6 %p_Result_s_7 to i64" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:84]   --->   Operation 9 'zext' 'tmp_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%r0_addr = getelementptr [64 x i1]* @r0, i64 0, i64 %tmp_i" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:84]   --->   Operation 10 'getelementptr' 'r0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (2.66ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:84]   --->   Operation 11 'load' 'r0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%r1_addr = getelementptr [64 x i1]* @r1, i64 0, i64 %tmp_i" [jacobi-2d-imper.cpp:65->jacobi-2d-imper.cpp:84]   --->   Operation 12 'getelementptr' 'r1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [2/2] (2.66ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [jacobi-2d-imper.cpp:65->jacobi-2d-imper.cpp:84]   --->   Operation 13 'load' 'r1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%r2_addr = getelementptr [64 x i1]* @r2, i64 0, i64 %tmp_i" [jacobi-2d-imper.cpp:66->jacobi-2d-imper.cpp:84]   --->   Operation 14 'getelementptr' 'r2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (2.66ns)   --->   "%r2_load = load i1* %r2_addr, align 1" [jacobi-2d-imper.cpp:66->jacobi-2d-imper.cpp:84]   --->   Operation 15 'load' 'r2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%q0_addr = getelementptr [64 x i1]* @q0, i64 0, i64 %tmp_i" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:84]   --->   Operation 16 'getelementptr' 'q0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (2.66ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:84]   --->   Operation 17 'load' 'q0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%q1_addr = getelementptr [64 x i1]* @q1, i64 0, i64 %tmp_i" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:84]   --->   Operation 18 'getelementptr' 'q1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (2.66ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:84]   --->   Operation 19 'load' 'q1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%d_chunk_V_1 = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %in_V_read, i32 51, i32 53)" [jacobi-2d-imper.cpp:86]   --->   Operation 20 'partselect' 'd_chunk_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%d_chunk_V_2 = call i3 @_ssdm_op_PartSelect.i3.i56.i32.i32(i56 %in_V_read, i32 48, i32 50)" [jacobi-2d-imper.cpp:89]   --->   Operation 21 'partselect' 'd_chunk_V_2' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.32>
+ST_2 : Operation 22 [1/2] (2.66ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:84]   --->   Operation 22 'load' 'r0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 23 [1/2] (2.66ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [jacobi-2d-imper.cpp:65->jacobi-2d-imper.cpp:84]   --->   Operation 23 'load' 'r1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 24 [1/2] (2.66ns)   --->   "%r2_load = load i1* %r2_addr, align 1" [jacobi-2d-imper.cpp:66->jacobi-2d-imper.cpp:84]   --->   Operation 24 'load' 'r2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 25 [1/2] (2.66ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:84]   --->   Operation 25 'load' 'q0_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 26 [1/2] (2.66ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:84]   --->   Operation 26 'load' 'q1_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%p_Result_1 = call i6 @_ssdm_op_BitConcatenate.i6.i1.i1.i1.i3(i1 %r2_load, i1 %r1_load, i1 %r0_load, i3 %d_chunk_V_1)" [jacobi-2d-imper.cpp:63->jacobi-2d-imper.cpp:87]   --->   Operation 27 'bitconcatenate' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_i1 = zext i6 %p_Result_1 to i64" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:87]   --->   Operation 28 'zext' 'tmp_i1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%r0_addr_1 = getelementptr [64 x i1]* @r0, i64 0, i64 %tmp_i1" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:87]   --->   Operation 29 'getelementptr' 'r0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [2/2] (2.66ns)   --->   "%r0_load_1 = load i1* %r0_addr_1, align 1" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:87]   --->   Operation 30 'load' 'r0_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%r1_addr_1 = getelementptr [64 x i1]* @r1, i64 0, i64 %tmp_i1" [jacobi-2d-imper.cpp:65->jacobi-2d-imper.cpp:87]   --->   Operation 31 'getelementptr' 'r1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (2.66ns)   --->   "%r1_load_1 = load i1* %r1_addr_1, align 1" [jacobi-2d-imper.cpp:65->jacobi-2d-imper.cpp:87]   --->   Operation 32 'load' 'r1_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%r2_addr_1 = getelementptr [64 x i1]* @r2, i64 0, i64 %tmp_i1" [jacobi-2d-imper.cpp:66->jacobi-2d-imper.cpp:87]   --->   Operation 33 'getelementptr' 'r2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (2.66ns)   --->   "%r2_load_1 = load i1* %r2_addr_1, align 1" [jacobi-2d-imper.cpp:66->jacobi-2d-imper.cpp:87]   --->   Operation 34 'load' 'r2_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%q0_addr_1 = getelementptr [64 x i1]* @q0, i64 0, i64 %tmp_i1" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:87]   --->   Operation 35 'getelementptr' 'q0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (2.66ns)   --->   "%q0_load_1 = load i1* %q0_addr_1, align 1" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:87]   --->   Operation 36 'load' 'q0_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%q1_addr_1 = getelementptr [64 x i1]* @q1, i64 0, i64 %tmp_i1" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:87]   --->   Operation 37 'getelementptr' 'q1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [2/2] (2.66ns)   --->   "%q1_load_1 = load i1* %q1_addr_1, align 1" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:87]   --->   Operation 38 'load' 'q1_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%q2_addr = getelementptr [64 x i1]* @q2, i64 0, i64 %tmp_i1" [jacobi-2d-imper.cpp:69->jacobi-2d-imper.cpp:87]   --->   Operation 39 'getelementptr' 'q2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [2/2] (2.66ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [jacobi-2d-imper.cpp:69->jacobi-2d-imper.cpp:87]   --->   Operation 40 'load' 'q2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+
+State 3 <SV = 2> <Delay = 5.32>
+ST_3 : Operation 41 [1/2] (2.66ns)   --->   "%r0_load_1 = load i1* %r0_addr_1, align 1" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:87]   --->   Operation 41 'load' 'r0_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 42 [1/2] (2.66ns)   --->   "%r1_load_1 = load i1* %r1_addr_1, align 1" [jacobi-2d-imper.cpp:65->jacobi-2d-imper.cpp:87]   --->   Operation 42 'load' 'r1_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 43 [1/2] (2.66ns)   --->   "%r2_load_1 = load i1* %r2_addr_1, align 1" [jacobi-2d-imper.cpp:66->jacobi-2d-imper.cpp:87]   --->   Operation 43 'load' 'r2_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 44 [1/2] (2.66ns)   --->   "%q0_load_1 = load i1* %q0_addr_1, align 1" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:87]   --->   Operation 44 'load' 'q0_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 45 [1/2] (2.66ns)   --->   "%q1_load_1 = load i1* %q1_addr_1, align 1" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:87]   --->   Operation 45 'load' 'q1_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 46 [1/2] (2.66ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [jacobi-2d-imper.cpp:69->jacobi-2d-imper.cpp:87]   --->   Operation 46 'load' 'q2_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%p_Result_2 = call i6 @_ssdm_op_BitConcatenate.i6.i1.i1.i1.i3(i1 %r2_load_1, i1 %r1_load_1, i1 %r0_load_1, i3 %d_chunk_V_2)" [jacobi-2d-imper.cpp:63->jacobi-2d-imper.cpp:90]   --->   Operation 47 'bitconcatenate' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_i2 = zext i6 %p_Result_2 to i64" [jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:90]   --->   Operation 48 'zext' 'tmp_i2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%q0_addr_2 = getelementptr [64 x i1]* @q0, i64 0, i64 %tmp_i2" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:90]   --->   Operation 49 'getelementptr' 'q0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [2/2] (2.66ns)   --->   "%q0_load_2 = load i1* %q0_addr_2, align 1" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:90]   --->   Operation 50 'load' 'q0_load_2' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%q1_addr_2 = getelementptr [64 x i1]* @q1, i64 0, i64 %tmp_i2" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:90]   --->   Operation 51 'getelementptr' 'q1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [2/2] (2.66ns)   --->   "%q1_load_2 = load i1* %q1_addr_2, align 1" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:90]   --->   Operation 52 'load' 'q1_load_2' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%q2_addr_1 = getelementptr [64 x i1]* @q2, i64 0, i64 %tmp_i2" [jacobi-2d-imper.cpp:69->jacobi-2d-imper.cpp:90]   --->   Operation 53 'getelementptr' 'q2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [2/2] (2.66ns)   --->   "%q2_load_1 = load i1* %q2_addr_1, align 1" [jacobi-2d-imper.cpp:69->jacobi-2d-imper.cpp:90]   --->   Operation 54 'load' 'q2_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+
+State 4 <SV = 3> <Delay = 2.66>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i56 0), !map !192"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i56 %in_V), !map !198"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @int_56_div5_str) nounwind"   --->   Operation 57 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [jacobi-2d-imper.cpp:73]   --->   Operation 58 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/2] (2.66ns)   --->   "%q0_load_2 = load i1* %q0_addr_2, align 1" [jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:90]   --->   Operation 59 'load' 'q0_load_2' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_4 : Operation 60 [1/2] (2.66ns)   --->   "%q1_load_2 = load i1* %q1_addr_2, align 1" [jacobi-2d-imper.cpp:68->jacobi-2d-imper.cpp:90]   --->   Operation 60 'load' 'q1_load_2' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_4 : Operation 61 [1/2] (2.66ns)   --->   "%q2_load_1 = load i1* %q2_addr_1, align 1" [jacobi-2d-imper.cpp:69->jacobi-2d-imper.cpp:90]   --->   Operation 61 'load' 'q2_load_1' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_BitConcatenate.i8.i1.i1.i1.i1.i1.i1.i1.i1(i1 %q1_load, i1 %q0_load, i1 %q2_load, i1 %q1_load_1, i1 %q0_load_1, i1 %q2_load_1, i1 %q1_load_2, i1 %q0_load_2)" [jacobi-2d-imper.cpp:91]   --->   Operation 62 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%p_Result_3 = call i56 @_ssdm_op_PartSet.i56.i56.i8.i32.i32(i56 undef, i8 %tmp, i32 48, i32 55)" [jacobi-2d-imper.cpp:91]   --->   Operation 63 'partset' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "ret i56 %p_Result_3" [jacobi-2d-imper.cpp:100]   --->   Operation 64 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.66ns
+The critical path consists of the following:
+	wire read on port 'in_V' [12]  (0 ns)
+	'getelementptr' operation ('r0_addr', jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:84) [17]  (0 ns)
+	'load' operation ('r0_load', jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:84) on array 'r0' [18]  (2.66 ns)
+
+ <State 2>: 5.33ns
+The critical path consists of the following:
+	'load' operation ('r0_load', jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:84) on array 'r0' [18]  (2.66 ns)
+	'getelementptr' operation ('r0_addr_1', jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:87) [30]  (0 ns)
+	'load' operation ('r0_load_1', jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:87) on array 'r0' [31]  (2.66 ns)
+
+ <State 3>: 5.33ns
+The critical path consists of the following:
+	'load' operation ('r0_load_1', jacobi-2d-imper.cpp:64->jacobi-2d-imper.cpp:87) on array 'r0' [31]  (2.66 ns)
+	'getelementptr' operation ('q0_addr_2', jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:90) [45]  (0 ns)
+	'load' operation ('q0_load_2', jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:90) on array 'q0' [46]  (2.66 ns)
+
+ <State 4>: 2.66ns
+The critical path consists of the following:
+	'load' operation ('q0_load_2', jacobi-2d-imper.cpp:67->jacobi-2d-imper.cpp:90) on array 'q0' [46]  (2.66 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

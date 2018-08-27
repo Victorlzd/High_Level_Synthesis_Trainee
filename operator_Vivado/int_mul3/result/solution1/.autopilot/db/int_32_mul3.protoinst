@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"int_32_mul3": {
+			"proto_instances": {
+			}
+		}
+	}
+}

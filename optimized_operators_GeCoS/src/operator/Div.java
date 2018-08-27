@@ -11,7 +11,6 @@ import gecos.core.ParameterSymbol;
 import gecos.core.ProcedureSet;
 import gecos.core.ProcedureSymbol;
 import gecos.core.Symbol;
-import gecos.instrs.ArrayValueInstruction;
 import gecos.instrs.Instruction;
 import gecos.instrs.SetInstruction;
 import gecos.types.Type;
@@ -179,11 +178,6 @@ public class Div {
 				IfBlock if_mant_lt_div_mant = GecosUserBlockFactory.IfThen(mant_lt_div_mant, then_mant_lt_div_mant);
 				// end if
 				
-				// begin if exp_compute
-				// condition :
-				// exp != 255
-				Instruction is_not_inf_or_nan = GecosUserInstructionFactory.ne(GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(Calcul.pow2(size_exp)-1));
-				
 				// begin if div_exp > exp
 				// div_exp > exp
 				Instruction div_exp_gt_exp = GecosUserInstructionFactory.gt(GecosUserInstructionFactory.symbref(div_exp_symbol), 
@@ -206,15 +200,6 @@ public class Div {
 				IfBlock if_div_exp_gt_exp = GecosUserBlockFactory.IfThenElse(div_exp_gt_exp.copy(), then_div_exp_gt_exp, else_div_exp_gt_exp);
 				// end if div_exp > exp
 				
-				IfBlock if_exp_compute = GecosUserBlockFactory.IfThen(is_not_inf_or_nan.copy(), if_div_exp_gt_exp);
-				// end if exp_compute
-				
-				// begin if mant_compute
-				// Condition exp != 255
-				// is_not_inf_or_nan.copy()
-				
-				// begin then mant_compute
-				CompositeBlock mant_compute = GecosUserBlockFactory.CompositeBlock();
 				
 				// begin if_shift
 				// condition exp==0
@@ -261,7 +246,6 @@ public class Div {
 				// end if became_subnorm
 				
 				IfBlock if_shift = GecosUserBlockFactory.IfThenElse(exp_eq_0, then_shift, if_became_subnorm);
-				mant_compute.addBlock(if_shift);
 				// end if_shift
 				
 				// begin if not_subnorm
@@ -275,7 +259,6 @@ public class Div {
 				// end then
 				
 				IfBlock if_not_subnorm = GecosUserBlockFactory.IfThen(exp_ne_0, xf_set_size_mant_bb);
-				mant_compute.addBlock(if_not_subnorm);
 				// end if not_subnorm
 				
 				// begin if shift_xf
@@ -297,7 +280,6 @@ public class Div {
 				// end else
 				
 				IfBlock if_shift_xf = GecosUserBlockFactory.IfThenElse(pow2_in_div_fact_plus_1_ge_exp.copy(), then_shift_xf, else_shift_xf);
-				mant_compute.addBlock(if_shift_xf);
 				// end if shift_xf
 				
 				BasicBlock mant_compute_bb = GecosUserBlockFactory.BBlock();
@@ -311,11 +293,19 @@ public class Div {
 				Instruction int_div_xf = GecosUserInstructionFactory.call(arbitrary_sized_int_div_by_constant(ps, (int) (div/Calcul.pow2(pow2_in_div_fact)), size_xf), GecosUserInstructionFactory.symbref(xf_symbol));
 				Instruction new_mant_set_xf_div = GecosUserInstructionFactory.set(new_mant_symbol, int_div_xf);
 				mant_compute_bb.addInstruction(new_mant_set_xf_div);
-				mant_compute.addBlock(mant_compute_bb);
 				// end then mant_compute
 				
-				IfBlock if_mant_compute = GecosUserBlockFactory.IfThen(is_not_inf_or_nan, mant_compute);
-				// end if mant_compute
+				
+				Instruction is_inf_or_nan = GecosUserInstructionFactory.eq(GecosUserInstructionFactory.symbref(exp_symbol), GecosUserInstructionFactory.Int(Calcul.pow2(size_exp)-1));
+				
+				BasicBlock then_inf_or_nan = GecosUserBlockFactory.BBlock();
+				Instruction new_mant_set_mant = GecosUserInstructionFactory.set(new_mant_symbol, GecosUserInstructionFactory.symbref(mant_symbol));
+				then_inf_or_nan.addInstruction(new_mant_set_mant);
+				
+				Instruction new_exp_set_exp = GecosUserInstructionFactory.set(new_exp_symbol, GecosUserInstructionFactory.symbref(exp_symbol));
+				then_inf_or_nan.addInstruction(new_exp_set_exp);
+				
+				IfBlock if_inf_or_nan = GecosUserBlockFactory.IfThen(is_inf_or_nan, then_inf_or_nan);
 				
 				BasicBlock bb_rebuild = GecosUserBlockFactory.BBlock();
 				// (s, exp, mant, &out)
@@ -343,8 +333,13 @@ public class Div {
 				//GecosUserAnnotationFactory.pragma(mainblock2, "HLS latency max=1");
 				mainblock2.addBlock(bb_decompose);
 				mainblock2.addBlock(if_mant_lt_div_mant);
-				mainblock2.addBlock(if_exp_compute);
-				mainblock2.addBlock(if_mant_compute);
+				mainblock2.addBlock(if_div_exp_gt_exp);
+				mainblock2.addBlock(if_shift);
+				mainblock2.addBlock(if_shift_xf);
+				mainblock2.addBlock(if_not_subnorm);
+				mainblock2.addBlock(mant_compute_bb);
+				
+				mainblock2.addBlock(if_inf_or_nan);
 				mainblock2.addBlock(bb_rebuild);
 				
 				mainblock.addBlock(mainblock2);
@@ -821,18 +816,11 @@ public class Div {
 	 * 
 	 * This computation takes only one LUT of the FPGA
 	 */
-	{
-		ProcedureSymbol proc_symbol;
-		
+	{		
 		String name = (isRemainder?"r":"q")+n;
-		
-		// we compute the width of the remainder
-		int width_r = Calcul.log2(div-1)+1;
 		
 		Symbol array_symbol = GecosUserCoreFactory.symbol(name, GecosUserTypeFactory.ARRAY(GecosUserTypeFactory.ACINT(1, false), 64));
 		
-		
-
 		Instruction[] cases = new Instruction[64];
 		for(int i=0; i<64; i++)
 		{

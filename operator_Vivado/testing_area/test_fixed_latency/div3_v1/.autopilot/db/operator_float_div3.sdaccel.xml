@@ -1,0 +1,177 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'operator_float_div3'" level="0">
+<item name = "Date">Fri Aug 24 15:17:03 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">test_fixed_latency</item>
+<item name = "Solution">div3_v1</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">2.50</item>
+<item name = "Clock uncertainty (ns)">0.31</item>
+<item name = "Estimated clock period (ns)">2.178</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">28, 28, 28, 28, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_lut_div3_chunk_fu_94">lut_div3_chunk, 1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 280</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, -, 380, 301</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 165</column>
+<column name="Register">-, -, 218, -</column>
+<specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_lut_div3_chunk_fu_94">lut_div3_chunk, 0, 0, 14, 39</column>
+<column name="operator_float_dibkb_U9">operator_float_dibkb, 0, 0, 183, 131</column>
+<column name="operator_float_dicud_U10">operator_float_dicud, 0, 0, 183, 131</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="shift_V_1_fu_198_p2">+, 0, 0, 15, 2, 8</column>
+<column name="xf_V_4_fu_325_p2">+, 0, 0, 33, 1, 26</column>
+<column name="new_exp_V_1_fu_208_p2">-, 0, 0, 15, 8, 8</column>
+<column name="shift_V_fu_192_p2">-, 0, 0, 15, 1, 8</column>
+<column name="sel_tmp3_fu_230_p2">and, 0, 0, 6, 1, 1</column>
+<column name="sel_tmp7_fu_253_p2">and, 0, 0, 6, 1, 1</column>
+<column name="icmp_fu_186_p2">icmp, 0, 0, 11, 7, 1</column>
+<column name="tmp_1_fu_204_p2">icmp, 0, 0, 11, 8, 8</column>
+<column name="tmp_3_fu_164_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="tmp_4_fu_170_p2">icmp, 0, 0, 11, 8, 8</column>
+<column name="tmp_5_fu_265_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="sel_tmp2_demorgan_fu_220_p2">or, 0, 0, 6, 1, 1</column>
+<column name="new_exp_V_2_fu_212_p3">select, 0, 0, 8, 1, 1</column>
+<column name="p_Repl2_1_fu_270_p3">select, 0, 0, 8, 1, 8</column>
+<column name="p_Repl2_s_fu_438_p3">select, 0, 0, 23, 1, 23</column>
+<column name="shift_V_2_fu_235_p3">select, 0, 0, 8, 1, 8</column>
+<column name="shift_V_3_fu_241_p3">select, 0, 0, 8, 1, 1</column>
+<column name="shift_V_4_fu_258_p3">select, 0, 0, 8, 1, 8</column>
+<column name="shift_V_cast_cast_fu_156_p3">select, 0, 0, 2, 1, 1</column>
+<column name="xf_V_1_fu_319_p3">select, 0, 0, 26, 1, 26</column>
+<column name="xf_V_fu_304_p3">select, 0, 0, 26, 1, 26</column>
+<column name="sel_tmp2_fu_224_p2">xor, 0, 0, 6, 1, 2</column>
+<column name="sel_tmp6_fu_248_p2">xor, 0, 0, 6, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">109, 23, 1, 23</column>
+<column name="grp_lut_div3_chunk_fu_94_d_V">41, 8, 4, 32</column>
+<column name="grp_lut_div3_chunk_fu_94_r_in_V">15, 3, 2, 6</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">22, 0, 22, 0</column>
+<column name="call_ret2_i_i_reg_600_0">4, 0, 4, 0</column>
+<column name="call_ret3_i_i_reg_605_0">4, 0, 4, 0</column>
+<column name="call_ret4_i_i_reg_610_0">4, 0, 4, 0</column>
+<column name="call_ret5_i_i_reg_615_0">4, 0, 4, 0</column>
+<column name="call_ret6_i_i_reg_620_0">4, 0, 4, 0</column>
+<column name="d_chunk_V_reg_595">2, 0, 4, 2</column>
+<column name="grp_lut_div3_chunk_fu_94_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_reg_497">1, 0, 1, 0</column>
+<column name="new_exp_V_reg_461">8, 0, 8, 0</column>
+<column name="new_mant_V_1_reg_469">23, 0, 23, 0</column>
+<column name="p_Repl2_1_reg_524">8, 0, 8, 0</column>
+<column name="p_Repl2_2_reg_456">1, 0, 1, 0</column>
+<column name="p_Result_25_1_i_i_reg_570">4, 0, 4, 0</column>
+<column name="p_Result_25_2_i_i_reg_575">4, 0, 4, 0</column>
+<column name="p_Result_25_3_i_i_reg_580">4, 0, 4, 0</column>
+<column name="p_Result_25_4_i_i_reg_585">4, 0, 4, 0</column>
+<column name="p_Result_25_i_i_reg_565">4, 0, 4, 0</column>
+<column name="p_Result_i_i_reg_560">2, 0, 2, 0</column>
+<column name="reg_117">2, 0, 2, 0</column>
+<column name="shift_V_1_reg_508">8, 0, 8, 0</column>
+<column name="shift_V_4_reg_513">8, 0, 8, 0</column>
+<column name="shift_V_cast_cast_reg_476">2, 0, 8, 6</column>
+<column name="shift_V_reg_503">8, 0, 8, 0</column>
+<column name="tmp_11_reg_549">26, 0, 26, 0</column>
+<column name="tmp_13_reg_590">4, 0, 4, 0</column>
+<column name="tmp_2_reg_544">23, 0, 23, 0</column>
+<column name="tmp_3_reg_483">1, 0, 1, 0</column>
+<column name="tmp_4_reg_491">1, 0, 1, 0</column>
+<column name="tmp_5_reg_519">1, 0, 1, 0</column>
+<column name="xf_V_reg_554">26, 0, 26, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, operator_float_div3, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, operator_float_div3, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, operator_float_div3, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, operator_float_div3, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, operator_float_div3, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, operator_float_div3, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, operator_float_div3, return value</column>
+<column name="in_r">in, 32, ap_none, in_r, scalar</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">2.18</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'d_chunk.V', test.cpp:57->test.cpp:72->test.cpp:127">zext, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'call_ret1_i_i', test.cpp:58->test.cpp:72->test.cpp:127">call, 2.18, 2.18, -, -, -, -, -, -, -, -, -, lut_div3_chunk, -</column>
+</table>
+</item>
+</section>
+</profile>

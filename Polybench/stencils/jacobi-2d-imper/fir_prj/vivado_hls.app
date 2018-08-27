@@ -1,4 +1,4 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="fir_prj" top="kernel_jacobi_2d_imper_optimized">
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="fir_prj" top="int_56_div5">
     <includePaths/>
     <libraryFlag/>
     <files>
@@ -7,7 +7,7 @@
         <file name="jacobi-2d-imper.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions>
-        <solution name="my_version_with_table" status=""/>
+        <solution name="int_56_div5" status=""/>
     </solutions>
 </AutoPilot:project>
 

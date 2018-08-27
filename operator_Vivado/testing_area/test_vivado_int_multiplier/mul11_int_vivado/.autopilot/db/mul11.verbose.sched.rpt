@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vivado HLS Report for 'mul11'
+================================================================
+* Date:           Thu Aug 23 12:51:44 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        test_vivado_int_multiplier
+* Solution:       mul11_int_vivado
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.50|     1.712|        0.31|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    6|    6|    6|    6|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.71>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%a_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %a) nounwind"   --->   Operation 8 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [7/7] (1.71ns)   --->   "%tmp = mul nsw i32 %a_read, 11" [test.cpp:27]   --->   Operation 9 'mul' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 6> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 1.71>
+ST_2 : Operation 10 [6/7] (1.71ns)   --->   "%tmp = mul nsw i32 %a_read, 11" [test.cpp:27]   --->   Operation 10 'mul' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 6> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.71>
+ST_3 : Operation 11 [5/7] (1.71ns)   --->   "%tmp = mul nsw i32 %a_read, 11" [test.cpp:27]   --->   Operation 11 'mul' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 6> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.71>
+ST_4 : Operation 12 [4/7] (1.71ns)   --->   "%tmp = mul nsw i32 %a_read, 11" [test.cpp:27]   --->   Operation 12 'mul' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 6> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.71>
+ST_5 : Operation 13 [3/7] (1.71ns)   --->   "%tmp = mul nsw i32 %a_read, 11" [test.cpp:27]   --->   Operation 13 'mul' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 6> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.71>
+ST_6 : Operation 14 [2/7] (1.71ns)   --->   "%tmp = mul nsw i32 %a_read, 11" [test.cpp:27]   --->   Operation 14 'mul' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 6> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.71>
+ST_7 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %a) nounwind, !map !8"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !14"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @mul11_str) nounwind"   --->   Operation 17 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 18 [1/7] (1.71ns)   --->   "%tmp = mul nsw i32 %a_read, 11" [test.cpp:27]   --->   Operation 18 'mul' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 6> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 19 [1/1] (0.00ns)   --->   "ret i32 %tmp" [test.cpp:27]   --->   Operation 19 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
+
+ <State 1>: 1.71ns
+The critical path consists of the following:
+	wire read on port 'a' [5]  (0 ns)
+	'mul' operation ('tmp', test.cpp:27) [6]  (1.71 ns)
+
+ <State 2>: 1.71ns
+The critical path consists of the following:
+	'mul' operation ('tmp', test.cpp:27) [6]  (1.71 ns)
+
+ <State 3>: 1.71ns
+The critical path consists of the following:
+	'mul' operation ('tmp', test.cpp:27) [6]  (1.71 ns)
+
+ <State 4>: 1.71ns
+The critical path consists of the following:
+	'mul' operation ('tmp', test.cpp:27) [6]  (1.71 ns)
+
+ <State 5>: 1.71ns
+The critical path consists of the following:
+	'mul' operation ('tmp', test.cpp:27) [6]  (1.71 ns)
+
+ <State 6>: 1.71ns
+The critical path consists of the following:
+	'mul' operation ('tmp', test.cpp:27) [6]  (1.71 ns)
+
+ <State 7>: 1.71ns
+The critical path consists of the following:
+	'mul' operation ('tmp', test.cpp:27) [6]  (1.71 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

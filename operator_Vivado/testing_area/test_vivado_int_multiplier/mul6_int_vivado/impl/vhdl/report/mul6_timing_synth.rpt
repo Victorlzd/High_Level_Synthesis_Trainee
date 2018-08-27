@@ -1,0 +1,70 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Aug 23 12:43:39 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/mul6_timing_synth.rpt
+| Design       : mul6
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.184ns  (required time - arrival time)
+  Source:                 a[0]
+                            (input port)
+  Destination:            ap_return[29]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        2.316ns  (logic 0.964ns (41.623%)  route 1.352ns (58.377%))
+  Logic Levels:           9  (CARRY4=8 LUT1=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  a[0] (IN)
+                         net (fo=3, unset)            0.672     0.672    a[0]
+                         LUT1 (Prop_lut1_I0_O)        0.062     0.734 r  ap_return[1]_INST_0_i_1/O
+                         net (fo=1, unplaced)         0.000     0.734    p_0_in[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.322     1.056 r  ap_return[1]_INST_0/CO[3]
+                         net (fo=1, unplaced)         0.008     1.064    ap_return[1]_INST_0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.124 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, unplaced)         0.000     1.124    ap_return[4]_INST_0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.184 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, unplaced)         0.000     1.184    ap_return[8]_INST_0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.244 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, unplaced)         0.000     1.244    ap_return[12]_INST_0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.304 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, unplaced)         0.000     1.304    ap_return[16]_INST_0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.364 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, unplaced)         0.000     1.364    ap_return[20]_INST_0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.424 r  ap_return[24]_INST_0/CO[3]
+                         net (fo=1, unplaced)         0.000     1.424    ap_return[24]_INST_0_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     1.644 r  ap_return[28]_INST_0/O[1]
+                         net (fo=0)                   0.672     2.316    ap_return[29]
+                                                                      r  ap_return[29] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -2.316    
+  -------------------------------------------------------------------
+                         slack                                  0.184    
+
+
+
+

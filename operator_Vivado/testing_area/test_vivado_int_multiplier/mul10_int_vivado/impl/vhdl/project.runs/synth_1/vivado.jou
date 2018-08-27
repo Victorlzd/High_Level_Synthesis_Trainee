@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Aug 23 12:55:24 2018
+# Process ID: 29066
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/test_vivado_int_multiplier/mul10_int_vivado/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log mul10.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mul10.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/test_vivado_int_multiplier/mul10_int_vivado/impl/vhdl/project.runs/synth_1/mul10.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/test_vivado_int_multiplier/mul10_int_vivado/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source mul10.tcl -notrace

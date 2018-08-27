@@ -32,79 +32,35 @@ public class Mul_replacer {
 
 	private static void replace_const_float(GenericInstruction g, IntInstruction constant, Instruction floatExpression) 
 	{
-		// Let x an integer as constant%x == 0
-		// if we have an optimized operator that computes multiplication by x we can optimize the multiplication by constant
-		// we replace this multiplication by call to the optimized multiplier by x and multiply the result by constant/x
-		// float * constant  ===>>> float_mulx_optimized(float) * (constant/x)
+		int mul_factor = (int) constant.getValue();
 		
-		// after this substitution we can recall the function because multiplication by constant/x could be optimized by the same way
-		// this function realize a integer factorization of the constant restricted to the integer we have optimized
-		if(constant.getValue() % 2 == 0)
-		{
-			// get optimized operator
-			ProcedureSymbol float_mult2 = operator.Float_mul2.build_float_mul2(File_builder.ps_impl); 
-			// call optimized operator
-			Instruction call_mult_div2 = GecosUserInstructionFactory.call(float_mult2, floatExpression.copy()); 
-			
-			// compute new constant
-			IntInstruction new_constant = GecosUserInstructionFactory.Int(constant.getValue()/2);
-			// create new instruction (call operator mul by new constant)
-			GenericInstruction instr = GecosUserInstructionFactory.mul(call_mult_div2, new_constant);
-			
-			System.out.println(g+"   devient   "+instr);
-			
-			// we need to include the header file of the optimized operator
-			GecosUserAnnotationFactory.pragma(g.getContainingProcedureSet(), "S2S4HLS:MODULE:PRINT:#include \""+File_builder.filename+".h\"");
-			// substitute old instruction with the new one
-			g.substituteWith(instr);
-			
-			// recursive call
-			replace_const_float(instr, new_constant, call_mult_div2);
-			
-		}else if(constant.getValue() == 1)
-		// our function often creates multiplication by 1
-		// we remove them to have an output code clearer
-		{
-			System.out.println(g+"   devient   "+floatExpression);
-			g.substituteWith(floatExpression);
-		}
+		ProcedureSymbol float_mul = operator.Mul.build_float_mul_by_constant(File_builder.ps_impl, mul_factor, false);
+		// call optimized operator
+		Instruction call_operator = GecosUserInstructionFactory.call(float_mul, floatExpression.copy()); 
+		
+		
+		System.out.println(g+"   devient   "+call_operator);
+		
+		// we need to include the header file of the optimized operator
+		GecosUserAnnotationFactory.pragma(g.getContainingProcedureSet(), "S2S4HLS:MODULE:PRINT:#include \""+File_builder.filename+".h\"");
+		// substitute old instruction with the new one
+		g.substituteWith(call_operator);
 	}
 	
 	private static void replace_const_double(GenericInstruction g, IntInstruction constant, Instruction doubleExpression) 
 	{
-		// Let x an integer as constant%x == 0
-		// if we have an optimized operator that computes multiplication by x we can optimize the multiplication by constant
-		// we replace this multiplication by call to the optimized multiplier by x and multiply the result by constant/x
-		// double * constant  ===>>> double_mulx_optimized(float) * (constant/x)
+		int mul_factor = (int) constant.getValue();
 		
-		// after this substitution we can recall the function because multiplication by constant/x could be optimized by the same way
-		// this function realize a integer factorization of the constant restricted to the integer we have optimized
-		if(constant.getValue() % 2 == 0)
-		{
-			// get optimized operator
-			ProcedureSymbol double_mult2 = operator.Float_mul2.build_double_mul2(File_builder.ps_impl);
-			// call optimized operator
-			Instruction call_mult_div2 = GecosUserInstructionFactory.call(double_mult2, doubleExpression.copy());
-			
-			// compute new constant
-			IntInstruction new_constant = GecosUserInstructionFactory.Int(constant.getValue()/2);
-			// create new instruction (call operator mul by new constant)
-			GenericInstruction instr = GecosUserInstructionFactory.mul(call_mult_div2, new_constant);
-			
-			System.out.println(g+"   devient   "+instr);
-			
-			// we need to include the header file of the optimized operator
-			GecosUserAnnotationFactory.pragma(g.getContainingProcedureSet(), "S2S4HLS:MODULE:PRINT:#include \""+File_builder.filename+".h\"");
-			// substitute old instruction with the new one
-			g.substituteWith(instr);
-			
-			// recursive call
-			replace_const_double(instr, new_constant, call_mult_div2);
-			
-		}else if(constant.getValue() == 1)
-		{
-			System.out.println(g+"   devient   "+doubleExpression);
-			g.substituteWith(doubleExpression);
-		}
+		ProcedureSymbol float_mul = operator.Mul.build_float_mul_by_constant(File_builder.ps_impl, mul_factor, true);
+		// call optimized operator
+		Instruction call_operator = GecosUserInstructionFactory.call(float_mul, doubleExpression.copy()); 
+		
+		
+		System.out.println(g+"   devient   "+call_operator);
+		
+		// we need to include the header file of the optimized operator
+		GecosUserAnnotationFactory.pragma(g.getContainingProcedureSet(), "S2S4HLS:MODULE:PRINT:#include \""+File_builder.filename+".h\"");
+		// substitute old instruction with the new one
+		g.substituteWith(call_operator);
 	}
 }

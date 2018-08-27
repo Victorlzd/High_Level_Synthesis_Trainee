@@ -82,13 +82,13 @@ ap_uint<56> int_56_div5(ap_uint<56> in) {
 	d_chunk = d.range(55, 54);
 	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
 	q.range(55, 54) = q_chunk.range(1, 0);
+			//#pragma HLS unroll factor=18
 	for(i = 17; i >= 0; i = i - 1) {
-		#pragma HLS unroll
-		{
+		
 		d_chunk = d.range(i*3 + 2, i*3);
 		lut_div5_chunk(d_chunk, r, &q_chunk, &r);
 		q.range(i*3 + 2, i*3) = q_chunk;
-		}
+		
 	}
 	return q;
 }
@@ -139,35 +139,37 @@ double operator_double_div5(double in) {
 		xf = mant;
 		if (mant < 1125899906842624)
 			div_exp = 3;
-		if (exp != 2047)
-			if (div_exp > exp)
-				new_exp = 0;
-			else
-				new_exp = exp - div_exp;
-		if (exp != 2047) {
-			if (exp == 0)
-				shift = 0;
-			else
-				if (div_exp >= exp)
-					if (1 >= exp)
-						shift = 1 - exp;
-					else
-						shift = exp - 1;
+		if (div_exp > exp)
+			new_exp = 0;
+		else
+			new_exp = exp - div_exp;
+		if (exp == 0)
+			shift = 0;
+		else
+			if (div_exp >= exp)
+				if (1 >= exp)
+					shift = 1 - exp;
 				else
-					shift = div_exp - 0;
-			if (exp != 0)
-				xf.set(52);
-			if (1 >= exp)
-				xf = xf >> shift;
+					shift = exp - 1;
 			else
-				xf = xf << shift;
-			xf = xf + 2;
-			new_mant = operator_int_56_div5(xf);
+				shift = div_exp - 0;
+		if (1 >= exp)
+			xf = xf >> shift;
+		else
+			xf = xf << shift;
+		if (exp != 0)
+			xf.set(52);
+		xf = xf + 2;
+		new_mant = operator_int_56_div5(xf);
+		if (exp == 2047) {
+			new_mant = mant;
+			new_exp = exp;
 		}
 		rebuild_double(s, new_exp, new_mant, &out);
 		return out;
 	}
 }
+
 
 
 
@@ -206,6 +208,7 @@ void kernel_jacobi_2d_imper_optimized(int tsteps,
 	for (j = 1; j < 1000 - 1; j++)
 	  B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
       for (i = 1; i < 1000-1; i++)
+	  #pragma HLS PIPELINE II=1
 	for (j = 1; j < 1000-1; j++)
 	  A[i][j] = operator_double_div5(B[i][j]);
     }
@@ -225,13 +228,14 @@ void kernel_jacobi_2d_imper(int tsteps,
     {
       for (i = 1; i < 1000 - 1; i++){
 		for (j = 1; j < 1000 - 1; j++){
-			B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j])/5;
+			B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
 		}
 	  }
     
 	for (i = 1; i < 1000-1; i++)
+	#pragma HLS PIPELINE II=1
 		for (j = 1; j < 1000-1; j++)
-	  		A[i][j] = B[i][j];
+	  		A[i][j] = B[i][j]/5;
     }
 #pragma endscop
 

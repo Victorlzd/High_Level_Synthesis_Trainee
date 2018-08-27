@@ -1,0 +1,470 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Aug 23 12:38:28 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing_summary -max_paths 10 -file mul4_timing_summary_routed.rpt -pb mul4_timing_summary_routed.pb -rpx mul4_timing_summary_routed.rpx -warn_on_violation
+| Design       : mul4
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 33 input ports with partial input delay specified. (HIGH)
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      1.828        0.000                      0                   32           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group        From Clock        To Clock              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------        ----------        --------              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**default**       input port clock                          1.828        0.000                      0                   32                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **default**
+From Clock:  input port clock
+  To Clock:  
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.828ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 ap_start
+                            (input port)
+  Destination:            ap_done
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  ap_start (IN)
+                         net (fo=-1, unset)           0.672     0.672    ap_start
+                                                                      r  ap_done (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 ap_start
+                            (input port)
+  Destination:            ap_ready
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  ap_start (IN)
+                         net (fo=-1, unset)           0.672     0.672    ap_start
+                                                                      r  ap_ready (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[8]
+                            (input port)
+  Destination:            ap_return[10]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[8] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[8]
+                                                                      r  ap_return[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[9]
+                            (input port)
+  Destination:            ap_return[11]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[9] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[9]
+                                                                      r  ap_return[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[10]
+                            (input port)
+  Destination:            ap_return[12]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[10] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[10]
+                                                                      r  ap_return[12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[11]
+                            (input port)
+  Destination:            ap_return[13]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[11] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[11]
+                                                                      r  ap_return[13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[12]
+                            (input port)
+  Destination:            ap_return[14]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[12] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[12]
+                                                                      r  ap_return[14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[13]
+                            (input port)
+  Destination:            ap_return[15]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[13] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[13]
+                                                                      r  ap_return[15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[14]
+                            (input port)
+  Destination:            ap_return[16]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[14] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[14]
+                                                                      r  ap_return[16] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+Slack (MET) :             1.828ns  (required time - arrival time)
+  Source:                 a[15]
+                            (input port)
+  Destination:            ap_return[17]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.500ns  (MaxDelay Path 2.500ns)
+  Data Path Delay:        0.672ns  (logic 0.000ns (0.000%)  route 0.672ns (100.000%))
+  Logic Levels:           0  
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[15] (IN)
+                         net (fo=-1, unset)           0.672     0.672    a[15]
+                                                                      r  ap_return[17] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.500     2.500    
+                         clock pessimism              0.000     2.500    
+                         output delay                -0.000     2.500    
+  -------------------------------------------------------------------
+                         required time                          2.500    
+                         arrival time                          -0.672    
+  -------------------------------------------------------------------
+                         slack                                  1.828    
+
+
+
+
+

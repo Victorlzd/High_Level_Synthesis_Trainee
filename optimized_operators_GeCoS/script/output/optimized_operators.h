@@ -1,4 +1,4 @@
 
-double operator_double_div5(double in);
+int operator_int_div3(int in);
 
 
