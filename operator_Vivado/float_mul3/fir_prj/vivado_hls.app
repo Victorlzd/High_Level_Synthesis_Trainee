@@ -6,7 +6,7 @@
         <file name="float_mul3.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions>
-        <solution name="solution1" status=""/>
+        <solution name="solution2" status=""/>
     </solutions>
 </AutoPilot:project>
 

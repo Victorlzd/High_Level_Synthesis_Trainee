@@ -1,0 +1,515 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_double_mul6'
+================================================================
+* Date:           Tue Aug 28 14:55:12 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        result
+* Solution:       my_version
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.50|     2.664|        0.31|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|   20|    3|   20|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 26
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!tmp)
+	11  / (tmp)
+2 --> 
+	3  / (!tmp_4)
+	9  / (tmp_4)
+3 --> 
+	4  / (tmp_s)
+	9  / (!tmp_s)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / (!tmp_4)
+	26  / (tmp_4)
+10 --> 
+	26  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.67>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%in_read = call double @_ssdm_op_Read.ap_auto.double(double %in_r) nounwind"   --->   Operation 27 'read' 'in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast double %in_read to i64" [correlation.cpp:52->correlation.cpp:236]   --->   Operation 28 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_Repl2_2 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_s, i32 63)" [correlation.cpp:53->correlation.cpp:236]   --->   Operation 29 'bitselect' 'p_Repl2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%new_exp_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62) nounwind" [correlation.cpp:54->correlation.cpp:236]   --->   Operation 30 'partselect' 'new_exp_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%new_mant_V = trunc i64 %p_Val2_s to i52" [correlation.cpp:55->correlation.cpp:236]   --->   Operation 31 'trunc' 'new_mant_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.32ns)   --->   "%tmp = icmp eq i11 %new_exp_V, 0" [correlation.cpp:244]   --->   Operation 32 'icmp' 'tmp' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "br i1 %tmp, label %_ifconv, label %1" [correlation.cpp:244]   --->   Operation 33 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.32ns)   --->   "%tmp_4 = icmp eq i11 %new_exp_V, 255" [correlation.cpp:253]   --->   Operation 34 'icmp' 'tmp_4' <Predicate = (!tmp)> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_Result_4_i_i = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 30, i32 35)" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:245]   --->   Operation 35 'partselect' 'p_Result_4_i_i' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 36 [2/2] (1.67ns)   --->   "%chunk_30_35_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_4_i_i) nounwind" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:245]   --->   Operation 36 'call' 'chunk_30_35_V' <Predicate = (tmp)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_Result_5_i_i = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 36, i32 41)" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:245]   --->   Operation 37 'partselect' 'p_Result_5_i_i' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 38 [2/2] (1.67ns)   --->   "%chunk_36_41_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_5_i_i) nounwind" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:245]   --->   Operation 38 'call' 'chunk_36_41_V' <Predicate = (tmp)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.32>
+ST_2 : Operation 39 [1/1] (1.12ns)   --->   "br i1 %tmp_4, label %._crit_edge, label %2" [correlation.cpp:253]   --->   Operation 39 'br' <Predicate = true> <Delay = 1.12>
+ST_2 : Operation 40 [1/1] (1.32ns)   --->   "%tmp_s = icmp ult i11 %new_exp_V, 253" [correlation.cpp:254]   --->   Operation 40 'icmp' 'tmp_s' <Predicate = (!tmp_4)> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.67>
+ST_3 : Operation 41 [1/1] (1.12ns)   --->   "br i1 %tmp_s, label %3, label %._crit_edge" [correlation.cpp:254]   --->   Operation 41 'br' <Predicate = true> <Delay = 1.12>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_24 = trunc i64 %p_Val2_s to i6" [correlation.cpp:208->correlation.cpp:222->correlation.cpp:258]   --->   Operation 42 'trunc' 'tmp_24' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 43 [2/2] (1.67ns)   --->   "%chunk_0_5_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %tmp_24) nounwind" [correlation.cpp:208->correlation.cpp:222->correlation.cpp:258]   --->   Operation 43 'call' 'chunk_0_5_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%p_Result_i_i1 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 6, i32 11)" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:258]   --->   Operation 44 'partselect' 'p_Result_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 45 [2/2] (1.67ns)   --->   "%chunk_6_11_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_i_i1) nounwind" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:258]   --->   Operation 45 'call' 'chunk_6_11_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%p_Result_1_i_i1 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 12, i32 17)" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:258]   --->   Operation 46 'partselect' 'p_Result_1_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 47 [2/2] (1.67ns)   --->   "%chunk_12_17_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_1_i_i1) nounwind" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:258]   --->   Operation 47 'call' 'chunk_12_17_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%p_Result_2_i_i1 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 18, i32 23)" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:258]   --->   Operation 48 'partselect' 'p_Result_2_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 49 [2/2] (1.67ns)   --->   "%chunk_18_23_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_2_i_i1) nounwind" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:258]   --->   Operation 49 'call' 'chunk_18_23_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%p_Result_3_i_i1 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 24, i32 29)" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:258]   --->   Operation 50 'partselect' 'p_Result_3_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 51 [2/2] (1.67ns)   --->   "%chunk_24_29_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_3_i_i1) nounwind" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:258]   --->   Operation 51 'call' 'chunk_24_29_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%p_Result_4_i_i1 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 30, i32 35)" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:258]   --->   Operation 52 'partselect' 'p_Result_4_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 53 [2/2] (1.67ns)   --->   "%chunk_30_35_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_4_i_i1) nounwind" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:258]   --->   Operation 53 'call' 'chunk_30_35_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%p_Result_5_i_i1 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 36, i32 41)" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:258]   --->   Operation 54 'partselect' 'p_Result_5_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 55 [2/2] (1.67ns)   --->   "%chunk_36_41_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_5_i_i1) nounwind" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:258]   --->   Operation 55 'call' 'chunk_36_41_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%p_Result_6_i_i1 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 42, i32 47)" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:258]   --->   Operation 56 'partselect' 'p_Result_6_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 57 [2/2] (1.67ns)   --->   "%chunk_42_47_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_6_i_i1) nounwind" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:258]   --->   Operation 57 'call' 'chunk_42_47_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_9 = call i4 @_ssdm_op_PartSelect.i4.i64.i32.i32(i64 %p_Val2_s, i32 48, i32 51)" [correlation.cpp:52->correlation.cpp:236]   --->   Operation 58 'partselect' 'tmp_9' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_11 = call i5 @_ssdm_op_BitConcatenate.i5.i1.i4(i1 true, i4 %tmp_9)" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:258]   --->   Operation 59 'bitconcatenate' 'tmp_11' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%p_Result_7_i_i1 = zext i5 %tmp_11 to i6" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:258]   --->   Operation 60 'zext' 'p_Result_7_i_i1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_3 : Operation 61 [2/2] (1.67ns)   --->   "%chunk_48_53_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_7_i_i1) nounwind" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:258]   --->   Operation 61 'call' 'chunk_48_53_V_1' <Predicate = (tmp_s)> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.33>
+ST_4 : Operation 62 [1/2] (1.33ns)   --->   "%chunk_0_5_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %tmp_24) nounwind" [correlation.cpp:208->correlation.cpp:222->correlation.cpp:258]   --->   Operation 62 'call' 'chunk_0_5_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 63 [1/2] (1.33ns)   --->   "%chunk_6_11_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_i_i1) nounwind" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:258]   --->   Operation 63 'call' 'chunk_6_11_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 64 [1/2] (1.33ns)   --->   "%chunk_12_17_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_1_i_i1) nounwind" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:258]   --->   Operation 64 'call' 'chunk_12_17_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 65 [1/2] (1.33ns)   --->   "%chunk_18_23_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_2_i_i1) nounwind" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:258]   --->   Operation 65 'call' 'chunk_18_23_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 66 [1/2] (1.33ns)   --->   "%chunk_24_29_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_3_i_i1) nounwind" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:258]   --->   Operation 66 'call' 'chunk_24_29_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 67 [1/2] (1.33ns)   --->   "%chunk_30_35_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_4_i_i1) nounwind" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:258]   --->   Operation 67 'call' 'chunk_30_35_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 68 [1/2] (1.33ns)   --->   "%chunk_36_41_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_5_i_i1) nounwind" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:258]   --->   Operation 68 'call' 'chunk_36_41_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 69 [1/2] (1.33ns)   --->   "%chunk_42_47_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_6_i_i1) nounwind" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:258]   --->   Operation 69 'call' 'chunk_42_47_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 70 [1/2] (1.33ns)   --->   "%chunk_48_53_V_1 = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_7_i_i1) nounwind" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:258]   --->   Operation 70 'call' 'chunk_48_53_V_1' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_25 = trunc i8 %chunk_48_53_V_1 to i5" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:258]   --->   Operation 71 'trunc' 'tmp_25' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.84>
+ST_5 : Operation 72 [1/1] (0.00ns)   --->   "%r_V_11 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %chunk_6_11_V_1, i6 0)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 72 'bitconcatenate' 'r_V_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 73 [1/1] (0.00ns)   --->   "%r_V_13_cast = zext i14 %r_V_11 to i21" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 73 'zext' 'r_V_13_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 74 [1/1] (0.00ns)   --->   "%r_V_12 = call i20 @_ssdm_op_BitConcatenate.i20.i8.i12(i8 %chunk_12_17_V_1, i12 0)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 74 'bitconcatenate' 'r_V_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%r_V_14_cast = zext i20 %r_V_12 to i21" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 75 'zext' 'r_V_14_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 76 [1/1] (0.00ns)   --->   "%r_V_13 = call i26 @_ssdm_op_BitConcatenate.i26.i8.i18(i8 %chunk_18_23_V_1, i18 0)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 76 'bitconcatenate' 'r_V_13' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%r_V_15_cast = zext i26 %r_V_13 to i33" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 77 'zext' 'r_V_15_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%r_V_14 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i24(i8 %chunk_24_29_V_1, i24 0)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 78 'bitconcatenate' 'r_V_14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%r_V_16_cast = zext i32 %r_V_14 to i33" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 79 'zext' 'r_V_16_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%r_V_15 = call i38 @_ssdm_op_BitConcatenate.i38.i8.i30(i8 %chunk_30_35_V_1, i30 0)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 80 'bitconcatenate' 'r_V_15' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%r_V_17_cast = zext i38 %r_V_15 to i45" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 81 'zext' 'r_V_17_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%r_V_16 = call i44 @_ssdm_op_BitConcatenate.i44.i8.i36(i8 %chunk_36_41_V_1, i36 0)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 82 'bitconcatenate' 'r_V_16' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%r_V_18_cast = zext i44 %r_V_16 to i45" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 83 'zext' 'r_V_18_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%r_V_17 = call i50 @_ssdm_op_BitConcatenate.i50.i8.i42(i8 %chunk_42_47_V_1, i42 0)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 84 'bitconcatenate' 'r_V_17' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%r_V_19_cast = zext i50 %r_V_17 to i53" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 85 'zext' 'r_V_19_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (1.56ns)   --->   "%tmp18 = add i21 %r_V_14_cast, %r_V_13_cast" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 86 'add' 'tmp18' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 87 [1/1] (1.78ns)   --->   "%tmp20 = add i33 %r_V_16_cast, %r_V_15_cast" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 87 'add' 'tmp20' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 88 [1/1] (1.73ns)   --->   "%tmp21 = add i45 %r_V_18_cast, %r_V_17_cast" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 88 'add' 'tmp21' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%tmp23 = call i53 @_ssdm_op_BitConcatenate.i53.i5.i40.i8(i5 %tmp_25, i40 0, i8 %chunk_0_5_V_1)" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 89 'bitconcatenate' 'tmp23' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (1.84ns)   --->   "%tmp24 = add i53 %r_V_19_cast, %tmp23" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 90 'add' 'tmp24' <Predicate = true> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.84>
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "%tmp20_cast = zext i21 %tmp18 to i33" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 91 'zext' 'tmp20_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 92 [1/1] (1.77ns)   --->   "%tmp19 = add i33 %tmp20_cast, %tmp20" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 92 'add' 'tmp19' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 93 [1/1] (0.00ns)   --->   "%tmp23_cast = zext i45 %tmp21 to i53" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 93 'zext' 'tmp23_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 94 [1/1] (1.84ns)   --->   "%tmp22 = add i53 %tmp23_cast, %tmp24" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 94 'add' 'tmp22' <Predicate = true> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.84>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%tmp19_cast = zext i33 %tmp19 to i53" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 95 'zext' 'tmp19_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 96 [1/1] (1.84ns)   --->   "%agg_result_V_i_i1 = add i53 %tmp19_cast, %tmp22" [correlation.cpp:218->correlation.cpp:222->correlation.cpp:258]   --->   Operation 96 'add' 'agg_result_V_i_i1' <Predicate = true> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%new_mant_V_1 = call i52 @_ssdm_op_PartSelect.i52.i53.i32.i32(i53 %agg_result_V_i_i1, i32 1, i32 52)" [correlation.cpp:259]   --->   Operation 97 'partselect' 'new_mant_V_1' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 1.12>
+ST_8 : Operation 98 [1/1] (1.12ns)   --->   "br label %._crit_edge"   --->   Operation 98 'br' <Predicate = true> <Delay = 1.12>
+
+State 9 <SV = 8> <Delay = 2.13>
+ST_9 : Operation 99 [1/1] (0.00ns)   --->   "%p_0330_2 = phi i52 [ %new_mant_V_1, %3 ], [ %new_mant_V, %1 ], [ 0, %2 ]"   --->   Operation 99 'phi' 'p_0330_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 100 [1/1] (1.12ns)   --->   "br i1 %tmp_4, label %._crit_edge504, label %4" [correlation.cpp:261]   --->   Operation 100 'br' <Predicate = true> <Delay = 1.12>
+ST_9 : Operation 101 [1/1] (1.32ns)   --->   "%tmp_10 = icmp ult i11 %new_exp_V, 253" [correlation.cpp:262]   --->   Operation 101 'icmp' 'tmp_10' <Predicate = (!tmp_4)> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_12 = call i8 @_ssdm_op_PartSelect.i8.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 59)" [correlation.cpp:265]   --->   Operation 102 'partselect' 'tmp_12' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_9 : Operation 103 [1/1] (1.39ns)   --->   "%new_exp_V_2_cast = add i8 %tmp_12, 2" [correlation.cpp:265]   --->   Operation 103 'add' 'new_exp_V_2_cast' <Predicate = (!tmp_4)> <Delay = 1.39> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 104 [1/1] (0.74ns)   --->   "%new_exp_V_2_s = select i1 %tmp_10, i8 %new_exp_V_2_cast, i8 -1" [correlation.cpp:262]   --->   Operation 104 'select' 'new_exp_V_2_s' <Predicate = (!tmp_4)> <Delay = 0.74> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 1.12>
+ST_10 : Operation 105 [1/1] (0.00ns)   --->   "%new_exp_V_2_cast_19 = zext i8 %new_exp_V_2_s to i11" [correlation.cpp:262]   --->   Operation 105 'zext' 'new_exp_V_2_cast_19' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 106 [1/1] (1.12ns)   --->   "br label %._crit_edge504" [correlation.cpp:262]   --->   Operation 106 'br' <Predicate = true> <Delay = 1.12>
+
+State 11 <SV = 1> <Delay = 1.67>
+ST_11 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_13 = trunc i64 %p_Val2_s to i6" [correlation.cpp:208->correlation.cpp:222->correlation.cpp:245]   --->   Operation 107 'trunc' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 108 [2/2] (1.67ns)   --->   "%chunk_0_5_V = call fastcc i8 @lut_mul3_chunk(i6 %tmp_13) nounwind" [correlation.cpp:208->correlation.cpp:222->correlation.cpp:245]   --->   Operation 108 'call' 'chunk_0_5_V' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 109 [1/1] (0.00ns)   --->   "%p_Result_i_i = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 6, i32 11)" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:245]   --->   Operation 109 'partselect' 'p_Result_i_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 110 [2/2] (1.67ns)   --->   "%chunk_6_11_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_i_i) nounwind" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:245]   --->   Operation 110 'call' 'chunk_6_11_V' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 111 [1/1] (0.00ns)   --->   "%p_Result_1_i_i = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 12, i32 17)" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:245]   --->   Operation 111 'partselect' 'p_Result_1_i_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 112 [2/2] (1.67ns)   --->   "%chunk_12_17_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_1_i_i) nounwind" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:245]   --->   Operation 112 'call' 'chunk_12_17_V' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 113 [1/1] (0.00ns)   --->   "%p_Result_2_i_i = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 18, i32 23)" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:245]   --->   Operation 113 'partselect' 'p_Result_2_i_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 114 [2/2] (1.67ns)   --->   "%chunk_18_23_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_2_i_i) nounwind" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:245]   --->   Operation 114 'call' 'chunk_18_23_V' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 115 [1/1] (0.00ns)   --->   "%p_Result_3_i_i = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 24, i32 29)" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:245]   --->   Operation 115 'partselect' 'p_Result_3_i_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 116 [2/2] (1.67ns)   --->   "%chunk_24_29_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_3_i_i) nounwind" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:245]   --->   Operation 116 'call' 'chunk_24_29_V' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 117 [1/2] (1.33ns)   --->   "%chunk_30_35_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_4_i_i) nounwind" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:245]   --->   Operation 117 'call' 'chunk_30_35_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 118 [1/2] (1.33ns)   --->   "%chunk_36_41_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_5_i_i) nounwind" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:245]   --->   Operation 118 'call' 'chunk_36_41_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 119 [1/1] (0.00ns)   --->   "%p_Result_6_i_i = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %p_Val2_s, i32 42, i32 47)" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:245]   --->   Operation 119 'partselect' 'p_Result_6_i_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 120 [2/2] (1.67ns)   --->   "%chunk_42_47_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_6_i_i) nounwind" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:245]   --->   Operation 120 'call' 'chunk_42_47_V' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_5 = call i4 @_ssdm_op_PartSelect.i4.i64.i32.i32(i64 %p_Val2_s, i32 48, i32 51)" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:245]   --->   Operation 121 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 122 [1/1] (0.00ns)   --->   "%p_Result_7_i_i = zext i4 %tmp_5 to i6" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:245]   --->   Operation 122 'zext' 'p_Result_7_i_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 123 [2/2] (1.67ns)   --->   "%chunk_48_53_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_7_i_i) nounwind" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:245]   --->   Operation 123 'call' 'chunk_48_53_V' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 2> <Delay = 1.73>
+ST_12 : Operation 124 [1/2] (1.33ns)   --->   "%chunk_0_5_V = call fastcc i8 @lut_mul3_chunk(i6 %tmp_13) nounwind" [correlation.cpp:208->correlation.cpp:222->correlation.cpp:245]   --->   Operation 124 'call' 'chunk_0_5_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 125 [1/2] (1.33ns)   --->   "%chunk_6_11_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_i_i) nounwind" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:245]   --->   Operation 125 'call' 'chunk_6_11_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 126 [1/2] (1.33ns)   --->   "%chunk_12_17_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_1_i_i) nounwind" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:245]   --->   Operation 126 'call' 'chunk_12_17_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 127 [1/2] (1.33ns)   --->   "%chunk_18_23_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_2_i_i) nounwind" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:245]   --->   Operation 127 'call' 'chunk_18_23_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 128 [1/2] (1.33ns)   --->   "%chunk_24_29_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_3_i_i) nounwind" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:245]   --->   Operation 128 'call' 'chunk_24_29_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 129 [1/2] (1.33ns)   --->   "%chunk_42_47_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_6_i_i) nounwind" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:245]   --->   Operation 129 'call' 'chunk_42_47_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 130 [1/2] (1.33ns)   --->   "%chunk_48_53_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_7_i_i) nounwind" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:245]   --->   Operation 130 'call' 'chunk_48_53_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 131 [1/1] (0.00ns)   --->   "%r_V_7 = call i38 @_ssdm_op_BitConcatenate.i38.i8.i30(i8 %chunk_30_35_V, i30 0)" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:245]   --->   Operation 131 'bitconcatenate' 'r_V_7' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 132 [1/1] (0.00ns)   --->   "%r_V_7_cast = zext i38 %r_V_7 to i45" [correlation.cpp:213->correlation.cpp:222->correlation.cpp:245]   --->   Operation 132 'zext' 'r_V_7_cast' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 133 [1/1] (0.00ns)   --->   "%r_V_8 = call i44 @_ssdm_op_BitConcatenate.i44.i8.i36(i8 %chunk_36_41_V, i36 0)" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:245]   --->   Operation 133 'bitconcatenate' 'r_V_8' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 134 [1/1] (0.00ns)   --->   "%r_V_8_cast = zext i44 %r_V_8 to i45" [correlation.cpp:214->correlation.cpp:222->correlation.cpp:245]   --->   Operation 134 'zext' 'r_V_8_cast' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 135 [1/1] (0.00ns)   --->   "%tmp_14 = trunc i8 %chunk_48_53_V to i7" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:245]   --->   Operation 135 'trunc' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 136 [1/1] (1.73ns)   --->   "%tmp7 = add i45 %r_V_8_cast, %r_V_7_cast" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 136 'add' 'tmp7' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 3> <Delay = 1.87>
+ST_13 : Operation 137 [1/1] (0.00ns)   --->   "%r_V_2 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %chunk_6_11_V, i6 0)" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:245]   --->   Operation 137 'bitconcatenate' 'r_V_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 138 [1/1] (0.00ns)   --->   "%r_V_2_cast = zext i14 %r_V_2 to i15" [correlation.cpp:209->correlation.cpp:222->correlation.cpp:245]   --->   Operation 138 'zext' 'r_V_2_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 139 [1/1] (0.00ns)   --->   "%r_V_3 = call i20 @_ssdm_op_BitConcatenate.i20.i8.i12(i8 %chunk_12_17_V, i12 0)" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:245]   --->   Operation 139 'bitconcatenate' 'r_V_3' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 140 [1/1] (0.00ns)   --->   "%r_V_3_cast = zext i20 %r_V_3 to i27" [correlation.cpp:210->correlation.cpp:222->correlation.cpp:245]   --->   Operation 140 'zext' 'r_V_3_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 141 [1/1] (0.00ns)   --->   "%r_V_5 = call i26 @_ssdm_op_BitConcatenate.i26.i8.i18(i8 %chunk_18_23_V, i18 0)" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:245]   --->   Operation 141 'bitconcatenate' 'r_V_5' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 142 [1/1] (0.00ns)   --->   "%r_V_5_cast = zext i26 %r_V_5 to i27" [correlation.cpp:211->correlation.cpp:222->correlation.cpp:245]   --->   Operation 142 'zext' 'r_V_5_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 143 [1/1] (0.00ns)   --->   "%r_V_6 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i24(i8 %chunk_24_29_V, i24 0)" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:245]   --->   Operation 143 'bitconcatenate' 'r_V_6' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 144 [1/1] (0.00ns)   --->   "%r_V_6_cast = zext i32 %r_V_6 to i45" [correlation.cpp:212->correlation.cpp:222->correlation.cpp:245]   --->   Operation 144 'zext' 'r_V_6_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 145 [1/1] (0.00ns)   --->   "%r_V_9 = call i50 @_ssdm_op_BitConcatenate.i50.i8.i42(i8 %chunk_42_47_V, i42 0)" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:245]   --->   Operation 145 'bitconcatenate' 'r_V_9' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 146 [1/1] (0.00ns)   --->   "%r_V_9_cast = zext i50 %r_V_9 to i55" [correlation.cpp:215->correlation.cpp:222->correlation.cpp:245]   --->   Operation 146 'zext' 'r_V_9_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 147 [1/1] (0.00ns)   --->   "%r_V_s = call i55 @_ssdm_op_BitConcatenate.i55.i7.i48(i7 %tmp_14, i48 0)" [correlation.cpp:216->correlation.cpp:222->correlation.cpp:245]   --->   Operation 147 'bitconcatenate' 'r_V_s' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 148 [1/1] (0.00ns)   --->   "%p_cast = zext i8 %chunk_0_5_V to i15" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 148 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 149 [1/1] (1.67ns)   --->   "%tmp6 = add i27 %r_V_5_cast, %r_V_3_cast" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 149 'add' 'tmp6' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 150 [1/1] (1.75ns)   --->   "%tmp8 = add i45 %r_V_6_cast, %tmp7" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 150 'add' 'tmp8' <Predicate = true> <Delay = 1.75> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 151 [1/1] (1.87ns)   --->   "%tmp10 = add i55 %r_V_s, %r_V_9_cast" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 151 'add' 'tmp10' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 152 [1/1] (1.46ns)   --->   "%tmp11 = add i15 %p_cast, %r_V_2_cast" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 152 'add' 'tmp11' <Predicate = true> <Delay = 1.46> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 4> <Delay = 1.87>
+ST_14 : Operation 153 [1/1] (0.00ns)   --->   "%tmp12_cast = zext i27 %tmp6 to i45" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 153 'zext' 'tmp12_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 154 [1/1] (1.75ns)   --->   "%tmp9 = add i45 %tmp12_cast, %tmp8" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 154 'add' 'tmp9' <Predicate = true> <Delay = 1.75> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 155 [1/1] (0.00ns)   --->   "%tmp12 = call i55 @_ssdm_op_BitConcatenate.i55.i40.i15(i40 0, i15 %tmp11)" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 155 'bitconcatenate' 'tmp12' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 156 [1/1] (1.87ns)   --->   "%tmp13 = add i55 %tmp10, %tmp12" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 156 'add' 'tmp13' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 5> <Delay = 1.87>
+ST_15 : Operation 157 [1/1] (0.00ns)   --->   "%tmp11_cast = zext i45 %tmp9 to i55" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 157 'zext' 'tmp11_cast' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 158 [1/1] (1.87ns)   --->   "%agg_result_V_i_i2 = add i55 %tmp11_cast, %tmp13" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 158 'add' 'agg_result_V_i_i2' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 6> <Delay = 2.66>
+ST_16 : Operation 159 [1/1] (0.00ns)   --->   "%r_V_18 = call i56 @_ssdm_op_BitConcatenate.i56.i55.i1(i55 %agg_result_V_i_i2, i1 false)" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 159 'bitconcatenate' 'r_V_18' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 160 [1/1] (0.00ns)   --->   "%p_Result_s = call i56 @llvm.part.select.i56(i56 %r_V_18, i32 55, i32 0) nounwind" [correlation.cpp:246]   --->   Operation 160 'partselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 161 [1/1] (0.00ns)   --->   "%p_Result_1 = call i64 @_ssdm_op_BitConcatenate.i64.i8.i56(i8 -1, i56 %p_Result_s)" [correlation.cpp:246]   --->   Operation 161 'bitconcatenate' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 162 [1/1] (2.66ns)   --->   "%tmp_1 = call i64 @llvm.cttz.i64(i64 %p_Result_1, i1 true) nounwind" [correlation.cpp:246]   --->   Operation 162 'cttz' 'tmp_1' <Predicate = true> <Delay = 2.66> <Core = "CTTZ">   --->   Core 60 'CTTZ' <Latency = 0> <II = 1> <Delay = 2.66> <FuncUnit> <Opcode : 'cttz'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 163 [1/1] (0.00ns)   --->   "%clz_V = trunc i64 %tmp_1 to i6" [correlation.cpp:246]   --->   Operation 163 'trunc' 'clz_V' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_17 = call i4 @_ssdm_op_PartSelect.i4.i64.i32.i32(i64 %tmp_1, i32 2, i32 5)" [correlation.cpp:247]   --->   Operation 164 'partselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 7> <Delay = 1.35>
+ST_17 : Operation 165 [1/1] (1.08ns)   --->   "%icmp = icmp eq i4 %tmp_17, 0" [correlation.cpp:247]   --->   Operation 165 'icmp' 'icmp' <Predicate = true> <Delay = 1.08> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i6 %clz_V to i7" [correlation.cpp:248]   --->   Operation 166 'zext' 'tmp_5_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 167 [1/1] (1.35ns)   --->   "%r_V_19 = sub i7 3, %tmp_5_cast" [correlation.cpp:249]   --->   Operation 167 'sub' 'r_V_19' <Predicate = true> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 8> <Delay = 1.37>
+ST_18 : Operation 168 [1/1] (1.37ns)   --->   "%tmp_8 = sub i7 0, %r_V_19" [correlation.cpp:249]   --->   Operation 168 'sub' 'tmp_8' <Predicate = (icmp)> <Delay = 1.37> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 9> <Delay = 2.29>
+ST_19 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_2 = sext i7 %r_V_19 to i32" [correlation.cpp:249]   --->   Operation 169 'sext' 'tmp_2' <Predicate = (icmp)> <Delay = 0.00>
+ST_19 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_8_cast = sext i7 %tmp_8 to i32" [correlation.cpp:249]   --->   Operation 170 'sext' 'tmp_8_cast' <Predicate = (icmp)> <Delay = 0.00>
+ST_19 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_7 = zext i32 %tmp_8_cast to i56" [correlation.cpp:249]   --->   Operation 171 'zext' 'tmp_7' <Predicate = (icmp)> <Delay = 0.00>
+ST_19 : Operation 172 [7/7] (2.29ns)   --->   "%r_V_1 = shl i56 %r_V_18, %tmp_7" [correlation.cpp:249]   --->   Operation 172 'shl' 'r_V_1' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 173 [1/1] (0.00ns)   --->   "%tmp_6 = zext i32 %tmp_2 to i56" [correlation.cpp:249]   --->   Operation 173 'zext' 'tmp_6' <Predicate = (icmp)> <Delay = 0.00>
+ST_19 : Operation 174 [7/7] (2.29ns)   --->   "%r_V = lshr i56 %r_V_18, %tmp_6" [correlation.cpp:249]   --->   Operation 174 'lshr' 'r_V' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 10> <Delay = 2.29>
+ST_20 : Operation 175 [6/7] (2.29ns)   --->   "%r_V_1 = shl i56 %r_V_18, %tmp_7" [correlation.cpp:249]   --->   Operation 175 'shl' 'r_V_1' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 176 [6/7] (2.29ns)   --->   "%r_V = lshr i56 %r_V_18, %tmp_6" [correlation.cpp:249]   --->   Operation 176 'lshr' 'r_V' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 11> <Delay = 2.29>
+ST_21 : Operation 177 [5/7] (2.29ns)   --->   "%r_V_1 = shl i56 %r_V_18, %tmp_7" [correlation.cpp:249]   --->   Operation 177 'shl' 'r_V_1' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 178 [5/7] (2.29ns)   --->   "%r_V = lshr i56 %r_V_18, %tmp_6" [correlation.cpp:249]   --->   Operation 178 'lshr' 'r_V' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 12> <Delay = 2.29>
+ST_22 : Operation 179 [4/7] (2.29ns)   --->   "%r_V_1 = shl i56 %r_V_18, %tmp_7" [correlation.cpp:249]   --->   Operation 179 'shl' 'r_V_1' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 180 [4/7] (2.29ns)   --->   "%r_V = lshr i56 %r_V_18, %tmp_6" [correlation.cpp:249]   --->   Operation 180 'lshr' 'r_V' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 13> <Delay = 2.29>
+ST_23 : Operation 181 [3/7] (2.29ns)   --->   "%r_V_1 = shl i56 %r_V_18, %tmp_7" [correlation.cpp:249]   --->   Operation 181 'shl' 'r_V_1' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 182 [3/7] (2.29ns)   --->   "%r_V = lshr i56 %r_V_18, %tmp_6" [correlation.cpp:249]   --->   Operation 182 'lshr' 'r_V' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 14> <Delay = 2.29>
+ST_24 : Operation 183 [2/7] (2.29ns)   --->   "%r_V_1 = shl i56 %r_V_18, %tmp_7" [correlation.cpp:249]   --->   Operation 183 'shl' 'r_V_1' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 184 [2/7] (2.29ns)   --->   "%r_V = lshr i56 %r_V_18, %tmp_6" [correlation.cpp:249]   --->   Operation 184 'lshr' 'r_V' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 15> <Delay = 2.29>
+ST_25 : Operation 185 [1/1] (1.35ns)   --->   "%new_exp_V_1 = sub i7 4, %tmp_5_cast" [correlation.cpp:248]   --->   Operation 185 'sub' 'new_exp_V_1' <Predicate = (icmp)> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 186 [1/7] (2.29ns)   --->   "%r_V_1 = shl i56 %r_V_18, %tmp_7" [correlation.cpp:249]   --->   Operation 186 'shl' 'r_V_1' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 187 [1/7] (2.29ns)   --->   "%r_V = lshr i56 %r_V_18, %tmp_6" [correlation.cpp:249]   --->   Operation 187 'lshr' 'r_V' <Predicate = (icmp)> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 16> <Delay = 1.83>
+ST_26 : Operation 188 [1/1] (0.00ns) (grouped into LUT with out node new_mant_V_2)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i7.i32(i7 %r_V_19, i32 6)" [correlation.cpp:249]   --->   Operation 188 'bitselect' 'tmp_18' <Predicate = (tmp & icmp)> <Delay = 0.00>
+ST_26 : Operation 189 [1/1] (0.66ns)   --->   "%p_s = select i1 %icmp, i7 %new_exp_V_1, i7 0" [correlation.cpp:247]   --->   Operation 189 'select' 'p_s' <Predicate = (tmp)> <Delay = 0.66> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_26 : Operation 190 [1/1] (0.00ns)   --->   "%p_cast_18 = sext i7 %p_s to i11" [correlation.cpp:247]   --->   Operation 190 'sext' 'p_cast_18' <Predicate = (tmp)> <Delay = 0.00>
+ST_26 : Operation 191 [1/1] (0.00ns) (grouped into LUT with out node new_mant_V_2)   --->   "%sel_tmp7 = and i1 %icmp, %tmp_18" [correlation.cpp:247]   --->   Operation 191 'and' 'sel_tmp7' <Predicate = (tmp & icmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 192 [1/1] (0.00ns) (grouped into LUT with out node new_mant_V_2)   --->   "%tmp_19 = trunc i56 %r_V_1 to i52" [correlation.cpp:249]   --->   Operation 192 'trunc' 'tmp_19' <Predicate = (tmp & icmp)> <Delay = 0.00>
+ST_26 : Operation 193 [1/1] (0.00ns) (grouped into LUT with out node new_mant_V_2)   --->   "%tmp_21 = trunc i56 %r_V to i52" [correlation.cpp:249]   --->   Operation 193 'trunc' 'tmp_21' <Predicate = (tmp & icmp)> <Delay = 0.00>
+ST_26 : Operation 194 [1/1] (0.00ns) (grouped into LUT with out node new_mant_V_2)   --->   "%tmp_22 = select i1 %sel_tmp7, i52 %tmp_19, i52 %tmp_21" [correlation.cpp:247]   --->   Operation 194 'select' 'tmp_22' <Predicate = (tmp & icmp)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_26 : Operation 195 [1/1] (0.00ns) (grouped into LUT with out node new_mant_V_2)   --->   "%tmp_23 = trunc i55 %agg_result_V_i_i2 to i51" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 195 'trunc' 'tmp_23' <Predicate = (tmp & !icmp)> <Delay = 0.00>
+ST_26 : Operation 196 [1/1] (0.00ns) (grouped into LUT with out node new_mant_V_2)   --->   "%tmp_3 = call i52 @_ssdm_op_BitConcatenate.i52.i51.i1(i51 %tmp_23, i1 false)" [correlation.cpp:222->correlation.cpp:245]   --->   Operation 196 'bitconcatenate' 'tmp_3' <Predicate = (tmp & !icmp)> <Delay = 0.00>
+ST_26 : Operation 197 [1/1] (0.70ns) (out node of the LUT)   --->   "%new_mant_V_2 = select i1 %icmp, i52 %tmp_22, i52 %tmp_3" [correlation.cpp:247]   --->   Operation 197 'select' 'new_mant_V_2' <Predicate = (tmp)> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_26 : Operation 198 [1/1] (1.12ns)   --->   "br label %._crit_edge504" [correlation.cpp:252]   --->   Operation 198 'br' <Predicate = (tmp)> <Delay = 1.12>
+ST_26 : Operation 199 [1/1] (0.00ns)   --->   "%p_Repl2_1 = phi i11 [ %p_cast_18, %_ifconv ], [ %new_exp_V, %._crit_edge ], [ %new_exp_V_2_cast_19, %4 ]"   --->   Operation 199 'phi' 'p_Repl2_1' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 200 [1/1] (0.00ns)   --->   "%p_Repl2_s = phi i52 [ %new_mant_V_2, %_ifconv ], [ %p_0330_2, %._crit_edge ], [ %p_0330_2, %4 ]"   --->   Operation 200 'phi' 'p_Repl2_s' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 201 [1/1] (0.00ns)   --->   "%p_Result_2 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i11.i52(i1 %p_Repl2_2, i11 %p_Repl2_1, i52 %p_Repl2_s) nounwind" [correlation.cpp:118->correlation.cpp:267]   --->   Operation 201 'bitconcatenate' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 202 [1/1] (0.00ns)   --->   "%out = bitcast i64 %p_Result_2 to double" [correlation.cpp:119->correlation.cpp:267]   --->   Operation 202 'bitcast' 'out' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 203 [1/1] (0.00ns)   --->   "ret double %out" [correlation.cpp:268]   --->   Operation 203 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
+
+ <State 1>: 1.67ns
+The critical path consists of the following:
+	wire read on port 'in_r' [10]  (0 ns)
+	'call' operation ('chunk_30_35.V', correlation.cpp:213->correlation.cpp:222->correlation.cpp:245) to 'lut_mul3_chunk' [94]  (1.67 ns)
+
+ <State 2>: 1.33ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_s', correlation.cpp:254) [21]  (1.33 ns)
+
+ <State 3>: 1.67ns
+The critical path consists of the following:
+	'call' operation ('chunk_0_5.V', correlation.cpp:208->correlation.cpp:222->correlation.cpp:258) to 'lut_mul3_chunk' [25]  (1.67 ns)
+
+ <State 4>: 1.33ns
+The critical path consists of the following:
+	'call' operation ('chunk_0_5.V', correlation.cpp:208->correlation.cpp:222->correlation.cpp:258) to 'lut_mul3_chunk' [25]  (1.33 ns)
+
+ <State 5>: 1.85ns
+The critical path consists of the following:
+	'add' operation ('tmp24', correlation.cpp:218->correlation.cpp:222->correlation.cpp:258) [67]  (1.85 ns)
+
+ <State 6>: 1.85ns
+The critical path consists of the following:
+	'add' operation ('tmp22', correlation.cpp:218->correlation.cpp:222->correlation.cpp:258) [68]  (1.85 ns)
+
+ <State 7>: 1.85ns
+The critical path consists of the following:
+	'add' operation ('agg_result_V_i_i1', correlation.cpp:218->correlation.cpp:222->correlation.cpp:258) [69]  (1.85 ns)
+
+ <State 8>: 1.13ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('new_mant.V') with incoming values : ('ssdm_int<52 + 1024 * 0, false>.V', correlation.cpp:55->correlation.cpp:236) ('new_mant.V', correlation.cpp:259) [73]  (1.13 ns)
+
+ <State 9>: 2.13ns
+The critical path consists of the following:
+	'add' operation ('new_exp_V_2_cast', correlation.cpp:265) [78]  (1.39 ns)
+	'select' operation ('new_exp_V_2_s', correlation.cpp:262) [79]  (0.74 ns)
+
+ <State 10>: 1.13ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('new_exp.V') with incoming values : ('ssdm_int<11 + 1024 * 0, false>.V', correlation.cpp:54->correlation.cpp:236) ('new_exp_V_2_cast_19', correlation.cpp:262) ('p_cast_18', correlation.cpp:247) [159]  (1.13 ns)
+
+ <State 11>: 1.67ns
+The critical path consists of the following:
+	'call' operation ('chunk_0_5.V', correlation.cpp:208->correlation.cpp:222->correlation.cpp:245) to 'lut_mul3_chunk' [84]  (1.67 ns)
+
+ <State 12>: 1.74ns
+The critical path consists of the following:
+	'add' operation ('tmp7', correlation.cpp:222->correlation.cpp:245) [121]  (1.74 ns)
+
+ <State 13>: 1.87ns
+The critical path consists of the following:
+	'add' operation ('tmp10', correlation.cpp:222->correlation.cpp:245) [125]  (1.87 ns)
+
+ <State 14>: 1.87ns
+The critical path consists of the following:
+	'add' operation ('tmp13', correlation.cpp:222->correlation.cpp:245) [128]  (1.87 ns)
+
+ <State 15>: 1.87ns
+The critical path consists of the following:
+	'add' operation ('agg_result_V_i_i2', correlation.cpp:222->correlation.cpp:245) [129]  (1.87 ns)
+
+ <State 16>: 2.66ns
+The critical path consists of the following:
+	'cttz' operation ('tmp_1', correlation.cpp:246) [133]  (2.66 ns)
+
+ <State 17>: 1.36ns
+The critical path consists of the following:
+	'sub' operation ('r.V', correlation.cpp:249) [139]  (1.36 ns)
+
+ <State 18>: 1.37ns
+The critical path consists of the following:
+	'sub' operation ('tmp_8', correlation.cpp:249) [142]  (1.37 ns)
+
+ <State 19>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', correlation.cpp:249) [147]  (2.29 ns)
+
+ <State 20>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', correlation.cpp:249) [145]  (2.29 ns)
+
+ <State 21>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', correlation.cpp:249) [145]  (2.29 ns)
+
+ <State 22>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', correlation.cpp:249) [145]  (2.29 ns)
+
+ <State 23>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', correlation.cpp:249) [145]  (2.29 ns)
+
+ <State 24>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', correlation.cpp:249) [145]  (2.29 ns)
+
+ <State 25>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', correlation.cpp:249) [145]  (2.29 ns)
+
+ <State 26>: 1.84ns
+The critical path consists of the following:
+	'and' operation ('sel_tmp7', correlation.cpp:247) [150]  (0 ns)
+	'select' operation ('tmp_22', correlation.cpp:247) [153]  (0 ns)
+	'select' operation ('new_mant.V', correlation.cpp:247) [156]  (0.708 ns)
+	multiplexor before 'phi' operation ('new_exp.V') with incoming values : ('ssdm_int<11 + 1024 * 0, false>.V', correlation.cpp:54->correlation.cpp:236) ('new_exp_V_2_cast_19', correlation.cpp:262) ('p_cast_18', correlation.cpp:247) [159]  (1.13 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

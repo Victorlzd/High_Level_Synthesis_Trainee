@@ -1,0 +1,59 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kernel_fdtd_2d_optimized'" level="0">
+<item name = "Date">Tue Aug 28 14:12:20 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">fir_prj</item>
+<item name = "Solution">my_version_with_mul</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.731, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">5541053901, 5541053901, 5541053901, 5541053901, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_lut_mul7_chunk_fu_607">lut_mul7_chunk, 2, 2, 2, 2, none</column>
+<column name="grp_lut_mul7_chunk_fu_630">lut_mul7_chunk, 2, 2, 2, 2, none</column>
+<column name="grp_lut_mul7_chunk_fu_653">lut_mul7_chunk, 2, 2, 2, 2, none</column>
+<column name="grp_lut_mul7_chunk_fu_676">lut_mul7_chunk, 2, 2, 2, 2, none</column>
+<column name="grp_lut_mul7_chunk_fu_699">lut_mul7_chunk, 2, 2, 2, 2, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">5541053900, 5541053900, 110821078, -, -, 50, no</column>
+<column name=" + Loop 1.1">3000, 3000, 3, -, -, 1000, no</column>
+<column name=" + Loop 1.2">16984998, 16984998, 17002, -, -, 999, no</column>
+<column name="  ++ Loop 1.2.1">17000, 17000, 17, -, -, 1000, no</column>
+<column name=" + Loop 1.3">16985000, 16985000, 16985, -, -, 1000, no</column>
+<column name="  ++ Loop 1.3.1">16983, 16983, 17, -, -, 999, no</column>
+<column name=" + Loop 1.4">76848075, 76848075, 76925, -, -, 999, no</column>
+<column name="  ++ Loop 1.4.1">76923, 76923, 77, -, -, 999, no</column>
+<column name="   +++ Loop 1.4.1.1">38, 38, 2, -, -, 19, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

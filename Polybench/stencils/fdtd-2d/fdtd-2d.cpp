@@ -35,6 +35,16 @@ ap_uint<55> operator_int_55_div1(ap_uint<55> in);
 void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float * out);
 void rebuild_double(ap_uint<1> s, ap_uint<11> exp, ap_uint<52> mant, double * out);
 double operator_double_div2(double in);
+void lut_div5_chunk(ap_uint<3> d, ap_uint<3> r_in, ap_uint<3> (* q), ap_uint<3> (* r_out));
+/* int_57_div5 implements a division by 5 of the integer 57 bits in, optimized for Vivado HLS */
+ap_uint<57> int_57_div5(ap_uint<57> in);
+/* operator_int_57_div5 implements a division by 5 of the integer 57 bits in, optimized for Vivado HLS */
+ap_uint<57> operator_int_57_div5(ap_uint<57> in);
+double operator_double_div10(double in);
+ap_uint<9> lut_mul7_chunk(ap_uint<6> d);
+ap_uint<56> int_56_mul7(ap_uint<56> in);
+ap_uint<56> operator_int_56_mul7(ap_uint<56> in);
+double operator_double_mul7(double in);
 
 
 void decompose_double(double in, ap_uint<1> (* s), ap_uint<11> (* exp), ap_uint<52> (* mant)) {
@@ -124,6 +134,199 @@ double operator_double_div2(double in) {
 	}
 }
 
+void lut_div5_chunk(ap_uint<3> d, ap_uint<3> r_in, ap_uint<3> (* q), ap_uint<3> (* r_out)) {
+	ap_uint<6> in;
+	ap_uint<1> r0[64] = {0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
+	ap_uint<1> r1[64] = {0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1};
+	ap_uint<1> r2[64] = {0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0};
+	ap_uint<1> q0[64] = {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0};
+	ap_uint<1> q1[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
+	ap_uint<1> q2[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
+	
+	in = r_in.concat(d);
+	(*r_out)[0] = r0[in];
+	(*r_out)[1] = r1[in];
+	(*r_out)[2] = r2[in];
+	(*q)[0] = q0[in];
+	(*q)[1] = q1[in];
+	(*q)[2] = q2[in];
+}
+
+ap_uint<57> int_57_div5(ap_uint<57> in) {
+	ap_uint<57> d;
+	ap_uint<57> q;
+	ap_uint<3> d_chunk;
+	ap_uint<3> q_chunk;
+	ap_uint<3> r;
+	int i;
+	
+	r = 0;
+	d = in;
+	for(i = 18; i >= 0; i = i - 1) {
+		d_chunk = d.range(i*3 + 2, i*3);
+		lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+		q.range(i*3 + 2, i*3) = q_chunk;
+	}
+	return q;
+}
+
+ap_uint<57> operator_int_57_div5(ap_uint<57> in) {
+	return int_57_div5(in);
+}
+
+
+double operator_double_div10(double in) {
+	{
+		ap_uint<1> s;
+		ap_uint<11> exp;
+		ap_uint<52> mant;
+		ap_uint<11> new_exp;
+		ap_uint<52> new_mant;
+		ap_uint<57> xf;
+		double out;
+		ap_uint<11> shift;
+		ap_uint<11> div_exp;
+		
+		decompose_double(in, &s, &exp, &mant);
+		new_exp = exp;
+		new_mant = mant;
+		shift = 0;
+		div_exp = 3;
+		xf = mant;
+		if (mant < 1125899906842624)
+			div_exp = 4;
+		if (div_exp > exp)
+			new_exp = 0;
+		else
+			new_exp = exp - div_exp;
+		if (exp == 0)
+			shift = 1;
+		else
+			if (div_exp >= exp)
+				if (2 >= exp)
+					shift = 2 - exp;
+				else
+					shift = exp - 2;
+			else
+				shift = div_exp - 1;
+		if (2 >= exp)
+			xf = xf >> shift;
+		else
+			xf = xf << shift;
+		if (exp != 0)
+			xf.set(52);
+		xf = xf + 2;
+		new_mant = operator_int_57_div5(xf);
+		if (exp == 2047) {
+			new_mant = mant;
+			new_exp = exp;
+		}
+		rebuild_double(s, new_exp, new_mant, &out);
+		return out;
+	}
+}
+
+ap_uint<9> lut_mul7_chunk(ap_uint<6> d) {
+	ap_uint<9> out;
+	ap_uint<1> q0[64] = {0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1};
+	ap_uint<1> q1[64] = {0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0};
+	ap_uint<1> q2[64] = {0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0};
+	ap_uint<1> q3[64] = {0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1};
+	ap_uint<1> q4[64] = {0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1};
+	ap_uint<1> q5[64] = {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1};
+	ap_uint<1> q6[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	ap_uint<1> q7[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	ap_uint<1> q8[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	
+	out[0] = q0[d];
+	out[1] = q1[d];
+	out[2] = q2[d];
+	out[3] = q3[d];
+	out[4] = q4[d];
+	out[5] = q5[d];
+	out[6] = q6[d];
+	out[7] = q7[d];
+	out[8] = q8[d];
+	return out;
+}
+
+ap_uint<56> int_56_mul7(ap_uint<56> in) {
+	ap_uint<9> chunk_0_5;
+	ap_uint<9> chunk_6_11;
+	ap_uint<9> chunk_12_17;
+	ap_uint<9> chunk_18_23;
+	ap_uint<9> chunk_24_29;
+	ap_uint<9> chunk_30_35;
+	ap_uint<9> chunk_36_41;
+	ap_uint<9> chunk_42_47;
+	ap_uint<9> chunk_48_53;
+	ap_uint<9> chunk_54_55;
+	
+	chunk_0_5 = lut_mul7_chunk(in.range(5, 0));
+	chunk_6_11 = lut_mul7_chunk(in.range(11, 6));
+	chunk_12_17 = lut_mul7_chunk(in.range(17, 12));
+	chunk_18_23 = lut_mul7_chunk(in.range(23, 18));
+	chunk_24_29 = lut_mul7_chunk(in.range(29, 24));
+	chunk_30_35 = lut_mul7_chunk(in.range(35, 30));
+	chunk_36_41 = lut_mul7_chunk(in.range(41, 36));
+	chunk_42_47 = lut_mul7_chunk(in.range(47, 42));
+	chunk_48_53 = lut_mul7_chunk(in.range(53, 48));
+	chunk_54_55 = lut_mul7_chunk(in.range(54, 55));
+	return 0 + ((ap_uint<56>)chunk_0_5 << 0) + ((ap_uint<56>)chunk_6_11 << 6) + ((ap_uint<56>)chunk_12_17 << 12) + ((ap_uint<56>)chunk_18_23 << 18) + ((ap_uint<56>)chunk_24_29 << 24) + ((ap_uint<56>)chunk_30_35 << 30) + ((ap_uint<56>)chunk_36_41 << 36) + ((ap_uint<56>)chunk_42_47 << 42) + ((ap_uint<56>)chunk_48_53 << 48) + ((ap_uint<56>)chunk_54_55 << 54);
+}
+
+ap_uint<56> operator_int_56_mul7(ap_uint<56> in) {
+	return int_56_mul7(in);
+}
+
+double operator_double_mul7(double in) {
+	ap_uint<1> s;
+	ap_uint<11> exp;
+	ap_uint<52> mant;
+	ap_uint<11> new_exp;
+	ap_uint<52> new_mant;
+	ap_uint<56> xf;
+	double out;
+	ap_uint<6> clz;
+	ap_uint<11> div_exp;
+	
+	decompose_double(in, &s, &exp, &mant);
+	new_exp = exp;
+	new_mant = mant;
+	clz = 0;
+	div_exp = 2;
+	xf = mant;
+	if (mant > 5146970994320530)
+		div_exp = 3;
+	if (exp == 0) {
+		xf = operator_int_56_mul7(xf);
+		clz = xf.countLeadingZeros();
+		if (clz < 4) {
+			new_exp = 4 - clz;
+			new_mant = xf >> 3 - clz;
+		} else
+			new_mant = xf;
+	} else {
+		if (exp != 255)
+			if (exp >= 255 - div_exp)
+				new_mant = 0;
+			else {
+				xf.set(52);
+				xf = operator_int_56_mul7(xf);
+				new_mant = xf >> div_exp;
+			}
+		if (exp != 255)
+			if (exp >= 255 - div_exp)
+				new_exp = 255;
+			else
+				new_exp = exp + div_exp;
+	}
+	rebuild_double(s, new_exp, new_mant, &out);
+	return out;
+}
+
+
+
 
 
 /* Array initialization. */
@@ -181,7 +384,7 @@ void kernel_fdtd_2d_optimized(int tmax,
       
       for (i = 0; i < 1000 - 1; i++)
 	      for (j = 0; j < 1000 - 1; j++)
-	        hz[i][j] = hz[i][j] - 0.7*  (ex[i][j+1] - ex[i][j] + ey[i+1][j] - ey[i][j]);
+	        hz[i][j] = hz[i][j] - operator_double_div10(operator_int_56_mul7(ex[i][j+1] - ex[i][j] + ey[i+1][j] - ey[i][j]));
     }
 
 #pragma endscop

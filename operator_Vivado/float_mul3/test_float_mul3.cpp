@@ -3,7 +3,7 @@
 
 void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float* out);
 void decompose_float(float in, ap_uint<1> * s, ap_uint<8> * exp, ap_uint<23> * mant);
-float operator_float_mul23(float in);
+float operator_float_mul10(float in);
 
 using namespace std;
 
@@ -24,19 +24,19 @@ int main(int argc, char const *argv[])
 
     for (int i = 0; i < 1; ++i)
     {
-		int div = 23;
+		int div =10;
     	s=i;
-    	for (int j = 1; j <= 1; ++j)
+    	for (int j = 0; j <= 255; ++j)
     	{
     		if(j>6 && j<240) j+=15;
 			cerr << "exp = " << j << endl;
     		exp = j;
-    		for (int k = 0; k < 8388608; k+=1000)
+    		for (int k = 0; k < 8388608; k+=10000)
     		{
     			mant = k;
 
     			rebuild_float(s,exp,mant,&f);
-    			out = operator_float_mul23(f);
+    			out = operator_float_mul10(f);
 
     			if(f*div!=out && out==out) 
 				{

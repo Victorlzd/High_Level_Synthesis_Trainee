@@ -10,6 +10,10 @@ import gecos.instrs.IntInstruction;
 import operator.Div;
 import util.File_builder;
 
+/*
+ * This method handles the substitution of the division by integer constant
+ * with the appropriate optimized operator.
+ */
 public class Div_replacer {
 	
 	public static void replace(GenericInstruction g)

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"kernel_correlation_optimized": {
+			"proto_instances": {
+			}
+		}
+	}
+}

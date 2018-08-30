@@ -1,0 +1,77 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Wed Aug 29 10:01:45 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file operator_int_mul3_control_sets_placed.rpt
+| Design       : operator_int_mul3
+| Device       : xc7k160t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    22 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|     12 |            1 |
+|    16+ |           11 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              12 |            2 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              34 |            6 |
+| Yes          | No                    | No                     |             316 |           40 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
+| Clock Signal |                         Enable Signal                        | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
+|  ap_clk      |                                                              |                  |                2 |             12 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_122/q7_U/lut_mul3_chunk_q7_rom_U/ce0   |                  |                3 |             16 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_80/q7_U/lut_mul3_chunk_q7_rom_U/ce0    |                  |                3 |             16 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_101/q7_U/lut_mul3_chunk_q7_rom_U/ce0   |                  |                3 |             16 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_101/grp_lut_mul3_chunk_fu_101_ap_ready |                  |                3 |             16 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_80/Q[1]                                |                  |                2 |             16 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_122/grp_lut_mul3_chunk_fu_122_ap_ready |                  |                2 |             16 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_143/E[0]                               |                  |                4 |             32 |
+|  ap_clk      |                                                              | ap_rst           |                6 |             34 |
+|  ap_clk      | grp_lut_mul3_chunk_fu_122/E[0]                               |                  |                5 |             50 |
+|  ap_clk      | ap_NS_fsm10_out                                              |                  |                8 |             64 |
+|  ap_clk      | ap_CS_fsm_state4                                             |                  |                7 |             74 |
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
+
+

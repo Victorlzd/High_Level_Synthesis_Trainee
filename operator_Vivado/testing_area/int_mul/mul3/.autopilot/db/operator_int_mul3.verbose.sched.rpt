@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_int_mul3'
+================================================================
+* Date:           Wed Aug 29 09:58:47 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        int_mul
+* Solution:       mul3
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.50|     1.785|        0.31|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    8|    8|    8|    8|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.33>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%in_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %in_r) nounwind"   --->   Operation 6 'read' 'in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i32 %in_read to i6" [test.cpp:38->test.cpp:48]   --->   Operation 7 'trunc' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_Result_i = call i6 @_ssdm_op_PartSelect.i6.i32.i32.i32(i32 %in_read, i32 6, i32 11) nounwind" [test.cpp:39->test.cpp:48]   --->   Operation 8 'partselect' 'p_Result_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_Result_1_i = call i6 @_ssdm_op_PartSelect.i6.i32.i32.i32(i32 %in_read, i32 12, i32 17) nounwind" [test.cpp:40->test.cpp:48]   --->   Operation 9 'partselect' 'p_Result_1_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (1.33ns)   --->   "%chunk_12_17_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_1_i) nounwind" [test.cpp:40->test.cpp:48]   --->   Operation 10 'call' 'chunk_12_17_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_Result_2_i = call i6 @_ssdm_op_PartSelect.i6.i32.i32.i32(i32 %in_read, i32 18, i32 23) nounwind" [test.cpp:41->test.cpp:48]   --->   Operation 11 'partselect' 'p_Result_2_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (1.33ns)   --->   "%chunk_18_23_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_2_i) nounwind" [test.cpp:41->test.cpp:48]   --->   Operation 12 'call' 'chunk_18_23_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_Result_3_i = call i6 @_ssdm_op_PartSelect.i6.i32.i32.i32(i32 %in_read, i32 24, i32 29) nounwind" [test.cpp:42->test.cpp:48]   --->   Operation 13 'partselect' 'p_Result_3_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_Result_4_i = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %in_read, i32 31, i32 30) nounwind" [test.cpp:43->test.cpp:48]   --->   Operation 14 'partselect' 'p_Result_4_i' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.33>
+ST_2 : Operation 15 [2/2] (1.33ns)   --->   "%chunk_0_5_V = call fastcc i8 @lut_mul3_chunk(i6 %tmp_1) nounwind" [test.cpp:38->test.cpp:48]   --->   Operation 15 'call' 'chunk_0_5_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 16 [2/2] (1.33ns)   --->   "%chunk_6_11_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_i) nounwind" [test.cpp:39->test.cpp:48]   --->   Operation 16 'call' 'chunk_6_11_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [1/2] (1.33ns)   --->   "%chunk_12_17_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_1_i) nounwind" [test.cpp:40->test.cpp:48]   --->   Operation 17 'call' 'chunk_12_17_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 18 [1/2] (1.33ns)   --->   "%chunk_18_23_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_2_i) nounwind" [test.cpp:41->test.cpp:48]   --->   Operation 18 'call' 'chunk_18_23_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 19 [2/2] (1.33ns)   --->   "%chunk_24_29_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_3_i) nounwind" [test.cpp:42->test.cpp:48]   --->   Operation 19 'call' 'chunk_24_29_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%this_assign_5_i = zext i2 %p_Result_4_i to i6" [test.cpp:43->test.cpp:48]   --->   Operation 20 'zext' 'this_assign_5_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [2/2] (1.33ns)   --->   "%chunk_30_31_V = call fastcc i8 @lut_mul3_chunk(i6 %this_assign_5_i) nounwind" [test.cpp:43->test.cpp:48]   --->   Operation 21 'call' 'chunk_30_31_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.67>
+ST_3 : Operation 22 [1/2] (1.33ns)   --->   "%chunk_0_5_V = call fastcc i8 @lut_mul3_chunk(i6 %tmp_1) nounwind" [test.cpp:38->test.cpp:48]   --->   Operation 22 'call' 'chunk_0_5_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 23 [1/2] (1.33ns)   --->   "%chunk_6_11_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_i) nounwind" [test.cpp:39->test.cpp:48]   --->   Operation 23 'call' 'chunk_6_11_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 24 [1/2] (1.33ns)   --->   "%chunk_24_29_V = call fastcc i8 @lut_mul3_chunk(i6 %p_Result_3_i) nounwind" [test.cpp:42->test.cpp:48]   --->   Operation 24 'call' 'chunk_24_29_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 25 [1/2] (1.33ns)   --->   "%chunk_30_31_V = call fastcc i8 @lut_mul3_chunk(i6 %this_assign_5_i) nounwind" [test.cpp:43->test.cpp:48]   --->   Operation 25 'call' 'chunk_30_31_V' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%r_V_1 = call i20 @_ssdm_op_BitConcatenate.i20.i8.i12(i8 %chunk_12_17_V, i12 0)" [test.cpp:44->test.cpp:48]   --->   Operation 26 'bitconcatenate' 'r_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%r_V_1_cast = zext i20 %r_V_1 to i27" [test.cpp:44->test.cpp:48]   --->   Operation 27 'zext' 'r_V_1_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%r_V_2 = call i26 @_ssdm_op_BitConcatenate.i26.i8.i18(i8 %chunk_18_23_V, i18 0)" [test.cpp:44->test.cpp:48]   --->   Operation 28 'bitconcatenate' 'r_V_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%r_V_2_cast = zext i26 %r_V_2 to i27" [test.cpp:44->test.cpp:48]   --->   Operation 29 'zext' 'r_V_2_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (1.67ns)   --->   "%tmp1 = add i27 %r_V_2_cast, %r_V_1_cast" [test.cpp:44->test.cpp:48]   --->   Operation 30 'add' 'tmp1' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i8 %chunk_30_31_V to i2" [test.cpp:43->test.cpp:48]   --->   Operation 31 'trunc' 'tmp_2' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.78>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%r_V = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %chunk_6_11_V, i6 0)" [test.cpp:44->test.cpp:48]   --->   Operation 32 'bitconcatenate' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%r_V_cast = zext i14 %r_V to i27" [test.cpp:44->test.cpp:48]   --->   Operation 33 'zext' 'r_V_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%r_V_3 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i24(i8 %chunk_24_29_V, i24 0)" [test.cpp:44->test.cpp:48]   --->   Operation 34 'bitconcatenate' 'r_V_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (1.69ns)   --->   "%tmp = add i27 %r_V_cast, %tmp1" [test.cpp:44->test.cpp:48]   --->   Operation 35 'add' 'tmp' <Predicate = true> <Delay = 1.69> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%tmp3 = call i32 @_ssdm_op_BitConcatenate.i32.i2.i22.i8(i2 %tmp_2, i22 0, i8 %chunk_0_5_V)" [test.cpp:44->test.cpp:48]   --->   Operation 36 'bitconcatenate' 'tmp3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (1.78ns)   --->   "%tmp2 = add i32 %r_V_3, %tmp3" [test.cpp:44->test.cpp:48]   --->   Operation 37 'add' 'tmp2' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.78>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %in_r) nounwind, !map !92"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !98"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([18 x i8]* @operator_int_mul3_st) nounwind"   --->   Operation 40 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_cast = zext i27 %tmp to i32" [test.cpp:44->test.cpp:48]   --->   Operation 41 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] (1.78ns)   --->   "%agg_result_V_i = add i32 %tmp_cast, %tmp2" [test.cpp:44->test.cpp:48]   --->   Operation 42 'add' 'agg_result_V_i' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "ret i32 %agg_result_V_i" [test.cpp:48]   --->   Operation 43 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
+
+ <State 1>: 1.33ns
+The critical path consists of the following:
+	wire read on port 'in_r' [13]  (0 ns)
+	'call' operation ('chunk_12_17.V', test.cpp:40->test.cpp:48) to 'lut_mul3_chunk' [19]  (1.33 ns)
+
+ <State 2>: 1.33ns
+The critical path consists of the following:
+	'call' operation ('chunk_0_5.V', test.cpp:38->test.cpp:48) to 'lut_mul3_chunk' [15]  (1.33 ns)
+
+ <State 3>: 1.67ns
+The critical path consists of the following:
+	'add' operation ('tmp1', test.cpp:44->test.cpp:48) [34]  (1.67 ns)
+
+ <State 4>: 1.78ns
+The critical path consists of the following:
+	'add' operation ('tmp2', test.cpp:44->test.cpp:48) [39]  (1.78 ns)
+
+ <State 5>: 1.78ns
+The critical path consists of the following:
+	'add' operation ('agg_result_V_i', test.cpp:44->test.cpp:48) [40]  (1.78 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

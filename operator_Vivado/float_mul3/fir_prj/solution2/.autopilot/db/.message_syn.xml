@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;float_mul3.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from float_mul3.cpp:1:
+float_mul3.cpp:66:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else {
+   ^
+float_mul3.cpp:74:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else
+   ^
+2 warnings generated.\n"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 372.715 ; gain = 0.105 ; free physical = 171 ; free virtual = 10982"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 372.715 ; gain = 0.105 ; free physical = 171 ; free virtual = 10982"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="ERROR" prefix="[SYNCHK 200-79]" key="SYNCHK_DESIGN_EMPTY_214" tag="" content="Cannot find the top function &apos;operator_float_div3&apos; in the design. Possible causes are: (1) the top function name is misspelled; (2) the top function is nonexistent or declared as static."/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1855" tag="" content="Synthesizability check failed."/>
+	<Message severity="INFO" prefix="[Common 17-206]" key="Common 17-206" tag="" content="Exiting vivado_hls at Mon Aug 27 13:26:38 2018..."/>
+</Messages>

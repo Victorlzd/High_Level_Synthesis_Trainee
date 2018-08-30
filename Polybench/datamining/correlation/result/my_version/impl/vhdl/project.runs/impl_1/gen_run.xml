@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7k160tfbg484-1" LaunchTime="1535461200">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="kernel_correlation_optimized.drc"/>
+  <File Type="BG-BGN" Name="kernel_correlation_optimized.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="kernel_correlation_optimized.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="kernel_correlation_optimized.ltx"/>
+  <File Type="BITSTR-MMI" Name="kernel_correlation_optimized.mmi"/>
+  <File Type="BITSTR-BMM" Name="kernel_correlation_optimized_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="kernel_correlation_optimized.nky"/>
+  <File Type="BITSTR-RBT" Name="kernel_correlation_optimized.rbt"/>
+  <File Type="BITSTR-MSK" Name="kernel_correlation_optimized.msk"/>
+  <File Type="BG-BIN" Name="kernel_correlation_optimized.bin"/>
+  <File Type="BG-BIT" Name="kernel_correlation_optimized.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="kernel_correlation_optimized_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="kernel_correlation_optimized_bus_skew_postroute_physopted.pb"/>
+  <File Type="RDI-RDI" Name="kernel_correlation_optimized.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="kernel_correlation_optimized_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="kernel_correlation_optimized_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="kernel_correlation_optimized_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="kernel_correlation_optimized_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="kernel_correlation_optimized_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="kernel_correlation_optimized_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="kernel_correlation_optimized_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="kernel_correlation_optimized_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="kernel_correlation_optimized_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="kernel_correlation_optimized_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="kernel_correlation_optimized_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="kernel_correlation_optimized_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="kernel_correlation_optimized_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="kernel_correlation_optimized_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="kernel_correlation_optimized_power_summary_routed.pb"/>
+  <File Type="PLACE-UTIL" Name="kernel_correlation_optimized_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="kernel_correlation_optimized_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="kernel_correlation_optimized_io_placed.rpt"/>
+  <File Type="PWROPT-DCP" Name="kernel_correlation_optimized_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="kernel_correlation_optimized_timing_summary_opted.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="kernel_correlation_optimized_incremental_reuse_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="kernel_correlation_optimized.hwdef"/>
+  <File Type="PWROPT-DRC" Name="kernel_correlation_optimized_drc_pwropted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="kernel_correlation_optimized_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="kernel_correlation_optimized.tcl"/>
+  <File Type="PLACE-DCP" Name="kernel_correlation_optimized_placed.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="kernel_correlation_optimized_bus_skew_postroute_physopted.rpt"/>
+  <File Type="PA-DCP" Name="kernel_correlation_optimized.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="kernel_correlation_optimized_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="kernel_correlation_optimized_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="kernel_correlation_optimized_timing_summary_init.rpt"/>
+  <File Type="PLACE-CTRL" Name="kernel_correlation_optimized_control_sets_placed.rpt"/>
+  <File Type="PWROPT-TIMING" Name="kernel_correlation_optimized_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="kernel_correlation_optimized_incremental_reuse_pre_placed.rpt"/>
+  <File Type="OPT-DCP" Name="kernel_correlation_optimized_opt.dcp"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="kernel_correlation_optimized_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="kernel_correlation_optimized_drc_opted.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="kernel_correlation_optimized_utilization_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="kernel_correlation_optimized_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="kernel_correlation_optimized_drc_routed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="kernel_correlation_optimized_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="kernel_correlation_optimized_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="kernel_correlation_optimized_drc_routed.pb"/>
+  <File Type="PHYSOPT-DCP" Name="kernel_correlation_optimized_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="kernel_correlation_optimized_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="kernel_correlation_optimized_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-PWR" Name="kernel_correlation_optimized_power_routed.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="kernel_correlation_optimized_routed_error.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="kernel_correlation_optimized_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DCP" Name="kernel_correlation_optimized_routed.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="kernel_correlation_optimized_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="kernel_correlation_optimized_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC-RPX" Name="kernel_correlation_optimized_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="kernel_correlation_optimized_methodology_drc_routed.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/kernel_correlation_optimized_ap_dsqrt_57_no_dsp_64/kernel_correlation_optimized_ap_dsqrt_57_no_dsp_64.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/kernel_correlation_optimized_ap_dcmp_2_no_dsp_64/kernel_correlation_optimized_ap_dcmp_2_no_dsp_64.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/kernel_correlation_optimized_ap_ddiv_57_no_dsp_64/kernel_correlation_optimized_ap_ddiv_57_no_dsp_64.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/kernel_correlation_optimized_ap_dmul_16_max_dsp_64/kernel_correlation_optimized_ap_dmul_16_max_dsp_64.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/kernel_correlation_optimized_ap_dadddsub_12_no_dsp_64/kernel_correlation_optimized_ap_dadddsub_12_no_dsp_64.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatiohbi.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatioibs.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatiojbC.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatiokbM.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatiolbW.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatiomb6.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlation_optimized.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlationcg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatioocq.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatiopcA.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatioqcK.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/kernel_correlatiorcU.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q01.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q12.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q23.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q3.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q4.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q5.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q6.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lut_mul3_chunk_q7.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_dbkb.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_dcud.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_ddEe.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_deOg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_dfYi.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_dg8j.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_div5.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/operator_double_mul6.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="kernel_correlation_optimized"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/kernel_correlation_optimized.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

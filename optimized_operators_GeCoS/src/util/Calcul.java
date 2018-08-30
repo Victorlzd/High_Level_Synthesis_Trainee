@@ -1,7 +1,10 @@
 package util;
 
+/* this class provides simple useful computing tools
+ */
 public class Calcul {
 	
+	// this method computes 2^n
 	public static long pow2(long exponent)
 	{
 		long res = 1;
@@ -10,7 +13,7 @@ public class Calcul {
 		}
 		return res;
 	}
-	
+
 	public static int log2(int n)
 	{
 		int count = 0;
@@ -24,6 +27,8 @@ public class Calcul {
 		return count;
 	}
 	
+	// this method computes the exponent of 2 in the integer
+	// factorization of n
 	public static int pow_2_integer_factorization(int n)
 	{
 		int count = 0;

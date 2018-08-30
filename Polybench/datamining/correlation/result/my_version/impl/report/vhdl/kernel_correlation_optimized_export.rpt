@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             result
+Solution:            my_version
+Device target:       xc7k160tfbg484-1
+Report date:         Tue Aug 28 15:04:47 CEST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:         3505
+LUT:           9531
+FF:           16236
+DSP:             12
+BRAM:             0
+SRL:            324
+#=== Final timing ===
+CP required:    2.500
+CP achieved post-synthesis:    3.835
+CP achieved post-implementation:    3.199
+Timing not met

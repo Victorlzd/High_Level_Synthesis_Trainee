@@ -4,27 +4,12 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 
-
-open_project -reset fir_prj
-set_top kernel_fdtd_2d
-add_files fdtd-2d.cpp
-add_files fdtd-2d.h
-add_files polybench.h
-open_solution -reset 	"classic"
-set_part {xc7k160tfbg484-1} -tool vivado
-create_clock -period 10 -name default
-#source "./fir_prj/solution1/directives.tcl"
-#csim_design -clean -compiler gcc
-csynth_design
-#cosim_design -O -compiler gcc -rtl vhdl
-export_design -flow impl -rtl vhdl -format ip_catalog
-
 open_project -reset fir_prj
 set_top kernel_fdtd_2d_optimized
 add_files fdtd-2d.cpp
 add_files fdtd-2d.h
 add_files polybench.h
-open_solution -reset 	"my_version"
+open_solution -reset 	"my_version_with_mul"
 set_part {xc7k160tfbg484-1} -tool vivado
 create_clock -period 10 -name default
 #source "./fir_prj/solution1/directives.tcl"

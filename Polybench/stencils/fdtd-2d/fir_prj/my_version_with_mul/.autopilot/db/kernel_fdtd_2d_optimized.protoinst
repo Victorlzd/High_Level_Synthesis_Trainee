@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"kernel_fdtd_2d_optimized": {
+			"proto_instances": {
+			}
+		}
+	}
+}

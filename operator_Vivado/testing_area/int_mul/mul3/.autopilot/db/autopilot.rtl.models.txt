@@ -1,0 +1,10 @@
+lut_mul3_chunk_q0
+lut_mul3_chunk_q1
+lut_mul3_chunk_q2
+lut_mul3_chunk_q3
+lut_mul3_chunk_q4
+lut_mul3_chunk_q5
+lut_mul3_chunk_q6
+lut_mul3_chunk_q7
+lut_mul3_chunk
+operator_int_mul3

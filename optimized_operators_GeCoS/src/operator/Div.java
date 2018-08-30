@@ -405,13 +405,12 @@ public class Div {
 				CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
 				GecosUserTypeFactory.setScope(mainblock.getScope());
 				
-				ProcedureSymbol operator = arbitrary_sized_int_div_by_constant(ps, div, size);
-				Instruction operator_call = GecosUserInstructionFactory.call(operator, GecosUserInstructionFactory.symbref(parameters.get(0)));
-				Instruction ret = GecosUserInstructionFactory.ret(operator_call);
-				BasicBlock ret_bb = GecosUserBlockFactory.BBlock(ret);
+				// this returns the optimized computation of the division
+				Instruction compute_div = div_builder_eratosthene(ps, GecosUserInstructionFactory.symbref(parameters.get(0)), div, size);
+				Instruction ret = GecosUserInstructionFactory.ret(compute_div);
 				
-				//GecosUserAnnotationFactory.pragma(ret_bb, "HLS latency max=1");
-				mainblock.addBlock(ret_bb);
+				BasicBlock block = GecosUserBlockFactory.BBlock(ret);
+				mainblock.addBlock(block);
 				
 				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
 				File_builder.add_operator(proc_symbol);
@@ -432,11 +431,11 @@ public class Div {
 		}
 		if(is_long)
 		{
-			return builded_double_divider.get(div);
+			return builded_long_divider.get(div);
 		}
 		else
 		{
-			return builded_float_divider.get(div);
+			return builded_int_divider.get(div);
 		}
 	}
 	
@@ -676,7 +675,7 @@ public class Div {
 			
 			BasicBlock for_body_bb = GecosUserBlockFactory.BBlock();
 			// #pragma HLS unroll
-			GecosUserAnnotationFactory.pragma(for_body_bb, "HLS unroll");
+			//GecosUserAnnotationFactory.pragma(for_body_bb, "HLS unroll");
 			// i*width_chunk
 			Instruction i_mul_width_chunk = GecosUserInstructionFactory.mul(GecosUserInstructionFactory.symbref(i_symbol), GecosUserInstructionFactory.Int(width_chunk));
 			// (i*width_chunk+width_chunk-1,i*width_chunk)

@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vivado HLS Report for 'lut_mul3_chunk'
+================================================================
+* Date:           Wed Aug 29 09:58:47 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        int_mul
+* Solution:       mul3
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.50|     1.332|        0.31|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.33>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%d_V_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %d_V)"   --->   Operation 3 'read' 'd_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%tmp = zext i6 %d_V_read to i64" [test.cpp:19]   --->   Operation 4 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%q0_addr = getelementptr [64 x i1]* @q0, i64 0, i64 %tmp" [test.cpp:19]   --->   Operation 5 'getelementptr' 'q0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (1.33ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [test.cpp:19]   --->   Operation 6 'load' 'q0_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%q1_addr = getelementptr [64 x i1]* @q1, i64 0, i64 %tmp" [test.cpp:20]   --->   Operation 7 'getelementptr' 'q1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (1.33ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [test.cpp:20]   --->   Operation 8 'load' 'q1_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%q2_addr = getelementptr [64 x i1]* @q2, i64 0, i64 %tmp" [test.cpp:21]   --->   Operation 9 'getelementptr' 'q2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (1.33ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [test.cpp:21]   --->   Operation 10 'load' 'q2_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%q3_addr = getelementptr [64 x i1]* @q3, i64 0, i64 %tmp" [test.cpp:22]   --->   Operation 11 'getelementptr' 'q3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (1.33ns)   --->   "%q3_load = load i1* %q3_addr, align 1" [test.cpp:22]   --->   Operation 12 'load' 'q3_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%q4_addr = getelementptr [64 x i1]* @q4, i64 0, i64 %tmp" [test.cpp:23]   --->   Operation 13 'getelementptr' 'q4_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (1.33ns)   --->   "%q4_load = load i1* %q4_addr, align 1" [test.cpp:23]   --->   Operation 14 'load' 'q4_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%q5_addr = getelementptr [64 x i1]* @q5, i64 0, i64 %tmp" [test.cpp:24]   --->   Operation 15 'getelementptr' 'q5_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (1.33ns)   --->   "%q5_load = load i1* %q5_addr, align 1" [test.cpp:24]   --->   Operation 16 'load' 'q5_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%q6_addr = getelementptr [64 x i1]* @q6, i64 0, i64 %tmp" [test.cpp:25]   --->   Operation 17 'getelementptr' 'q6_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (1.33ns)   --->   "%q6_load = load i1* %q6_addr, align 1" [test.cpp:25]   --->   Operation 18 'load' 'q6_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%q7_addr = getelementptr [64 x i1]* @q7, i64 0, i64 %tmp" [test.cpp:26]   --->   Operation 19 'getelementptr' 'q7_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [2/2] (1.33ns)   --->   "%q7_load = load i1* %q7_addr, align 1" [test.cpp:26]   --->   Operation 20 'load' 'q7_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+
+State 2 <SV = 1> <Delay = 1.33>
+ST_2 : Operation 21 [1/2] (1.33ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [test.cpp:19]   --->   Operation 21 'load' 'q0_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 22 [1/2] (1.33ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [test.cpp:20]   --->   Operation 22 'load' 'q1_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 23 [1/2] (1.33ns)   --->   "%q2_load = load i1* %q2_addr, align 1" [test.cpp:21]   --->   Operation 23 'load' 'q2_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 24 [1/2] (1.33ns)   --->   "%q3_load = load i1* %q3_addr, align 1" [test.cpp:22]   --->   Operation 24 'load' 'q3_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 25 [1/2] (1.33ns)   --->   "%q4_load = load i1* %q4_addr, align 1" [test.cpp:23]   --->   Operation 25 'load' 'q4_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 26 [1/2] (1.33ns)   --->   "%q5_load = load i1* %q5_addr, align 1" [test.cpp:24]   --->   Operation 26 'load' 'q5_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 27 [1/2] (1.33ns)   --->   "%q6_load = load i1* %q6_addr, align 1" [test.cpp:25]   --->   Operation 27 'load' 'q6_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 28 [1/2] (1.33ns)   --->   "%q7_load = load i1* %q7_addr, align 1" [test.cpp:26]   --->   Operation 28 'load' 'q7_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%p_Result_s = call i8 @_ssdm_op_BitConcatenate.i8.i1.i1.i1.i1.i1.i1.i1.i1(i1 %q7_load, i1 %q6_load, i1 %q5_load, i1 %q4_load, i1 %q3_load, i1 %q2_load, i1 %q1_load, i1 %q0_load)" [test.cpp:26]   --->   Operation 29 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "ret i8 %p_Result_s" [test.cpp:27]   --->   Operation 30 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
+
+ <State 1>: 1.33ns
+The critical path consists of the following:
+	wire read on port 'd_V' [10]  (0 ns)
+	'getelementptr' operation ('q0_addr', test.cpp:19) [12]  (0 ns)
+	'load' operation ('q0_load', test.cpp:19) on array 'q0' [13]  (1.33 ns)
+
+ <State 2>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('q0_load', test.cpp:19) on array 'q0' [13]  (1.33 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,202 @@
+\documentclass[10pt,a4paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{graphicx}
+%\usepackage{placeins}
+%\usepackage{lscape}
+
+\author{Victor Lezaud}
+\title{Rapport technique de stage\\ Optimisation de division et multiplication par des constantes sous VIVADO HLS}
+\begin{document}
+
+
+\maketitle
+\renewcommand{\contentsname}{Sommaire}
+\tableofcontents
+\newpage
+
+\section{VIVADO HLS}
+\subsection{Les algorithmes}
+Pour réaliser ces optimisations j'ai implémenté des algorithmes basés sur les LUT, tels que décrits dans ces articles :
+\begin{itemize}
+    \item Pour la division : Florent De Dinechin, Laurent-Stéphane Didier. Table-based division by small integer constants.
+    \item Pour la multiplication : Towards Hardware IIR Filters Computing Just Right: Direct Form I Case Study
+\end{itemize}
+
+\subsection{Une LUT}
+Les algorithmes que j'utilise dont centrés autour des LUT. Il m'a donc fallu trouvé un moyen de définir une unique LUT avec 
+VIVADO HLS. J'ai essayé plusieurs méthodes mis celle qui donne une seule LUT mais surtout les meilleures estimations (en LUT et fréquence)
+par VIVADO HLS consiste à stocker les sorties  possibles dans un tableau statique de taille inférieure ou égale à 64. Attention le 
+tableau doit être rempli lors de la définition, comme ceci : \verb|ap_uint<1> tab_LUT[] = {0,1, ... , 0,1};|
+
+\subsection{Division d'entier}
+\subsubsection{Exemple de code : division par 3}
+\begin{verbatim}
+void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out)) {
+	ap_uint<6> in;
+	ap_uint<1> r0[64] = {0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0};
+	ap_uint<1> r1[64] = {0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0};
+	ap_uint<1> q0[64] = {0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1};
+	ap_uint<1> q1[64] = {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
+	ap_uint<1> q2[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
+	ap_uint<1> q3[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	
+	in = r_in.concat(d);
+	(*r_out)[0] = r0[in];
+	(*r_out)[1] = r1[in];
+	(*q)[0] = q0[in];
+	(*q)[1] = q1[in];
+	(*q)[2] = q2[in];
+	(*q)[3] = q3[in];
+}
+
+ap_uint<32> int_32_div3(ap_uint<32> in) {
+	ap_uint<32> d;
+	ap_uint<32> q;
+	ap_uint<4> d_chunk;
+	ap_uint<4> q_chunk;
+	ap_uint<2> r;
+	int i;
+	
+	r = 0;
+	d = in;
+	for(i = 7; i >= 0; i = i - 1) {
+		d_chunk = d.range(i*4 + 3, i*4);
+		lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+		q.range(i*4 + 3, i*4) = q_chunk;
+	}
+	return q;
+}
+
+int operator_int_div3(int in) {
+	return int_32_div3(in);
+}
+\end{verbatim}
+
+\subsubsection{Explication}
+La premiere fonction \verb=lut_div3_chunk= définit un groupe de LUT à 6 entrées et 6 sorties. On peut donc en resortir 4 bits de
+quotient et 2 bits pour le reste (car on divise par 3). La deuxième fonction \verb=int_32_div3= itère sur la première afin
+d'obtenir 32 bits de quotient.
+
+\subsection{Division de flotant}
+\subsubsection{Exemple de code : divisino par 3}
+\begin{verbatim}
+void decompose_float(float in, ap_uint<1> (* s), ap_uint<8> (* exp), ap_uint<23> (* mant)) {
+	fix_to_float conv;
+	ap_uint<32> in_bits;
+	
+	conv.f = in;
+	in_bits = conv.i;
+	*s = in_bits[31];
+	*exp = in_bits.range(30, 23);
+	*mant = in_bits.range(22, 0);
+}
+
+// J'ai enlevé la définition de l'opérateur entier
+
+void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float * out) {
+	fix_to_float conv;
+	ap_uint<31> exp_plus_mant;
+	ap_uint<32> res;
+	
+	exp_plus_mant = exp.concat(mant);
+	res = s.concat(exp_plus_mant);
+	conv.i = res;
+	*out = conv.f;
+}
+
+float operator_float_div3(float in) {
+	{
+		ap_uint<1> s;
+		ap_uint<8> exp;
+		ap_uint<23> mant;
+		ap_uint<8> new_exp;
+		ap_uint<23> new_mant;
+		ap_uint<26> xf;
+		float out;
+		ap_uint<8> shift;
+		ap_uint<8> div_exp;
+		
+		decompose_float(in, &s, &exp, &mant);
+		new_exp = exp;
+		new_mant = mant;
+		shift = 0;
+		div_exp = 1;
+		xf = mant;
+		if (mant < 4194304)
+			div_exp = 2;
+		if (div_exp > exp)
+			new_exp = 0;
+		else
+			new_exp = exp - div_exp;
+		if (exp == 0)
+			shift = 0;
+		else
+			if (div_exp >= exp)
+				if (1 >= exp)
+					shift = 1 - exp;
+				else
+					shift = exp - 1;
+			else
+				shift = div_exp - 0;
+		if (1 >= exp)
+			xf = xf >> shift;
+		else
+			xf = xf << shift;
+		if (exp != 0)
+			xf.set(23);
+		xf = xf + 1;
+		new_mant = operator_int_26_div3(xf);
+		if (exp == 255) {
+			new_mant = mant;
+			new_exp = exp;
+		}
+		rebuild_float(s, new_exp, new_mant, &out);
+		return out;
+	}
+}
+\end{verbatim}
+
+\subsubsection{Les différents cas}
+Pour pouvoir optimiser la division d'un flottant on calcule séparément la mantisse et l'exposant comme deux entiers non signés.
+Pour cela nous alons devoir différencier plusieurs cas seln les critères suivants :
+\begin{itemize}
+	\item si le nombre est un infini ou un NaN
+	\item Si le calcul donnerait une mantisse inférieure à 1
+	\item Si le nombre devient un sous-normal
+	\item Si le nombre est déjà un sous-normal
+	\item Si on inclus une division par $2^n$
+\end{itemize}
+
+\paragraph{Infini et NaN :} Dans ce cas, soit \verb!exp==255! on ne doit pas modifier le nombre. La gestion de ce cas s'effectue avec :
+\begin{verbatim}
+	if (exp == 255) {
+		new_mant = mant;
+		new_exp = exp;
+	}
+\end{verbatim}
+
+\paragraph{Mantisse inférieure à 1 :} Dans ce cas il faut multiplier la mantisse par 2 et diminuer de 1 l'exposant. Pour cela il
+faut incrémenter la valeur de \ver=div_exp= dans cet algo. La gestion de ce cas s'effectue au tout début avec le bloc if :
+\begin{verbatim}
+	if (mant < 4194304)
+		div_exp = 2;
+\end{verbatim}
+
+\paragraph{Le nombre devient un sous-normal :} Si le nombre devient un sous-normal soit \verb!div_exp>=exp!, il faut bloquer
+l'exposant à 0, et la mantisse ne dois pas être décalé de \verb=div_exp= mais seulement de ce qu'on a "perdu" en exposant soit
+\verb=exp-1=.
+
+\paragraph{Le nombre est déja un sous-normal :} Dans ce cas, soit \verb!exp==0! on ne doit pas décaler la mantisse, bloquerl'exposant à 0 et on ne
+doit pas rajouter le bit non-stocké de la mantisse avant la division.
+
+\paragraph{Si on inclus une division par $2^n$ :} Ce cas n'apparaît pas ici mais la structure nécessaire apparait tout de même. Dans
+le cas d
+
+\end{document}

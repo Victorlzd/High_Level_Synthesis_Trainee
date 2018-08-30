@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'int_32_div3'" level="0">
-<item name = "Date">Fri Aug 24 17:04:57 2018
+<item name = "Date">Tue Aug 28 11:07:28 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">rework_int_division</item>
@@ -97,13 +97,13 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">4, 0, 4, 0</column>
-<column name="d_chunk_V_reg_275">4, 0, 4, 0</column>
-<column name="q0_load_reg_295">1, 0, 1, 0</column>
-<column name="q1_load_reg_290">1, 0, 1, 0</column>
-<column name="q2_load_reg_285">1, 0, 1, 0</column>
-<column name="q3_load_reg_280">1, 0, 1, 0</column>
-<column name="r0_load_reg_305">1, 0, 1, 0</column>
-<column name="r1_load_reg_300">1, 0, 1, 0</column>
+<column name="d_chunk_V_reg_269">4, 0, 4, 0</column>
+<column name="q0_load_reg_289">1, 0, 1, 0</column>
+<column name="q1_load_reg_284">1, 0, 1, 0</column>
+<column name="q2_load_reg_279">1, 0, 1, 0</column>
+<column name="q3_load_reg_274">1, 0, 1, 0</column>
+<column name="r0_load_reg_299">1, 0, 1, 0</column>
+<column name="r1_load_reg_294">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

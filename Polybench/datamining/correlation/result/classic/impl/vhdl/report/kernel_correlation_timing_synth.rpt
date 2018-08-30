@@ -1,0 +1,67 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Aug 28 14:49:20 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/kernel_correlation_timing_synth.rpt
+| Design       : kernel_correlation
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.592ns  (required time - arrival time)
+  Source:                 j_reg_205_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            tmp_1_reg_216_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.657ns  (logic 0.540ns (20.324%)  route 2.117ns (79.676%))
+  Logic Levels:           3  (LUT2=1 LUT6=2)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.672ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=13707, unset)        0.672     0.672    ap_clk
+                         FDRE                                         r  j_reg_205_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.281     0.953 f  j_reg_205_reg[6]/Q
+                         net (fo=6, unplaced)         0.690     1.643    j_reg_205_reg_n_8_[6]
+                         LUT6 (Prop_lut6_I0_O)        0.153     1.796 r  j_1_reg_250[9]_i_2/O
+                         net (fo=2, unplaced)         0.351     2.147    j_1_reg_250[9]_i_2_n_8
+                         LUT6 (Prop_lut6_I1_O)        0.053     2.200 r  mean_addr_reg_791[0]_i_1/O
+                         net (fo=14, unplaced)        0.391     2.591    mean_addr_reg_791[0]_i_1_n_8
+                         LUT2 (Prop_lut2_I1_O)        0.053     2.644 r  tmp_1_reg_216[63]_i_1/O
+                         net (fo=64, unplaced)        0.685     3.329    tmp_1_reg_216[63]_i_1_n_8
+                         FDRE                                         r  tmp_1_reg_216_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=13707, unset)        0.638     3.138    ap_clk
+                         FDRE                                         r  tmp_1_reg_216_reg[0]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+                         FDRE (Setup_fdre_C_R)       -0.366     2.737    tmp_1_reg_216_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.737    
+                         arrival time                          -3.329    
+  -------------------------------------------------------------------
+                         slack                                 -0.592    
+
+
+
+

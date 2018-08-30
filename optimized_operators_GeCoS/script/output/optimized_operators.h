@@ -1,4 +1,4 @@
 
-int operator_int_div3(int in);
+float operator_float_div3(float in);
 
 
