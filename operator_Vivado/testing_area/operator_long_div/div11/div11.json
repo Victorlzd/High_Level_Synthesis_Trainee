@@ -1,15 +1,3 @@
-{"sourceFile": [{
-      "name": "",
-      "directive": [{
-          "functionName": "operator_long_div11",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "LATENCY",
-            "option": [{
-                "name": "max",
-                "value": "1"
-              }]
-          }
-        }]
-    }]}
+{
+  
+}

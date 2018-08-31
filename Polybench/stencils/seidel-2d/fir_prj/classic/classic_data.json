@@ -17,13 +17,13 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "10",
+    "ClockPeriod": "2.5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "1354605401",
-    "Uncertainty": "1.25"
+    "Latency": "3565814121",
+    "Uncertainty": "0.3125"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 2.500 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
@@ -35,7 +35,7 @@
     "Taxonomy": "\/VIVADO_HLS_IP"
   },
   "Files": {
-    "CSource": ["..\/..\/classic\/seidel-2d.cpp"],
+    "CSource": ["..\/..\/seidel-2d.cpp"],
     "Vhdl": [
       "impl\/vhdl\/kernel_seidel_2d_bkb.vhd",
       "impl\/vhdl\/kernel_seidel_2d_cud.vhd",
@@ -50,8 +50,8 @@
     ],
     "Misc": ["impl\/misc\/logo.png"],
     "Subcore": [
-      "impl\/misc\/kernel_seidel_2d_ap_dadd_3_full_dsp_64_ip.tcl",
-      "impl\/misc\/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_ip.tcl"
+      "impl\/misc\/kernel_seidel_2d_ap_dadd_12_no_dsp_64_ip.tcl",
+      "impl\/misc\/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_ip.tcl"
     ]
   },
   "SubcoreInfo": {
@@ -59,14 +59,14 @@
     "HasClockedDsp": false,
     "IP": [
       {
-        "name": "kernel_seidel_2d_ap_dadd_3_full_dsp_64",
+        "name": "kernel_seidel_2d_ap_dadd_12_no_dsp_64",
         "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name kernel_seidel_2d_ap_dadd_3_full_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
+        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 12 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name kernel_seidel_2d_ap_dadd_12_no_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
       },
       {
-        "name": "kernel_seidel_2d_ap_ddiv_20_no_dsp_64",
+        "name": "kernel_seidel_2d_ap_ddiv_57_no_dsp_64",
         "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 20 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name kernel_seidel_2d_ap_ddiv_20_no_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
+        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 57 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name kernel_seidel_2d_ap_ddiv_57_no_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
       }
     ]
   },
@@ -267,43 +267,43 @@
     "Hierarchy": {"ModuleName": "kernel_seidel_2d"},
     "Metrics": {"kernel_seidel_2d": {
         "Latency": {
-          "LatencyBest": "1354605401",
-          "LatencyAvg": "1354605401",
-          "LatencyWorst": "1354605401",
-          "PipelineII": "1354605402",
+          "LatencyBest": "3565814121",
+          "LatencyAvg": "3565814121",
+          "LatencyWorst": "3565814121",
+          "PipelineII": "3565814122",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "7.288"
+          "Target": "2.50",
+          "Uncertainty": "0.31",
+          "Estimate": "3.171"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "20",
-            "Latency": "1354605400",
+            "Latency": "3565814120",
             "PipelineII": "",
-            "PipelineDepth": "67730270",
+            "PipelineDepth": "178290706",
             "Loops": [{
                 "Name": "Loop 1.1",
                 "TripCount": "998",
-                "Latency": "67730268",
+                "Latency": "178290704",
                 "PipelineII": "",
-                "PipelineDepth": "67866",
+                "PipelineDepth": "178648",
                 "Loops": [{
                     "Name": "Loop 1.1.1",
                     "TripCount": "998",
-                    "Latency": "67864",
+                    "Latency": "178642",
                     "PipelineII": "",
-                    "PipelineDepth": "68"
+                    "PipelineDepth": "179"
                   }]
               }]
           }],
         "Area": {
-          "DSP48E": "6",
-          "FF": "3260",
-          "LUT": "4839",
+          "DSP48E": "3",
+          "FF": "8187",
+          "LUT": "5653",
           "BRAM_18K": "0"
         }
       }}
@@ -315,7 +315,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-08 16:35:12 CEST",
+    "Time": "2018-08-31 22:04:44 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

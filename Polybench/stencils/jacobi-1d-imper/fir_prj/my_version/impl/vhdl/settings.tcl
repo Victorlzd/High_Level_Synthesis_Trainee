@@ -8,7 +8,7 @@
 #
 # Settings for Vivado implementation flow
 #
-set top_module kernel_jacobi_1d_imper
+set top_module kernel_jacobi_1d_imper_optimized
 set language vhdl
 set family kintex7
 set device xc7k160t

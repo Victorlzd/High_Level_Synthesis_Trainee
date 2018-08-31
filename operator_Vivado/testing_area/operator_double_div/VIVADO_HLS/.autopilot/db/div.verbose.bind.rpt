@@ -1,0 +1,637 @@
+
+
+================================================================
+== Vivado HLS Report for 'div'
+================================================================
+* Date:           Fri Aug 31 14:24:31 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        operator_double_div
+* Solution:       VIVADO_HLS
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.50|     3.171|        0.31|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   58|   58|   58|   58|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 59
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.17>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%a_read = call double @_ssdm_op_Read.ap_auto.double(double %a) nounwind"   --->   Operation 60 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [59/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 61 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.17>
+ST_2 : Operation 62 [58/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 62 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.17>
+ST_3 : Operation 63 [57/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 63 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.17>
+ST_4 : Operation 64 [56/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 64 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.17>
+ST_5 : Operation 65 [55/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 65 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.17>
+ST_6 : Operation 66 [54/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 66 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.17>
+ST_7 : Operation 67 [53/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 67 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.17>
+ST_8 : Operation 68 [52/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 68 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.17>
+ST_9 : Operation 69 [51/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 69 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.17>
+ST_10 : Operation 70 [50/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 70 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.17>
+ST_11 : Operation 71 [49/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 71 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 3.17>
+ST_12 : Operation 72 [48/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 72 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 3.17>
+ST_13 : Operation 73 [47/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 73 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 3.17>
+ST_14 : Operation 74 [46/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 74 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 3.17>
+ST_15 : Operation 75 [45/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 75 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 3.17>
+ST_16 : Operation 76 [44/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 76 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 3.17>
+ST_17 : Operation 77 [43/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 77 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 3.17>
+ST_18 : Operation 78 [42/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 78 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 3.17>
+ST_19 : Operation 79 [41/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 79 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 3.17>
+ST_20 : Operation 80 [40/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 80 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 3.17>
+ST_21 : Operation 81 [39/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 81 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 3.17>
+ST_22 : Operation 82 [38/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 82 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 3.17>
+ST_23 : Operation 83 [37/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 83 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 3.17>
+ST_24 : Operation 84 [36/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 84 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 3.17>
+ST_25 : Operation 85 [35/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 85 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 3.17>
+ST_26 : Operation 86 [34/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 86 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 3.17>
+ST_27 : Operation 87 [33/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 87 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 3.17>
+ST_28 : Operation 88 [32/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 88 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 3.17>
+ST_29 : Operation 89 [31/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 89 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 3.17>
+ST_30 : Operation 90 [30/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 90 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 3.17>
+ST_31 : Operation 91 [29/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 91 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 3.17>
+ST_32 : Operation 92 [28/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 92 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 3.17>
+ST_33 : Operation 93 [27/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 93 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 3.17>
+ST_34 : Operation 94 [26/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 94 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 3.17>
+ST_35 : Operation 95 [25/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 95 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 3.17>
+ST_36 : Operation 96 [24/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 96 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 3.17>
+ST_37 : Operation 97 [23/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 97 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 3.17>
+ST_38 : Operation 98 [22/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 98 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 3.17>
+ST_39 : Operation 99 [21/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 99 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 3.17>
+ST_40 : Operation 100 [20/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 100 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 3.17>
+ST_41 : Operation 101 [19/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 101 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 3.17>
+ST_42 : Operation 102 [18/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 102 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 3.17>
+ST_43 : Operation 103 [17/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 103 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 3.17>
+ST_44 : Operation 104 [16/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 104 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 3.17>
+ST_45 : Operation 105 [15/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 105 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 3.17>
+ST_46 : Operation 106 [14/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 106 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 3.17>
+ST_47 : Operation 107 [13/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 107 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 3.17>
+ST_48 : Operation 108 [12/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 108 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 3.17>
+ST_49 : Operation 109 [11/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 109 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 3.17>
+ST_50 : Operation 110 [10/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 110 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 3.17>
+ST_51 : Operation 111 [9/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 111 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 3.17>
+ST_52 : Operation 112 [8/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 112 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 3.17>
+ST_53 : Operation 113 [7/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 113 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 3.17>
+ST_54 : Operation 114 [6/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 114 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 3.17>
+ST_55 : Operation 115 [5/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 115 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 3.17>
+ST_56 : Operation 116 [4/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 116 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 3.17>
+ST_57 : Operation 117 [3/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 117 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 3.17>
+ST_58 : Operation 118 [2/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 118 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 3.17>
+ST_59 : Operation 119 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(double %a) nounwind, !map !7"   --->   Operation 119 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 120 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(double 0.000000e+00) nounwind, !map !13"   --->   Operation 120 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 121 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @div_str) nounwind"   --->   Operation 121 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 122 [1/59] (3.17ns)   --->   "%tmp = fdiv double %a_read, 3.000000e+00" [test.cpp:3]   --->   Operation 122 'ddiv' 'tmp' <Predicate = true> <Delay = 3.17> <Core = "DDiv">   --->   Core 111 'DDiv' <Latency = 58> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 123 [1/1] (0.00ns)   --->   "ret double %tmp" [test.cpp:3]   --->   Operation 123 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ a]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+a_read       (read         ) [ 001111111111111111111111111111111111111111111111111111111111]
+StgValue_119 (specbitsmap  ) [ 000000000000000000000000000000000000000000000000000000000000]
+StgValue_120 (specbitsmap  ) [ 000000000000000000000000000000000000000000000000000000000000]
+StgValue_121 (spectopmodule) [ 000000000000000000000000000000000000000000000000000000000000]
+tmp          (ddiv         ) [ 000000000000000000000000000000000000000000000000000000000000]
+StgValue_123 (ret          ) [ 000000000000000000000000000000000000000000000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="a">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="a"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.double"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="div_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1004" name="a_read_read_fu_14">
+<pin_list>
+<pin id="15" dir="0" index="0" bw="64" slack="0"/>
+<pin id="16" dir="0" index="1" bw="64" slack="0"/>
+<pin id="17" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="a_read/1 "/>
+</bind>
+</comp>
+
+<comp id="20" class="1004" name="grp_fu_20">
+<pin_list>
+<pin id="21" dir="0" index="0" bw="64" slack="0"/>
+<pin id="22" dir="0" index="1" bw="64" slack="0"/>
+<pin id="23" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="ddiv(511) " fcode="ddiv"/>
+<opset="tmp/1 "/>
+</bind>
+</comp>
+
+<comp id="26" class="1005" name="a_read_reg_26">
+<pin_list>
+<pin id="27" dir="0" index="0" bw="64" slack="1"/>
+<pin id="28" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="a_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="18"><net_src comp="2" pin="0"/><net_sink comp="14" pin=0"/></net>
+
+<net id="19"><net_src comp="0" pin="0"/><net_sink comp="14" pin=1"/></net>
+
+<net id="24"><net_src comp="14" pin="2"/><net_sink comp="20" pin=0"/></net>
+
+<net id="25"><net_src comp="4" pin="0"/><net_sink comp="20" pin=1"/></net>
+
+<net id="29"><net_src comp="14" pin="2"/><net_sink comp="26" pin=0"/></net>
+
+<net id="30"><net_src comp="26" pin="1"/><net_sink comp="20" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: div : a | {1 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+		StgValue_123 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------|---------|---------|---------|
+| Operation|  Functional Unit  |  DSP48E |    FF   |   LUT   |
+|----------|-------------------|---------|---------|---------|
+|   ddiv   |     grp_fu_20     |    0    |   6160  |   3524  |
+|----------|-------------------|---------|---------|---------|
+|   read   | a_read_read_fu_14 |    0    |    0    |    0    |
+|----------|-------------------|---------|---------|---------|
+|   Total  |                   |    0    |   6160  |   3524  |
+|----------|-------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------+--------+
+|             |   FF   |
++-------------+--------+
+|a_read_reg_26|   64   |
++-------------+--------+
+|    Total    |   64   |
++-------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_20 |  p0  |   2  |  64  |   128  ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   128  ||  1.061  ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    0   |    -   |  6160  |  3524  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    1   |    -   |    9   |
+|  Register |    -   |    -   |   64   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    0   |    1   |  6224  |  3533  |
++-----------+--------+--------+--------+--------+

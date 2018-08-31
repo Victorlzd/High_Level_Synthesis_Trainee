@@ -7,28 +7,35 @@
 
 #ifndef __kernel_seidel_2d_dEe__HH__
 #define __kernel_seidel_2d_dEe__HH__
-#include "ACMP_smul_uu.h"
+#include "ACMP_shl.h"
 #include <systemc>
 
 template<
     int ID,
     int NUM_STAGE,
+    int OPCODE,
     int din0_WIDTH,
     int din1_WIDTH,
     int dout_WIDTH>
 SC_MODULE(kernel_seidel_2d_dEe) {
+    sc_core::sc_in_clk clk;
+    sc_core::sc_in<sc_dt::sc_logic> reset;
+    sc_core::sc_in<sc_dt::sc_logic> ce;
     sc_core::sc_in< sc_dt::sc_lv<din0_WIDTH> >   din0;
-    sc_core::sc_in< sc_dt::sc_lv<din1_WIDTH> >   din1;
+    sc_core::sc_in< sc_dt::sc_lv<din0_WIDTH> >   din1;
     sc_core::sc_out< sc_dt::sc_lv<dout_WIDTH> >   dout;
 
 
 
-    ACMP_smul_uu<ID, 1, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_smul_uu_U;
+    ACMP_shl<ID, 7, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_shl_U;
 
-    SC_CTOR(kernel_seidel_2d_dEe):  ACMP_smul_uu_U ("ACMP_smul_uu_U") {
-        ACMP_smul_uu_U.din0(din0);
-        ACMP_smul_uu_U.din1(din1);
-        ACMP_smul_uu_U.dout(dout);
+    SC_CTOR(kernel_seidel_2d_dEe):  ACMP_shl_U ("ACMP_shl_U") {
+        ACMP_shl_U.clk(clk);
+        ACMP_shl_U.reset(reset);
+        ACMP_shl_U.ce(ce);
+        ACMP_shl_U.din0(din0);
+        ACMP_shl_U.din1(din1);
+        ACMP_shl_U.dout(dout);
 
     }
 

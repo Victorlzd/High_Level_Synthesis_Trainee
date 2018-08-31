@@ -36,9 +36,9 @@ read_vhdl -library xil_defaultlib {
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd
 }
-read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64.xci
+read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64.xci
 
-read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64/kernel_jacobi_2d_imper_ap_dadd_3_full_dsp_64.xci
+read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

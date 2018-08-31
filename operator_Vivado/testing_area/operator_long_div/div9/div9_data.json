@@ -17,13 +17,13 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "120",
+    "ClockPeriod": "2.5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "2",
-    "Uncertainty": "15"
+    "Latency": "96",
+    "Uncertainty": "0.3125"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 120.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 2.500 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
@@ -39,13 +39,29 @@
     "Vhdl": [
       "impl\/vhdl\/int_64_div9.vhd",
       "impl\/vhdl\/lut_div9_chunk.vhd",
-      "impl\/vhdl\/operator_long_divbkb.vhd",
+      "impl\/vhdl\/lut_div9_chunk_q0.vhd",
+      "impl\/vhdl\/lut_div9_chunk_q1.vhd",
+      "impl\/vhdl\/lut_div9_chunk_r0.vhd",
+      "impl\/vhdl\/lut_div9_chunk_r1.vhd",
+      "impl\/vhdl\/lut_div9_chunk_r2.vhd",
+      "impl\/vhdl\/lut_div9_chunk_r3.vhd",
       "impl\/vhdl\/operator_long_div9.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/int_64_div9.v",
       "impl\/verilog\/lut_div9_chunk.v",
-      "impl\/verilog\/operator_long_divbkb.v",
+      "impl\/verilog\/lut_div9_chunk_q0.v",
+      "impl\/verilog\/lut_div9_chunk_q0_rom.dat",
+      "impl\/verilog\/lut_div9_chunk_q1.v",
+      "impl\/verilog\/lut_div9_chunk_q1_rom.dat",
+      "impl\/verilog\/lut_div9_chunk_r0.v",
+      "impl\/verilog\/lut_div9_chunk_r0_rom.dat",
+      "impl\/verilog\/lut_div9_chunk_r1.v",
+      "impl\/verilog\/lut_div9_chunk_r1_rom.dat",
+      "impl\/verilog\/lut_div9_chunk_r2.v",
+      "impl\/verilog\/lut_div9_chunk_r2_rom.dat",
+      "impl\/verilog\/lut_div9_chunk_r3.v",
+      "impl\/verilog\/lut_div9_chunk_r3_rom.dat",
       "impl\/verilog\/operator_long_div9.v"
     ],
     "Misc": ["impl\/misc\/logo.png"]
@@ -151,134 +167,15 @@
       "ModuleName": "operator_long_div9",
       "Instances": [{
           "ModuleName": "int_64_div9",
-          "InstanceName": "grp_int_64_div9_fu_28",
-          "Instances": [
-            {
+          "InstanceName": "grp_int_64_div9_fu_32",
+          "Instances": [{
               "ModuleName": "lut_div9_chunk",
-              "InstanceName": "grp_lut_div9_chunk_fu_150"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "grp_lut_div9_chunk_fu_157"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "grp_lut_div9_chunk_fu_163"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "grp_lut_div9_chunk_fu_169"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "grp_lut_div9_chunk_fu_175"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "grp_lut_div9_chunk_fu_181"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "grp_lut_div9_chunk_fu_187"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_13_lut_div9_chunk_fu_193"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_14_lut_div9_chunk_fu_199"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_15_lut_div9_chunk_fu_205"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_16_lut_div9_chunk_fu_211"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_17_lut_div9_chunk_fu_217"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_18_lut_div9_chunk_fu_223"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_19_lut_div9_chunk_fu_229"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_20_lut_div9_chunk_fu_235"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_21_lut_div9_chunk_fu_241"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_22_lut_div9_chunk_fu_247"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_23_lut_div9_chunk_fu_253"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_24_lut_div9_chunk_fu_259"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_25_lut_div9_chunk_fu_265"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_26_lut_div9_chunk_fu_271"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_27_lut_div9_chunk_fu_277"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_28_lut_div9_chunk_fu_283"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_29_lut_div9_chunk_fu_289"
-            },
-            {
-              "ModuleName": "lut_div9_chunk",
-              "InstanceName": "call_ret_30_lut_div9_chunk_fu_295"
-            }
-          ]
+              "InstanceName": "grp_lut_div9_chunk_fu_154"
+            }]
         }]
     },
     "Metrics": {
       "lut_div9_chunk": {
-        "Latency": {
-          "LatencyBest": "0",
-          "LatencyAvg": "0",
-          "LatencyWorst": "0",
-          "PipelineII": "0",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "120.00",
-          "Uncertainty": "15.00",
-          "Estimate": "1.958"
-        },
-        "Area": {
-          "FF": "0",
-          "LUT": "1638",
-          "BRAM_18K": "0",
-          "DSP48E": "0"
-        }
-      },
-      "int_64_div9": {
         "Latency": {
           "LatencyBest": "1",
           "LatencyAvg": "1",
@@ -288,35 +185,56 @@
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "120.00",
-          "Uncertainty": "15.00",
-          "Estimate": "104.175"
+          "Target": "2.50",
+          "Uncertainty": "0.31",
+          "Estimate": "1.332"
         },
         "Area": {
-          "FF": "70",
-          "LUT": "41085",
           "BRAM_18K": "0",
+          "FF": "14",
+          "LUT": "39",
+          "DSP48E": "0"
+        }
+      },
+      "int_64_div9": {
+        "Latency": {
+          "LatencyBest": "95",
+          "LatencyAvg": "95",
+          "LatencyWorst": "95",
+          "PipelineII": "95",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "2.50",
+          "Uncertainty": "0.31",
+          "Estimate": "2.906"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "FF": "273",
+          "LUT": "505",
           "DSP48E": "0"
         }
       },
       "operator_long_div9": {
         "Latency": {
-          "LatencyBest": "2",
-          "LatencyAvg": "2",
-          "LatencyWorst": "2",
-          "PipelineII": "3",
+          "LatencyBest": "96",
+          "LatencyAvg": "96",
+          "LatencyWorst": "96",
+          "PipelineII": "97",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "120.00",
-          "Uncertainty": "15.00",
-          "Estimate": "104.175"
+          "Target": "2.50",
+          "Uncertainty": "0.31",
+          "Estimate": "2.906"
         },
         "Area": {
-          "FF": "73",
-          "LUT": "41100",
           "BRAM_18K": "0",
+          "FF": "276",
+          "LUT": "520",
           "DSP48E": "0"
         }
       }
@@ -329,7 +247,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-03 11:54:47 CEST",
+    "Time": "2018-08-31 17:04:32 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

@@ -1,0 +1,40 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'duazel' on host 'duazel-portable' (Linux_x86_64 version 4.15.0-32-generic) on Mon Aug 27 13:26:22 CEST 2018
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_mul3'
+INFO: [HLS 200-10] Opening and resetting project '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_mul3/fir_prj'.
+INFO: [HLS 200-10] Adding design file 'float_mul3.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'test_float_mul3.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_mul3/fir_prj/solution2'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'float_mul3.cpp' ... 
+WARNING: [HLS 200-40] In file included from float_mul3.cpp:1:
+float_mul3.cpp:66:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else {
+   ^
+float_mul3.cpp:74:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else
+   ^
+2 warnings generated.\n
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 372.715 ; gain = 0.105 ; free physical = 171 ; free virtual = 10982
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 372.715 ; gain = 0.105 ; free physical = 171 ; free virtual = 10982
+INFO: [HLS 200-10] Starting code transformations ...
+ERROR: [SYNCHK 200-79] Cannot find the top function 'operator_float_div3' in the design. Possible causes are: (1) the top function name is misspelled; (2) the top function is nonexistent or declared as static.
+ERROR: [HLS 200-70] Synthesizability check failed.
+command 'ap_source' returned error code
+    while executing
+"source [lindex $::argv 1] "
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 { source [lindex $::argv 1] } "
+
+INFO: [Common 17-206] Exiting vivado_hls at Mon Aug 27 13:26:38 2018...

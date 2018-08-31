@@ -1,0 +1,10889 @@
+i = 0
+-------- PROBLEME --------
+D = 11
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 12
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 13
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 14
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 15
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 16
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 17
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 18
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 19
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 20
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 21
+Résultat attendu :
+    q = 1
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 22
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 23
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 24
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 25
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 26
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 27
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 28
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 0
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 29
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 30
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 31
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 32
+Résultat attendu :
+    q = 2
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 33
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 34
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 35
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 36
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 37
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 38
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 39
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 40
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 41
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 42
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 43
+Résultat attendu :
+    q = 3
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 44
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 45
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 46
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 47
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 48
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 49
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 50
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 51
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 52
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 53
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 54
+Résultat attendu :
+    q = 4
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 55
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 56
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 57
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 1
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 58
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 59
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 60
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 61
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 62
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 63
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 64
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 65
+Résultat attendu :
+    q = 5
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 66
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 67
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 68
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 69
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 70
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 71
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 72
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 73
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 74
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 75
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 76
+Résultat attendu :
+    q = 6
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 77
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 78
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 79
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 80
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 81
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 82
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 83
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 84
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 85
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 86
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 2
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 87
+Résultat attendu :
+    q = 7
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 88
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 89
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 90
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 91
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 92
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 93
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 94
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 95
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 96
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 97
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 98
+Résultat attendu :
+    q = 8
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 99
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+i = 100
+-------- PROBLEME --------
+D = 100
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 101
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 102
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 103
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 104
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 105
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 106
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 107
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 108
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 109
+Résultat attendu :
+    q = 9
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 110
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 111
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 112
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 113
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 114
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 115
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 3
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 116
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 117
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 118
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 119
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 120
+Résultat attendu :
+    q = 10
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 121
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 122
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 123
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 124
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 125
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 126
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 127
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 128
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 129
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 130
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 131
+Résultat attendu :
+    q = 11
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 132
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 133
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 134
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 135
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 136
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 137
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 138
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 139
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 140
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 141
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 142
+Résultat attendu :
+    q = 12
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 143
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 144
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 4
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 145
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 146
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 147
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 148
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 149
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 150
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 151
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 152
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 153
+Résultat attendu :
+    q = 13
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 154
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 155
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 156
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 157
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 158
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 159
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 160
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 161
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 162
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 163
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 164
+Résultat attendu :
+    q = 14
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 165
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 166
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 167
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 168
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 169
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 170
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 171
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 172
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 173
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 5
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 174
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 175
+Résultat attendu :
+    q = 15
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 176
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 177
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 178
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 179
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 180
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 181
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 182
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 183
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 184
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 185
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 186
+Résultat attendu :
+    q = 16
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 187
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 188
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 189
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 190
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 191
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 192
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 193
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 194
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 195
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 196
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 197
+Résultat attendu :
+    q = 17
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 198
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 199
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+i = 200
+-------- PROBLEME --------
+D = 200
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 201
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 202
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 6
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 203
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 204
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 205
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 206
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 207
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 208
+Résultat attendu :
+    q = 18
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 209
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 210
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 211
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 212
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 213
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 214
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 215
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 216
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 217
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 218
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 219
+Résultat attendu :
+    q = 19
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 220
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 221
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 222
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 223
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 224
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 225
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 226
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 227
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 228
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 229
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 230
+Résultat attendu :
+    q = 20
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 231
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 7
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 232
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 233
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 234
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 235
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 236
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 237
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 238
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 239
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 240
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 241
+Résultat attendu :
+    q = 21
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 242
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 243
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 244
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 245
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 246
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 247
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 248
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 249
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 250
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 251
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 252
+Résultat attendu :
+    q = 22
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 253
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 254
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 255
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 256
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 257
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 258
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 259
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 260
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 8
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 261
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 262
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 263
+Résultat attendu :
+    q = 23
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 264
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 265
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 266
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 267
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 268
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 269
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 270
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 271
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 272
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 273
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 274
+Résultat attendu :
+    q = 24
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 275
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 276
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 277
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 278
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 279
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 280
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 281
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 282
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 283
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 284
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 285
+Résultat attendu :
+    q = 25
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 286
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 287
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 288
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 289
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 9
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 290
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 291
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 292
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 293
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 294
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 295
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 296
+Résultat attendu :
+    q = 26
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 297
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 298
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 299
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+i = 300
+-------- PROBLEME --------
+D = 300
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 301
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 302
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 303
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 304
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 305
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 306
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 307
+Résultat attendu :
+    q = 27
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 308
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 309
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 310
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 311
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 312
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 313
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 314
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 315
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 316
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 317
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 318
+Résultat attendu :
+    q = 28
+    r_out = 0
+Résultat obtenu :
+    q = 10
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 319
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 320
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 321
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 322
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 323
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 324
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 325
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 326
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 327
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 328
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 329
+Résultat attendu :
+    q = 29
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 330
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 331
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 332
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 333
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 334
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 335
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 336
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 337
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 338
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 339
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 340
+Résultat attendu :
+    q = 30
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 341
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 342
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 343
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 344
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 345
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 346
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 347
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 11
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 348
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 349
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 350
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 351
+Résultat attendu :
+    q = 31
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 352
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 353
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 354
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 355
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 356
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 357
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 358
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 359
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 360
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 361
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 362
+Résultat attendu :
+    q = 32
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 363
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 364
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 365
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 366
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 367
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 368
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 369
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 370
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 371
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 372
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 373
+Résultat attendu :
+    q = 33
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 374
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 375
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 376
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 12
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 377
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 378
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 379
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 380
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 381
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 382
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 383
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 384
+Résultat attendu :
+    q = 34
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 385
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 386
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 387
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 388
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 389
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 390
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 391
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 392
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 393
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 394
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 395
+Résultat attendu :
+    q = 35
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 396
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 397
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 398
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 399
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+i = 400
+-------- PROBLEME --------
+D = 400
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 401
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 402
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 403
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 404
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 405
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 13
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 406
+Résultat attendu :
+    q = 36
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 407
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 408
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 409
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 410
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 411
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 412
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 413
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 414
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 415
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 416
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 417
+Résultat attendu :
+    q = 37
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 418
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 419
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 420
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 421
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 422
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 423
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 424
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 425
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 426
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 427
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 428
+Résultat attendu :
+    q = 38
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 429
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 430
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 431
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 432
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 433
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 434
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 14
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 435
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 436
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 437
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 438
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 439
+Résultat attendu :
+    q = 39
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 440
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 441
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 442
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 443
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 444
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 445
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 446
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 447
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 448
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 449
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 450
+Résultat attendu :
+    q = 40
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 451
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 452
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 453
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 454
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 455
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 456
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 457
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 458
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 459
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 460
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 461
+Résultat attendu :
+    q = 41
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 462
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 463
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 15
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 464
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 465
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 466
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 467
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 468
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 469
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 470
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 471
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 472
+Résultat attendu :
+    q = 42
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 473
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 474
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 475
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 476
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 477
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 478
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 479
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 480
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 481
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 482
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 483
+Résultat attendu :
+    q = 43
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 484
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 485
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 486
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 487
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 488
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 489
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 490
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 491
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 492
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 16
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 493
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 494
+Résultat attendu :
+    q = 44
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 495
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 496
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 497
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 498
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 499
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+i = 500
+-------- PROBLEME --------
+D = 500
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 501
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 502
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 503
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 504
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 505
+Résultat attendu :
+    q = 45
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 506
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 507
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 508
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 509
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 510
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 511
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 512
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 513
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 514
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 515
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 516
+Résultat attendu :
+    q = 46
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 517
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 518
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 519
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 520
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 521
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 17
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 522
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 523
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 524
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 525
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 526
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 527
+Résultat attendu :
+    q = 47
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 528
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 529
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 530
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 531
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 532
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 533
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 534
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 535
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 536
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 537
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 538
+Résultat attendu :
+    q = 48
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 539
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 540
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 541
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 542
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 543
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 544
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 545
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 546
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 547
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 548
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 549
+Résultat attendu :
+    q = 49
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 550
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 18
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 551
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 552
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 553
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 554
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 555
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 556
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 557
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 558
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 559
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 560
+Résultat attendu :
+    q = 50
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 561
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 562
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 563
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 564
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 565
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 566
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 567
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 568
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 569
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 570
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 571
+Résultat attendu :
+    q = 51
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 572
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 573
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 574
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 575
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 576
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 577
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 578
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 579
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 19
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 580
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 581
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 582
+Résultat attendu :
+    q = 52
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 583
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 584
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 585
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 586
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 587
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 588
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 589
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 590
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 591
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 592
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 593
+Résultat attendu :
+    q = 53
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 594
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 595
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 596
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 597
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 598
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 599
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+i = 600
+-------- PROBLEME --------
+D = 600
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 601
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 602
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 603
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 604
+Résultat attendu :
+    q = 54
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 605
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 606
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 607
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 608
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 20
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 609
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 610
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 611
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 612
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 613
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 614
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 615
+Résultat attendu :
+    q = 55
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 616
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 617
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 618
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 619
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 620
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 621
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 622
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 623
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 624
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 625
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 626
+Résultat attendu :
+    q = 56
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 627
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 628
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 629
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 630
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 631
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 632
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 633
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 634
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 635
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 636
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 637
+Résultat attendu :
+    q = 57
+    r_out = 0
+Résultat obtenu :
+    q = 21
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 638
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 639
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 640
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 641
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 642
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 643
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 644
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 645
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 646
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 647
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 648
+Résultat attendu :
+    q = 58
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 649
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 650
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 651
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 652
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 653
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 654
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 655
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 656
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 657
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 658
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 659
+Résultat attendu :
+    q = 59
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 660
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 661
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 662
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 663
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 664
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 665
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 666
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 22
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 667
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 668
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 669
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 670
+Résultat attendu :
+    q = 60
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 671
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 672
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 673
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 674
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 675
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 676
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 677
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 678
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 679
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 680
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 681
+Résultat attendu :
+    q = 61
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 682
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 683
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 684
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 685
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 686
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 687
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 688
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 689
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 690
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 691
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 692
+Résultat attendu :
+    q = 62
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 693
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 694
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 695
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 23
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 696
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 697
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 698
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 699
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+i = 700
+-------- PROBLEME --------
+D = 700
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 701
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 702
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 703
+Résultat attendu :
+    q = 63
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 704
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 705
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 706
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 707
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 708
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 709
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 710
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 711
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 712
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 713
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 714
+Résultat attendu :
+    q = 64
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 715
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 716
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 717
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 718
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 719
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 720
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 721
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 722
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 723
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 724
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 24
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 725
+Résultat attendu :
+    q = 65
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 726
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 727
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 728
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 729
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 730
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 731
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 732
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 733
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 734
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 735
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 736
+Résultat attendu :
+    q = 66
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 737
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 738
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 739
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 740
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 741
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 742
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 743
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 744
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 745
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 746
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 747
+Résultat attendu :
+    q = 67
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 748
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 749
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 750
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 751
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 752
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 753
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 25
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 754
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 755
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 756
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 757
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 758
+Résultat attendu :
+    q = 68
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 759
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 760
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 761
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 762
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 763
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 764
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 765
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 766
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 767
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 768
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 769
+Résultat attendu :
+    q = 69
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 770
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 771
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 772
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 773
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 774
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 775
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 776
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 777
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 778
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 779
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 780
+Résultat attendu :
+    q = 70
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 781
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 782
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 26
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 783
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 784
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 785
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 786
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 787
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 788
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 789
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 790
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 791
+Résultat attendu :
+    q = 71
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 792
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 793
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 794
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 795
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 796
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 797
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 798
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 799
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+i = 800
+-------- PROBLEME --------
+D = 800
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 801
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 802
+Résultat attendu :
+    q = 72
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 803
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 804
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 805
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 806
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 807
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 808
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 809
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 810
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 811
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 27
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 812
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 813
+Résultat attendu :
+    q = 73
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 814
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 815
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 816
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 817
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 818
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 819
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 820
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 821
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 822
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 823
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 824
+Résultat attendu :
+    q = 74
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 825
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 826
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 827
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 828
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 829
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 830
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 831
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 832
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 833
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 834
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 835
+Résultat attendu :
+    q = 75
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 836
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 837
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 838
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 839
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 840
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 28
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 841
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 842
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 843
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 844
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 845
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 846
+Résultat attendu :
+    q = 76
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 847
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 848
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 849
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 850
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 851
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 852
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 853
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 854
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 855
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 856
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 857
+Résultat attendu :
+    q = 77
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 858
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 859
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 860
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 861
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 862
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 863
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 864
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 865
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 866
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 867
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 868
+Résultat attendu :
+    q = 78
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 869
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 29
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 870
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 871
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 872
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 873
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 874
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 875
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 876
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 877
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 878
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 879
+Résultat attendu :
+    q = 79
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 880
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 881
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 882
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 883
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 884
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 885
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 886
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 887
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 888
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 889
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 890
+Résultat attendu :
+    q = 80
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 891
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 892
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 893
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 894
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 895
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 896
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 897
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 898
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 30
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 899
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+i = 900
+-------- PROBLEME --------
+D = 900
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 901
+Résultat attendu :
+    q = 81
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 902
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 903
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 904
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 905
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 906
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 907
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 908
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 909
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 910
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 911
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 912
+Résultat attendu :
+    q = 82
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 913
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 914
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 915
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 916
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 917
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 918
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 919
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 920
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 921
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 922
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 923
+Résultat attendu :
+    q = 83
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 924
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 925
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 926
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 927
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 31
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 928
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 929
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 930
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 931
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 932
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 933
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 934
+Résultat attendu :
+    q = 84
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 935
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 936
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 937
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 938
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 939
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 940
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 941
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 942
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 943
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 944
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 945
+Résultat attendu :
+    q = 85
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 946
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 947
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 948
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 949
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 950
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 951
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 952
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 953
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 954
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 955
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 956
+Résultat attendu :
+    q = 86
+    r_out = 0
+Résultat obtenu :
+    q = 32
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 957
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 958
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 959
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 960
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 961
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 962
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 963
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 964
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 965
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 966
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 967
+Résultat attendu :
+    q = 87
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 968
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 969
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 970
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 971
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 972
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 973
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 974
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 975
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 976
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 977
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 978
+Résultat attendu :
+    q = 88
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 979
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 980
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 981
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 982
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 983
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 984
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 985
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 33
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 986
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 987
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 988
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 989
+Résultat attendu :
+    q = 89
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 990
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 991
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 992
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 993
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 994
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 995
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 996
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 997
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 998
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+
+-------- PROBLEME --------
+D = 999
+Résultat attendu :
+    q = 90
+    r_out = 0
+Résultat obtenu :
+    q = 34
+    r_out = 0
+-------- FIN --------
+
+

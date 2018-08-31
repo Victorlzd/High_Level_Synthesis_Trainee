@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'operator_long_div9'
 ================================================================
-* Date:           Fri Aug  3 11:54:46 2018
+* Date:           Fri Aug 31 17:04:32 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        operator_long_div
@@ -17,11 +17,11 @@
 ================================================================
 + Timing (ns): 
     * Summary: 
-    +--------+--------+----------+------------+
-    |  Clock | Target | Estimated| Uncertainty|
-    +--------+--------+----------+------------+
-    |ap_clk  |  120.00|   104.175|       15.00|
-    +--------+--------+----------+------------+
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.50|     2.906|        0.31|
+    +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |    2|    2|    2|    2|   none  |
+    |   96|   96|   96|   96|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -76,32 +76,29 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 13.7>
+State 1 <SV = 0> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%in_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %in_r) nounwind"   --->   Operation 3 'read' 'in_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 4 [2/2] (13.7ns)   --->   "%agg_result_V_i = call fastcc i64 @int_64_div9(i64 %in_read) nounwind" [test.cpp:5243->test.cpp:5249]   --->   Operation 4 'call' 'agg_result_V_i' <Predicate = true> <Delay = 13.7> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 4 [2/2] (0.00ns)   --->   "%p_0 = call fastcc i64 @int_64_div9(i64 %in_read) nounwind" [test.cpp:519]   --->   Operation 4 'call' 'p_0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 2 <SV = 1> <Delay = 101.>
-ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %in_r) nounwind, !map !362"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 0) nounwind, !map !368"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 1.33>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %in_r) nounwind, !map !126"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 0) nounwind, !map !132"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([19 x i8]* @operator_long_div9_s) nounwind"   --->   Operation 7 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [test.cpp:5247]   --->   Operation 8 'speclatency' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 9 [1/2] (101.ns)   --->   "%agg_result_V_i = call fastcc i64 @int_64_div9(i64 %in_read) nounwind" [test.cpp:5243->test.cpp:5249]   --->   Operation 9 'call' 'agg_result_V_i' <Predicate = true> <Delay = 101.> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 10 [1/1] (0.00ns)   --->   "ret i64 %agg_result_V_i" [test.cpp:5249]   --->   Operation 10 'ret' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/2] (1.33ns)   --->   "%p_0 = call fastcc i64 @int_64_div9(i64 %in_read) nounwind" [test.cpp:519]   --->   Operation 8 'call' 'p_0' <Predicate = true> <Delay = 1.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "ret i64 %p_0" [test.cpp:519]   --->   Operation 9 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 120ns, clock uncertainty: 15ns.
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
 
- <State 1>: 13.7ns
+ <State 1>: 0ns
 The critical path consists of the following:
-	wire read on port 'in_r' [5]  (0 ns)
-	'call' operation ('agg_result_V_i', test.cpp:5243->test.cpp:5249) to 'int_64_div9' [7]  (13.7 ns)
 
- <State 2>: 102ns
+ <State 2>: 1.33ns
 The critical path consists of the following:
-	'call' operation ('agg_result_V_i', test.cpp:5243->test.cpp:5249) to 'int_64_div9' [7]  (102 ns)
+	'call' operation ('p_0', test.cpp:519) to 'int_64_div9' [12]  (1.33 ns)
 
 
 ============================================================

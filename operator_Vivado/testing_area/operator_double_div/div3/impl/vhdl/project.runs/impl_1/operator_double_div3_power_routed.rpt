@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Fri Aug  3 14:32:03 2018
+| Date             : Fri Aug 31 15:17:33 2018
 | Host             : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command          : report_power -file operator_double_div3_power_routed.rpt -pb operator_double_div3_power_summary_routed.pb -rpx operator_double_div3_power_routed.rpx
 | Design           : operator_double_div3
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.129        |
+| Total On-Chip Power (W)  | 0.165        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.019        |
+| Dynamic (W)              | 0.055        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 2.5          |
-| Max Ambient (C)          | 84.7         |
-| Junction Temperature (C) | 25.3         |
+| Max Ambient (C)          | 84.6         |
+| Junction Temperature (C) | 25.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,19 +49,20 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.009 |      833 |       --- |             --- |
-|   LUT as Logic |     0.009 |      601 |    101400 |            0.59 |
-|   CARRY4       |    <0.001 |       21 |     25350 |            0.08 |
-|   Register     |    <0.001 |      121 |    202800 |            0.06 |
-|   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.008 |      657 |       --- |             --- |
-| Static Power   |     0.110 |          |           |                 |
-| Total          |     0.129 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.053 |        3 |       --- |             --- |
+| Slice Logic             |    <0.001 |     1698 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      753 |    101400 |            0.74 |
+|   Register              |    <0.001 |      885 |    202800 |            0.44 |
+|   CARRY4                |    <0.001 |       21 |     25350 |            0.08 |
+|   LUT as Shift Register |    <0.001 |        6 |     35000 |            0.02 |
+|   Others                |     0.000 |       12 |       --- |             --- |
+| Signals                 |    <0.001 |      980 |       --- |             --- |
+| Static Power            |     0.110 |          |           |                 |
+| Total                   |     0.165 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -70,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.060 |       0.019 |      0.040 |
+| Vccint    |       1.000 |     0.096 |       0.055 |      0.040 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -127,7 +128,7 @@ Table of Contents
 +--------+--------+-----------------+
 | Clock  | Domain | Constraint (ns) |
 +--------+--------+-----------------+
-| ap_clk | ap_clk |             5.0 |
+| ap_clk | ap_clk |             2.5 |
 +--------+--------+-----------------+
 
 
@@ -137,10 +138,25 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------+-----------+
-| Name                 | Power (W) |
-+----------------------+-----------+
-| operator_double_div3 |     0.019 |
-+----------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| operator_double_div3          |     0.055 |
+|   grp_lut_div3_chunk_fu_122   |     0.002 |
+|     q0_U                      |    <0.001 |
+|       lut_div3_chunk_q0_rom_U |    <0.001 |
+|     q1_U                      |    <0.001 |
+|       lut_div3_chunk_q1_rom_U |    <0.001 |
+|     q2_U                      |    <0.001 |
+|       lut_div3_chunk_q2_rom_U |    <0.001 |
+|     q3_U                      |    <0.001 |
+|       lut_div3_chunk_q3_rom_U |    <0.001 |
+|     r0_U                      |    <0.001 |
+|       lut_div3_chunk_r0_rom_U |    <0.001 |
+|     r1_U                      |    <0.001 |
+|       lut_div3_chunk_r1_rom_U |    <0.001 |
+|   operator_double_dbkb_U9     |     0.020 |
+|   operator_double_dcud_U10    |     0.007 |
++-------------------------------+-----------+
 
 

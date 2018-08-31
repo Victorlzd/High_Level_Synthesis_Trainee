@@ -1,6 +1,6 @@
 
 set TopModule "operator_float_div11"
-set ClockPeriod "10.000000"
+set ClockPeriod "2.500000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}

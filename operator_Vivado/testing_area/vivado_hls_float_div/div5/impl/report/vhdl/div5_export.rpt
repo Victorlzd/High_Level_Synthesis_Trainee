@@ -4,17 +4,17 @@ Implementation tool: Xilinx Vivado v.2018.2
 Project:             vivado_hls_float_div
 Solution:            div5
 Device target:       xc7k160tfbg484-1
-Report date:         Fri Aug 03 16:59:16 CEST 2018
+Report date:         Fri Aug 31 12:10:09 CEST 2018
 
 #=== Post-Implementation Resource usage ===
-SLICE:          206
-LUT:            679
-FF:              34
+SLICE:          241
+LUT:            712
+FF:             835
 DSP:              0
 BRAM:             0
-SRL:              0
+SRL:             35
 #=== Final timing ===
-CP required:    60.000
-CP achieved post-synthesis:    0.941
-CP achieved post-implementation:    1.020
+CP required:    2.500
+CP achieved post-synthesis:    1.904
+CP achieved post-implementation:    2.192
 Timing met

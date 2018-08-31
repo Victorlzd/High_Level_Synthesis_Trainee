@@ -3,10 +3,11 @@
 \usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
 
-\usepackage{minted}
+%\usepackage{minted}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{multirow}
 %\usepackage{graphicx}
 %\usepackage{placeins}
 %\usepackage{lscape}
@@ -20,183 +21,399 @@
 \renewcommand{\contentsname}{Sommaire}
 \tableofcontents
 \newpage
+% \section{VIVADO HLS}
 
-\section{VIVADO HLS}
-\subsection{Les algorithmes}
-Pour réaliser ces optimisations j'ai implémenté des algorithmes basés sur les LUT, tels que décrits dans ces articles :
-\begin{itemize}
-    \item Pour la division : Florent De Dinechin, Laurent-Stéphane Didier. Table-based division by small integer constants.
-    \item Pour la multiplication : Towards Hardware IIR Filters Computing Just Right: Direct Form I Case Study
-\end{itemize}
+% \subsection{Les algorithmes}
+% Pour réaliser ces optimisations j'ai implémenté des algorithmes basés sur les LUT, tels que décrits dans ces articles :
+% \begin{itemize}
+%     \item Pour la division : Florent De Dinechin, Laurent-Stéphane Didier. Table-based division by small integer constants.
+%     \item Pour la multiplication : Towards Hardware IIR Filters Computing Just Right: Direct Form I Case Study
+% \end{itemize}
 
-\subsection{Une LUT}
-Les algorithmes que j'utilise dont centrés autour des LUT. Il m'a donc fallu trouvé un moyen de définir une unique LUT avec 
-VIVADO HLS. J'ai essayé plusieurs méthodes mis celle qui donne une seule LUT mais surtout les meilleures estimations (en LUT et fréquence)
-par VIVADO HLS consiste à stocker les sorties  possibles dans un tableau statique de taille inférieure ou égale à 64. Attention le 
-tableau doit être rempli lors de la définition, comme ceci : \verb|ap_uint<1> tab_LUT[] = {0,1, ... , 0,1};|
+% \subsection{Une LUT}
+% Les algorithmes que j'utilise dont centrés autour des LUT. Il m'a donc fallu trouvé un moyen de définir une unique LUT avec 
+% VIVADO HLS. J'ai essayé plusieurs méthodes mis celle qui donne une seule LUT mais surtout les meilleures estimations (en LUT et fréquence)
+% par VIVADO HLS consiste à stocker les sorties  possibles dans un tableau statique de taille inférieure ou égale à 64. Attention le 
+% tableau doit être rempli lors de la définition, comme ceci : \verb|ap_uint<1> tab_LUT[] = {0,1, ... , 0,1};|
 
-\subsection{Division d'entier}
-\subsubsection{Exemple de code : division par 3}
+% \subsection{Division d'entier}
+% \subsubsection{Exemple de code : division par 3}
+
+% \subsubsection{Explication}
+% La premiere fonction \verb=lut_div3_chunk= définit un groupe de LUT à 6 entrées et 6 sorties. On peut donc en resortir 4 bits de
+% quotient et 2 bits pour le reste (car on divise par 3). La deuxième fonction \verb=int_32_div3= itère sur la première afin
+% d'obtenir 32 bits de quotient.
+
+% \subsection{Division de flotant}
+% \subsubsection{Exemple de code : divisino par 3}
+
+
+% \subsubsection{Les différents cas}
+% Pour pouvoir optimiser la division d'un flottant on calcule séparément la mantisse et l'exposant comme deux entiers non signés.
+% Pour cela nous alons devoir différencier plusieurs cas seln les critères suivants :
+% \begin{itemize}
+% 	\item si le nombre est un infini ou un NaN
+% 	\item Si le calcul donnerait une mantisse inférieure à 1
+% 	\item Si le nombre devient un sous-normal
+% 	\item Si le nombre est déjà un sous-normal
+% 	\item Si on inclus une division par $2^n$
+% \end{itemize}
+
+% \paragraph{Infini et NaN :} Dans ce cas, soit \verb!exp==255! on ne doit pas modifier le nombre. La gestion de ce cas s'effectue avec :
+% \begin{verbatim}
+% 	if (exp == 255) {
+% 		new_mant = mant;
+% 		new_exp = exp;
+% 	}
+% \end{verbatim}
+
+% \paragraph{Mantisse inférieure à 1 :} Dans ce cas il faut multiplier la mantisse par 2 et diminuer de 1 l'exposant. Pour cela il
+% faut incrémenter la valeur de \verb=div_exp= dans cet algo. La gestion de ce cas s'effectue au tout début avec le bloc if :
+% \begin{verbatim}
+% 	if (mant < 4194304)
+% 		div_exp = 2;
+% \end{verbatim}
+
+% \paragraph{Le nombre devient un sous-normal :} Si le nombre devient un sous-normal soit \verb!div_exp>=exp!, il faut bloquer
+% l'exposant à 0, et la mantisse ne dois pas être décalé de \verb=div_exp= mais seulement de ce qu'on a "perdu" en exposant soit
+% \verb=exp-1=.
+
+% \paragraph{Le nombre est déja un sous-normal :} Dans ce cas, soit \verb!exp==0! on ne doit pas décaler la mantisse, bloquerl'exposant
+% à 0 et on ne doit pas rajouter le bit non-stocké de la mantisse avant la division.
+
+% \paragraph{Si on inclus une division par $2^n$ :} Ce cas n'apparaît pas ici mais la structure nécessaire apparait tout de même. Pour
+% effectuer une division par $2^n$ dans le cas général il suffit de baisser l'exposant de $n$ sans toucher à la mantisse. C'est pour ça
+% que l'on a dans la division par 3 : \verb!shift = div_exp - 0;!. Pour le cas général il suffit de remplacer le 0 par $n$. Mais pour les
+% nombres qui deviennent sous-normaux c'est plus compliqué. En effet on ne peut plus abaisser l'exposant, il faut donc diviser la mantisse.
+% C'est pour cela qu'on rajoute un bloc if:
+% \begin{verbatim}
+% 	if (1 >= exp)
+% 		xf = xf >> shift;
+% 	else
+% 		xf = xf << shift;
+% \end{verbatim}
+
+% \subsection{Multiplication d'entier}
+% \subsubsection{Exemple de code : multiplication par 3}
+
+% \subsubsection{Explication}
+% \paragraph{lut\_mul3\_chunk : } Cette fonction un groupe de LUT qui enregistre et ressort le resultat de la multiplication de tous les
+% entiers codés en 6 bits par notre constante.
+
+% \paragraph{int\_32\_mul3 : } La fonction découpe l'int en morceaux de 6 bits qu'elle envoie à la fonction précédente puis fais la somme
+% des retours avec les décalages nécessaires.
+
+% \subsubsection{Optimisation de vivado}
+% Attention cet algorithmes n'est pas le meilleur dans tous les cas. Dans les cas l'écrture binaire ne contient que des 1 ou exactement
+% deux 1 (ex : 0b1111 ou 0b10010) on peut transformer la multiplication en une simple addition ou soustraction. Vivado HLS sait faire cette
+% optimisation qui est bien meilleure à tout point de vue que le KCM ci-dessus.
+% \subsection{Multiplication de flotants}
+% \subsubsection{Exemple de code : multiplication par 3}
+
+
+% \subsubsection{Les différents cas}
+% Pour pouvoir optimiser la multiplication d'un flottant on calcule séparément la mantisse et l'exposant comme deux entiers non signés.
+% Pour cela nous alons devoir différencier plusieurs cas seln les critères suivants :
+% \begin{itemize}
+% 	\item si le nombre est un infini ou un NaN
+% 	\item Si le calcul donnerait une mantisse supérieure à 2
+% 	\item Si le nombre devient infini
+% 	\item Si le nombre est un sous-normal
+% \end{itemize}
+
+% \paragraph{Le nombre est un infini ou un NaN :} On ne modifie ni l'exposant ni la mantisse. Attention !! la gestion actuelle de ce cas
+% peut entrainer une latence variable. En effet si le nombre est infini ou NaN on ne passe pas par l'opérateur entier (à cause des if).
+% Il faudrait donc déplacer les blocs if pour faire ce calcul dans tous les cas et mettre un \verb!if(exp==355)! à la fin.
+
+% \paragraph{Mantisse supérieure à 2 :} Dans ce cas il faut diviser la mantisse par 2 et ajouter 1 à l'exposant. Ce cas est géré par
+% le premier bloc if :
+% \begin{verbatim}
+% 	if (mant > 2796202)
+% 		div_exp = 2;
+% \end{verbatim}
+
+% \paragraph{Le nombre devient infini :} Dans ce cas, soit \verb!exp >= 255 - div_exp! il faut fixer l'exposant à 255 et la mantisse à 0. 
+
+% \paragraph{Si le nombre est un sous-normal :} Si le nombre est un sous-normal il faut d'abord multiplier la mantisse puis redécaler
+% si besoin et augmenter l'exposant. Pour ceci on compare le nombre de 0 au début avec la différence de largeur entre la mantisse et la
+% variable \verb=xf=.
+
+% \section{GeCoS}
+% \subsection{Liste des package}
+% Le projet contient différent package :
+% \begin{itemize}
+% 	\item extensions : qui contient les extensions GeCoS qui pourront être appelée dans des scripts
+% 	\item modification : qui contient les classes qui modifient le code donné en input
+% 	\item operator : qui contient les classes qui génèrent les multiplieurs et les diviseurs
+% 	\item util : qui contient des classes outils pour les autres packages
+% \end{itemize}
+
+% \subsection{Package util}
+% Le package util ne contient que des méthodes outils utilisées par les autres classes sans être centrales à ces dernières
+% \begin{itemize}
+% 	\item Calcul : effectue des calculs basiques utiles pour la génération des opérateurs
+% 	\item File\_builder : s'occupe de la gestion des fichiers .cpp et .h générés par le programme
+% 	\item Float\_fix : génère des fonctions permettant de séparer les 3 composantes des float/doubles ou de recréer un float/double
+% 	à partir de ses 3 composantes
+% \end{itemize}
+
+
+% \subsection{Package operator}
+
+% \subsection{Package Modification}
+
+% \subsection{Package extension}
+
+LIEN VERS LE GITHUB : \\
+https://github.com/Victorlzd/High\_Level\_Synthesis\_Trainee.git
+
+\section{Script}
+\subsection{Build\_operators}
+\subsubsection{Explication} 
+La commande Build\_operators permet de générer un projet GeCoS contenant les opérateurs que l'on veut. Pour sortir ces opérateurs en c++,
+il suffit de lancer le script build\_operators.cs. Pour choisir les operateurs générés il faut ajouter les méthodes de correspondantes
+dans la méthode compute de la classe Build\_operators, sous le commentaire \verb=//add method call here=. Les méthodes de générations se trouvent
+dans les classes Div et Mul de operator. Elles prennent en parametre un ProcedureSet (ici il suffit de laisser ps qui est bien définit dans)
+cette méthode) un entier qui définit la constante et un booléen qui définit le type (true pour \verb=long/double= et false pour \verb=int/float=).
+
+\subsubsection{code script build\_operators.cs} 
+Ce script génère les opérateurs et les écrit en c++ dans le dossier output :
 \begin{verbatim}
-void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out)) {
-	ap_uint<6> in;
-	ap_uint<1> r0[64] = {0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0};
-	ap_uint<1> r1[64] = {0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0};
-	ap_uint<1> q0[64] = {0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1};
-	ap_uint<1> q1[64] = {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
-	ap_uint<1> q2[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
-	ap_uint<1> q3[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-	
-	in = r_in.concat(d);
-	(*r_out)[0] = r0[in];
-	(*r_out)[1] = r1[in];
-	(*q)[0] = q0[in];
-	(*q)[1] = q1[in];
-	(*q)[2] = q2[in];
-	(*q)[3] = q3[in];
-}
+project = Build_operators(); 
 
-ap_uint<32> int_32_div3(ap_uint<32> in) {
-	ap_uint<32> d;
-	ap_uint<32> q;
-	ap_uint<4> d_chunk;
-	ap_uint<4> q_chunk;
-	ap_uint<2> r;
-	int i;
-	
-	r = 0;
-	d = in;
-	for(i = 7; i >= 0; i = i - 1) {
-		d_chunk = d.range(i*4 + 3, i*4);
-		lut_div3_chunk(d_chunk, r, &q_chunk, &r);
-		q.range(i*4 + 3, i*4) = q_chunk;
-	}
-	return q;
-}
-
-int operator_int_div3(int in) {
-	return int_32_div3(in);
-}
+SetBitAccurateBackend("VivadoAP");
+SaveGecosProject(project, "project_from_factories.gecosproject");
+output(project, "c", "output"); 
 \end{verbatim}
 
-\subsubsection{Explication}
-La premiere fonction \verb=lut_div3_chunk= définit un groupe de LUT à 6 entrées et 6 sorties. On peut donc en resortir 4 bits de
-quotient et 2 bits pour le reste (car on divise par 3). La deuxième fonction \verb=int_32_div3= itère sur la première afin
-d'obtenir 32 bits de quotient.
-
-\subsection{Division de flotant}
-\subsubsection{Exemple de code : divisino par 3}
+\subsubsection{Modification dans la classe Build\_operators} 
+Pour choisir les opérateurs générés il faut aller dans la classe Build\_operators
+et modifier la methode compute sous le commentaire \verb=// add method call here= le code d'exemple ci-dessous génère :
+\begin{itemize}
+	\item diviseur de int par 3
+	\item diviseur de long par 5
+	\item diviseur de float par 7
+	\item diviseur de double par 9
+	\item multiplieur de int par 3
+	\item multiplieur de long par 5
+	\item multiplieur de float par 7
+	\item multiplieur de double par 9
+\end{itemize}
 \begin{verbatim}
-void decompose_float(float in, ap_uint<1> (* s), ap_uint<8> (* exp), ap_uint<23> (* mant)) {
-	fix_to_float conv;
-	ap_uint<32> in_bits;
-	
-	conv.f = in;
-	in_bits = conv.i;
-	*s = in_bits[31];
-	*exp = in_bits.range(30, 23);
-	*mant = in_bits.range(22, 0);
-}
-
-// J'ai enlevé la définition de l'opérateur entier
-
-void rebuild_float(ap_uint<1> s, ap_uint<8> exp, ap_uint<23> mant, float * out) {
-	fix_to_float conv;
-	ap_uint<31> exp_plus_mant;
-	ap_uint<32> res;
-	
-	exp_plus_mant = exp.concat(mant);
-	res = s.concat(exp_plus_mant);
-	conv.i = res;
-	*out = conv.f;
-}
-
-float operator_float_div3(float in) {
-	{
-		ap_uint<1> s;
-		ap_uint<8> exp;
-		ap_uint<23> mant;
-		ap_uint<8> new_exp;
-		ap_uint<23> new_mant;
-		ap_uint<26> xf;
-		float out;
-		ap_uint<8> shift;
-		ap_uint<8> div_exp;
+	public GecosProject compute() {
+		GecosProject project = GecosUserCoreFactory.project("build_operators");
+		ProcedureSet ps = File_builder.create_ps();
 		
-		decompose_float(in, &s, &exp, &mant);
-		new_exp = exp;
-		new_mant = mant;
-		shift = 0;
-		div_exp = 1;
-		xf = mant;
-		if (mant < 4194304)
-			div_exp = 2;
-		if (div_exp > exp)
-			new_exp = 0;
-		else
-			new_exp = exp - div_exp;
-		if (exp == 0)
-			shift = 0;
-		else
-			if (div_exp >= exp)
-				if (1 >= exp)
-					shift = 1 - exp;
-				else
-					shift = exp - 1;
-			else
-				shift = div_exp - 0;
-		if (1 >= exp)
-			xf = xf >> shift;
-		else
-			xf = xf << shift;
-		if (exp != 0)
-			xf.set(23);
-		xf = xf + 1;
-		new_mant = operator_int_26_div3(xf);
-		if (exp == 255) {
-			new_mant = mant;
-			new_exp = exp;
-		}
-		rebuild_float(s, new_exp, new_mant, &out);
-		return out;
+		// add method call here
+		Div.build_int_div_by_constant(ps, 3, false);
+		Div.build_int_div_by_constant(ps, 5, true);
+		Div.build_float_div_by_constant(ps, 7, false);
+		Div.build_float_div_by_constant(ps, 9, true);
+		Mul.build_int_mul_by_constant(ps, 3, false);
+		Mul.build_int_mul_by_constant(ps, 5, true);
+		Mul.build_float_mul_by_constant(ps, 7, false);
+		Mul.build_float_mul_by_constant(ps, 9, true);
+		
+		return File_builder.add_files(project);		
 	}
-}
-\end{verbatim}
+\end{verbatim} 
 
-\subsubsection{Les différents cas}
-Pour pouvoir optimiser la division d'un flottant on calcule séparément la mantisse et l'exposant comme deux entiers non signés.
-Pour cela nous alons devoir différencier plusieurs cas seln les critères suivants :
-\begin{itemize}
-	\item si le nombre est un infini ou un NaN
-	\item Si le calcul donnerait une mantisse inférieure à 1
-	\item Si le nombre devient un sous-normal
-	\item Si le nombre est déjà un sous-normal
-	\item Si on inclus une division par $2^n$
-\end{itemize}
+\subsection{Replace\_operators}
+\subsubsection{Explication}
+Cette commande est celle qui est destinée à être untilisée par l'utilisateur final. Elle prend en 
+parametre un projet GeCoS et remplace toutes multiplications et divisions par des constantes pat les opérateurs optimisés. Le
+projet est ensuite prêt à être retransformer en code C++, la commande ajoute les fichiers "optimized\_operators.cpp" et 
+"optimized\_operators.h" au projet.
 
-\paragraph{Infini et NaN :} Dans ce cas, soit \verb!exp==255! on ne doit pas modifier le nombre. La gestion de ce cas s'effectue avec :
+\subsubsection{Exemple de script} 
+Voici un exemple de script utilisant Replace\_operators :
 \begin{verbatim}
-	if (exp == 255) {
-		new_mant = mant;
-		new_exp = exp;
-	}
+p = CreateGecosProject("example");
+AddSourceToGecosProject(p, "input_c/example.c");
+CDTFrontend(p); 
+
+p = Replace_operators(p);
+
+SetBitAccurateBackend("VivadoAP");
+GecosDAGToTreeIRConversion(p);
+output(p, "c", "output");
 \end{verbatim}
 
-\paragraph{Mantisse inférieure à 1 :} Dans ce cas il faut multiplier la mantisse par 2 et diminuer de 1 l'exposant. Pour cela il
-faut incrémenter la valeur de \ver=div_exp= dans cet algo. La gestion de ce cas s'effectue au tout début avec le bloc if :
-\begin{verbatim}
-	if (mant < 4194304)
-		div_exp = 2;
-\end{verbatim}
 
-\paragraph{Le nombre devient un sous-normal :} Si le nombre devient un sous-normal soit \verb!div_exp>=exp!, il faut bloquer
-l'exposant à 0, et la mantisse ne dois pas être décalé de \verb=div_exp= mais seulement de ce qu'on a "perdu" en exposant soit
-\verb=exp-1=.
+\section{Resultats}
+Les resultats ci-dessous ont été obtenu avec le kintex-7 : xc7k160tfbg484-1. La consigne de fréquence est de 400MHz (2.5ns).
+\subsection{Operateur}
 
-\paragraph{Le nombre est déja un sous-normal :} Dans ce cas, soit \verb!exp==0! on ne doit pas décaler la mantisse, bloquerl'exposant à 0 et on ne
-doit pas rajouter le bit non-stocké de la mantisse avant la division.
+\subsubsection{Division}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+	Type & Constant & LUT & FF & DSP & BRAM & SRL & Cycles & Frequence \\
+	\hline
+	\hline
+	\multirow{9}{*}{INT} & HLS & 144 & 219 & 4 & 0 & 0 & 9 & 430MHz \\
+	\cline{2-9}
+	& 3 & 67 & 93 & 0 & 0 & 0 & 23 & 470MHz \\
+	\cline{2-9}
+	& 5 & 97 & 101 & 0 & 0 & 0 & 32 & 450MHz  \\
+	\cline{2-9}
+	& 6 & 71 & 91 & 0 & 0 & 0 & 23 & 460MHz \\
+	\cline{2-9}
+	& 7 & 97 & 101 & 0 & 0 & 0 & 32 & 450MHz \\
+	\cline{2-9}
+	& 9 & 114 & 115 & 0 & 0 & 0 & 47 & 430MHz \\
+	\cline{2-9}
+	& 10 & 95 & 99 & 0 & 0 & 0 & 32 & 430MHz\\
+	\cline{2-9}
+	& 11 & 114 & 115 & 0 & 0 & 0 & 47 & 420MHz \\
+	\hline
+	\hline
+	\multirow{9}{*}{LONG} & HLS & 422 & 813 & 16 & 0 & 156 & 22 & 410MHz \\
+	\cline{2-9}
+	& 3 & 114 & 173 & 0 & 0 & 0 & 47 & 400MHz \\
+	\cline{2-9}
+	& 5 & 190 & 187 & 0 & 0 & 0 & 65 & 380MHz\\
+	\cline{2-9}
+	& 6 & 115 & 171 & 0 & 0 & 0 & 47 & 320MHz\\
+	\cline{2-9}
+	& 7 & 190 & 187 & 0 & 0 & 0 & 65 & 380MHz\\
+	\cline{2-9}
+	& 9 & 251 & 276 & 0 & 0 & 0 & 96 & 370MHz\\
+	\cline{2-9}
+	& 10 & 176 & 183 & 0 & 0 & 0 & 65 & 380MHz\\
+	\cline{2-9}
+	& 11 & 251 & 276 & 0 & 0 & 0 & 96 & 370MHz\\
+	\hline
+	\hline
+	\multirow{11}{*}{FLOAT} & HLS & 713 & 835 & 0 & 0 & 35 & 29 & 460MHz \\
+	\cline{2-9}
+	& 2 & 89 & 158 & 0 & 0 & 0 & 5 & 590MHz \\
+	\cline{2-9}
+	& 3 & 314 & 352 & 0 & 0 & 0 & 28 & 430MHz \\
+	\cline{2-9}
+	& 4 & 138 & 185 & 0 & 0 & 0 & 5 & 600MHz\\
+	\cline{2-9}
+	& 5 & 341 & 356 & 0 & 0 & 0 & 35 & 430MHz\\
+	\cline{2-9}
+	& 6 & 319 & 351 & 0 & 0 & 0 & 28 & 500MHz\\
+	\cline{2-9}
+	& 7 & 340 & 356 & 0 & 0 & 0 & 35 & 450MHz\\
+	\cline{2-9}
+	& 9 & 357 & 382 & 0 & 0 & 0 & 50 & 500MHz\\
+	\cline{2-9}
+	& 10 & 344 & 366 & 0 & 0 & 0 & 38 & 420MHz \\
+	\cline{2-9}
+	& 11 & 356 & 382 & 0 & 0 & 0 & 50 & 500MHz\\
+	\hline
+	\hline
+	\multirow{11}{*}{DOUBLE} & HLS & 3162 & 3295 & 0 & 0 & 105 & 58 & 350MHz \\
+	\cline{2-9}
+	& 2 & 289 & 290 & 0 & 0 & 53 & 8 & 520MHz \\
+	\cline{2-9}
+	& 3 & 759 & 885 & 0 & 0 & 6 & 52 & 400MHz\\
+	\cline{2-9}
+	& 4 & 396 & 398 & 0 & 0 & 54 & 8 & 500MHz \\
+	\cline{2-9}
+	& 5 & 797 & 905 & 0 & 0 & 6 & 68 & 390MHz \\
+	\cline{2-9}
+	& 6 & 756 & 878 & 0 & 0 & 6 & 52 & 400MHz \\
+	\cline{2-9}
+	& 7 & 799 & 913 & 0 & 0 & 6 & 68 & 360MHz \\
+	\cline{2-9}
+	& 9 & 880 & 1044 & 0 & 0 & 6 & 98 & 340MHz \\
+	\cline{2-9}
+	& 10 & 808 & 898 & 0 & 0 & 6 & 68 & 380MHz \\
+	\cline{2-9}
+	& 11 & 883 & 1058 & 0 & 0 & 6 & 98 & 340MHz \\
+	\hline
+\end{tabular}
 
-\paragraph{Si on inclus une division par $2^n$ :} Ce cas n'apparaît pas ici mais la structure nécessaire apparait tout de même. Dans
-le cas d
+\subsection{Stencils}
 
+\subsubsection{Jacobi-1d-imper}
+
+\begin{tabular}{|c|c|c|}
+	\hline
+     & classic & my\_version \\
+    \hline
+    LUT & 4053 & 1618 \\
+    \hline
+    FF & 4958 & 2536 \\
+    \hline
+    DSP & 0 & 0  \\
+    \hline
+    BRAM & 0 & 0  \\
+    \hline
+    SRL & 133 & 33  \\
+    \hline
+    Cycles & $96 \times 10^6$ & $89 \times 10^6$ \\
+    \hline
+	Frequency & 340MHz & 380MHz\\
+	\hline
+\end{tabular}
+
+\subsubsection{Seidel-2d}
+
+\begin{tabular}{|c|c|c|}
+	\hline
+     & classic & my\_version \\
+    \hline
+    LUT & 4288 & 2030 \\
+    \hline
+    FF & 5218 & 2967  \\
+    \hline
+    DSP & 3 & 3 \\
+    \hline
+    BRAM & 0 & 0  \\
+    \hline
+    SRL & 134 & 33 \\
+    \hline
+    Cycles & $3.6 \times 10^9$ & $4.4 \times 10^9$  \\
+    \hline
+	Frequency & 250MHz & 340MHz \\
+	\hline
+\end{tabular}
+
+\subsubsection{Fdtd-2d}
+
+\begin{tabular}{|c|c|c|}
+	\hline
+     & classic & my\_version \\
+    \hline
+    LUT & 1526 & 2392 \\
+    \hline
+    FF & 2946 & 3825  \\
+    \hline
+    DSP & 14 & 14 \\
+    \hline
+    BRAM & 0 & 0 \\
+    \hline
+    SRL & 118 & 223  \\
+    \hline
+    Cycles & $9.4 \times 10^9$ & $8.5 \times 10^9$  \\
+    \hline
+	Frequency & 360MHz & 360MHz \\
+	\hline
+\end{tabular}
+
+\subsubsection{Jacobi-2d-imper}
+
+\begin{tabular}{|c|c|c|}
+	\hline
+     & classic & my\_version \\
+    \hline
+    LUT & 4253 & 1907 \\
+    \hline
+    FF & 5214 & 2894\\
+    \hline
+    DSP & 4 & 4 \\
+    \hline
+    BRAM & 0 & 0\\
+    \hline
+    SRL & 132 & 34  \\
+    \hline
+    Cycles & $2.6 \times 10^9$ & $2.8 \times 10^9$\\
+    \hline
+	Frequency & 390MHz & 390MHz\\
+	\hline
+\end{tabular}
 \end{document}

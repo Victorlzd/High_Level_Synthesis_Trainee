@@ -167,7 +167,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ab71300b</spirit:value>
+            <spirit:value>36b14f86</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -186,7 +186,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a2c75bda</spirit:value>
+            <spirit:value>a9f52dee</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -205,7 +205,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5fd47b4b</spirit:value>
+            <spirit:value>c8baea70</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -224,7 +224,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>32d62538</spirit:value>
+            <spirit:value>050de409</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -398,7 +398,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/div2_ap_fmul_0_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/div2_ap_fmul_6_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -438,7 +438,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/div2_ap_fmul_0_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/div2_ap_fmul_6_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -456,7 +456,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/div2_ap_fmul_0_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/div2_ap_fmul_6_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -471,7 +471,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       <spirit:file>
         <spirit:name>hdl/vhdl/div2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_ca13f937</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_21b37c08</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -497,7 +497,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/div2_ap_fmul_0_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/div2_ap_fmul_6_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -552,7 +552,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="2">12</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="2">2.5</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -564,7 +564,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">1</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">7</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -581,15 +581,15 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       </xilinx:taxonomies>
       <xilinx:displayName>Div2</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1808031643</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-08-03T14:44:02Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1808311202</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-08-31T10:02:52Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="83333fe7"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7b5ca273"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0aed5d82"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="88b025f4"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="678f3ae3"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b2d032c9"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

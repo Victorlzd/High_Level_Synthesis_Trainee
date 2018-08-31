@@ -1,5 +1,5 @@
-# 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/.autopilot/db/jacobi-1d-imper.pragma.1.cpp"
-# 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/.autopilot/db/jacobi-1d-imper.pragma.1.cpp" 1
+# 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/.autopilot/db/jacobi-1d-imper.pragma.1.cpp"
+# 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/.autopilot/db/jacobi-1d-imper.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -144,9 +144,9 @@ extern "C" {
 }
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/.autopilot/db/jacobi-1d-imper.pragma.1.cpp" 2
-# 1 "my_version/jacobi-1d-imper.cpp"
-# 1 "my_version/jacobi-1d-imper.cpp" 1
+# 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/.autopilot/db/jacobi-1d-imper.pragma.1.cpp" 2
+# 1 "jacobi-1d-imper.cpp"
+# 1 "jacobi-1d-imper.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -291,7 +291,7 @@ extern "C" {
 }
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "my_version/jacobi-1d-imper.cpp" 2
+# 1 "jacobi-1d-imper.cpp" 2
 
 
 
@@ -1154,7 +1154,7 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 # 942 "/usr/include/stdio.h" 3 4
 }
-# 9 "my_version/jacobi-1d-imper.cpp" 2
+# 9 "jacobi-1d-imper.cpp" 2
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
 extern "C" {
@@ -2516,7 +2516,7 @@ extern void swab (const void *__restrict __from, void *__restrict __to,
     ssize_t __n) throw () __attribute__ ((__nonnull__ (1, 2)));
 # 1154 "/usr/include/unistd.h" 3 4
 }
-# 10 "my_version/jacobi-1d-imper.cpp" 2
+# 10 "jacobi-1d-imper.cpp" 2
 # 1 "/usr/include/math.h" 1 3 4
 # 28 "/usr/include/math.h" 3 4
 extern "C" {
@@ -3525,11 +3525,11 @@ struct __exception
 extern int matherr (struct __exception *__exc) throw ();
 # 534 "/usr/include/math.h" 3 4
 }
-# 11 "my_version/jacobi-1d-imper.cpp" 2
+# 11 "jacobi-1d-imper.cpp" 2
 
 
-# 1 "./my_version/polybench.h" 1
-# 26 "./my_version/polybench.h"
+# 1 "./polybench.h" 1
+# 26 "./polybench.h"
 # 1 "/usr/include/stdlib.h" 1 3 4
 # 32 "/usr/include/stdlib.h" 3 4
 # 1 "/opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
@@ -4694,19 +4694,15 @@ extern int getloadavg (double __loadavg[], int __nelem)
 # 955 "/usr/include/stdlib.h" 2 3 4
 # 967 "/usr/include/stdlib.h" 3 4
 }
-# 27 "./my_version/polybench.h" 2
-# 199 "./my_version/polybench.h"
+# 27 "./polybench.h" 2
+# 199 "./polybench.h"
 extern void* polybench_alloc_data(unsigned long long int n, int elt_size);
-# 14 "my_version/jacobi-1d-imper.cpp" 2
+# 14 "jacobi-1d-imper.cpp" 2
 
 
 
-# 1 "my_version/jacobi-1d-imper.h" 1
-# 18 "my_version/jacobi-1d-imper.cpp" 2
-# 1 "my_version/optimized_operators.h" 1
-
-int operator_int_div3(int in);
-# 19 "my_version/jacobi-1d-imper.cpp" 2
+# 1 "./jacobi-1d-imper.h" 1
+# 18 "jacobi-1d-imper.cpp" 2
 
 # 1 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h" 1
 # 63 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h"
@@ -28961,7 +28957,7 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 
 }
 # 69 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h" 2
-# 21 "my_version/jacobi-1d-imper.cpp" 2
+# 20 "jacobi-1d-imper.cpp" 2
 
 union fix_to_double {
  double d;
@@ -28974,12 +28970,6 @@ union fix_to_float {
 };
 typedef union fix_to_float fix_to_float;
 void decompose_double(double in, ap_uint<1> (* s), ap_uint<11> (* exp), ap_uint<52> (* mant));
-ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in);
-ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in);
 void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out));
 
 ap_uint<55> int_55_div3(ap_uint<55> in);
@@ -29001,1225 +28991,22 @@ void decompose_double(double in, ap_uint<1> (* s), ap_uint<11> (* exp), ap_uint<
  *mant = in_bits.range(51, 0);
 }
 
-ap_uint<1> lut_r0_div3(ap_uint<4> d, ap_uint<2> r_in) {
- ap_uint<1> ret_value;
- ap_uint<6> in;
-
- in = r_in.concat(d);
- switch (in){
-  case 0 :
-  ret_value = 0;
-  break;
-  case 1 :
-  ret_value = 1;
-  break;
-  case 2 :
-  ret_value = 0;
-  break;
-  case 3 :
-  ret_value = 0;
-  break;
-  case 4 :
-  ret_value = 1;
-  break;
-  case 5 :
-  ret_value = 0;
-  break;
-  case 6 :
-  ret_value = 0;
-  break;
-  case 7 :
-  ret_value = 1;
-  break;
-  case 8 :
-  ret_value = 0;
-  break;
-  case 9 :
-  ret_value = 0;
-  break;
-  case 10 :
-  ret_value = 1;
-  break;
-  case 11 :
-  ret_value = 0;
-  break;
-  case 12 :
-  ret_value = 0;
-  break;
-  case 13 :
-  ret_value = 1;
-  break;
-  case 14 :
-  ret_value = 0;
-  break;
-  case 15 :
-  ret_value = 0;
-  break;
-  case 16 :
-  ret_value = 1;
-  break;
-  case 17 :
-  ret_value = 0;
-  break;
-  case 18 :
-  ret_value = 0;
-  break;
-  case 19 :
-  ret_value = 1;
-  break;
-  case 20 :
-  ret_value = 0;
-  break;
-  case 21 :
-  ret_value = 0;
-  break;
-  case 22 :
-  ret_value = 1;
-  break;
-  case 23 :
-  ret_value = 0;
-  break;
-  case 24 :
-  ret_value = 0;
-  break;
-  case 25 :
-  ret_value = 1;
-  break;
-  case 26 :
-  ret_value = 0;
-  break;
-  case 27 :
-  ret_value = 0;
-  break;
-  case 28 :
-  ret_value = 1;
-  break;
-  case 29 :
-  ret_value = 0;
-  break;
-  case 30 :
-  ret_value = 0;
-  break;
-  case 31 :
-  ret_value = 1;
-  break;
-  case 32 :
-  ret_value = 0;
-  break;
-  case 33 :
-  ret_value = 0;
-  break;
-  case 34 :
-  ret_value = 1;
-  break;
-  case 35 :
-  ret_value = 0;
-  break;
-  case 36 :
-  ret_value = 0;
-  break;
-  case 37 :
-  ret_value = 1;
-  break;
-  case 38 :
-  ret_value = 0;
-  break;
-  case 39 :
-  ret_value = 0;
-  break;
-  case 40 :
-  ret_value = 1;
-  break;
-  case 41 :
-  ret_value = 0;
-  break;
-  case 42 :
-  ret_value = 0;
-  break;
-  case 43 :
-  ret_value = 1;
-  break;
-  case 44 :
-  ret_value = 0;
-  break;
-  case 45 :
-  ret_value = 0;
-  break;
-  case 46 :
-  ret_value = 1;
-  break;
-  case 47 :
-  ret_value = 0;
-  break;
-  case 48 :
-  ret_value = 0;
-  break;
-  case 49 :
-  ret_value = 1;
-  break;
-  case 50 :
-  ret_value = 0;
-  break;
-  case 51 :
-  ret_value = 0;
-  break;
-  case 52 :
-  ret_value = 1;
-  break;
-  case 53 :
-  ret_value = 0;
-  break;
-  case 54 :
-  ret_value = 0;
-  break;
-  case 55 :
-  ret_value = 1;
-  break;
-  case 56 :
-  ret_value = 0;
-  break;
-  case 57 :
-  ret_value = 0;
-  break;
-  case 58 :
-  ret_value = 1;
-  break;
-  case 59 :
-  ret_value = 0;
-  break;
-  case 60 :
-  ret_value = 0;
-  break;
-  case 61 :
-  ret_value = 1;
-  break;
-  case 62 :
-  ret_value = 0;
-  break;
-  case 63 :
-  ret_value = 0;
-  break;
- }
- return ret_value;
-}
-
-ap_uint<1> lut_r1_div3(ap_uint<4> d, ap_uint<2> r_in) {
- ap_uint<1> ret_value;
- ap_uint<6> in;
-
- in = r_in.concat(d);
- switch (in){
-  case 0 :
-  ret_value = 0;
-  break;
-  case 1 :
-  ret_value = 0;
-  break;
-  case 2 :
-  ret_value = 1;
-  break;
-  case 3 :
-  ret_value = 0;
-  break;
-  case 4 :
-  ret_value = 0;
-  break;
-  case 5 :
-  ret_value = 1;
-  break;
-  case 6 :
-  ret_value = 0;
-  break;
-  case 7 :
-  ret_value = 0;
-  break;
-  case 8 :
-  ret_value = 1;
-  break;
-  case 9 :
-  ret_value = 0;
-  break;
-  case 10 :
-  ret_value = 0;
-  break;
-  case 11 :
-  ret_value = 1;
-  break;
-  case 12 :
-  ret_value = 0;
-  break;
-  case 13 :
-  ret_value = 0;
-  break;
-  case 14 :
-  ret_value = 1;
-  break;
-  case 15 :
-  ret_value = 0;
-  break;
-  case 16 :
-  ret_value = 0;
-  break;
-  case 17 :
-  ret_value = 1;
-  break;
-  case 18 :
-  ret_value = 0;
-  break;
-  case 19 :
-  ret_value = 0;
-  break;
-  case 20 :
-  ret_value = 1;
-  break;
-  case 21 :
-  ret_value = 0;
-  break;
-  case 22 :
-  ret_value = 0;
-  break;
-  case 23 :
-  ret_value = 1;
-  break;
-  case 24 :
-  ret_value = 0;
-  break;
-  case 25 :
-  ret_value = 0;
-  break;
-  case 26 :
-  ret_value = 1;
-  break;
-  case 27 :
-  ret_value = 0;
-  break;
-  case 28 :
-  ret_value = 0;
-  break;
-  case 29 :
-  ret_value = 1;
-  break;
-  case 30 :
-  ret_value = 0;
-  break;
-  case 31 :
-  ret_value = 0;
-  break;
-  case 32 :
-  ret_value = 1;
-  break;
-  case 33 :
-  ret_value = 0;
-  break;
-  case 34 :
-  ret_value = 0;
-  break;
-  case 35 :
-  ret_value = 1;
-  break;
-  case 36 :
-  ret_value = 0;
-  break;
-  case 37 :
-  ret_value = 0;
-  break;
-  case 38 :
-  ret_value = 1;
-  break;
-  case 39 :
-  ret_value = 0;
-  break;
-  case 40 :
-  ret_value = 0;
-  break;
-  case 41 :
-  ret_value = 1;
-  break;
-  case 42 :
-  ret_value = 0;
-  break;
-  case 43 :
-  ret_value = 0;
-  break;
-  case 44 :
-  ret_value = 1;
-  break;
-  case 45 :
-  ret_value = 0;
-  break;
-  case 46 :
-  ret_value = 0;
-  break;
-  case 47 :
-  ret_value = 1;
-  break;
-  case 48 :
-  ret_value = 0;
-  break;
-  case 49 :
-  ret_value = 0;
-  break;
-  case 50 :
-  ret_value = 1;
-  break;
-  case 51 :
-  ret_value = 0;
-  break;
-  case 52 :
-  ret_value = 0;
-  break;
-  case 53 :
-  ret_value = 1;
-  break;
-  case 54 :
-  ret_value = 0;
-  break;
-  case 55 :
-  ret_value = 0;
-  break;
-  case 56 :
-  ret_value = 1;
-  break;
-  case 57 :
-  ret_value = 0;
-  break;
-  case 58 :
-  ret_value = 0;
-  break;
-  case 59 :
-  ret_value = 1;
-  break;
-  case 60 :
-  ret_value = 0;
-  break;
-  case 61 :
-  ret_value = 0;
-  break;
-  case 62 :
-  ret_value = 1;
-  break;
-  case 63 :
-  ret_value = 0;
-  break;
- }
- return ret_value;
-}
-
-ap_uint<1> lut_q0_div3(ap_uint<4> d, ap_uint<2> r_in) {
- ap_uint<1> ret_value;
- ap_uint<6> in;
-
- in = r_in.concat(d);
- switch (in){
-  case 0 :
-  ret_value = 0;
-  break;
-  case 1 :
-  ret_value = 0;
-  break;
-  case 2 :
-  ret_value = 0;
-  break;
-  case 3 :
-  ret_value = 1;
-  break;
-  case 4 :
-  ret_value = 1;
-  break;
-  case 5 :
-  ret_value = 1;
-  break;
-  case 6 :
-  ret_value = 0;
-  break;
-  case 7 :
-  ret_value = 0;
-  break;
-  case 8 :
-  ret_value = 0;
-  break;
-  case 9 :
-  ret_value = 1;
-  break;
-  case 10 :
-  ret_value = 1;
-  break;
-  case 11 :
-  ret_value = 1;
-  break;
-  case 12 :
-  ret_value = 0;
-  break;
-  case 13 :
-  ret_value = 0;
-  break;
-  case 14 :
-  ret_value = 0;
-  break;
-  case 15 :
-  ret_value = 1;
-  break;
-  case 16 :
-  ret_value = 1;
-  break;
-  case 17 :
-  ret_value = 1;
-  break;
-  case 18 :
-  ret_value = 0;
-  break;
-  case 19 :
-  ret_value = 0;
-  break;
-  case 20 :
-  ret_value = 0;
-  break;
-  case 21 :
-  ret_value = 1;
-  break;
-  case 22 :
-  ret_value = 1;
-  break;
-  case 23 :
-  ret_value = 1;
-  break;
-  case 24 :
-  ret_value = 0;
-  break;
-  case 25 :
-  ret_value = 0;
-  break;
-  case 26 :
-  ret_value = 0;
-  break;
-  case 27 :
-  ret_value = 1;
-  break;
-  case 28 :
-  ret_value = 1;
-  break;
-  case 29 :
-  ret_value = 1;
-  break;
-  case 30 :
-  ret_value = 0;
-  break;
-  case 31 :
-  ret_value = 0;
-  break;
-  case 32 :
-  ret_value = 0;
-  break;
-  case 33 :
-  ret_value = 1;
-  break;
-  case 34 :
-  ret_value = 1;
-  break;
-  case 35 :
-  ret_value = 1;
-  break;
-  case 36 :
-  ret_value = 0;
-  break;
-  case 37 :
-  ret_value = 0;
-  break;
-  case 38 :
-  ret_value = 0;
-  break;
-  case 39 :
-  ret_value = 1;
-  break;
-  case 40 :
-  ret_value = 1;
-  break;
-  case 41 :
-  ret_value = 1;
-  break;
-  case 42 :
-  ret_value = 0;
-  break;
-  case 43 :
-  ret_value = 0;
-  break;
-  case 44 :
-  ret_value = 0;
-  break;
-  case 45 :
-  ret_value = 1;
-  break;
-  case 46 :
-  ret_value = 1;
-  break;
-  case 47 :
-  ret_value = 1;
-  break;
-  case 48 :
-  ret_value = 0;
-  break;
-  case 49 :
-  ret_value = 0;
-  break;
-  case 50 :
-  ret_value = 0;
-  break;
-  case 51 :
-  ret_value = 1;
-  break;
-  case 52 :
-  ret_value = 1;
-  break;
-  case 53 :
-  ret_value = 1;
-  break;
-  case 54 :
-  ret_value = 0;
-  break;
-  case 55 :
-  ret_value = 0;
-  break;
-  case 56 :
-  ret_value = 0;
-  break;
-  case 57 :
-  ret_value = 1;
-  break;
-  case 58 :
-  ret_value = 1;
-  break;
-  case 59 :
-  ret_value = 1;
-  break;
-  case 60 :
-  ret_value = 0;
-  break;
-  case 61 :
-  ret_value = 0;
-  break;
-  case 62 :
-  ret_value = 0;
-  break;
-  case 63 :
-  ret_value = 1;
-  break;
- }
- return ret_value;
-}
-
-ap_uint<1> lut_q1_div3(ap_uint<4> d, ap_uint<2> r_in) {
- ap_uint<1> ret_value;
- ap_uint<6> in;
-
- in = r_in.concat(d);
- switch (in){
-  case 0 :
-  ret_value = 0;
-  break;
-  case 1 :
-  ret_value = 0;
-  break;
-  case 2 :
-  ret_value = 0;
-  break;
-  case 3 :
-  ret_value = 0;
-  break;
-  case 4 :
-  ret_value = 0;
-  break;
-  case 5 :
-  ret_value = 0;
-  break;
-  case 6 :
-  ret_value = 1;
-  break;
-  case 7 :
-  ret_value = 1;
-  break;
-  case 8 :
-  ret_value = 1;
-  break;
-  case 9 :
-  ret_value = 1;
-  break;
-  case 10 :
-  ret_value = 1;
-  break;
-  case 11 :
-  ret_value = 1;
-  break;
-  case 12 :
-  ret_value = 0;
-  break;
-  case 13 :
-  ret_value = 0;
-  break;
-  case 14 :
-  ret_value = 0;
-  break;
-  case 15 :
-  ret_value = 0;
-  break;
-  case 16 :
-  ret_value = 0;
-  break;
-  case 17 :
-  ret_value = 0;
-  break;
-  case 18 :
-  ret_value = 1;
-  break;
-  case 19 :
-  ret_value = 1;
-  break;
-  case 20 :
-  ret_value = 1;
-  break;
-  case 21 :
-  ret_value = 1;
-  break;
-  case 22 :
-  ret_value = 1;
-  break;
-  case 23 :
-  ret_value = 1;
-  break;
-  case 24 :
-  ret_value = 0;
-  break;
-  case 25 :
-  ret_value = 0;
-  break;
-  case 26 :
-  ret_value = 0;
-  break;
-  case 27 :
-  ret_value = 0;
-  break;
-  case 28 :
-  ret_value = 0;
-  break;
-  case 29 :
-  ret_value = 0;
-  break;
-  case 30 :
-  ret_value = 1;
-  break;
-  case 31 :
-  ret_value = 1;
-  break;
-  case 32 :
-  ret_value = 1;
-  break;
-  case 33 :
-  ret_value = 1;
-  break;
-  case 34 :
-  ret_value = 1;
-  break;
-  case 35 :
-  ret_value = 1;
-  break;
-  case 36 :
-  ret_value = 0;
-  break;
-  case 37 :
-  ret_value = 0;
-  break;
-  case 38 :
-  ret_value = 0;
-  break;
-  case 39 :
-  ret_value = 0;
-  break;
-  case 40 :
-  ret_value = 0;
-  break;
-  case 41 :
-  ret_value = 0;
-  break;
-  case 42 :
-  ret_value = 1;
-  break;
-  case 43 :
-  ret_value = 1;
-  break;
-  case 44 :
-  ret_value = 1;
-  break;
-  case 45 :
-  ret_value = 1;
-  break;
-  case 46 :
-  ret_value = 1;
-  break;
-  case 47 :
-  ret_value = 1;
-  break;
-  case 48 :
-  ret_value = 0;
-  break;
-  case 49 :
-  ret_value = 0;
-  break;
-  case 50 :
-  ret_value = 0;
-  break;
-  case 51 :
-  ret_value = 0;
-  break;
-  case 52 :
-  ret_value = 0;
-  break;
-  case 53 :
-  ret_value = 0;
-  break;
-  case 54 :
-  ret_value = 1;
-  break;
-  case 55 :
-  ret_value = 1;
-  break;
-  case 56 :
-  ret_value = 1;
-  break;
-  case 57 :
-  ret_value = 1;
-  break;
-  case 58 :
-  ret_value = 1;
-  break;
-  case 59 :
-  ret_value = 1;
-  break;
-  case 60 :
-  ret_value = 0;
-  break;
-  case 61 :
-  ret_value = 0;
-  break;
-  case 62 :
-  ret_value = 0;
-  break;
-  case 63 :
-  ret_value = 0;
-  break;
- }
- return ret_value;
-}
-
-ap_uint<1> lut_q2_div3(ap_uint<4> d, ap_uint<2> r_in) {
- ap_uint<1> ret_value;
- ap_uint<6> in;
-
- in = r_in.concat(d);
- switch (in){
-  case 0 :
-  ret_value = 0;
-  break;
-  case 1 :
-  ret_value = 0;
-  break;
-  case 2 :
-  ret_value = 0;
-  break;
-  case 3 :
-  ret_value = 0;
-  break;
-  case 4 :
-  ret_value = 0;
-  break;
-  case 5 :
-  ret_value = 0;
-  break;
-  case 6 :
-  ret_value = 0;
-  break;
-  case 7 :
-  ret_value = 0;
-  break;
-  case 8 :
-  ret_value = 0;
-  break;
-  case 9 :
-  ret_value = 0;
-  break;
-  case 10 :
-  ret_value = 0;
-  break;
-  case 11 :
-  ret_value = 0;
-  break;
-  case 12 :
-  ret_value = 1;
-  break;
-  case 13 :
-  ret_value = 1;
-  break;
-  case 14 :
-  ret_value = 1;
-  break;
-  case 15 :
-  ret_value = 1;
-  break;
-  case 16 :
-  ret_value = 1;
-  break;
-  case 17 :
-  ret_value = 1;
-  break;
-  case 18 :
-  ret_value = 1;
-  break;
-  case 19 :
-  ret_value = 1;
-  break;
-  case 20 :
-  ret_value = 1;
-  break;
-  case 21 :
-  ret_value = 1;
-  break;
-  case 22 :
-  ret_value = 1;
-  break;
-  case 23 :
-  ret_value = 1;
-  break;
-  case 24 :
-  ret_value = 0;
-  break;
-  case 25 :
-  ret_value = 0;
-  break;
-  case 26 :
-  ret_value = 0;
-  break;
-  case 27 :
-  ret_value = 0;
-  break;
-  case 28 :
-  ret_value = 0;
-  break;
-  case 29 :
-  ret_value = 0;
-  break;
-  case 30 :
-  ret_value = 0;
-  break;
-  case 31 :
-  ret_value = 0;
-  break;
-  case 32 :
-  ret_value = 0;
-  break;
-  case 33 :
-  ret_value = 0;
-  break;
-  case 34 :
-  ret_value = 0;
-  break;
-  case 35 :
-  ret_value = 0;
-  break;
-  case 36 :
-  ret_value = 1;
-  break;
-  case 37 :
-  ret_value = 1;
-  break;
-  case 38 :
-  ret_value = 1;
-  break;
-  case 39 :
-  ret_value = 1;
-  break;
-  case 40 :
-  ret_value = 1;
-  break;
-  case 41 :
-  ret_value = 1;
-  break;
-  case 42 :
-  ret_value = 1;
-  break;
-  case 43 :
-  ret_value = 1;
-  break;
-  case 44 :
-  ret_value = 1;
-  break;
-  case 45 :
-  ret_value = 1;
-  break;
-  case 46 :
-  ret_value = 1;
-  break;
-  case 47 :
-  ret_value = 1;
-  break;
-  case 48 :
-  ret_value = 0;
-  break;
-  case 49 :
-  ret_value = 0;
-  break;
-  case 50 :
-  ret_value = 0;
-  break;
-  case 51 :
-  ret_value = 0;
-  break;
-  case 52 :
-  ret_value = 0;
-  break;
-  case 53 :
-  ret_value = 0;
-  break;
-  case 54 :
-  ret_value = 0;
-  break;
-  case 55 :
-  ret_value = 0;
-  break;
-  case 56 :
-  ret_value = 0;
-  break;
-  case 57 :
-  ret_value = 0;
-  break;
-  case 58 :
-  ret_value = 0;
-  break;
-  case 59 :
-  ret_value = 0;
-  break;
-  case 60 :
-  ret_value = 1;
-  break;
-  case 61 :
-  ret_value = 1;
-  break;
-  case 62 :
-  ret_value = 1;
-  break;
-  case 63 :
-  ret_value = 1;
-  break;
- }
- return ret_value;
-}
-
-ap_uint<1> lut_q3_div3(ap_uint<4> d, ap_uint<2> r_in) {
- ap_uint<1> ret_value;
- ap_uint<6> in;
-
- in = r_in.concat(d);
- switch (in){
-  case 0 :
-  ret_value = 0;
-  break;
-  case 1 :
-  ret_value = 0;
-  break;
-  case 2 :
-  ret_value = 0;
-  break;
-  case 3 :
-  ret_value = 0;
-  break;
-  case 4 :
-  ret_value = 0;
-  break;
-  case 5 :
-  ret_value = 0;
-  break;
-  case 6 :
-  ret_value = 0;
-  break;
-  case 7 :
-  ret_value = 0;
-  break;
-  case 8 :
-  ret_value = 0;
-  break;
-  case 9 :
-  ret_value = 0;
-  break;
-  case 10 :
-  ret_value = 0;
-  break;
-  case 11 :
-  ret_value = 0;
-  break;
-  case 12 :
-  ret_value = 0;
-  break;
-  case 13 :
-  ret_value = 0;
-  break;
-  case 14 :
-  ret_value = 0;
-  break;
-  case 15 :
-  ret_value = 0;
-  break;
-  case 16 :
-  ret_value = 0;
-  break;
-  case 17 :
-  ret_value = 0;
-  break;
-  case 18 :
-  ret_value = 0;
-  break;
-  case 19 :
-  ret_value = 0;
-  break;
-  case 20 :
-  ret_value = 0;
-  break;
-  case 21 :
-  ret_value = 0;
-  break;
-  case 22 :
-  ret_value = 0;
-  break;
-  case 23 :
-  ret_value = 0;
-  break;
-  case 24 :
-  ret_value = 1;
-  break;
-  case 25 :
-  ret_value = 1;
-  break;
-  case 26 :
-  ret_value = 1;
-  break;
-  case 27 :
-  ret_value = 1;
-  break;
-  case 28 :
-  ret_value = 1;
-  break;
-  case 29 :
-  ret_value = 1;
-  break;
-  case 30 :
-  ret_value = 1;
-  break;
-  case 31 :
-  ret_value = 1;
-  break;
-  case 32 :
-  ret_value = 1;
-  break;
-  case 33 :
-  ret_value = 1;
-  break;
-  case 34 :
-  ret_value = 1;
-  break;
-  case 35 :
-  ret_value = 1;
-  break;
-  case 36 :
-  ret_value = 1;
-  break;
-  case 37 :
-  ret_value = 1;
-  break;
-  case 38 :
-  ret_value = 1;
-  break;
-  case 39 :
-  ret_value = 1;
-  break;
-  case 40 :
-  ret_value = 1;
-  break;
-  case 41 :
-  ret_value = 1;
-  break;
-  case 42 :
-  ret_value = 1;
-  break;
-  case 43 :
-  ret_value = 1;
-  break;
-  case 44 :
-  ret_value = 1;
-  break;
-  case 45 :
-  ret_value = 1;
-  break;
-  case 46 :
-  ret_value = 1;
-  break;
-  case 47 :
-  ret_value = 1;
-  break;
-  case 48 :
-  ret_value = 0;
-  break;
-  case 49 :
-  ret_value = 0;
-  break;
-  case 50 :
-  ret_value = 0;
-  break;
-  case 51 :
-  ret_value = 0;
-  break;
-  case 52 :
-  ret_value = 0;
-  break;
-  case 53 :
-  ret_value = 0;
-  break;
-  case 54 :
-  ret_value = 0;
-  break;
-  case 55 :
-  ret_value = 0;
-  break;
-  case 56 :
-  ret_value = 0;
-  break;
-  case 57 :
-  ret_value = 0;
-  break;
-  case 58 :
-  ret_value = 0;
-  break;
-  case 59 :
-  ret_value = 0;
-  break;
-  case 60 :
-  ret_value = 0;
-  break;
-  case 61 :
-  ret_value = 0;
-  break;
-  case 62 :
-  ret_value = 0;
-  break;
-  case 63 :
-  ret_value = 0;
-  break;
- }
- return ret_value;
-}
-
 void lut_div3_chunk(ap_uint<4> d, ap_uint<2> r_in, ap_uint<4> (* q), ap_uint<2> (* r_out)) {
- (*r_out)[0] = lut_r0_div3(d, r_in);
- (*r_out)[1] = lut_r1_div3(d, r_in);
- (*q)[0] = lut_q0_div3(d, r_in);
- (*q)[1] = lut_q1_div3(d, r_in);
- (*q)[2] = lut_q2_div3(d, r_in);
- (*q)[3] = lut_q3_div3(d, r_in);
+ ap_uint<6> in;
+ ap_uint<1> r0[64] = {0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0};
+ ap_uint<1> r1[64] = {0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0};
+ ap_uint<1> q0[64] = {0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1};
+ ap_uint<1> q1[64] = {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
+ ap_uint<1> q2[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
+ ap_uint<1> q3[64] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+ in = r_in.concat(d);
+ (*r_out)[0] = r0[in];
+ (*r_out)[1] = r1[in];
+ (*q)[0] = q0[in];
+ (*q)[1] = q1[in];
+ (*q)[2] = q2[in];
+ (*q)[3] = q3[in];
 }
 
 ap_uint<55> int_55_div3(ap_uint<55> in) {
@@ -30235,14 +29022,45 @@ ap_uint<55> int_55_div3(ap_uint<55> in) {
  d_chunk = d.range(54, 52);
  lut_div3_chunk(d_chunk, r, &q_chunk, &r);
  q.range(54, 52) = q_chunk.range(2, 0);
- for(i = 12; i >= 0; i = i - 1) {
-_ssdm_Unroll(0,0,0, "");
- {
-  d_chunk = d.range(i*4 + 3, i*4);
-  lut_div3_chunk(d_chunk, r, &q_chunk, &r);
-  q.range(i*4 + 3, i*4) = q_chunk;
-  }
- }
+ d_chunk = d.range(51, 48);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(51, 48) = q_chunk;
+ d_chunk = d.range(47, 44);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(47, 44) = q_chunk;
+ d_chunk = d.range(43, 40);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(43, 40) = q_chunk;
+ d_chunk = d.range(39, 36);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(39, 36) = q_chunk;
+ d_chunk = d.range(35, 32);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(35, 32) = q_chunk;
+ d_chunk = d.range(31, 28);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(31, 28) = q_chunk;
+ d_chunk = d.range(27, 24);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(27, 24) = q_chunk;
+ d_chunk = d.range(23, 20);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(23, 20) = q_chunk;
+ d_chunk = d.range(19, 16);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(19, 16) = q_chunk;
+ d_chunk = d.range(15, 12);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(15, 12) = q_chunk;
+ d_chunk = d.range(11, 8);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(11, 8) = q_chunk;
+ d_chunk = d.range(7, 4);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(7, 4) = q_chunk;
+ d_chunk = d.range(3, 0);
+ lut_div3_chunk(d_chunk, r, &q_chunk, &r);
+ q.range(3, 0) = q_chunk;
  return q;
 }
 
@@ -30292,35 +29110,38 @@ double operator_double_div3(double in) {
   xf = mant;
   if (mant < 2251799813685248)
    div_exp = 2;
-  if (exp != 2047)
-   if (div_exp > exp)
-    new_exp = 0;
-   else
-    new_exp = exp - div_exp;
-  if (exp != 2047) {
-   if (exp == 0)
-    shift = 0;
-   else
-    if (div_exp >= exp)
-     if (1 >= exp)
-      shift = 1 - exp;
-     else
-      shift = exp - 1;
+  if (div_exp > exp)
+   new_exp = 0;
+  else
+   new_exp = exp - div_exp;
+  if (exp == 0)
+   shift = 0;
+  else
+   if (div_exp >= exp)
+    if (1 >= exp)
+     shift = 1 - exp;
     else
-     shift = div_exp - 0;
-   if (exp != 0)
-    xf.set(52);
-   if (1 >= exp)
-    xf = xf >> shift;
+     shift = exp - 1;
    else
-    xf = xf << shift;
-   xf = xf + 1;
-   new_mant = operator_int_55_div3(xf);
+    shift = div_exp - 0;
+  if (1 >= exp)
+   xf = xf >> shift;
+  else
+   xf = xf << shift;
+  if (exp != 0)
+   xf.set(52);
+  xf = xf + 1;
+  new_mant = operator_int_55_div3(xf);
+  if (exp == 2047) {
+   new_mant = mant;
+   new_exp = exp;
   }
   rebuild_double(s, new_exp, new_mant, &out);
   return out;
  }
 }
+
+
 
 
 
@@ -30350,13 +29171,36 @@ void kernel_jacobi_1d_imper(int tsteps,
 {_ssdm_SpecArrayDimSize(A, 10000);_ssdm_SpecArrayDimSize(B, 10000);
   int t, i, j;
 
+  for (t = 0; t < 100; t++)
 #pragma scop
- for (t = 0; t < 100; t++)
-    {
-      for (i = 1; i < 10000 - 1; i++)
- B[i] = operator_double_div3(A[i-1] + A[i] + A[i + 1]);
-      for (j = 1; j < 10000 - 1; j++)
- A[j] = B[j];
+ {
+      for (i = 1; i < 10000 - 1; i++){
+  B[i] = (A[i-1] + A[i] + A[i + 1])/3;
+   }
+   for (j = 1; j < 10000 - 1; j++){
+  A[j] = B[j];
+   }
+    }
+#pragma endscop
+
+}
+
+void kernel_jacobi_1d_imper_optimized(int tsteps,
+       int n,
+       double A[10000 + 0],
+       double B[10000 + 0])
+{_ssdm_SpecArrayDimSize(A, 10000);_ssdm_SpecArrayDimSize(B, 10000);
+  int t, i, j;
+
+  for (t = 0; t < 100; t++)
+#pragma scop
+ {
+      for (i = 1; i < 10000 - 1; i++){
+  B[i] = operator_double_div3(A[i-1] + A[i] + A[i + 1]);
+   }
+   for (j = 1; j < 10000 - 1; j++){
+  A[j] = B[j];
+   }
     }
 #pragma endscop
 
@@ -30382,6 +29226,6 @@ int main(int argc, char** argv)
 
 
   kernel_jacobi_1d_imper (tsteps, n, *A, *B);
-# 1454 "my_version/jacobi-1d-imper.cpp"
+# 301 "jacobi-1d-imper.cpp"
  return 0;
 }

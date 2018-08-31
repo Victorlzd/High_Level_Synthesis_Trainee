@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log kernel_seidel_2d_my_version.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_seidel_2d_my_version.tcl
+vivado -log kernel_seidel_2d_optimized.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_seidel_2d_optimized.tcl

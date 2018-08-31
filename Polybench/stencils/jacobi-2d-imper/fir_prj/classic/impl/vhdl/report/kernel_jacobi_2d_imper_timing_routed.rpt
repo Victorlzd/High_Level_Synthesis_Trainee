@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Aug 22 14:45:14 2018
+| Date         : Fri Aug 31 21:47:19 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_timing_summary -file ./report/kernel_jacobi_2d_imper_timing_routed.rpt
 | Design       : kernel_jacobi_2d_imper
@@ -74,14 +74,14 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 130 input ports with no input delay specified. (HIGH)
+ There are 194 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 132 ports with no output delay specified. (HIGH)
+ There are 196 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -126,10 +126,10 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      1.451        0.000                      0                 2807        0.080        0.000                      0                 2807        4.220        0.000                       0                  2140  
+     -0.090       -0.294                      9                 6200        0.084        0.000                      0                 6200        0.470        0.000                       0                  5368  
 
 
-All user specified timing constraints are met.
+Timing constraints are not met.
 
 
 ------------------------------------------------------------------------------------------------
@@ -137,9 +137,9 @@ All user specified timing constraints are met.
 | -------------
 ------------------------------------------------------------------------------------------------
 
-Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
------   ------------       ----------      --------------
-ap_clk  {0.000 5.000}      10.000          100.000         
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+ap_clk  {0.000 1.250}        2.500           400.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              1.451        0.000                      0                 2807        0.080        0.000                      0                 2807        4.220        0.000                       0                  2140  
+ap_clk             -0.090       -0.294                      9                 6200        0.084        0.000                      0                 6200        0.470        0.000                       0                  5368  
 
 
 ------------------------------------------------------------------------------------------------
@@ -180,26 +180,26 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        1.451ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.080ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.220ns,  Total Violation        0.000ns
+Setup :            9  Failing Endpoints,  Worst Slack       -0.090ns,  Total Violation       -0.294ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.084ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.470ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             1.451ns  (required time - arrival time)
-  Source:                 kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (VIOLATED) :        -0.090ns  (required time - arrival time)
+  Source:                 kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[28].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        8.564ns  (logic 4.291ns (50.104%)  route 4.273ns (49.896%))
-  Logic Levels:           42  (CARRY4=41 LUT2=1)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.572ns  (logic 1.583ns (61.554%)  route 0.989ns (38.446%))
+  Logic Levels:           14  (CARRY4=14)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -212,151 +212,68 @@ Slack (MET) :             1.451ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2141, unset)         0.672     0.672    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
-    SLICE_X12Y126        FDRE                                         r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+                         net (fo=5367, unset)         0.672     0.672    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[28].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
+    SLICE_X62Y133        FDRE                                         r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[28].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y126        FDRE (Prop_fdre_C_Q)         0.308     0.980 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/Q
-                         net (fo=56, routed)          1.667     2.647    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53]
-    SLICE_X11Y108        LUT2 (Prop_lut2_I0_O)        0.053     2.700 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/Q_DEL/i_pipe/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1__16/O
-                         net (fo=1, routed)           0.000     2.700    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/opt_has_pipe.first_q_reg[53][5]
-    SLICE_X11Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.324     3.024 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.024    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y109        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.082 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.082    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.140 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.140    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y111        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.198 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.198    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y112        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.256 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.256    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y113        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.314 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.314    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y114        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.372 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.372    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y115        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.430 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.430    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y116        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.488 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.488    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y117        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.546 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.546    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y118        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.604 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.604    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y119        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     3.662 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.662    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_4
-    SLICE_X11Y120        CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.213     3.875 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
-                         net (fo=56, routed)          1.478     5.353    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/A[0]
-    SLICE_X9Y102         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.465     5.818 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     5.818    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y103         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     5.876 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     5.876    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     5.934 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     5.934    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y105         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     5.992 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     5.992    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y106         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.050 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.050    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y107         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.108 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.108    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y108         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.166 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.166    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y109         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.224 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.224    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y110         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.282 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.282    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y111         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.340 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.340    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y112         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.398 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.398    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y113         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.456 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.456    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y114         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.514 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.514    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_4
-    SLICE_X9Y115         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.213     6.727 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
-                         net (fo=56, routed)          1.128     7.855    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/a_xor_b_sub[0]
-    SLICE_X8Y102         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.449     8.304 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.304    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y103         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.364 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.364    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y104         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.424 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.424    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y105         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.484 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.484    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y106         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.544 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.544    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y107         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.604 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.604    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y108         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.664 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.664    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y109         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.724 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.724    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y110         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.784 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.784    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y111         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.844 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.844    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y112         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.904 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.904    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y113         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.964 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.964    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y114         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     9.024 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     9.024    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_4
-    SLICE_X8Y115         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.212     9.236 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
-                         net (fo=1, routed)           0.000     9.236    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/Q_DEL/i_pipe/D[53]
-    SLICE_X8Y115         FDRE                                         r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
+    SLICE_X62Y133        FDRE (Prop_fdre_C_Q)         0.308     0.980 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[28].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/Q
+                         net (fo=56, routed)          0.981     1.961    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/a_xor_b_sub_0[0]
+    SLICE_X63Y117        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.366     2.327 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.327    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y118        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.385 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.385    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y119        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.443 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.443    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y120        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.501 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.501    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y121        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.559 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.559    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y122        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.617 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.617    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y123        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.675 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.675    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y124        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.733 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.008     2.741    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y125        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.799 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.799    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y126        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.857 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.857    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.915 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.915    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.973 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.973    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y129        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     3.031 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     3.031    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_4
+    SLICE_X63Y130        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213     3.244 r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
+                         net (fo=1, routed)           0.000     3.244    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/Q_DEL/i_pipe/D[53]
+    SLICE_X63Y130        FDRE                                         r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=2141, unset)         0.638    10.638    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
-    SLICE_X8Y115         FDRE                                         r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    SLICE_X8Y115         FDRE (Setup_fdre_C_D)        0.084    10.687    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=5367, unset)         0.638     3.138    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
+    SLICE_X63Y130        FDRE                                         r  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X63Y130        FDRE (Setup_fdre_C_D)        0.051     3.154    kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[29].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
   -------------------------------------------------------------------
-                         required time                         10.687    
-                         arrival time                          -9.236    
+                         required time                          3.154    
+                         arrival time                          -3.244    
   -------------------------------------------------------------------
-                         slack                                  1.451    
+                         slack                                 -0.090    
 
 
 
@@ -364,16 +281,16 @@ Slack (MET) :             1.451ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.080ns  (arrival time - required time)
-  Source:                 A_load_1_reg_451_reg[7]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_jacobi_2d_bkb_U1/din1_buf1_reg[7]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.084ns  (arrival time - required time)
+  Source:                 kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]_srl6/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.182ns  (logic 0.128ns (70.221%)  route 0.054ns (29.779%))
-  Logic Levels:           1  (LUT5=1)
+  Data Path Delay:        0.201ns  (logic 0.100ns (49.804%)  route 0.101ns (50.196%))
+  Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
     Source Clock Delay      (SCD):    0.283ns
@@ -383,27 +300,26 @@ Slack (MET) :             0.080ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2141, unset)         0.283     0.283    ap_clk
-    SLICE_X23Y98         FDRE                                         r  A_load_1_reg_451_reg[7]/C
+                         net (fo=5367, unset)         0.283     0.283    kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/aclk
+    SLICE_X41Y161        FDRE                                         r  kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X23Y98         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  A_load_1_reg_451_reg[7]/Q
-                         net (fo=1, routed)           0.054     0.438    kernel_jacobi_2d_bkb_U1/A_load_1_reg_451_reg[63][7]
-    SLICE_X22Y98         LUT5 (Prop_lut5_I4_O)        0.028     0.466 r  kernel_jacobi_2d_bkb_U1/din1_buf1[7]_i_1/O
-                         net (fo=1, routed)           0.000     0.466    kernel_jacobi_2d_bkb_U1/din1[7]
-    SLICE_X22Y98         FDRE                                         r  kernel_jacobi_2d_bkb_U1/din1_buf1_reg[7]/D
+    SLICE_X41Y161        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/Q
+                         net (fo=1, routed)           0.101     0.484    kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/first_q
+    SLICE_X40Y161        SRL16E                                       r  kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]_srl6/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2141, unset)         0.298     0.298    kernel_jacobi_2d_bkb_U1/ap_clk
-    SLICE_X22Y98         FDRE                                         r  kernel_jacobi_2d_bkb_U1/din1_buf1_reg[7]/C
+                         net (fo=5367, unset)         0.298     0.298    kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/aclk
+    SLICE_X40Y161        SRL16E                                       r  kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]_srl6/CLK
                          clock pessimism              0.000     0.298    
-    SLICE_X22Y98         FDRE (Hold_fdre_C_D)         0.087     0.385    kernel_jacobi_2d_bkb_U1/din1_buf1_reg[7]
+    SLICE_X40Y161        SRL16E (Hold_srl16e_CLK_D)
+                                                      0.102     0.400    kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DET_SIGN_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]_srl6
   -------------------------------------------------------------------
-                         required time                         -0.385    
-                         arrival time                           0.466    
+                         required time                         -0.400    
+                         arrival time                           0.484    
   -------------------------------------------------------------------
-                         slack                                  0.080    
+                         slack                                  0.084    
 
 
 
@@ -412,14 +328,14 @@ Slack (MET) :             0.080ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         ap_clk
-Waveform(ns):       { 0.000 5.000 }
-Period(ns):         10.000
+Waveform(ns):       { 0.000 1.250 }
+Period(ns):         2.500
 Sources:            { ap_clk }
 
-Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     DSP48E1/CLK  n/a            1.825         10.000      8.175      DSP48_X1Y29   tmp_4_reg_408_reg/CLK
-Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.780         5.000       4.220      SLICE_X6Y110  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/EXP_PRE_RND_DEL/i_pipe/opt_has_pipe.i_pipe[18].pipe_reg[18][0]_srl18/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.780         5.000       4.220      SLICE_X6Y110  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/EXP_PRE_RND_DEL/i_pipe/opt_has_pipe.i_pipe[18].pipe_reg[18][0]_srl18/CLK
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X1Y51    kernel_jacobi_2d_dEe_U5/kernel_jacobi_2d_dEe_DSP48_0_U/p_reg_reg/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.780         1.250       0.470      SLICE_X58Y126  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[34].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[31]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.780         1.250       0.470      SLICE_X58Y126  kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[34].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[31]_srl32/CLK
 
 
 

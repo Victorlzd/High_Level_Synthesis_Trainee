@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"operator_double_div5": {
-			"proto_instances": {
-			}
-		}
-	}
-}

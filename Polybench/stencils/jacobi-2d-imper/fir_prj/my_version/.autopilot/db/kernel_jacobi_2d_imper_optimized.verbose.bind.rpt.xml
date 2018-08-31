@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'kernel_jacobi_2d_imper_optimized'" level="0">
-<item name = "Date">Wed Aug 22 14:45:33 2018
+<item name = "Date">Fri Aug 31 21:48:08 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">fir_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 41.410, 1.25</column>
+<column name="ap_clk">2.50, 3.024, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,23 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">697282701, 697282701, 697282701, 697282701, none</column>
+<column name="">2808950901, 2808950901, 2808950901, 2808950901, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_operator_double_div5_fu_172">operator_double_div5, 1, 1, 1, 1, none</column>
+<column name="grp_operator_double_div5_fu_186">operator_double_div5, 68, 68, 68, 68, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">697282700, 697282700, 34864135, -, -, 20, no</column>
-<column name=" + Loop 1.1">25898100, 25898100, 25950, -, -, 998, no</column>
-<column name="  ++ Loop 1.1.1">25948, 25948, 26, -, -, 998, no</column>
-<column name=" + Loop 1.2">8966032, 8966032, 8984, -, -, 998, no</column>
-<column name="  ++ Loop 1.2.1">8982, 8982, 9, -, -, 998, no</column>
+<column name="- Loop 1">2808950900, 2808950900, 140447545, -, -, 20, no</column>
+<column name=" + Loop 1.1">63750244, 63750244, 63878, -, -, 998, no</column>
+<column name="  ++ Loop 1.1.1">63872, 63872, 64, -, -, 998, no</column>
+<column name=" + Loop 1.2">76697298, 76697298, 76851, -, -, 998, no</column>
+<column name="  ++ Loop 1.2.1">76846, 76846, 77, -, -, 998, no</column>
 </table>
 </item>
 </section>

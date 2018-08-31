@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'kernel_fdtd_2d'" level="0">
-<item name = "Date">Tue Aug  7 15:07:10 2018
+<item name = "Date">Fri Aug 31 22:12:02 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">fir_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.334, 1.25</column>
+<column name="ap_clk">2.50, 2.122, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">3645251601, 3645251601, 3645251601, 3645251601, none</column>
+<column name="">9437403751, 9437403751, 9437403751, 9437403751, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,14 +35,14 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">3645251600, 3645251600, 72905032, -, -, 50, no</column>
-<column name=" + Loop 1.1">3000, 3000, 3, -, -, 1000, no</column>
-<column name=" + Loop 1.2">20980998, 20980998, 21002, -, -, 999, no</column>
-<column name="  ++ Loop 1.2.1">21000, 21000, 21, -, -, 1000, no</column>
-<column name=" + Loop 1.3">20981000, 20981000, 20981, -, -, 1000, no</column>
-<column name="  ++ Loop 1.3.1">20979, 20979, 21, -, -, 999, no</column>
-<column name=" + Loop 1.4">30940029, 30940029, 30971, -, -, 999, no</column>
-<column name="  ++ Loop 1.4.1">30969, 30969, 31, -, -, 999, no</column>
+<column name="- Loop 1">9437403750, 9437403750, 188748075, -, -, 50, no</column>
+<column name=" + Loop 1.1">5000, 5000, 5, -, -, 1000, no</column>
+<column name=" + Loop 1.2">52952994, 52952994, 53006, -, -, 999, no</column>
+<column name="  ++ Loop 1.2.1">53000, 53000, 53, -, -, 1000, no</column>
+<column name=" + Loop 1.3">53948000, 53948000, 53948, -, -, 1000, no</column>
+<column name="  ++ Loop 1.3.1">53946, 53946, 54, -, -, 999, no</column>
+<column name=" + Loop 1.4">81842076, 81842076, 81924, -, -, 999, no</column>
+<column name="  ++ Loop 1.4.1">81918, 81918, 82, -, -, 999, no</column>
 </table>
 </item>
 </section>

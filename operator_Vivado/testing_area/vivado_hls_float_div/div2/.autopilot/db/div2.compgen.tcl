@@ -4,7 +4,7 @@ set id 1
 set name div2_fmul_32ns_32bkb
 set corename simcore_fmul
 set op fmul
-set stage_num 2
+set stage_num 8
 set max_latency -1
 set registered_input 1
 set impl_style max_dsp

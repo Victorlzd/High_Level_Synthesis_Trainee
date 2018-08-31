@@ -26,7 +26,7 @@ SC_MODULE(kernel_jacobi_2d_bkb) {
 
 
 
-    ACMP_dadd<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_dadd_U;
+    ACMP_dadd<ID, 14, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_dadd_U;
 
     SC_CTOR(kernel_jacobi_2d_bkb):  ACMP_dadd_U ("ACMP_dadd_U") {
         ACMP_dadd_U.clk(clk);

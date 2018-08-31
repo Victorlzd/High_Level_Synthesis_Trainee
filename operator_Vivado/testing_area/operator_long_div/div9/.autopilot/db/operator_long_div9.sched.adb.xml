@@ -3,7 +3,7 @@
 
 <trans_list>
 
-<trans id="11" from="1" to="2">
+<trans id="10" from="1" to="2">
 <condition id="2">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -23,7 +23,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="64" op_0_bw="64" op_1_bw="64">
+<Node id="11" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
 :3  %in_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %in_r) nounwind
 
@@ -38,12 +38,12 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="64" op_0_bw="64" op_1_bw="64">
+<Node id="12" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:5  %agg_result_V_i = call fastcc i64 @int_64_div9(i64 %in_read) nounwind
+:4  %p_0 = call fastcc i64 @int_64_div9(i64 %in_read) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="agg_result_V_i"/></StgValue>
+<StgValue><ssdm name="p_0"/></StgValue>
 </operation>
 </state>
 
@@ -56,9 +56,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="2" bw="0" op_0_bw="0" op_1_bw="64">
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecBitsMap(i64 %in_r) nounwind, !map !362
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i64 %in_r) nounwind, !map !126
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -71,9 +71,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="3" bw="0" op_0_bw="0" op_1_bw="64">
+<Node id="9" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i64 0) nounwind, !map !368
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i64 0) nounwind, !map !132
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -86,7 +86,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="0" op_0_bw="0" op_1_bw="0">
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
 :2  call void (...)* @_ssdm_op_SpecTopModule([19 x i8]* @operator_long_div9_s) nounwind
 
@@ -94,46 +94,31 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="8" st_id="2" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="6" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
-<![CDATA[
-:4  call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="9" st_id="2" stage="1" lat="2">
+<operation id="8" st_id="2" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="64" op_0_bw="64" op_1_bw="64">
+<Node id="12" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:5  %agg_result_V_i = call fastcc i64 @int_64_div9(i64 %in_read) nounwind
+:4  %p_0 = call fastcc i64 @int_64_div9(i64 %in_read) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="agg_result_V_i"/></StgValue>
+<StgValue><ssdm name="p_0"/></StgValue>
 </operation>
 
-<operation id="10" st_id="2" stage="1" lat="1">
+<operation id="9" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="8" bw="0" op_0_bw="64">
+<Node id="13" bw="0" op_0_bw="64">
 <![CDATA[
-:6  ret i64 %agg_result_V_i
+:5  ret i64 %p_0
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

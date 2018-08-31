@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'kernel_jacobi_2d_imper_optimized'
 ================================================================
-* Date:           Wed Aug 22 14:45:33 2018
+* Date:           Fri Aug 31 21:48:08 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        fir_prj
@@ -20,33 +20,33 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|    41.410|        1.25|
+    |ap_clk  |   2.50|     3.024|        0.31|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----------+-----------+-----------+-----------+---------+
-    |        Latency        |        Interval       | Pipeline|
-    |    min    |    max    |    min    |    max    |   Type  |
-    +-----------+-----------+-----------+-----------+---------+
-    |  697282701|  697282701|  697282701|  697282701|   none  |
-    +-----------+-----------+-----------+-----------+---------+
+    +------------+------------+------------+------------+---------+
+    |         Latency         |         Interval        | Pipeline|
+    |     min    |     max    |     min    |     max    |   Type  |
+    +------------+------------+------------+------------+---------+
+    |  2808950901|  2808950901|  2808950901|  2808950901|   none  |
+    +------------+------------+------------+------------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-----------------+-----------+-----------+----------+-----------+-----------+------+----------+
-        |                 |        Latency        | Iteration|  Initiation Interval  | Trip |          |
-        |    Loop Name    |    min    |    max    |  Latency |  achieved |   target  | Count| Pipelined|
-        +-----------------+-----------+-----------+----------+-----------+-----------+------+----------+
-        |- Loop 1         |  697282700|  697282700|  34864135|          -|          -|    20|    no    |
-        | + Loop 1.1      |   25898100|   25898100|     25950|          -|          -|   998|    no    |
-        |  ++ Loop 1.1.1  |      25948|      25948|        26|          -|          -|   998|    no    |
-        | + Loop 1.2      |    8966032|    8966032|      8984|          -|          -|   998|    no    |
-        |  ++ Loop 1.2.1  |       8982|       8982|         9|          -|          -|   998|    no    |
-        +-----------------+-----------+-----------+----------+-----------+-----------+------+----------+
+        +-----------------+------------+------------+-----------+-----------+-----------+------+----------+
+        |                 |         Latency         | Iteration |  Initiation Interval  | Trip |          |
+        |    Loop Name    |     min    |     max    |  Latency  |  achieved |   target  | Count| Pipelined|
+        +-----------------+------------+------------+-----------+-----------+-----------+------+----------+
+        |- Loop 1         |  2808950900|  2808950900|  140447545|          -|          -|    20|    no    |
+        | + Loop 1.1      |    63750244|    63750244|      63878|          -|          -|   998|    no    |
+        |  ++ Loop 1.1.1  |       63872|       63872|         64|          -|          -|   998|    no    |
+        | + Loop 1.2      |    76697298|    76697298|      76851|          -|          -|   998|    no    |
+        |  ++ Loop 1.2.1  |       76846|       76846|         77|          -|          -|   998|    no    |
+        +-----------------+------------+------------+-----------+-----------+-----------+------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -74,7 +74,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 38
+* Number of FSM states : 84
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -85,10 +85,9 @@ IsGatedGlobalClock: 0
 	3  / (!exitcond4)
 3 --> 
 	4  / (!exitcond3)
-	30  / (exitcond3)
+	72  / (exitcond3)
 4 --> 
-	5  / (!exitcond2)
-	3  / (exitcond2)
+	5  / true
 5 --> 
 	6  / true
 6 --> 
@@ -96,7 +95,8 @@ IsGatedGlobalClock: 0
 7 --> 
 	8  / true
 8 --> 
-	9  / true
+	9  / (!exitcond2)
+	3  / (exitcond2)
 9 --> 
 	10  / true
 10 --> 
@@ -138,13 +138,11 @@ IsGatedGlobalClock: 0
 28 --> 
 	29  / true
 29 --> 
-	4  / true
+	30  / true
 30 --> 
-	31  / (!exitcond1)
-	2  / (exitcond1)
+	31  / true
 31 --> 
-	32  / (!exitcond)
-	30  / (exitcond)
+	32  / true
 32 --> 
 	33  / true
 33 --> 
@@ -158,381 +156,794 @@ IsGatedGlobalClock: 0
 37 --> 
 	38  / true
 38 --> 
-	31  / true
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	8  / true
+72 --> 
+	73  / (!exitcond1)
+	2  / (exitcond1)
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / (!exitcond)
+	72  / (exitcond)
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	76  / true
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.06>
-ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %tsteps) nounwind, !map !195"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %n) nounwind, !map !201"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1000000 x double]* %A) nounwind, !map !205"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1000000 x double]* %B) nounwind, !map !211"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([33 x i8]* @kernel_jacobi_2d_imp) nounwind"   --->   Operation 43 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 44 [1/1] (1.06ns)   --->   "br label %.loopexit" [jacobi-2d-imper.cpp:1410]   --->   Operation 44 'br' <Predicate = true> <Delay = 1.06>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %tsteps) nounwind, !map !192"   --->   Operation 85 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %n) nounwind, !map !198"   --->   Operation 86 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1000000 x double]* %A) nounwind, !map !202"   --->   Operation 87 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1000000 x double]* %B) nounwind, !map !208"   --->   Operation 88 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([33 x i8]* @kernel_jacobi_2d_imp) nounwind"   --->   Operation 89 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (1.06ns)   --->   "br label %.loopexit" [jacobi-2d-imper.cpp:253]   --->   Operation 90 'br' <Predicate = true> <Delay = 1.06>
 
 State 2 <SV = 1> <Delay = 1.33>
-ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%t = phi i5 [ 0, %0 ], [ %t_1, %.loopexit.loopexit ]"   --->   Operation 45 'phi' 't' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 46 [1/1] (1.11ns)   --->   "%exitcond4 = icmp eq i5 %t, -12" [jacobi-2d-imper.cpp:1410]   --->   Operation 46 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20, i64 20, i64 20) nounwind"   --->   Operation 47 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 48 [1/1] (1.33ns)   --->   "%t_1 = add i5 %t, 1" [jacobi-2d-imper.cpp:1410]   --->   Operation 48 'add' 't_1' <Predicate = true> <Delay = 1.33> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %4, label %.preheader7.preheader" [jacobi-2d-imper.cpp:1410]   --->   Operation 49 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 50 [1/1] (1.06ns)   --->   "br label %.preheader7" [jacobi-2d-imper.cpp:1412]   --->   Operation 50 'br' <Predicate = (!exitcond4)> <Delay = 1.06>
-ST_2 : Operation 51 [1/1] (0.00ns)   --->   "ret void" [jacobi-2d-imper.cpp:1421]   --->   Operation 51 'ret' <Predicate = (exitcond4)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%t = phi i5 [ 0, %0 ], [ %t_1, %.loopexit.loopexit ]"   --->   Operation 91 'phi' 't' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (1.11ns)   --->   "%exitcond4 = icmp eq i5 %t, -12" [jacobi-2d-imper.cpp:253]   --->   Operation 92 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20, i64 20, i64 20) nounwind"   --->   Operation 93 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (1.33ns)   --->   "%t_1 = add i5 %t, 1" [jacobi-2d-imper.cpp:253]   --->   Operation 94 'add' 't_1' <Predicate = true> <Delay = 1.33> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %4, label %.preheader7.preheader" [jacobi-2d-imper.cpp:253]   --->   Operation 95 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (1.06ns)   --->   "br label %.preheader7" [jacobi-2d-imper.cpp:255]   --->   Operation 96 'br' <Predicate = (!exitcond4)> <Delay = 1.06>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "ret void" [jacobi-2d-imper.cpp:264]   --->   Operation 97 'ret' <Predicate = (exitcond4)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 7.20>
-ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%i = phi i10 [ %i_2, %.preheader7.loopexit ], [ 1, %.preheader7.preheader ]"   --->   Operation 52 'phi' 'i' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 53 [1/1] (1.29ns)   --->   "%exitcond3 = icmp eq i10 %i, -25" [jacobi-2d-imper.cpp:1412]   --->   Operation 53 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 54 'speclooptripcount' 'empty_14' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.preheader5.preheader, label %.preheader6.preheader" [jacobi-2d-imper.cpp:1412]   --->   Operation 55 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_cast = zext i10 %i to i20" [jacobi-2d-imper.cpp:1414]   --->   Operation 56 'zext' 'tmp_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 57 [1/1] (5.79ns)   --->   "%tmp_s = mul i20 %tmp_cast, 1000" [jacobi-2d-imper.cpp:1414]   --->   Operation 57 'mul' 'tmp_s' <Predicate = (!exitcond3)> <Delay = 5.79> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 5.79> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_3 : Operation 58 [1/1] (1.41ns)   --->   "%i_2 = add i10 %i, 1" [jacobi-2d-imper.cpp:1414]   --->   Operation 58 'add' 'i_2' <Predicate = (!exitcond3)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_cast_15 = zext i10 %i_2 to i20" [jacobi-2d-imper.cpp:1414]   --->   Operation 59 'zext' 'tmp_cast_15' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 60 [1/1] (5.79ns)   --->   "%tmp_2 = mul i20 %tmp_cast_15, 1000" [jacobi-2d-imper.cpp:1414]   --->   Operation 60 'mul' 'tmp_2' <Predicate = (!exitcond3)> <Delay = 5.79> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 5.79> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_3 : Operation 61 [1/1] (1.41ns)   --->   "%tmp_4 = add i10 %i, -1" [jacobi-2d-imper.cpp:1414]   --->   Operation 61 'add' 'tmp_4' <Predicate = (!exitcond3)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i10 %tmp_4 to i20" [jacobi-2d-imper.cpp:1414]   --->   Operation 62 'zext' 'tmp_5_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 63 [1/1] (5.79ns)   --->   "%tmp_5 = mul i20 %tmp_5_cast, 1000" [jacobi-2d-imper.cpp:1414]   --->   Operation 63 'mul' 'tmp_5' <Predicate = (!exitcond3)> <Delay = 5.79> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 5.79> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_3 : Operation 64 [1/1] (1.06ns)   --->   "br label %.preheader6" [jacobi-2d-imper.cpp:1413]   --->   Operation 64 'br' <Predicate = (!exitcond3)> <Delay = 1.06>
-ST_3 : Operation 65 [1/1] (1.06ns)   --->   "br label %.preheader5" [jacobi-2d-imper.cpp:1415]   --->   Operation 65 'br' <Predicate = (exitcond3)> <Delay = 1.06>
+State 3 <SV = 2> <Delay = 1.41>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%i = phi i10 [ %i_2, %.preheader7.loopexit ], [ 1, %.preheader7.preheader ]"   --->   Operation 98 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (1.29ns)   --->   "%exitcond3 = icmp eq i10 %i, -25" [jacobi-2d-imper.cpp:255]   --->   Operation 99 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 100 'speclooptripcount' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.preheader5.preheader, label %.preheader6.preheader" [jacobi-2d-imper.cpp:255]   --->   Operation 101 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (1.41ns)   --->   "%i_2 = add i10 %i, 1" [jacobi-2d-imper.cpp:257]   --->   Operation 102 'add' 'i_2' <Predicate = (!exitcond3)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 103 [1/1] (1.41ns)   --->   "%tmp_3 = add i10 %i, -1" [jacobi-2d-imper.cpp:257]   --->   Operation 103 'add' 'tmp_3' <Predicate = (!exitcond3)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 104 [1/1] (1.06ns)   --->   "br label %.preheader5" [jacobi-2d-imper.cpp:258]   --->   Operation 104 'br' <Predicate = (exitcond3)> <Delay = 1.06>
 
-State 4 <SV = 3> <Delay = 5.64>
-ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%j = phi i10 [ %j_2, %1 ], [ 1, %.preheader6.preheader ]"   --->   Operation 66 'phi' 'j' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 67 [1/1] (1.29ns)   --->   "%exitcond2 = icmp eq i10 %j, -25" [jacobi-2d-imper.cpp:1413]   --->   Operation 67 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 68 'speclooptripcount' 'empty_16' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader7.loopexit, label %1" [jacobi-2d-imper.cpp:1413]   --->   Operation 69 'br' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_7_cast = zext i10 %j to i20" [jacobi-2d-imper.cpp:1414]   --->   Operation 70 'zext' 'tmp_7_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 71 [1/1] (1.56ns)   --->   "%tmp_7 = add i20 %tmp_s, %tmp_7_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 71 'add' 'tmp_7' <Predicate = (!exitcond2)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_18_cast = zext i20 %tmp_7 to i64" [jacobi-2d-imper.cpp:1414]   --->   Operation 72 'zext' 'tmp_18_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_18_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 73 'getelementptr' 'A_addr' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 74 [1/1] (1.56ns)   --->   "%tmp_9 = add i20 %tmp_2, %tmp_7_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 74 'add' 'tmp_9' <Predicate = (!exitcond2)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 75 [1/1] (1.56ns)   --->   "%tmp_12 = add i20 %tmp_5, %tmp_7_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 75 'add' 'tmp_12' <Predicate = (!exitcond2)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 76 [4/4] (2.66ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 76 'load' 'A_load' <Predicate = (!exitcond2)> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_4 : Operation 77 [1/1] (1.41ns)   --->   "%tmp_8 = add i10 %j, -1" [jacobi-2d-imper.cpp:1414]   --->   Operation 77 'add' 'tmp_8' <Predicate = (!exitcond2)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i10 %tmp_8 to i20" [jacobi-2d-imper.cpp:1414]   --->   Operation 78 'zext' 'tmp_9_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 79 [1/1] (1.56ns)   --->   "%tmp_14 = add i20 %tmp_s, %tmp_9_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 79 'add' 'tmp_14' <Predicate = (!exitcond2)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_21_cast = zext i20 %tmp_14 to i64" [jacobi-2d-imper.cpp:1414]   --->   Operation 80 'zext' 'tmp_21_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_21_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 81 'getelementptr' 'A_addr_1' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 82 [4/4] (2.66ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 82 'load' 'A_load_1' <Predicate = (!exitcond2)> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_4 : Operation 83 [1/1] (1.41ns)   --->   "%j_2 = add i10 %j, 1" [jacobi-2d-imper.cpp:1414]   --->   Operation 83 'add' 'j_2' <Predicate = (!exitcond2)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_2_cast = zext i10 %j_2 to i20" [jacobi-2d-imper.cpp:1414]   --->   Operation 84 'zext' 'tmp_2_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 85 [1/1] (1.56ns)   --->   "%tmp_15 = add i20 %tmp_s, %tmp_2_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 85 'add' 'tmp_15' <Predicate = (!exitcond2)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 86 [1/1] (0.00ns)   --->   "br label %.preheader7"   --->   Operation 86 'br' <Predicate = (exitcond2)> <Delay = 0.00>
+State 4 <SV = 3> <Delay = 1.82>
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_cast = zext i10 %i to i20" [jacobi-2d-imper.cpp:257]   --->   Operation 105 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 106 [4/4] (1.82ns)   --->   "%tmp_s = mul i20 %tmp_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 106 'mul' 'tmp_s' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_cast_11 = zext i10 %i_2 to i20" [jacobi-2d-imper.cpp:257]   --->   Operation 107 'zext' 'tmp_cast_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 108 [4/4] (1.82ns)   --->   "%tmp_1 = mul i20 %tmp_cast_11, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 108 'mul' 'tmp_1' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i10 %tmp_3 to i20" [jacobi-2d-imper.cpp:257]   --->   Operation 109 'zext' 'tmp_4_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 110 [4/4] (1.82ns)   --->   "%tmp_4 = mul i20 %tmp_4_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 110 'mul' 'tmp_4' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 5 <SV = 4> <Delay = 2.66>
-ST_5 : Operation 87 [3/4] (2.66ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 87 'load' 'A_load' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_5 : Operation 88 [3/4] (2.66ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 88 'load' 'A_load_1' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 5 <SV = 4> <Delay = 1.82>
+ST_5 : Operation 111 [3/4] (1.82ns)   --->   "%tmp_s = mul i20 %tmp_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 111 'mul' 'tmp_s' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 112 [3/4] (1.82ns)   --->   "%tmp_1 = mul i20 %tmp_cast_11, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 112 'mul' 'tmp_1' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 113 [3/4] (1.82ns)   --->   "%tmp_4 = mul i20 %tmp_4_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 113 'mul' 'tmp_4' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 6 <SV = 5> <Delay = 2.66>
-ST_6 : Operation 89 [2/4] (2.66ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 89 'load' 'A_load' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_6 : Operation 90 [2/4] (2.66ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 90 'load' 'A_load_1' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 6 <SV = 5> <Delay = 1.82>
+ST_6 : Operation 114 [2/4] (1.82ns)   --->   "%tmp_s = mul i20 %tmp_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 114 'mul' 'tmp_s' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 115 [2/4] (1.82ns)   --->   "%tmp_1 = mul i20 %tmp_cast_11, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 115 'mul' 'tmp_1' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 116 [2/4] (1.82ns)   --->   "%tmp_4 = mul i20 %tmp_4_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 116 'mul' 'tmp_4' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 7 <SV = 6> <Delay = 2.66>
-ST_7 : Operation 91 [1/4] (2.66ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 91 'load' 'A_load' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_7 : Operation 92 [1/4] (2.66ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 92 'load' 'A_load_1' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 7 <SV = 6> <Delay = 1.06>
+ST_7 : Operation 117 [1/4] (0.00ns)   --->   "%tmp_s = mul i20 %tmp_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 117 'mul' 'tmp_s' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 118 [1/4] (0.00ns)   --->   "%tmp_1 = mul i20 %tmp_cast_11, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 118 'mul' 'tmp_1' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 119 [1/4] (0.00ns)   --->   "%tmp_4 = mul i20 %tmp_4_cast, 1000" [jacobi-2d-imper.cpp:257]   --->   Operation 119 'mul' 'tmp_4' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 120 [1/1] (1.06ns)   --->   "br label %.preheader6" [jacobi-2d-imper.cpp:256]   --->   Operation 120 'br' <Predicate = true> <Delay = 1.06>
 
-State 8 <SV = 7> <Delay = 6.91>
-ST_8 : Operation 93 [5/5] (6.91ns)   --->   "%tmp_1 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:1414]   --->   Operation 93 'dadd' 'tmp_1' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 8 <SV = 7> <Delay = 1.41>
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%j = phi i10 [ %j_2, %1 ], [ 1, %.preheader6.preheader ]"   --->   Operation 121 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 122 [1/1] (1.29ns)   --->   "%exitcond2 = icmp eq i10 %j, -25" [jacobi-2d-imper.cpp:256]   --->   Operation 122 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 123 'speclooptripcount' 'empty_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader7.loopexit, label %1" [jacobi-2d-imper.cpp:256]   --->   Operation 124 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 125 [1/1] (1.41ns)   --->   "%tmp_7 = add i10 %j, -1" [jacobi-2d-imper.cpp:257]   --->   Operation 125 'add' 'tmp_7' <Predicate = (!exitcond2)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 126 [1/1] (0.00ns)   --->   "br label %.preheader7"   --->   Operation 126 'br' <Predicate = (exitcond2)> <Delay = 0.00>
 
-State 9 <SV = 8> <Delay = 6.91>
-ST_9 : Operation 94 [4/5] (6.91ns)   --->   "%tmp_1 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:1414]   --->   Operation 94 'dadd' 'tmp_1' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_22_cast = zext i20 %tmp_15 to i64" [jacobi-2d-imper.cpp:1414]   --->   Operation 95 'zext' 'tmp_22_cast' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%A_addr_2 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_22_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 96 'getelementptr' 'A_addr_2' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 97 [4/4] (2.66ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 97 'load' 'A_load_2' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 9 <SV = 8> <Delay = 1.56>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%tmp_6_cast = zext i10 %j to i20" [jacobi-2d-imper.cpp:257]   --->   Operation 127 'zext' 'tmp_6_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 128 [1/1] (1.56ns)   --->   "%tmp_6 = add i20 %tmp_s, %tmp_6_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 128 'add' 'tmp_6' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 129 [1/1] (1.56ns)   --->   "%tmp_8 = add i20 %tmp_1, %tmp_6_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 129 'add' 'tmp_8' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 130 [1/1] (1.56ns)   --->   "%tmp_12 = add i20 %tmp_4, %tmp_6_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 130 'add' 'tmp_12' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_8_cast = zext i10 %tmp_7 to i20" [jacobi-2d-imper.cpp:257]   --->   Operation 131 'zext' 'tmp_8_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 132 [1/1] (1.56ns)   --->   "%tmp_14 = add i20 %tmp_s, %tmp_8_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 132 'add' 'tmp_14' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 133 [1/1] (1.41ns)   --->   "%j_2 = add i10 %j, 1" [jacobi-2d-imper.cpp:257]   --->   Operation 133 'add' 'j_2' <Predicate = true> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
-State 10 <SV = 9> <Delay = 6.91>
-ST_10 : Operation 98 [3/5] (6.91ns)   --->   "%tmp_1 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:1414]   --->   Operation 98 'dadd' 'tmp_1' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 99 [3/4] (2.66ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 99 'load' 'A_load_2' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 10 <SV = 9> <Delay = 1.56>
+ST_10 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_18_cast = zext i20 %tmp_6 to i64" [jacobi-2d-imper.cpp:257]   --->   Operation 134 'zext' 'tmp_18_cast' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 135 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_18_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 135 'getelementptr' 'A_addr' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 136 [4/4] (1.33ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 136 'load' 'A_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_10 : Operation 137 [1/1] (0.00ns)   --->   "%tmp_21_cast = zext i20 %tmp_14 to i64" [jacobi-2d-imper.cpp:257]   --->   Operation 137 'zext' 'tmp_21_cast' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 138 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_21_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 138 'getelementptr' 'A_addr_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 139 [4/4] (1.33ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 139 'load' 'A_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_10 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i10 %j_2 to i20" [jacobi-2d-imper.cpp:257]   --->   Operation 140 'zext' 'tmp_1_cast' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 141 [1/1] (1.56ns)   --->   "%tmp_15 = add i20 %tmp_s, %tmp_1_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 141 'add' 'tmp_15' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
-State 11 <SV = 10> <Delay = 6.91>
-ST_11 : Operation 100 [2/5] (6.91ns)   --->   "%tmp_1 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:1414]   --->   Operation 100 'dadd' 'tmp_1' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 101 [2/4] (2.66ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 101 'load' 'A_load_2' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 11 <SV = 10> <Delay = 1.33>
+ST_11 : Operation 142 [3/4] (1.33ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 142 'load' 'A_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_11 : Operation 143 [3/4] (1.33ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 143 'load' 'A_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
 
-State 12 <SV = 11> <Delay = 6.91>
-ST_12 : Operation 102 [1/5] (6.91ns)   --->   "%tmp_1 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:1414]   --->   Operation 102 'dadd' 'tmp_1' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 103 [1/4] (2.66ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 103 'load' 'A_load_2' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 12 <SV = 11> <Delay = 1.33>
+ST_12 : Operation 144 [2/4] (1.33ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 144 'load' 'A_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_12 : Operation 145 [2/4] (1.33ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 145 'load' 'A_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
 
-State 13 <SV = 12> <Delay = 6.91>
-ST_13 : Operation 104 [5/5] (6.91ns)   --->   "%tmp_3 = fadd double %tmp_1, %A_load_2" [jacobi-2d-imper.cpp:1414]   --->   Operation 104 'dadd' 'tmp_3' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 13 <SV = 12> <Delay = 1.33>
+ST_13 : Operation 146 [1/4] (1.33ns)   --->   "%A_load = load double* %A_addr, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 146 'load' 'A_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_13 : Operation 147 [1/4] (1.33ns)   --->   "%A_load_1 = load double* %A_addr_1, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 147 'load' 'A_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
 
-State 14 <SV = 13> <Delay = 6.91>
-ST_14 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_19_cast = zext i20 %tmp_9 to i64" [jacobi-2d-imper.cpp:1414]   --->   Operation 105 'zext' 'tmp_19_cast' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 106 [1/1] (0.00ns)   --->   "%A_addr_3 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_19_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 106 'getelementptr' 'A_addr_3' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 107 [4/5] (6.91ns)   --->   "%tmp_3 = fadd double %tmp_1, %A_load_2" [jacobi-2d-imper.cpp:1414]   --->   Operation 107 'dadd' 'tmp_3' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_14 : Operation 108 [4/4] (2.66ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 108 'load' 'A_load_3' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 14 <SV = 13> <Delay = 2.12>
+ST_14 : Operation 148 [14/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 148 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 15 <SV = 14> <Delay = 6.91>
-ST_15 : Operation 109 [3/5] (6.91ns)   --->   "%tmp_3 = fadd double %tmp_1, %A_load_2" [jacobi-2d-imper.cpp:1414]   --->   Operation 109 'dadd' 'tmp_3' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_15 : Operation 110 [3/4] (2.66ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 110 'load' 'A_load_3' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 15 <SV = 14> <Delay = 2.12>
+ST_15 : Operation 149 [13/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 149 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 16 <SV = 15> <Delay = 6.91>
-ST_16 : Operation 111 [2/5] (6.91ns)   --->   "%tmp_3 = fadd double %tmp_1, %A_load_2" [jacobi-2d-imper.cpp:1414]   --->   Operation 111 'dadd' 'tmp_3' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_16 : Operation 112 [2/4] (2.66ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 112 'load' 'A_load_3' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 16 <SV = 15> <Delay = 2.12>
+ST_16 : Operation 150 [12/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 150 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 17 <SV = 16> <Delay = 6.91>
-ST_17 : Operation 113 [1/5] (6.91ns)   --->   "%tmp_3 = fadd double %tmp_1, %A_load_2" [jacobi-2d-imper.cpp:1414]   --->   Operation 113 'dadd' 'tmp_3' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_17 : Operation 114 [1/4] (2.66ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 114 'load' 'A_load_3' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 17 <SV = 16> <Delay = 2.12>
+ST_17 : Operation 151 [11/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 151 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 18 <SV = 17> <Delay = 6.91>
-ST_18 : Operation 115 [5/5] (6.91ns)   --->   "%tmp_10 = fadd double %tmp_3, %A_load_3" [jacobi-2d-imper.cpp:1414]   --->   Operation 115 'dadd' 'tmp_10' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 18 <SV = 17> <Delay = 2.12>
+ST_18 : Operation 152 [10/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 152 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 19 <SV = 18> <Delay = 6.91>
-ST_19 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_20_cast = zext i20 %tmp_12 to i64" [jacobi-2d-imper.cpp:1414]   --->   Operation 116 'zext' 'tmp_20_cast' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 117 [1/1] (0.00ns)   --->   "%A_addr_4 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_20_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 117 'getelementptr' 'A_addr_4' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 118 [4/5] (6.91ns)   --->   "%tmp_10 = fadd double %tmp_3, %A_load_3" [jacobi-2d-imper.cpp:1414]   --->   Operation 118 'dadd' 'tmp_10' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_19 : Operation 119 [4/4] (2.66ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 119 'load' 'A_load_4' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 19 <SV = 18> <Delay = 2.12>
+ST_19 : Operation 153 [9/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 153 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 20 <SV = 19> <Delay = 6.91>
-ST_20 : Operation 120 [3/5] (6.91ns)   --->   "%tmp_10 = fadd double %tmp_3, %A_load_3" [jacobi-2d-imper.cpp:1414]   --->   Operation 120 'dadd' 'tmp_10' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 121 [3/4] (2.66ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 121 'load' 'A_load_4' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 20 <SV = 19> <Delay = 2.12>
+ST_20 : Operation 154 [8/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 154 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 21 <SV = 20> <Delay = 6.91>
-ST_21 : Operation 122 [2/5] (6.91ns)   --->   "%tmp_10 = fadd double %tmp_3, %A_load_3" [jacobi-2d-imper.cpp:1414]   --->   Operation 122 'dadd' 'tmp_10' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_21 : Operation 123 [2/4] (2.66ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 123 'load' 'A_load_4' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 21 <SV = 20> <Delay = 2.12>
+ST_21 : Operation 155 [7/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 155 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 22 <SV = 21> <Delay = 6.91>
-ST_22 : Operation 124 [1/5] (6.91ns)   --->   "%tmp_10 = fadd double %tmp_3, %A_load_3" [jacobi-2d-imper.cpp:1414]   --->   Operation 124 'dadd' 'tmp_10' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-ST_22 : Operation 125 [1/4] (2.66ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 125 'load' 'A_load_4' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 22 <SV = 21> <Delay = 2.12>
+ST_22 : Operation 156 [6/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 156 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 23 <SV = 22> <Delay = 6.91>
-ST_23 : Operation 126 [5/5] (6.91ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:1414]   --->   Operation 126 'dadd' 'tmp_11' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 23 <SV = 22> <Delay = 2.12>
+ST_23 : Operation 157 [5/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 157 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 24 <SV = 23> <Delay = 6.91>
-ST_24 : Operation 127 [4/5] (6.91ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:1414]   --->   Operation 127 'dadd' 'tmp_11' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 24 <SV = 23> <Delay = 2.12>
+ST_24 : Operation 158 [4/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 158 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 159 [1/1] (0.00ns)   --->   "%tmp_22_cast = zext i20 %tmp_15 to i64" [jacobi-2d-imper.cpp:257]   --->   Operation 159 'zext' 'tmp_22_cast' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 160 [1/1] (0.00ns)   --->   "%A_addr_2 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_22_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 160 'getelementptr' 'A_addr_2' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 161 [4/4] (1.33ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 161 'load' 'A_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
 
-State 25 <SV = 24> <Delay = 6.91>
-ST_25 : Operation 128 [3/5] (6.91ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:1414]   --->   Operation 128 'dadd' 'tmp_11' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 25 <SV = 24> <Delay = 2.12>
+ST_25 : Operation 162 [3/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 162 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 163 [3/4] (1.33ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 163 'load' 'A_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
 
-State 26 <SV = 25> <Delay = 6.91>
-ST_26 : Operation 129 [2/5] (6.91ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:1414]   --->   Operation 129 'dadd' 'tmp_11' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 26 <SV = 25> <Delay = 2.12>
+ST_26 : Operation 164 [2/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 164 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 165 [2/4] (1.33ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 165 'load' 'A_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
 
-State 27 <SV = 26> <Delay = 6.91>
-ST_27 : Operation 130 [1/5] (6.91ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:1414]   --->   Operation 130 'dadd' 'tmp_11' <Predicate = true> <Delay = 6.91> <Core = "DAddSub">   --->   Core 109 'DAddSub' <Latency = 4> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+State 27 <SV = 26> <Delay = 2.12>
+ST_27 : Operation 166 [1/14] (2.12ns)   --->   "%tmp_9 = fadd double %A_load, %A_load_1" [jacobi-2d-imper.cpp:257]   --->   Operation 166 'dadd' 'tmp_9' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 167 [1/4] (1.33ns)   --->   "%A_load_2 = load double* %A_addr_2, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 167 'load' 'A_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
 
-State 28 <SV = 27> <Delay = 2.66>
-ST_28 : Operation 131 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [1000000 x double]* %B, i64 0, i64 %tmp_18_cast" [jacobi-2d-imper.cpp:1414]   --->   Operation 131 'getelementptr' 'B_addr' <Predicate = true> <Delay = 0.00>
-ST_28 : Operation 132 [2/2] (2.66ns)   --->   "store double %tmp_11, double* %B_addr, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 132 'store' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 28 <SV = 27> <Delay = 2.12>
+ST_28 : Operation 168 [14/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 168 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 29 <SV = 28> <Delay = 2.66>
-ST_29 : Operation 133 [1/2] (2.66ns)   --->   "store double %tmp_11, double* %B_addr, align 8" [jacobi-2d-imper.cpp:1414]   --->   Operation 133 'store' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_29 : Operation 134 [1/1] (0.00ns)   --->   "br label %.preheader6" [jacobi-2d-imper.cpp:1413]   --->   Operation 134 'br' <Predicate = true> <Delay = 0.00>
+State 29 <SV = 28> <Delay = 2.12>
+ST_29 : Operation 169 [13/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 169 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 30 <SV = 3> <Delay = 5.79>
-ST_30 : Operation 135 [1/1] (0.00ns)   --->   "%i_1 = phi i10 [ %i_3, %3 ], [ 1, %.preheader5.preheader ]"   --->   Operation 135 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
-ST_30 : Operation 136 [1/1] (1.29ns)   --->   "%exitcond1 = icmp eq i10 %i_1, -25" [jacobi-2d-imper.cpp:1415]   --->   Operation 136 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_30 : Operation 137 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 137 'speclooptripcount' 'empty_17' <Predicate = true> <Delay = 0.00>
-ST_30 : Operation 138 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader.preheader" [jacobi-2d-imper.cpp:1415]   --->   Operation 138 'br' <Predicate = true> <Delay = 0.00>
-ST_30 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_6_cast = zext i10 %i_1 to i20" [jacobi-2d-imper.cpp:1417]   --->   Operation 139 'zext' 'tmp_6_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
-ST_30 : Operation 140 [1/1] (5.79ns)   --->   "%tmp_6 = mul i20 %tmp_6_cast, 1000" [jacobi-2d-imper.cpp:1417]   --->   Operation 140 'mul' 'tmp_6' <Predicate = (!exitcond1)> <Delay = 5.79> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 5.79> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_30 : Operation 141 [1/1] (1.06ns)   --->   "br label %.preheader" [jacobi-2d-imper.cpp:1416]   --->   Operation 141 'br' <Predicate = (!exitcond1)> <Delay = 1.06>
-ST_30 : Operation 142 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 142 'br' <Predicate = (exitcond1)> <Delay = 0.00>
+State 30 <SV = 29> <Delay = 2.12>
+ST_30 : Operation 170 [12/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 170 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 31 <SV = 4> <Delay = 4.22>
-ST_31 : Operation 143 [1/1] (0.00ns)   --->   "%j_1 = phi i10 [ %j_3, %2 ], [ 1, %.preheader.preheader ]"   --->   Operation 143 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
-ST_31 : Operation 144 [1/1] (1.29ns)   --->   "%exitcond = icmp eq i10 %j_1, -25" [jacobi-2d-imper.cpp:1416]   --->   Operation 144 'icmp' 'exitcond' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_31 : Operation 145 [1/1] (0.00ns)   --->   "%empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 145 'speclooptripcount' 'empty_18' <Predicate = true> <Delay = 0.00>
-ST_31 : Operation 146 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %3, label %2" [jacobi-2d-imper.cpp:1416]   --->   Operation 146 'br' <Predicate = true> <Delay = 0.00>
-ST_31 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_12_cast = zext i10 %j_1 to i20" [jacobi-2d-imper.cpp:1417]   --->   Operation 147 'zext' 'tmp_12_cast' <Predicate = (!exitcond)> <Delay = 0.00>
-ST_31 : Operation 148 [1/1] (1.56ns)   --->   "%tmp_16 = add i20 %tmp_6, %tmp_12_cast" [jacobi-2d-imper.cpp:1417]   --->   Operation 148 'add' 'tmp_16' <Predicate = (!exitcond)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_31 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_23_cast = zext i20 %tmp_16 to i64" [jacobi-2d-imper.cpp:1417]   --->   Operation 149 'zext' 'tmp_23_cast' <Predicate = (!exitcond)> <Delay = 0.00>
-ST_31 : Operation 150 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr [1000000 x double]* %B, i64 0, i64 %tmp_23_cast" [jacobi-2d-imper.cpp:1417]   --->   Operation 150 'getelementptr' 'B_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
-ST_31 : Operation 151 [4/4] (2.66ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:1417]   --->   Operation 151 'load' 'B_load' <Predicate = (!exitcond)> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_31 : Operation 152 [1/1] (1.41ns)   --->   "%j_3 = add i10 %j_1, 1" [jacobi-2d-imper.cpp:1416]   --->   Operation 152 'add' 'j_3' <Predicate = (!exitcond)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_31 : Operation 153 [1/1] (1.41ns)   --->   "%i_3 = add i10 %i_1, 1" [jacobi-2d-imper.cpp:1415]   --->   Operation 153 'add' 'i_3' <Predicate = (exitcond)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_31 : Operation 154 [1/1] (0.00ns)   --->   "br label %.preheader5" [jacobi-2d-imper.cpp:1415]   --->   Operation 154 'br' <Predicate = (exitcond)> <Delay = 0.00>
+State 31 <SV = 30> <Delay = 2.12>
+ST_31 : Operation 171 [11/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 171 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 32 <SV = 5> <Delay = 2.66>
-ST_32 : Operation 155 [3/4] (2.66ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:1417]   --->   Operation 155 'load' 'B_load' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 32 <SV = 31> <Delay = 2.12>
+ST_32 : Operation 172 [10/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 172 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 33 <SV = 6> <Delay = 2.66>
-ST_33 : Operation 156 [2/4] (2.66ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:1417]   --->   Operation 156 'load' 'B_load' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 33 <SV = 32> <Delay = 2.12>
+ST_33 : Operation 173 [9/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 173 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 34 <SV = 7> <Delay = 2.66>
-ST_34 : Operation 157 [1/4] (2.66ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:1417]   --->   Operation 157 'load' 'B_load' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 34 <SV = 33> <Delay = 2.12>
+ST_34 : Operation 174 [8/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 174 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 35 <SV = 8> <Delay = 8.75>
-ST_35 : Operation 158 [2/2] (8.75ns)   --->   "%tmp_13 = call fastcc double @operator_double_div5(double %B_load)" [jacobi-2d-imper.cpp:1417]   --->   Operation 158 'call' 'tmp_13' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 35 <SV = 34> <Delay = 2.12>
+ST_35 : Operation 175 [7/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 175 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 36 <SV = 9> <Delay = 39.7>
-ST_36 : Operation 159 [1/2] (39.7ns)   --->   "%tmp_13 = call fastcc double @operator_double_div5(double %B_load)" [jacobi-2d-imper.cpp:1417]   --->   Operation 159 'call' 'tmp_13' <Predicate = true> <Delay = 39.7> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 36 <SV = 35> <Delay = 2.12>
+ST_36 : Operation 176 [6/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 176 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 37 <SV = 10> <Delay = 2.66>
-ST_37 : Operation 160 [1/1] (0.00ns)   --->   "%A_addr_5 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_23_cast" [jacobi-2d-imper.cpp:1417]   --->   Operation 160 'getelementptr' 'A_addr_5' <Predicate = true> <Delay = 0.00>
-ST_37 : Operation 161 [2/2] (2.66ns)   --->   "store double %tmp_13, double* %A_addr_5, align 8" [jacobi-2d-imper.cpp:1417]   --->   Operation 161 'store' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+State 37 <SV = 36> <Delay = 2.12>
+ST_37 : Operation 177 [5/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 177 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 38 <SV = 11> <Delay = 2.66>
-ST_38 : Operation 162 [1/2] (2.66ns)   --->   "store double %tmp_13, double* %A_addr_5, align 8" [jacobi-2d-imper.cpp:1417]   --->   Operation 162 'store' <Predicate = true> <Delay = 2.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
-ST_38 : Operation 163 [1/1] (0.00ns)   --->   "br label %.preheader" [jacobi-2d-imper.cpp:1416]   --->   Operation 163 'br' <Predicate = true> <Delay = 0.00>
+State 38 <SV = 37> <Delay = 2.12>
+ST_38 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_19_cast = zext i20 %tmp_8 to i64" [jacobi-2d-imper.cpp:257]   --->   Operation 178 'zext' 'tmp_19_cast' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 179 [1/1] (0.00ns)   --->   "%A_addr_3 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_19_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 179 'getelementptr' 'A_addr_3' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 180 [4/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 180 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 181 [4/4] (1.33ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 181 'load' 'A_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 39 <SV = 38> <Delay = 2.12>
+ST_39 : Operation 182 [3/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 182 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 183 [3/4] (1.33ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 183 'load' 'A_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 40 <SV = 39> <Delay = 2.12>
+ST_40 : Operation 184 [2/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 184 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 185 [2/4] (1.33ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 185 'load' 'A_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 41 <SV = 40> <Delay = 2.12>
+ST_41 : Operation 186 [1/14] (2.12ns)   --->   "%tmp_2 = fadd double %tmp_9, %A_load_2" [jacobi-2d-imper.cpp:257]   --->   Operation 186 'dadd' 'tmp_2' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 187 [1/4] (1.33ns)   --->   "%A_load_3 = load double* %A_addr_3, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 187 'load' 'A_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 42 <SV = 41> <Delay = 2.12>
+ST_42 : Operation 188 [14/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 188 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 2.12>
+ST_43 : Operation 189 [13/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 189 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 2.12>
+ST_44 : Operation 190 [12/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 190 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 2.12>
+ST_45 : Operation 191 [11/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 191 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 2.12>
+ST_46 : Operation 192 [10/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 192 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 2.12>
+ST_47 : Operation 193 [9/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 193 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 2.12>
+ST_48 : Operation 194 [8/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 194 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 2.12>
+ST_49 : Operation 195 [7/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 195 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 2.12>
+ST_50 : Operation 196 [6/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 196 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 2.12>
+ST_51 : Operation 197 [5/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 197 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 2.12>
+ST_52 : Operation 198 [1/1] (0.00ns)   --->   "%tmp_20_cast = zext i20 %tmp_12 to i64" [jacobi-2d-imper.cpp:257]   --->   Operation 198 'zext' 'tmp_20_cast' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 199 [1/1] (0.00ns)   --->   "%A_addr_4 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_20_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 199 'getelementptr' 'A_addr_4' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 200 [4/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 200 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 201 [4/4] (1.33ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 201 'load' 'A_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 53 <SV = 52> <Delay = 2.12>
+ST_53 : Operation 202 [3/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 202 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 203 [3/4] (1.33ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 203 'load' 'A_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 54 <SV = 53> <Delay = 2.12>
+ST_54 : Operation 204 [2/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 204 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 205 [2/4] (1.33ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 205 'load' 'A_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 55 <SV = 54> <Delay = 2.12>
+ST_55 : Operation 206 [1/14] (2.12ns)   --->   "%tmp_10 = fadd double %tmp_2, %A_load_3" [jacobi-2d-imper.cpp:257]   --->   Operation 206 'dadd' 'tmp_10' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 207 [1/4] (1.33ns)   --->   "%A_load_4 = load double* %A_addr_4, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 207 'load' 'A_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 56 <SV = 55> <Delay = 2.12>
+ST_56 : Operation 208 [14/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 208 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 2.12>
+ST_57 : Operation 209 [13/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 209 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 2.12>
+ST_58 : Operation 210 [12/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 210 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 2.12>
+ST_59 : Operation 211 [11/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 211 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 2.12>
+ST_60 : Operation 212 [10/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 212 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 2.12>
+ST_61 : Operation 213 [9/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 213 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 2.12>
+ST_62 : Operation 214 [8/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 214 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 62> <Delay = 2.12>
+ST_63 : Operation 215 [7/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 215 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 63> <Delay = 2.12>
+ST_64 : Operation 216 [6/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 216 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 64> <Delay = 2.12>
+ST_65 : Operation 217 [5/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 217 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 65> <Delay = 2.12>
+ST_66 : Operation 218 [4/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 218 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 66> <Delay = 2.12>
+ST_67 : Operation 219 [3/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 219 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 67> <Delay = 2.12>
+ST_68 : Operation 220 [2/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 220 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 68> <Delay = 2.12>
+ST_69 : Operation 221 [1/14] (2.12ns)   --->   "%tmp_11 = fadd double %tmp_10, %A_load_4" [jacobi-2d-imper.cpp:257]   --->   Operation 221 'dadd' 'tmp_11' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 69> <Delay = 1.33>
+ST_70 : Operation 222 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [1000000 x double]* %B, i64 0, i64 %tmp_18_cast" [jacobi-2d-imper.cpp:257]   --->   Operation 222 'getelementptr' 'B_addr' <Predicate = true> <Delay = 0.00>
+ST_70 : Operation 223 [2/2] (1.33ns)   --->   "store double %tmp_11, double* %B_addr, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 223 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 71 <SV = 70> <Delay = 1.33>
+ST_71 : Operation 224 [1/2] (1.33ns)   --->   "store double %tmp_11, double* %B_addr, align 8" [jacobi-2d-imper.cpp:257]   --->   Operation 224 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_71 : Operation 225 [1/1] (0.00ns)   --->   "br label %.preheader6" [jacobi-2d-imper.cpp:256]   --->   Operation 225 'br' <Predicate = true> <Delay = 0.00>
+
+State 72 <SV = 3> <Delay = 1.82>
+ST_72 : Operation 226 [1/1] (0.00ns)   --->   "%i_1 = phi i10 [ %i_3, %3 ], [ 1, %.preheader5.preheader ]"   --->   Operation 226 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 227 [1/1] (1.29ns)   --->   "%exitcond1 = icmp eq i10 %i_1, -25" [jacobi-2d-imper.cpp:258]   --->   Operation 227 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 228 [1/1] (0.00ns)   --->   "%empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 228 'speclooptripcount' 'empty_13' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 229 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader.preheader" [jacobi-2d-imper.cpp:258]   --->   Operation 229 'br' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 230 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i10 %i_1 to i20" [jacobi-2d-imper.cpp:260]   --->   Operation 230 'zext' 'tmp_5_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_72 : Operation 231 [4/4] (1.82ns)   --->   "%tmp_5 = mul i20 %tmp_5_cast, 1000" [jacobi-2d-imper.cpp:260]   --->   Operation 231 'mul' 'tmp_5' <Predicate = (!exitcond1)> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_72 : Operation 232 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 232 'br' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 73 <SV = 4> <Delay = 1.82>
+ST_73 : Operation 233 [3/4] (1.82ns)   --->   "%tmp_5 = mul i20 %tmp_5_cast, 1000" [jacobi-2d-imper.cpp:260]   --->   Operation 233 'mul' 'tmp_5' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 74 <SV = 5> <Delay = 1.82>
+ST_74 : Operation 234 [2/4] (1.82ns)   --->   "%tmp_5 = mul i20 %tmp_5_cast, 1000" [jacobi-2d-imper.cpp:260]   --->   Operation 234 'mul' 'tmp_5' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 75 <SV = 6> <Delay = 1.06>
+ST_75 : Operation 235 [1/4] (0.00ns)   --->   "%tmp_5 = mul i20 %tmp_5_cast, 1000" [jacobi-2d-imper.cpp:260]   --->   Operation 235 'mul' 'tmp_5' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_75 : Operation 236 [1/1] (1.06ns)   --->   "br label %.preheader" [jacobi-2d-imper.cpp:259]   --->   Operation 236 'br' <Predicate = true> <Delay = 1.06>
+
+State 76 <SV = 7> <Delay = 1.56>
+ST_76 : Operation 237 [1/1] (0.00ns)   --->   "%j_1 = phi i10 [ %j_3, %2 ], [ 1, %.preheader.preheader ]"   --->   Operation 237 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 238 [1/1] (1.29ns)   --->   "%exitcond = icmp eq i10 %j_1, -25" [jacobi-2d-imper.cpp:259]   --->   Operation 238 'icmp' 'exitcond' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 239 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 998, i64 998, i64 998) nounwind"   --->   Operation 239 'speclooptripcount' 'empty_14' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 240 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %3, label %2" [jacobi-2d-imper.cpp:259]   --->   Operation 240 'br' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 241 [1/1] (0.00ns)   --->   "%tmp_12_cast = zext i10 %j_1 to i20" [jacobi-2d-imper.cpp:260]   --->   Operation 241 'zext' 'tmp_12_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_76 : Operation 242 [1/1] (1.56ns)   --->   "%tmp_16 = add i20 %tmp_5, %tmp_12_cast" [jacobi-2d-imper.cpp:260]   --->   Operation 242 'add' 'tmp_16' <Predicate = (!exitcond)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 243 [1/1] (1.41ns)   --->   "%j_3 = add i10 %j_1, 1" [jacobi-2d-imper.cpp:259]   --->   Operation 243 'add' 'j_3' <Predicate = (!exitcond)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 244 [1/1] (1.41ns)   --->   "%i_3 = add i10 %i_1, 1" [jacobi-2d-imper.cpp:258]   --->   Operation 244 'add' 'i_3' <Predicate = (exitcond)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 245 [1/1] (0.00ns)   --->   "br label %.preheader5" [jacobi-2d-imper.cpp:258]   --->   Operation 245 'br' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 77 <SV = 8> <Delay = 1.33>
+ST_77 : Operation 246 [1/1] (0.00ns)   --->   "%tmp_23_cast = zext i20 %tmp_16 to i64" [jacobi-2d-imper.cpp:260]   --->   Operation 246 'zext' 'tmp_23_cast' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 247 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr [1000000 x double]* %B, i64 0, i64 %tmp_23_cast" [jacobi-2d-imper.cpp:260]   --->   Operation 247 'getelementptr' 'B_addr_1' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 248 [4/4] (1.33ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:260]   --->   Operation 248 'load' 'B_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 78 <SV = 9> <Delay = 1.33>
+ST_78 : Operation 249 [3/4] (1.33ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:260]   --->   Operation 249 'load' 'B_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 79 <SV = 10> <Delay = 1.33>
+ST_79 : Operation 250 [2/4] (1.33ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:260]   --->   Operation 250 'load' 'B_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 80 <SV = 11> <Delay = 1.33>
+ST_80 : Operation 251 [1/4] (1.33ns)   --->   "%B_load = load double* %B_addr_1, align 8" [jacobi-2d-imper.cpp:260]   --->   Operation 251 'load' 'B_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 81 <SV = 12> <Delay = 1.29>
+ST_81 : Operation 252 [2/2] (1.29ns)   --->   "%tmp_13 = call fastcc double @operator_double_div5(double %B_load)" [jacobi-2d-imper.cpp:260]   --->   Operation 252 'call' 'tmp_13' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 82 <SV = 13> <Delay = 2.03>
+ST_82 : Operation 253 [1/2] (2.03ns)   --->   "%tmp_13 = call fastcc double @operator_double_div5(double %B_load)" [jacobi-2d-imper.cpp:260]   --->   Operation 253 'call' 'tmp_13' <Predicate = true> <Delay = 2.03> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 83 <SV = 14> <Delay = 1.33>
+ST_83 : Operation 254 [1/1] (0.00ns)   --->   "%A_addr_5 = getelementptr [1000000 x double]* %A, i64 0, i64 %tmp_23_cast" [jacobi-2d-imper.cpp:260]   --->   Operation 254 'getelementptr' 'A_addr_5' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 255 [2/2] (1.33ns)   --->   "store double %tmp_13, double* %A_addr_5, align 8" [jacobi-2d-imper.cpp:260]   --->   Operation 255 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 84 <SV = 15> <Delay = 1.33>
+ST_84 : Operation 256 [1/2] (1.33ns)   --->   "store double %tmp_13, double* %A_addr_5, align 8" [jacobi-2d-imper.cpp:260]   --->   Operation 256 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_84 : Operation 257 [1/1] (0.00ns)   --->   "br label %.preheader" [jacobi-2d-imper.cpp:259]   --->   Operation 257 'br' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 10ns, clock uncertainty: 1.25ns.
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
 
  <State 1>: 1.06ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation ('t') with incoming values : ('t', jacobi-2d-imper.cpp:1410) [12]  (1.06 ns)
+	multiplexor before 'phi' operation ('t') with incoming values : ('t', jacobi-2d-imper.cpp:253) [18]  (1.06 ns)
 
  <State 2>: 1.34ns
 The critical path consists of the following:
-	'phi' operation ('t') with incoming values : ('t', jacobi-2d-imper.cpp:1410) [12]  (0 ns)
-	'add' operation ('t', jacobi-2d-imper.cpp:1410) [15]  (1.34 ns)
+	'phi' operation ('t') with incoming values : ('t', jacobi-2d-imper.cpp:253) [18]  (0 ns)
+	'add' operation ('t', jacobi-2d-imper.cpp:253) [21]  (1.34 ns)
 
- <State 3>: 7.21ns
+ <State 3>: 1.42ns
 The critical path consists of the following:
-	'phi' operation ('i') with incoming values : ('i', jacobi-2d-imper.cpp:1414) [20]  (0 ns)
-	'add' operation ('i', jacobi-2d-imper.cpp:1414) [27]  (1.42 ns)
-	'mul' operation ('tmp_2', jacobi-2d-imper.cpp:1414) [29]  (5.79 ns)
+	'phi' operation ('i') with incoming values : ('i', jacobi-2d-imper.cpp:257) [26]  (0 ns)
+	'add' operation ('i', jacobi-2d-imper.cpp:257) [33]  (1.42 ns)
 
- <State 4>: 5.64ns
+ <State 4>: 1.82ns
 The critical path consists of the following:
-	'phi' operation ('j') with incoming values : ('j', jacobi-2d-imper.cpp:1414) [35]  (0 ns)
-	'add' operation ('tmp_8', jacobi-2d-imper.cpp:1414) [52]  (1.42 ns)
-	'add' operation ('tmp_14', jacobi-2d-imper.cpp:1414) [54]  (1.56 ns)
-	'getelementptr' operation ('A_addr_1', jacobi-2d-imper.cpp:1414) [56]  (0 ns)
-	'load' operation ('A_load_1', jacobi-2d-imper.cpp:1414) on array 'A' [57]  (2.66 ns)
+	'mul' operation ('tmp_s', jacobi-2d-imper.cpp:257) [32]  (1.82 ns)
 
- <State 5>: 2.66ns
+ <State 5>: 1.82ns
 The critical path consists of the following:
-	'load' operation ('A_load', jacobi-2d-imper.cpp:1414) on array 'A' [51]  (2.66 ns)
+	'mul' operation ('tmp_s', jacobi-2d-imper.cpp:257) [32]  (1.82 ns)
 
- <State 6>: 2.66ns
+ <State 6>: 1.82ns
 The critical path consists of the following:
-	'load' operation ('A_load', jacobi-2d-imper.cpp:1414) on array 'A' [51]  (2.66 ns)
+	'mul' operation ('tmp_s', jacobi-2d-imper.cpp:257) [32]  (1.82 ns)
 
- <State 7>: 2.66ns
+ <State 7>: 1.06ns
 The critical path consists of the following:
-	'load' operation ('A_load', jacobi-2d-imper.cpp:1414) on array 'A' [51]  (2.66 ns)
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', jacobi-2d-imper.cpp:257) [41]  (1.06 ns)
 
- <State 8>: 6.92ns
+ <State 8>: 1.42ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_1', jacobi-2d-imper.cpp:1414) [58]  (6.92 ns)
+	'phi' operation ('j') with incoming values : ('j', jacobi-2d-imper.cpp:257) [41]  (0 ns)
+	'add' operation ('tmp_7', jacobi-2d-imper.cpp:257) [58]  (1.42 ns)
 
- <State 9>: 6.92ns
+ <State 9>: 1.56ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_1', jacobi-2d-imper.cpp:1414) [58]  (6.92 ns)
+	'add' operation ('tmp_6', jacobi-2d-imper.cpp:257) [47]  (1.56 ns)
 
- <State 10>: 6.92ns
+ <State 10>: 1.56ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_1', jacobi-2d-imper.cpp:1414) [58]  (6.92 ns)
+	'add' operation ('tmp_15', jacobi-2d-imper.cpp:257) [67]  (1.56 ns)
 
- <State 11>: 6.92ns
+ <State 11>: 1.33ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_1', jacobi-2d-imper.cpp:1414) [58]  (6.92 ns)
+	'load' operation ('A_load', jacobi-2d-imper.cpp:257) on array 'A' [57]  (1.33 ns)
 
- <State 12>: 6.92ns
+ <State 12>: 1.33ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_1', jacobi-2d-imper.cpp:1414) [58]  (6.92 ns)
+	'load' operation ('A_load', jacobi-2d-imper.cpp:257) on array 'A' [57]  (1.33 ns)
 
- <State 13>: 6.92ns
+ <State 13>: 1.33ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_3', jacobi-2d-imper.cpp:1414) [65]  (6.92 ns)
+	'load' operation ('A_load', jacobi-2d-imper.cpp:257) on array 'A' [57]  (1.33 ns)
 
- <State 14>: 6.92ns
+ <State 14>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_3', jacobi-2d-imper.cpp:1414) [65]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 15>: 6.92ns
+ <State 15>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_3', jacobi-2d-imper.cpp:1414) [65]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 16>: 6.92ns
+ <State 16>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_3', jacobi-2d-imper.cpp:1414) [65]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 17>: 6.92ns
+ <State 17>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_3', jacobi-2d-imper.cpp:1414) [65]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 18>: 6.92ns
+ <State 18>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:1414) [67]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 19>: 6.92ns
+ <State 19>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:1414) [67]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 20>: 6.92ns
+ <State 20>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:1414) [67]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 21>: 6.92ns
+ <State 21>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:1414) [67]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 22>: 6.92ns
+ <State 22>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:1414) [67]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 23>: 6.92ns
+ <State 23>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:1414) [69]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 24>: 6.92ns
+ <State 24>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:1414) [69]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 25>: 6.92ns
+ <State 25>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:1414) [69]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 26>: 6.92ns
+ <State 26>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:1414) [69]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 27>: 6.92ns
+ <State 27>: 2.12ns
 The critical path consists of the following:
-	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:1414) [69]  (6.92 ns)
+	'dadd' operation ('tmp_9', jacobi-2d-imper.cpp:257) [64]  (2.12 ns)
 
- <State 28>: 2.66ns
+ <State 28>: 2.12ns
 The critical path consists of the following:
-	'getelementptr' operation ('B_addr', jacobi-2d-imper.cpp:1414) [50]  (0 ns)
-	'store' operation (jacobi-2d-imper.cpp:1414) of variable 'tmp_11', jacobi-2d-imper.cpp:1414 on array 'B' [70]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 29>: 2.66ns
+ <State 29>: 2.12ns
 The critical path consists of the following:
-	'store' operation (jacobi-2d-imper.cpp:1414) of variable 'tmp_11', jacobi-2d-imper.cpp:1414 on array 'B' [70]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 30>: 5.79ns
+ <State 30>: 2.12ns
 The critical path consists of the following:
-	'phi' operation ('i') with incoming values : ('i', jacobi-2d-imper.cpp:1415) [77]  (0 ns)
-	'mul' operation ('tmp_6', jacobi-2d-imper.cpp:1417) [83]  (5.79 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 31>: 4.23ns
+ <State 31>: 2.12ns
 The critical path consists of the following:
-	'phi' operation ('j') with incoming values : ('j', jacobi-2d-imper.cpp:1416) [86]  (0 ns)
-	'add' operation ('tmp_16', jacobi-2d-imper.cpp:1417) [92]  (1.56 ns)
-	'getelementptr' operation ('B_addr_1', jacobi-2d-imper.cpp:1417) [95]  (0 ns)
-	'load' operation ('B_load', jacobi-2d-imper.cpp:1417) on array 'B' [96]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 32>: 2.66ns
+ <State 32>: 2.12ns
 The critical path consists of the following:
-	'load' operation ('B_load', jacobi-2d-imper.cpp:1417) on array 'B' [96]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 33>: 2.66ns
+ <State 33>: 2.12ns
 The critical path consists of the following:
-	'load' operation ('B_load', jacobi-2d-imper.cpp:1417) on array 'B' [96]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 34>: 2.66ns
+ <State 34>: 2.12ns
 The critical path consists of the following:
-	'load' operation ('B_load', jacobi-2d-imper.cpp:1417) on array 'B' [96]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 35>: 8.75ns
+ <State 35>: 2.12ns
 The critical path consists of the following:
-	'call' operation ('tmp_13', jacobi-2d-imper.cpp:1417) to 'operator_double_div5' [97]  (8.75 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 36>: 39.7ns
+ <State 36>: 2.12ns
 The critical path consists of the following:
-	'call' operation ('tmp_13', jacobi-2d-imper.cpp:1417) to 'operator_double_div5' [97]  (39.7 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 37>: 2.66ns
+ <State 37>: 2.12ns
 The critical path consists of the following:
-	'getelementptr' operation ('A_addr_5', jacobi-2d-imper.cpp:1417) [94]  (0 ns)
-	'store' operation (jacobi-2d-imper.cpp:1417) of variable 'tmp_13', jacobi-2d-imper.cpp:1417 on array 'A' [98]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
 
- <State 38>: 2.66ns
+ <State 38>: 2.12ns
 The critical path consists of the following:
-	'store' operation (jacobi-2d-imper.cpp:1417) of variable 'tmp_13', jacobi-2d-imper.cpp:1417 on array 'A' [98]  (2.66 ns)
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
+
+ <State 39>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
+
+ <State 40>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
+
+ <State 41>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_2', jacobi-2d-imper.cpp:257) [71]  (2.12 ns)
+
+ <State 42>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 43>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 44>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 45>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 46>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 47>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 48>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 49>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 50>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 51>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 52>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 53>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 54>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 55>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_10', jacobi-2d-imper.cpp:257) [73]  (2.12 ns)
+
+ <State 56>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 57>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 58>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 59>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 60>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 61>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 62>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 63>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 64>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 65>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 66>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 67>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 68>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 69>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_11', jacobi-2d-imper.cpp:257) [75]  (2.12 ns)
+
+ <State 70>: 1.33ns
+The critical path consists of the following:
+	'getelementptr' operation ('B_addr', jacobi-2d-imper.cpp:257) [56]  (0 ns)
+	'store' operation (jacobi-2d-imper.cpp:257) of variable 'tmp_11', jacobi-2d-imper.cpp:257 on array 'B' [76]  (1.33 ns)
+
+ <State 71>: 1.33ns
+The critical path consists of the following:
+	'store' operation (jacobi-2d-imper.cpp:257) of variable 'tmp_11', jacobi-2d-imper.cpp:257 on array 'B' [76]  (1.33 ns)
+
+ <State 72>: 1.82ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', jacobi-2d-imper.cpp:258) [83]  (0 ns)
+	'mul' operation ('tmp_5', jacobi-2d-imper.cpp:260) [89]  (1.82 ns)
+
+ <State 73>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5', jacobi-2d-imper.cpp:260) [89]  (1.82 ns)
+
+ <State 74>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5', jacobi-2d-imper.cpp:260) [89]  (1.82 ns)
+
+ <State 75>: 1.06ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', jacobi-2d-imper.cpp:259) [92]  (1.06 ns)
+
+ <State 76>: 1.56ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', jacobi-2d-imper.cpp:259) [92]  (0 ns)
+	'add' operation ('tmp_16', jacobi-2d-imper.cpp:260) [98]  (1.56 ns)
+
+ <State 77>: 1.33ns
+The critical path consists of the following:
+	'getelementptr' operation ('B_addr_1', jacobi-2d-imper.cpp:260) [101]  (0 ns)
+	'load' operation ('B_load', jacobi-2d-imper.cpp:260) on array 'B' [102]  (1.33 ns)
+
+ <State 78>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('B_load', jacobi-2d-imper.cpp:260) on array 'B' [102]  (1.33 ns)
+
+ <State 79>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('B_load', jacobi-2d-imper.cpp:260) on array 'B' [102]  (1.33 ns)
+
+ <State 80>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('B_load', jacobi-2d-imper.cpp:260) on array 'B' [102]  (1.33 ns)
+
+ <State 81>: 1.29ns
+The critical path consists of the following:
+	'call' operation ('tmp_13', jacobi-2d-imper.cpp:260) to 'operator_double_div5' [103]  (1.29 ns)
+
+ <State 82>: 2.04ns
+The critical path consists of the following:
+	'call' operation ('tmp_13', jacobi-2d-imper.cpp:260) to 'operator_double_div5' [103]  (2.04 ns)
+
+ <State 83>: 1.33ns
+The critical path consists of the following:
+	'getelementptr' operation ('A_addr_5', jacobi-2d-imper.cpp:260) [100]  (0 ns)
+	'store' operation (jacobi-2d-imper.cpp:260) of variable 'tmp_13', jacobi-2d-imper.cpp:260 on array 'A' [104]  (1.33 ns)
+
+ <State 84>: 1.33ns
+The critical path consists of the following:
+	'store' operation (jacobi-2d-imper.cpp:260) of variable 'tmp_13', jacobi-2d-imper.cpp:260 on array 'A' [104]  (1.33 ns)
 
 
 ============================================================
@@ -581,6 +992,52 @@ N/A
 	State 36
 	State 37
 	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
 
 
 ============================================================

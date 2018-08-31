@@ -1,0 +1,1015 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug 31 15:34:57 2018
+# Process ID: 18582
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log operator_double_div9.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_double_div9.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/project.runs/synth_1/operator_double_div9.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source operator_double_div9.tcl -notrace
+Command: synth_design -top operator_double_div9 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18591 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.355 ; gain = 80.895 ; free physical = 1641 ; free virtual = 9064
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'operator_double_div9' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:70]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:73]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:85]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:93]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:99]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:103]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:109]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:113]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:121]
+INFO: [Synth 8-3491] module 'int_57_div9' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:12' bound to instance 'grp_int_57_div9_fu_74' of component 'int_57_div9' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'int_57_div9' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:148]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:151]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:154]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:159]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:161]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:163]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:165]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:167]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:169]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:171]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:173]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:175]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:177]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:179]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:181]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:183]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:185]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:187]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:189]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:191]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:193]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:195]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:197]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:199]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:201]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:203]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:205]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:207]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:209]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:211]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:279]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:281]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:283]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:285]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:287]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:289]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:291]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:293]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:295]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:297]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:299]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:301]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:303]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:305]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:307]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:309]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:311]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:313]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:315]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:317]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:319]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:321]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:323]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:325]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:327]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:329]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:331]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:333]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:335]
+INFO: [Synth 8-3491] module 'lut_div9_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:12' bound to instance 'grp_lut_div9_chunk_fu_142' of component 'lut_div9_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:359]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:27]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:41]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:63]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:77' bound to instance 'r0_U' of component 'lut_div9_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:90]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:12' bound to instance 'lut_div9_chunk_r0_rom_U' of component 'lut_div9_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r0_rom' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r0' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r0.vhd:90]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:73' bound to instance 'r1_U' of component 'lut_div9_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:12' bound to instance 'lut_div9_chunk_r1_rom_U' of component 'lut_div9_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r1_rom' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r1' (4#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r1.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r2' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:71' bound to instance 'r2_U' of component 'lut_div9_chunk_r2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r2_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:12' bound to instance 'lut_div9_chunk_r2_rom_U' of component 'lut_div9_chunk_r2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r2_rom' (5#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r2' (6#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r2.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r3' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:71' bound to instance 'r3_U' of component 'lut_div9_chunk_r3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r3_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:12' bound to instance 'lut_div9_chunk_r3_rom_U' of component 'lut_div9_chunk_r3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r3_rom' (7#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r3' (8#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_r3.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:70' bound to instance 'q0_U' of component 'lut_div9_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:12' bound to instance 'lut_div9_chunk_q0_rom_U' of component 'lut_div9_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q0_rom' (9#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q0' (10#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q0.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:69' bound to instance 'q1_U' of component 'lut_div9_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:12' bound to instance 'lut_div9_chunk_q1_rom_U' of component 'lut_div9_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q1_rom' (11#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q1' (12#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk_q1.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk' (13#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/lut_div9_chunk.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'int_57_div9' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/int_57_div9.vhd:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+INFO: [Synth 8-3491] module 'operator_double_dbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_dbkb.vhd:13' bound to instance 'operator_double_dbkb_U10' of component 'operator_double_dbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:212]
+INFO: [Synth 8-638] synthesizing module 'operator_double_dbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_dbkb.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'operator_double_dbkb' (15#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_dbkb.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter din0_WIDTH bound to: 57 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 57 - type: integer 
+INFO: [Synth 8-3491] module 'operator_double_dcud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_dcud.vhd:13' bound to instance 'operator_double_dcud_U11' of component 'operator_double_dcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:228]
+INFO: [Synth 8-638] synthesizing module 'operator_double_dcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_dcud.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 57 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 57 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'operator_double_dcud' (16#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_dcud.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'operator_double_div9' (17#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.vhd:25]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[56]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[55]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[54]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[53]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[52]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[51]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[50]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[49]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[48]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[47]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[46]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[45]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[44]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[43]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[42]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[41]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[40]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[39]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[38]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[37]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[36]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[35]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[34]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[33]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[32]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[31]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[30]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[29]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[28]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[27]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[26]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[25]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[24]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[23]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[22]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[21]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[20]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[19]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[18]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[17]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[16]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[15]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[14]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[13]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[12]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[11]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[51]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[50]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[49]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[48]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[47]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[46]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[45]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[44]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[43]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[42]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[41]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[40]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[39]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[38]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[37]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[36]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[35]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[34]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[33]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[32]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[31]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[30]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[29]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[28]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[27]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[26]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[25]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[24]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[23]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[22]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[21]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[20]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[19]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[18]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[17]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[16]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[15]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[14]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[13]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[12]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[11]
+WARNING: [Synth 8-3331] design lut_div9_chunk_q1 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div9_chunk_q0 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div9_chunk_r3 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div9_chunk_r2 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div9_chunk_r1 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div9_chunk_r0 has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1312.980 ; gain = 127.520 ; free physical = 1650 ; free virtual = 9074
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1312.980 ; gain = 127.520 ; free physical = 1650 ; free virtual = 9073
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1312.980 ; gain = 127.520 ; free physical = 1650 ; free virtual = 9073
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/operator_double_div9.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1664.473 ; gain = 0.000 ; free physical = 1326 ; free virtual = 8747
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1664.473 ; gain = 479.012 ; free physical = 1415 ; free virtual = 8836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1664.473 ; gain = 479.012 ; free physical = 1415 ; free virtual = 8836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1664.473 ; gain = 479.012 ; free physical = 1417 ; free virtual = 8838
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "icmp4_fu_151_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "icmp_fu_127_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_2_fu_233_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_157_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1664.473 ; gain = 479.012 ; free physical = 1407 ; free virtual = 8828
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     57 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               58 Bit    Registers := 1     
+	               57 Bit    Registers := 10    
+	               52 Bit    Registers := 8     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 17    
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 58    
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 5     
+	   3 Input     57 Bit        Muxes := 1     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     51 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     45 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
+	  14 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module operator_double_div9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     57 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               57 Bit    Registers := 3     
+	               52 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 5     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   3 Input     57 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 2     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	  14 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module lut_div9_chunk_r0_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div9_chunk_r1_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div9_chunk_r2_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div9_chunk_r3_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div9_chunk_q0_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div9_chunk_q1_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div9_chunk 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+Module int_57_div9 
+Detailed RTL Component Info : 
++---Registers : 
+	               58 Bit    Registers := 1     
+	               57 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 56    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 3     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 1     
+	   2 Input     51 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     45 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module operator_double_dbkb 
+Detailed RTL Component Info : 
++---Registers : 
+	               52 Bit    Registers := 6     
+	               11 Bit    Registers := 6     
+Module operator_double_dcud 
+Detailed RTL Component Info : 
++---Registers : 
+	               57 Bit    Registers := 6     
+	               11 Bit    Registers := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5544] ROM "icmp_fu_127_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_2_fu_233_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp4_fu_151_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_fu_157_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[56]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[55]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[54]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[53]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[52]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[51]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[50]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][56]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][52]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_reg[0][1]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_reg[0][0]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][54]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][52]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][55]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][52]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][52]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][53]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operator_double_dcud_U11/dout_array_reg[0][53] )
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][50]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][50]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][51]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][51]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][48]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][48]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][49]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][49]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][46]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][46]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][47]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][47]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][44]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][44]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][45]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][45]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][42]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][42]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][43]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][43]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][40]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][40]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][41]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][41]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][38]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][38]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][39]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][39]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][36]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][36]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][37]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][37]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][34]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][34]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][35]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][35]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][32]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][32]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][33]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][33]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][30]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][31]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][28]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][29]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][29]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][26]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][26]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][27]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][27]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][24]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][25]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][25]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][22]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][23]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][20]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][21]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][18]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][19]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][16]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][17]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][14]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][15]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][12]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][13]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][10]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][11]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][8]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][9]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][6]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][7]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][4]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dcud_U11/dout_array_reg[0][5]' (FDRE) to 'operator_double_dbkb_U10/dout_array_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_reg[0][2]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][7]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][6]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][9]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][8]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][10]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_reg[0][3]' (FDRE) to 'operator_double_dcud_U11/dout_array_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][5]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][4]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][3]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][2]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][1]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/din1_cast_array_reg[0][0]' (FDRE) to 'operator_double_dcud_U11/din1_cast_array_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][7]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][6]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][9]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][8]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][5]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][4]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][3]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][2]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][1]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][0]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][7]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][6]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][5]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][4]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][3]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][2]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][1]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][0]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][5]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][5]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][4]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][3]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][2]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][1]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][0]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][3]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][2]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][1]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][0]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][1]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][0]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'shift_V_cast_cast_reg_356_reg[0]' (FDRE) to 'shift_V_cast_cast_reg_356_reg[1]'
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/q_chunk_V_1_reg_654_reg[1]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/q_chunk_V_1_reg_654_reg[0]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/q_chunk_V_reg_649_reg[1]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/q_chunk_V_reg_649_reg[0]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/tmp_11_reg_644_reg[0]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/ap_return_preg_reg[56]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/ap_return_preg_reg[55]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/ap_return_preg_reg[54]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/ap_return_preg_reg[53]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_74/ap_return_preg_reg[52]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[1].din1_cast_array_reg[1][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[2].din1_cast_array_reg[2][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][7]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[3].din1_cast_array_reg[3][6]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][7]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][6]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][5]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[4].din1_cast_array_reg[4][4]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][7]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][6]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][5]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][4]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][3]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U10/dout_array_loop[5].din1_cast_array_reg[5][2]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[1].din1_cast_array_reg[1][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].din1_cast_array_reg[2][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][7]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][6]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][7]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][6]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][5]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][4]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][10]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][9]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][8]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][7]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][6]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][5]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][4]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][3]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][2]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_reg[0][53]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[1].dout_array_reg[1][56]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[1].dout_array_reg[1][55]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[1].dout_array_reg[1][54]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[1].dout_array_reg[1][53]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[1].dout_array_reg[1][52]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].dout_array_reg[2][56]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].dout_array_reg[2][55]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].dout_array_reg[2][54]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].dout_array_reg[2][53]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[2].dout_array_reg[2][52]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].dout_array_reg[3][56]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].dout_array_reg[3][55]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].dout_array_reg[3][54]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].dout_array_reg[3][53]) is unused and will be removed from module operator_double_div9.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U11/dout_array_loop[3].dout_array_reg[3][52]) is unused and will be removed from module operator_double_div9.
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].dout_array_reg[1][1]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].dout_array_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U10/dout_array_loop[1].dout_array_reg[1][0]' (FDRE) to 'operator_double_dcud_U11/dout_array_loop[1].dout_array_reg[1][0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 1664.473 ; gain = 479.012 ; free physical = 1402 ; free virtual = 8825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------------+------------+---------------+----------------+
+|Module Name           | RTL Object | Depth x Width | Implemented As | 
++----------------------+------------+---------------+----------------+
+|lut_div9_chunk_r0_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div9_chunk_r1_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div9_chunk_r2_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div9_chunk_r3_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div9_chunk_q0_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div9_chunk_q1_rom | p_0_out    | 64x1          | LUT            | 
+|int_57_div9           | p_0_out    | 64x1          | LUT            | 
+|int_57_div9           | p_0_out    | 64x1          | LUT            | 
+|int_57_div9           | p_0_out    | 64x1          | LUT            | 
+|int_57_div9           | p_0_out    | 64x1          | LUT            | 
+|int_57_div9           | p_0_out    | 64x1          | LUT            | 
+|int_57_div9           | p_0_out    | 64x1          | LUT            | 
++----------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1664.473 ; gain = 479.012 ; free physical = 1295 ; free virtual = 8715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1666.473 ; gain = 481.012 ; free physical = 1282 ; free virtual = 8702
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1282 ; free virtual = 8702
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1282 ; free virtual = 8702
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1282 ; free virtual = 8702
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1278 ; free virtual = 8701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1278 ; free virtual = 8701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1279 ; free virtual = 8702
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1279 ; free virtual = 8702
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|operator_double_div9 | operator_double_dcud_U11/dout_array_loop[3].din1_cast_array_reg[3][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|operator_double_div9 | operator_double_dcud_U11/dout_array_loop[4].din1_cast_array_reg[4][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|operator_double_div9 | operator_double_dcud_U11/dout_array_loop[5].din1_cast_array_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
++---------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    21|
+|2     |LUT1   |    12|
+|3     |LUT2   |    94|
+|4     |LUT3   |   235|
+|5     |LUT4   |    89|
+|6     |LUT5   |    92|
+|7     |LUT6   |   404|
+|8     |MUXF7  |     2|
+|9     |SRL16E |     6|
+|10    |FDRE   |  1027|
+|11    |FDSE   |     3|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------+----------------------+------+
+|      |Instance                        |Module                |Cells |
++------+--------------------------------+----------------------+------+
+|1     |top                             |                      |  1985|
+|2     |  grp_int_57_div9_fu_74         |int_57_div9           |   532|
+|3     |    grp_lut_div9_chunk_fu_142   |lut_div9_chunk        |   297|
+|4     |      q0_U                      |lut_div9_chunk_q0     |    58|
+|5     |        lut_div9_chunk_q0_rom_U |lut_div9_chunk_q0_rom |    58|
+|6     |      q1_U                      |lut_div9_chunk_q1     |    51|
+|7     |        lut_div9_chunk_q1_rom_U |lut_div9_chunk_q1_rom |    51|
+|8     |      r0_U                      |lut_div9_chunk_r0     |     3|
+|9     |        lut_div9_chunk_r0_rom_U |lut_div9_chunk_r0_rom |     3|
+|10    |      r1_U                      |lut_div9_chunk_r1     |     3|
+|11    |        lut_div9_chunk_r1_rom_U |lut_div9_chunk_r1_rom |     3|
+|12    |      r2_U                      |lut_div9_chunk_r2     |     3|
+|13    |        lut_div9_chunk_r2_rom_U |lut_div9_chunk_r2_rom |     3|
+|14    |      r3_U                      |lut_div9_chunk_r3     |     3|
+|15    |        lut_div9_chunk_r3_rom_U |lut_div9_chunk_r3_rom |     3|
+|16    |  operator_double_dbkb_U10      |operator_double_dbkb  |   479|
+|17    |  operator_double_dcud_U11      |operator_double_dcud  |   470|
++------+--------------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 1674.480 ; gain = 489.020 ; free physical = 1279 ; free virtual = 8702
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 163 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1674.480 ; gain = 137.527 ; free physical = 1334 ; free virtual = 8757
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 1674.488 ; gain = 489.020 ; free physical = 1334 ; free virtual = 8757
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+296 Infos, 176 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:45 . Memory (MB): peak = 1674.488 ; gain = 489.133 ; free physical = 1334 ; free virtual = 8756
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div9/impl/vhdl/project.runs/synth_1/operator_double_div9.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file operator_double_div9_utilization_synth.rpt -pb operator_double_div9_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1698.492 ; gain = 0.000 ; free physical = 1334 ; free virtual = 8755
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 15:35:50 2018...

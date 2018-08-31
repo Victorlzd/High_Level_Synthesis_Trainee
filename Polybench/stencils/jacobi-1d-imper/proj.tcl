@@ -14,7 +14,7 @@ add_files jacobi-1d-imper.h
 add_files polybench.h
 open_solution -reset 	"classic"
 set_part {xc7k160tfbg484-1} -tool vivado
-create_clock -period 10 -name default
+create_clock -period 2.5 -name default
 #source "./fir_prj/solution1/directives.tcl"
 #csim_design -clean -compiler gcc
 csynth_design
@@ -30,7 +30,7 @@ add_files jacobi-1d-imper.h
 add_files polybench.h
 open_solution -reset 	"my_version"
 set_part {xc7k160tfbg484-1} -tool vivado
-create_clock -period 10 -name default
+create_clock -period 2.5 -name default
 #source "./fir_prj/solution1/directives.tcl"
 #csim_design -clean -compiler gcc
 csynth_design

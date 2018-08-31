@@ -11,7 +11,7 @@
 module kernel_fdtd_2d_dmcud
 #(parameter
     ID         = 2,
-    NUM_STAGE  = 5,
+    NUM_STAGE  = 18,
     din0_WIDTH = 64,
     din1_WIDTH = 64,
     dout_WIDTH = 64
@@ -38,7 +38,7 @@ reg                   ce_r;
 wire [dout_WIDTH-1:0] dout_i;
 reg  [dout_WIDTH-1:0] dout_r;
 //------------------------Instantiation------------------
-kernel_fdtd_2d_ap_dmul_3_max_dsp_64 kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u (
+kernel_fdtd_2d_ap_dmul_16_max_dsp_64 kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u (
     .aclk                 ( aclk ),
     .aclken               ( aclken ),
     .s_axis_a_tvalid      ( a_tvalid ),

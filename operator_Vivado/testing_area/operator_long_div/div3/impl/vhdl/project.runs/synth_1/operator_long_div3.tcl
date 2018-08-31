@@ -30,8 +30,13 @@ set_property target_language VHDL [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd
-  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

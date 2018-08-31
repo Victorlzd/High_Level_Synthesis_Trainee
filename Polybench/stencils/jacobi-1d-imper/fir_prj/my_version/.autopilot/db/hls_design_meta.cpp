@@ -22,4 +22,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("B_d0", 64, hls_out, 3, "ap_memory", "mem_din", 1),
 	Port_Property("B_q0", 64, hls_in, 3, "ap_memory", "mem_dout", 1),
 };
-const char* HLS_Design_Meta::dut_name = "kernel_jacobi_1d_imper";
+const char* HLS_Design_Meta::dut_name = "kernel_jacobi_1d_imper_optimized";

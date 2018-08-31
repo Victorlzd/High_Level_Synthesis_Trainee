@@ -11,7 +11,7 @@
 module kernel_seidel_2d_bkb
 #(parameter
     ID         = 1,
-    NUM_STAGE  = 5,
+    NUM_STAGE  = 14,
     din0_WIDTH = 64,
     din1_WIDTH = 64,
     dout_WIDTH = 64
@@ -38,7 +38,7 @@ reg                   ce_r;
 wire [dout_WIDTH-1:0] dout_i;
 reg  [dout_WIDTH-1:0] dout_r;
 //------------------------Instantiation------------------
-kernel_seidel_2d_ap_dadd_3_full_dsp_64 kernel_seidel_2d_ap_dadd_3_full_dsp_64_u (
+kernel_seidel_2d_ap_dadd_12_no_dsp_64 kernel_seidel_2d_ap_dadd_12_no_dsp_64_u (
     .aclk                 ( aclk ),
     .aclken               ( aclken ),
     .s_axis_a_tvalid      ( a_tvalid ),

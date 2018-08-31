@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Aug  8 16:40:41 2018
+| Date         : Fri Aug 31 22:11:04 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_timing_summary -file ./report/kernel_seidel_2d_timing_routed.rpt
 | Design       : kernel_seidel_2d
@@ -126,10 +126,10 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      1.542        0.000                      0                 2781        0.093        0.000                      0                 2781        4.220        0.000                       0                  2142  
+     -0.335       -3.372                     36                 6194        0.081        0.000                      0                 6194        0.470        0.000                       0                  5371  
 
 
-All user specified timing constraints are met.
+Timing constraints are not met.
 
 
 ------------------------------------------------------------------------------------------------
@@ -137,9 +137,9 @@ All user specified timing constraints are met.
 | -------------
 ------------------------------------------------------------------------------------------------
 
-Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
------   ------------       ----------      --------------
-ap_clk  {0.000 5.000}      10.000          100.000         
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+ap_clk  {0.000 1.250}        2.500           400.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              1.542        0.000                      0                 2781        0.093        0.000                      0                 2781        4.220        0.000                       0                  2142  
+ap_clk             -0.335       -3.372                     36                 6194        0.081        0.000                      0                 6194        0.470        0.000                       0                  5371  
 
 
 ------------------------------------------------------------------------------------------------
@@ -180,26 +180,26 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        1.542ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.093ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.220ns,  Total Violation        0.000ns
+Setup :           36  Failing Endpoints,  Worst Slack       -0.335ns,  Total Violation       -3.372ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.081ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.470ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             1.542ns  (required time - arrival time)
-  Source:                 kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[44].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (VIOLATED) :        -0.335ns  (required time - arrival time)
+  Source:                 kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[53].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]_replica/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        8.473ns  (logic 4.322ns (51.007%)  route 4.151ns (48.993%))
-  Logic Levels:           42  (CARRY4=42)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.635ns  (logic 1.623ns (61.601%)  route 1.012ns (38.399%))
+  Logic Levels:           14  (CARRY4=14)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -212,152 +212,68 @@ Slack (MET) :             1.542ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2145, unset)         0.672     0.672    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[44].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
-    SLICE_X23Y108        FDRE                                         r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[44].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+                         net (fo=5370, unset)         0.672     0.672    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[53].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
+    SLICE_X11Y145        FDRE                                         r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[53].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]_replica/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X23Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[44].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/Q
-                         net (fo=56, routed)          1.949     2.890    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/opt_has_pipe.first_q_reg[53][0]
-    SLICE_X40Y97         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.350     3.240 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.240    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y98         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.300 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.300    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y99         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.360 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.001     3.361    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y100        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.421 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.421    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y101        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.481 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.481    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y102        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.541 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.541    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y103        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.601 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.601    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y104        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.661 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.661    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y105        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.721 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.721    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y106        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.781 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.781    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y107        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.841 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.841    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y108        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.901 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.901    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y109        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     3.961 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     3.961    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_2
-    SLICE_X40Y110        CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.212     4.173 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
-                         net (fo=56, routed)          1.147     5.320    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/A[0]
-    SLICE_X43Y96         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.468     5.788 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     5.788    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y97         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     5.846 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     5.846    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y98         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     5.904 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     5.904    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y99         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     5.962 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.001     5.963    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y100        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.021 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.021    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y101        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.079 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.079    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y102        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.137 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.137    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y103        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.195 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.195    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y104        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.253 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.253    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y105        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.311 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.311    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y106        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.369 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.369    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y107        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.427 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.427    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y108        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.058     6.485 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     6.485    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_2
-    SLICE_X43Y109        CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.213     6.698 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
-                         net (fo=56, routed)          1.053     7.751    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/a_xor_b_sub[1]
-    SLICE_X42Y95         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.462     8.213 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.213    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y96         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.273 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.273    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y97         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.333 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.333    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y98         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.393 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.393    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y99         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.453 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.001     8.453    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y100        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.513 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.513    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y101        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.573 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.573    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y102        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.633 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.633    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y103        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.693 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.693    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y104        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.753 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.753    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y105        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.813 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.813    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y106        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.873 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.873    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y107        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.060     8.933 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     8.933    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_2
-    SLICE_X42Y108        CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.212     9.145 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
-                         net (fo=1, routed)           0.000     9.145    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/Q_DEL/i_pipe/D[53]
-    SLICE_X42Y108        FDRE                                         r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
+    SLICE_X11Y145        FDRE (Prop_fdre_C_Q)         0.246     0.918 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[53].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]_replica/Q
+                         net (fo=25, routed)          0.750     1.668    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/first_q[53]_repN_alias
+    SLICE_X11Y130        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.468     2.136 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.136    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y131        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.194 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.194    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y132        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.252 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.252    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y133        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.310 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.310    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y134        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.368 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.368    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y135        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.426 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.426    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y136        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.484 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.484    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.542 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.542    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y138        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.600 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.600    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y139        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.658 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.658    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y140        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.716 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.716    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y141        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.774 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.774    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y142        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     2.832 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     2.832    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_2
+    SLICE_X11Y143        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213     3.045 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
+                         net (fo=1, routed)           0.262     3.307    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/D[53]
+    SLICE_X13Y143        FDRE                                         r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=2145, unset)         0.638    10.638    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
-    SLICE_X42Y108        FDRE                                         r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    SLICE_X42Y108        FDRE (Setup_fdre_C_D)        0.084    10.687    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=5370, unset)         0.638     3.138    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
+    SLICE_X13Y143        FDRE                                         r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X13Y143        FDRE (Setup_fdre_C_D)       -0.131     2.972    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
   -------------------------------------------------------------------
-                         required time                         10.687    
-                         arrival time                          -9.145    
+                         required time                          2.972    
+                         arrival time                          -3.307    
   -------------------------------------------------------------------
-                         slack                                  1.542    
+                         slack                                 -0.335    
 
 
 
@@ -365,15 +281,15 @@ Slack (MET) :             1.542ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.093ns  (arrival time - required time)
-  Source:                 kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/opt_has_pipe.i_pipe[17].pipe_reg[17][1]_srl16/D
-                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.first_q_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][15]_srl2/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.206ns  (logic 0.100ns (48.529%)  route 0.106ns (51.471%))
+  Data Path Delay:        0.250ns  (logic 0.100ns (40.001%)  route 0.150ns (59.999%))
   Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -384,26 +300,26 @@ Slack (MET) :             0.093ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2145, unset)         0.283     0.283    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/aclk
-    SLICE_X15Y111        FDRE                                         r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
+                         net (fo=5370, unset)         0.283     0.283    kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/aclk
+    SLICE_X15Y91         FDRE                                         r  kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.first_q_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X15Y111        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/Q
-                         net (fo=1, routed)           0.106     0.489    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/first_q[1]
-    SLICE_X18Y111        SRL16E                                       r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/opt_has_pipe.i_pipe[17].pipe_reg[17][1]_srl16/D
+    SLICE_X15Y91         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.first_q_reg[15]/Q
+                         net (fo=1, routed)           0.150     0.533    kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.first_q_reg_n_2_[15]
+    SLICE_X18Y91         SRL16E                                       r  kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][15]_srl2/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2145, unset)         0.298     0.298    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/aclk
-    SLICE_X18Y111        SRL16E                                       r  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/opt_has_pipe.i_pipe[17].pipe_reg[17][1]_srl16/CLK
+                         net (fo=5370, unset)         0.298     0.298    kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/aclk
+    SLICE_X18Y91         SRL16E                                       r  kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][15]_srl2/CLK
                          clock pessimism              0.000     0.298    
-    SLICE_X18Y111        SRL16E (Hold_srl16e_CLK_D)
-                                                      0.098     0.396    kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_UP_DELAY/i_pipe/opt_has_pipe.i_pipe[17].pipe_reg[17][1]_srl16
+    SLICE_X18Y91         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.154     0.452    kernel_seidel_2d_bkb_U1/kernel_seidel_2d_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/LRG_RND1_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][15]_srl2
   -------------------------------------------------------------------
-                         required time                         -0.396    
-                         arrival time                           0.489    
+                         required time                         -0.452    
+                         arrival time                           0.533    
   -------------------------------------------------------------------
-                         slack                                  0.093    
+                         slack                                  0.081    
 
 
 
@@ -412,14 +328,14 @@ Slack (MET) :             0.093ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         ap_clk
-Waveform(ns):       { 0.000 5.000 }
-Period(ns):         10.000
+Waveform(ns):       { 0.000 1.250 }
+Period(ns):         2.500
 Sources:            { ap_clk }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
-Min Period        n/a     DSP48E1/CLK  n/a            1.825         10.000      8.175      DSP48_X0Y26    tmp_2_reg_373_reg/CLK
-Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.780         5.000       4.220      SLICE_X12Y111  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/EXP_PRE_RND_DEL/i_pipe/opt_has_pipe.i_pipe[18].pipe_reg[18][0]_srl18/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.780         5.000       4.220      SLICE_X12Y111  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_20_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/EXP_PRE_RND_DEL/i_pipe/opt_has_pipe.i_pipe[18].pipe_reg[18][0]_srl18/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X0Y31    kernel_seidel_2d_dEe_U4/kernel_seidel_2d_dEe_DSP48_0_U/p_reg_reg/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.780         1.250       0.470      SLICE_X12Y107  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[43].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[31]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.780         1.250       0.470      SLICE_X12Y107  kernel_seidel_2d_cud_U2/kernel_seidel_2d_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[43].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[31]_srl32/CLK
 
 
 

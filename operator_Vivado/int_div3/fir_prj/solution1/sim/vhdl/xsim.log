@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jul 31 15:59:42 2018
+# Process ID: 24589
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/fir_prj/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/operator_int_div29/xsim_script.tcl}
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/fir_prj/solution1/sim/vhdl/xsim.log
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/fir_prj/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/operator_int_div29/xsim_script.tcl
+# xsim {operator_int_div29} -autoloadwcfg -tclbatch {operator_int_div29.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source operator_int_div29.tcl
+## run all
+Note: simulation done!
+Time: 170175 ns  Iteration: 1  Process: /apatb_operator_int_div29_top/generate_sim_done_proc  File: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/fir_prj/solution1/sim/vhdl/operator_int_div29.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 170175 ns  Iteration: 1  Process: /apatb_operator_int_div29_top/generate_sim_done_proc  File: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_div3/fir_prj/solution1/sim/vhdl/operator_int_div29.autotb.vhd
+$finish called at time : 170175 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Jul 31 15:59:55 2018...

@@ -10,4 +10,4 @@ Family       : kintex7
 Device       : xc7k160t
 Package      : fbg484
 Speed Grade  : -1
-Clock Period : 120.000 ns
+Clock Period : 2.500 ns

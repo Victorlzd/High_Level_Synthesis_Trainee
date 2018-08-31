@@ -34,7 +34,7 @@ read_vhdl -library xil_defaultlib {
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5_fdiv_32ns_32bkb.vhd
 }
-read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_0_no_dsp_32/div5_ap_fdiv_0_no_dsp_32.xci
+read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_28_no_dsp_32/div5_ap_fdiv_28_no_dsp_32.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

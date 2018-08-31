@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Fri Aug  3 16:47:31 2018
+| Date             : Fri Aug 31 12:06:17 2018
 | Host             : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command          : report_power -file div2_power_routed.rpt -pb div2_power_summary_routed.pb -rpx div2_power_routed.rpx
 | Design           : div2
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.111        |
+| Total On-Chip Power (W)  | 0.121        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
+| Dynamic (W)              | 0.011        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 2.5          |
 | Max Ambient (C)          | 84.7         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      146 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       81 |    101400 |            0.08 |
-|   Register     |    <0.001 |       34 |    202800 |            0.02 |
-|   CARRY4       |    <0.001 |        3 |     25350 |            0.01 |
-|   Others       |     0.000 |       16 |       --- |             --- |
-| Signals        |    <0.001 |      287 |       --- |             --- |
-| DSPs           |    <0.001 |        3 |       600 |            0.50 |
+| Clocks         |     0.007 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      268 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       69 |    101400 |            0.07 |
+|   Register     |    <0.001 |      158 |    202800 |            0.08 |
+|   CARRY4       |    <0.001 |        4 |     25350 |            0.02 |
+|   Others       |     0.000 |       37 |       --- |             --- |
+| Signals        |     0.001 |      331 |       --- |             --- |
+| DSPs           |     0.002 |        3 |       600 |            0.50 |
 | Static Power   |     0.110 |          |           |                 |
-| Total          |     0.111 |          |           |                 |
+| Total          |     0.121 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.042 |       0.001 |      0.040 |
+| Vccint    |       1.000 |     0.051 |       0.011 |      0.040 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -128,7 +128,7 @@ Table of Contents
 +--------+--------+-----------------+
 | Clock  | Domain | Constraint (ns) |
 +--------+--------+-----------------+
-| ap_clk | ap_clk |            12.0 |
+| ap_clk | ap_clk |             2.5 |
 +--------+--------+-----------------+
 
 
@@ -141,27 +141,62 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| div2                                           |     0.001 |
-|   div2_fmul_32ns_32bkb_U1                      |     0.001 |
-|     div2_ap_fmul_0_max_dsp_32_u                |    <0.001 |
-|       U0                                       |    <0.001 |
-|         i_synth                                |    <0.001 |
-|           MULT.OP                              |    <0.001 |
-|             EXP                                |    <0.001 |
+| div2                                           |     0.011 |
+|   div2_fmul_32ns_32bkb_U1                      |     0.011 |
+|     div2_ap_fmul_6_max_dsp_32_u                |     0.009 |
+|       U0                                       |     0.009 |
+|         i_synth                                |     0.009 |
+|           MULT.OP                              |     0.009 |
+|             EXP                                |     0.003 |
 |               COND_DET_A                       |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ONE_DEL    |    <0.001 |
+|                   i_pipe                       |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL   |    <0.001 |
+|                   i_pipe                       |    <0.001 |
 |                 MANT_CARRY.MANT_ALL_ZERO_DET   |    <0.001 |
 |                   CARRY_ZERO_DET               |    <0.001 |
 |               COND_DET_B                       |    <0.001 |
-|                 MANT_CARRY.MANT_ALL_ZERO_DET   |    <0.001 |
-|                   CARRY_ZERO_DET               |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL   |    <0.001 |
+|                   i_pipe                       |    <0.001 |
 |               EXP_ADD.C_CHAIN                  |    <0.001 |
-|             MULT                               |    <0.001 |
-|               DSP48E1_SPD_SGL_VARIANT.FIX_MULT |    <0.001 |
+|                 Q_DEL                          |    <0.001 |
+|                   i_pipe                       |    <0.001 |
+|               EXP_PRE_RND_DEL                  |    <0.001 |
+|                 i_pipe                         |    <0.001 |
+|               FLOW_UP_DEL                      |     0.000 |
+|                 i_pipe                         |     0.000 |
+|               IP_SIGN_DELAY                    |    <0.001 |
+|                 i_pipe                         |    <0.001 |
+|               PROD_DELAY                       |    <0.001 |
+|                 i_pipe                         |    <0.001 |
+|               SIGN_UP_DELAY                    |    <0.001 |
+|                 i_pipe                         |    <0.001 |
+|               SIG_DELAY                        |    <0.001 |
+|                 i_pipe                         |    <0.001 |
+|               STATE_DEC_DELAY                  |    <0.001 |
+|                 i_pipe                         |    <0.001 |
+|               STATE_DELAY                      |    <0.001 |
+|                 i_pipe                         |    <0.001 |
+|             MULT                               |     0.001 |
+|               DSP48E1_SPD_SGL_VARIANT.FIX_MULT |     0.001 |
 |                 DSP1                           |    <0.001 |
 |                 DSP2                           |    <0.001 |
-|             R_AND_R                            |    <0.001 |
-|               LAT_OPT.FULL.R_AND_R             |    <0.001 |
-|                 DSP48E1_SGL_EXP_IP.OLD_ADD.ADD |    <0.001 |
+|                 ZD0_DEL                        |    <0.001 |
+|                   i_pipe                       |    <0.001 |
+|             OP                                 |     0.001 |
+|             R_AND_R                            |     0.003 |
+|               LAT_OPT.FULL.R_AND_R             |     0.003 |
+|                 DSP48E1_SGL_EXP_IP.EXP_DEL     |    <0.001 |
+|                   i_pipe                       |    <0.001 |
+|                 DSP48E1_SGL_EXP_IP.OLD_ADD.ADD |     0.001 |
+|                 EXP_SEL_DEL                    |    <0.001 |
+|                   i_pipe                       |    <0.001 |
+|                 MANT_DEL                       |     0.001 |
+|                   i_pipe                       |     0.001 |
+|                 NORM_DEL                       |    <0.001 |
+|                   i_pipe                       |    <0.001 |
+|                 SEL_DEL                        |    <0.001 |
+|                   i_pipe                       |    <0.001 |
 +------------------------------------------------+-----------+
 
 

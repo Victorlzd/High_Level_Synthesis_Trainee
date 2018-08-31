@@ -1,0 +1,65 @@
+
+*** Running vivado
+    with args -log int_div7.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source int_div7.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source int_div7.tcl -notrace
+Command: synth_design -top int_div7 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19745 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1266.352 ; gain = 80.895 ; free physical = 124 ; free virtual = 7596
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'int_div7' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:54]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:57]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:62]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:67]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:71]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:80]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 34 - type: integer 
+	Parameter dout_WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-3491] module 'int_div7_mul_32s_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7_mul_32s_bkb.vhd:61' bound to instance 'int_div7_mul_32s_bkb_U1' of component 'int_div7_mul_32s_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'int_div7_mul_32s_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7_mul_32s_bkb.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 34 - type: integer 
+	Parameter dout_WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-3491] module 'int_div7_mul_32s_bkb_MulnS_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7_mul_32s_bkb.vhd:12' bound to instance 'int_div7_mul_32s_bkb_MulnS_0_U' of component 'int_div7_mul_32s_bkb_MulnS_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7_mul_32s_bkb.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'int_div7_mul_32s_bkb_MulnS_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7_mul_32s_bkb.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'int_div7_mul_32s_bkb_MulnS_0' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7_mul_32s_bkb.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'int_div7_mul_32s_bkb' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7_mul_32s_bkb.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'int_div7' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivadoIntDiv/div7/impl/vhdl/int_div7.vhd:25]
+WARNING: [Synth 8-3331] design int_div7_mul_32s_bkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.977 ; gain = 126.520 ; free physical = 186 ; free virtual = 7565
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.977 ; gain = 126.520 ; free physical = 182 ; free virtual = 7563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.977 ; gain = 126.520 ; free physical = 182 ; free virtual = 7563
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1

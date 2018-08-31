@@ -1,2 +1,0 @@
-div6_fdiv_32ns_32bkb
-div6

@@ -1,0 +1,817 @@
+
+*** Running vivado
+    with args -log float_div3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source float_div3.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source float_div3.tcl -notrace
+Command: synth_design -top float_div3 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12539 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.852 ; gain = 77.898 ; free physical = 1463 ; free virtual = 10882
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'float_div3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:82]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:85]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:88]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:90]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:92]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:94]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:96]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:98]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:144]
+INFO: [Synth 8-3491] module 'lut_div9_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:12' bound to instance 'grp_lut_div9_chunk_fu_121' of component 'lut_div9_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:22]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'float_div3_mux_64bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:13' bound to instance 'float_div3_mux_64bkb_U1' of component 'float_div3_mux_64bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'float_div3_mux_64bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:152]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'float_div3_mux_64bkb' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:152]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'float_div3_mux_64bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:13' bound to instance 'float_div3_mux_64bkb_U2' of component 'float_div3_mux_64bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:319]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'float_div3_mux_64bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:13' bound to instance 'float_div3_mux_64bkb_U3' of component 'float_div3_mux_64bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:457]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'float_div3_mux_64bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:13' bound to instance 'float_div3_mux_64bkb_U4' of component 'float_div3_mux_64bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:595]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'float_div3_mux_64bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:13' bound to instance 'float_div3_mux_64bkb_U5' of component 'float_div3_mux_64bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:733]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'float_div3_mux_64bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3_mux_64bkb.vhd:13' bound to instance 'float_div3_mux_64bkb_U6' of component 'float_div3_mux_64bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:871]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:22]
+INFO: [Synth 8-3491] module 'lut_div9_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/lut_div9_chunk.vhd:12' bound to instance 'grp_lut_div9_chunk_fu_128' of component 'lut_div9_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'float_div3' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.vhd:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.477 ; gain = 122.523 ; free physical = 1472 ; free virtual = 10891
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.477 ; gain = 122.523 ; free physical = 1473 ; free virtual = 10892
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.477 ; gain = 122.523 ; free physical = 1473 ; free virtual = 10892
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/float_div3.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1660.977 ; gain = 0.000 ; free physical = 1195 ; free virtual = 10619
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 1660.977 ; gain = 472.023 ; free physical = 1273 ; free virtual = 10697
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 1660.977 ; gain = 472.023 ; free physical = 1273 ; free virtual = 10697
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1660.977 ; gain = 472.023 ; free physical = 1275 ; free virtual = 10699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_5_fu_210_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "icmp_fu_196_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "icmp4_fu_272_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_250_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1660.977 ; gain = 472.023 ; free physical = 1265 ; free virtual = 10689
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 23    
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 5     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 760   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module float_div3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 23    
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 5     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 4     
+Module float_div3_mux_64bkb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 63    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "tmp_5_fu_210_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp4_fu_272_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_8_fu_250_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1660.977 ; gain = 472.023 ; free physical = 1242 ; free virtual = 10668
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1660.977 ; gain = 472.023 ; free physical = 1125 ; free virtual = 10552
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 1669.977 ; gain = 481.023 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1105 ; free virtual = 10532
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     9|
+|2     |LUT1   |     2|
+|3     |LUT2   |    19|
+|4     |LUT3   |    33|
+|5     |LUT4   |    35|
+|6     |LUT5   |    18|
+|7     |LUT6   |    78|
+|8     |MUXF7  |     2|
+|9     |FDRE   |    83|
+|10    |FDSE   |     9|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   288|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.984 ; gain = 489.031 ; free physical = 1106 ; free virtual = 10533
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1677.984 ; gain = 139.531 ; free physical = 1161 ; free virtual = 10588
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1677.992 ; gain = 489.031 ; free physical = 1161 ; free virtual = 10588
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 1677.992 ; gain = 489.141 ; free physical = 1166 ; free virtual = 10593
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/float_div3/fir_prj/solution1/impl/vhdl/project.runs/synth_1/float_div3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file float_div3_utilization_synth.rpt -pb float_div3_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1701.996 ; gain = 0.000 ; free physical = 1174 ; free virtual = 10604
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 30 12:01:22 2018...

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'operator_long_div11'" level="0">
-<item name = "Date">Fri Aug  3 14:13:06 2018
+<item name = "Date">Fri Aug 31 17:12:04 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">operator_long_div</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">120.00, 104.175, 15.00</column>
+<column name="ap_clk">2.50, 2.906, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 2, 2, 2, none</column>
+<column name="">96, 96, 96, 96, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_int_64_div11_fu_28">int_64_div11, 1, 1, 1, 1, none</column>
+<column name="grp_int_64_div11_fu_32">int_64_div11, 95, 95, 95, 95, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

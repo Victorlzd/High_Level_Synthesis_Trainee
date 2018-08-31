@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="div5,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=60.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=52.398000,HLS_SYN_LAT=1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=130,HLS_SYN_LUT=774,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="div5,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=2.500000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.519000,HLS_SYN_LAT=29,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=1466,HLS_SYN_LUT=997,HLS_VERSION=2018_2}" *)
 
 module div5 (
         ap_clk,
@@ -20,8 +20,36 @@ module div5 (
         ap_return
 );
 
-parameter    ap_ST_fsm_state1 = 2'd1;
-parameter    ap_ST_fsm_state2 = 2'd2;
+parameter    ap_ST_fsm_state1 = 30'd1;
+parameter    ap_ST_fsm_state2 = 30'd2;
+parameter    ap_ST_fsm_state3 = 30'd4;
+parameter    ap_ST_fsm_state4 = 30'd8;
+parameter    ap_ST_fsm_state5 = 30'd16;
+parameter    ap_ST_fsm_state6 = 30'd32;
+parameter    ap_ST_fsm_state7 = 30'd64;
+parameter    ap_ST_fsm_state8 = 30'd128;
+parameter    ap_ST_fsm_state9 = 30'd256;
+parameter    ap_ST_fsm_state10 = 30'd512;
+parameter    ap_ST_fsm_state11 = 30'd1024;
+parameter    ap_ST_fsm_state12 = 30'd2048;
+parameter    ap_ST_fsm_state13 = 30'd4096;
+parameter    ap_ST_fsm_state14 = 30'd8192;
+parameter    ap_ST_fsm_state15 = 30'd16384;
+parameter    ap_ST_fsm_state16 = 30'd32768;
+parameter    ap_ST_fsm_state17 = 30'd65536;
+parameter    ap_ST_fsm_state18 = 30'd131072;
+parameter    ap_ST_fsm_state19 = 30'd262144;
+parameter    ap_ST_fsm_state20 = 30'd524288;
+parameter    ap_ST_fsm_state21 = 30'd1048576;
+parameter    ap_ST_fsm_state22 = 30'd2097152;
+parameter    ap_ST_fsm_state23 = 30'd4194304;
+parameter    ap_ST_fsm_state24 = 30'd8388608;
+parameter    ap_ST_fsm_state25 = 30'd16777216;
+parameter    ap_ST_fsm_state26 = 30'd33554432;
+parameter    ap_ST_fsm_state27 = 30'd67108864;
+parameter    ap_ST_fsm_state28 = 30'd134217728;
+parameter    ap_ST_fsm_state29 = 30'd268435456;
+parameter    ap_ST_fsm_state30 = 30'd536870912;
 
 input   ap_clk;
 input   ap_rst;
@@ -36,20 +64,20 @@ reg ap_done;
 reg ap_idle;
 reg ap_ready;
 
-(* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [29:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire   [31:0] grp_fu_28_p2;
-wire    ap_CS_fsm_state2;
-reg   [1:0] ap_NS_fsm;
+wire   [31:0] grp_fu_20_p2;
+wire    ap_CS_fsm_state30;
+reg   [29:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 2'd1;
+#0 ap_CS_fsm = 30'd1;
 end
 
 div5_fdiv_32ns_32bkb #(
     .ID( 1 ),
-    .NUM_STAGE( 2 ),
+    .NUM_STAGE( 30 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
@@ -59,7 +87,7 @@ div5_fdiv_32ns_32bkb_U1(
     .din0(a),
     .din1(32'd1084227584),
     .ce(1'b1),
-    .dout(grp_fu_28_p2)
+    .dout(grp_fu_20_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -71,7 +99,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if ((1'b1 == ap_CS_fsm_state30)) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -87,7 +115,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if ((1'b1 == ap_CS_fsm_state30)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -104,6 +132,90 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
+            ap_NS_fsm = ap_ST_fsm_state3;
+        end
+        ap_ST_fsm_state3 : begin
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state6 : begin
+            ap_NS_fsm = ap_ST_fsm_state7;
+        end
+        ap_ST_fsm_state7 : begin
+            ap_NS_fsm = ap_ST_fsm_state8;
+        end
+        ap_ST_fsm_state8 : begin
+            ap_NS_fsm = ap_ST_fsm_state9;
+        end
+        ap_ST_fsm_state9 : begin
+            ap_NS_fsm = ap_ST_fsm_state10;
+        end
+        ap_ST_fsm_state10 : begin
+            ap_NS_fsm = ap_ST_fsm_state11;
+        end
+        ap_ST_fsm_state11 : begin
+            ap_NS_fsm = ap_ST_fsm_state12;
+        end
+        ap_ST_fsm_state12 : begin
+            ap_NS_fsm = ap_ST_fsm_state13;
+        end
+        ap_ST_fsm_state13 : begin
+            ap_NS_fsm = ap_ST_fsm_state14;
+        end
+        ap_ST_fsm_state14 : begin
+            ap_NS_fsm = ap_ST_fsm_state15;
+        end
+        ap_ST_fsm_state15 : begin
+            ap_NS_fsm = ap_ST_fsm_state16;
+        end
+        ap_ST_fsm_state16 : begin
+            ap_NS_fsm = ap_ST_fsm_state17;
+        end
+        ap_ST_fsm_state17 : begin
+            ap_NS_fsm = ap_ST_fsm_state18;
+        end
+        ap_ST_fsm_state18 : begin
+            ap_NS_fsm = ap_ST_fsm_state19;
+        end
+        ap_ST_fsm_state19 : begin
+            ap_NS_fsm = ap_ST_fsm_state20;
+        end
+        ap_ST_fsm_state20 : begin
+            ap_NS_fsm = ap_ST_fsm_state21;
+        end
+        ap_ST_fsm_state21 : begin
+            ap_NS_fsm = ap_ST_fsm_state22;
+        end
+        ap_ST_fsm_state22 : begin
+            ap_NS_fsm = ap_ST_fsm_state23;
+        end
+        ap_ST_fsm_state23 : begin
+            ap_NS_fsm = ap_ST_fsm_state24;
+        end
+        ap_ST_fsm_state24 : begin
+            ap_NS_fsm = ap_ST_fsm_state25;
+        end
+        ap_ST_fsm_state25 : begin
+            ap_NS_fsm = ap_ST_fsm_state26;
+        end
+        ap_ST_fsm_state26 : begin
+            ap_NS_fsm = ap_ST_fsm_state27;
+        end
+        ap_ST_fsm_state27 : begin
+            ap_NS_fsm = ap_ST_fsm_state28;
+        end
+        ap_ST_fsm_state28 : begin
+            ap_NS_fsm = ap_ST_fsm_state29;
+        end
+        ap_ST_fsm_state29 : begin
+            ap_NS_fsm = ap_ST_fsm_state30;
+        end
+        ap_ST_fsm_state30 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -114,8 +226,8 @@ end
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+assign ap_CS_fsm_state30 = ap_CS_fsm[32'd29];
 
-assign ap_return = grp_fu_28_p2;
+assign ap_return = grp_fu_20_p2;
 
 endmodule //div5

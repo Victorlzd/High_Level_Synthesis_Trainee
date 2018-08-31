@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Thu Aug  2 15:30:23 2018
+| Date             : Fri Aug 31 16:34:12 2018
 | Host             : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command          : report_power -file operator_int_div7_power_routed.rpt -pb operator_int_div7_power_summary_routed.pb -rpx operator_int_div7_power_routed.rpx
 | Design           : operator_int_div7
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.111        |
+| Total On-Chip Power (W)  | 0.116        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
+| Dynamic (W)              | 0.006        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 2.5          |
 | Max Ambient (C)          | 84.7         |
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       94 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       45 |    101400 |            0.04 |
-|   Register     |    <0.001 |       37 |    202800 |            0.02 |
-|   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |    <0.001 |       57 |       --- |             --- |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |     0.002 |      207 |       --- |             --- |
+|   LUT as Logic |     0.002 |       97 |    101400 |            0.10 |
+|   Register     |    <0.001 |      101 |    202800 |            0.05 |
+|   Others       |     0.000 |        9 |       --- |             --- |
+| Signals        |     0.001 |      130 |       --- |             --- |
 | Static Power   |     0.110 |          |           |                 |
-| Total          |     0.111 |          |           |                 |
+| Total          |     0.116 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,7 +69,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.041 |       0.001 |      0.040 |
+| Vccint    |       1.000 |     0.047 |       0.006 |      0.040 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -126,7 +126,7 @@ Table of Contents
 +--------+--------+-----------------+
 | Clock  | Domain | Constraint (ns) |
 +--------+--------+-----------------+
-| ap_clk | ap_clk |            25.0 |
+| ap_clk | ap_clk |             2.5 |
 +--------+--------+-----------------+
 
 
@@ -136,10 +136,23 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------------+-----------+
-| Name              | Power (W) |
-+-------------------+-----------+
-| operator_int_div7 |    <0.001 |
-+-------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| operator_int_div7             |     0.006 |
+|   grp_lut_div7_chunk_fu_80    |     0.003 |
+|     q0_U                      |    <0.001 |
+|       lut_div7_chunk_q0_rom_U |    <0.001 |
+|     q1_U                      |    <0.001 |
+|       lut_div7_chunk_q1_rom_U |    <0.001 |
+|     q2_U                      |    <0.001 |
+|       lut_div7_chunk_q2_rom_U |    <0.001 |
+|     r0_U                      |    <0.001 |
+|       lut_div7_chunk_r0_rom_U |    <0.001 |
+|     r1_U                      |    <0.001 |
+|       lut_div7_chunk_r1_rom_U |    <0.001 |
+|     r2_U                      |    <0.001 |
+|       lut_div7_chunk_r2_rom_U |    <0.001 |
++-------------------------------+-----------+
 
 

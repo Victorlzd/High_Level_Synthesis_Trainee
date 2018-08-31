@@ -34,11 +34,18 @@ read_vhdl -library xil_defaultlib {
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_bkb.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_cud.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_dEe.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_eOg.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/kernel_jacobi_2d_imper_optimized.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk_q0.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk_q1.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk_q2.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk_r0.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk_r1.vhd
+  /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/lut_div5_chunk_r2.vhd
   /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/operator_double_div5.vhd
 }
-read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64/kernel_jacobi_2d_imper_optimized_ap_dadd_3_full_dsp_64.xci
+read_ip -quiet /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_optimized_ap_dadd_12_no_dsp_64/kernel_jacobi_2d_imper_optimized_ap_dadd_12_no_dsp_64.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

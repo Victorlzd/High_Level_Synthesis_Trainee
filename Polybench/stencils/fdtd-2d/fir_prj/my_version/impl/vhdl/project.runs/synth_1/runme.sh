@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log kernel_fdtd_2d.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_fdtd_2d.tcl
+EAStep vivado -log kernel_fdtd_2d_optimized.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_fdtd_2d_optimized.tcl

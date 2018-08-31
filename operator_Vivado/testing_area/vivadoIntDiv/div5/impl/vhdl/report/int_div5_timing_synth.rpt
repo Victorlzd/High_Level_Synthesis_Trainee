@@ -1,0 +1,109 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Aug 31 15:00:47 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/int_div5_timing_synth.rpt
+| Design       : int_div5
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.237ns  (required time - arrival time)
+  Source:                 mul_reg_110_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            neg_mul_reg_120_reg[61]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.256ns  (logic 1.792ns (79.433%)  route 0.464ns (20.567%))
+  Logic Levels:           16  (CARRY4=16)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.672ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=237, unset)          0.672     0.672    ap_clk
+                         FDRE                                         r  mul_reg_110_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.282     0.954 r  mul_reg_110_reg[0]/Q
+                         net (fo=1, unplaced)         0.456     1.410    mul_reg_110[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.450     1.860 r  neg_mul_reg_120_reg[35]_i_37/CO[3]
+                         net (fo=1, unplaced)         0.008     1.868    neg_mul_reg_120_reg[35]_i_37_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.928 r  neg_mul_reg_120_reg[35]_i_32/CO[3]
+                         net (fo=1, unplaced)         0.000     1.928    neg_mul_reg_120_reg[35]_i_32_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.988 r  neg_mul_reg_120_reg[35]_i_27/CO[3]
+                         net (fo=1, unplaced)         0.000     1.988    neg_mul_reg_120_reg[35]_i_27_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.048 r  neg_mul_reg_120_reg[35]_i_22/CO[3]
+                         net (fo=1, unplaced)         0.000     2.048    neg_mul_reg_120_reg[35]_i_22_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.108 r  neg_mul_reg_120_reg[35]_i_17/CO[3]
+                         net (fo=1, unplaced)         0.000     2.108    neg_mul_reg_120_reg[35]_i_17_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.168 r  neg_mul_reg_120_reg[35]_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     2.168    neg_mul_reg_120_reg[35]_i_12_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.228 r  neg_mul_reg_120_reg[35]_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000     2.228    neg_mul_reg_120_reg[35]_i_7_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.288 r  neg_mul_reg_120_reg[35]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     2.288    neg_mul_reg_120_reg[35]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.348 r  neg_mul_reg_120_reg[35]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.348    neg_mul_reg_120_reg[35]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.408 r  neg_mul_reg_120_reg[39]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.408    neg_mul_reg_120_reg[39]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.468 r  neg_mul_reg_120_reg[43]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.468    neg_mul_reg_120_reg[43]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.528 r  neg_mul_reg_120_reg[47]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.528    neg_mul_reg_120_reg[47]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.588 r  neg_mul_reg_120_reg[51]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.588    neg_mul_reg_120_reg[51]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.648 r  neg_mul_reg_120_reg[55]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.648    neg_mul_reg_120_reg[55]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.708 r  neg_mul_reg_120_reg[59]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.708    neg_mul_reg_120_reg[59]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     2.928 r  neg_mul_reg_120_reg[63]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     2.928    neg_mul_reg_120_reg[63]_i_1_n_6
+                         FDRE                                         r  neg_mul_reg_120_reg[61]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=237, unset)          0.638     3.138    ap_clk
+                         FDRE                                         r  neg_mul_reg_120_reg[61]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+                         FDRE (Setup_fdre_C_D)        0.062     3.165    neg_mul_reg_120_reg[61]
+  -------------------------------------------------------------------
+                         required time                          3.165    
+                         arrival time                          -2.928    
+  -------------------------------------------------------------------
+                         slack                                  0.237    
+
+
+
+

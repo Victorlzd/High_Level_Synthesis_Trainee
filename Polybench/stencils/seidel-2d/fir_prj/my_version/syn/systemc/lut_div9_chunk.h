@@ -11,19 +11,27 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "kernel_seidel_2d_bkb.h"
+#include "lut_div9_chunk_r0.h"
+#include "lut_div9_chunk_r1.h"
+#include "lut_div9_chunk_r2.h"
+#include "lut_div9_chunk_r3.h"
+#include "lut_div9_chunk_q0.h"
+#include "lut_div9_chunk_q1.h"
 
 namespace ap_rtl {
 
 struct lut_div9_chunk : public sc_module {
-    // Port declarations 5
+    // Port declarations 10
+    sc_in_clk ap_clk;
+    sc_in< sc_logic > ap_rst;
+    sc_in< sc_logic > ap_start;
+    sc_out< sc_logic > ap_done;
+    sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
     sc_in< sc_lv<2> > d_V;
     sc_in< sc_lv<4> > r_in_V;
     sc_out< sc_lv<2> > ap_return_0;
     sc_out< sc_lv<4> > ap_return_1;
-    sc_signal< sc_lv<1> > ap_var_for_const0;
-    sc_signal< sc_lv<1> > ap_var_for_const1;
 
 
     // Module declarations
@@ -34,35 +42,75 @@ struct lut_div9_chunk : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    kernel_seidel_2d_bkb<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1>* kernel_seidel_2d_bkb_U1;
-    kernel_seidel_2d_bkb<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1>* kernel_seidel_2d_bkb_U2;
-    kernel_seidel_2d_bkb<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1>* kernel_seidel_2d_bkb_U3;
-    kernel_seidel_2d_bkb<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1>* kernel_seidel_2d_bkb_U4;
-    kernel_seidel_2d_bkb<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1>* kernel_seidel_2d_bkb_U5;
-    kernel_seidel_2d_bkb<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1>* kernel_seidel_2d_bkb_U6;
-    sc_signal< sc_lv<6> > p_Result_8_fu_34_p3;
-    sc_signal< sc_lv<1> > agg_result_V_i6_fu_444_p66;
-    sc_signal< sc_lv<1> > agg_result_V_i4_fu_310_p66;
-    sc_signal< sc_lv<1> > agg_result_V_i2_fu_176_p66;
-    sc_signal< sc_lv<1> > agg_result_V_i_fu_42_p66;
-    sc_signal< sc_lv<1> > agg_result_V_i1_fu_724_p66;
-    sc_signal< sc_lv<1> > agg_result_V_i8_fu_590_p66;
-    sc_signal< sc_lv<2> > p_Result_1_fu_858_p3;
-    sc_signal< sc_lv<4> > p_Result_s_fu_578_p5;
+    lut_div9_chunk_r0* r0_U;
+    lut_div9_chunk_r1* r1_U;
+    lut_div9_chunk_r2* r2_U;
+    lut_div9_chunk_r3* r3_U;
+    lut_div9_chunk_q0* q0_U;
+    lut_div9_chunk_q1* q1_U;
+    sc_signal< sc_lv<2> > ap_CS_fsm;
+    sc_signal< sc_logic > ap_CS_fsm_state1;
+    sc_signal< sc_lv<6> > r0_address0;
+    sc_signal< sc_logic > r0_ce0;
+    sc_signal< sc_lv<1> > r0_q0;
+    sc_signal< sc_lv<6> > r1_address0;
+    sc_signal< sc_logic > r1_ce0;
+    sc_signal< sc_lv<1> > r1_q0;
+    sc_signal< sc_lv<6> > r2_address0;
+    sc_signal< sc_logic > r2_ce0;
+    sc_signal< sc_lv<1> > r2_q0;
+    sc_signal< sc_lv<6> > r3_address0;
+    sc_signal< sc_logic > r3_ce0;
+    sc_signal< sc_lv<1> > r3_q0;
+    sc_signal< sc_lv<6> > q0_address0;
+    sc_signal< sc_logic > q0_ce0;
+    sc_signal< sc_lv<1> > q0_q0;
+    sc_signal< sc_lv<6> > q1_address0;
+    sc_signal< sc_logic > q1_ce0;
+    sc_signal< sc_lv<1> > q1_q0;
+    sc_signal< sc_lv<64> > tmp_fu_128_p1;
+    sc_signal< sc_lv<6> > p_Result_3_fu_120_p3;
+    sc_signal< sc_logic > ap_CS_fsm_state2;
+    sc_signal< sc_lv<2> > p_Result_1_fu_150_p3;
+    sc_signal< sc_lv<4> > p_Result_s_fu_138_p5;
+    sc_signal< sc_lv<2> > ap_return_0_preg;
+    sc_signal< sc_lv<4> > ap_return_1_preg;
+    sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
-    static const bool ap_const_boolean_1;
-    static const sc_lv<1> ap_const_lv1_0;
-    static const sc_lv<1> ap_const_lv1_1;
     static const sc_logic ap_const_logic_0;
+    static const sc_lv<2> ap_ST_fsm_state1;
+    static const sc_lv<2> ap_ST_fsm_state2;
+    static const sc_lv<32> ap_const_lv32_0;
+    static const sc_lv<32> ap_const_lv32_1;
+    static const sc_lv<2> ap_const_lv2_0;
+    static const sc_lv<4> ap_const_lv4_0;
+    static const bool ap_const_boolean_1;
     // Thread declarations
-    void thread_ap_var_for_const0();
-    void thread_ap_var_for_const1();
+    void thread_ap_clk_no_reset_();
+    void thread_ap_CS_fsm_state1();
+    void thread_ap_CS_fsm_state2();
+    void thread_ap_done();
+    void thread_ap_idle();
     void thread_ap_ready();
     void thread_ap_return_0();
     void thread_ap_return_1();
-    void thread_p_Result_1_fu_858_p3();
-    void thread_p_Result_8_fu_34_p3();
-    void thread_p_Result_s_fu_578_p5();
+    void thread_p_Result_1_fu_150_p3();
+    void thread_p_Result_3_fu_120_p3();
+    void thread_p_Result_s_fu_138_p5();
+    void thread_q0_address0();
+    void thread_q0_ce0();
+    void thread_q1_address0();
+    void thread_q1_ce0();
+    void thread_r0_address0();
+    void thread_r0_ce0();
+    void thread_r1_address0();
+    void thread_r1_ce0();
+    void thread_r2_address0();
+    void thread_r2_ce0();
+    void thread_r3_address0();
+    void thread_r3_ce0();
+    void thread_tmp_fu_128_p1();
+    void thread_ap_NS_fsm();
 };
 
 }

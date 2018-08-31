@@ -14,21 +14,49 @@ namespace ap_rtl {
 
 const sc_logic div5::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic div5::ap_const_logic_0 = sc_dt::Log_0;
-const sc_lv<2> div5::ap_ST_fsm_state1 = "1";
-const sc_lv<2> div5::ap_ST_fsm_state2 = "10";
+const sc_lv<30> div5::ap_ST_fsm_state1 = "1";
+const sc_lv<30> div5::ap_ST_fsm_state2 = "10";
+const sc_lv<30> div5::ap_ST_fsm_state3 = "100";
+const sc_lv<30> div5::ap_ST_fsm_state4 = "1000";
+const sc_lv<30> div5::ap_ST_fsm_state5 = "10000";
+const sc_lv<30> div5::ap_ST_fsm_state6 = "100000";
+const sc_lv<30> div5::ap_ST_fsm_state7 = "1000000";
+const sc_lv<30> div5::ap_ST_fsm_state8 = "10000000";
+const sc_lv<30> div5::ap_ST_fsm_state9 = "100000000";
+const sc_lv<30> div5::ap_ST_fsm_state10 = "1000000000";
+const sc_lv<30> div5::ap_ST_fsm_state11 = "10000000000";
+const sc_lv<30> div5::ap_ST_fsm_state12 = "100000000000";
+const sc_lv<30> div5::ap_ST_fsm_state13 = "1000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state14 = "10000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state15 = "100000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state16 = "1000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state17 = "10000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state18 = "100000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state19 = "1000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state20 = "10000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state21 = "100000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state22 = "1000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state23 = "10000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state24 = "100000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state25 = "1000000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state26 = "10000000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state27 = "100000000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state28 = "1000000000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state29 = "10000000000000000000000000000";
+const sc_lv<30> div5::ap_ST_fsm_state30 = "100000000000000000000000000000";
 const sc_lv<32> div5::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_lv<32> div5::ap_const_lv32_40A00000 = "1000000101000000000000000000000";
-const sc_lv<32> div5::ap_const_lv32_1 = "1";
+const sc_lv<32> div5::ap_const_lv32_1D = "11101";
 const bool div5::ap_const_boolean_1 = true;
 
 div5::div5(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    div5_fdiv_32ns_32bkb_U1 = new div5_fdiv_32ns_32bkb<1,2,32,32,32>("div5_fdiv_32ns_32bkb_U1");
+    div5_fdiv_32ns_32bkb_U1 = new div5_fdiv_32ns_32bkb<1,30,32,32,32>("div5_fdiv_32ns_32bkb_U1");
     div5_fdiv_32ns_32bkb_U1->clk(ap_clk);
     div5_fdiv_32ns_32bkb_U1->reset(ap_rst);
     div5_fdiv_32ns_32bkb_U1->din0(a);
     div5_fdiv_32ns_32bkb_U1->din1(ap_var_for_const0);
     div5_fdiv_32ns_32bkb_U1->ce(ap_var_for_const1);
-    div5_fdiv_32ns_32bkb_U1->dout(grp_fu_28_p2);
+    div5_fdiv_32ns_32bkb_U1->dout(grp_fu_20_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -37,22 +65,22 @@ div5::div5(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_ap_CS_fsm_state1);
     sensitive << ( ap_CS_fsm );
 
-    SC_METHOD(thread_ap_CS_fsm_state2);
+    SC_METHOD(thread_ap_CS_fsm_state30);
     sensitive << ( ap_CS_fsm );
 
     SC_METHOD(thread_ap_done);
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state30 );
 
     SC_METHOD(thread_ap_idle);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state30 );
 
     SC_METHOD(thread_ap_return);
-    sensitive << ( grp_fu_28_p2 );
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( grp_fu_20_p2 );
+    sensitive << ( ap_CS_fsm_state30 );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_start );
@@ -66,7 +94,7 @@ div5::div5(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_THREAD(thread_ap_var_for_const0);
 
-    ap_CS_fsm = "01";
+    ap_CS_fsm = "000000000000000000000000000001";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "div5_sc_trace_" << apTFileNum ++;
@@ -87,8 +115,8 @@ div5::div5(sc_module_name name) : sc_module(name), mVcdFile(0) {
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, grp_fu_28_p2, "grp_fu_28_p2");
-    sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
+    sc_trace(mVcdFile, grp_fu_20_p2, "grp_fu_20_p2");
+    sc_trace(mVcdFile, ap_CS_fsm_state30, "ap_CS_fsm_state30");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
@@ -128,12 +156,12 @@ void div5::thread_ap_CS_fsm_state1() {
     ap_CS_fsm_state1 = ap_CS_fsm.read()[0];
 }
 
-void div5::thread_ap_CS_fsm_state2() {
-    ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
+void div5::thread_ap_CS_fsm_state30() {
+    ap_CS_fsm_state30 = ap_CS_fsm.read()[29];
 }
 
 void div5::thread_ap_done() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state30.read())) {
         ap_done = ap_const_logic_1;
     } else {
         ap_done = ap_const_logic_0;
@@ -150,7 +178,7 @@ void div5::thread_ap_idle() {
 }
 
 void div5::thread_ap_ready() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state30.read())) {
         ap_ready = ap_const_logic_1;
     } else {
         ap_ready = ap_const_logic_0;
@@ -158,7 +186,7 @@ void div5::thread_ap_ready() {
 }
 
 void div5::thread_ap_return() {
-    ap_return = grp_fu_28_p2.read();
+    ap_return = grp_fu_20_p2.read();
 }
 
 void div5::thread_ap_NS_fsm() {
@@ -171,10 +199,94 @@ void div5::thread_ap_NS_fsm() {
             }
             break;
         case 2 : 
+            ap_NS_fsm = ap_ST_fsm_state3;
+            break;
+        case 4 : 
+            ap_NS_fsm = ap_ST_fsm_state4;
+            break;
+        case 8 : 
+            ap_NS_fsm = ap_ST_fsm_state5;
+            break;
+        case 16 : 
+            ap_NS_fsm = ap_ST_fsm_state6;
+            break;
+        case 32 : 
+            ap_NS_fsm = ap_ST_fsm_state7;
+            break;
+        case 64 : 
+            ap_NS_fsm = ap_ST_fsm_state8;
+            break;
+        case 128 : 
+            ap_NS_fsm = ap_ST_fsm_state9;
+            break;
+        case 256 : 
+            ap_NS_fsm = ap_ST_fsm_state10;
+            break;
+        case 512 : 
+            ap_NS_fsm = ap_ST_fsm_state11;
+            break;
+        case 1024 : 
+            ap_NS_fsm = ap_ST_fsm_state12;
+            break;
+        case 2048 : 
+            ap_NS_fsm = ap_ST_fsm_state13;
+            break;
+        case 4096 : 
+            ap_NS_fsm = ap_ST_fsm_state14;
+            break;
+        case 8192 : 
+            ap_NS_fsm = ap_ST_fsm_state15;
+            break;
+        case 16384 : 
+            ap_NS_fsm = ap_ST_fsm_state16;
+            break;
+        case 32768 : 
+            ap_NS_fsm = ap_ST_fsm_state17;
+            break;
+        case 65536 : 
+            ap_NS_fsm = ap_ST_fsm_state18;
+            break;
+        case 131072 : 
+            ap_NS_fsm = ap_ST_fsm_state19;
+            break;
+        case 262144 : 
+            ap_NS_fsm = ap_ST_fsm_state20;
+            break;
+        case 524288 : 
+            ap_NS_fsm = ap_ST_fsm_state21;
+            break;
+        case 1048576 : 
+            ap_NS_fsm = ap_ST_fsm_state22;
+            break;
+        case 2097152 : 
+            ap_NS_fsm = ap_ST_fsm_state23;
+            break;
+        case 4194304 : 
+            ap_NS_fsm = ap_ST_fsm_state24;
+            break;
+        case 8388608 : 
+            ap_NS_fsm = ap_ST_fsm_state25;
+            break;
+        case 16777216 : 
+            ap_NS_fsm = ap_ST_fsm_state26;
+            break;
+        case 33554432 : 
+            ap_NS_fsm = ap_ST_fsm_state27;
+            break;
+        case 67108864 : 
+            ap_NS_fsm = ap_ST_fsm_state28;
+            break;
+        case 134217728 : 
+            ap_NS_fsm = ap_ST_fsm_state29;
+            break;
+        case 268435456 : 
+            ap_NS_fsm = ap_ST_fsm_state30;
+            break;
+        case 536870912 : 
             ap_NS_fsm = ap_ST_fsm_state1;
             break;
         default : 
-            ap_NS_fsm = "XX";
+            ap_NS_fsm = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
             break;
     }
 }

@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log kernel_seidel_2d_my_version.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_seidel_2d_my_version.tcl" );
+         "-log kernel_seidel_2d_optimized.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_seidel_2d_optimized.tcl" );
 
 
 

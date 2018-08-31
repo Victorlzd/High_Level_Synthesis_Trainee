@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Thu Aug  2 15:05:19 2018
+| Date         : Fri Aug 31 16:22:13 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file operator_int_div3_control_sets_placed.rpt
 | Design       : operator_int_div3
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     2 |
-| Unused register locations in slices containing registers |    10 |
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    14 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,9 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      4 |            1 |
-|    16+ |            1 |
+|      8 |            7 |
+|     12 |            2 |
+|    16+ |            2 |
 +--------+--------------+
 
 
@@ -47,21 +49,31 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               4 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              66 |           11 |
+| No           | Yes                   | No                     |              38 |            6 |
+| Yes          | No                    | No                     |             132 |           19 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              12 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------+---------------+------------------+------------------+----------------+
-| Clock Signal | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------+---------------+------------------+------------------+----------------+
-|  ap_clk      |               |                  |                1 |              4 |
-|  ap_clk      | ap_NS_fsm1    |                  |               11 |             66 |
-+--------------+---------------+------------------+------------------+----------------+
++--------------+------------------------------------------------------------+------------------+------------------+----------------+
+| Clock Signal |                        Enable Signal                       | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------------------------+------------------+------------------+----------------+
+|  ap_clk      |                                                            |                  |                1 |              4 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/q_chunk_V_1_reg_231_reg[0][0]     |                  |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/q_chunk_V_3_reg_241_reg[0][0]     |                  |                2 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/q_chunk_V_4_reg_246_reg[0][0]     |                  |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/q_chunk_V_5_reg_251_reg[0][0]     |                  |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/q_chunk_V_6_reg_256_reg[0][0]     |                  |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/q_chunk_V_reg_226_reg[0][0]       |                  |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/E[0]                              |                  |                2 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/q3_U/lut_div3_chunk_q3_rom_U/ce0  |                  |                3 |             12 |
+|  ap_clk      | grp_lut_div3_chunk_fu_66/grp_lut_div3_chunk_fu_66_ap_ready | ap_rst           |                3 |             12 |
+|  ap_clk      |                                                            | ap_rst           |                6 |             38 |
+|  ap_clk      | ap_NS_fsm16_out                                            |                  |                7 |             64 |
++--------------+------------------------------------------------------------+------------------+------------------+----------------+
 
 

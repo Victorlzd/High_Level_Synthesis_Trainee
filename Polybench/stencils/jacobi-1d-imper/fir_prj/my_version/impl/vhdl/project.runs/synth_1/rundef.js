@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log kernel_jacobi_1d_imper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_1d_imper.tcl" );
+         "-log kernel_jacobi_1d_imper_optimized.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_1d_imper_optimized.tcl" );
 
 
 

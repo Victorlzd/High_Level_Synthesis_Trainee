@@ -1,0 +1,3 @@
+<annotationInfo>
+<item  id="6" filename="test.cpp" linenumber="3" name="tmp" contextFuncName="div" moduleName="div" rtlName="div_ddiv_64ns_64nbkb_U1" latency="58" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"><\/item>
+</annotationInfo>

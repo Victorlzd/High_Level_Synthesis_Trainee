@@ -1,0 +1,105 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Aug 31 14:27:14 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_timing -file ./report/div_timing_synth.rpt
+| Design       : div
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.184ns  (required time - arrival time)
+  Source:                 div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.309ns  (logic 1.684ns (72.932%)  route 0.625ns (27.068%))
+  Logic Levels:           15  (CARRY4=14 LUT3=1)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.672ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6272, unset)         0.672     0.672    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
+                         FDRE                                         r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.281     0.953 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/Q
+                         net (fo=56, unplaced)        0.617     1.570    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53]
+                         LUT3 (Prop_lut3_I0_O)        0.153     1.723 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1__8/O
+                         net (fo=1, unplaced)         0.000     1.723    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/a_xor_b_sub_0[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.310     2.033 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.008     2.041    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.101 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.101    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.161 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.161    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[11].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.221 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.221    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.281 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.281    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.341 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.341    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.401 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.401    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.461 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.461    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[31].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.521 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[32].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.521    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[35].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.581 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[36].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.581    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[39].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.641 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[40].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.641    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[43].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.701 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[44].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.701    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[47].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.761 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[48].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     2.761    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[51].C_MUX.CARRY_MUX_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     2.981 r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[52].C_MUX.CARRY_MUX_CARRY4/O[1]
+                         net (fo=1, unplaced)         0.000     2.981    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/Q_DEL/i_pipe/D[53]
+                         FDRE                                         r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=6272, unset)         0.638     3.138    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/Q_DEL/i_pipe/aclk
+                         FDRE                                         r  div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+                         FDRE (Setup_fdre_C_D)        0.062     3.165    div_ddiv_64ns_64nbkb_U1/div_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
+  -------------------------------------------------------------------
+                         required time                          3.165    
+                         arrival time                          -2.981    
+  -------------------------------------------------------------------
+                         slack                                  0.184    
+
+
+
+

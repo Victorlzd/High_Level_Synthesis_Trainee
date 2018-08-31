@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'operator_double_div7'" level="0">
-<item name = "Date">Fri Aug  3 14:45:06 2018
+<item name = "Date">Fri Aug 31 15:30:12 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">operator_double_div</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 41.410, 0.62</column>
+<column name="ap_clk">2.50, 3.024, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,24 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 1, 1, 1, none</column>
+<column name="">68, 68, 68, 68, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_lut_div7_chunk_fu_151">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div7_chunk_fu_158">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div7_chunk_fu_164">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div7_chunk_fu_170">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div7_chunk_fu_176">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div7_chunk_fu_182">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div7_chunk_fu_188">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div7_chunk_fu_194">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="call_ret4_14_i_i_lut_div7_chunk_fu_200">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="call_ret4_15_i_i_lut_div7_chunk_fu_206">lut_div7_chunk, 0, 0, 0, 0, none</column>
-<column name="call_ret4_16_i_i_lut_div7_chunk_fu_212">lut_div7_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div7_chunk_fu_146">lut_div7_chunk, 1, 1, 1, 1, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

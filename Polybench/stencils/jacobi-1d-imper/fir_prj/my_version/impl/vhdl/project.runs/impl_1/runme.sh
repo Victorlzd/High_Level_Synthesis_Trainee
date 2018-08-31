@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/impl/vhdl/project.runs/impl_1'
+HD_PWD='/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/impl/vhdl/project.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log kernel_jacobi_1d_imper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_1d_imper.tcl -notrace
+EAStep vivado -log kernel_jacobi_1d_imper_optimized.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_1d_imper_optimized.tcl -notrace
 
 

@@ -17,4 +17,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("A_d1", 64, hls_out, 2, "ap_memory", "mem_din", 1),
 	Port_Property("A_q1", 64, hls_in, 2, "ap_memory", "mem_dout", 1),
 };
-const char* HLS_Design_Meta::dut_name = "kernel_seidel_2d_my_version";
+const char* HLS_Design_Meta::dut_name = "kernel_seidel_2d_optimized";

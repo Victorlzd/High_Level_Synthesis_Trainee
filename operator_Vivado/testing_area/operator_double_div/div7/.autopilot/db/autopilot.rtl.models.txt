@@ -1,8 +1,10 @@
+lut_div7_chunk_r0
+lut_div7_chunk_r1
+lut_div7_chunk_r2
+lut_div7_chunk_q0
+lut_div7_chunk_q1
+lut_div7_chunk_q2
 operator_double_dbkb
-operator_double_dbkb
-operator_double_dbkb
-operator_double_dbkb
-operator_double_dbkb
-operator_double_dbkb
+operator_double_dcud
 lut_div7_chunk
 operator_double_div7

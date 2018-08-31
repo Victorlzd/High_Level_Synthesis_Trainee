@@ -3,8 +3,8 @@
 
 # XDC: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/classic/impl/vhdl/kernel_fdtd_2d.xdc
 
-# IP: ip/kernel_fdtd_2d_ap_dmul_3_max_dsp_64/kernel_fdtd_2d_ap_dmul_3_max_dsp_64.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==kernel_fdtd_2d_ap_dmul_3_max_dsp_64 || ORIG_REF_NAME==kernel_fdtd_2d_ap_dmul_3_max_dsp_64} -quiet] -quiet
+# IP: ip/kernel_fdtd_2d_ap_dmul_16_max_dsp_64/kernel_fdtd_2d_ap_dmul_16_max_dsp_64.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==kernel_fdtd_2d_ap_dmul_16_max_dsp_64 || ORIG_REF_NAME==kernel_fdtd_2d_ap_dmul_16_max_dsp_64} -quiet] -quiet
 
-# IP: ip/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64 || ORIG_REF_NAME==kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64} -quiet] -quiet
+# IP: ip/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64 || ORIG_REF_NAME==kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64} -quiet] -quiet

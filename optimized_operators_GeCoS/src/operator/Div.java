@@ -81,8 +81,7 @@ public class Div {
 				proc_symbol = GecosUserCoreFactory.procSymbol(name, type_in_out, param_float_div3);
 				
 				CompositeBlock mainblock = GecosUserBlockFactory.CompositeBlock();
-				CompositeBlock mainblock2 = GecosUserBlockFactory.CompositeBlock();
-				GecosUserTypeFactory.setScope(mainblock2.getScope()); 
+				GecosUserTypeFactory.setScope(mainblock.getScope()); 
 				
 				// Variable definition
 				// ap_uint<1> s
@@ -104,15 +103,15 @@ public class Div {
 				// ap_uint<8> new_exp
 				Symbol div_exp_symbol = GecosUserCoreFactory.symbol("div_exp", GecosUserTypeFactory.ACINT(size_exp, false));
 				
-				mainblock2.addSymbol(s_symbol);
-				mainblock2.addSymbol(exp_symbol);
-				mainblock2.addSymbol(mant_symbol);
-				mainblock2.addSymbol(new_exp_symbol);
-				mainblock2.addSymbol(new_mant_symbol);
-				mainblock2.addSymbol(xf_symbol);
-				mainblock2.addSymbol(out_symbol);
-				mainblock2.addSymbol(shift_symbol);
-				mainblock2.addSymbol(div_exp_symbol);
+				mainblock.addSymbol(s_symbol);
+				mainblock.addSymbol(exp_symbol);
+				mainblock.addSymbol(mant_symbol);
+				mainblock.addSymbol(new_exp_symbol);
+				mainblock.addSymbol(new_mant_symbol);
+				mainblock.addSymbol(xf_symbol);
+				mainblock.addSymbol(out_symbol);
+				mainblock.addSymbol(shift_symbol);
+				mainblock.addSymbol(div_exp_symbol);
 				
 				BasicBlock bb_decompose = GecosUserBlockFactory.BBlock();
 				
@@ -331,18 +330,16 @@ public class Div {
 				bb_rebuild.addInstruction(ret_out);
 				
 				//GecosUserAnnotationFactory.pragma(mainblock2, "HLS latency max=1");
-				mainblock2.addBlock(bb_decompose);
-				mainblock2.addBlock(if_mant_lt_div_mant);
-				mainblock2.addBlock(if_div_exp_gt_exp);
-				mainblock2.addBlock(if_shift);
-				mainblock2.addBlock(if_shift_xf);
-				mainblock2.addBlock(if_not_subnorm);
-				mainblock2.addBlock(mant_compute_bb);
+				mainblock.addBlock(bb_decompose);
+				mainblock.addBlock(if_mant_lt_div_mant);
+				mainblock.addBlock(if_div_exp_gt_exp);
+				mainblock.addBlock(if_shift);
+				mainblock.addBlock(if_shift_xf);
+				mainblock.addBlock(if_not_subnorm);
+				mainblock.addBlock(mant_compute_bb);
+				mainblock.addBlock(if_inf_or_nan);
+				mainblock.addBlock(bb_rebuild);
 				
-				mainblock2.addBlock(if_inf_or_nan);
-				mainblock2.addBlock(bb_rebuild);
-				
-				mainblock.addBlock(mainblock2);
 	
 				GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
 				File_builder.add_operator(proc_symbol);	
@@ -628,7 +625,7 @@ public class Div {
 			// We compute the number of needed iterations
 			int it_number = size/width_chunk;
 
-			BasicBlock adjust_block = GecosUserBlockFactory.BBlock();
+			BasicBlock body = GecosUserBlockFactory.BBlock();
 			if(size%width_chunk != 0) // if the result isn't round we need to do one uncomplete step before the loop
 			{
 				Instruction[] args_d_range = {GecosUserInstructionFactory.Int(size-1), GecosUserInstructionFactory.Int(it_number*width_chunk)};
@@ -637,7 +634,7 @@ public class Div {
 						GecosUserInstructionFactory.symbref(d_symbol), args_d_range);
 				// d_chunk = d.range(size-1, it_number*width_chunk)
 				Instruction d_chunk_d_range = GecosUserInstructionFactory.set(d_chunk_symbol, d_range);
-				adjust_block.addInstruction(d_chunk_d_range);
+				body.addInstruction(d_chunk_d_range);
 
 				// (d_chunk, r, &q_chunk, &r)
 				Instruction[] args_lut_div = {GecosUserInstructionFactory.symbref(d_chunk_symbol), GecosUserInstructionFactory.symbref(r_symbol),
@@ -646,7 +643,7 @@ public class Div {
 				
 				// lut_div<div>(d_chunk, r, &q_chunk, &r)
 				Instruction call_lut_div = GecosUserInstructionFactory.call(lut_div_chunk(ps, div), args_lut_div);
-				adjust_block.addInstruction(call_lut_div);
+				body.addInstruction(call_lut_div);
 				
 				// (size-1, it_number*width_chunk)
 				Instruction[] args_q_range = {GecosUserInstructionFactory.Int(size-1), GecosUserInstructionFactory.Int(it_number*width_chunk)};
@@ -660,60 +657,39 @@ public class Div {
 						GecosUserInstructionFactory.symbref(q_chunk_symbol), args_q_chunk_range);
 				// q.range(i*4+3,i*4) = q_chunk.range(size-1-it_number*width_chunk, 0)
 				Instruction q_range_q_chunk = GecosUserInstructionFactory.set(q_range, q_chunk_range);
-				adjust_block.addInstruction(q_range_q_chunk);
+				body.addInstruction(q_range_q_chunk);
+			
 			}
 			
-
-			// begin for
-			// Initialization :
-			Instruction loop_init = GecosUserInstructionFactory.set(i_symbol, GecosUserInstructionFactory.Int(it_number-1));
-			// Condition : i>=0
-			Instruction i_ge_0 = GecosUserInstructionFactory.ge(GecosUserInstructionFactory.symbref(i_symbol), GecosUserInstructionFactory.Int(0));
-			// Step : i = i-1;
-			Instruction i_sub_1 = GecosUserInstructionFactory.set(i_symbol, GecosUserInstructionFactory.sub(
-					GecosUserInstructionFactory.symbref(i_symbol), GecosUserInstructionFactory.Int(1)));
 			
-			BasicBlock for_body_bb = GecosUserBlockFactory.BBlock();
-			// #pragma HLS unroll
-			//GecosUserAnnotationFactory.pragma(for_body_bb, "HLS unroll");
-			// i*width_chunk
-			Instruction i_mul_width_chunk = GecosUserInstructionFactory.mul(GecosUserInstructionFactory.symbref(i_symbol), GecosUserInstructionFactory.Int(width_chunk));
-			// (i*width_chunk+width_chunk-1,i*width_chunk)
-			Instruction[] args_d_range = {GecosUserInstructionFactory.add(i_mul_width_chunk.copy(), GecosUserInstructionFactory.Int(width_chunk-1)), i_mul_width_chunk.copy()};
-			// d.range(i*width_chunk+width_chunk-1,i*width_chunk)
-			Instruction d_range = GecosUserInstructionFactory.methodCallInstruction("range", 
-					GecosUserInstructionFactory.symbref(d_symbol), args_d_range);
-			// d_chunk = d.range(i*width_chunk+width_chunk-1,i*width_chunk)
-			Instruction d_chunk_d_range = GecosUserInstructionFactory.set(d_chunk_symbol, d_range);
-			for_body_bb.addInstruction(d_chunk_d_range);
-
-			// (d_chunk, r, &q_chunk, &r)
-			Instruction[] args_lut_div = {GecosUserInstructionFactory.symbref(d_chunk_symbol), GecosUserInstructionFactory.symbref(r_symbol),
+			for(int i = it_number-1; i>=0; i--)
+			{
+				Instruction[] args_d_range = {GecosUserInstructionFactory.Int(i*width_chunk+width_chunk-1), GecosUserInstructionFactory.Int(i*width_chunk)};
+				Instruction d_range = GecosUserInstructionFactory.methodCallInstruction("range", 
+						GecosUserInstructionFactory.symbref(d_symbol), args_d_range);
+				Instruction d_chunk_d_range = GecosUserInstructionFactory.set(d_chunk_symbol, d_range);
+				body.addInstruction(d_chunk_d_range);
+				
+				Instruction[] args_lut_div = {GecosUserInstructionFactory.symbref(d_chunk_symbol), GecosUserInstructionFactory.symbref(r_symbol),
 			              GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(q_chunk_symbol)),
 			              GecosUserInstructionFactory.address(GecosUserInstructionFactory.symbref(r_symbol))};
-			// lut_div3(d_chunk, r, &q_chunk, &r)
-			Instruction call_lut_div = GecosUserInstructionFactory.call(lut_div_chunk(ps, div), args_lut_div);
-			for_body_bb.addInstruction(call_lut_div);
+				// lut_div3(d_chunk, r, &q_chunk, &r)
+				Instruction call_lut_div = GecosUserInstructionFactory.call(lut_div_chunk(ps, div), args_lut_div);
+				body.addInstruction(call_lut_div);
+				
+				Instruction[] args_q_range = {GecosUserInstructionFactory.Int(i*width_chunk+width_chunk-1), GecosUserInstructionFactory.Int(i*width_chunk)};
+				
+				Instruction q_range = GecosUserInstructionFactory.methodCallInstruction("range", 
+						GecosUserInstructionFactory.symbref(q_symbol), args_q_range);
+				// q.range(i*width_chunk+width_chunk-1,i*width_chunk) = q_chunk
+				Instruction q_range_q_chunk = GecosUserInstructionFactory.set(q_range, GecosUserInstructionFactory.symbref(q_chunk_symbol));
+				body.addInstruction(q_range_q_chunk);
+			}
 			
-			// (i*width_chunk+width_chunk-1,i*width_chunk)
-			Instruction[] args_q_range = {GecosUserInstructionFactory.add(i_mul_width_chunk.copy(), GecosUserInstructionFactory.Int(width_chunk-1)), i_mul_width_chunk.copy()};
-			
-			Instruction q_range = GecosUserInstructionFactory.methodCallInstruction("range", 
-					GecosUserInstructionFactory.symbref(q_symbol), args_q_range);
-			// q.range(i*width_chunk+width_chunk-1,i*width_chunk) = q_chunk
-			Instruction q_range_q_chunk = GecosUserInstructionFactory.set(q_range, GecosUserInstructionFactory.symbref(q_chunk_symbol));
-			for_body_bb.addInstruction(q_range_q_chunk);
-
-			CompositeBlock for_body = GecosUserBlockFactory.CompositeBlock(for_body_bb);		
-			ForBlock for_block = GecosUserBlockFactory.For(loop_init, i_ge_0, i_sub_1, for_body);	
-			// end for
-
-			// return q
 			BasicBlock return_q = GecosUserBlockFactory.BBlock(GecosUserInstructionFactory.ret(GecosUserInstructionFactory.symbref(q_symbol)));
 			
 			mainblock.addChildren(bb_init);
-			mainblock.addChildren(adjust_block);
-			mainblock.addChildren(for_block);
+			mainblock.addChildren(body);
 			mainblock.addChildren(return_q);
 			GecosUserCoreFactory.proc(ps, proc_symbol, mainblock);
 			

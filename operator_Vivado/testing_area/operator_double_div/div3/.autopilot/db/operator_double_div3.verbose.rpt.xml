@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'operator_double_div3'" level="0">
-<item name = "Date">Fri Aug  3 14:28:30 2018
+<item name = "Date">Fri Aug 31 15:13:40 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">operator_double_div</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 29.069, 0.62</column>
+<column name="ap_clk">2.50, 2.344, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,21 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 1, 1, 1, none</column>
+<column name="">52, 52, 52, 52, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_lut_div3_chunk_fu_127">lut_div3_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div3_chunk_fu_134">lut_div3_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div3_chunk_fu_140">lut_div3_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div3_chunk_fu_146">lut_div3_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div3_chunk_fu_152">lut_div3_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div3_chunk_fu_158">lut_div3_chunk, 0, 0, 0, 0, none</column>
-<column name="call_ret4_10_i_i_lut_div3_chunk_fu_164">lut_div3_chunk, 0, 0, 0, 0, none</column>
-<column name="call_ret4_11_i_i_lut_div3_chunk_fu_170">lut_div3_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div3_chunk_fu_122">lut_div3_chunk, 1, 1, 1, 1, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -55,28 +48,23 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 697</column>
+<column name="Expression">-, -, 0, 427</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, -, 0, 13104</column>
+<column name="Instance">0, -, 1058, 913</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 138</column>
-<column name="Register">-, -, 121, -</column>
+<column name="Multiplexer">-, -, -, 254</column>
+<column name="Register">-, -, 424, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, 13</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_lut_div3_chunk_fu_127">lut_div3_chunk, 0, 0, 0, 1638</column>
-<column name="grp_lut_div3_chunk_fu_134">lut_div3_chunk, 0, 0, 0, 1638</column>
-<column name="grp_lut_div3_chunk_fu_140">lut_div3_chunk, 0, 0, 0, 1638</column>
-<column name="grp_lut_div3_chunk_fu_146">lut_div3_chunk, 0, 0, 0, 1638</column>
-<column name="grp_lut_div3_chunk_fu_152">lut_div3_chunk, 0, 0, 0, 1638</column>
-<column name="grp_lut_div3_chunk_fu_158">lut_div3_chunk, 0, 0, 0, 1638</column>
-<column name="call_ret4_10_i_i_lut_div3_chunk_fu_164">lut_div3_chunk, 0, 0, 0, 1638</column>
-<column name="call_ret4_11_i_i_lut_div3_chunk_fu_170">lut_div3_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div3_chunk_fu_122">lut_div3_chunk, 0, 0, 14, 39</column>
+<column name="operator_double_dbkb_U9">operator_double_dbkb, 0, 0, 522, 437</column>
+<column name="operator_double_dcud_U10">operator_double_dcud, 0, 0, 522, 437</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -93,68 +81,86 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="shift_V_1_fu_346_p2">+, 0, 0, 18, 2, 11</column>
-<column name="xf_V_fu_458_p2">+, 0, 0, 62, 1, 55</column>
-<column name="new_exp_V_1_fu_284_p2">-, 0, 0, 18, 11, 11</column>
-<column name="shift_V_fu_340_p2">-, 0, 0, 18, 1, 11</column>
-<column name="sel_tmp4_fu_364_p2">and, 0, 0, 6, 1, 1</column>
-<column name="sel_tmp8_fu_392_p2">and, 0, 0, 6, 1, 1</column>
-<column name="icmp_fu_334_p2">icmp, 0, 0, 13, 10, 1</column>
-<column name="tmp_1_fu_272_p2">icmp, 0, 0, 13, 11, 2</column>
-<column name="tmp_2_fu_278_p2">icmp, 0, 0, 13, 11, 11</column>
-<column name="tmp_4_fu_312_p2">icmp, 0, 0, 13, 11, 1</column>
-<column name="tmp_5_fu_318_p2">icmp, 0, 0, 13, 11, 11</column>
-<column name="r_V_3_fu_434_p2">lshr, 0, 0, 160, 53, 53</column>
-<column name="sel_tmp3_demorgan_fu_352_p2">or, 0, 0, 6, 1, 1</column>
-<column name="tmp_7_fu_298_p2">or, 0, 0, 6, 1, 1</column>
+<column name="shift_V_1_fu_226_p2">+, 0, 0, 18, 2, 11</column>
+<column name="xf_V_8_fu_356_p2">+, 0, 0, 62, 1, 55</column>
+<column name="new_exp_V_fu_236_p2">-, 0, 0, 18, 11, 11</column>
+<column name="shift_V_fu_220_p2">-, 0, 0, 18, 1, 11</column>
+<column name="sel_tmp3_fu_250_p2">and, 0, 0, 6, 1, 1</column>
+<column name="sel_tmp7_fu_273_p2">and, 0, 0, 6, 1, 1</column>
+<column name="icmp_fu_214_p2">icmp, 0, 0, 13, 10, 1</column>
+<column name="tmp_1_fu_232_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="tmp_2_fu_285_p2">icmp, 0, 0, 13, 11, 2</column>
+<column name="tmp_3_fu_192_p2">icmp, 0, 0, 13, 11, 1</column>
+<column name="tmp_4_fu_198_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="sel_tmp2_demorgan_fu_240_p2">or, 0, 0, 6, 1, 1</column>
+<column name="tmp_6_fu_298_p2">or, 0, 0, 6, 1, 1</column>
 <column name="p_Repl2_1_fu_304_p3">select, 0, 0, 11, 1, 11</column>
-<column name="p_new_exp_V_1_fu_290_p3">select, 0, 0, 2, 1, 2</column>
-<column name="shift_V_2_fu_370_p3">select, 0, 0, 11, 1, 11</column>
-<column name="shift_V_3_fu_378_p3">select, 0, 0, 11, 1, 1</column>
-<column name="shift_V_4_fu_398_p3">select, 0, 0, 11, 1, 11</column>
-<column name="shift_V_cast_cast_fu_264_p3">select, 0, 0, 2, 1, 1</column>
-<column name="xf_V_1_fu_414_p3">select, 0, 0, 53, 1, 53</column>
-<column name="xf_V_3_fu_450_p3">select, 0, 0, 55, 1, 55</column>
-<column name="r_V_4_fu_444_p2">shl, 0, 0, 164, 55, 55</column>
-<column name="sel_tmp3_fu_358_p2">xor, 0, 0, 6, 1, 2</column>
-<column name="sel_tmp7_fu_386_p2">xor, 0, 0, 6, 1, 2</column>
+<column name="p_Repl2_s_fu_570_p3">select, 0, 0, 52, 1, 52</column>
+<column name="p_s_fu_290_p3">select, 0, 0, 2, 1, 2</column>
+<column name="shift_V_2_fu_255_p3">select, 0, 0, 11, 1, 11</column>
+<column name="shift_V_3_fu_261_p3">select, 0, 0, 11, 1, 1</column>
+<column name="shift_V_4_fu_278_p3">select, 0, 0, 11, 1, 11</column>
+<column name="shift_V_cast_cast_fu_184_p3">select, 0, 0, 2, 1, 1</column>
+<column name="xf_V_5_fu_350_p3">select, 0, 0, 55, 1, 55</column>
+<column name="xf_V_7_fu_335_p3">select, 0, 0, 55, 1, 55</column>
+<column name="sel_tmp2_fu_244_p2">xor, 0, 0, 6, 1, 2</column>
+<column name="sel_tmp6_fu_268_p2">xor, 0, 0, 6, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">15, 3, 1, 3</column>
-<column name="ap_phi_mux_p_Repl2_s_phi_fu_121_p4">9, 2, 52, 104</column>
-<column name="grp_lut_div3_chunk_fu_127_d_V">15, 3, 4, 12</column>
-<column name="grp_lut_div3_chunk_fu_127_r_in_V">15, 3, 2, 6</column>
-<column name="grp_lut_div3_chunk_fu_134_d_V">15, 3, 4, 12</column>
-<column name="grp_lut_div3_chunk_fu_140_d_V">15, 3, 4, 12</column>
-<column name="grp_lut_div3_chunk_fu_146_d_V">15, 3, 4, 12</column>
-<column name="grp_lut_div3_chunk_fu_152_d_V">15, 3, 4, 12</column>
-<column name="grp_lut_div3_chunk_fu_158_d_V">15, 3, 4, 12</column>
-<column name="p_Repl2_s_reg_118">9, 2, 52, 104</column>
+<column name="ap_NS_fsm">177, 40, 1, 40</column>
+<column name="grp_lut_div3_chunk_fu_122_d_V">62, 15, 4, 60</column>
+<column name="grp_lut_div3_chunk_fu_122_r_in_V">15, 3, 2, 6</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">2, 0, 2, 0</column>
-<column name="p_Repl2_1_reg_677">11, 0, 11, 0</column>
-<column name="p_Repl2_2_reg_663">1, 0, 1, 0</column>
-<column name="p_Repl2_s_reg_118">52, 0, 52, 0</column>
-<column name="p_Result_22_10_i_i_reg_742">4, 0, 4, 0</column>
-<column name="p_Result_22_5_i_i_reg_712">4, 0, 4, 0</column>
-<column name="p_Result_22_6_i_i_reg_717">4, 0, 4, 0</column>
-<column name="p_Result_22_7_i_i_reg_722">4, 0, 4, 0</column>
-<column name="p_Result_22_8_i_i_reg_727">4, 0, 4, 0</column>
-<column name="p_Result_22_9_i_i_reg_732">4, 0, 4, 0</column>
-<column name="p_Result_22_i_i_8_reg_737">4, 0, 4, 0</column>
-<column name="q_chunk_V_ret2_1_i_i_reg_687">4, 0, 4, 0</column>
-<column name="q_chunk_V_ret2_2_i_i_reg_692">4, 0, 4, 0</column>
-<column name="q_chunk_V_ret2_3_i_i_reg_697">4, 0, 4, 0</column>
-<column name="q_chunk_V_ret2_4_i_i_reg_702">4, 0, 4, 0</column>
-<column name="q_chunk_V_ret2_i_i_reg_682">4, 0, 4, 0</column>
-<column name="r_V_ret3_4_i_i_reg_707">2, 0, 2, 0</column>
-<column name="tmp_1_reg_673">1, 0, 1, 0</column>
-<column name="tmp_9_reg_747">4, 0, 4, 0</column>
+<column name="ap_CS_fsm">39, 0, 39, 0</column>
+<column name="call_ret10_i_i_reg_806_0">4, 0, 4, 0</column>
+<column name="call_ret11_i_i_reg_811_0">4, 0, 4, 0</column>
+<column name="call_ret12_i_i_reg_816_0">4, 0, 4, 0</column>
+<column name="call_ret13_i_i_reg_821_0">4, 0, 4, 0</column>
+<column name="call_ret2_i_i_reg_766_0">4, 0, 4, 0</column>
+<column name="call_ret3_i_i_reg_771_0">4, 0, 4, 0</column>
+<column name="call_ret4_i_i_reg_776_0">4, 0, 4, 0</column>
+<column name="call_ret5_i_i_reg_781_0">4, 0, 4, 0</column>
+<column name="call_ret6_i_i_reg_786_0">4, 0, 4, 0</column>
+<column name="call_ret7_i_i_reg_791_0">4, 0, 4, 0</column>
+<column name="call_ret8_i_i_reg_796_0">4, 0, 4, 0</column>
+<column name="call_ret9_i_i_reg_801_0">4, 0, 4, 0</column>
+<column name="d_chunk_V_10_reg_741">4, 0, 4, 0</column>
+<column name="d_chunk_V_11_reg_746">4, 0, 4, 0</column>
+<column name="d_chunk_V_12_reg_751">4, 0, 4, 0</column>
+<column name="d_chunk_V_13_reg_756">4, 0, 4, 0</column>
+<column name="d_chunk_V_1_reg_696">4, 0, 4, 0</column>
+<column name="d_chunk_V_2_reg_701">4, 0, 4, 0</column>
+<column name="d_chunk_V_3_reg_706">4, 0, 4, 0</column>
+<column name="d_chunk_V_4_reg_711">4, 0, 4, 0</column>
+<column name="d_chunk_V_5_reg_716">4, 0, 4, 0</column>
+<column name="d_chunk_V_6_reg_721">4, 0, 4, 0</column>
+<column name="d_chunk_V_7_reg_726">4, 0, 4, 0</column>
+<column name="d_chunk_V_8_reg_731">4, 0, 4, 0</column>
+<column name="d_chunk_V_9_reg_736">4, 0, 4, 0</column>
+<column name="d_chunk_V_reg_761">3, 0, 4, 1</column>
+<column name="grp_lut_div3_chunk_fu_122_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_reg_628">1, 0, 1, 0</column>
+<column name="new_exp_V_1_reg_593">11, 0, 11, 0</column>
+<column name="new_mant_V_1_reg_600">52, 0, 52, 0</column>
+<column name="p_Repl2_1_reg_655">11, 0, 11, 0</column>
+<column name="p_Repl2_2_reg_588">1, 0, 1, 0</column>
+<column name="p_Result_i_i_reg_691">3, 0, 3, 0</column>
+<column name="r_V_15_reg_675">52, 0, 52, 0</column>
+<column name="r_V_16_reg_680">55, 0, 55, 0</column>
+<column name="reg_145">2, 0, 2, 0</column>
+<column name="shift_V_1_reg_639">11, 0, 11, 0</column>
+<column name="shift_V_4_reg_644">11, 0, 11, 0</column>
+<column name="shift_V_cast_cast_reg_607">2, 0, 11, 9</column>
+<column name="shift_V_reg_634">11, 0, 11, 0</column>
+<column name="tmp_2_reg_650">1, 0, 1, 0</column>
+<column name="tmp_3_reg_614">1, 0, 1, 0</column>
+<column name="tmp_4_reg_622">1, 0, 1, 0</column>
+<column name="xf_V_7_reg_685">55, 0, 55, 0</column>
 </table>
 </item>
 </section>

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"kernel_seidel_2d_optimized": {
+			"proto_instances": {
+			}
+		}
+	}
+}

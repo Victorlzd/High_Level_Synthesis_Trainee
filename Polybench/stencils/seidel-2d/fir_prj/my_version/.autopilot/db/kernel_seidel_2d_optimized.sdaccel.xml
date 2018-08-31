@@ -1,0 +1,235 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kernel_seidel_2d_optimized'" level="0">
+<item name = "Date">Fri Aug 31 21:59:55 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">fir_prj</item>
+<item name = "Solution">my_version</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">2.50</item>
+<item name = "Clock uncertainty (ns)">0.31</item>
+<item name = "Estimated clock period (ns)">3.531</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">4362617321, 4362617321, 4362617321, 4362617321, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_int_57_div9_fu_206">int_57_div9, 86, 86, 86, 86, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">4362617320, 4362617320, 218130866, -, -, 20, no</column>
+<column name=" + Loop 1.1">218130864, 218130864, 218568, -, -, 998, no</column>
+<column name="  ++ Loop 1.1.1">218562, 218562, 219, -, -, 998, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, 3, -, -</column>
+<column name="Expression">-, -, 0, 806</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 0, 2515, 2148</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 761</column>
+<column name="Register">-, -, 1096, -</column>
+<specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, 1, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_int_57_div9_fu_206">int_57_div9, 0, 0, 246, 453</column>
+<column name="kernel_seidel_2d_bkb_U10">kernel_seidel_2d_bkb, 0, 0, 1225, 821</column>
+<column name="kernel_seidel_2d_cud_U11">kernel_seidel_2d_cud, 0, 0, 522, 437</column>
+<column name="kernel_seidel_2d_dEe_U12">kernel_seidel_2d_dEe, 0, 0, 522, 437</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="kernel_seidel_2d_eOg_U13">kernel_seidel_2d_eOg, i0 * i1</column>
+<column name="kernel_seidel_2d_eOg_U14">kernel_seidel_2d_eOg, i0 * i1</column>
+<column name="kernel_seidel_2d_eOg_U15">kernel_seidel_2d_eOg, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_1_fu_263_p2">+, 0, 0, 17, 10, 1</column>
+<column name="j_1_fu_316_p2">+, 0, 0, 17, 1, 10</column>
+<column name="shift_V_1_fu_462_p2">+, 0, 0, 18, 2, 11</column>
+<column name="t_1_fu_245_p2">+, 0, 0, 15, 5, 1</column>
+<column name="tmp_14_fu_303_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_15_fu_346_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_16_fu_350_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_17_fu_325_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_18_fu_354_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_19_fu_358_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_5_fu_285_p2">+, 0, 0, 17, 2, 10</column>
+<column name="tmp_6_fu_294_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_7_fu_334_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_9_fu_342_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_fu_257_p2">+, 0, 0, 17, 10, 2</column>
+<column name="xf_V_6_fu_569_p2">+, 0, 0, 64, 3, 57</column>
+<column name="new_exp_V_fu_471_p2">-, 0, 0, 18, 11, 11</column>
+<column name="shift_V_fu_457_p2">-, 0, 0, 18, 1, 11</column>
+<column name="sel_tmp3_i_fu_485_p2">and, 0, 0, 6, 1, 1</column>
+<column name="sel_tmp7_i_fu_508_p2">and, 0, 0, 6, 1, 1</column>
+<column name="exitcond1_fu_251_p2">icmp, 0, 0, 13, 10, 6</column>
+<column name="exitcond2_fu_239_p2">icmp, 0, 0, 11, 5, 5</column>
+<column name="exitcond_fu_279_p2">icmp, 0, 0, 13, 10, 6</column>
+<column name="icmp3_fu_434_p2">icmp, 0, 0, 13, 10, 1</column>
+<column name="icmp_fu_418_p2">icmp, 0, 0, 9, 3, 1</column>
+<column name="tmp_1_i_fu_467_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="tmp_2_i_fu_520_p2">icmp, 0, 0, 13, 11, 2</column>
+<column name="tmp_3_i_fu_447_p2">icmp, 0, 0, 13, 11, 1</column>
+<column name="tmp_4_i_fu_452_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="sel_tmp2_demorgan_i_fu_475_p2">or, 0, 0, 6, 1, 1</column>
+<column name="tmp_6_i_fu_587_p2">or, 0, 0, 6, 1, 1</column>
+<column name="p_Repl2_1_fu_591_p3">select, 0, 0, 11, 1, 11</column>
+<column name="p_Repl2_s_fu_598_p3">select, 0, 0, 52, 1, 52</column>
+<column name="p_i_fu_580_p3">select, 0, 0, 2, 1, 2</column>
+<column name="shift_V_2_fu_490_p3">select, 0, 0, 11, 1, 11</column>
+<column name="shift_V_3_fu_496_p3">select, 0, 0, 11, 1, 1</column>
+<column name="shift_V_4_fu_513_p3">select, 0, 0, 11, 1, 11</column>
+<column name="shift_V_i_cast_cast_fu_440_p3">select, 0, 0, 3, 1, 3</column>
+<column name="xf_V_5_fu_563_p3">select, 0, 0, 57, 1, 57</column>
+<column name="xf_V_7_fu_548_p3">select, 0, 0, 57, 1, 57</column>
+<column name="sel_tmp2_i_fu_479_p2">xor, 0, 0, 6, 1, 2</column>
+<column name="sel_tmp6_i_fu_503_p2">xor, 0, 0, 6, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="A_address0">33, 6, 20, 120</column>
+<column name="A_address1">33, 6, 20, 120</column>
+<column name="ap_NS_fsm">629, 141, 1, 141</column>
+<column name="grp_fu_223_p0">15, 3, 64, 192</column>
+<column name="grp_fu_223_p1">15, 3, 64, 192</column>
+<column name="i_reg_182">9, 2, 10, 20</column>
+<column name="j_reg_194">9, 2, 10, 20</column>
+<column name="reg_227">9, 2, 64, 128</column>
+<column name="t_reg_171">9, 2, 5, 10</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="A_addr_4_reg_794">20, 0, 20, 0</column>
+<column name="A_load_1_reg_732">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">140, 0, 140, 0</column>
+<column name="grp_int_57_div9_fu_206_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_650">10, 0, 10, 0</column>
+<column name="i_reg_182">10, 0, 10, 0</column>
+<column name="icmp3_reg_848">1, 0, 1, 0</column>
+<column name="icmp_reg_843">1, 0, 1, 0</column>
+<column name="j_1_reg_737">10, 0, 10, 0</column>
+<column name="j_reg_194">10, 0, 10, 0</column>
+<column name="new_exp_V_1_reg_825">11, 0, 11, 0</column>
+<column name="new_exp_V_reg_890">11, 0, 11, 0</column>
+<column name="new_mant_V_1_reg_836">52, 0, 52, 0</column>
+<column name="p_Repl2_1_reg_944">11, 0, 11, 0</column>
+<column name="p_Repl2_2_reg_820">1, 0, 1, 0</column>
+<column name="p_Repl2_s_reg_949">52, 0, 52, 0</column>
+<column name="r_V_1_reg_928">57, 0, 57, 0</column>
+<column name="r_V_reg_923">52, 0, 52, 0</column>
+<column name="reg_227">64, 0, 64, 0</column>
+<column name="reg_234">64, 0, 64, 0</column>
+<column name="shift_V_1_reg_880">11, 0, 11, 0</column>
+<column name="shift_V_4_reg_895">11, 0, 11, 0</column>
+<column name="shift_V_i_cast_cast_reg_854">3, 0, 11, 8</column>
+<column name="shift_V_reg_875">11, 0, 11, 0</column>
+<column name="t_1_reg_637">5, 0, 5, 0</column>
+<column name="t_reg_171">5, 0, 5, 0</column>
+<column name="tmp_14_reg_717">20, 0, 20, 0</column>
+<column name="tmp_15_reg_774">20, 0, 20, 0</column>
+<column name="tmp_16_reg_779">20, 0, 20, 0</column>
+<column name="tmp_17_reg_749">20, 0, 20, 0</column>
+<column name="tmp_18_reg_784">20, 0, 20, 0</column>
+<column name="tmp_19_reg_789">20, 0, 20, 0</column>
+<column name="tmp_1_i_reg_885">1, 0, 1, 0</column>
+<column name="tmp_2_i_reg_901">1, 0, 1, 0</column>
+<column name="tmp_3_i_reg_861">1, 0, 1, 0</column>
+<column name="tmp_3_reg_678">20, 0, 20, 0</column>
+<column name="tmp_4_i_reg_869">1, 0, 1, 0</column>
+<column name="tmp_4_reg_685">20, 0, 20, 0</column>
+<column name="tmp_5_reg_695">10, 0, 10, 0</column>
+<column name="tmp_6_cast_reg_700">10, 0, 20, 10</column>
+<column name="tmp_6_reg_706">20, 0, 20, 0</column>
+<column name="tmp_7_cast_reg_711">10, 0, 20, 10</column>
+<column name="tmp_7_reg_759">20, 0, 20, 0</column>
+<column name="tmp_9_cast_reg_743">10, 0, 20, 10</column>
+<column name="tmp_9_reg_769">20, 0, 20, 0</column>
+<column name="tmp_reg_645">10, 0, 10, 0</column>
+<column name="tmp_s_reg_671">20, 0, 20, 0</column>
+<column name="xf_V_6_reg_939">57, 0, 57, 0</column>
+<column name="xf_V_7_reg_933">57, 0, 57, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, kernel_seidel_2d_optimized, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, kernel_seidel_2d_optimized, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, kernel_seidel_2d_optimized, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, kernel_seidel_2d_optimized, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, kernel_seidel_2d_optimized, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, kernel_seidel_2d_optimized, return value</column>
+<column name="tsteps">in, 32, ap_none, tsteps, scalar</column>
+<column name="n">in, 32, ap_none, n, scalar</column>
+<column name="A_address0">out, 20, ap_memory, A, array</column>
+<column name="A_ce0">out, 1, ap_memory, A, array</column>
+<column name="A_q0">in, 64, ap_memory, A, array</column>
+<column name="A_address1">out, 20, ap_memory, A, array</column>
+<column name="A_ce1">out, 1, ap_memory, A, array</column>
+<column name="A_we1">out, 1, ap_memory, A, array</column>
+<column name="A_d1">out, 64, ap_memory, A, array</column>
+<column name="A_q1">in, 64, ap_memory, A, array</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">2.29</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'xf.V', seidel-2d.cpp:215->seidel-2d.cpp:295">zext, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'r.V', seidel-2d.cpp:235->seidel-2d.cpp:295">shl, 2.29, 2.29, -, -, -, -, -, -, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

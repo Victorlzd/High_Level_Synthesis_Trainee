@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../test_int_div3.cpp in debug mode
+   Compiling ../../../../int_div3.cpp in debug mode
+   Generating csim.exe
+i = 0
+i = 100
+i = 200
+i = 300
+i = 400
+i = 500
+i = 600
+i = 700
+i = 800
+i = 900
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

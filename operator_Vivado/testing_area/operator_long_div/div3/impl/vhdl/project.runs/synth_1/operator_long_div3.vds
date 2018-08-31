@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Aug  3 11:23:17 2018
-# Process ID: 10952
+# Start of session at: Fri Aug 31 16:49:41 2018
+# Process ID: 4590
 # Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/project.runs/synth_1
 # Command line: vivado -log operator_long_div3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_long_div3.tcl
 # Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/project.runs/synth_1/operator_long_div3.vds
@@ -15,511 +15,155 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10961 
+INFO: Helper process launched with PID 4598 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1266.355 ; gain = 80.895 ; free physical = 1300 ; free virtual = 10454
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.355 ; gain = 80.895 ; free physical = 1687 ; free virtual = 9310
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'operator_long_div3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:25]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:68]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:71]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:124]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_94' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:140]
-INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:22]
-	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 1 - type: integer 
-	Parameter din0_WIDTH bound to: 1 - type: integer 
-	Parameter din1_WIDTH bound to: 1 - type: integer 
-	Parameter din2_WIDTH bound to: 1 - type: integer 
-	Parameter din3_WIDTH bound to: 1 - type: integer 
-	Parameter din4_WIDTH bound to: 1 - type: integer 
-	Parameter din5_WIDTH bound to: 1 - type: integer 
-	Parameter din6_WIDTH bound to: 1 - type: integer 
-	Parameter din7_WIDTH bound to: 1 - type: integer 
-	Parameter din8_WIDTH bound to: 1 - type: integer 
-	Parameter din9_WIDTH bound to: 1 - type: integer 
-	Parameter din10_WIDTH bound to: 1 - type: integer 
-	Parameter din11_WIDTH bound to: 1 - type: integer 
-	Parameter din12_WIDTH bound to: 1 - type: integer 
-	Parameter din13_WIDTH bound to: 1 - type: integer 
-	Parameter din14_WIDTH bound to: 1 - type: integer 
-	Parameter din15_WIDTH bound to: 1 - type: integer 
-	Parameter din16_WIDTH bound to: 1 - type: integer 
-	Parameter din17_WIDTH bound to: 1 - type: integer 
-	Parameter din18_WIDTH bound to: 1 - type: integer 
-	Parameter din19_WIDTH bound to: 1 - type: integer 
-	Parameter din20_WIDTH bound to: 1 - type: integer 
-	Parameter din21_WIDTH bound to: 1 - type: integer 
-	Parameter din22_WIDTH bound to: 1 - type: integer 
-	Parameter din23_WIDTH bound to: 1 - type: integer 
-	Parameter din24_WIDTH bound to: 1 - type: integer 
-	Parameter din25_WIDTH bound to: 1 - type: integer 
-	Parameter din26_WIDTH bound to: 1 - type: integer 
-	Parameter din27_WIDTH bound to: 1 - type: integer 
-	Parameter din28_WIDTH bound to: 1 - type: integer 
-	Parameter din29_WIDTH bound to: 1 - type: integer 
-	Parameter din30_WIDTH bound to: 1 - type: integer 
-	Parameter din31_WIDTH bound to: 1 - type: integer 
-	Parameter din32_WIDTH bound to: 1 - type: integer 
-	Parameter din33_WIDTH bound to: 1 - type: integer 
-	Parameter din34_WIDTH bound to: 1 - type: integer 
-	Parameter din35_WIDTH bound to: 1 - type: integer 
-	Parameter din36_WIDTH bound to: 1 - type: integer 
-	Parameter din37_WIDTH bound to: 1 - type: integer 
-	Parameter din38_WIDTH bound to: 1 - type: integer 
-	Parameter din39_WIDTH bound to: 1 - type: integer 
-	Parameter din40_WIDTH bound to: 1 - type: integer 
-	Parameter din41_WIDTH bound to: 1 - type: integer 
-	Parameter din42_WIDTH bound to: 1 - type: integer 
-	Parameter din43_WIDTH bound to: 1 - type: integer 
-	Parameter din44_WIDTH bound to: 1 - type: integer 
-	Parameter din45_WIDTH bound to: 1 - type: integer 
-	Parameter din46_WIDTH bound to: 1 - type: integer 
-	Parameter din47_WIDTH bound to: 1 - type: integer 
-	Parameter din48_WIDTH bound to: 1 - type: integer 
-	Parameter din49_WIDTH bound to: 1 - type: integer 
-	Parameter din50_WIDTH bound to: 1 - type: integer 
-	Parameter din51_WIDTH bound to: 1 - type: integer 
-	Parameter din52_WIDTH bound to: 1 - type: integer 
-	Parameter din53_WIDTH bound to: 1 - type: integer 
-	Parameter din54_WIDTH bound to: 1 - type: integer 
-	Parameter din55_WIDTH bound to: 1 - type: integer 
-	Parameter din56_WIDTH bound to: 1 - type: integer 
-	Parameter din57_WIDTH bound to: 1 - type: integer 
-	Parameter din58_WIDTH bound to: 1 - type: integer 
-	Parameter din59_WIDTH bound to: 1 - type: integer 
-	Parameter din60_WIDTH bound to: 1 - type: integer 
-	Parameter din61_WIDTH bound to: 1 - type: integer 
-	Parameter din62_WIDTH bound to: 1 - type: integer 
-	Parameter din63_WIDTH bound to: 1 - type: integer 
-	Parameter din64_WIDTH bound to: 6 - type: integer 
-	Parameter dout_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'operator_long_divbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:13' bound to instance 'operator_long_divbkb_U1' of component 'operator_long_divbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:181]
-INFO: [Synth 8-638] synthesizing module 'operator_long_divbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:152]
-	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 1 - type: integer 
-	Parameter din0_WIDTH bound to: 1 - type: integer 
-	Parameter din1_WIDTH bound to: 1 - type: integer 
-	Parameter din2_WIDTH bound to: 1 - type: integer 
-	Parameter din3_WIDTH bound to: 1 - type: integer 
-	Parameter din4_WIDTH bound to: 1 - type: integer 
-	Parameter din5_WIDTH bound to: 1 - type: integer 
-	Parameter din6_WIDTH bound to: 1 - type: integer 
-	Parameter din7_WIDTH bound to: 1 - type: integer 
-	Parameter din8_WIDTH bound to: 1 - type: integer 
-	Parameter din9_WIDTH bound to: 1 - type: integer 
-	Parameter din10_WIDTH bound to: 1 - type: integer 
-	Parameter din11_WIDTH bound to: 1 - type: integer 
-	Parameter din12_WIDTH bound to: 1 - type: integer 
-	Parameter din13_WIDTH bound to: 1 - type: integer 
-	Parameter din14_WIDTH bound to: 1 - type: integer 
-	Parameter din15_WIDTH bound to: 1 - type: integer 
-	Parameter din16_WIDTH bound to: 1 - type: integer 
-	Parameter din17_WIDTH bound to: 1 - type: integer 
-	Parameter din18_WIDTH bound to: 1 - type: integer 
-	Parameter din19_WIDTH bound to: 1 - type: integer 
-	Parameter din20_WIDTH bound to: 1 - type: integer 
-	Parameter din21_WIDTH bound to: 1 - type: integer 
-	Parameter din22_WIDTH bound to: 1 - type: integer 
-	Parameter din23_WIDTH bound to: 1 - type: integer 
-	Parameter din24_WIDTH bound to: 1 - type: integer 
-	Parameter din25_WIDTH bound to: 1 - type: integer 
-	Parameter din26_WIDTH bound to: 1 - type: integer 
-	Parameter din27_WIDTH bound to: 1 - type: integer 
-	Parameter din28_WIDTH bound to: 1 - type: integer 
-	Parameter din29_WIDTH bound to: 1 - type: integer 
-	Parameter din30_WIDTH bound to: 1 - type: integer 
-	Parameter din31_WIDTH bound to: 1 - type: integer 
-	Parameter din32_WIDTH bound to: 1 - type: integer 
-	Parameter din33_WIDTH bound to: 1 - type: integer 
-	Parameter din34_WIDTH bound to: 1 - type: integer 
-	Parameter din35_WIDTH bound to: 1 - type: integer 
-	Parameter din36_WIDTH bound to: 1 - type: integer 
-	Parameter din37_WIDTH bound to: 1 - type: integer 
-	Parameter din38_WIDTH bound to: 1 - type: integer 
-	Parameter din39_WIDTH bound to: 1 - type: integer 
-	Parameter din40_WIDTH bound to: 1 - type: integer 
-	Parameter din41_WIDTH bound to: 1 - type: integer 
-	Parameter din42_WIDTH bound to: 1 - type: integer 
-	Parameter din43_WIDTH bound to: 1 - type: integer 
-	Parameter din44_WIDTH bound to: 1 - type: integer 
-	Parameter din45_WIDTH bound to: 1 - type: integer 
-	Parameter din46_WIDTH bound to: 1 - type: integer 
-	Parameter din47_WIDTH bound to: 1 - type: integer 
-	Parameter din48_WIDTH bound to: 1 - type: integer 
-	Parameter din49_WIDTH bound to: 1 - type: integer 
-	Parameter din50_WIDTH bound to: 1 - type: integer 
-	Parameter din51_WIDTH bound to: 1 - type: integer 
-	Parameter din52_WIDTH bound to: 1 - type: integer 
-	Parameter din53_WIDTH bound to: 1 - type: integer 
-	Parameter din54_WIDTH bound to: 1 - type: integer 
-	Parameter din55_WIDTH bound to: 1 - type: integer 
-	Parameter din56_WIDTH bound to: 1 - type: integer 
-	Parameter din57_WIDTH bound to: 1 - type: integer 
-	Parameter din58_WIDTH bound to: 1 - type: integer 
-	Parameter din59_WIDTH bound to: 1 - type: integer 
-	Parameter din60_WIDTH bound to: 1 - type: integer 
-	Parameter din61_WIDTH bound to: 1 - type: integer 
-	Parameter din62_WIDTH bound to: 1 - type: integer 
-	Parameter din63_WIDTH bound to: 1 - type: integer 
-	Parameter din64_WIDTH bound to: 6 - type: integer 
-	Parameter dout_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'operator_long_divbkb' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:152]
-	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 1 - type: integer 
-	Parameter din0_WIDTH bound to: 1 - type: integer 
-	Parameter din1_WIDTH bound to: 1 - type: integer 
-	Parameter din2_WIDTH bound to: 1 - type: integer 
-	Parameter din3_WIDTH bound to: 1 - type: integer 
-	Parameter din4_WIDTH bound to: 1 - type: integer 
-	Parameter din5_WIDTH bound to: 1 - type: integer 
-	Parameter din6_WIDTH bound to: 1 - type: integer 
-	Parameter din7_WIDTH bound to: 1 - type: integer 
-	Parameter din8_WIDTH bound to: 1 - type: integer 
-	Parameter din9_WIDTH bound to: 1 - type: integer 
-	Parameter din10_WIDTH bound to: 1 - type: integer 
-	Parameter din11_WIDTH bound to: 1 - type: integer 
-	Parameter din12_WIDTH bound to: 1 - type: integer 
-	Parameter din13_WIDTH bound to: 1 - type: integer 
-	Parameter din14_WIDTH bound to: 1 - type: integer 
-	Parameter din15_WIDTH bound to: 1 - type: integer 
-	Parameter din16_WIDTH bound to: 1 - type: integer 
-	Parameter din17_WIDTH bound to: 1 - type: integer 
-	Parameter din18_WIDTH bound to: 1 - type: integer 
-	Parameter din19_WIDTH bound to: 1 - type: integer 
-	Parameter din20_WIDTH bound to: 1 - type: integer 
-	Parameter din21_WIDTH bound to: 1 - type: integer 
-	Parameter din22_WIDTH bound to: 1 - type: integer 
-	Parameter din23_WIDTH bound to: 1 - type: integer 
-	Parameter din24_WIDTH bound to: 1 - type: integer 
-	Parameter din25_WIDTH bound to: 1 - type: integer 
-	Parameter din26_WIDTH bound to: 1 - type: integer 
-	Parameter din27_WIDTH bound to: 1 - type: integer 
-	Parameter din28_WIDTH bound to: 1 - type: integer 
-	Parameter din29_WIDTH bound to: 1 - type: integer 
-	Parameter din30_WIDTH bound to: 1 - type: integer 
-	Parameter din31_WIDTH bound to: 1 - type: integer 
-	Parameter din32_WIDTH bound to: 1 - type: integer 
-	Parameter din33_WIDTH bound to: 1 - type: integer 
-	Parameter din34_WIDTH bound to: 1 - type: integer 
-	Parameter din35_WIDTH bound to: 1 - type: integer 
-	Parameter din36_WIDTH bound to: 1 - type: integer 
-	Parameter din37_WIDTH bound to: 1 - type: integer 
-	Parameter din38_WIDTH bound to: 1 - type: integer 
-	Parameter din39_WIDTH bound to: 1 - type: integer 
-	Parameter din40_WIDTH bound to: 1 - type: integer 
-	Parameter din41_WIDTH bound to: 1 - type: integer 
-	Parameter din42_WIDTH bound to: 1 - type: integer 
-	Parameter din43_WIDTH bound to: 1 - type: integer 
-	Parameter din44_WIDTH bound to: 1 - type: integer 
-	Parameter din45_WIDTH bound to: 1 - type: integer 
-	Parameter din46_WIDTH bound to: 1 - type: integer 
-	Parameter din47_WIDTH bound to: 1 - type: integer 
-	Parameter din48_WIDTH bound to: 1 - type: integer 
-	Parameter din49_WIDTH bound to: 1 - type: integer 
-	Parameter din50_WIDTH bound to: 1 - type: integer 
-	Parameter din51_WIDTH bound to: 1 - type: integer 
-	Parameter din52_WIDTH bound to: 1 - type: integer 
-	Parameter din53_WIDTH bound to: 1 - type: integer 
-	Parameter din54_WIDTH bound to: 1 - type: integer 
-	Parameter din55_WIDTH bound to: 1 - type: integer 
-	Parameter din56_WIDTH bound to: 1 - type: integer 
-	Parameter din57_WIDTH bound to: 1 - type: integer 
-	Parameter din58_WIDTH bound to: 1 - type: integer 
-	Parameter din59_WIDTH bound to: 1 - type: integer 
-	Parameter din60_WIDTH bound to: 1 - type: integer 
-	Parameter din61_WIDTH bound to: 1 - type: integer 
-	Parameter din62_WIDTH bound to: 1 - type: integer 
-	Parameter din63_WIDTH bound to: 1 - type: integer 
-	Parameter din64_WIDTH bound to: 6 - type: integer 
-	Parameter dout_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'operator_long_divbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:13' bound to instance 'operator_long_divbkb_U2' of component 'operator_long_divbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:319]
-	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 1 - type: integer 
-	Parameter din0_WIDTH bound to: 1 - type: integer 
-	Parameter din1_WIDTH bound to: 1 - type: integer 
-	Parameter din2_WIDTH bound to: 1 - type: integer 
-	Parameter din3_WIDTH bound to: 1 - type: integer 
-	Parameter din4_WIDTH bound to: 1 - type: integer 
-	Parameter din5_WIDTH bound to: 1 - type: integer 
-	Parameter din6_WIDTH bound to: 1 - type: integer 
-	Parameter din7_WIDTH bound to: 1 - type: integer 
-	Parameter din8_WIDTH bound to: 1 - type: integer 
-	Parameter din9_WIDTH bound to: 1 - type: integer 
-	Parameter din10_WIDTH bound to: 1 - type: integer 
-	Parameter din11_WIDTH bound to: 1 - type: integer 
-	Parameter din12_WIDTH bound to: 1 - type: integer 
-	Parameter din13_WIDTH bound to: 1 - type: integer 
-	Parameter din14_WIDTH bound to: 1 - type: integer 
-	Parameter din15_WIDTH bound to: 1 - type: integer 
-	Parameter din16_WIDTH bound to: 1 - type: integer 
-	Parameter din17_WIDTH bound to: 1 - type: integer 
-	Parameter din18_WIDTH bound to: 1 - type: integer 
-	Parameter din19_WIDTH bound to: 1 - type: integer 
-	Parameter din20_WIDTH bound to: 1 - type: integer 
-	Parameter din21_WIDTH bound to: 1 - type: integer 
-	Parameter din22_WIDTH bound to: 1 - type: integer 
-	Parameter din23_WIDTH bound to: 1 - type: integer 
-	Parameter din24_WIDTH bound to: 1 - type: integer 
-	Parameter din25_WIDTH bound to: 1 - type: integer 
-	Parameter din26_WIDTH bound to: 1 - type: integer 
-	Parameter din27_WIDTH bound to: 1 - type: integer 
-	Parameter din28_WIDTH bound to: 1 - type: integer 
-	Parameter din29_WIDTH bound to: 1 - type: integer 
-	Parameter din30_WIDTH bound to: 1 - type: integer 
-	Parameter din31_WIDTH bound to: 1 - type: integer 
-	Parameter din32_WIDTH bound to: 1 - type: integer 
-	Parameter din33_WIDTH bound to: 1 - type: integer 
-	Parameter din34_WIDTH bound to: 1 - type: integer 
-	Parameter din35_WIDTH bound to: 1 - type: integer 
-	Parameter din36_WIDTH bound to: 1 - type: integer 
-	Parameter din37_WIDTH bound to: 1 - type: integer 
-	Parameter din38_WIDTH bound to: 1 - type: integer 
-	Parameter din39_WIDTH bound to: 1 - type: integer 
-	Parameter din40_WIDTH bound to: 1 - type: integer 
-	Parameter din41_WIDTH bound to: 1 - type: integer 
-	Parameter din42_WIDTH bound to: 1 - type: integer 
-	Parameter din43_WIDTH bound to: 1 - type: integer 
-	Parameter din44_WIDTH bound to: 1 - type: integer 
-	Parameter din45_WIDTH bound to: 1 - type: integer 
-	Parameter din46_WIDTH bound to: 1 - type: integer 
-	Parameter din47_WIDTH bound to: 1 - type: integer 
-	Parameter din48_WIDTH bound to: 1 - type: integer 
-	Parameter din49_WIDTH bound to: 1 - type: integer 
-	Parameter din50_WIDTH bound to: 1 - type: integer 
-	Parameter din51_WIDTH bound to: 1 - type: integer 
-	Parameter din52_WIDTH bound to: 1 - type: integer 
-	Parameter din53_WIDTH bound to: 1 - type: integer 
-	Parameter din54_WIDTH bound to: 1 - type: integer 
-	Parameter din55_WIDTH bound to: 1 - type: integer 
-	Parameter din56_WIDTH bound to: 1 - type: integer 
-	Parameter din57_WIDTH bound to: 1 - type: integer 
-	Parameter din58_WIDTH bound to: 1 - type: integer 
-	Parameter din59_WIDTH bound to: 1 - type: integer 
-	Parameter din60_WIDTH bound to: 1 - type: integer 
-	Parameter din61_WIDTH bound to: 1 - type: integer 
-	Parameter din62_WIDTH bound to: 1 - type: integer 
-	Parameter din63_WIDTH bound to: 1 - type: integer 
-	Parameter din64_WIDTH bound to: 6 - type: integer 
-	Parameter dout_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'operator_long_divbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:13' bound to instance 'operator_long_divbkb_U3' of component 'operator_long_divbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:457]
-	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 1 - type: integer 
-	Parameter din0_WIDTH bound to: 1 - type: integer 
-	Parameter din1_WIDTH bound to: 1 - type: integer 
-	Parameter din2_WIDTH bound to: 1 - type: integer 
-	Parameter din3_WIDTH bound to: 1 - type: integer 
-	Parameter din4_WIDTH bound to: 1 - type: integer 
-	Parameter din5_WIDTH bound to: 1 - type: integer 
-	Parameter din6_WIDTH bound to: 1 - type: integer 
-	Parameter din7_WIDTH bound to: 1 - type: integer 
-	Parameter din8_WIDTH bound to: 1 - type: integer 
-	Parameter din9_WIDTH bound to: 1 - type: integer 
-	Parameter din10_WIDTH bound to: 1 - type: integer 
-	Parameter din11_WIDTH bound to: 1 - type: integer 
-	Parameter din12_WIDTH bound to: 1 - type: integer 
-	Parameter din13_WIDTH bound to: 1 - type: integer 
-	Parameter din14_WIDTH bound to: 1 - type: integer 
-	Parameter din15_WIDTH bound to: 1 - type: integer 
-	Parameter din16_WIDTH bound to: 1 - type: integer 
-	Parameter din17_WIDTH bound to: 1 - type: integer 
-	Parameter din18_WIDTH bound to: 1 - type: integer 
-	Parameter din19_WIDTH bound to: 1 - type: integer 
-	Parameter din20_WIDTH bound to: 1 - type: integer 
-	Parameter din21_WIDTH bound to: 1 - type: integer 
-	Parameter din22_WIDTH bound to: 1 - type: integer 
-	Parameter din23_WIDTH bound to: 1 - type: integer 
-	Parameter din24_WIDTH bound to: 1 - type: integer 
-	Parameter din25_WIDTH bound to: 1 - type: integer 
-	Parameter din26_WIDTH bound to: 1 - type: integer 
-	Parameter din27_WIDTH bound to: 1 - type: integer 
-	Parameter din28_WIDTH bound to: 1 - type: integer 
-	Parameter din29_WIDTH bound to: 1 - type: integer 
-	Parameter din30_WIDTH bound to: 1 - type: integer 
-	Parameter din31_WIDTH bound to: 1 - type: integer 
-	Parameter din32_WIDTH bound to: 1 - type: integer 
-	Parameter din33_WIDTH bound to: 1 - type: integer 
-	Parameter din34_WIDTH bound to: 1 - type: integer 
-	Parameter din35_WIDTH bound to: 1 - type: integer 
-	Parameter din36_WIDTH bound to: 1 - type: integer 
-	Parameter din37_WIDTH bound to: 1 - type: integer 
-	Parameter din38_WIDTH bound to: 1 - type: integer 
-	Parameter din39_WIDTH bound to: 1 - type: integer 
-	Parameter din40_WIDTH bound to: 1 - type: integer 
-	Parameter din41_WIDTH bound to: 1 - type: integer 
-	Parameter din42_WIDTH bound to: 1 - type: integer 
-	Parameter din43_WIDTH bound to: 1 - type: integer 
-	Parameter din44_WIDTH bound to: 1 - type: integer 
-	Parameter din45_WIDTH bound to: 1 - type: integer 
-	Parameter din46_WIDTH bound to: 1 - type: integer 
-	Parameter din47_WIDTH bound to: 1 - type: integer 
-	Parameter din48_WIDTH bound to: 1 - type: integer 
-	Parameter din49_WIDTH bound to: 1 - type: integer 
-	Parameter din50_WIDTH bound to: 1 - type: integer 
-	Parameter din51_WIDTH bound to: 1 - type: integer 
-	Parameter din52_WIDTH bound to: 1 - type: integer 
-	Parameter din53_WIDTH bound to: 1 - type: integer 
-	Parameter din54_WIDTH bound to: 1 - type: integer 
-	Parameter din55_WIDTH bound to: 1 - type: integer 
-	Parameter din56_WIDTH bound to: 1 - type: integer 
-	Parameter din57_WIDTH bound to: 1 - type: integer 
-	Parameter din58_WIDTH bound to: 1 - type: integer 
-	Parameter din59_WIDTH bound to: 1 - type: integer 
-	Parameter din60_WIDTH bound to: 1 - type: integer 
-	Parameter din61_WIDTH bound to: 1 - type: integer 
-	Parameter din62_WIDTH bound to: 1 - type: integer 
-	Parameter din63_WIDTH bound to: 1 - type: integer 
-	Parameter din64_WIDTH bound to: 6 - type: integer 
-	Parameter dout_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'operator_long_divbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:13' bound to instance 'operator_long_divbkb_U4' of component 'operator_long_divbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:595]
-	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 1 - type: integer 
-	Parameter din0_WIDTH bound to: 1 - type: integer 
-	Parameter din1_WIDTH bound to: 1 - type: integer 
-	Parameter din2_WIDTH bound to: 1 - type: integer 
-	Parameter din3_WIDTH bound to: 1 - type: integer 
-	Parameter din4_WIDTH bound to: 1 - type: integer 
-	Parameter din5_WIDTH bound to: 1 - type: integer 
-	Parameter din6_WIDTH bound to: 1 - type: integer 
-	Parameter din7_WIDTH bound to: 1 - type: integer 
-	Parameter din8_WIDTH bound to: 1 - type: integer 
-	Parameter din9_WIDTH bound to: 1 - type: integer 
-	Parameter din10_WIDTH bound to: 1 - type: integer 
-	Parameter din11_WIDTH bound to: 1 - type: integer 
-	Parameter din12_WIDTH bound to: 1 - type: integer 
-	Parameter din13_WIDTH bound to: 1 - type: integer 
-	Parameter din14_WIDTH bound to: 1 - type: integer 
-	Parameter din15_WIDTH bound to: 1 - type: integer 
-	Parameter din16_WIDTH bound to: 1 - type: integer 
-	Parameter din17_WIDTH bound to: 1 - type: integer 
-	Parameter din18_WIDTH bound to: 1 - type: integer 
-	Parameter din19_WIDTH bound to: 1 - type: integer 
-	Parameter din20_WIDTH bound to: 1 - type: integer 
-	Parameter din21_WIDTH bound to: 1 - type: integer 
-	Parameter din22_WIDTH bound to: 1 - type: integer 
-	Parameter din23_WIDTH bound to: 1 - type: integer 
-	Parameter din24_WIDTH bound to: 1 - type: integer 
-	Parameter din25_WIDTH bound to: 1 - type: integer 
-	Parameter din26_WIDTH bound to: 1 - type: integer 
-	Parameter din27_WIDTH bound to: 1 - type: integer 
-	Parameter din28_WIDTH bound to: 1 - type: integer 
-	Parameter din29_WIDTH bound to: 1 - type: integer 
-	Parameter din30_WIDTH bound to: 1 - type: integer 
-	Parameter din31_WIDTH bound to: 1 - type: integer 
-	Parameter din32_WIDTH bound to: 1 - type: integer 
-	Parameter din33_WIDTH bound to: 1 - type: integer 
-	Parameter din34_WIDTH bound to: 1 - type: integer 
-	Parameter din35_WIDTH bound to: 1 - type: integer 
-	Parameter din36_WIDTH bound to: 1 - type: integer 
-	Parameter din37_WIDTH bound to: 1 - type: integer 
-	Parameter din38_WIDTH bound to: 1 - type: integer 
-	Parameter din39_WIDTH bound to: 1 - type: integer 
-	Parameter din40_WIDTH bound to: 1 - type: integer 
-	Parameter din41_WIDTH bound to: 1 - type: integer 
-	Parameter din42_WIDTH bound to: 1 - type: integer 
-	Parameter din43_WIDTH bound to: 1 - type: integer 
-	Parameter din44_WIDTH bound to: 1 - type: integer 
-	Parameter din45_WIDTH bound to: 1 - type: integer 
-	Parameter din46_WIDTH bound to: 1 - type: integer 
-	Parameter din47_WIDTH bound to: 1 - type: integer 
-	Parameter din48_WIDTH bound to: 1 - type: integer 
-	Parameter din49_WIDTH bound to: 1 - type: integer 
-	Parameter din50_WIDTH bound to: 1 - type: integer 
-	Parameter din51_WIDTH bound to: 1 - type: integer 
-	Parameter din52_WIDTH bound to: 1 - type: integer 
-	Parameter din53_WIDTH bound to: 1 - type: integer 
-	Parameter din54_WIDTH bound to: 1 - type: integer 
-	Parameter din55_WIDTH bound to: 1 - type: integer 
-	Parameter din56_WIDTH bound to: 1 - type: integer 
-	Parameter din57_WIDTH bound to: 1 - type: integer 
-	Parameter din58_WIDTH bound to: 1 - type: integer 
-	Parameter din59_WIDTH bound to: 1 - type: integer 
-	Parameter din60_WIDTH bound to: 1 - type: integer 
-	Parameter din61_WIDTH bound to: 1 - type: integer 
-	Parameter din62_WIDTH bound to: 1 - type: integer 
-	Parameter din63_WIDTH bound to: 1 - type: integer 
-	Parameter din64_WIDTH bound to: 6 - type: integer 
-	Parameter dout_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'operator_long_divbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:13' bound to instance 'operator_long_divbkb_U5' of component 'operator_long_divbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:733]
-	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 1 - type: integer 
-	Parameter din0_WIDTH bound to: 1 - type: integer 
-	Parameter din1_WIDTH bound to: 1 - type: integer 
-	Parameter din2_WIDTH bound to: 1 - type: integer 
-	Parameter din3_WIDTH bound to: 1 - type: integer 
-	Parameter din4_WIDTH bound to: 1 - type: integer 
-	Parameter din5_WIDTH bound to: 1 - type: integer 
-	Parameter din6_WIDTH bound to: 1 - type: integer 
-	Parameter din7_WIDTH bound to: 1 - type: integer 
-	Parameter din8_WIDTH bound to: 1 - type: integer 
-	Parameter din9_WIDTH bound to: 1 - type: integer 
-	Parameter din10_WIDTH bound to: 1 - type: integer 
-	Parameter din11_WIDTH bound to: 1 - type: integer 
-	Parameter din12_WIDTH bound to: 1 - type: integer 
-	Parameter din13_WIDTH bound to: 1 - type: integer 
-	Parameter din14_WIDTH bound to: 1 - type: integer 
-	Parameter din15_WIDTH bound to: 1 - type: integer 
-	Parameter din16_WIDTH bound to: 1 - type: integer 
-	Parameter din17_WIDTH bound to: 1 - type: integer 
-	Parameter din18_WIDTH bound to: 1 - type: integer 
-	Parameter din19_WIDTH bound to: 1 - type: integer 
-	Parameter din20_WIDTH bound to: 1 - type: integer 
-	Parameter din21_WIDTH bound to: 1 - type: integer 
-	Parameter din22_WIDTH bound to: 1 - type: integer 
-	Parameter din23_WIDTH bound to: 1 - type: integer 
-	Parameter din24_WIDTH bound to: 1 - type: integer 
-	Parameter din25_WIDTH bound to: 1 - type: integer 
-	Parameter din26_WIDTH bound to: 1 - type: integer 
-	Parameter din27_WIDTH bound to: 1 - type: integer 
-	Parameter din28_WIDTH bound to: 1 - type: integer 
-	Parameter din29_WIDTH bound to: 1 - type: integer 
-	Parameter din30_WIDTH bound to: 1 - type: integer 
-	Parameter din31_WIDTH bound to: 1 - type: integer 
-	Parameter din32_WIDTH bound to: 1 - type: integer 
-	Parameter din33_WIDTH bound to: 1 - type: integer 
-	Parameter din34_WIDTH bound to: 1 - type: integer 
-	Parameter din35_WIDTH bound to: 1 - type: integer 
-	Parameter din36_WIDTH bound to: 1 - type: integer 
-	Parameter din37_WIDTH bound to: 1 - type: integer 
-	Parameter din38_WIDTH bound to: 1 - type: integer 
-	Parameter din39_WIDTH bound to: 1 - type: integer 
-	Parameter din40_WIDTH bound to: 1 - type: integer 
-	Parameter din41_WIDTH bound to: 1 - type: integer 
-	Parameter din42_WIDTH bound to: 1 - type: integer 
-	Parameter din43_WIDTH bound to: 1 - type: integer 
-	Parameter din44_WIDTH bound to: 1 - type: integer 
-	Parameter din45_WIDTH bound to: 1 - type: integer 
-	Parameter din46_WIDTH bound to: 1 - type: integer 
-	Parameter din47_WIDTH bound to: 1 - type: integer 
-	Parameter din48_WIDTH bound to: 1 - type: integer 
-	Parameter din49_WIDTH bound to: 1 - type: integer 
-	Parameter din50_WIDTH bound to: 1 - type: integer 
-	Parameter din51_WIDTH bound to: 1 - type: integer 
-	Parameter din52_WIDTH bound to: 1 - type: integer 
-	Parameter din53_WIDTH bound to: 1 - type: integer 
-	Parameter din54_WIDTH bound to: 1 - type: integer 
-	Parameter din55_WIDTH bound to: 1 - type: integer 
-	Parameter din56_WIDTH bound to: 1 - type: integer 
-	Parameter din57_WIDTH bound to: 1 - type: integer 
-	Parameter din58_WIDTH bound to: 1 - type: integer 
-	Parameter din59_WIDTH bound to: 1 - type: integer 
-	Parameter din60_WIDTH bound to: 1 - type: integer 
-	Parameter din61_WIDTH bound to: 1 - type: integer 
-	Parameter din62_WIDTH bound to: 1 - type: integer 
-	Parameter din63_WIDTH bound to: 1 - type: integer 
-	Parameter din64_WIDTH bound to: 6 - type: integer 
-	Parameter dout_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'operator_long_divbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_divbkb.vhd:13' bound to instance 'operator_long_divbkb_U6' of component 'operator_long_divbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:871]
-INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:22]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_101' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:148]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_107' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:156]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_113' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:164]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_119' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:172]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_125' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:180]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_131' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:188]
-INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_137' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:196]
-INFO: [Synth 8-256] done synthesizing module 'operator_long_div3' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:114]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:117]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:120]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:125]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:127]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:129]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:131]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:133]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:135]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:137]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:139]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:141]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:143]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:145]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:147]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:149]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:151]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:191]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:193]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:195]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:197]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:199]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:201]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:203]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:205]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:207]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:209]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:211]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:213]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:215]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:217]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:219]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:221]
+INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_98' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:27]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:41]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:63]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:75' bound to instance 'r0_U' of component 'lut_div3_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:12' bound to instance 'lut_div3_chunk_r0_rom_U' of component 'lut_div3_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r0_rom' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r0' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:75' bound to instance 'r1_U' of component 'lut_div3_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:12' bound to instance 'lut_div3_chunk_r1_rom_U' of component 'lut_div3_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r1_rom' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r1' (4#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:72' bound to instance 'q0_U' of component 'lut_div3_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:12' bound to instance 'lut_div3_chunk_q0_rom_U' of component 'lut_div3_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q0_rom' (5#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q0' (6#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:70' bound to instance 'q1_U' of component 'lut_div3_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:12' bound to instance 'lut_div3_chunk_q1_rom_U' of component 'lut_div3_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q1_rom' (7#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q1' (8#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q2' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:69' bound to instance 'q2_U' of component 'lut_div3_chunk_q2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q2_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:12' bound to instance 'lut_div3_chunk_q2_rom_U' of component 'lut_div3_chunk_q2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q2_rom' (9#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q2' (10#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q3' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:69' bound to instance 'q3_U' of component 'lut_div3_chunk_q3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q3_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:12' bound to instance 'lut_div3_chunk_q3_rom_U' of component 'lut_div3_chunk_q3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q3_rom' (11#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q3' (12#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk' (13#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/lut_div3_chunk.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'operator_long_div3' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/operator_long_div3.vhd:25]
+WARNING: [Synth 8-3331] design lut_div3_chunk_q3 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_q2 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_q1 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_q0 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_r1 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_r0 has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 1229 ; free virtual = 10415
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1312.980 ; gain = 127.520 ; free physical = 1700 ; free virtual = 9323
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -532,10 +176,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 1251 ; free virtual = 10455
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1312.980 ; gain = 127.520 ; free physical = 1700 ; free virtual = 9323
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 1251 ; free virtual = 10455
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1312.980 ; gain = 127.520 ; free physical = 1700 ; free virtual = 9323
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k160tfbg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -549,26 +193,51 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1662.465 ; gain = 0.000 ; free physical = 965 ; free virtual = 10174
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1643.441 ; gain = 1.000 ; free physical = 1442 ; free virtual = 9056
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 1077 ; free virtual = 10285
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1643.441 ; gain = 457.980 ; free physical = 1522 ; free virtual = 9135
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 1077 ; free virtual = 10285
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1643.441 ; gain = 457.980 ; free physical = 1522 ; free virtual = 9135
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 1078 ; free virtual = 10287
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1643.441 ; gain = 457.980 ; free physical = 1523 ; free virtual = 9137
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 1069 ; free virtual = 10278
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1643.441 ; gain = 457.980 ; free physical = 1515 ; free virtual = 9129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -581,13 +250,31 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	                4 Bit    Registers := 16    
-	                2 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 32    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 8     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3024  
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -598,16 +285,62 @@ Hierarchical RTL Component report
 Module operator_long_div3 
 Detailed RTL Component Info : 
 +---Registers : 
-	                4 Bit    Registers := 16    
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 31    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module lut_div3_chunk_r0_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_r1_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q0_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q1_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q2_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q3_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-Module operator_long_divbkb 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 63    
+	   2 Input      2 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -624,8 +357,38 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:31 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 1051 ; free virtual = 10260
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1643.441 ; gain = 457.980 ; free physical = 1502 ; free virtual = 9122
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------------+------------+---------------+----------------+
+|Module Name           | RTL Object | Depth x Width | Implemented As | 
++----------------------+------------+---------------+----------------+
+|lut_div3_chunk_r0_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_r1_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q0_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q1_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q2_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q3_rom | p_0_out    | 64x1          | LUT            | 
+|operator_long_div3    | p_0_out    | 64x1          | LUT            | 
+|operator_long_div3    | p_0_out    | 64x1          | LUT            | 
+|operator_long_div3    | p_0_out    | 64x1          | LUT            | 
+|operator_long_div3    | p_0_out    | 64x1          | LUT            | 
+|operator_long_div3    | p_0_out    | 64x1          | LUT            | 
++----------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -637,13 +400,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 857 ; free virtual = 10079
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:35 . Memory (MB): peak = 1643.441 ; gain = 457.980 ; free physical = 1378 ; free virtual = 8997
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 839 ; free virtual = 10058
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1375 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -655,7 +418,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 838 ; free virtual = 10057
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8992
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -679,7 +442,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 842 ; free virtual = 10057
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -692,7 +455,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 842 ; free virtual = 10057
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -704,25 +467,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 842 ; free virtual = 10057
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 842 ; free virtual = 10057
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 842 ; free virtual = 10057
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 842 ; free virtual = 10057
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -739,25 +502,39 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT2 |     4|
-|2     |LUT3 |    32|
-|3     |LUT4 |     3|
-|4     |LUT5 |    14|
-|5     |LUT6 |    33|
-|6     |FDRE |    68|
+|2     |LUT3 |    12|
+|3     |LUT4 |    37|
+|4     |LUT5 |    27|
+|5     |LUT6 |    34|
+|6     |FDRE |   171|
+|7     |FDSE |     2|
 +------+-----+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   154|
-+------+---------+-------+------+
++------+------------------------------+----------------------+------+
+|      |Instance                      |Module                |Cells |
++------+------------------------------+----------------------+------+
+|1     |top                           |                      |   287|
+|2     |  grp_lut_div3_chunk_fu_98    |lut_div3_chunk        |   122|
+|3     |    q0_U                      |lut_div3_chunk_q0     |    14|
+|4     |      lut_div3_chunk_q0_rom_U |lut_div3_chunk_q0_rom |    14|
+|5     |    q1_U                      |lut_div3_chunk_q1     |    10|
+|6     |      lut_div3_chunk_q1_rom_U |lut_div3_chunk_q1_rom |    10|
+|7     |    q2_U                      |lut_div3_chunk_q2     |    10|
+|8     |      lut_div3_chunk_q2_rom_U |lut_div3_chunk_q2_rom |    10|
+|9     |    q3_U                      |lut_div3_chunk_q3     |    16|
+|10    |      lut_div3_chunk_q3_rom_U |lut_div3_chunk_q3_rom |    16|
+|11    |    r0_U                      |lut_div3_chunk_r0     |     4|
+|12    |      lut_div3_chunk_r0_rom_U |lut_div3_chunk_r0_rom |     4|
+|13    |    r1_U                      |lut_div3_chunk_r1     |     4|
+|14    |      lut_div3_chunk_r1_rom_U |lut_div3_chunk_r1_rom |     4|
++------+------------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.465 ; gain = 477.004 ; free physical = 842 ; free virtual = 10057
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.465 ; gain = 476.004 ; free physical = 1374 ; free virtual = 8993
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1662.465 ; gain = 126.520 ; free physical = 897 ; free virtual = 10111
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.473 ; gain = 477.004 ; free physical = 897 ; free virtual = 10111
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1661.465 ; gain = 145.543 ; free physical = 1429 ; free virtual = 9048
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.473 ; gain = 476.004 ; free physical = 1429 ; free virtual = 9048
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -765,11 +542,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+124 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 1662.473 ; gain = 477.117 ; free physical = 889 ; free virtual = 10106
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 1661.473 ; gain = 476.117 ; free physical = 1421 ; free virtual = 9042
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/div3/impl/vhdl/project.runs/synth_1/operator_long_div3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file operator_long_div3_utilization_synth.rpt -pb operator_long_div3_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1686.477 ; gain = 0.000 ; free physical = 890 ; free virtual = 10107
-INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 11:24:06 2018...
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1661.473 ; gain = 0.000 ; free physical = 1421 ; free virtual = 9042
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 16:50:26 2018...

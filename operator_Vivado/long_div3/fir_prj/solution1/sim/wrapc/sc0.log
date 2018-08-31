@@ -1,0 +1,5 @@
+   Build using "/opt/Xilinx/Vivado/2018.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_long_div3.cpp
+   Compiling long_div3.cpp_pre.cpp.tb.cpp
+   Compiling test_long_div3.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

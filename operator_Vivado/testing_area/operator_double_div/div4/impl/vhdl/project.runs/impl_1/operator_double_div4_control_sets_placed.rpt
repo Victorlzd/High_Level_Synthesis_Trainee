@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Fri Aug  3 14:35:29 2018
+| Date         : Fri Aug 31 15:20:56 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file operator_double_div4_control_sets_placed.rpt
 | Design       : operator_double_div4
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     2 |
-| Unused register locations in slices containing registers |    10 |
+| Number of unique control sets                            |     5 |
+| Unused register locations in slices containing registers |     4 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|     12 |            1 |
-|    16+ |            1 |
+|    16+ |            5 |
 +--------+--------------+
 
 
@@ -45,10 +44,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              12 |            4 |
+| No           | No                    | No                     |             116 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             130 |           23 |
+| No           | Yes                   | No                     |             344 |           56 |
+| Yes          | No                    | No                     |             336 |           73 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -57,11 +56,14 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------+---------------+------------------+------------------+----------------+
-| Clock Signal | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------+---------------+------------------+------------------+----------------+
-|  ap_clk      |               |                  |                4 |             12 |
-|  ap_clk      | ap_NS_fsm1    |                  |               23 |            130 |
-+--------------+---------------+------------------+------------------+----------------+
++--------------+----------------+------------------+------------------+----------------+
+| Clock Signal |  Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+----------------+------------------+------------------+----------------+
+|  ap_clk      | r_V_1_reg_3000 |                  |               27 |            104 |
+|  ap_clk      | r_V_reg_2950   |                  |               20 |            104 |
+|  ap_clk      | ap_NS_fsm1     |                  |               26 |            128 |
+|  ap_clk      |                |                  |               30 |            224 |
+|  ap_clk      |                | ap_rst           |               56 |            344 |
++--------------+----------------+------------------+------------------+----------------+
 
 

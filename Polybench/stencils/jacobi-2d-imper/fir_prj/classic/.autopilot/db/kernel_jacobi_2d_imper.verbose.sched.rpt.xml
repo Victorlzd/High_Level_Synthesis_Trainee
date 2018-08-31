@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'kernel_jacobi_2d_imper'" level="0">
-<item name = "Date">Wed Aug 22 14:39:58 2018
+<item name = "Date">Fri Aug 31 21:41:40 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">fir_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.288, 1.25</column>
+<column name="ap_clk">2.50, 3.171, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1055844141, 1055844141, 1055844141, 1055844141, none</column>
+<column name="">2589830021, 2589830021, 2589830021, 2589830021, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,11 +35,11 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">1055844140, 1055844140, 52792207, -, -, 20, no</column>
-<column name=" + Loop 1.1">47810188, 47810188, 47906, -, -, 998, no</column>
-<column name="  ++ Loop 1.1.1">47904, 47904, 48, -, -, 998, no</column>
-<column name=" + Loop 1.2">4982016, 4982016, 4992, -, -, 998, no</column>
-<column name="  ++ Loop 1.2.1">4990, 4990, 5, -, -, 998, no</column>
+<column name="- Loop 1">2589830020, 2589830020, 129491501, -, -, 20, no</column>
+<column name=" + Loop 1.1">63750244, 63750244, 63878, -, -, 998, no</column>
+<column name="  ++ Loop 1.1.1">63872, 63872, 64, -, -, 998, no</column>
+<column name=" + Loop 1.2">65741254, 65741254, 65873, -, -, 998, no</column>
+<column name="  ++ Loop 1.2.1">65868, 65868, 66, -, -, 998, no</column>
 </table>
 </item>
 </section>

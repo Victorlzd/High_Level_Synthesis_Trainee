@@ -216,9 +216,9 @@
 						<type>0</type>
 						<id>16</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>61</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -230,10 +230,10 @@
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>61</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -295,9 +295,9 @@
 						<type>0</type>
 						<id>19</id>
 						<name>exitcond7</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>61</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -309,10 +309,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>61</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -341,9 +341,9 @@
 						<type>0</type>
 						<id>21</id>
 						<name>t_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>61</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -355,10 +355,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>61</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -387,9 +387,9 @@
 						<type>0</type>
 						<id>22</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>61</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -401,10 +401,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>61</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -434,9 +434,9 @@
 						<type>0</type>
 						<id>24</id>
 						<name>tmp</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -448,10 +448,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>64</second>
+										<second>208</second>
 									</item>
 								</second>
 							</item>
@@ -479,9 +479,9 @@
 						<type>0</type>
 						<id>25</id>
 						<name>p_fict_addr</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -493,10 +493,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>64</second>
+										<second>208</second>
 									</item>
 								</second>
 							</item>
@@ -526,9 +526,9 @@
 						<type>0</type>
 						<id>26</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<lineNumber>207</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -540,10 +540,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>63</second>
+										<second>207</second>
 									</item>
 								</second>
 							</item>
@@ -605,9 +605,9 @@
 						<type>0</type>
 						<id>29</id>
 						<name>exitcond6</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<lineNumber>207</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -619,10 +619,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>63</second>
+										<second>207</second>
 									</item>
 								</second>
 							</item>
@@ -651,9 +651,9 @@
 						<type>0</type>
 						<id>31</id>
 						<name>j_4</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<lineNumber>207</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -665,10 +665,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>63</second>
+										<second>207</second>
 									</item>
 								</second>
 							</item>
@@ -697,9 +697,9 @@
 						<type>0</type>
 						<id>32</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<lineNumber>207</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -711,10 +711,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>63</second>
+										<second>207</second>
 									</item>
 								</second>
 							</item>
@@ -744,9 +744,9 @@
 						<type>0</type>
 						<id>34</id>
 						<name>p_fict_load</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -758,10 +758,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>64</second>
+										<second>208</second>
 									</item>
 								</second>
 							</item>
@@ -781,7 +781,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_21">
 				<Value>
@@ -789,9 +789,9 @@
 						<type>0</type>
 						<id>35</id>
 						<name>tmp_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -803,10 +803,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>64</second>
+										<second>208</second>
 									</item>
 								</second>
 							</item>
@@ -834,9 +834,9 @@
 						<type>0</type>
 						<id>36</id>
 						<name>ey_addr</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -848,10 +848,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>64</second>
+										<second>208</second>
 									</item>
 								</second>
 							</item>
@@ -881,9 +881,9 @@
 						<type>0</type>
 						<id>37</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -895,10 +895,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>64</second>
+										<second>208</second>
 									</item>
 								</second>
 							</item>
@@ -919,7 +919,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_24">
 				<Value>
@@ -927,9 +927,9 @@
 						<type>0</type>
 						<id>38</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<lineNumber>207</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -941,10 +941,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>63</second>
+										<second>207</second>
 									</item>
 								</second>
 							</item>
@@ -972,9 +972,9 @@
 						<type>0</type>
 						<id>40</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>66</lineNumber>
+						<lineNumber>210</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -986,10 +986,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>66</second>
+										<second>210</second>
 									</item>
 								</second>
 							</item>
@@ -1051,9 +1051,9 @@
 						<type>0</type>
 						<id>43</id>
 						<name>exitcond5</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>66</lineNumber>
+						<lineNumber>210</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1065,10 +1065,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>66</second>
+										<second>210</second>
 									</item>
 								</second>
 							</item>
@@ -1097,9 +1097,9 @@
 						<type>0</type>
 						<id>45</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>66</lineNumber>
+						<lineNumber>210</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1111,10 +1111,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>66</second>
+										<second>210</second>
 									</item>
 								</second>
 							</item>
@@ -1144,9 +1144,9 @@
 						<type>0</type>
 						<id>47</id>
 						<name>tmp_3_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1158,10 +1158,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1189,9 +1189,9 @@
 						<type>0</type>
 						<id>48</id>
 						<name>tmp_3</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1203,10 +1203,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1227,7 +1227,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>5.79</m_delay>
+				<m_delay>1.82</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_31">
 				<Value>
@@ -1235,9 +1235,9 @@
 						<type>0</type>
 						<id>49</id>
 						<name>tmp_4</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1249,10 +1249,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1281,9 +1281,9 @@
 						<type>0</type>
 						<id>50</id>
 						<name>tmp_5_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1295,10 +1295,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1326,9 +1326,9 @@
 						<type>0</type>
 						<id>51</id>
 						<name>tmp_5</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1340,10 +1340,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1364,7 +1364,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>5.79</m_delay>
+				<m_delay>1.82</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_34">
 				<Value>
@@ -1372,9 +1372,9 @@
 						<type>0</type>
 						<id>52</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>211</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1386,10 +1386,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>67</second>
+										<second>211</second>
 									</item>
 								</second>
 							</item>
@@ -1451,9 +1451,9 @@
 						<type>0</type>
 						<id>55</id>
 						<name>exitcond4</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>211</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1465,10 +1465,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>67</second>
+										<second>211</second>
 									</item>
 								</second>
 							</item>
@@ -1497,9 +1497,9 @@
 						<type>0</type>
 						<id>57</id>
 						<name>j_5</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>211</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1511,10 +1511,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>67</second>
+										<second>211</second>
 									</item>
 								</second>
 							</item>
@@ -1543,9 +1543,9 @@
 						<type>0</type>
 						<id>58</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>211</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1557,10 +1557,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>67</second>
+										<second>211</second>
 									</item>
 								</second>
 							</item>
@@ -1590,9 +1590,9 @@
 						<type>0</type>
 						<id>60</id>
 						<name>tmp_8_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1604,10 +1604,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1635,9 +1635,9 @@
 						<type>0</type>
 						<id>61</id>
 						<name>tmp_6</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1649,10 +1649,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1681,9 +1681,9 @@
 						<type>0</type>
 						<id>62</id>
 						<name>tmp_27_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1695,10 +1695,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1726,9 +1726,9 @@
 						<type>0</type>
 						<id>63</id>
 						<name>ey_addr_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1740,10 +1740,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1773,9 +1773,9 @@
 						<type>0</type>
 						<id>64</id>
 						<name>hz_addr</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1787,10 +1787,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1820,9 +1820,9 @@
 						<type>0</type>
 						<id>65</id>
 						<name>tmp_7</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1834,10 +1834,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1866,9 +1866,9 @@
 						<type>0</type>
 						<id>66</id>
 						<name>tmp_28_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1880,10 +1880,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1911,9 +1911,9 @@
 						<type>0</type>
 						<id>67</id>
 						<name>hz_addr_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1925,10 +1925,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1958,9 +1958,9 @@
 						<type>0</type>
 						<id>68</id>
 						<name>ey_load</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1972,10 +1972,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1995,7 +1995,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_48">
 				<Value>
@@ -2003,9 +2003,9 @@
 						<type>0</type>
 						<id>69</id>
 						<name>hz_load</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2017,10 +2017,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -2040,7 +2040,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_49">
 				<Value>
@@ -2048,9 +2048,9 @@
 						<type>0</type>
 						<id>70</id>
 						<name>hz_load_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2062,10 +2062,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -2085,7 +2085,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_50">
 				<Value>
@@ -2093,9 +2093,9 @@
 						<type>0</type>
 						<id>71</id>
 						<name>tmp_9</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2107,10 +2107,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -2131,7 +2131,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_51">
 				<Value>
@@ -2139,9 +2139,9 @@
 						<type>0</type>
 						<id>72</id>
 						<name>tmp_s</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2153,10 +2153,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -2177,7 +2177,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>8.33</m_delay>
+				<m_delay>1.97</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_52">
 				<Value>
@@ -2185,9 +2185,9 @@
 						<type>0</type>
 						<id>73</id>
 						<name>tmp_2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2199,10 +2199,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -2223,7 +2223,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_53">
 				<Value>
@@ -2231,9 +2231,9 @@
 						<type>0</type>
 						<id>74</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2245,10 +2245,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>68</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -2270,7 +2270,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_54">
 				<Value>
@@ -2278,9 +2278,9 @@
 						<type>0</type>
 						<id>75</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>211</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2292,10 +2292,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>67</second>
+										<second>211</second>
 									</item>
 								</second>
 							</item>
@@ -2323,9 +2323,9 @@
 						<type>0</type>
 						<id>77</id>
 						<name>i_3</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>66</lineNumber>
+						<lineNumber>210</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2337,10 +2337,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>66</second>
+										<second>210</second>
 									</item>
 								</second>
 							</item>
@@ -2369,9 +2369,9 @@
 						<type>0</type>
 						<id>78</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>66</lineNumber>
+						<lineNumber>210</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2383,10 +2383,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>66</second>
+										<second>210</second>
 									</item>
 								</second>
 							</item>
@@ -2545,9 +2545,9 @@
 						<type>0</type>
 						<id>85</id>
 						<name>exitcond3</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>70</lineNumber>
+						<lineNumber>214</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2559,10 +2559,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>70</second>
+										<second>214</second>
 									</item>
 								</second>
 							</item>
@@ -2591,9 +2591,9 @@
 						<type>0</type>
 						<id>87</id>
 						<name>i_5</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>70</lineNumber>
+						<lineNumber>214</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2605,10 +2605,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>70</second>
+										<second>214</second>
 									</item>
 								</second>
 							</item>
@@ -2637,9 +2637,9 @@
 						<type>0</type>
 						<id>88</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>70</lineNumber>
+						<lineNumber>214</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2651,10 +2651,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>70</second>
+										<second>214</second>
 									</item>
 								</second>
 							</item>
@@ -2684,9 +2684,9 @@
 						<type>0</type>
 						<id>90</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>215</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2698,10 +2698,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>71</second>
+										<second>215</second>
 									</item>
 								</second>
 							</item>
@@ -2763,9 +2763,9 @@
 						<type>0</type>
 						<id>93</id>
 						<name>exitcond2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>215</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2777,10 +2777,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>71</second>
+										<second>215</second>
 									</item>
 								</second>
 							</item>
@@ -2809,9 +2809,9 @@
 						<type>0</type>
 						<id>95</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>215</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2823,10 +2823,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>71</second>
+										<second>215</second>
 									</item>
 								</second>
 							</item>
@@ -2856,9 +2856,9 @@
 						<type>0</type>
 						<id>97</id>
 						<name>tmp_11_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2870,10 +2870,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -2901,9 +2901,9 @@
 						<type>0</type>
 						<id>98</id>
 						<name>tmp_10</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2915,10 +2915,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -2947,9 +2947,9 @@
 						<type>0</type>
 						<id>99</id>
 						<name>tmp_31_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2961,10 +2961,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -2992,9 +2992,9 @@
 						<type>0</type>
 						<id>100</id>
 						<name>ex_addr</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3006,10 +3006,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3039,9 +3039,9 @@
 						<type>0</type>
 						<id>101</id>
 						<name>hz_addr_2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3053,10 +3053,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3086,9 +3086,9 @@
 						<type>0</type>
 						<id>102</id>
 						<name>ex_load</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3100,10 +3100,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3123,7 +3123,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_74">
 				<Value>
@@ -3131,9 +3131,9 @@
 						<type>0</type>
 						<id>103</id>
 						<name>hz_load_2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3145,10 +3145,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3168,7 +3168,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_75">
 				<Value>
@@ -3176,9 +3176,9 @@
 						<type>0</type>
 						<id>104</id>
 						<name>tmp_11</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3190,10 +3190,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3222,9 +3222,9 @@
 						<type>0</type>
 						<id>105</id>
 						<name>tmp_13_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3236,10 +3236,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3267,9 +3267,9 @@
 						<type>0</type>
 						<id>106</id>
 						<name>tmp_12</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3281,10 +3281,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3313,9 +3313,9 @@
 						<type>0</type>
 						<id>107</id>
 						<name>tmp_32_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3327,10 +3327,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3358,9 +3358,9 @@
 						<type>0</type>
 						<id>108</id>
 						<name>hz_addr_3</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3372,10 +3372,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3405,9 +3405,9 @@
 						<type>0</type>
 						<id>109</id>
 						<name>hz_load_3</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3419,10 +3419,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3442,7 +3442,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_81">
 				<Value>
@@ -3450,9 +3450,9 @@
 						<type>0</type>
 						<id>110</id>
 						<name>tmp_13</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3464,10 +3464,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3488,7 +3488,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_82">
 				<Value>
@@ -3496,9 +3496,9 @@
 						<type>0</type>
 						<id>111</id>
 						<name>tmp_14</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3510,10 +3510,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3534,7 +3534,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>8.33</m_delay>
+				<m_delay>1.97</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_83">
 				<Value>
@@ -3542,9 +3542,9 @@
 						<type>0</type>
 						<id>112</id>
 						<name>tmp_15</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3556,10 +3556,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3580,7 +3580,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_84">
 				<Value>
@@ -3588,9 +3588,9 @@
 						<type>0</type>
 						<id>113</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3602,10 +3602,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>72</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -3627,7 +3627,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_85">
 				<Value>
@@ -3635,9 +3635,9 @@
 						<type>0</type>
 						<id>114</id>
 						<name>j_6</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>215</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3649,10 +3649,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>71</second>
+										<second>215</second>
 									</item>
 								</second>
 							</item>
@@ -3681,9 +3681,9 @@
 						<type>0</type>
 						<id>115</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>215</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3695,10 +3695,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>71</second>
+										<second>215</second>
 									</item>
 								</second>
 							</item>
@@ -3888,9 +3888,9 @@
 						<type>0</type>
 						<id>124</id>
 						<name>exitcond1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>74</lineNumber>
+						<lineNumber>218</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3902,10 +3902,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>74</second>
+										<second>218</second>
 									</item>
 								</second>
 							</item>
@@ -3934,9 +3934,9 @@
 						<type>0</type>
 						<id>126</id>
 						<name>i_4</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3948,10 +3948,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -3980,9 +3980,9 @@
 						<type>0</type>
 						<id>127</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>74</lineNumber>
+						<lineNumber>218</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3994,10 +3994,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>74</second>
+										<second>218</second>
 									</item>
 								</second>
 							</item>
@@ -4027,9 +4027,9 @@
 						<type>0</type>
 						<id>129</id>
 						<name>tmp_10_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4041,10 +4041,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4072,9 +4072,9 @@
 						<type>0</type>
 						<id>130</id>
 						<name>tmp_8</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4086,10 +4086,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4110,7 +4110,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>5.79</m_delay>
+				<m_delay>1.82</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_97">
 				<Value>
@@ -4118,9 +4118,9 @@
 						<type>0</type>
 						<id>131</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>219</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4132,10 +4132,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>75</second>
+										<second>219</second>
 									</item>
 								</second>
 							</item>
@@ -4197,9 +4197,9 @@
 						<type>0</type>
 						<id>134</id>
 						<name>exitcond</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>219</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4211,10 +4211,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>75</second>
+										<second>219</second>
 									</item>
 								</second>
 							</item>
@@ -4243,9 +4243,9 @@
 						<type>0</type>
 						<id>136</id>
 						<name>j_7</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4257,10 +4257,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4289,9 +4289,9 @@
 						<type>0</type>
 						<id>137</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>219</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4303,10 +4303,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>75</second>
+										<second>219</second>
 									</item>
 								</second>
 							</item>
@@ -4336,9 +4336,9 @@
 						<type>0</type>
 						<id>139</id>
 						<name>tmp_17_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4350,10 +4350,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4381,9 +4381,9 @@
 						<type>0</type>
 						<id>140</id>
 						<name>tmp_16</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4395,10 +4395,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4427,9 +4427,9 @@
 						<type>0</type>
 						<id>141</id>
 						<name>tmp_33_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4441,10 +4441,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4472,9 +4472,9 @@
 						<type>0</type>
 						<id>142</id>
 						<name>ex_addr_2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4486,10 +4486,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4519,9 +4519,9 @@
 						<type>0</type>
 						<id>143</id>
 						<name>tmp_17</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4533,10 +4533,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4565,9 +4565,9 @@
 						<type>0</type>
 						<id>144</id>
 						<name>tmp_34_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4579,10 +4579,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4610,9 +4610,9 @@
 						<type>0</type>
 						<id>145</id>
 						<name>ey_addr_2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4624,10 +4624,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4657,9 +4657,9 @@
 						<type>0</type>
 						<id>146</id>
 						<name>ey_addr_3</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4671,10 +4671,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4704,9 +4704,9 @@
 						<type>0</type>
 						<id>147</id>
 						<name>hz_addr_4</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4718,10 +4718,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4751,9 +4751,9 @@
 						<type>0</type>
 						<id>148</id>
 						<name>hz_load_4</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4765,10 +4765,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4788,7 +4788,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_112">
 				<Value>
@@ -4796,9 +4796,9 @@
 						<type>0</type>
 						<id>149</id>
 						<name>tmp_18_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4810,10 +4810,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4841,9 +4841,9 @@
 						<type>0</type>
 						<id>150</id>
 						<name>tmp_18</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4855,10 +4855,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4887,9 +4887,9 @@
 						<type>0</type>
 						<id>151</id>
 						<name>tmp_35_cast</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4901,10 +4901,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4932,9 +4932,9 @@
 						<type>0</type>
 						<id>152</id>
 						<name>ex_addr_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4946,10 +4946,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -4979,9 +4979,9 @@
 						<type>0</type>
 						<id>153</id>
 						<name>ex_load_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4993,10 +4993,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5016,7 +5016,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_117">
 				<Value>
@@ -5024,9 +5024,9 @@
 						<type>0</type>
 						<id>154</id>
 						<name>ex_load_2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5038,10 +5038,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5061,7 +5061,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_118">
 				<Value>
@@ -5069,9 +5069,9 @@
 						<type>0</type>
 						<id>155</id>
 						<name>tmp_19</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5083,10 +5083,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5107,7 +5107,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_119">
 				<Value>
@@ -5115,9 +5115,9 @@
 						<type>0</type>
 						<id>156</id>
 						<name>ey_load_1</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5129,10 +5129,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5152,7 +5152,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_120">
 				<Value>
@@ -5160,9 +5160,9 @@
 						<type>0</type>
 						<id>157</id>
 						<name>tmp_20</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5174,10 +5174,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5198,7 +5198,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_121">
 				<Value>
@@ -5206,9 +5206,9 @@
 						<type>0</type>
 						<id>158</id>
 						<name>ey_load_2</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5220,10 +5220,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5243,7 +5243,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_122">
 				<Value>
@@ -5251,9 +5251,9 @@
 						<type>0</type>
 						<id>159</id>
 						<name>tmp_21</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5265,10 +5265,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5289,7 +5289,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_123">
 				<Value>
@@ -5297,9 +5297,9 @@
 						<type>0</type>
 						<id>160</id>
 						<name>tmp_22</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5311,10 +5311,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5335,7 +5335,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>8.33</m_delay>
+				<m_delay>1.97</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_124">
 				<Value>
@@ -5343,9 +5343,9 @@
 						<type>0</type>
 						<id>161</id>
 						<name>tmp_23</name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5357,10 +5357,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5381,7 +5381,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_125">
 				<Value>
@@ -5389,9 +5389,9 @@
 						<type>0</type>
 						<id>162</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>220</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5403,10 +5403,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>76</second>
+										<second>220</second>
 									</item>
 								</second>
 							</item>
@@ -5428,7 +5428,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_126">
 				<Value>
@@ -5436,9 +5436,9 @@
 						<type>0</type>
 						<id>163</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>219</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5450,10 +5450,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>75</second>
+										<second>219</second>
 									</item>
 								</second>
 							</item>
@@ -5543,9 +5543,9 @@
 						<type>0</type>
 						<id>169</id>
 						<name></name>
-						<fileName>classic/fdtd-2d.cpp</fileName>
+						<fileName>fdtd-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d</fileDirectory>
-						<lineNumber>80</lineNumber>
+						<lineNumber>224</lineNumber>
 						<contextFuncName>kernel_fdtd_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5557,10 +5557,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/fdtd-2d.cpp</first>
+											<first>fdtd-2d.cpp</first>
 											<second>kernel_fdtd_2d</second>
 										</first>
-										<second>80</second>
+										<second>224</second>
 									</item>
 								</second>
 							</item>
@@ -8499,8 +8499,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>-649715695</mMinLatency>
-			<mMaxLatency>-649715695</mMaxLatency>
+			<mMinLatency>847469159</mMinLatency>
+			<mMaxLatency>847469159</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8551,8 +8551,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>50</mMinTripCount>
 			<mMaxTripCount>50</mMaxTripCount>
-			<mMinLatency>-649715696</mMinLatency>
-			<mMaxLatency>-649715696</mMaxLatency>
+			<mMinLatency>847469158</mMinLatency>
+			<mMaxLatency>847469158</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8597,8 +8597,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>1000</mMinTripCount>
 			<mMaxTripCount>1000</mMaxTripCount>
-			<mMinLatency>3000</mMinLatency>
-			<mMaxLatency>3000</mMaxLatency>
+			<mMinLatency>5000</mMinLatency>
+			<mMaxLatency>5000</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8643,8 +8643,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>999</mMinTripCount>
 			<mMaxTripCount>999</mMaxTripCount>
-			<mMinLatency>20980998</mMinLatency>
-			<mMaxLatency>20980998</mMaxLatency>
+			<mMinLatency>52952994</mMinLatency>
+			<mMaxLatency>52952994</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8667,7 +8667,7 @@
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
 			<mMinLatency>0</mMinLatency>
-			<mMaxLatency>0</mMaxLatency>
+			<mMaxLatency>4</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8689,8 +8689,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>1000</mMinTripCount>
 			<mMaxTripCount>1000</mMaxTripCount>
-			<mMinLatency>21000</mMinLatency>
-			<mMaxLatency>21000</mMaxLatency>
+			<mMinLatency>53000</mMinLatency>
+			<mMaxLatency>53000</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8757,8 +8757,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>1000</mMinTripCount>
 			<mMaxTripCount>1000</mMaxTripCount>
-			<mMinLatency>20981000</mMinLatency>
-			<mMaxLatency>20981000</mMaxLatency>
+			<mMinLatency>53948000</mMinLatency>
+			<mMaxLatency>53948000</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8803,8 +8803,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>999</mMinTripCount>
 			<mMaxTripCount>999</mMaxTripCount>
-			<mMinLatency>20979</mMinLatency>
-			<mMaxLatency>20979</mMaxLatency>
+			<mMinLatency>53946</mMinLatency>
+			<mMaxLatency>53946</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8871,8 +8871,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>999</mMinTripCount>
 			<mMaxTripCount>999</mMaxTripCount>
-			<mMinLatency>30940029</mMinLatency>
-			<mMaxLatency>30940029</mMaxLatency>
+			<mMinLatency>81842076</mMinLatency>
+			<mMaxLatency>81842076</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8895,7 +8895,7 @@
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
 			<mMinLatency>0</mMinLatency>
-			<mMaxLatency>0</mMaxLatency>
+			<mMaxLatency>4</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -8917,8 +8917,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>999</mMinTripCount>
 			<mMaxTripCount>999</mMaxTripCount>
-			<mMinLatency>30969</mMinLatency>
-			<mMaxLatency>30969</mMaxLatency>
+			<mMinLatency>81918</mMinLatency>
+			<mMaxLatency>81918</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -9082,34 +9082,34 @@
 			<first>34</first>
 			<second>
 				<first>2</first>
-				<second>1</second>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>35</first>
 			<second>
-				<first>3</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>36</first>
 			<second>
-				<first>3</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>37</first>
 			<second>
-				<first>3</first>
+				<first>5</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>38</first>
 			<second>
-				<first>4</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -9123,721 +9123,721 @@
 		<item>
 			<first>42</first>
 			<second>
-				<first>5</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>43</first>
 			<second>
-				<first>5</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
-				<first>5</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>47</first>
 			<second>
-				<first>5</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
-				<first>5</first>
-				<second>0</second>
+				<first>8</first>
+				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
-				<first>5</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
-				<first>5</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>51</first>
 			<second>
-				<first>5</first>
-				<second>0</second>
+				<first>8</first>
+				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>52</first>
 			<second>
-				<first>5</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>55</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>62</first>
 			<second>
-				<first>6</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>63</first>
 			<second>
-				<first>6</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
-				<first>6</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>65</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>66</first>
 			<second>
-				<first>6</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>67</first>
 			<second>
-				<first>6</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>68</first>
 			<second>
-				<first>16</first>
+				<first>45</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>69</first>
 			<second>
-				<first>6</first>
+				<first>13</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>70</first>
 			<second>
-				<first>6</first>
+				<first>13</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>71</first>
 			<second>
-				<first>10</first>
-				<second>4</second>
+				<first>17</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>72</first>
 			<second>
-				<first>15</first>
-				<second>4</second>
+				<first>31</first>
+				<second>17</second>
 			</second>
 		</item>
 		<item>
 			<first>73</first>
 			<second>
-				<first>20</first>
-				<second>4</second>
+				<first>49</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>74</first>
 			<second>
-				<first>25</first>
+				<first>63</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>75</first>
 			<second>
-				<first>26</first>
+				<first>64</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>77</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>78</first>
 			<second>
-				<first>6</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>80</first>
 			<second>
-				<first>5</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>82</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>83</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>84</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>85</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>87</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>88</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>90</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>92</first>
 			<second>
-				<first>28</first>
+				<first>66</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>93</first>
 			<second>
-				<first>28</first>
+				<first>66</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>95</first>
 			<second>
-				<first>28</first>
+				<first>66</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>97</first>
 			<second>
-				<first>28</first>
+				<first>67</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>98</first>
 			<second>
-				<first>28</first>
+				<first>67</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>99</first>
 			<second>
-				<first>28</first>
+				<first>68</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>100</first>
 			<second>
-				<first>28</first>
+				<first>68</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>101</first>
 			<second>
-				<first>28</first>
+				<first>68</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>102</first>
 			<second>
-				<first>38</first>
+				<first>100</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>103</first>
 			<second>
-				<first>28</first>
+				<first>68</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>104</first>
 			<second>
-				<first>28</first>
+				<first>66</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>105</first>
 			<second>
-				<first>28</first>
+				<first>67</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>106</first>
 			<second>
-				<first>28</first>
+				<first>67</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>107</first>
 			<second>
-				<first>28</first>
+				<first>68</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>108</first>
 			<second>
-				<first>28</first>
+				<first>68</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>109</first>
 			<second>
-				<first>28</first>
+				<first>68</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>110</first>
 			<second>
-				<first>32</first>
-				<second>4</second>
+				<first>72</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>111</first>
 			<second>
-				<first>37</first>
-				<second>4</second>
+				<first>86</first>
+				<second>17</second>
 			</second>
 		</item>
 		<item>
 			<first>112</first>
 			<second>
-				<first>42</first>
-				<second>4</second>
+				<first>104</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>113</first>
 			<second>
-				<first>47</first>
+				<first>118</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>114</first>
 			<second>
-				<first>28</first>
+				<first>67</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>115</first>
 			<second>
-				<first>48</first>
+				<first>119</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>117</first>
 			<second>
-				<first>28</first>
+				<first>66</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>119</first>
 			<second>
-				<first>27</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>121</first>
 			<second>
-				<first>49</first>
+				<first>120</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>122</first>
 			<second>
-				<first>49</first>
+				<first>120</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>123</first>
 			<second>
-				<first>49</first>
+				<first>120</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>124</first>
 			<second>
-				<first>49</first>
+				<first>120</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>126</first>
 			<second>
-				<first>49</first>
+				<first>120</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>127</first>
 			<second>
-				<first>49</first>
+				<first>120</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>129</first>
 			<second>
-				<first>49</first>
+				<first>121</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>130</first>
 			<second>
-				<first>49</first>
-				<second>0</second>
+				<first>121</first>
+				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>131</first>
 			<second>
-				<first>49</first>
+				<first>124</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>133</first>
 			<second>
-				<first>50</first>
+				<first>125</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>134</first>
 			<second>
-				<first>50</first>
+				<first>125</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>136</first>
 			<second>
-				<first>50</first>
+				<first>125</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>137</first>
 			<second>
-				<first>50</first>
+				<first>125</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>139</first>
 			<second>
-				<first>50</first>
+				<first>126</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>140</first>
 			<second>
-				<first>50</first>
+				<first>126</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>141</first>
 			<second>
-				<first>50</first>
+				<first>127</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>142</first>
 			<second>
-				<first>50</first>
+				<first>127</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>143</first>
 			<second>
-				<first>50</first>
+				<first>126</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>144</first>
 			<second>
-				<first>55</first>
+				<first>141</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>145</first>
 			<second>
-				<first>55</first>
+				<first>141</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>146</first>
 			<second>
-				<first>60</first>
+				<first>155</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>147</first>
 			<second>
-				<first>60</first>
+				<first>155</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>148</first>
 			<second>
-				<first>70</first>
+				<first>187</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>149</first>
 			<second>
-				<first>50</first>
+				<first>126</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>150</first>
 			<second>
-				<first>50</first>
+				<first>126</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>151</first>
 			<second>
-				<first>50</first>
+				<first>127</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>152</first>
 			<second>
-				<first>50</first>
+				<first>127</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>153</first>
 			<second>
-				<first>50</first>
+				<first>127</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>154</first>
 			<second>
-				<first>50</first>
+				<first>127</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>155</first>
 			<second>
-				<first>54</first>
-				<second>4</second>
+				<first>131</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>156</first>
 			<second>
-				<first>55</first>
+				<first>141</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>157</first>
 			<second>
-				<first>59</first>
-				<second>4</second>
+				<first>145</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>158</first>
 			<second>
-				<first>60</first>
+				<first>155</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>159</first>
 			<second>
-				<first>64</first>
-				<second>4</second>
+				<first>159</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>160</first>
 			<second>
-				<first>69</first>
-				<second>4</second>
+				<first>173</first>
+				<second>17</second>
 			</second>
 		</item>
 		<item>
 			<first>161</first>
 			<second>
-				<first>74</first>
-				<second>4</second>
+				<first>191</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>162</first>
 			<second>
-				<first>79</first>
+				<first>205</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>163</first>
 			<second>
-				<first>80</first>
+				<first>206</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>165</first>
 			<second>
-				<first>50</first>
+				<first>125</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>167</first>
 			<second>
-				<first>49</first>
+				<first>120</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -9884,7 +9884,7 @@
 			<first>39</first>
 			<second>
 				<first>2</first>
-				<second>4</second>
+				<second>6</second>
 			</second>
 		</item>
 		<item>
@@ -9905,28 +9905,28 @@
 			<first>53</first>
 			<second>
 				<first>3</first>
-				<second>3</second>
+				<second>7</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
-				<first>4</first>
-				<second>4</second>
+				<first>8</first>
+				<second>8</second>
 			</second>
 		</item>
 		<item>
 			<first>76</first>
 			<second>
-				<first>4</first>
-				<second>24</second>
+				<first>8</first>
+				<second>60</second>
 			</second>
 		</item>
 		<item>
 			<first>79</first>
 			<second>
-				<first>4</first>
-				<second>4</second>
+				<first>8</first>
+				<second>8</second>
 			</second>
 		</item>
 		<item>
@@ -9961,7 +9961,7 @@
 			<first>116</first>
 			<second>
 				<first>5</first>
-				<second>25</second>
+				<second>58</second>
 			</second>
 		</item>
 		<item>
@@ -9988,29 +9988,29 @@
 		<item>
 			<first>132</first>
 			<second>
-				<first>5</first>
-				<second>5</second>
+				<first>6</first>
+				<second>9</second>
 			</second>
 		</item>
 		<item>
 			<first>138</first>
 			<second>
-				<first>6</first>
-				<second>6</second>
+				<first>10</first>
+				<second>10</second>
 			</second>
 		</item>
 		<item>
 			<first>164</first>
 			<second>
-				<first>6</first>
-				<second>36</second>
+				<first>11</first>
+				<second>91</second>
 			</second>
 		</item>
 		<item>
 			<first>166</first>
 			<second>
-				<first>6</first>
-				<second>6</second>
+				<first>10</first>
+				<second>10</second>
 			</second>
 		</item>
 		<item>

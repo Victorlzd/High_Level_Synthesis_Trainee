@@ -6,7 +6,7 @@
 <Project Version="7" Minor="38" Path="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ee1e132ccaa74b2da9c137e930ed0180"/>
+    <Option Name="Id" Val="46530636024246c4b4a83edeb577afdf"/>
     <Option Name="Part" Val="xc7k70tfbv676-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -60,14 +60,14 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64.xci">
+      <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_ap_dmul_3_max_dsp_64/kernel_fdtd_2d_ap_dmul_3_max_dsp_64.xci">
+      <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

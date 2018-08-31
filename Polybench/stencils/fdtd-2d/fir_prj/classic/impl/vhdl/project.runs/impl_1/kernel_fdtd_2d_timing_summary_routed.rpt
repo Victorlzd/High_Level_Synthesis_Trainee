@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Tue Aug  7 15:11:22 2018
+| Date         : Fri Aug 31 22:17:07 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_timing_summary -max_paths 10 -file kernel_fdtd_2d_timing_summary_routed.rpt -pb kernel_fdtd_2d_timing_summary_routed.pb -rpx kernel_fdtd_2d_timing_summary_routed.rpx -warn_on_violation
 | Design       : kernel_fdtd_2d
@@ -74,7 +74,7 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 322 input ports with no input delay specified. (HIGH)
+ There are 386 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
@@ -126,10 +126,10 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      1.384        0.000                      0                 2500        0.081        0.000                      0                 2500        4.600        0.000                       0                  1441  
+     -0.288       -0.380                      2                 4888        0.054        0.000                      0                 4888        0.343        0.000                       0                  3133  
 
 
-All user specified timing constraints are met.
+Timing constraints are not met.
 
 
 ------------------------------------------------------------------------------------------------
@@ -137,9 +137,9 @@ All user specified timing constraints are met.
 | -------------
 ------------------------------------------------------------------------------------------------
 
-Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
------   ------------       ----------      --------------
-ap_clk  {0.000 5.000}      10.000          100.000         
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+ap_clk  {0.000 1.250}        2.500           400.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              1.384        0.000                      0                 2500        0.081        0.000                      0                 2500        4.600        0.000                       0                  1441  
+ap_clk             -0.288       -0.380                      2                 4888        0.054        0.000                      0                 4888        0.343        0.000                       0                  3133  
 
 
 ------------------------------------------------------------------------------------------------
@@ -180,26 +180,26 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        1.384ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.081ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.600ns,  Total Violation        0.000ns
+Setup :            2  Failing Endpoints,  Worst Slack       -0.288ns,  Total Violation       -0.380ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.054ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.343ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[0]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (VIOLATED) :        -0.288ns  (required time - arrival time)
+  Source:                 kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/opt_has_pipe.first_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.770ns  (logic 1.401ns (50.579%)  route 1.369ns (49.421%))
+  Logic Levels:           4  (CARRY4=3 LUT3=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -212,49 +212,50 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/aclk
+    SLICE_X5Y145         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/opt_has_pipe.first_q_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[0])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[0]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[0]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[0]
+    SLICE_X5Y145         FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/opt_has_pipe.first_q_reg[0]/Q
+                         net (fo=3, routed)           0.457     1.398    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL_n_13
+    SLICE_X4Y146         LUT3 (Prop_lut3_I0_O)        0.053     1.451 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     1.451    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/opt_has_pipe.first_q_reg[0]
+    SLICE_X4Y146         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313     1.764 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=2, routed)           0.525     2.289    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_6
+    SLICE_X0Y147         CARRY4 (Prop_carry4_CYINIT_CO[0])
+                                                      0.354     2.643 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[0]
+                         net (fo=1, routed)           0.387     3.030    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/CHAIN_GEN[4].C_MUX.CARRY_MUX_n_6
+    SLICE_X1Y148         CARRY4 (Prop_carry4_CYINIT_O[0])
+                                                      0.412     3.442 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/CHAIN_GEN[5].Q_XOR.SUM_XOR_CARRY4/O[0]
+                         net (fo=1, routed)           0.000     3.442    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/p_13_out
+    SLICE_X1Y148         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[0])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/aclk
+    SLICE_X1Y148         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X1Y148         FDRE (Setup_fdre_C_D)        0.051     3.154    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_1/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          3.154    
+                         arrival time                          -3.442    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                 -0.288    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[10]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (VIOLATED) :        -0.092ns  (required time - arrival time)
+  Source:                 kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/opt_has_pipe.first_q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.574ns  (logic 1.421ns (55.202%)  route 1.153ns (44.798%))
+  Logic Levels:           4  (CARRY4=3 LUT3=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -267,49 +268,50 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/aclk
+    SLICE_X5Y147         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/opt_has_pipe.first_q_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[10])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[10]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[10]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[10]
+    SLICE_X5Y147         FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL/i_pipe/opt_has_pipe.first_q_reg[2]/Q
+                         net (fo=4, routed)           0.477     1.418    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.MANT_MSBS_DEL_n_11
+    SLICE_X1Y146         LUT3 (Prop_lut3_I2_O)        0.053     1.471 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=2, routed)           0.000     1.471    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/opt_has_pipe.first_q_reg[1]
+    SLICE_X1Y146         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.795 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=2, routed)           0.430     2.225    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/CHAIN_GEN[3].C_MUX.CARRY_MUX_n_6
+    SLICE_X2Y147         CARRY4 (Prop_carry4_CYINIT_CO[0])
+                                                      0.367     2.592 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4/CO[0]
+                         net (fo=1, routed)           0.246     2.838    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/CHAIN_GEN[4].C_MUX.CARRY_MUX_n_6
+    SLICE_X3Y147         CARRY4 (Prop_carry4_CYINIT_O[0])
+                                                      0.408     3.246 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/CHAIN_GEN[5].Q_XOR.SUM_XOR_CARRY4/O[0]
+                         net (fo=1, routed)           0.000     3.246    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/p_13_out
+    SLICE_X3Y147         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[10])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/aclk
+    SLICE_X3Y147         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X3Y147         FDRE (Setup_fdre_C_D)        0.051     3.154    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/DSP48_E1.DSP_LOGIC_ADDERS.RND_0/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          3.154    
+                         arrival time                          -3.246    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                 -0.092    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[11]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.006ns  (required time - arrival time)
+  Source:                 ap_CS_fsm_reg[131]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[48]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.460ns  (logic 0.467ns (18.980%)  route 1.993ns (81.020%))
+  Logic Levels:           3  (LUT4=1 LUT6=2)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -322,49 +324,45 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X6Y132         FDRE                                         r  ap_CS_fsm_reg[131]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[11])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[11]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[11]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[11]
+    SLICE_X6Y132         FDRE (Prop_fdre_C_Q)         0.308     0.980 f  ap_CS_fsm_reg[131]/Q
+                         net (fo=197, routed)         0.599     1.579    kernel_fdtd_2d_dabkb_U1/ap_CS_fsm_reg[191][4]
+    SLICE_X7Y134         LUT6 (Prop_lut6_I2_O)        0.053     1.632 r  kernel_fdtd_2d_dabkb_U1/din1_buf1[63]_i_3/O
+                         net (fo=64, routed)          0.949     2.581    kernel_fdtd_2d_dabkb_U1/din1_buf1[63]_i_3_n_6
+    SLICE_X2Y142         LUT4 (Prop_lut4_I1_O)        0.053     2.634 r  kernel_fdtd_2d_dabkb_U1/din1_buf1[48]_i_2/O
+                         net (fo=1, routed)           0.446     3.079    kernel_fdtd_2d_dabkb_U1/din1_buf1[48]_i_2_n_6
+    SLICE_X3Y142         LUT6 (Prop_lut6_I5_O)        0.053     3.132 r  kernel_fdtd_2d_dabkb_U1/din1_buf1[48]_i_1/O
+                         net (fo=1, routed)           0.000     3.132    kernel_fdtd_2d_dabkb_U1/din1[48]
+    SLICE_X3Y142         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[48]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[11])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    kernel_fdtd_2d_dabkb_U1/ap_clk
+    SLICE_X3Y142         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[48]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X3Y142         FDRE (Setup_fdre_C_D)        0.035     3.138    kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[48]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          3.138    
+                         arrival time                          -3.132    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.006    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[12]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.013ns  (required time - arrival time)
+  Source:                 i_1_reg_228_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            j_2_reg_251_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.051ns  (logic 0.545ns (26.574%)  route 1.506ns (73.426%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -377,49 +375,45 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X14Y125        FDRE                                         r  i_1_reg_228_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[12])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[12]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[12]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[12]
+    SLICE_X14Y125        FDRE (Prop_fdre_C_Q)         0.282     0.954 f  i_1_reg_228_reg[6]/Q
+                         net (fo=4, routed)           0.595     1.549    i_1_reg_228[6]
+    SLICE_X15Y119        LUT5 (Prop_lut5_I3_O)        0.157     1.706 r  i_5_reg_693[9]_i_2/O
+                         net (fo=2, routed)           0.138     1.844    i_5_reg_693[9]_i_2_n_6
+    SLICE_X15Y119        LUT6 (Prop_lut6_I5_O)        0.053     1.897 r  ap_CS_fsm[120]_i_2/O
+                         net (fo=4, routed)           0.267     2.164    ap_CS_fsm[120]_i_2_n_6
+    SLICE_X17Y118        LUT2 (Prop_lut2_I0_O)        0.053     2.217 r  j_2_reg_251[9]_i_1/O
+                         net (fo=10, routed)          0.506     2.723    j_2_reg_2510
+    SLICE_X19Y119        FDRE                                         r  j_2_reg_251_reg[3]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[12])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    ap_clk
+    SLICE_X19Y119        FDRE                                         r  j_2_reg_251_reg[3]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X19Y119        FDRE (Setup_fdre_C_R)       -0.367     2.736    j_2_reg_251_reg[3]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          2.736    
+                         arrival time                          -2.723    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.013    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[13]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.028ns  (required time - arrival time)
+  Source:                 ap_CS_fsm_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            ap_CS_fsm_reg[122]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.438ns  (logic 0.467ns (19.153%)  route 1.971ns (80.847%))
+  Logic Levels:           3  (LUT6=3)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -432,49 +426,45 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X10Y130        FDRE                                         r  ap_CS_fsm_reg[30]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[13])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[13]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[13]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[13]
+    SLICE_X10Y130        FDRE (Prop_fdre_C_Q)         0.308     0.980 f  ap_CS_fsm_reg[30]/Q
+                         net (fo=4, routed)           0.725     1.705    ap_CS_fsm_state31
+    SLICE_X6Y130         LUT6 (Prop_lut6_I1_O)        0.053     1.758 r  ap_CS_fsm[122]_i_16/O
+                         net (fo=1, routed)           0.703     2.461    ap_CS_fsm[122]_i_16_n_6
+    SLICE_X8Y130         LUT6 (Prop_lut6_I2_O)        0.053     2.514 r  ap_CS_fsm[122]_i_4/O
+                         net (fo=1, routed)           0.544     3.057    ap_CS_fsm[122]_i_4_n_6
+    SLICE_X9Y131         LUT6 (Prop_lut6_I2_O)        0.053     3.110 r  ap_CS_fsm[122]_i_1/O
+                         net (fo=1, routed)           0.000     3.110    ap_NS_fsm[122]
+    SLICE_X9Y131         FDRE                                         r  ap_CS_fsm_reg[122]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[13])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    ap_clk
+    SLICE_X9Y131         FDRE                                         r  ap_CS_fsm_reg[122]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X9Y131         FDRE (Setup_fdre_C_D)        0.035     3.138    ap_CS_fsm_reg[122]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          3.138    
+                         arrival time                          -3.110    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.028    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[14]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.033ns  (required time - arrival time)
+  Source:                 i_1_reg_228_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            i_2_reg_263_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.054ns  (logic 0.545ns (26.537%)  route 1.509ns (73.463%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -487,49 +477,45 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X14Y125        FDRE                                         r  i_1_reg_228_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[14])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[14]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[14]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[14]
+    SLICE_X14Y125        FDRE (Prop_fdre_C_Q)         0.282     0.954 r  i_1_reg_228_reg[6]/Q
+                         net (fo=4, routed)           0.595     1.549    i_1_reg_228[6]
+    SLICE_X15Y119        LUT5 (Prop_lut5_I3_O)        0.157     1.706 f  i_5_reg_693[9]_i_2/O
+                         net (fo=2, routed)           0.138     1.844    i_5_reg_693[9]_i_2_n_6
+    SLICE_X15Y119        LUT6 (Prop_lut6_I5_O)        0.053     1.897 f  ap_CS_fsm[120]_i_2/O
+                         net (fo=4, routed)           0.250     2.148    ap_CS_fsm[120]_i_2_n_6
+    SLICE_X15Y118        LUT2 (Prop_lut2_I1_O)        0.053     2.201 r  i_2_reg_263[9]_i_1/O
+                         net (fo=30, routed)          0.525     2.726    ap_NS_fsm12_out
+    SLICE_X10Y119        FDRE                                         r  i_2_reg_263_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[14])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    ap_clk
+    SLICE_X10Y119        FDRE                                         r  i_2_reg_263_reg[0]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X10Y119        FDRE (Setup_fdre_C_R)       -0.344     2.759    i_2_reg_263_reg[0]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          2.759    
+                         arrival time                          -2.726    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.033    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[15]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.033ns  (required time - arrival time)
+  Source:                 i_1_reg_228_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            i_2_reg_263_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.054ns  (logic 0.545ns (26.537%)  route 1.509ns (73.463%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -542,49 +528,45 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X14Y125        FDRE                                         r  i_1_reg_228_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[15])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[15]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[15]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[15]
+    SLICE_X14Y125        FDRE (Prop_fdre_C_Q)         0.282     0.954 r  i_1_reg_228_reg[6]/Q
+                         net (fo=4, routed)           0.595     1.549    i_1_reg_228[6]
+    SLICE_X15Y119        LUT5 (Prop_lut5_I3_O)        0.157     1.706 f  i_5_reg_693[9]_i_2/O
+                         net (fo=2, routed)           0.138     1.844    i_5_reg_693[9]_i_2_n_6
+    SLICE_X15Y119        LUT6 (Prop_lut6_I5_O)        0.053     1.897 f  ap_CS_fsm[120]_i_2/O
+                         net (fo=4, routed)           0.250     2.148    ap_CS_fsm[120]_i_2_n_6
+    SLICE_X15Y118        LUT2 (Prop_lut2_I1_O)        0.053     2.201 r  i_2_reg_263[9]_i_1/O
+                         net (fo=30, routed)          0.525     2.726    ap_NS_fsm12_out
+    SLICE_X10Y119        FDRE                                         r  i_2_reg_263_reg[2]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[15])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    ap_clk
+    SLICE_X10Y119        FDRE                                         r  i_2_reg_263_reg[2]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X10Y119        FDRE (Setup_fdre_C_R)       -0.344     2.759    i_2_reg_263_reg[2]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          2.759    
+                         arrival time                          -2.726    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.033    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[16]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.049ns  (required time - arrival time)
+  Source:                 i_reg_205_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg/A[8]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.076ns  (logic 0.490ns (23.599%)  route 1.586ns (76.401%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -597,49 +579,44 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X18Y119        FDRE                                         r  i_reg_205_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[16])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[16]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[16]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[16]
+    SLICE_X18Y119        FDRE (Prop_fdre_C_Q)         0.282     0.954 r  i_reg_205_reg[2]/Q
+                         net (fo=13, routed)          0.845     1.799    kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/Q[2]
+    SLICE_X21Y121        LUT6 (Prop_lut6_I1_O)        0.155     1.954 r  kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg_i_11/O
+                         net (fo=2, routed)           0.322     2.276    kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg_i_11_n_6
+    SLICE_X20Y122        LUT4 (Prop_lut4_I2_O)        0.053     2.329 r  kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg_i_2/O
+                         net (fo=1, routed)           0.419     2.748    kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/tmp_4_fu_383_p2[8]
+    DSP48_X1Y49          DSP48E1                                      r  kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg/A[8]
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[16])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/ap_clk
+    DSP48_X1Y49          DSP48E1                                      r  kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    DSP48_X1Y49          DSP48E1 (Setup_dsp48e1_CLK_A[8])
+                                                     -0.306     2.797    kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          2.797    
+                         arrival time                          -2.748    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.049    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[17]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.099ns  (required time - arrival time)
+  Source:                 i_1_reg_228_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            i_2_reg_263_reg[5]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.988ns  (logic 0.545ns (27.413%)  route 1.443ns (72.587%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -652,49 +629,45 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X14Y125        FDRE                                         r  i_1_reg_228_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[17])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[17]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[17]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[17]
+    SLICE_X14Y125        FDRE (Prop_fdre_C_Q)         0.282     0.954 r  i_1_reg_228_reg[6]/Q
+                         net (fo=4, routed)           0.595     1.549    i_1_reg_228[6]
+    SLICE_X15Y119        LUT5 (Prop_lut5_I3_O)        0.157     1.706 f  i_5_reg_693[9]_i_2/O
+                         net (fo=2, routed)           0.138     1.844    i_5_reg_693[9]_i_2_n_6
+    SLICE_X15Y119        LUT6 (Prop_lut6_I5_O)        0.053     1.897 f  ap_CS_fsm[120]_i_2/O
+                         net (fo=4, routed)           0.250     2.148    ap_CS_fsm[120]_i_2_n_6
+    SLICE_X15Y118        LUT2 (Prop_lut2_I1_O)        0.053     2.201 r  i_2_reg_263[9]_i_1/O
+                         net (fo=30, routed)          0.460     2.660    ap_NS_fsm12_out
+    SLICE_X10Y122        FDRE                                         r  i_2_reg_263_reg[5]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[17])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    ap_clk
+    SLICE_X10Y122        FDRE                                         r  i_2_reg_263_reg[5]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X10Y122        FDRE (Setup_fdre_C_R)       -0.344     2.759    i_2_reg_263_reg[5]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          2.759    
+                         arrival time                          -2.660    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.099    
 
-Slack (MET) :             1.384ns  (required time - arrival time)
-  Source:                 kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[18]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.099ns  (required time - arrival time)
+  Source:                 i_1_reg_228_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            i_2_reg_263_reg[7]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.360ns  (logic 6.594ns (89.593%)  route 0.766ns (10.407%))
-  Logic Levels:           3  (DSP48E1=3)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.988ns  (logic 0.545ns (27.413%)  route 1.443ns (72.587%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -707,36 +680,32 @@ Slack (MET) :             1.384ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.672     0.672    kernel_fdtd_2d_dmcud_U2/ap_clk
-    SLICE_X19Y108        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/C
+                         net (fo=3132, unset)         0.672     0.672    ap_clk
+    SLICE_X14Y125        FDRE                                         r  i_1_reg_228_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y108        FDRE (Prop_fdre_C_Q)         0.269     0.941 r  kernel_fdtd_2d_dmcud_U2/din0_buf1_reg[12]/Q
-                         net (fo=4, routed)           0.766     1.707    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/s_axis_a_tdata[12]
-    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_A[12]_PCOUT[47])
-                                                      3.421     5.128 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     5.128    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP_0[47]
-    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
-                                                      1.452     6.580 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
-                         net (fo=1, routed)           0.000     6.580    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP_0[47]
-    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[18])
-                                                      1.452     8.032 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[18]
-                         net (fo=1, routed)           0.000     8.032    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP_0[18]
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/PCIN[18]
+    SLICE_X14Y125        FDRE (Prop_fdre_C_Q)         0.282     0.954 r  i_1_reg_228_reg[6]/Q
+                         net (fo=4, routed)           0.595     1.549    i_1_reg_228[6]
+    SLICE_X15Y119        LUT5 (Prop_lut5_I3_O)        0.157     1.706 f  i_5_reg_693[9]_i_2/O
+                         net (fo=2, routed)           0.138     1.844    i_5_reg_693[9]_i_2_n_6
+    SLICE_X15Y119        LUT6 (Prop_lut6_I5_O)        0.053     1.897 f  ap_CS_fsm[120]_i_2/O
+                         net (fo=4, routed)           0.250     2.148    ap_CS_fsm[120]_i_2_n_6
+    SLICE_X15Y118        LUT2 (Prop_lut2_I1_O)        0.053     2.201 r  i_2_reg_263[9]_i_1/O
+                         net (fo=30, routed)          0.460     2.660    ap_NS_fsm12_out
+    SLICE_X10Y122        FDRE                                         r  i_2_reg_263_reg[7]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.638    10.638    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/aclk
-    DSP48_X1Y44          DSP48E1                                      r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    DSP48_X1Y44          DSP48E1 (Setup_dsp48e1_CLK_PCIN[18])
-                                                     -1.187     9.416    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.638     3.138    ap_clk
+    SLICE_X10Y122        FDRE                                         r  i_2_reg_263_reg[7]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X10Y122        FDRE (Setup_fdre_C_R)       -0.344     2.759    i_2_reg_263_reg[7]
   -------------------------------------------------------------------
-                         required time                          9.416    
-                         arrival time                          -8.032    
+                         required time                          2.759    
+                         arrival time                          -2.660    
   -------------------------------------------------------------------
-                         slack                                  1.384    
+                         slack                                  0.099    
 
 
 
@@ -744,15 +713,15 @@ Slack (MET) :             1.384ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.081ns  (arrival time - required time)
-  Source:                 j_6_reg_700_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            j_2_reg_252_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[7]_srl12/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.155ns  (logic 0.100ns (64.399%)  route 0.055ns (35.601%))
+  Data Path Delay:        0.222ns  (logic 0.100ns (44.954%)  route 0.122ns (55.046%))
   Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -763,31 +732,112 @@ Slack (MET) :             0.081ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    ap_clk
-    SLICE_X17Y93         FDRE                                         r  j_6_reg_700_reg[2]/C
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/Q_DEL/i_pipe/aclk
+    SLICE_X3Y153         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X17Y93         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  j_6_reg_700_reg[2]/Q
-                         net (fo=1, routed)           0.055     0.439    j_6_reg_700[2]
-    SLICE_X16Y93         FDRE                                         r  j_2_reg_252_reg[2]/D
+    SLICE_X3Y153         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]/Q
+                         net (fo=3, routed)           0.122     0.506    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL/i_pipe/out[7]
+    SLICE_X2Y151         SRL16E                                       r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[7]_srl12/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    ap_clk
-    SLICE_X16Y93         FDRE                                         r  j_2_reg_252_reg[2]/C
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL/i_pipe/aclk
+    SLICE_X2Y151         SRL16E                                       r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[7]_srl12/CLK
                          clock pessimism              0.000     0.298    
-    SLICE_X16Y93         FDRE (Hold_fdre_C_D)         0.059     0.357    j_2_reg_252_reg[2]
+    SLICE_X2Y151         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.154     0.452    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[7]_srl12
   -------------------------------------------------------------------
-                         required time                         -0.357    
+                         required time                         -0.452    
+                         arrival time                           0.506    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.069ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_ALIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][7]_srl6/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.238ns  (logic 0.118ns (49.579%)  route 0.120ns (50.421%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.298ns
+    Source Clock Delay      (SCD):    0.283ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_ALIGN_DELAY/i_pipe/aclk
+    SLICE_X8Y150         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_ALIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y150         FDRE (Prop_fdre_C_Q)         0.118     0.401 r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_ALIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]/Q
+                         net (fo=2, routed)           0.120     0.521    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/out[7]
+    SLICE_X10Y149        SRL16E                                       r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][7]_srl6/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/aclk
+    SLICE_X10Y149        SRL16E                                       r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][7]_srl6/CLK
+                         clock pessimism              0.000     0.298    
+    SLICE_X10Y149        SRL16E (Hold_srl16e_CLK_D)
+                                                      0.154     0.452    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][7]_srl6
+  -------------------------------------------------------------------
+                         required time                         -0.452    
+                         arrival time                           0.521    
+  -------------------------------------------------------------------
+                         slack                                  0.069    
+
+Slack (MET) :             0.078ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][9]_srl4/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.155ns  (logic 0.091ns (58.613%)  route 0.064ns (41.387%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.298ns
+    Source Clock Delay      (SCD):    0.283ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/aclk
+    SLICE_X15Y133        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y133        FDRE (Prop_fdre_C_Q)         0.091     0.374 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/Q
+                         net (fo=2, routed)           0.064     0.439    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/B[9]
+    SLICE_X14Y133        SRL16E                                       r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][9]_srl4/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/aclk
+    SLICE_X14Y133        SRL16E                                       r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][9]_srl4/CLK
+                         clock pessimism              0.000     0.298    
+    SLICE_X14Y133        SRL16E (Hold_srl16e_CLK_D)
+                                                      0.062     0.360    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][9]_srl4
+  -------------------------------------------------------------------
+                         required time                         -0.360    
                          arrival time                           0.439    
   -------------------------------------------------------------------
-                         slack                                  0.081    
+                         slack                                  0.078    
 
 Slack (MET) :             0.081ns  (arrival time - required time)
-  Source:                 ex_load_2_reg_752_reg[58]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[58]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Source:                 reg_338_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
@@ -802,37 +852,37 @@ Slack (MET) :             0.081ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    ap_clk
-    SLICE_X9Y121         FDRE                                         r  ex_load_2_reg_752_reg[58]/C
+                         net (fo=3132, unset)         0.283     0.283    ap_clk
+    SLICE_X19Y139        FDRE                                         r  reg_338_reg[16]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y121         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  ex_load_2_reg_752_reg[58]/Q
-                         net (fo=1, routed)           0.055     0.439    kernel_fdtd_2d_dabkb_U1/ex_load_2_reg_752_reg[63][58]
-    SLICE_X8Y121         LUT6 (Prop_lut6_I3_O)        0.028     0.467 r  kernel_fdtd_2d_dabkb_U1/din1_buf1[58]_i_1/O
-                         net (fo=1, routed)           0.000     0.467    kernel_fdtd_2d_dabkb_U1/din1[58]
-    SLICE_X8Y121         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[58]/D
+    SLICE_X19Y139        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  reg_338_reg[16]/Q
+                         net (fo=1, routed)           0.055     0.439    kernel_fdtd_2d_dabkb_U1/reg_338_reg[63][16]
+    SLICE_X18Y139        LUT6 (Prop_lut6_I4_O)        0.028     0.467 r  kernel_fdtd_2d_dabkb_U1/din0_buf1[16]_i_1/O
+                         net (fo=1, routed)           0.000     0.467    kernel_fdtd_2d_dabkb_U1/din0[16]
+    SLICE_X18Y139        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X8Y121         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[58]/C
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/ap_clk
+    SLICE_X18Y139        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[16]/C
                          clock pessimism              0.000     0.298    
-    SLICE_X8Y121         FDRE (Hold_fdre_C_D)         0.087     0.385    kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[58]
+    SLICE_X18Y139        FDRE (Hold_fdre_C_D)         0.087     0.385    kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[16]
   -------------------------------------------------------------------
                          required time                         -0.385    
                          arrival time                           0.467    
   -------------------------------------------------------------------
                          slack                                  0.081    
 
-Slack (MET) :             0.104ns  (arrival time - required time)
-  Source:                 kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[16]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/LOGIC.RND1/Q_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/RESULT_REG.NORMAL.mant_op_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.166ns  (logic 0.100ns (60.167%)  route 0.066ns (39.833%))
+  Data Path Delay:        0.155ns  (logic 0.100ns (64.399%)  route 0.055ns (35.601%))
   Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -843,35 +893,35 @@ Slack (MET) :             0.104ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X15Y107        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[16]/C
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/LOGIC.RND1/Q_DEL/i_pipe/aclk
+    SLICE_X21Y140        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/LOGIC.RND1/Q_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][14]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X15Y107        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[16]/Q
-                         net (fo=4, routed)           0.066     0.449    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/s_axis_a_tdata[16]
-    SLICE_X15Y107        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]/D
+    SLICE_X21Y140        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/LOGIC.RND1/Q_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][14]/Q
+                         net (fo=1, routed)           0.055     0.439    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/round_mant[14]
+    SLICE_X20Y140        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/RESULT_REG.NORMAL.mant_op_reg[14]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/aclk
-    SLICE_X15Y107        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]/C
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/aclk
+    SLICE_X20Y140        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/RESULT_REG.NORMAL.mant_op_reg[14]/C
                          clock pessimism              0.000     0.298    
-    SLICE_X15Y107        FDRE (Hold_fdre_C_D)         0.047     0.345    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]
+    SLICE_X20Y140        FDRE (Hold_fdre_C_D)         0.059     0.357    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/RESULT_REG.NORMAL.mant_op_reg[14]
   -------------------------------------------------------------------
-                         required time                         -0.345    
-                         arrival time                           0.449    
+                         required time                         -0.357    
+                         arrival time                           0.439    
   -------------------------------------------------------------------
-                         slack                                  0.104    
+                         slack                                  0.081    
 
-Slack (MET) :             0.104ns  (arrival time - required time)
-  Source:                 kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[23]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[23]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.085ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][8]_srl4/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.166ns  (logic 0.100ns (60.122%)  route 0.066ns (39.878%))
+  Data Path Delay:        0.156ns  (logic 0.091ns (58.243%)  route 0.065ns (41.757%))
   Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -882,156 +932,36 @@ Slack (MET) :             0.104ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X13Y107        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[23]/C
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/aclk
+    SLICE_X15Y133        FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X13Y107        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[23]/Q
-                         net (fo=4, routed)           0.066     0.450    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/s_axis_a_tdata[23]
-    SLICE_X13Y107        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[23]/D
+    SLICE_X15Y133        FDRE (Prop_fdre_C_Q)         0.091     0.374 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]/Q
+                         net (fo=2, routed)           0.065     0.440    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/B[8]
+    SLICE_X14Y133        SRL16E                                       r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][8]_srl4/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/aclk
-    SLICE_X13Y107        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[23]/C
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/aclk
+    SLICE_X14Y133        SRL16E                                       r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][8]_srl4/CLK
                          clock pessimism              0.000     0.298    
-    SLICE_X13Y107        FDRE (Hold_fdre_C_D)         0.047     0.345    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[23]
+    SLICE_X14Y133        SRL16E (Hold_srl16e_CLK_D)
+                                                      0.056     0.354    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][8]_srl4
   -------------------------------------------------------------------
-                         required time                         -0.345    
-                         arrival time                           0.450    
-  -------------------------------------------------------------------
-                         slack                                  0.104    
-
-Slack (MET) :             0.107ns  (arrival time - required time)
-  Source:                 ex_load_2_reg_752_reg[30]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[30]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.209ns  (logic 0.128ns (61.161%)  route 0.081ns (38.839%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.298ns
-    Source Clock Delay      (SCD):    0.283ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    ap_clk
-    SLICE_X15Y120        FDRE                                         r  ex_load_2_reg_752_reg[30]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X15Y120        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  ex_load_2_reg_752_reg[30]/Q
-                         net (fo=1, routed)           0.081     0.465    kernel_fdtd_2d_dabkb_U1/ex_load_2_reg_752_reg[63][30]
-    SLICE_X14Y120        LUT6 (Prop_lut6_I3_O)        0.028     0.493 r  kernel_fdtd_2d_dabkb_U1/din1_buf1[30]_i_1/O
-                         net (fo=1, routed)           0.000     0.493    kernel_fdtd_2d_dabkb_U1/din1[30]
-    SLICE_X14Y120        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[30]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X14Y120        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[30]/C
-                         clock pessimism              0.000     0.298    
-    SLICE_X14Y120        FDRE (Hold_fdre_C_D)         0.087     0.385    kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[30]
-  -------------------------------------------------------------------
-                         required time                         -0.385    
-                         arrival time                           0.493    
-  -------------------------------------------------------------------
-                         slack                                  0.107    
-
-Slack (MET) :             0.109ns  (arrival time - required time)
-  Source:                 i_5_reg_677_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            i_1_reg_229_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.156ns  (logic 0.100ns (63.935%)  route 0.056ns (36.065%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.298ns
-    Source Clock Delay      (SCD):    0.283ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    ap_clk
-    SLICE_X5Y98          FDRE                                         r  i_5_reg_677_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X5Y98          FDRE (Prop_fdre_C_Q)         0.100     0.383 r  i_5_reg_677_reg[2]/Q
-                         net (fo=1, routed)           0.056     0.440    i_5_reg_677[2]
-    SLICE_X4Y98          FDRE                                         r  i_1_reg_229_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    ap_clk
-    SLICE_X4Y98          FDRE                                         r  i_1_reg_229_reg[2]/C
-                         clock pessimism              0.000     0.298    
-    SLICE_X4Y98          FDRE (Hold_fdre_C_D)         0.033     0.331    i_1_reg_229_reg[2]
-  -------------------------------------------------------------------
-                         required time                         -0.331    
+                         required time                         -0.354    
                          arrival time                           0.440    
   -------------------------------------------------------------------
-                         slack                                  0.109    
+                         slack                                  0.085    
 
-Slack (MET) :             0.109ns  (arrival time - required time)
-  Source:                 ex_load_2_reg_752_reg[62]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[62]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.087ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][1]_srl6/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.211ns  (logic 0.128ns (60.583%)  route 0.083ns (39.417%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.298ns
-    Source Clock Delay      (SCD):    0.283ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    ap_clk
-    SLICE_X9Y121         FDRE                                         r  ex_load_2_reg_752_reg[62]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X9Y121         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  ex_load_2_reg_752_reg[62]/Q
-                         net (fo=1, routed)           0.083     0.467    kernel_fdtd_2d_dabkb_U1/ex_load_2_reg_752_reg[63][62]
-    SLICE_X8Y121         LUT6 (Prop_lut6_I3_O)        0.028     0.495 r  kernel_fdtd_2d_dabkb_U1/din1_buf1[62]_i_1/O
-                         net (fo=1, routed)           0.000     0.495    kernel_fdtd_2d_dabkb_U1/din1[62]
-    SLICE_X8Y121         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[62]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X8Y121         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[62]/C
-                         clock pessimism              0.000     0.298    
-    SLICE_X8Y121         FDRE (Hold_fdre_C_D)         0.087     0.385    kernel_fdtd_2d_dabkb_U1/din1_buf1_reg[62]
-  -------------------------------------------------------------------
-                         required time                         -0.385    
-                         arrival time                           0.495    
-  -------------------------------------------------------------------
-                         slack                                  0.109    
-
-Slack (MET) :             0.110ns  (arrival time - required time)
-  Source:                 kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[57]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/A_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.172ns  (logic 0.100ns (58.032%)  route 0.072ns (41.968%))
+  Data Path Delay:        0.200ns  (logic 0.100ns (50.053%)  route 0.100ns (49.947%))
   Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -1042,35 +972,36 @@ Slack (MET) :             0.110ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X4Y119         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[57]/C
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/aclk
+    SLICE_X7Y152         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y119         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[57]/Q
-                         net (fo=7, routed)           0.072     0.456    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/A_EXP_DELAY/i_pipe/s_axis_a_tdata[5]
-    SLICE_X4Y119         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/A_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/D
+    SLICE_X7Y152         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/Q
+                         net (fo=1, routed)           0.100     0.483    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/first_q[1]
+    SLICE_X6Y151         SRL16E                                       r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][1]_srl6/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/A_EXP_DELAY/i_pipe/aclk
-    SLICE_X4Y119         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/A_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/C
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/aclk
+    SLICE_X6Y151         SRL16E                                       r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][1]_srl6/CLK
                          clock pessimism              0.000     0.298    
-    SLICE_X4Y119         FDRE (Hold_fdre_C_D)         0.047     0.345    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/A_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]
+    SLICE_X6Y151         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.098     0.396    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][1]_srl6
   -------------------------------------------------------------------
-                         required time                         -0.345    
-                         arrival time                           0.456    
+                         required time                         -0.396    
+                         arrival time                           0.483    
   -------------------------------------------------------------------
-                         slack                                  0.110    
+                         slack                                  0.087    
 
-Slack (MET) :             0.116ns  (arrival time - required time)
-  Source:                 kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[44]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[44]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[49]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/SML_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[22]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.178ns  (logic 0.100ns (56.120%)  route 0.078ns (43.880%))
+  Data Path Delay:        0.155ns  (logic 0.100ns (64.432%)  route 0.055ns (35.568%))
   Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -1081,35 +1012,35 @@ Slack (MET) :             0.116ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X9Y112         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[44]/C
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/aclk
+    SLICE_X13Y154        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[49]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y112         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[44]/Q
-                         net (fo=5, routed)           0.078     0.461    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/s_axis_a_tdata[44]
-    SLICE_X9Y112         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[44]/D
+    SLICE_X13Y154        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[49]/Q
+                         net (fo=1, routed)           0.055     0.438    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/SML_RND2_DEL/i_pipe/D[22]
+    SLICE_X13Y154        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/SML_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[22]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/aclk
-    SLICE_X9Y112         FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[44]/C
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/SML_RND2_DEL/i_pipe/aclk
+    SLICE_X13Y154        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/SML_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[22]/C
                          clock pessimism              0.000     0.298    
-    SLICE_X9Y112         FDRE (Hold_fdre_C_D)         0.047     0.345    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[44]
+    SLICE_X13Y154        FDRE (Hold_fdre_C_D)         0.049     0.347    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/SML_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[22]
   -------------------------------------------------------------------
-                         required time                         -0.345    
-                         arrival time                           0.461    
+                         required time                         -0.347    
+                         arrival time                           0.438    
   -------------------------------------------------------------------
-                         slack                                  0.116    
+                         slack                                  0.091    
 
-Slack (MET) :             0.119ns  (arrival time - required time)
-  Source:                 kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[9]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/MANT_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.178ns  (logic 0.100ns (56.275%)  route 0.078ns (43.725%))
+  Data Path Delay:        0.155ns  (logic 0.100ns (64.432%)  route 0.055ns (35.568%))
   Logic Levels:           0  
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -1120,25 +1051,64 @@ Slack (MET) :             0.119ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/ap_clk
-    SLICE_X11Y106        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[9]/C
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/aclk
+    SLICE_X21Y153        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[23]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X11Y106        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/din0_buf1_reg[9]/Q
-                         net (fo=4, routed)           0.078     0.461    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/s_axis_a_tdata[9]
-    SLICE_X11Y106        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/D
+    SLICE_X21Y153        FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[23]/Q
+                         net (fo=1, routed)           0.055     0.438    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/MANT_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[29][22]
+    SLICE_X21Y153        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/MANT_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1451, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/aclk
-    SLICE_X11Y106        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/C
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/MANT_RND2_DEL/i_pipe/aclk
+    SLICE_X21Y153        FDRE                                         r  kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/MANT_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[6]/C
                          clock pessimism              0.000     0.298    
-    SLICE_X11Y106        FDRE (Hold_fdre_C_D)         0.044     0.342    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/A_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]
+    SLICE_X21Y153        FDRE (Hold_fdre_C_D)         0.049     0.347    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/MANT_RND2_DEL/i_pipe/opt_has_pipe.first_q_reg[6]
   -------------------------------------------------------------------
-                         required time                         -0.342    
-                         arrival time                           0.461    
+                         required time                         -0.347    
+                         arrival time                           0.438    
   -------------------------------------------------------------------
-                         slack                                  0.119    
+                         slack                                  0.091    
+
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.155ns  (logic 0.100ns (64.432%)  route 0.055ns (35.568%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.298ns
+    Source Clock Delay      (SCD):    0.283ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.283     0.283    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/aclk
+    SLICE_X5Y135         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y135         FDRE (Prop_fdre_C_Q)         0.100     0.383 r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]/Q
+                         net (fo=1, routed)           0.055     0.438    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg_n_6_[9]
+    SLICE_X5Y135         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3132, unset)         0.298     0.298    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/aclk
+    SLICE_X5Y135         FDRE                                         r  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9]/C
+                         clock pessimism              0.000     0.298    
+    SLICE_X5Y135         FDRE (Hold_fdre_C_D)         0.049     0.347    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9]
+  -------------------------------------------------------------------
+                         required time                         -0.347    
+                         arrival time                           0.438    
+  -------------------------------------------------------------------
+                         slack                                  0.091    
 
 
 
@@ -1147,41 +1117,41 @@ Slack (MET) :             0.119ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         ap_clk
-Waveform(ns):       { 0.000 5.000 }
-Period(ns):         10.000
+Waveform(ns):       { 0.000 1.250 }
+Period(ns):         2.500
 Sources:            { ap_clk }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
-Min Period        n/a     DSP48E1/CLK  n/a            3.124         10.000      6.876      DSP48_X1Y49    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/DSP/CLK
-Min Period        n/a     DSP48E1/CLK  n/a            1.825         10.000      8.175      DSP48_X1Y44    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
-Min Period        n/a     DSP48E1/CLK  n/a            1.825         10.000      8.175      DSP48_X1Y50    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/DSP/CLK
-Min Period        n/a     DSP48E1/CLK  n/a            1.825         10.000      8.175      DSP48_X0Y39    tmp_8_reg_718_reg/CLK
-Min Period        n/a     DSP48E1/CLK  n/a            1.825         10.000      8.175      DSP48_X0Y38    tmp_3_reg_631_reg/CLK
-Min Period        n/a     DSP48E1/CLK  n/a            1.825         10.000      8.175      DSP48_X0Y45    kernel_fdtd_2d_dabkb_U1/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/DSP_ADD.FRAC_ADDSUB/DSP48E1_ADD.DSP48E1_ADD/DSP/CLK
-Min Period        n/a     FDRE/C       n/a            0.750         10.000      9.250      SLICE_X4Y102   ap_CS_fsm_reg[23]/C
-Min Period        n/a     FDRE/C       n/a            0.750         10.000      9.250      SLICE_X5Y101   ap_CS_fsm_reg[30]/C
-Min Period        n/a     FDRE/C       n/a            0.750         10.000      9.250      SLICE_X5Y100   ap_CS_fsm_reg[49]/C
-Min Period        n/a     FDRE/C       n/a            0.750         10.000      9.250      SLICE_X4Y100   ap_CS_fsm_reg[4]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X4Y102   ap_CS_fsm_reg[23]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X5Y101   ap_CS_fsm_reg[30]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X5Y100   ap_CS_fsm_reg[49]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X4Y100   ap_CS_fsm_reg[4]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X17Y119  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/P_0_DEL/i_pipe/opt_has_pipe.first_q_reg[6]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X17Y119  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/P_0_DEL/i_pipe/opt_has_pipe.first_q_reg[7]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X7Y93    next_mul2_reg_705_reg[0]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X5Y102   ap_CS_fsm_reg[63]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X11Y98   ap_CS_fsm_reg[6]/C
-Low Pulse Width   Fast    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X3Y103   ap_CS_fsm_reg[72]/C
-High Pulse Width  Slow    FDSE/C       n/a            0.350         5.000       4.650      SLICE_X4Y102   ap_CS_fsm_reg[0]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X5Y103   ap_CS_fsm_reg[10]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X3Y103   ap_CS_fsm_reg[11]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X3Y103   ap_CS_fsm_reg[12]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X3Y103   ap_CS_fsm_reg[13]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X3Y103   ap_CS_fsm_reg[14]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X2Y102   ap_CS_fsm_reg[15]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X3Y102   ap_CS_fsm_reg[16]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X4Y101   ap_CS_fsm_reg[17]/C
-High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X4Y101   ap_CS_fsm_reg[18]/C
+Min Period        n/a     DSP48E1/CLK  n/a            2.157         2.500       0.343      DSP48_X0Y52    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            2.157         2.500       0.343      DSP48_X0Y55    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/DSP/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            2.157         2.500       0.343      DSP48_X0Y50    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/DSP/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X0Y51    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/DSP/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X0Y53    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/DSP/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X0Y59    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/DSP/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X1Y49    kernel_fdtd_2d_mudEe_U4/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X0Y54    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/DSP/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X0Y49    kernel_fdtd_2d_mudEe_U5/kernel_fdtd_2d_mudEe_DSP48_0_U/p_reg_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.825         2.500       0.675      DSP48_X0Y58    kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/DSP/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X12Y134  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][18]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y137  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][10]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y138  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][13]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y138  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][14]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X12Y134  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X12Y134  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][2]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y136  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][5]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y136  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][6]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y137  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X8Y135   kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][18]_srl3/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X12Y134  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][18]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y137  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][10]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y138  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][13]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y138  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][14]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X12Y134  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X12Y134  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][2]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y136  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][5]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y136  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][6]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X14Y137  kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/B_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.780         1.250       0.470      SLICE_X8Y135   kernel_fdtd_2d_dmcud_U2/kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][18]_srl3/CLK
 
 
 

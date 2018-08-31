@@ -1,0 +1,939 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug 31 20:46:53 2018
+# Process ID: 29140
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log div.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source div.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/project.runs/synth_1/div.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source div.tcl -notrace
+Command: synth_design -top div -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 29147 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1266.363 ; gain = 80.895 ; free physical = 165 ; free virtual = 7530
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'div' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:69]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:72]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:77]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:82]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:86]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:92]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:97]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 19 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 66 - type: integer 
+	Parameter dout_WIDTH bound to: 129 - type: integer 
+INFO: [Synth 8-3491] module 'div_mul_64s_66ns_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:85' bound to instance 'div_mul_64s_66ns_bkb_U1' of component 'div_mul_64s_66ns_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'div_mul_64s_66ns_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:101]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 19 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 66 - type: integer 
+	Parameter dout_WIDTH bound to: 129 - type: integer 
+INFO: [Synth 8-3491] module 'div_mul_64s_66ns_bkb_MulnS_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:12' bound to instance 'div_mul_64s_66ns_bkb_MulnS_0_U' of component 'div_mul_64s_66ns_bkb_MulnS_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'div_mul_64s_66ns_bkb_MulnS_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'div_mul_64s_66ns_bkb_MulnS_0' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'div_mul_64s_66ns_bkb' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:101]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 129 - type: integer 
+	Parameter din1_WIDTH bound to: 129 - type: integer 
+	Parameter dout_WIDTH bound to: 129 - type: integer 
+INFO: [Synth 8-3491] module 'div_sub_129ns_129cud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:139' bound to instance 'div_sub_129ns_129cud_U2' of component 'div_sub_129ns_129cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'div_sub_129ns_129cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:155]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 129 - type: integer 
+	Parameter din1_WIDTH bound to: 129 - type: integer 
+	Parameter dout_WIDTH bound to: 129 - type: integer 
+INFO: [Synth 8-3491] module 'div_sub_129ns_129cud_AddSubnS_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:13' bound to instance 'div_sub_129ns_129cud_AddSubnS_0_U' of component 'div_sub_129ns_129cud_AddSubnS_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'div_sub_129ns_129cud_AddSubnS_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:23]
+	Parameter N bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'div_sub_129ns_129cud_AddSubnS_0_comb_adder' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:115' bound to instance 'u1' of component 'div_sub_129ns_129cud_AddSubnS_0_comb_adder' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'div_sub_129ns_129cud_AddSubnS_0_comb_adder' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:125]
+	Parameter N bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'div_sub_129ns_129cud_AddSubnS_0_comb_adder' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:125]
+	Parameter N bound to: 65 - type: integer 
+INFO: [Synth 8-3491] module 'div_sub_129ns_129cud_AddSubnS_0_comb_adder' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:115' bound to instance 'u2' of component 'div_sub_129ns_129cud_AddSubnS_0_comb_adder' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'div_sub_129ns_129cud_AddSubnS_0_comb_adder__parameterized1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:125]
+	Parameter N bound to: 65 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'div_sub_129ns_129cud_AddSubnS_0_comb_adder__parameterized1' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'div_sub_129ns_129cud_AddSubnS_0' (4#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'div_sub_129ns_129cud' (5#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_sub_129ns_129cud.vhd:155]
+INFO: [Synth 8-256] done synthesizing module 'div' (6#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.vhd:25]
+WARNING: [Synth 8-3331] design div_sub_129ns_129cud_AddSubnS_0 has unconnected port reset
+WARNING: [Synth 8-3331] design div_mul_64s_66ns_bkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 208 ; free virtual = 7474
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 205 ; free virtual = 7472
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 205 ; free virtual = 7472
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1665.449 ; gain = 1.000 ; free physical = 500 ; free virtual = 7714
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1665.449 ; gain = 479.980 ; free physical = 578 ; free virtual = 7791
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1665.449 ; gain = 479.980 ; free physical = 578 ; free virtual = 7791
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1665.449 ; gain = 479.980 ; free physical = 580 ; free virtual = 7793
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1665.449 ; gain = 479.980 ; free physical = 570 ; free virtual = 7783
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     66 Bit       Adders := 1     
+	   3 Input     65 Bit       Adders := 1     
++---Registers : 
+	              129 Bit    Registers := 19    
+	               66 Bit    Registers := 1     
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 3     
+	               63 Bit    Registers := 2     
+	               23 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                64x67  Multipliers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	  24 Input     23 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module div 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
+	               63 Bit    Registers := 2     
+	               23 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	  24 Input     23 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module div_mul_64s_66ns_bkb_MulnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 17    
+	               66 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
++---Multipliers : 
+	                64x67  Multipliers := 1     
+Module div_sub_129ns_129cud_AddSubnS_0_comb_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     65 Bit       Adders := 1     
+Module div_sub_129ns_129cud_AddSubnS_0_comb_adder__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     66 Bit       Adders := 1     
+Module div_sub_129ns_129cud_AddSubnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:68]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:70]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:71]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:72]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:74]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:75]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:68]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:70]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:68]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/div_mul_64s_66ns_bkb.vhd:63]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg.
+DSP Report: register A is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register B is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: register A is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff1_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff10_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff11_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff12_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg.
+DSP Report: Generating DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg, operation Mode is: (PCIN>>17)+(A''*BCIN'')'.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff13_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff14_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+DSP Report: register div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff15_reg is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+DSP Report: operator div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/tmp_product is absorbed into DSP div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[19] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[21] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[25] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[27] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[29] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[51] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[53] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[55] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[57] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[59] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[61] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[63] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[65] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[35] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[37] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[39] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[41] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[43] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[45] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[47] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/b_reg0_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg[17]__4 )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg[17]__1 )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg[17]__2 )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg[17]__3 )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg[15]__5 )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff0_reg[17]__0 )
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[66]' (FDE) to 'tmp_6_reg_115_reg[0]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[67]' (FDE) to 'tmp_6_reg_115_reg[1]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[68]' (FDE) to 'tmp_6_reg_115_reg[2]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[69]' (FDE) to 'tmp_6_reg_115_reg[3]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[70]' (FDE) to 'tmp_6_reg_115_reg[4]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[71]' (FDE) to 'tmp_6_reg_115_reg[5]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[72]' (FDE) to 'tmp_6_reg_115_reg[6]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[73]' (FDE) to 'tmp_6_reg_115_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[74]' (FDE) to 'tmp_6_reg_115_reg[8]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[75]' (FDE) to 'tmp_6_reg_115_reg[9]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[76]' (FDE) to 'tmp_6_reg_115_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[77]' (FDE) to 'tmp_6_reg_115_reg[11]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[78]' (FDE) to 'tmp_6_reg_115_reg[12]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[79]' (FDE) to 'tmp_6_reg_115_reg[13]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[80]' (FDE) to 'tmp_6_reg_115_reg[14]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[81]' (FDE) to 'tmp_6_reg_115_reg[15]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[82]' (FDE) to 'tmp_6_reg_115_reg[16]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[83]' (FDE) to 'tmp_6_reg_115_reg[17]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[84]' (FDE) to 'tmp_6_reg_115_reg[18]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[85]' (FDE) to 'tmp_6_reg_115_reg[19]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[86]' (FDE) to 'tmp_6_reg_115_reg[20]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[87]' (FDE) to 'tmp_6_reg_115_reg[21]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[88]' (FDE) to 'tmp_6_reg_115_reg[22]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[89]' (FDE) to 'tmp_6_reg_115_reg[23]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[90]' (FDE) to 'tmp_6_reg_115_reg[24]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[91]' (FDE) to 'tmp_6_reg_115_reg[25]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[92]' (FDE) to 'tmp_6_reg_115_reg[26]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[93]' (FDE) to 'tmp_6_reg_115_reg[27]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[94]' (FDE) to 'tmp_6_reg_115_reg[28]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[95]' (FDE) to 'tmp_6_reg_115_reg[29]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[96]' (FDE) to 'tmp_6_reg_115_reg[30]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[97]' (FDE) to 'tmp_6_reg_115_reg[31]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[98]' (FDE) to 'tmp_6_reg_115_reg[32]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[99]' (FDE) to 'tmp_6_reg_115_reg[33]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[100]' (FDE) to 'tmp_6_reg_115_reg[34]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[101]' (FDE) to 'tmp_6_reg_115_reg[35]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[102]' (FDE) to 'tmp_6_reg_115_reg[36]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[103]' (FDE) to 'tmp_6_reg_115_reg[37]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[104]' (FDE) to 'tmp_6_reg_115_reg[38]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[105]' (FDE) to 'tmp_6_reg_115_reg[39]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[106]' (FDE) to 'tmp_6_reg_115_reg[40]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[107]' (FDE) to 'tmp_6_reg_115_reg[41]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[108]' (FDE) to 'tmp_6_reg_115_reg[42]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[109]' (FDE) to 'tmp_6_reg_115_reg[43]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[110]' (FDE) to 'tmp_6_reg_115_reg[44]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[111]' (FDE) to 'tmp_6_reg_115_reg[45]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[112]' (FDE) to 'tmp_6_reg_115_reg[46]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[113]' (FDE) to 'tmp_6_reg_115_reg[47]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[114]' (FDE) to 'tmp_6_reg_115_reg[48]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[115]' (FDE) to 'tmp_6_reg_115_reg[49]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[116]' (FDE) to 'tmp_6_reg_115_reg[50]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[117]' (FDE) to 'tmp_6_reg_115_reg[51]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[118]' (FDE) to 'tmp_6_reg_115_reg[52]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[119]' (FDE) to 'tmp_6_reg_115_reg[53]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[120]' (FDE) to 'tmp_6_reg_115_reg[54]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[121]' (FDE) to 'tmp_6_reg_115_reg[55]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[122]' (FDE) to 'tmp_6_reg_115_reg[56]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[123]' (FDE) to 'tmp_6_reg_115_reg[57]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[124]' (FDE) to 'tmp_6_reg_115_reg[58]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[125]' (FDE) to 'tmp_6_reg_115_reg[59]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[126]' (FDE) to 'tmp_6_reg_115_reg[60]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[127]' (FDE) to 'tmp_6_reg_115_reg[61]'
+INFO: [Synth 8-3886] merging instance 'mul_reg_110_reg[128]' (FDE) to 'tmp_6_reg_115_reg[62]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div_sub_129ns_129cud_U2/div_sub_129ns_129cud_AddSubnS_0_U/ain_s1_reg[26] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[47]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[46]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[45]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[44]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[43]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[42]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[41]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[40]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[39]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[38]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[37]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[36]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[35]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[34]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[33]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[32]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[31]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[30]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[29]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[28]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[27]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[26]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[25]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[24]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[23]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[22]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[21]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[20]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[19]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[18]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[17]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[47]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[46]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[45]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[44]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[43]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[42]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[41]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[40]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[39]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[38]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[37]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[36]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[35]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[34]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[33]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[32]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[31]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[30]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[29]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[28]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[27]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[26]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[25]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[24]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[23]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[22]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[21]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[20]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[19]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[18]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[17]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[47]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[46]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[45]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[44]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[43]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[42]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[41]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[40]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[39]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[38]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[37]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[36]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[35]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[34]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[33]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[32]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[31]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[30]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[29]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[28]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[27]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[26]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[25]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[24]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[23]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[22]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[21]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[20]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[19]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[18]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[17]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[47]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[46]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[45]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[44]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[43]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[42]) is unused and will be removed from module div.
+WARNING: [Synth 8-3332] Sequential element (div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[41]) is unused and will be removed from module div.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1665.449 ; gain = 479.980 ; free physical = 507 ; free virtual = 7723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|div         | (A2*B2)'                 | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN>>17)+(A''*B'')'    | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN>>17)+(A''*B'')'    | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN>>17)+(A''*B'')'    | 18     | 16     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 13     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN>>17)+(A''*B'')'    | 18     | 16     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 13     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN>>17)+(A''*B'')'    | 18     | 16     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN+(A''*B'')')'       | 18     | 13     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|div         | (PCIN>>17)+(A''*BCIN'')' | 16     | 13     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:50 . Memory (MB): peak = 1676.449 ; gain = 490.980 ; free physical = 170 ; free virtual = 7389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:50 . Memory (MB): peak = 1681.449 ; gain = 495.980 ; free physical = 161 ; free virtual = 7380
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 159 ; free virtual = 7378
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 152 ; free virtual = 7377
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 152 ; free virtual = 7377
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 152 ; free virtual = 7376
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 152 ; free virtual = 7376
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 151 ; free virtual = 7376
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 151 ; free virtual = 7376
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg[16]    | 15     | 17    | NO           | YES                | NO                | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg[16]__0 | 13     | 17    | NO           | YES                | NO                | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff2_reg[16]__0  | 4      | 17    | NO           | YES                | YES               | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg[16]__1 | 10     | 17    | NO           | YES                | NO                | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff3_reg[16]__0  | 3      | 17    | NO           | NO                 | YES               | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff4_reg[16]__1  | 3      | 17    | NO           | NO                 | YES               | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff5_reg[16]__1  | 3      | 17    | NO           | NO                 | YES               | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg[12]__1  | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff6_reg[11]__1  | 8      | 12    | NO           | YES                | YES               | 12     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg[16]__2 | 6      | 17    | NO           | YES                | NO                | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff7_reg[16]__2  | 3      | 17    | NO           | NO                 | YES               | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff8_reg[16]__2  | 3      | 17    | NO           | NO                 | YES               | 17     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff9_reg[12]__2  | 3      | 13    | NO           | NO                 | YES               | 13     | 0       | 
+|div         | div_mul_64s_66ns_bkb_U1/div_mul_64s_66ns_bkb_MulnS_0_U/buff16_reg[16]__3 | 3      | 17    | NO           | YES                | NO                | 17     | 0       | 
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    49|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |    11|
+|4     |DSP48E1_2 |     2|
+|5     |DSP48E1_3 |     1|
+|6     |DSP48E1_4 |     1|
+|7     |LUT1      |   129|
+|8     |LUT2      |     3|
+|9     |LUT3      |   129|
+|10    |LUT4      |     2|
+|11    |LUT6      |     4|
+|12    |SRL16E    |   213|
+|13    |FDRE      |   812|
+|14    |FDSE      |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+-----------------------------------------------------------+------+
+|      |Instance                              |Module                                                     |Cells |
++------+--------------------------------------+-----------------------------------------------------------+------+
+|1     |top                                   |                                                           |  1358|
+|2     |  div_mul_64s_66ns_bkb_U1             |div_mul_64s_66ns_bkb                                       |   633|
+|3     |    div_mul_64s_66ns_bkb_MulnS_0_U    |div_mul_64s_66ns_bkb_MulnS_0                               |   633|
+|4     |  div_sub_129ns_129cud_U2             |div_sub_129ns_129cud                                       |   228|
+|5     |    div_sub_129ns_129cud_AddSubnS_0_U |div_sub_129ns_129cud_AddSubnS_0                            |   228|
+|6     |      u2                              |div_sub_129ns_129cud_AddSubnS_0_comb_adder__parameterized1 |    17|
++------+--------------------------------------+-----------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.465 ; gain = 508.996 ; free physical = 151 ; free virtual = 7376
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2748 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1694.465 ; gain = 155.535 ; free physical = 218 ; free virtual = 7442
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1694.473 ; gain = 508.996 ; free physical = 218 ; free virtual = 7442
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+205 Infos, 202 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:54 . Memory (MB): peak = 1694.473 ; gain = 509.109 ; free physical = 223 ; free virtual = 7447
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_long_div/vivado_hls/impl/vhdl/project.runs/synth_1/div.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file div_utilization_synth.rpt -pb div_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1694.473 ; gain = 0.000 ; free physical = 219 ; free virtual = 7444
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 20:47:55 2018...

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP."/>
-	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 226.98 seconds; peak allocated memory: 99.125 MB."/>
-	<Message severity="INFO" prefix="[Common 17-206]" key="Common 17-206" tag="" content="Exiting vivado_hls at Thu Aug  2 15:12:52 2018..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1302" tag="" content="Opening and resetting project &apos;/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding design file &apos;test.cpp&apos; to the project"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding test bench file &apos;test_bench.cpp&apos; to the project"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1368" tag="" content="Opening and resetting solution &apos;/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div6&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1372" tag="" content="Cleaning up the solution database."/>
+	<Message severity="INFO" prefix="[SYN 201-201]" key="ASSGN_CLOCK_INFO_459" tag="" content="Setting up clock &apos;default&apos; with a period of 2.5ns."/>
 </Messages>

@@ -1,0 +1,73 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Aug 31 17:14:59 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file operator_long_div11_control_sets_placed.rpt
+| Design       : operator_long_div11
+| Device       : xc7k160t
+------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     7 |
+| Unused register locations in slices containing registers |    16 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |            1 |
+|     12 |            2 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             124 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             140 |           29 |
+| Yes          | No                    | No                     |             148 |           23 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             140 |           21 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-------------------------------------------------------------------------------------+------------------+------------------+----------------+
+| Clock Signal |                                    Enable Signal                                    | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+-------------------------------------------------------------------------------------+------------------+------------------+----------------+
+|  ap_clk      | grp_int_64_div11_fu_32/grp_lut_div11_chunk_fu_154/E[0]                              |                  |                2 |              8 |
+|  ap_clk      | grp_int_64_div11_fu_32/grp_lut_div11_chunk_fu_154/q1_U/lut_div11_chunk_q1_rom_U/ce0 |                  |                2 |             12 |
+|  ap_clk      | grp_int_64_div11_fu_32/grp_lut_div11_chunk_fu_154/Q[1]                              | ap_rst           |                4 |             12 |
+|  ap_clk      |                                                                                     |                  |               20 |            124 |
+|  ap_clk      | grp_int_64_div11_fu_32/grp_lut_div11_chunk_fu_154/grp_int_64_div11_fu_32_ap_ready   | ap_rst           |               17 |            128 |
+|  ap_clk      | grp_int_64_div11_fu_32/ap_NS_fsm130_out                                             |                  |               19 |            128 |
+|  ap_clk      |                                                                                     | ap_rst           |               29 |            140 |
++--------------+-------------------------------------------------------------------------------------+------------------+------------------+----------------+
+
+

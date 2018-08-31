@@ -68,7 +68,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1354605401", "EstimateLatencyMax" : "1354605401",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3565814121", "EstimateLatencyMax" : "3565814121",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -90,13 +90,13 @@ set ArgLastReadFirstWriteLatency {
 	kernel_seidel_2d {
 		tsteps {Type I LastRead -1 FirstWrite -1}
 		n {Type I LastRead -1 FirstWrite -1}
-		A {Type IO LastRead 38 FirstWrite 69}}}
+		A {Type IO LastRead 107 FirstWrite 184}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1354605401", "Max" : "1354605401"}
-	, {"Name" : "Interval", "Min" : "1354605402", "Max" : "1354605402"}
+	{"Name" : "Latency", "Min" : "3565814121", "Max" : "3565814121"}
+	, {"Name" : "Interval", "Min" : "-729153174", "Max" : "-729153174"}
 ]}
 
 set PipelineEnableSignalInfo {[

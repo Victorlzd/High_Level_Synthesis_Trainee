@@ -17,13 +17,13 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "5",
+    "ClockPeriod": "2.5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "1",
-    "Uncertainty": "0.625"
+    "Latency": "5",
+    "Uncertainty": "0.3125"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 2.500 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
@@ -36,8 +36,16 @@
   },
   "Files": {
     "CSource": ["..\/..\/test.cpp"],
-    "Vhdl": ["impl\/vhdl\/operator_float_div2.vhd"],
-    "Verilog": ["impl\/verilog\/operator_float_div2.v"],
+    "Vhdl": [
+      "impl\/vhdl\/operator_float_dibkb.vhd",
+      "impl\/vhdl\/operator_float_dicud.vhd",
+      "impl\/vhdl\/operator_float_div2.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/operator_float_dibkb.v",
+      "impl\/verilog\/operator_float_dicud.v",
+      "impl\/verilog\/operator_float_div2.v"
+    ],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -140,21 +148,21 @@
     "Hierarchy": {"ModuleName": "operator_float_div2"},
     "Metrics": {"operator_float_div2": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "1",
-          "LatencyWorst": "1",
-          "PipelineII": "2",
+          "LatencyBest": "5",
+          "LatencyAvg": "5",
+          "LatencyWorst": "5",
+          "PipelineII": "6",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "5.00",
-          "Uncertainty": "0.62",
-          "Estimate": "3.845"
+          "Target": "2.50",
+          "Uncertainty": "0.31",
+          "Estimate": "2.132"
         },
         "Area": {
-          "FF": "38",
-          "LUT": "312",
+          "FF": "455",
+          "LUT": "441",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
@@ -167,7 +175,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-03 10:54:15 CEST",
+    "Time": "2018-08-31 10:19:36 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

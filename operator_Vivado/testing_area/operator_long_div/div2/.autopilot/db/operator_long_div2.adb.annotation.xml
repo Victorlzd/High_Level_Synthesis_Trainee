@@ -1,4 +1,0 @@
-<annotationInfo>
-<item  id="7" filename="test.cpp" linenumber="178" name="r_V" contextFuncName="operator_int_64_div2" moduleName="operator_long_div2" rtlName="r_V_fu_30_p4" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"><\/item>
-<item  id="8" filename="test.cpp" linenumber="178" name="r_V_1" contextFuncName="operator_int_64_div2" moduleName="operator_long_div2" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"><\/item>
-</annotationInfo>

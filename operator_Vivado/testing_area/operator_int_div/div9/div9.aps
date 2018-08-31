@@ -16,7 +16,7 @@
         <DownStreamTool name="vivado"/>
     </downStreamTool>
     <clockList>
-        <clock name="default" period="35" default="false"/>
+        <clock name="default" period="2.5" default="false"/>
     </clockList>
     <config>
         <schedule model="operator_int_div9"/>

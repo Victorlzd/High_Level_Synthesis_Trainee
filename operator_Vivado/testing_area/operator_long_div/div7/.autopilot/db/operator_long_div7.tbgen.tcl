@@ -43,8 +43,64 @@ set NewPortList {[
  	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "8", "15", "22", "29", "36", "43", "50", "57", "64", "71"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "operator_long_div7",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "65", "EstimateLatencyMax" : "65",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"WaitState" : [
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state8", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state10", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state12", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state14", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state16", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state18", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state20", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state22", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state24", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state26", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state28", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state30", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state32", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state34", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state36", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state38", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state40", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state42", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"},
+			{"State" : "ap_ST_fsm_state44", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_lut_div7_chunk_fu_122"}],
+		"Port" : [
+			{"Name" : "in_r", "Type" : "None", "Direction" : "I"},
+			{"Name" : "r0", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_lut_div7_chunk_fu_122", "Port" : "r0"}]},
+			{"Name" : "r1", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_lut_div7_chunk_fu_122", "Port" : "r1"}]},
+			{"Name" : "r2", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_lut_div7_chunk_fu_122", "Port" : "r2"}]},
+			{"Name" : "q0", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_lut_div7_chunk_fu_122", "Port" : "q0"}]},
+			{"Name" : "q1", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_lut_div7_chunk_fu_122", "Port" : "q1"}]},
+			{"Name" : "q2", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_lut_div7_chunk_fu_122", "Port" : "q2"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_122", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7"],
+		"CDFG" : "lut_div7_chunk",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -57,293 +113,46 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "in_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_118", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
 			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_118.operator_long_divbkb_U1", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_118.operator_long_divbkb_U2", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_118.operator_long_divbkb_U3", "Parent" : "1"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_118.operator_long_divbkb_U4", "Parent" : "1"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_118.operator_long_divbkb_U5", "Parent" : "1"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_118.operator_long_divbkb_U6", "Parent" : "1"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_125", "Parent" : "0", "Child" : ["9", "10", "11", "12", "13", "14"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_125.operator_long_divbkb_U1", "Parent" : "8"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_125.operator_long_divbkb_U2", "Parent" : "8"},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_125.operator_long_divbkb_U3", "Parent" : "8"},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_125.operator_long_divbkb_U4", "Parent" : "8"},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_125.operator_long_divbkb_U5", "Parent" : "8"},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_125.operator_long_divbkb_U6", "Parent" : "8"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_131", "Parent" : "0", "Child" : ["16", "17", "18", "19", "20", "21"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_131.operator_long_divbkb_U1", "Parent" : "15"},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_131.operator_long_divbkb_U2", "Parent" : "15"},
-	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_131.operator_long_divbkb_U3", "Parent" : "15"},
-	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_131.operator_long_divbkb_U4", "Parent" : "15"},
-	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_131.operator_long_divbkb_U5", "Parent" : "15"},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_131.operator_long_divbkb_U6", "Parent" : "15"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_137", "Parent" : "0", "Child" : ["23", "24", "25", "26", "27", "28"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_137.operator_long_divbkb_U1", "Parent" : "22"},
-	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_137.operator_long_divbkb_U2", "Parent" : "22"},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_137.operator_long_divbkb_U3", "Parent" : "22"},
-	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_137.operator_long_divbkb_U4", "Parent" : "22"},
-	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_137.operator_long_divbkb_U5", "Parent" : "22"},
-	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_137.operator_long_divbkb_U6", "Parent" : "22"},
-	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_143", "Parent" : "0", "Child" : ["30", "31", "32", "33", "34", "35"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_143.operator_long_divbkb_U1", "Parent" : "29"},
-	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_143.operator_long_divbkb_U2", "Parent" : "29"},
-	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_143.operator_long_divbkb_U3", "Parent" : "29"},
-	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_143.operator_long_divbkb_U4", "Parent" : "29"},
-	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_143.operator_long_divbkb_U5", "Parent" : "29"},
-	{"ID" : "35", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_143.operator_long_divbkb_U6", "Parent" : "29"},
-	{"ID" : "36", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_149", "Parent" : "0", "Child" : ["37", "38", "39", "40", "41", "42"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_149.operator_long_divbkb_U1", "Parent" : "36"},
-	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_149.operator_long_divbkb_U2", "Parent" : "36"},
-	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_149.operator_long_divbkb_U3", "Parent" : "36"},
-	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_149.operator_long_divbkb_U4", "Parent" : "36"},
-	{"ID" : "41", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_149.operator_long_divbkb_U5", "Parent" : "36"},
-	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_149.operator_long_divbkb_U6", "Parent" : "36"},
-	{"ID" : "43", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_155", "Parent" : "0", "Child" : ["44", "45", "46", "47", "48", "49"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "44", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_155.operator_long_divbkb_U1", "Parent" : "43"},
-	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_155.operator_long_divbkb_U2", "Parent" : "43"},
-	{"ID" : "46", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_155.operator_long_divbkb_U3", "Parent" : "43"},
-	{"ID" : "47", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_155.operator_long_divbkb_U4", "Parent" : "43"},
-	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_155.operator_long_divbkb_U5", "Parent" : "43"},
-	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_155.operator_long_divbkb_U6", "Parent" : "43"},
-	{"ID" : "50", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_161", "Parent" : "0", "Child" : ["51", "52", "53", "54", "55", "56"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_161.operator_long_divbkb_U1", "Parent" : "50"},
-	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_161.operator_long_divbkb_U2", "Parent" : "50"},
-	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_161.operator_long_divbkb_U3", "Parent" : "50"},
-	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_161.operator_long_divbkb_U4", "Parent" : "50"},
-	{"ID" : "55", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_161.operator_long_divbkb_U5", "Parent" : "50"},
-	{"ID" : "56", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_161.operator_long_divbkb_U6", "Parent" : "50"},
-	{"ID" : "57", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_167", "Parent" : "0", "Child" : ["58", "59", "60", "61", "62", "63"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "58", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_167.operator_long_divbkb_U1", "Parent" : "57"},
-	{"ID" : "59", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_167.operator_long_divbkb_U2", "Parent" : "57"},
-	{"ID" : "60", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_167.operator_long_divbkb_U3", "Parent" : "57"},
-	{"ID" : "61", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_167.operator_long_divbkb_U4", "Parent" : "57"},
-	{"ID" : "62", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_167.operator_long_divbkb_U5", "Parent" : "57"},
-	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_167.operator_long_divbkb_U6", "Parent" : "57"},
-	{"ID" : "64", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_173", "Parent" : "0", "Child" : ["65", "66", "67", "68", "69", "70"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "65", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_173.operator_long_divbkb_U1", "Parent" : "64"},
-	{"ID" : "66", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_173.operator_long_divbkb_U2", "Parent" : "64"},
-	{"ID" : "67", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_173.operator_long_divbkb_U3", "Parent" : "64"},
-	{"ID" : "68", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_173.operator_long_divbkb_U4", "Parent" : "64"},
-	{"ID" : "69", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_173.operator_long_divbkb_U5", "Parent" : "64"},
-	{"ID" : "70", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_173.operator_long_divbkb_U6", "Parent" : "64"},
-	{"ID" : "71", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_179", "Parent" : "0", "Child" : ["72", "73", "74", "75", "76", "77"],
-		"CDFG" : "lut_div7_chunk",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "d_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "72", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_179.operator_long_divbkb_U1", "Parent" : "71"},
-	{"ID" : "73", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_179.operator_long_divbkb_U2", "Parent" : "71"},
-	{"ID" : "74", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_179.operator_long_divbkb_U3", "Parent" : "71"},
-	{"ID" : "75", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_179.operator_long_divbkb_U4", "Parent" : "71"},
-	{"ID" : "76", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_179.operator_long_divbkb_U5", "Parent" : "71"},
-	{"ID" : "77", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_179.operator_long_divbkb_U6", "Parent" : "71"}]}
+			{"Name" : "r_in_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "r0", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "r1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "r2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "q0", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "q1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "q2", "Type" : "Memory", "Direction" : "I"}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_122.r0_U", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_122.r1_U", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_122.r2_U", "Parent" : "1"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_122.q0_U", "Parent" : "1"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_122.q1_U", "Parent" : "1"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_lut_div7_chunk_fu_122.q2_U", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	operator_long_div7 {
-		in_r {Type I LastRead 0 FirstWrite -1}}
+		in_r {Type I LastRead 0 FirstWrite -1}
+		r0 {Type I LastRead -1 FirstWrite -1}
+		r1 {Type I LastRead -1 FirstWrite -1}
+		r2 {Type I LastRead -1 FirstWrite -1}
+		q0 {Type I LastRead -1 FirstWrite -1}
+		q1 {Type I LastRead -1 FirstWrite -1}
+		q2 {Type I LastRead -1 FirstWrite -1}}
 	lut_div7_chunk {
 		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}
-	lut_div7_chunk {
-		d_V {Type I LastRead 0 FirstWrite -1}
-		r_in_V {Type I LastRead 0 FirstWrite -1}}}
+		r_in_V {Type I LastRead 0 FirstWrite -1}
+		r0 {Type I LastRead -1 FirstWrite -1}
+		r1 {Type I LastRead -1 FirstWrite -1}
+		r2 {Type I LastRead -1 FirstWrite -1}
+		q0 {Type I LastRead -1 FirstWrite -1}
+		q1 {Type I LastRead -1 FirstWrite -1}
+		q2 {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "1"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "2"}
+	{"Name" : "Latency", "Min" : "65", "Max" : "65"}
+	, {"Name" : "Interval", "Min" : "66", "Max" : "66"}
 ]}
 
 set PipelineEnableSignalInfo {[

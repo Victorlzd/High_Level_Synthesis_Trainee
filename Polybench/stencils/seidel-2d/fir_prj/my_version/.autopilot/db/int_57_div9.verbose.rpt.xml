@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'int_57_div9'" level="0">
-<item name = "Date">Wed Aug  8 16:47:34 2018
+<item name = "Date">Fri Aug 31 21:59:55 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">fir_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.104, 1.25</column>
+<column name="ap_clk">2.50, 3.531, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">14, 14, 14, 14, none</column>
+<column name="">86, 86, 86, 86, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_lut_div9_chunk_fu_130">lut_div9_chunk, 0, 0, 0, 0, none</column>
-<column name="grp_lut_div9_chunk_fu_137">lut_div9_chunk, 0, 0, 0, 0, none</column>
+<column name="grp_lut_div9_chunk_fu_142">lut_div9_chunk, 1, 1, 1, 1, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,20 +50,19 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, -, -</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, -, 0, 3276</column>
+<column name="Instance">0, -, 14, 39</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 213</column>
-<column name="Register">-, -, 132, -</column>
+<column name="Multiplexer">-, -, -, 414</column>
+<column name="Register">-, -, 232, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, 3</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_lut_div9_chunk_fu_130">lut_div9_chunk, 0, 0, 0, 1638</column>
-<column name="grp_lut_div9_chunk_fu_137">lut_div9_chunk, 0, 0, 0, 1638</column>
+<column name="grp_lut_div9_chunk_fu_142">lut_div9_chunk, 0, 0, 14, 39</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -85,72 +83,75 @@
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">65, 16, 1, 16</column>
-<column name="grp_lut_div9_chunk_fu_130_d_V">65, 16, 2, 32</column>
-<column name="grp_lut_div9_chunk_fu_130_r_in_V">21, 4, 4, 16</column>
-<column name="grp_lut_div9_chunk_fu_137_d_V">62, 15, 2, 30</column>
+<column name="ap_NS_fsm">253, 59, 1, 59</column>
+<column name="ap_return">9, 2, 57, 114</column>
+<column name="grp_lut_div9_chunk_fu_142_d_V">137, 30, 2, 60</column>
+<column name="grp_lut_div9_chunk_fu_142_r_in_V">15, 3, 4, 12</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">15, 0, 15, 0</column>
-<column name="p_Result_22_10_reg_556">2, 0, 2, 0</column>
-<column name="p_Result_22_11_reg_561">2, 0, 2, 0</column>
-<column name="p_Result_22_12_reg_566">2, 0, 2, 0</column>
-<column name="p_Result_22_13_reg_571">2, 0, 2, 0</column>
-<column name="p_Result_22_14_reg_576">2, 0, 2, 0</column>
-<column name="p_Result_22_15_reg_581">2, 0, 2, 0</column>
-<column name="p_Result_22_16_reg_586">2, 0, 2, 0</column>
-<column name="p_Result_22_17_reg_591">2, 0, 2, 0</column>
-<column name="p_Result_22_18_reg_596">2, 0, 2, 0</column>
-<column name="p_Result_22_19_reg_601">2, 0, 2, 0</column>
-<column name="p_Result_22_1_reg_506">2, 0, 2, 0</column>
-<column name="p_Result_22_20_reg_606">2, 0, 2, 0</column>
-<column name="p_Result_22_21_reg_611">2, 0, 2, 0</column>
-<column name="p_Result_22_22_reg_616">2, 0, 2, 0</column>
-<column name="p_Result_22_23_reg_621">2, 0, 2, 0</column>
-<column name="p_Result_22_24_reg_626">2, 0, 2, 0</column>
-<column name="p_Result_22_25_reg_631">2, 0, 2, 0</column>
-<column name="p_Result_22_2_reg_511">2, 0, 2, 0</column>
-<column name="p_Result_22_3_reg_516">2, 0, 2, 0</column>
-<column name="p_Result_22_4_reg_521">2, 0, 2, 0</column>
-<column name="p_Result_22_5_reg_526">2, 0, 2, 0</column>
-<column name="p_Result_22_6_reg_531">2, 0, 2, 0</column>
-<column name="p_Result_22_7_reg_536">2, 0, 2, 0</column>
-<column name="p_Result_22_8_reg_541">2, 0, 2, 0</column>
-<column name="p_Result_22_9_reg_546">2, 0, 2, 0</column>
-<column name="p_Result_22_s_reg_551">2, 0, 2, 0</column>
-<column name="p_Result_2_reg_501">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_10_reg_696">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_11_reg_701">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_12_reg_706">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_13_reg_711">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_14_reg_716">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_15_reg_721">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_16_reg_726">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_17_reg_731">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_18_reg_736">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_19_reg_741">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_1_reg_646">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_20_reg_746">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_21_reg_751">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_22_reg_756">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_23_reg_761">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_24_reg_766">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_2_reg_651">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_3_reg_656">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_4_reg_661">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_5_reg_666">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_6_reg_671">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_7_reg_676">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_8_reg_681">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_9_reg_686">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_reg_641">2, 0, 2, 0</column>
-<column name="q_chunk_V_ret2_s_reg_691">2, 0, 2, 0</column>
-<column name="r_V_reg_491">4, 0, 4, 0</column>
-<column name="reg_160">4, 0, 4, 0</column>
-<column name="tmp_26_reg_496">1, 0, 1, 0</column>
-<column name="tmp_27_reg_636">2, 0, 2, 0</column>
+<column name="ap_CS_fsm">58, 0, 58, 0</column>
+<column name="ap_return_preg">57, 0, 57, 0</column>
+<column name="d_chunk_V_10_reg_549">2, 0, 2, 0</column>
+<column name="d_chunk_V_11_reg_554">2, 0, 2, 0</column>
+<column name="d_chunk_V_12_reg_559">2, 0, 2, 0</column>
+<column name="d_chunk_V_13_reg_564">2, 0, 2, 0</column>
+<column name="d_chunk_V_14_reg_569">2, 0, 2, 0</column>
+<column name="d_chunk_V_15_reg_574">2, 0, 2, 0</column>
+<column name="d_chunk_V_16_reg_579">2, 0, 2, 0</column>
+<column name="d_chunk_V_17_reg_584">2, 0, 2, 0</column>
+<column name="d_chunk_V_18_reg_589">2, 0, 2, 0</column>
+<column name="d_chunk_V_19_reg_594">2, 0, 2, 0</column>
+<column name="d_chunk_V_1_reg_504">2, 0, 2, 0</column>
+<column name="d_chunk_V_20_reg_599">2, 0, 2, 0</column>
+<column name="d_chunk_V_21_reg_604">2, 0, 2, 0</column>
+<column name="d_chunk_V_22_reg_609">2, 0, 2, 0</column>
+<column name="d_chunk_V_23_reg_614">2, 0, 2, 0</column>
+<column name="d_chunk_V_24_reg_619">2, 0, 2, 0</column>
+<column name="d_chunk_V_25_reg_624">2, 0, 2, 0</column>
+<column name="d_chunk_V_26_reg_629">2, 0, 2, 0</column>
+<column name="d_chunk_V_27_reg_634">2, 0, 2, 0</column>
+<column name="d_chunk_V_28_reg_639">2, 0, 2, 0</column>
+<column name="d_chunk_V_2_reg_509">2, 0, 2, 0</column>
+<column name="d_chunk_V_3_reg_514">2, 0, 2, 0</column>
+<column name="d_chunk_V_4_reg_519">2, 0, 2, 0</column>
+<column name="d_chunk_V_5_reg_524">2, 0, 2, 0</column>
+<column name="d_chunk_V_6_reg_529">2, 0, 2, 0</column>
+<column name="d_chunk_V_7_reg_534">2, 0, 2, 0</column>
+<column name="d_chunk_V_8_reg_539">2, 0, 2, 0</column>
+<column name="d_chunk_V_9_reg_544">2, 0, 2, 0</column>
+<column name="d_chunk_V_reg_499">1, 0, 2, 1</column>
+<column name="grp_lut_div9_chunk_fu_142_ap_start_reg">1, 0, 1, 0</column>
+<column name="q_chunk_V_11_reg_699">2, 0, 2, 0</column>
+<column name="q_chunk_V_12_reg_704">2, 0, 2, 0</column>
+<column name="q_chunk_V_13_reg_709">2, 0, 2, 0</column>
+<column name="q_chunk_V_14_reg_714">2, 0, 2, 0</column>
+<column name="q_chunk_V_15_reg_719">2, 0, 2, 0</column>
+<column name="q_chunk_V_16_reg_724">2, 0, 2, 0</column>
+<column name="q_chunk_V_17_reg_729">2, 0, 2, 0</column>
+<column name="q_chunk_V_18_reg_734">2, 0, 2, 0</column>
+<column name="q_chunk_V_19_reg_739">2, 0, 2, 0</column>
+<column name="q_chunk_V_1_reg_654">2, 0, 2, 0</column>
+<column name="q_chunk_V_20_reg_744">2, 0, 2, 0</column>
+<column name="q_chunk_V_21_reg_749">2, 0, 2, 0</column>
+<column name="q_chunk_V_22_reg_754">2, 0, 2, 0</column>
+<column name="q_chunk_V_23_reg_759">2, 0, 2, 0</column>
+<column name="q_chunk_V_24_reg_764">2, 0, 2, 0</column>
+<column name="q_chunk_V_25_reg_769">2, 0, 2, 0</column>
+<column name="q_chunk_V_26_reg_774">2, 0, 2, 0</column>
+<column name="q_chunk_V_27_reg_779">2, 0, 2, 0</column>
+<column name="q_chunk_V_2_reg_659">2, 0, 2, 0</column>
+<column name="q_chunk_V_3_reg_664">2, 0, 2, 0</column>
+<column name="q_chunk_V_4_reg_669">2, 0, 2, 0</column>
+<column name="q_chunk_V_5_reg_674">2, 0, 2, 0</column>
+<column name="q_chunk_V_6_reg_679">2, 0, 2, 0</column>
+<column name="q_chunk_V_7_reg_684">2, 0, 2, 0</column>
+<column name="q_chunk_V_8_reg_689">2, 0, 2, 0</column>
+<column name="q_chunk_V_9_reg_694">2, 0, 2, 0</column>
+<column name="q_chunk_V_reg_649">2, 0, 2, 0</column>
+<column name="reg_169">4, 0, 4, 0</column>
+<column name="tmp_26_reg_644">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

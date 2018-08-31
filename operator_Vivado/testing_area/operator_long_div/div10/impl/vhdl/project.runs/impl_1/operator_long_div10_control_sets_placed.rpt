@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Fri Aug  3 12:04:59 2018
+| Date         : Fri Aug 31 17:11:14 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file operator_long_div10_control_sets_placed.rpt
 | Design       : operator_long_div10
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     2 |
-| Unused register locations in slices containing registers |     8 |
+| Number of unique control sets                            |     5 |
+| Unused register locations in slices containing registers |    18 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      4 |            1 |
-|    16+ |            1 |
+|     12 |            2 |
+|    16+ |            3 |
 +--------+--------------+
 
 
@@ -45,23 +45,26 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            1 |
+| No           | No                    | No                     |             126 |           21 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             132 |           26 |
+| No           | Yes                   | No                     |              90 |           22 |
+| Yes          | No                    | No                     |             138 |           19 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              12 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------+---------------+------------------+------------------+----------------+
-| Clock Signal | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------+---------------+------------------+------------------+----------------+
-|  ap_clk      |               |                  |                1 |              4 |
-|  ap_clk      | ap_NS_fsm1    |                  |               26 |            132 |
-+--------------+---------------+------------------+------------------+----------------+
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
+| Clock Signal |                         Enable Signal                        | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
+|  ap_clk      | grp_lut_div5_chunk_fu_122/q2_U/lut_div5_chunk_q2_rom_U/ce0   |                  |                2 |             12 |
+|  ap_clk      | grp_lut_div5_chunk_fu_122/grp_lut_div5_chunk_fu_122_ap_ready | ap_rst           |                3 |             12 |
+|  ap_clk      |                                                              | ap_rst           |               22 |             90 |
+|  ap_clk      |                                                              |                  |               21 |            126 |
+|  ap_clk      | ap_NS_fsm119_out                                             |                  |               17 |            126 |
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
 
 

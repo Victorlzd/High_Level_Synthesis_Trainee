@@ -17,13 +17,13 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "60",
+    "ClockPeriod": "2.5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "1",
-    "Uncertainty": "7.5"
+    "Latency": "29",
+    "Uncertainty": "0.3125"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 60.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 2.500 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
@@ -45,15 +45,15 @@
       "impl\/verilog\/div5.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "Subcore": ["impl\/misc\/div5_ap_fdiv_0_no_dsp_32_ip.tcl"]
+    "Subcore": ["impl\/misc\/div5_ap_fdiv_28_no_dsp_32_ip.tcl"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
     "HasClockedDsp": false,
     "IP": [{
-        "name": "div5_ap_fdiv_0_no_dsp_32",
+        "name": "div5_ap_fdiv_28_no_dsp_32",
         "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name div5_ap_fdiv_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 28 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name div5_ap_fdiv_28_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
       }]
   },
   "Interfaces": {
@@ -151,22 +151,22 @@
     "Hierarchy": {"ModuleName": "div5"},
     "Metrics": {"div5": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "1",
-          "LatencyWorst": "1",
-          "PipelineII": "2",
+          "LatencyBest": "29",
+          "LatencyAvg": "29",
+          "LatencyWorst": "29",
+          "PipelineII": "30",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "60.00",
-          "Uncertainty": "7.50",
-          "Estimate": "52.398"
+          "Target": "2.50",
+          "Uncertainty": "0.31",
+          "Estimate": "2.519"
         },
         "Area": {
           "DSP48E": "0",
-          "FF": "130",
-          "LUT": "774",
+          "FF": "1466",
+          "LUT": "997",
           "BRAM_18K": "0"
         }
       }}
@@ -178,7 +178,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-03 16:55:28 CEST",
+    "Time": "2018-08-31 12:06:27 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

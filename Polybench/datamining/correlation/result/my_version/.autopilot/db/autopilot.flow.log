@@ -1,0 +1,983 @@
+INFO-FLOW: Workspace /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version opened at Tue Aug 28 14:54:53 CEST 2018
+Execute     set_part xc7k160tfbg484-1 -tool vivado 
+Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7k160t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
+Execute           config_chip_info -quiet -speed medium 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command               ap_source done; 0.11 sec.
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source done; 0.16 sec.
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.16 sec.
+Command         ap_source done; 0.16 sec.
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.21 sec.
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+Execute       get_default_platform 
+Command     set_part done; 0.27 sec.
+Execute     create_clock -period 2.5 -name default 
+Execute       config_clock -quiet -name default -period 2.5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+Execute     csynth_design 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -lm 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'correlation.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling correlation.cpp as C++
+Execute         get_default_platform 
+Execute         is_encrypted correlation.cpp 
+Execute         get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "correlation.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E correlation.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp
+Command         clang done; 1.46 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp"  -o "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/useless.bc
+WARNING: [HLS 200-40] In file included from correlation.cpp:1:
+correlation.cpp:256:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else {
+   ^
+correlation.cpp:264:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else
+   ^
+2 warnings generated.\n
+Command         clang done; 1.89 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp std=gnu++98 -directive=/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/.systemc_flag -quiet -fix-errors /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.73 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute         tidy_31 xilinx-directive2pragma /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp std=gnu++98 -directive=/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/my_version.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/my_version.json -quiet -fix-errors /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.37 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/xilinx-dataflow-lawyer.correlation.pp.0.cpp.diag.yml /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/xilinx-dataflow-lawyer.correlation.pp.0.cpp.out.log 2> /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/xilinx-dataflow-lawyer.correlation.pp.0.cpp.err.log 
+Command         ap_eval done; 1.16 sec.
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 2.69 sec.
+INFO-FLOW: tidy-3.1 time 5 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.29 sec.
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.2.cpp
+Command         clang done; 1.24 sec.
+Execute         get_default_platform 
+INFO-FLOW: Processing labels
+Execute         clang -src /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.bc
+Command         clang done; 1.85 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/correlation.g.bc -hls-opt -except-internalize kernel_correlation_optimized -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g 
+Command         llvm-ld done; 0.77 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 372.707 ; gain = 0.105 ; free physical = 2180 ; free virtual = 11930
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 372.707 ; gain = 0.105 ; free physical = 2180 ; free virtual = 11930
+Execute         ::config_rtl 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.pp.bc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.pp.0.bc -f 
+Execute           llvm-ld /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lfloatconversion -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.0 
+Command           llvm-ld done; 0.74 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top kernel_correlation_optimized -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.0.bc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 0.3 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 501.418 ; gain = 128.816 ; free physical = 2164 ; free virtual = 11919
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.1.bc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'lut_div5_chunk' into 'int_56_div5' (correlation.cpp:87) automatically.
+INFO: [XFORM 203-602] Inlining function 'decompose_double' into 'operator_double_div5' (correlation.cpp:135) automatically.
+INFO: [XFORM 203-602] Inlining function 'operator_int_56_div5' into 'operator_double_div5' (correlation.cpp:164) automatically.
+INFO: [XFORM 203-602] Inlining function 'rebuild_double' into 'operator_double_div5' (correlation.cpp:169) automatically.
+INFO: [XFORM 203-602] Inlining function 'int_56_mul3' into 'operator_int_56_mul6' (correlation.cpp:222) automatically.
+INFO: [XFORM 203-602] Inlining function 'decompose_double' into 'operator_double_mul6' (correlation.cpp:236) automatically.
+INFO: [XFORM 203-602] Inlining function 'rebuild_double' into 'operator_double_mul6' (correlation.cpp:267) automatically.
+Command           transform done; 0.14 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.2.prechk.bc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] correlation.cpp:90: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 501.418 ; gain = 128.816 ; free physical = 2154 ; free virtual = 11910
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.g.1.bc to /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.o.1.bc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-602] Inlining function 'lut_div5_chunk' into 'int_56_div5' (correlation.cpp:87) automatically.
+INFO: [XFORM 203-602] Inlining function 'int_56_div5' into 'operator_int_56_div5' (correlation.cpp:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'decompose_double' into 'operator_double_div5' (correlation.cpp:135) automatically.
+INFO: [XFORM 203-602] Inlining function 'operator_int_56_div5' into 'operator_double_div5' (correlation.cpp:164) automatically.
+INFO: [XFORM 203-602] Inlining function 'rebuild_double' into 'operator_double_div5' (correlation.cpp:169) automatically.
+INFO: [XFORM 203-602] Inlining function 'int_56_mul3' into 'operator_int_56_mul6' (correlation.cpp:222) automatically.
+INFO: [XFORM 203-602] Inlining function 'decompose_double' into 'operator_double_mul6' (correlation.cpp:236) automatically.
+INFO: [XFORM 203-602] Inlining function 'operator_int_56_mul6' into 'operator_double_mul6' (correlation.cpp:245) automatically.
+INFO: [XFORM 203-602] Inlining function 'rebuild_double' into 'operator_double_mul6' (correlation.cpp:267) automatically.
+Command           transform done; 0.3 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.o.1.tmp.bc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (correlation.cpp:208:29) to (correlation.cpp:252:2) in function 'operator_double_mul6'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (correlation.cpp:123:36) to (correlation.cpp:89:6) in function 'operator_double_div5'... converting 8 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'operator_double_mul6' (correlation.cpp:225)...17 expression(s) balanced.
+Command           transform done; 0.2 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 501.418 ; gain = 128.816 ; free physical = 2121 ; free virtual = 11880
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.o.2.bc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'lut_mul3_chunk' (correlation.cpp:217:31) in function 'operator_double_mul6' and propagating its result(s) since all actual argument(s) to the function are constants.
+Command           transform done; 0.33 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 564.602 ; gain = 192.000 ; free physical = 2092 ; free virtual = 11851
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 2.14 sec.
+Command       elaborate done; 17.94 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'kernel_correlation_optimized' ...
+Execute         ap_set_top_model kernel_correlation_optimized 
+Execute         get_model_list kernel_correlation_optimized -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model kernel_correlation_optimized 
+Execute         preproc_iomode -model operator_double_mul6 
+Execute         preproc_iomode -model lut_mul3_chunk 
+Execute         preproc_iomode -model operator_double_div5 
+Execute         get_model_list kernel_correlation_optimized -filter all-wo-channel 
+INFO-FLOW: Model list for configure: operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized
+INFO-FLOW: Configuring Module : operator_double_div5 ...
+Execute         set_default_model operator_double_div5 
+Execute         apply_spec_resource_limit operator_double_div5 
+INFO-FLOW: Configuring Module : lut_mul3_chunk ...
+Execute         set_default_model lut_mul3_chunk 
+Execute         apply_spec_resource_limit lut_mul3_chunk 
+INFO-FLOW: Configuring Module : operator_double_mul6 ...
+Execute         set_default_model operator_double_mul6 
+Execute         apply_spec_resource_limit operator_double_mul6 
+INFO-FLOW: Configuring Module : kernel_correlation_optimized ...
+Execute         set_default_model kernel_correlation_optimized 
+Execute         apply_spec_resource_limit kernel_correlation_optimized 
+INFO-FLOW: Model list for preprocess: operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized
+INFO-FLOW: Preprocessing Module: operator_double_div5 ...
+Execute         set_default_model operator_double_div5 
+Execute         cdfg_preprocess -model operator_double_div5 
+Execute         rtl_gen_preprocess operator_double_div5 
+INFO-FLOW: Preprocessing Module: lut_mul3_chunk ...
+Execute         set_default_model lut_mul3_chunk 
+Execute         cdfg_preprocess -model lut_mul3_chunk 
+Execute         rtl_gen_preprocess lut_mul3_chunk 
+INFO-FLOW: Preprocessing Module: operator_double_mul6 ...
+Execute         set_default_model operator_double_mul6 
+Execute         cdfg_preprocess -model operator_double_mul6 
+Execute         rtl_gen_preprocess operator_double_mul6 
+INFO-FLOW: Preprocessing Module: kernel_correlation_optimized ...
+Execute         set_default_model kernel_correlation_optimized 
+Execute         cdfg_preprocess -model kernel_correlation_optimized 
+Execute         rtl_gen_preprocess kernel_correlation_optimized 
+INFO-FLOW: Model list for synthesis: operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_double_div5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model operator_double_div5 
+Execute         schedule -model operator_double_div5 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (2.292ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.3125ns, effective delay budget: 2.1875ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'shl' operation ('r.V', correlation.cpp:160) (2.29 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.67 seconds; current allocated memory: 142.234 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.sched.adb -f 
+INFO-FLOW: Finish scheduling operator_double_div5.
+Execute         set_default_model operator_double_div5 
+Execute         bind -model operator_double_div5 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=operator_double_div5
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 142.892 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.verbose.bind.rpt -verbose -f 
+Command         report done; 0.13 sec.
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.bind.adb -f 
+INFO-FLOW: Finish binding operator_double_div5.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lut_mul3_chunk' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model lut_mul3_chunk 
+Execute         schedule -model lut_mul3_chunk 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 143.042 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.verbose.sched.rpt -verbose -f 
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.sched.adb -f 
+INFO-FLOW: Finish scheduling lut_mul3_chunk.
+Execute         set_default_model lut_mul3_chunk 
+Execute         bind -model lut_mul3_chunk 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=lut_mul3_chunk
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 143.150 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.verbose.bind.rpt -verbose -f 
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.bind.adb -f 
+INFO-FLOW: Finish binding lut_mul3_chunk.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_double_mul6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model operator_double_mul6 
+Execute         schedule -model operator_double_mul6 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (2.66ns) of 'cttz' operation ('tmp_1', correlation.cpp:246) exceeds the target cycle time (target cycle time: 2.5ns, clock uncertainty: 0.312ns, effective cycle time: 2.19ns).
+WARNING: [SCHED 204-21] Estimated clock period (2.664ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.3125ns, effective delay budget: 2.1875ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'cttz' operation ('tmp_1', correlation.cpp:246) (2.66 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 143.719 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.verbose.sched.rpt -verbose -f 
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.sched.adb -f 
+INFO-FLOW: Finish scheduling operator_double_mul6.
+Execute         set_default_model operator_double_mul6 
+Execute         bind -model operator_double_mul6 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=operator_double_mul6
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.15 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 144.472 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.verbose.bind.rpt -verbose -f 
+Command         report done; 0.13 sec.
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.bind.adb -f 
+INFO-FLOW: Finish binding operator_double_mul6.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_correlation_optimized' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model kernel_correlation_optimized 
+Execute         schedule -model kernel_correlation_optimized 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (3.4ns) of 'dsqrt' operation ('tmp_23', correlation.cpp:402) exceeds the target cycle time (target cycle time: 2.5ns, clock uncertainty: 0.312ns, effective cycle time: 2.19ns).
+WARNING: [SCHED 204-21] Estimated clock period (3.404ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.3125ns, effective delay budget: 2.1875ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'dsqrt' operation ('tmp_23', correlation.cpp:402) (3.4 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 146.515 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.verbose.sched.rpt -verbose -f 
+Command         report done; 0.27 sec.
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.sched.adb -f 
+INFO-FLOW: Finish scheduling kernel_correlation_optimized.
+Execute         set_default_model kernel_correlation_optimized 
+Execute         bind -model kernel_correlation_optimized 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=kernel_correlation_optimized
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.22 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 148.150 MB.
+Execute         report -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.verbose.bind.rpt -verbose -f 
+Command         report done; 0.53 sec.
+Execute         db_write -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.bind.adb -f 
+INFO-FLOW: Finish binding kernel_correlation_optimized.
+Execute         get_model_list kernel_correlation_optimized -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess operator_double_div5 
+Execute         rtl_gen_preprocess lut_mul3_chunk 
+Execute         rtl_gen_preprocess operator_double_mul6 
+Execute         rtl_gen_preprocess kernel_correlation_optimized 
+INFO-FLOW: Model list for RTL generation: operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_double_div5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -prefix 
+Execute         get_config_rtl -auto_prefix 
+Execute         create_rtl_model operator_double_div5 -vendor xilinx -mg_file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'operator_double_div5_r0' to 'operator_double_dbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'operator_double_div5_r1' to 'operator_double_dcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'operator_double_div5_r2' to 'operator_double_ddEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'operator_double_div5_q0' to 'operator_double_deOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'operator_double_div5_q1' to 'operator_double_dfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'operator_double_div5_q2' to 'operator_double_dg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_lshr_52ns_11ns_52_7_1' to 'kernel_correlatiohbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_shl_56ns_11ns_56_7_1' to 'kernel_correlatioibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_lshr_56ns_6ns_56_7_1' to 'kernel_correlatiojbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatiohbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatioibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatiojbC': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_double_div5'.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 149.441 MB.
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute         gen_rtl operator_double_div5 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/systemc/operator_double_div5 -synmodules operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized 
+Execute         gen_rtl operator_double_div5 -style xilinx -f -lang vhdl -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/vhdl/operator_double_div5 
+Execute         gen_rtl operator_double_div5 -style xilinx -f -lang vlog -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/verilog/operator_double_div5 
+Execute         gen_tb_info operator_double_div5 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5 -p /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db 
+Execute         report -model operator_double_div5 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/operator_double_div5_csynth.rpt -f 
+Execute         report -model operator_double_div5 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/operator_double_div5_csynth.xml -f -x 
+Execute         report -model operator_double_div5 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.verbose.rpt -verbose -f 
+Command         report done; 0.19 sec.
+Execute         db_write -model operator_double_div5 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lut_mul3_chunk' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -prefix 
+Execute         get_config_rtl -auto_prefix 
+Execute         create_rtl_model lut_mul3_chunk -vendor xilinx -mg_file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lut_mul3_chunk'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 152.096 MB.
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute         gen_rtl lut_mul3_chunk -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/systemc/lut_mul3_chunk -synmodules operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized 
+Execute         gen_rtl lut_mul3_chunk -style xilinx -f -lang vhdl -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/vhdl/lut_mul3_chunk 
+Execute         gen_rtl lut_mul3_chunk -style xilinx -f -lang vlog -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/verilog/lut_mul3_chunk 
+Execute         gen_tb_info lut_mul3_chunk -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk -p /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db 
+Execute         report -model lut_mul3_chunk -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/lut_mul3_chunk_csynth.rpt -f 
+Execute         report -model lut_mul3_chunk -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/lut_mul3_chunk_csynth.xml -f -x 
+Execute         report -model lut_mul3_chunk -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.verbose.rpt -verbose -f 
+Execute         db_write -model lut_mul3_chunk -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_double_mul6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -prefix 
+Execute         get_config_rtl -auto_prefix 
+Execute         create_rtl_model operator_double_mul6 -vendor xilinx -mg_file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_shl_56ns_32ns_56_7_1' to 'kernel_correlatiokbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_lshr_56ns_32ns_56_7_1' to 'kernel_correlatiolbW' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatiokbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatiolbW': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_double_mul6'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 153.970 MB.
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute         gen_rtl operator_double_mul6 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/systemc/operator_double_mul6 -synmodules operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized 
+Execute         gen_rtl operator_double_mul6 -style xilinx -f -lang vhdl -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/vhdl/operator_double_mul6 
+Execute         gen_rtl operator_double_mul6 -style xilinx -f -lang vlog -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/verilog/operator_double_mul6 
+Execute         gen_tb_info operator_double_mul6 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6 -p /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db 
+Execute         report -model operator_double_mul6 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/operator_double_mul6_csynth.rpt -f 
+Execute         report -model operator_double_mul6 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/operator_double_mul6_csynth.xml -f -x 
+Execute         report -model operator_double_mul6 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.verbose.rpt -verbose -f 
+Command         report done; 0.22 sec.
+Execute         db_write -model operator_double_mul6 -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.adb -f 
+Command         db_write done; 0.12 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_correlation_optimized' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -prefix 
+Execute         get_config_rtl -auto_prefix 
+Execute         create_rtl_model kernel_correlation_optimized -vendor xilinx -mg_file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_correlation_optimized/m' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_correlation_optimized/n' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_correlation_optimized/float_n' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_correlation_optimized/data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_correlation_optimized/symmat' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_correlation_optimized/mean' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_correlation_optimized/stddev' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kernel_correlation_optimized' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_dadddsub_64ns_64ns_64_14_no_dsp_1' to 'kernel_correlatiomb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_dmul_64ns_64ns_64_18_max_dsp_1' to 'kernel_correlationcg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_ddiv_64ns_64ns_64_59_1' to 'kernel_correlatioocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_dcmp_64ns_64ns_1_4_1' to 'kernel_correlatiopcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_dsqrt_64ns_64ns_64_59_1' to 'kernel_correlatioqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_correlation_optimized_mac_muladd_11ns_21s_10ns_21_4_1' to 'kernel_correlatiorcU' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'kernel_correlation_optimized/m' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'kernel_correlation_optimized/n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'kernel_correlation_optimized/float_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatiomb6': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlationcg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatioocq': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatiopcA': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatioqcK': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_correlatiorcU': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_correlation_optimized'.
+Command         create_rtl_model done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 159.993 MB.
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute         gen_rtl kernel_correlation_optimized -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/systemc/kernel_correlation_optimized -synmodules operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized 
+Execute         gen_rtl kernel_correlation_optimized -istop -style xilinx -f -lang vhdl -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/vhdl/kernel_correlation_optimized 
+Command         gen_rtl done; 0.11 sec.
+Execute         gen_rtl kernel_correlation_optimized -istop -style xilinx -f -lang vlog -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/verilog/kernel_correlation_optimized 
+Execute         export_constraint_db -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.constraint.tcl -f -tool general 
+Execute         report -model kernel_correlation_optimized -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.design.xml -verbose -f -dv 
+Command         report done; 0.21 sec.
+Execute         report -model kernel_correlation_optimized -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.sdaccel.xml -verbose -f -sdaccel 
+Command         report done; 0.11 sec.
+Execute         gen_tb_info kernel_correlation_optimized -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized -p /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db 
+Execute         report -model kernel_correlation_optimized -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/kernel_correlation_optimized_csynth.rpt -f 
+Execute         report -model kernel_correlation_optimized -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/syn/report/kernel_correlation_optimized_csynth.xml -f -x 
+Execute         report -model kernel_correlation_optimized -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.verbose.rpt -verbose -f 
+Command         report done; 1.07 sec.
+Execute         db_write -model kernel_correlation_optimized -o /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.adb -f 
+Command         db_write done; 0.25 sec.
+Execute         sc_get_clocks kernel_correlation_optimized 
+Execute         sc_get_portdomain kernel_correlation_optimized 
+INFO-FLOW: Model list for RTL component generation: operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized
+INFO-FLOW: Handling components in module [operator_double_div5] ... 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+INFO-FLOW: Found component kernel_correlatiohbi.
+INFO-FLOW: Append model kernel_correlatiohbi
+INFO-FLOW: Found component kernel_correlatioibs.
+INFO-FLOW: Append model kernel_correlatioibs
+INFO-FLOW: Found component kernel_correlatiojbC.
+INFO-FLOW: Append model kernel_correlatiojbC
+INFO-FLOW: Found component operator_double_dbkb.
+INFO-FLOW: Append model operator_double_dbkb
+INFO-FLOW: Found component operator_double_dcud.
+INFO-FLOW: Append model operator_double_dcud
+INFO-FLOW: Found component operator_double_ddEe.
+INFO-FLOW: Append model operator_double_ddEe
+INFO-FLOW: Found component operator_double_deOg.
+INFO-FLOW: Append model operator_double_deOg
+INFO-FLOW: Found component operator_double_dfYi.
+INFO-FLOW: Append model operator_double_dfYi
+INFO-FLOW: Found component operator_double_dg8j.
+INFO-FLOW: Append model operator_double_dg8j
+INFO-FLOW: Handling components in module [lut_mul3_chunk] ... 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+INFO-FLOW: Found component lut_mul3_chunk_q01.
+INFO-FLOW: Append model lut_mul3_chunk_q01
+INFO-FLOW: Found component lut_mul3_chunk_q12.
+INFO-FLOW: Append model lut_mul3_chunk_q12
+INFO-FLOW: Found component lut_mul3_chunk_q23.
+INFO-FLOW: Append model lut_mul3_chunk_q23
+INFO-FLOW: Found component lut_mul3_chunk_q3.
+INFO-FLOW: Append model lut_mul3_chunk_q3
+INFO-FLOW: Found component lut_mul3_chunk_q4.
+INFO-FLOW: Append model lut_mul3_chunk_q4
+INFO-FLOW: Found component lut_mul3_chunk_q5.
+INFO-FLOW: Append model lut_mul3_chunk_q5
+INFO-FLOW: Found component lut_mul3_chunk_q6.
+INFO-FLOW: Append model lut_mul3_chunk_q6
+INFO-FLOW: Found component lut_mul3_chunk_q7.
+INFO-FLOW: Append model lut_mul3_chunk_q7
+INFO-FLOW: Handling components in module [operator_double_mul6] ... 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+INFO-FLOW: Found component kernel_correlatiokbM.
+INFO-FLOW: Append model kernel_correlatiokbM
+INFO-FLOW: Found component kernel_correlatiolbW.
+INFO-FLOW: Append model kernel_correlatiolbW
+INFO-FLOW: Handling components in module [kernel_correlation_optimized] ... 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+INFO-FLOW: Found component kernel_correlatiomb6.
+INFO-FLOW: Append model kernel_correlatiomb6
+INFO-FLOW: Found component kernel_correlationcg.
+INFO-FLOW: Append model kernel_correlationcg
+INFO-FLOW: Found component kernel_correlatioocq.
+INFO-FLOW: Append model kernel_correlatioocq
+INFO-FLOW: Found component kernel_correlatiopcA.
+INFO-FLOW: Append model kernel_correlatiopcA
+INFO-FLOW: Found component kernel_correlatioqcK.
+INFO-FLOW: Append model kernel_correlatioqcK
+INFO-FLOW: Found component kernel_correlatiorcU.
+INFO-FLOW: Append model kernel_correlatiorcU
+INFO-FLOW: Append model operator_double_div5
+INFO-FLOW: Append model lut_mul3_chunk
+INFO-FLOW: Append model operator_double_mul6
+INFO-FLOW: Append model kernel_correlation_optimized
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: kernel_correlatiohbi kernel_correlatioibs kernel_correlatiojbC operator_double_dbkb operator_double_dcud operator_double_ddEe operator_double_deOg operator_double_dfYi operator_double_dg8j lut_mul3_chunk_q01 lut_mul3_chunk_q12 lut_mul3_chunk_q23 lut_mul3_chunk_q3 lut_mul3_chunk_q4 lut_mul3_chunk_q5 lut_mul3_chunk_q6 lut_mul3_chunk_q7 kernel_correlatiokbM kernel_correlatiolbW kernel_correlatiomb6 kernel_correlationcg kernel_correlatioocq kernel_correlatiopcA kernel_correlatioqcK kernel_correlatiorcU operator_double_div5 lut_mul3_chunk operator_double_mul6 kernel_correlation_optimized
+INFO-FLOW: To file: write model kernel_correlatiohbi
+INFO-FLOW: To file: write model kernel_correlatioibs
+INFO-FLOW: To file: write model kernel_correlatiojbC
+INFO-FLOW: To file: write model operator_double_dbkb
+INFO-FLOW: To file: write model operator_double_dcud
+INFO-FLOW: To file: write model operator_double_ddEe
+INFO-FLOW: To file: write model operator_double_deOg
+INFO-FLOW: To file: write model operator_double_dfYi
+INFO-FLOW: To file: write model operator_double_dg8j
+INFO-FLOW: To file: write model lut_mul3_chunk_q01
+INFO-FLOW: To file: write model lut_mul3_chunk_q12
+INFO-FLOW: To file: write model lut_mul3_chunk_q23
+INFO-FLOW: To file: write model lut_mul3_chunk_q3
+INFO-FLOW: To file: write model lut_mul3_chunk_q4
+INFO-FLOW: To file: write model lut_mul3_chunk_q5
+INFO-FLOW: To file: write model lut_mul3_chunk_q6
+INFO-FLOW: To file: write model lut_mul3_chunk_q7
+INFO-FLOW: To file: write model kernel_correlatiokbM
+INFO-FLOW: To file: write model kernel_correlatiolbW
+INFO-FLOW: To file: write model kernel_correlatiomb6
+INFO-FLOW: To file: write model kernel_correlationcg
+INFO-FLOW: To file: write model kernel_correlatioocq
+INFO-FLOW: To file: write model kernel_correlatiopcA
+INFO-FLOW: To file: write model kernel_correlatioqcK
+INFO-FLOW: To file: write model kernel_correlatiorcU
+INFO-FLOW: To file: write model operator_double_div5
+INFO-FLOW: To file: write model lut_mul3_chunk
+INFO-FLOW: To file: write model operator_double_mul6
+INFO-FLOW: To file: write model kernel_correlation_optimized
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute         get_config_sdx -target 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source done; 0.14 sec.
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.14 sec.
+Command         ap_source done; 0.14 sec.
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+INFO: [RTMG 210-286] Generating pipelined shifter : 'kernel_correlatiohbi'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'kernel_correlatioibs'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'kernel_correlatiojbC'
+INFO: [RTMG 210-279] Implementing memory 'operator_double_dbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'operator_double_dcud_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'operator_double_ddEe_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'operator_double_deOg_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'operator_double_dfYi_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'operator_double_dg8j_rom' using distributed ROMs.
+Command         ap_source done; 0.15 sec.
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q01_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q12_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q23_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q3_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q4_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q5_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q6_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lut_mul3_chunk_q7_rom' using distributed ROMs.
+Command         ap_source done; 0.13 sec.
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+INFO: [RTMG 210-286] Generating pipelined shifter : 'kernel_correlatiokbM'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'kernel_correlatiolbW'
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Command         ap_source done; 0.21 sec.
+Execute         get_config_sdx -target 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source done; 0.13 sec.
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.13 sec.
+Command         ap_source done; 0.13 sec.
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Command         ap_source done; 0.11 sec.
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Execute           source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute           source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute           source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute           source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.constraint.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.constraint.tcl 
+Execute         sc_get_clocks kernel_correlation_optimized 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/impl/misc/kernel_correlation_optimized_ap_dadddsub_12_no_dsp_64_ip.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/impl/misc/kernel_correlation_optimized_ap_dcmp_2_no_dsp_64_ip.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/impl/misc/kernel_correlation_optimized_ap_ddiv_57_no_dsp_64_ip.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/impl/misc/kernel_correlation_optimized_ap_dmul_16_max_dsp_64_ip.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/impl/misc/kernel_correlation_optimized_ap_dsqrt_57_no_dsp_64_ip.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 564.602 ; gain = 192.000 ; free physical = 2015 ; free virtual = 11790
+INFO: [SYSC 207-301] Generating SystemC RTL for kernel_correlation_optimized.
+INFO: [VHDL 208-304] Generating VHDL RTL for kernel_correlation_optimized.
+INFO: [VLOG 209-307] Generating Verilog RTL for kernel_correlation_optimized.
+Command       autosyn done; 6.79 sec.
+Command     csynth_design done; 24.74 sec.
+Execute     export_design -flow impl -rtl vhdl -format ip_catalog 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.12 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.13 sec.
+Command       ap_source done; 0.13 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute         source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.constraint.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.rtl_wrap.cfg.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.constraint.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.constraint.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.12 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_div5.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/lut_mul3_chunk.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/operator_double_mul6.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.compgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.constraint.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/kernel_correlation_optimized.tbgen.tcl 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       get_config_rtl -vivado_synth_design_args 
+Execute       source /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/my_version/.autopilot/db/global.setting.tcl 
+Execute       get_config_rtl -vivado_synth_strategy 
+Execute       get_config_rtl -vivado_synth_strategy 
+Execute       get_config_rtl -vivado_phys_opt 
+Command     export_design done; 569.48 sec.
+Execute     cleanup_all 
+Command     cleanup_all done; 0.16 sec.

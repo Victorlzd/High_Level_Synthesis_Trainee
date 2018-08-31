@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"operator_long_div2": {
-			"proto_instances": {
-			}
-		}
-	}
-}

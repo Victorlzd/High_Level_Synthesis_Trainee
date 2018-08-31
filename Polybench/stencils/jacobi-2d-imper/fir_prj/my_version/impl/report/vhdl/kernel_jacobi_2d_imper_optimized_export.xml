@@ -2,12 +2,12 @@
 
 <AreaReport>
 <Resources>
-<SLICE>599</SLICE>
-<LUT>1750</LUT>
-<FF>1126</FF>
-<DSP>7</DSP>
+<SLICE>715</SLICE>
+<LUT>1907</LUT>
+<FF>2894</FF>
+<DSP>4</DSP>
 <BRAM>0</BRAM>
-<SRL>0</SRL>
+<SRL>34</SRL>
 </Resources>
 <AvailableResources>
 <SLICE>25350</SLICE>
@@ -19,8 +19,8 @@
 </AreaReport>
 
 <TimingReport>
-<TargetClockPeriod>10.000</TargetClockPeriod>
-<AchievedClockPeriod>13.164</AchievedClockPeriod>
+<TargetClockPeriod>2.500</TargetClockPeriod>
+<AchievedClockPeriod>2.558</AchievedClockPeriod>
 </TimingReport>
 
 </profile>

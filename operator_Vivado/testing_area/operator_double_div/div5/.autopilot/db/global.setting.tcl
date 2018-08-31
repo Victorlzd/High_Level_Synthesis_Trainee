@@ -1,6 +1,6 @@
 
 set TopModule "operator_double_div5"
-set ClockPeriod "5.000000"
+set ClockPeriod "2.500000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}

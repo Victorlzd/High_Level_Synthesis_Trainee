@@ -1,0 +1,511 @@
+
+*** Running vivado
+    with args -log operator_int_div3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_int_div3.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source operator_int_div3.tcl -notrace
+Command: synth_design -top operator_int_div3 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7434 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1266.352 ; gain = 80.895 ; free physical = 1710 ; free virtual = 9365
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'operator_int_div3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:74]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:77]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:80]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:85]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:87]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:89]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:91]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:93]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:95]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:119]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:121]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:123]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:125]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:127]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:129]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:131]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:133]
+INFO: [Synth 8-3491] module 'lut_div3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:12' bound to instance 'grp_lut_div3_chunk_fu_66' of component 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:27]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:41]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:63]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:75' bound to instance 'r0_U' of component 'lut_div3_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:12' bound to instance 'lut_div3_chunk_r0_rom_U' of component 'lut_div3_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r0_rom' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r0' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r0.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:75' bound to instance 'r1_U' of component 'lut_div3_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_r1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:12' bound to instance 'lut_div3_chunk_r1_rom_U' of component 'lut_div3_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r1_rom' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_r1' (4#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_r1.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:72' bound to instance 'q0_U' of component 'lut_div3_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:12' bound to instance 'lut_div3_chunk_q0_rom_U' of component 'lut_div3_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q0_rom' (5#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q0' (6#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q0.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:70' bound to instance 'q1_U' of component 'lut_div3_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:12' bound to instance 'lut_div3_chunk_q1_rom_U' of component 'lut_div3_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q1_rom' (7#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q1' (8#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q1.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q2' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:69' bound to instance 'q2_U' of component 'lut_div3_chunk_q2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q2_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:12' bound to instance 'lut_div3_chunk_q2_rom_U' of component 'lut_div3_chunk_q2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q2_rom' (9#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q2' (10#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q2.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q3' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:69' bound to instance 'q3_U' of component 'lut_div3_chunk_q3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div3_chunk_q3_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:12' bound to instance 'lut_div3_chunk_q3_rom_U' of component 'lut_div3_chunk_q3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_div3_chunk_q3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q3_rom' (11#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk_q3' (12#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk_q3.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'lut_div3_chunk' (13#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/lut_div3_chunk.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'operator_int_div3' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.vhd:25]
+WARNING: [Synth 8-3331] design lut_div3_chunk_q3 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_q2 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_q1 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_q0 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_r1 has unconnected port reset
+WARNING: [Synth 8-3331] design lut_div3_chunk_r0 has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.977 ; gain = 126.520 ; free physical = 1723 ; free virtual = 9378
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.977 ; gain = 126.520 ; free physical = 1723 ; free virtual = 9377
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.977 ; gain = 126.520 ; free physical = 1723 ; free virtual = 9377
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/operator_int_div3.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1646.469 ; gain = 0.000 ; free physical = 1457 ; free virtual = 9116
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1646.469 ; gain = 461.012 ; free physical = 1551 ; free virtual = 9211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1646.469 ; gain = 461.012 ; free physical = 1551 ; free virtual = 9211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1646.469 ; gain = 461.012 ; free physical = 1553 ; free virtual = 9213
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1646.469 ; gain = 461.012 ; free physical = 1544 ; free virtual = 9204
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 16    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module operator_int_div3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 15    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module lut_div3_chunk_r0_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_r1_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q0_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q1_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q2_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk_q3_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_div3_chunk 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1646.469 ; gain = 461.012 ; free physical = 1535 ; free virtual = 9194
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------------+------------+---------------+----------------+
+|Module Name           | RTL Object | Depth x Width | Implemented As | 
++----------------------+------------+---------------+----------------+
+|lut_div3_chunk_r0_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_r1_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q0_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q1_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q2_rom | p_0_out    | 64x1          | LUT            | 
+|lut_div3_chunk_q3_rom | p_0_out    | 64x1          | LUT            | 
+|operator_int_div3     | p_0_out    | 64x1          | LUT            | 
+|operator_int_div3     | p_0_out    | 64x1          | LUT            | 
+|operator_int_div3     | p_0_out    | 64x1          | LUT            | 
+|operator_int_div3     | p_0_out    | 64x1          | LUT            | 
+|operator_int_div3     | p_0_out    | 64x1          | LUT            | 
++----------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1646.469 ; gain = 461.012 ; free physical = 1407 ; free virtual = 9063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1404 ; free virtual = 9060
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1404 ; free virtual = 9060
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1403 ; free virtual = 9059
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1403 ; free virtual = 9059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1403 ; free virtual = 9059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1403 ; free virtual = 9059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1403 ; free virtual = 9059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1403 ; free virtual = 9059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     4|
+|2     |LUT3 |     9|
+|3     |LUT4 |    23|
+|4     |LUT5 |    16|
+|5     |LUT6 |    16|
+|6     |FDRE |    91|
+|7     |FDSE |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------------------------+----------------------+------+
+|      |Instance                      |Module                |Cells |
++------+------------------------------+----------------------+------+
+|1     |top                           |                      |   161|
+|2     |  grp_lut_div3_chunk_fu_66    |lut_div3_chunk        |    78|
+|3     |    q0_U                      |lut_div3_chunk_q0     |     7|
+|4     |      lut_div3_chunk_q0_rom_U |lut_div3_chunk_q0_rom |     7|
+|5     |    q1_U                      |lut_div3_chunk_q1     |     7|
+|6     |      lut_div3_chunk_q1_rom_U |lut_div3_chunk_q1_rom |     7|
+|7     |    q2_U                      |lut_div3_chunk_q2     |     7|
+|8     |      lut_div3_chunk_q2_rom_U |lut_div3_chunk_q2_rom |     7|
+|9     |    q3_U                      |lut_div3_chunk_q3     |    12|
+|10    |      lut_div3_chunk_q3_rom_U |lut_div3_chunk_q3_rom |    12|
+|11    |    r0_U                      |lut_div3_chunk_r0     |     4|
+|12    |      lut_div3_chunk_r0_rom_U |lut_div3_chunk_r0_rom |     4|
+|13    |    r1_U                      |lut_div3_chunk_r1     |     4|
+|14    |      lut_div3_chunk_r1_rom_U |lut_div3_chunk_r1_rom |     4|
++------+------------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.492 ; gain = 471.035 ; free physical = 1403 ; free virtual = 9059
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1656.492 ; gain = 136.543 ; free physical = 1457 ; free virtual = 9113
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1656.500 ; gain = 471.035 ; free physical = 1457 ; free virtual = 9113
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+100 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 1656.500 ; gain = 471.148 ; free physical = 1453 ; free virtual = 9109
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_int_div/div3/impl/vhdl/project.runs/synth_1/operator_int_div3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file operator_int_div3_utilization_synth.rpt -pb operator_int_div3_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1656.500 ; gain = 0.000 ; free physical = 1455 ; free virtual = 9111
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 16:20:23 2018...

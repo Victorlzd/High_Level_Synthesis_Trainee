@@ -1,6 +1,6 @@
 
-set TopModule "kernel_jacobi_1d_imper"
-set ClockPeriod "10.000000"
+set TopModule "kernel_jacobi_1d_imper_optimized"
+set ClockPeriod "2.500000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}
@@ -41,9 +41,9 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
-set SourceFiles {sc {} c ../../my_version/jacobi-1d-imper.cpp}
+set SourceFiles {sc {} c ../../jacobi-1d-imper.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/classique.directive}
+set DirectiveFile {/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/my_version.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
@@ -56,6 +56,6 @@ set PlatformFiles {{DefaultPlatform {xilinx/kintex7/kintex7 xilinx/kintex7/kinte
 set DefaultPlatform "DefaultPlatform"
 set TBTVFileNotFound ""
 set AppFile "../vivado_hls.app"
-set ApsFile "classique.aps"
+set ApsFile "my_version.aps"
 set AvePath "../.."
 set HPFPO "0"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k160tfbg484-1" LaunchTime="1533647383">
+<GenRun Id="impl_1" LaunchPart="xc7k160tfbg484-1" LaunchTime="1535746490">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="kernel_fdtd_2d.drc"/>
   <File Type="BG-BGN" Name="kernel_fdtd_2d.bgn"/>
@@ -72,14 +72,14 @@
   <File Type="ROUTE-METHODOLOGY-DRC" Name="kernel_fdtd_2d_methodology_drc_routed.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_ap_dmul_3_max_dsp_64/kernel_fdtd_2d_ap_dmul_3_max_dsp_64.xci">
+    <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_ap_dmul_16_max_dsp_64/kernel_fdtd_2d_ap_dmul_16_max_dsp_64.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64.xci">
+    <File Path="$PSRCDIR/sources_1/ip/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64/kernel_fdtd_2d_ap_dadddsub_12_no_dsp_64.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

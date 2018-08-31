@@ -1,0 +1,1312 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Aug 23 12:24:05 2018
+# Process ID: 15926
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl
+# Command line: vivado -notrace -mode batch -source run_vivado.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/vivado.log
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace
+[Thu Aug 23 12:24:14 2018] Launched synth_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/synth_1/runme.log
+[Thu Aug 23 12:24:14 2018] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log int_32_mul3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source int_32_mul3.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source int_32_mul3.tcl -notrace
+Command: synth_design -top int_32_mul3 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16117 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.355 ; gain = 80.895 ; free physical = 327 ; free virtual = 11827
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'int_32_mul3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:53]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:56]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:97]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_80' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:35]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:65]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mebkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:78' bound to instance 'mem_0_U' of component 'lut_mul3_chunk_mebkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:185]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mebkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:91]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mebkb_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:12' bound to instance 'lut_mul3_chunk_mebkb_rom_U' of component 'lut_mul3_chunk_mebkb_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mebkb_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mebkb_rom' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mebkb' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:91]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mecud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:73' bound to instance 'mem_1_U' of component 'lut_mul3_chunk_mecud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mecud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mecud_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:12' bound to instance 'lut_mul3_chunk_mecud_rom_U' of component 'lut_mul3_chunk_mecud_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mecud_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mecud_rom' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mecud' (4#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_medEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:75' bound to instance 'mem_2_U' of component 'lut_mul3_chunk_medEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_medEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_medEe_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:12' bound to instance 'lut_mul3_chunk_medEe_rom_U' of component 'lut_mul3_chunk_medEe_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_medEe_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_medEe_rom' (5#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_medEe' (6#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meeOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:72' bound to instance 'mem_3_U' of component 'lut_mul3_chunk_meeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meeOg_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:12' bound to instance 'lut_mul3_chunk_meeOg_rom_U' of component 'lut_mul3_chunk_meeOg_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meeOg_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meeOg_rom' (7#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meeOg' (8#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mefYi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:70' bound to instance 'mem_4_U' of component 'lut_mul3_chunk_mefYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:233]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mefYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mefYi_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:12' bound to instance 'lut_mul3_chunk_mefYi_rom_U' of component 'lut_mul3_chunk_mefYi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mefYi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mefYi_rom' (9#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mefYi' (10#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meg8j' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:69' bound to instance 'mem_5_U' of component 'lut_mul3_chunk_meg8j' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meg8j' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meg8j_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:12' bound to instance 'lut_mul3_chunk_meg8j_rom_U' of component 'lut_mul3_chunk_meg8j_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meg8j_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meg8j_rom' (11#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meg8j' (12#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mehbi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:69' bound to instance 'mem_6_U' of component 'lut_mul3_chunk_mehbi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mehbi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mehbi_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:12' bound to instance 'lut_mul3_chunk_mehbi_rom_U' of component 'lut_mul3_chunk_mehbi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mehbi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mehbi_rom' (13#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mehbi' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meibs' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:69' bound to instance 'mem_7_U' of component 'lut_mul3_chunk_meibs' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:269]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meibs' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meibs_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:12' bound to instance 'lut_mul3_chunk_meibs_rom_U' of component 'lut_mul3_chunk_meibs_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meibs_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meibs_rom' (15#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meibs' (16#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk' (17#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:25]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_101' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:146]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_122' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:157]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_143' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:168]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_164' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:179]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_185' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'int_32_mul3' (18#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:25]
+WARNING: [Synth 8-3331] design lut_mul3_chunk_meibs has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mehbi has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_meg8j has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mefYi has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_meeOg has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_medEe has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mecud has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mebkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 339 ; free virtual = 11841
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 339 ; free virtual = 11840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 339 ; free virtual = 11840
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1659.473 ; gain = 0.000 ; free physical = 122 ; free virtual = 11583
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 200 ; free virtual = 11659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 200 ; free virtual = 11659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 201 ; free virtual = 11660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 187 ; free virtual = 11651
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input     32 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 6     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 54    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 12    
+	   4 Input      2 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module int_32_mul3 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input     32 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module lut_mul3_chunk_mebkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_mecud_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_medEe_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_meeOg_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_mefYi_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_meg8j_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_mehbi_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_meibs_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_2_U/lut_mul3_chunk_medEe_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_3_U/lut_mul3_chunk_meeOg_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_4_U/lut_mul3_chunk_mefYi_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_5_U/lut_mul3_chunk_meg8j_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_6_U/lut_mul3_chunk_mehbi_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_7_U/lut_mul3_chunk_meibs_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[7]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[6]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[5]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[4]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[3]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[2]) is unused and will be removed from module int_32_mul3.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 173 ; free virtual = 11640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|lut_mul3_chunk_mebkb_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_mecud_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_medEe_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_meeOg_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_mefYi_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_meg8j_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_mehbi_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_meibs_rom | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 135 ; free virtual = 11511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11511
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 153 ; free virtual = 11510
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    10|
+|2     |LUT2   |    18|
+|3     |LUT3   |    50|
+|4     |LUT4   |    16|
+|5     |LUT5   |     6|
+|6     |LUT6   |    28|
+|7     |FDRE   |   129|
+|8     |FDSE   |     7|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------------+----------------------------+------+
+|      |Instance                         |Module                      |Cells |
++------+---------------------------------+----------------------------+------+
+|1     |top                              |                            |   264|
+|2     |  grp_lut_mul3_chunk_fu_101      |lut_mul3_chunk              |    39|
+|3     |    mem_0_U                      |lut_mul3_chunk_mebkb_57     |     2|
+|4     |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_72 |     2|
+|5     |    mem_1_U                      |lut_mul3_chunk_mecud_58     |     3|
+|6     |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_71 |     3|
+|7     |    mem_2_U                      |lut_mul3_chunk_medEe_59     |     3|
+|8     |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_70 |     3|
+|9     |    mem_3_U                      |lut_mul3_chunk_meeOg_60     |     3|
+|10    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_69 |     3|
+|11    |    mem_4_U                      |lut_mul3_chunk_mefYi_61     |     3|
+|12    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_68 |     3|
+|13    |    mem_5_U                      |lut_mul3_chunk_meg8j_62     |     3|
+|14    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_67 |     3|
+|15    |    mem_6_U                      |lut_mul3_chunk_mehbi_63     |     2|
+|16    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_66 |     2|
+|17    |    mem_7_U                      |lut_mul3_chunk_meibs_64     |     3|
+|18    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_65 |     3|
+|19    |  grp_lut_mul3_chunk_fu_122      |lut_mul3_chunk_0            |    48|
+|20    |    mem_0_U                      |lut_mul3_chunk_mebkb_41     |     3|
+|21    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_56 |     3|
+|22    |    mem_1_U                      |lut_mul3_chunk_mecud_42     |     4|
+|23    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_55 |     4|
+|24    |    mem_2_U                      |lut_mul3_chunk_medEe_43     |     5|
+|25    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_54 |     5|
+|26    |    mem_3_U                      |lut_mul3_chunk_meeOg_44     |     4|
+|27    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_53 |     4|
+|28    |    mem_4_U                      |lut_mul3_chunk_mefYi_45     |     4|
+|29    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_52 |     4|
+|30    |    mem_5_U                      |lut_mul3_chunk_meg8j_46     |     4|
+|31    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_51 |     4|
+|32    |    mem_6_U                      |lut_mul3_chunk_mehbi_47     |     5|
+|33    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_50 |     5|
+|34    |    mem_7_U                      |lut_mul3_chunk_meibs_48     |     6|
+|35    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_49 |     6|
+|36    |  grp_lut_mul3_chunk_fu_143      |lut_mul3_chunk_1            |    34|
+|37    |    mem_0_U                      |lut_mul3_chunk_mebkb_25     |     1|
+|38    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_40 |     1|
+|39    |    mem_1_U                      |lut_mul3_chunk_mecud_26     |     2|
+|40    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_39 |     2|
+|41    |    mem_2_U                      |lut_mul3_chunk_medEe_27     |     3|
+|42    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_38 |     3|
+|43    |    mem_3_U                      |lut_mul3_chunk_meeOg_28     |     3|
+|44    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_37 |     3|
+|45    |    mem_4_U                      |lut_mul3_chunk_mefYi_29     |     3|
+|46    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_36 |     3|
+|47    |    mem_5_U                      |lut_mul3_chunk_meg8j_30     |     3|
+|48    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_35 |     3|
+|49    |    mem_6_U                      |lut_mul3_chunk_mehbi_31     |     2|
+|50    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_34 |     2|
+|51    |    mem_7_U                      |lut_mul3_chunk_meibs_32     |     3|
+|52    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_33 |     3|
+|53    |  grp_lut_mul3_chunk_fu_164      |lut_mul3_chunk_2            |    44|
+|54    |    mem_0_U                      |lut_mul3_chunk_mebkb_9      |     3|
+|55    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_24 |     3|
+|56    |    mem_1_U                      |lut_mul3_chunk_mecud_10     |     9|
+|57    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_23 |     9|
+|58    |    mem_2_U                      |lut_mul3_chunk_medEe_11     |     3|
+|59    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_22 |     3|
+|60    |    mem_3_U                      |lut_mul3_chunk_meeOg_12     |     3|
+|61    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_21 |     3|
+|62    |    mem_4_U                      |lut_mul3_chunk_mefYi_13     |     3|
+|63    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_20 |     3|
+|64    |    mem_5_U                      |lut_mul3_chunk_meg8j_14     |     3|
+|65    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_19 |     3|
+|66    |    mem_6_U                      |lut_mul3_chunk_mehbi_15     |     3|
+|67    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_18 |     3|
+|68    |    mem_7_U                      |lut_mul3_chunk_meibs_16     |     4|
+|69    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_17 |     4|
+|70    |  grp_lut_mul3_chunk_fu_185      |lut_mul3_chunk_3            |    44|
+|71    |    mem_0_U                      |lut_mul3_chunk_mebkb_5      |     2|
+|72    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_8  |     2|
+|73    |    mem_1_U                      |lut_mul3_chunk_mecud_6      |     3|
+|74    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_7  |     3|
+|75    |    mem_2_U                      |lut_mul3_chunk_medEe        |     3|
+|76    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom    |     3|
+|77    |    mem_3_U                      |lut_mul3_chunk_meeOg        |     4|
+|78    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom    |     4|
+|79    |    mem_4_U                      |lut_mul3_chunk_mefYi        |     5|
+|80    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom    |     5|
+|81    |    mem_5_U                      |lut_mul3_chunk_meg8j        |     4|
+|82    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom    |     4|
+|83    |    mem_6_U                      |lut_mul3_chunk_mehbi        |     5|
+|84    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom    |     5|
+|85    |    mem_7_U                      |lut_mul3_chunk_meibs        |     4|
+|86    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom    |     4|
+|87    |  grp_lut_mul3_chunk_fu_80       |lut_mul3_chunk_4            |    13|
+|88    |    mem_0_U                      |lut_mul3_chunk_mebkb        |     3|
+|89    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom    |     3|
+|90    |    mem_1_U                      |lut_mul3_chunk_mecud        |     3|
+|91    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom    |     3|
++------+---------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1659.473 ; gain = 126.520 ; free physical = 209 ; free virtual = 11564
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.480 ; gain = 474.012 ; free physical = 209 ; free virtual = 11564
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+142 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1659.480 ; gain = 474.125 ; free physical = 205 ; free virtual = 11561
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/synth_1/int_32_mul3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file int_32_mul3_utilization_synth.rpt -pb int_32_mul3_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1683.484 ; gain = 0.000 ; free physical = 203 ; free virtual = 11560
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 23 12:25:03 2018...
+[Thu Aug 23 12:25:03 2018] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1185.457 ; gain = 0.000 ; free physical = 763 ; free virtual = 12117
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k160tfbg484-1
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1486.801 ; gain = 301.344 ; free physical = 465 ; free virtual = 11893
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1486.801 ; gain = 0.000 ; free physical = 464 ; free virtual = 11893
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 2009.371 ; gain = 522.570 ; free physical = 145 ; free virtual = 11319
+INFO: [Timing 38-480] Writing timing data to binary archive.
+[Thu Aug 23 12:25:51 2018] Launched impl_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/runme.log
+[Thu Aug 23 12:25:51 2018] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log int_32_mul3.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source int_32_mul3.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source int_32_mul3.tcl -notrace
+Command: open_checkpoint /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1183.340 ; gain = 0.000 ; free physical = 160 ; free virtual = 11178
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.2 (64-bit) build 2258646
+open_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 1981.949 ; gain = 798.609 ; free physical = 146 ; free virtual = 10475
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2027.965 ; gain = 46.016 ; free physical = 140 ; free virtual = 10467
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: fe8109ee
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 140 ; free virtual = 10467
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: fe8109ee
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 205 ; free virtual = 10532
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 150b36992
+
+Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 205 ; free virtual = 10532
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 19e324ce0
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10532
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 19e324ce0
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10532
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 91d85392
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10532
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 91d85392
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10532
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10532
+Ending Logic Optimization Task | Checksum: 91d85392
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10532
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 91d85392
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10531
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 91d85392
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 204 ; free virtual = 10531
+INFO: [Common 17-83] Releasing license: Implementation
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file int_32_mul3_drc_opted.rpt -pb int_32_mul3_drc_opted.pb -rpx int_32_mul3_drc_opted.rpx
+Command: report_drc -file int_32_mul3_drc_opted.rpt -pb int_32_mul3_drc_opted.pb -rpx int_32_mul3_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 159 ; free virtual = 10500
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 33c59476
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 159 ; free virtual = 10500
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 159 ; free virtual = 10500
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: effd7822
+
+Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.81 . Memory (MB): peak = 2027.965 ; gain = 0.000 ; free physical = 155 ; free virtual = 10496
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 109b8dbd2
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2051.977 ; gain = 24.012 ; free physical = 146 ; free virtual = 10494
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 109b8dbd2
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2051.977 ; gain = 24.012 ; free physical = 146 ; free virtual = 10494
+Phase 1 Placer Initialization | Checksum: 109b8dbd2
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2051.977 ; gain = 24.012 ; free physical = 146 ; free virtual = 10494
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1c94c4087
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2083.992 ; gain = 56.027 ; free physical = 142 ; free virtual = 10490
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2100.000 ; gain = 0.000 ; free physical = 125 ; free virtual = 10475
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1581a02a9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 126 ; free virtual = 10477
+Phase 2 Global Placement | Checksum: f31264da
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 126 ; free virtual = 10476
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: f31264da
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 126 ; free virtual = 10476
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2bb5f9297
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 125 ; free virtual = 10475
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2808ce93b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 125 ; free virtual = 10475
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 2808ce93b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 125 ; free virtual = 10475
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 26f8788d3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 141 ; free virtual = 10472
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1c673b0f6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 141 ; free virtual = 10472
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1c673b0f6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 141 ; free virtual = 10472
+Phase 3 Detail Placement | Checksum: 1c673b0f6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 141 ; free virtual = 10472
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 238a01a90
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 238a01a90
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 142 ; free virtual = 10473
+INFO: [Place 30-746] Post Placement Timing Summary WNS=8.029. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 15996c090
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 142 ; free virtual = 10473
+Phase 4.1 Post Commit Optimization | Checksum: 15996c090
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 142 ; free virtual = 10473
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 15996c090
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 143 ; free virtual = 10474
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 15996c090
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 143 ; free virtual = 10474
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 79dc5fac
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 143 ; free virtual = 10474
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 79dc5fac
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 143 ; free virtual = 10474
+Ending Placer Task | Checksum: 63808dbf
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2100.000 ; gain = 72.035 ; free physical = 161 ; free virtual = 10492
+INFO: [Common 17-83] Releasing license: Implementation
+50 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2100.000 ; gain = 0.000 ; free physical = 160 ; free virtual = 10492
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file int_32_mul3_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2100.000 ; gain = 0.000 ; free physical = 148 ; free virtual = 10479
+INFO: [runtcl-4] Executing : report_utilization -file int_32_mul3_utilization_placed.rpt -pb int_32_mul3_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2100.000 ; gain = 0.000 ; free physical = 158 ; free virtual = 10489
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file int_32_mul3_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2100.000 ; gain = 0.000 ; free physical = 158 ; free virtual = 10490
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+59 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2100.000 ; gain = 0.000 ; free physical = 155 ; free virtual = 10488
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: 533d7681 ConstDB: 0 ShapeSum: 1043173e RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "ap_clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "ap_rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_V[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_V[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: a295fcf2
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2243.816 ; gain = 143.816 ; free physical = 133 ; free virtual = 10089
+Post Restoration Checksum: NetGraph: 8ddfcce8 NumContArr: 14b6300a Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: a295fcf2
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2243.816 ; gain = 143.816 ; free physical = 133 ; free virtual = 10089
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: a295fcf2
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2258.816 ; gain = 158.816 ; free physical = 133 ; free virtual = 10071
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: a295fcf2
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2258.816 ; gain = 158.816 ; free physical = 134 ; free virtual = 10071
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 186ad3e8e
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 145 ; free virtual = 10070
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=8.143  | TNS=0.000  | WHS=0.076  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 189b198d4
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 144 ; free virtual = 10069
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1d1629a0d
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=8.277  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 14ff4b092
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+Phase 4 Rip-up And Reroute | Checksum: 14ff4b092
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 14ff4b092
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 14ff4b092
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+Phase 5 Delay and Skew Optimization | Checksum: 14ff4b092
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1f29e85b0
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=8.277  | TNS=0.000  | WHS=0.113  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1f29e85b0
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+Phase 6 Post Hold Fix | Checksum: 1f29e85b0
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00477869 %
+  Global Horizontal Routing Utilization  = 0.006948 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 14d1c7365
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2270.637 ; gain = 170.637 ; free physical = 139 ; free virtual = 10064
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 14d1c7365
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2272.637 ; gain = 172.637 ; free physical = 138 ; free virtual = 10063
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 14215fc20
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 2272.637 ; gain = 172.637 ; free physical = 138 ; free virtual = 10063
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=8.277  | TNS=0.000  | WHS=0.113  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 14215fc20
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 2272.637 ; gain = 172.637 ; free physical = 138 ; free virtual = 10064
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 2272.637 ; gain = 172.637 ; free physical = 160 ; free virtual = 10085
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+73 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2272.637 ; gain = 172.637 ; free physical = 160 ; free virtual = 10085
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2272.637 ; gain = 0.000 ; free physical = 156 ; free virtual = 10082
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file int_32_mul3_drc_routed.rpt -pb int_32_mul3_drc_routed.pb -rpx int_32_mul3_drc_routed.rpx
+Command: report_drc -file int_32_mul3_drc_routed.rpt -pb int_32_mul3_drc_routed.pb -rpx int_32_mul3_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file int_32_mul3_methodology_drc_routed.rpt -pb int_32_mul3_methodology_drc_routed.pb -rpx int_32_mul3_methodology_drc_routed.rpx
+Command: report_methodology -file int_32_mul3_methodology_drc_routed.rpt -pb int_32_mul3_methodology_drc_routed.pb -rpx int_32_mul3_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/impl_1/int_32_mul3_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file int_32_mul3_power_routed.rpt -pb int_32_mul3_power_summary_routed.pb -rpx int_32_mul3_power_routed.rpx
+Command: report_power -file int_32_mul3_power_routed.rpt -pb int_32_mul3_power_summary_routed.pb -rpx int_32_mul3_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+85 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file int_32_mul3_route_status.rpt -pb int_32_mul3_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file int_32_mul3_timing_summary_routed.rpt -pb int_32_mul3_timing_summary_routed.pb -rpx int_32_mul3_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file int_32_mul3_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file int_32_mul3_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file int_32_mul3_bus_skew_routed.rpt -pb int_32_mul3_bus_skew_routed.pb -rpx int_32_mul3_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 23 12:27:22 2018...
+[Thu Aug 23 12:27:27 2018] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:00.78 ; elapsed = 00:01:36 . Memory (MB): peak = 2054.574 ; gain = 4.000 ; free physical = 688 ; free virtual = 10408
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2182.887 ; gain = 0.000 ; free physical = 558 ; free virtual = 10307
+Restored from archive | CPU: 0.030000 secs | Memory: 0.234871 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2182.887 ; gain = 0.000 ; free physical = 558 ; free virtual = 10307
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2238.914 ; gain = 56.027 ; free physical = 544 ; free virtual = 10304
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             result
+Solution:            solution1
+Device target:       xc7k160tfbg484-1
+Report date:         Thu Aug 23 12:27:29 CEST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:           44
+LUT:            104
+FF:             136
+DSP:              0
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    1.728
+CP achieved post-implementation:    1.722
+Timing met
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 23 12:27:29 2018...

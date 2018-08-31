@@ -12,7 +12,7 @@ source ./settings.tcl
 source ./extraction.tcl
 
 set projectName fir_prj
-set solutionName classique
+set solutionName my_version
 set targetPart ${device}${package}${speed}
 set outputBaseName $top_module
 set outputDir ./report 

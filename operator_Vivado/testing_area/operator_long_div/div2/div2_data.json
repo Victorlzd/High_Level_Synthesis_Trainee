@@ -17,11 +17,11 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "1",
+    "ClockPeriod": "2.5",
     "IsCombLogic": "1",
     "II": "x",
     "Latency": "0",
-    "Uncertainty": "0.125"
+    "Uncertainty": "0.3125"
   },
   "Xdc": {
     
@@ -132,8 +132,8 @@
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "1.00",
-          "Uncertainty": "0.12",
+          "Target": "2.50",
+          "Uncertainty": "0.31",
           "Estimate": "0.000"
         },
         "Area": {
@@ -151,7 +151,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-08-03 14:57:02 CEST",
+    "Time": "2018-08-31 14:33:58 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

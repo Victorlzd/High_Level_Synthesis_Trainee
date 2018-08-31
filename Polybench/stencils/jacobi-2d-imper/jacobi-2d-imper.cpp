@@ -82,14 +82,60 @@ ap_uint<56> int_56_div5(ap_uint<56> in) {
 	d_chunk = d.range(55, 54);
 	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
 	q.range(55, 54) = q_chunk.range(1, 0);
-			//#pragma HLS unroll factor=18
-	for(i = 17; i >= 0; i = i - 1) {
-		
-		d_chunk = d.range(i*3 + 2, i*3);
-		lut_div5_chunk(d_chunk, r, &q_chunk, &r);
-		q.range(i*3 + 2, i*3) = q_chunk;
-		
-	}
+	d_chunk = d.range(53, 51);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(53, 51) = q_chunk;
+	d_chunk = d.range(50, 48);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(50, 48) = q_chunk;
+	d_chunk = d.range(47, 45);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(47, 45) = q_chunk;
+	d_chunk = d.range(44, 42);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(44, 42) = q_chunk;
+	d_chunk = d.range(41, 39);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(41, 39) = q_chunk;
+	d_chunk = d.range(38, 36);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(38, 36) = q_chunk;
+	d_chunk = d.range(35, 33);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(35, 33) = q_chunk;
+	d_chunk = d.range(32, 30);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(32, 30) = q_chunk;
+	d_chunk = d.range(29, 27);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(29, 27) = q_chunk;
+	d_chunk = d.range(26, 24);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(26, 24) = q_chunk;
+	d_chunk = d.range(23, 21);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(23, 21) = q_chunk;
+	d_chunk = d.range(20, 18);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(20, 18) = q_chunk;
+	d_chunk = d.range(17, 15);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(17, 15) = q_chunk;
+	d_chunk = d.range(14, 12);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(14, 12) = q_chunk;
+	d_chunk = d.range(11, 9);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(11, 9) = q_chunk;
+	d_chunk = d.range(8, 6);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(8, 6) = q_chunk;
+	d_chunk = d.range(5, 3);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(5, 3) = q_chunk;
+	d_chunk = d.range(2, 0);
+	lut_div5_chunk(d_chunk, r, &q_chunk, &r);
+	q.range(2, 0) = q_chunk;
 	return q;
 }
 
@@ -176,6 +222,8 @@ double operator_double_div5(double in) {
 
 
 
+
+
 /* Array initialization. */
 static
 void init_array (int n,
@@ -208,7 +256,6 @@ void kernel_jacobi_2d_imper_optimized(int tsteps,
 	for (j = 1; j < 1000 - 1; j++)
 	  B[i][j] = (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
       for (i = 1; i < 1000-1; i++)
-	  #pragma HLS PIPELINE II=1
 	for (j = 1; j < 1000-1; j++)
 	  A[i][j] = operator_double_div5(B[i][j]);
     }
@@ -233,7 +280,6 @@ void kernel_jacobi_2d_imper(int tsteps,
 	  }
     
 	for (i = 1; i < 1000-1; i++)
-	#pragma HLS PIPELINE II=1
 		for (j = 1; j < 1000-1; j++)
 	  		A[i][j] = B[i][j]/5;
     }

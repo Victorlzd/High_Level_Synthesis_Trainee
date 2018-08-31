@@ -3,5 +3,5 @@
 
 # XDC: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.xdc
 
-# IP: ip/div5_ap_fdiv_0_no_dsp_32/div5_ap_fdiv_0_no_dsp_32.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==div5_ap_fdiv_0_no_dsp_32 || ORIG_REF_NAME==div5_ap_fdiv_0_no_dsp_32} -quiet] -quiet
+# IP: ip/div5_ap_fdiv_28_no_dsp_32/div5_ap_fdiv_28_no_dsp_32.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==div5_ap_fdiv_28_no_dsp_32 || ORIG_REF_NAME==div5_ap_fdiv_28_no_dsp_32} -quiet] -quiet

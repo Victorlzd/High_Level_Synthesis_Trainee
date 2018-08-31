@@ -27,7 +27,7 @@ SC_MODULE(kernel_fdtd_2d_dabkb) {
 
 
 
-    ACMP_dadddsub<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_dadddsub_U;
+    ACMP_dadddsub<ID, 14, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_dadddsub_U;
 
     SC_CTOR(kernel_fdtd_2d_dabkb):  ACMP_dadddsub_U ("ACMP_dadddsub_U") {
         ACMP_dadddsub_U.clk(clk);

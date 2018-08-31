@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Fri Aug  3 11:26:32 2018
+| Date         : Fri Aug 31 16:52:53 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_timing_summary -file ./report/operator_long_div3_timing_routed.rpt
 | Design       : operator_long_div3
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      4.250        0.000                      0                  102        0.132        0.000                      0                  102        4.600        0.000                       0                    68  
+      0.030        0.000                      0                  245        0.149        0.000                      0                  245        0.850        0.000                       0                   173  
 
 
 All user specified timing constraints are met.
@@ -137,9 +137,9 @@ All user specified timing constraints are met.
 | -------------
 ------------------------------------------------------------------------------------------------
 
-Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
------   ------------       ----------      --------------
-ap_clk  {0.000 5.000}      10.000          100.000         
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+ap_clk  {0.000 1.250}        2.500           400.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              4.250        0.000                      0                  102        0.132        0.000                      0                  102        4.600        0.000                       0                    68  
+ap_clk              0.030        0.000                      0                  245        0.149        0.000                      0                  245        0.850        0.000                       0                   173  
 
 
 ------------------------------------------------------------------------------------------------
@@ -180,26 +180,26 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        4.250ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.132ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.600ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        0.030ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.149ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.850ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             4.250ns  (required time - arrival time)
-  Source:                 ap_CS_fsm_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            q_chunk_V_0_7_i_i_reg_439_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.030ns  (required time - arrival time)
+  Source:                 ap_CS_fsm_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/q0_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.716ns  (logic 0.948ns (16.586%)  route 4.768ns (83.414%))
-  Logic Levels:           9  (LUT3=1 LUT6=8)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.435ns  (logic 0.481ns (19.752%)  route 1.954ns (80.248%))
+  Logic Levels:           4  (LUT3=1 LUT5=2 LUT6=1)
   Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.638ns = ( 10.638 - 10.000 ) 
+    Destination Clock Delay (DCD):    0.638ns = ( 3.138 - 2.500 ) 
     Source Clock Delay      (SCD):    0.672ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -212,44 +212,34 @@ Slack (MET) :             4.250ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=67, unset)           0.672     0.672    ap_clk
-    SLICE_X24Y61         FDRE                                         r  ap_CS_fsm_reg[1]/C
+                         net (fo=172, unset)          0.672     0.672    ap_clk
+    SLICE_X17Y58         FDRE                                         r  ap_CS_fsm_reg[29]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X24Y61         FDRE (Prop_fdre_C_Q)         0.246     0.918 r  ap_CS_fsm_reg[1]/Q
-                         net (fo=53, routed)          0.683     1.601    ap_done
-    SLICE_X25Y58         LUT3 (Prop_lut3_I2_O)        0.161     1.762 r  ap_return[30]_INST_0_i_1/O
-                         net (fo=5, routed)           0.785     2.547    d_V[3]
-    SLICE_X24Y58         LUT6 (Prop_lut6_I2_O)        0.170     2.717 r  ap_return[27]_INST_0_i_1/O
-                         net (fo=6, routed)           0.583     3.300    grp_lut_div3_chunk_fu_94_ap_return_1[1]
-    SLICE_X25Y59         LUT6 (Prop_lut6_I0_O)        0.053     3.353 r  ap_return[23]_INST_0_i_1/O
-                         net (fo=6, routed)           0.429     3.782    grp_lut_div3_chunk_fu_101_ap_return_1[1]
-    SLICE_X24Y60         LUT6 (Prop_lut6_I0_O)        0.053     3.835 r  ap_return[19]_INST_0_i_1/O
-                         net (fo=6, routed)           0.579     4.414    grp_lut_div3_chunk_fu_107_ap_return_1[1]
-    SLICE_X24Y60         LUT6 (Prop_lut6_I0_O)        0.053     4.467 r  ap_return[15]_INST_0_i_1/O
-                         net (fo=6, routed)           0.427     4.895    grp_lut_div3_chunk_fu_113_ap_return_1[1]
-    SLICE_X26Y60         LUT6 (Prop_lut6_I0_O)        0.053     4.948 r  ap_return[11]_INST_0_i_1/O
-                         net (fo=6, routed)           0.341     5.289    grp_lut_div3_chunk_fu_119_ap_return_1[1]
-    SLICE_X28Y60         LUT6 (Prop_lut6_I0_O)        0.053     5.342 r  ap_return[7]_INST_0_i_1/O
-                         net (fo=6, routed)           0.363     5.705    grp_lut_div3_chunk_fu_125_ap_return_1[1]
-    SLICE_X27Y59         LUT6 (Prop_lut6_I0_O)        0.053     5.758 r  ap_return[3]_INST_0_i_1/O
-                         net (fo=6, routed)           0.577     6.335    grp_lut_div3_chunk_fu_131_ap_return_1[1]
-    SLICE_X27Y58         LUT6 (Prop_lut6_I0_O)        0.053     6.388 r  ap_return[2]_INST_0/O
-                         net (fo=1, routed)           0.000     6.388    ap_return[2]
-    SLICE_X27Y58         FDRE                                         r  q_chunk_V_0_7_i_i_reg_439_reg[2]/D
+    SLICE_X17Y58         FDRE (Prop_fdre_C_Q)         0.269     0.941 f  ap_CS_fsm_reg[29]/Q
+                         net (fo=10, routed)          0.520     1.461    grp_lut_div3_chunk_fu_98/q0_U/lut_div3_chunk_q0_rom_U/ap_CS_fsm_reg[31][13]
+    SLICE_X18Y57         LUT3 (Prop_lut3_I2_O)        0.053     1.514 f  grp_lut_div3_chunk_fu_98/q0_U/lut_div3_chunk_q0_rom_U/g0_b0_i_28/O
+                         net (fo=5, routed)           0.538     2.052    grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/ap_CS_fsm_reg[27]
+    SLICE_X17Y59         LUT5 (Prop_lut5_I1_O)        0.053     2.105 r  grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/g0_b0_i_16/O
+                         net (fo=1, routed)           0.428     2.533    grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/g0_b0_i_16_n_0
+    SLICE_X16Y57         LUT6 (Prop_lut6_I5_O)        0.053     2.586 r  grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/g0_b0_i_2/O
+                         net (fo=4, routed)           0.468     3.054    grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/q0_reg[0]_0[0]
+    SLICE_X17Y57         LUT5 (Prop_lut5_I0_O)        0.053     3.107 r  grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/g0_b0__2/O
+                         net (fo=1, routed)           0.000     3.107    grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/g0_b0__2_n_0
+    SLICE_X17Y57         FDRE                                         r  grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/q0_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=67, unset)           0.638    10.638    ap_clk
-    SLICE_X27Y58         FDRE                                         r  q_chunk_V_0_7_i_i_reg_439_reg[2]/C
-                         clock pessimism              0.000    10.638    
-                         clock uncertainty           -0.035    10.603    
-    SLICE_X27Y58         FDRE (Setup_fdre_C_D)        0.035    10.638    q_chunk_V_0_7_i_i_reg_439_reg[2]
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=172, unset)          0.638     3.138    grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/ap_clk
+    SLICE_X17Y57         FDRE                                         r  grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/q0_reg[0]/C
+                         clock pessimism              0.000     3.138    
+                         clock uncertainty           -0.035     3.103    
+    SLICE_X17Y57         FDRE (Setup_fdre_C_D)        0.034     3.137    grp_lut_div3_chunk_fu_98/q1_U/lut_div3_chunk_q1_rom_U/q0_reg[0]
   -------------------------------------------------------------------
-                         required time                         10.638    
-                         arrival time                          -6.388    
+                         required time                          3.137    
+                         arrival time                          -3.107    
   -------------------------------------------------------------------
-                         slack                                  4.250    
+                         slack                                  0.030    
 
 
 
@@ -257,15 +247,15 @@ Slack (MET) :             4.250ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.132ns  (arrival time - required time)
-  Source:                 p_Result_13_10_i_i_reg_464_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            q_chunk_V_0_3_i_i_reg_419_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.149ns  (arrival time - required time)
+  Source:                 grp_lut_div3_chunk_fu_98/ap_CS_fsm_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            ap_CS_fsm_reg[0]/D
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.207ns  (logic 0.146ns (70.367%)  route 0.061ns (29.633%))
+  Data Path Delay:        0.251ns  (logic 0.128ns (51.048%)  route 0.123ns (48.952%))
   Logic Levels:           1  (LUT6=1)
   Clock Path Skew:        0.015ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.298ns
@@ -276,27 +266,27 @@ Slack (MET) :             0.132ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=67, unset)           0.283     0.283    ap_clk
-    SLICE_X22Y60         FDRE                                         r  p_Result_13_10_i_i_reg_464_reg[2]/C
+                         net (fo=172, unset)          0.283     0.283    grp_lut_div3_chunk_fu_98/ap_clk
+    SLICE_X13Y56         FDSE                                         r  grp_lut_div3_chunk_fu_98/ap_CS_fsm_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y60         FDRE (Prop_fdre_C_Q)         0.118     0.401 r  p_Result_13_10_i_i_reg_464_reg[2]/Q
-                         net (fo=2, routed)           0.061     0.463    p_Result_13_10_i_i_reg_464[2]
-    SLICE_X23Y60         LUT6 (Prop_lut6_I5_O)        0.028     0.491 r  ap_return[18]_INST_0/O
-                         net (fo=1, routed)           0.000     0.491    ap_return[18]
-    SLICE_X23Y60         FDRE                                         r  q_chunk_V_0_3_i_i_reg_419_reg[2]/D
+    SLICE_X13Y56         FDSE (Prop_fdse_C_Q)         0.100     0.383 r  grp_lut_div3_chunk_fu_98/ap_CS_fsm_reg[0]/Q
+                         net (fo=53, routed)          0.123     0.506    grp_lut_div3_chunk_fu_98/ap_CS_fsm_reg_n_0_[0]
+    SLICE_X12Y56         LUT6 (Prop_lut6_I2_O)        0.028     0.534 r  grp_lut_div3_chunk_fu_98/ap_CS_fsm[0]_i_1__0/O
+                         net (fo=1, routed)           0.000     0.534    ap_NS_fsm[0]
+    SLICE_X12Y56         FDSE                                         r  ap_CS_fsm_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=67, unset)           0.298     0.298    ap_clk
-    SLICE_X23Y60         FDRE                                         r  q_chunk_V_0_3_i_i_reg_419_reg[2]/C
+                         net (fo=172, unset)          0.298     0.298    ap_clk
+    SLICE_X12Y56         FDSE                                         r  ap_CS_fsm_reg[0]/C
                          clock pessimism              0.000     0.298    
-    SLICE_X23Y60         FDRE (Hold_fdre_C_D)         0.061     0.359    q_chunk_V_0_3_i_i_reg_419_reg[2]
+    SLICE_X12Y56         FDSE (Hold_fdse_C_D)         0.087     0.385    ap_CS_fsm_reg[0]
   -------------------------------------------------------------------
-                         required time                         -0.359    
-                         arrival time                           0.491    
+                         required time                         -0.385    
+                         arrival time                           0.534    
   -------------------------------------------------------------------
-                         slack                                  0.132    
+                         slack                                  0.149    
 
 
 
@@ -305,14 +295,14 @@ Slack (MET) :             0.132ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         ap_clk
-Waveform(ns):       { 0.000 5.000 }
-Period(ns):         10.000
+Waveform(ns):       { 0.000 1.250 }
+Period(ns):         2.500
 Sources:            { ap_clk }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     FDRE/C   n/a            0.750         10.000      9.250      SLICE_X24Y61  ap_CS_fsm_reg[1]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.400         5.000       4.600      SLICE_X24Y61  ap_CS_fsm_reg[1]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.350         5.000       4.650      SLICE_X24Y61  ap_CS_fsm_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            0.750         2.500       1.750      SLICE_X18Y60  d_chunk_V_15_reg_381_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.400         1.250       0.850      SLICE_X18Y60  d_chunk_V_15_reg_381_reg[0]/C
+High Pulse Width  Slow    FDSE/C   n/a            0.350         1.250       0.900      SLICE_X12Y56  ap_CS_fsm_reg[0]/C
 
 
 

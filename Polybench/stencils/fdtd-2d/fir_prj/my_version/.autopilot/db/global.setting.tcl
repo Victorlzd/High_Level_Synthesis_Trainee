@@ -1,6 +1,6 @@
 
-set TopModule "kernel_fdtd_2d"
-set ClockPeriod "10.000000"
+set TopModule "kernel_fdtd_2d_optimized"
+set ClockPeriod "2.500000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}
@@ -41,7 +41,7 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
-set SourceFiles {sc {} c ../../my_version/fdtd-2d.cpp}
+set SourceFiles {sc {} c ../../fdtd-2d.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/my_version.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

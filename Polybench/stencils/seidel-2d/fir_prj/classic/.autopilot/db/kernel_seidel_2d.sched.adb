@@ -104,9 +104,9 @@
 						<type>0</type>
 						<id>8</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>273</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -118,10 +118,10 @@
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>44</second>
+										<second>273</second>
 									</item>
 								</second>
 							</item>
@@ -183,9 +183,9 @@
 						<type>0</type>
 						<id>11</id>
 						<name>exitcond2</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>273</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -197,10 +197,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>44</second>
+										<second>273</second>
 									</item>
 								</second>
 							</item>
@@ -229,9 +229,9 @@
 						<type>0</type>
 						<id>13</id>
 						<name>t_1</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>273</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -243,10 +243,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>44</second>
+										<second>273</second>
 									</item>
 								</second>
 							</item>
@@ -275,9 +275,9 @@
 						<type>0</type>
 						<id>14</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>273</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -289,10 +289,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>44</second>
+										<second>273</second>
 									</item>
 								</second>
 							</item>
@@ -322,9 +322,9 @@
 						<type>0</type>
 						<id>16</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>45</lineNumber>
+						<lineNumber>274</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -336,10 +336,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>45</second>
+										<second>274</second>
 									</item>
 								</second>
 							</item>
@@ -401,9 +401,9 @@
 						<type>0</type>
 						<id>19</id>
 						<name>exitcond1</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>45</lineNumber>
+						<lineNumber>274</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -415,10 +415,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>45</second>
+										<second>274</second>
 									</item>
 								</second>
 							</item>
@@ -447,9 +447,9 @@
 						<type>0</type>
 						<id>21</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>45</lineNumber>
+						<lineNumber>274</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -461,10 +461,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>45</second>
+										<second>274</second>
 									</item>
 								</second>
 							</item>
@@ -494,9 +494,9 @@
 						<type>0</type>
 						<id>23</id>
 						<name>tmp</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -508,10 +508,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -540,9 +540,9 @@
 						<type>0</type>
 						<id>24</id>
 						<name>tmp_1_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -554,10 +554,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -585,9 +585,9 @@
 						<type>0</type>
 						<id>25</id>
 						<name>tmp_s</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -599,10 +599,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -623,7 +623,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>5.79</m_delay>
+				<m_delay>1.82</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_16">
 				<Value>
@@ -631,9 +631,9 @@
 						<type>0</type>
 						<id>26</id>
 						<name>tmp_2_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -645,10 +645,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -676,9 +676,9 @@
 						<type>0</type>
 						<id>27</id>
 						<name>tmp_1</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -690,10 +690,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -714,7 +714,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>5.79</m_delay>
+				<m_delay>1.82</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_18">
 				<Value>
@@ -722,9 +722,9 @@
 						<type>0</type>
 						<id>28</id>
 						<name>i_1</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -736,10 +736,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -768,9 +768,9 @@
 						<type>0</type>
 						<id>29</id>
 						<name>tmp_4_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -782,10 +782,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -813,9 +813,9 @@
 						<type>0</type>
 						<id>30</id>
 						<name>tmp_2</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -827,10 +827,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -851,7 +851,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>5.79</m_delay>
+				<m_delay>1.82</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_21">
 				<Value>
@@ -859,9 +859,9 @@
 						<type>0</type>
 						<id>31</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>275</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -873,10 +873,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>46</second>
+										<second>275</second>
 									</item>
 								</second>
 							</item>
@@ -938,9 +938,9 @@
 						<type>0</type>
 						<id>34</id>
 						<name>exitcond</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>275</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -952,10 +952,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>46</second>
+										<second>275</second>
 									</item>
 								</second>
 							</item>
@@ -984,9 +984,9 @@
 						<type>0</type>
 						<id>36</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>275</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -998,10 +998,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>46</second>
+										<second>275</second>
 									</item>
 								</second>
 							</item>
@@ -1031,9 +1031,9 @@
 						<type>0</type>
 						<id>38</id>
 						<name>tmp_5</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1045,10 +1045,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1077,9 +1077,9 @@
 						<type>0</type>
 						<id>39</id>
 						<name>tmp_6_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1091,10 +1091,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1122,9 +1122,9 @@
 						<type>0</type>
 						<id>40</id>
 						<name>tmp_4</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1136,10 +1136,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1168,9 +1168,9 @@
 						<type>0</type>
 						<id>41</id>
 						<name>tmp_19_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1182,10 +1182,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1213,9 +1213,9 @@
 						<type>0</type>
 						<id>42</id>
 						<name>A_addr</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1227,10 +1227,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1260,9 +1260,9 @@
 						<type>0</type>
 						<id>43</id>
 						<name>tmp_6</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1274,10 +1274,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1306,9 +1306,9 @@
 						<type>0</type>
 						<id>44</id>
 						<name>tmp_20_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1320,10 +1320,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1351,9 +1351,9 @@
 						<type>0</type>
 						<id>45</id>
 						<name>A_addr_3</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1365,10 +1365,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1398,9 +1398,9 @@
 						<type>0</type>
 						<id>46</id>
 						<name>tmp_7</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1412,10 +1412,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1444,9 +1444,9 @@
 						<type>0</type>
 						<id>47</id>
 						<name>tmp_21_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1458,10 +1458,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1489,9 +1489,9 @@
 						<type>0</type>
 						<id>48</id>
 						<name>A_addr_6</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1503,10 +1503,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1536,9 +1536,9 @@
 						<type>0</type>
 						<id>49</id>
 						<name>A_load</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1550,10 +1550,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1573,7 +1573,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_37">
 				<Value>
@@ -1581,9 +1581,9 @@
 						<type>0</type>
 						<id>50</id>
 						<name>tmp_7_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1595,10 +1595,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1626,9 +1626,9 @@
 						<type>0</type>
 						<id>51</id>
 						<name>tmp_16</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1640,10 +1640,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1672,9 +1672,9 @@
 						<type>0</type>
 						<id>52</id>
 						<name>tmp_22_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1686,10 +1686,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1717,9 +1717,9 @@
 						<type>0</type>
 						<id>53</id>
 						<name>A_addr_1</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1731,10 +1731,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1764,9 +1764,9 @@
 						<type>0</type>
 						<id>54</id>
 						<name>tmp_17</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1778,10 +1778,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1810,9 +1810,9 @@
 						<type>0</type>
 						<id>55</id>
 						<name>tmp_23_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1824,10 +1824,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1855,9 +1855,9 @@
 						<type>0</type>
 						<id>56</id>
 						<name>A_addr_4</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1869,10 +1869,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1902,9 +1902,9 @@
 						<type>0</type>
 						<id>57</id>
 						<name>tmp_18</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1916,10 +1916,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1948,9 +1948,9 @@
 						<type>0</type>
 						<id>58</id>
 						<name>tmp_24_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1962,10 +1962,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -1993,9 +1993,9 @@
 						<type>0</type>
 						<id>59</id>
 						<name>A_addr_7</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2007,10 +2007,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2040,9 +2040,9 @@
 						<type>0</type>
 						<id>60</id>
 						<name>A_load_1</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2054,10 +2054,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2077,7 +2077,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_48">
 				<Value>
@@ -2085,9 +2085,9 @@
 						<type>0</type>
 						<id>61</id>
 						<name>tmp_8</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2099,10 +2099,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2123,7 +2123,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_49">
 				<Value>
@@ -2131,9 +2131,9 @@
 						<type>0</type>
 						<id>62</id>
 						<name>j_1</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2145,10 +2145,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2177,9 +2177,9 @@
 						<type>0</type>
 						<id>63</id>
 						<name>tmp_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2191,10 +2191,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2222,9 +2222,9 @@
 						<type>0</type>
 						<id>64</id>
 						<name>tmp_19</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2236,10 +2236,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2268,9 +2268,9 @@
 						<type>0</type>
 						<id>65</id>
 						<name>tmp_25_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2282,10 +2282,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2313,9 +2313,9 @@
 						<type>0</type>
 						<id>66</id>
 						<name>A_addr_2</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2327,10 +2327,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2360,9 +2360,9 @@
 						<type>0</type>
 						<id>67</id>
 						<name>tmp_20</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2374,10 +2374,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2406,9 +2406,9 @@
 						<type>0</type>
 						<id>68</id>
 						<name>tmp_26_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2420,10 +2420,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2451,9 +2451,9 @@
 						<type>0</type>
 						<id>69</id>
 						<name>A_addr_5</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2465,10 +2465,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2498,9 +2498,9 @@
 						<type>0</type>
 						<id>70</id>
 						<name>tmp_21</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2512,10 +2512,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2544,9 +2544,9 @@
 						<type>0</type>
 						<id>71</id>
 						<name>tmp_27_cast</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2558,10 +2558,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2589,9 +2589,9 @@
 						<type>0</type>
 						<id>72</id>
 						<name>A_addr_8</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2603,10 +2603,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2636,9 +2636,9 @@
 						<type>0</type>
 						<id>73</id>
 						<name>A_load_2</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2650,10 +2650,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2673,7 +2673,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_61">
 				<Value>
@@ -2681,9 +2681,9 @@
 						<type>0</type>
 						<id>74</id>
 						<name>tmp_3</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2695,10 +2695,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2719,7 +2719,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_62">
 				<Value>
@@ -2727,9 +2727,9 @@
 						<type>0</type>
 						<id>75</id>
 						<name>A_load_3</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2741,10 +2741,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2764,7 +2764,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_63">
 				<Value>
@@ -2772,9 +2772,9 @@
 						<type>0</type>
 						<id>76</id>
 						<name>tmp_9</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2786,10 +2786,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2810,7 +2810,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_64">
 				<Value>
@@ -2818,9 +2818,9 @@
 						<type>0</type>
 						<id>77</id>
 						<name>A_load_4</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2832,10 +2832,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2855,7 +2855,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_65">
 				<Value>
@@ -2863,9 +2863,9 @@
 						<type>0</type>
 						<id>78</id>
 						<name>tmp_10</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2877,10 +2877,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2901,7 +2901,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_66">
 				<Value>
@@ -2909,9 +2909,9 @@
 						<type>0</type>
 						<id>79</id>
 						<name>A_load_5</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2923,10 +2923,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2946,7 +2946,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_67">
 				<Value>
@@ -2954,9 +2954,9 @@
 						<type>0</type>
 						<id>80</id>
 						<name>tmp_11</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2968,10 +2968,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -2992,7 +2992,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_68">
 				<Value>
@@ -3000,9 +3000,9 @@
 						<type>0</type>
 						<id>81</id>
 						<name>A_load_6</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3014,10 +3014,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3037,7 +3037,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_69">
 				<Value>
@@ -3045,9 +3045,9 @@
 						<type>0</type>
 						<id>82</id>
 						<name>tmp_12</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3059,10 +3059,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3083,7 +3083,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_70">
 				<Value>
@@ -3091,9 +3091,9 @@
 						<type>0</type>
 						<id>83</id>
 						<name>A_load_7</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3105,10 +3105,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3128,7 +3128,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_71">
 				<Value>
@@ -3136,9 +3136,9 @@
 						<type>0</type>
 						<id>84</id>
 						<name>tmp_13</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3150,10 +3150,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3174,7 +3174,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_72">
 				<Value>
@@ -3182,9 +3182,9 @@
 						<type>0</type>
 						<id>85</id>
 						<name>A_load_8</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3196,10 +3196,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3219,7 +3219,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_73">
 				<Value>
@@ -3227,9 +3227,9 @@
 						<type>0</type>
 						<id>86</id>
 						<name>tmp_14</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3241,10 +3241,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3265,7 +3265,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>6.91</m_delay>
+				<m_delay>2.12</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_74">
 				<Value>
@@ -3273,9 +3273,9 @@
 						<type>0</type>
 						<id>87</id>
 						<name>tmp_15</name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3287,10 +3287,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3309,9 +3309,9 @@
 				</oprand_edges>
 				<opcode>ddiv</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isOnCriticalPath>1</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>7.28</m_delay>
+				<m_delay>3.17</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_75">
 				<Value>
@@ -3319,9 +3319,9 @@
 						<type>0</type>
 						<id>88</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<lineNumber>276</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3333,10 +3333,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>47</second>
+										<second>276</second>
 									</item>
 								</second>
 							</item>
@@ -3358,7 +3358,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.66</m_delay>
+				<m_delay>1.33</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_76">
 				<Value>
@@ -3366,9 +3366,9 @@
 						<type>0</type>
 						<id>89</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>275</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3380,10 +3380,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>46</second>
+										<second>275</second>
 									</item>
 								</second>
 							</item>
@@ -3473,9 +3473,9 @@
 						<type>0</type>
 						<id>95</id>
 						<name></name>
-						<fileName>classic/seidel-2d.cpp</fileName>
+						<fileName>seidel-2d.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d</fileDirectory>
-						<lineNumber>52</lineNumber>
+						<lineNumber>281</lineNumber>
 						<contextFuncName>kernel_seidel_2d</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3487,10 +3487,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>classic/seidel-2d.cpp</first>
+											<first>seidel-2d.cpp</first>
 											<second>kernel_seidel_2d</second>
 										</first>
-										<second>52</second>
+										<second>281</second>
 									</item>
 								</second>
 							</item>
@@ -5107,8 +5107,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>1354605401</mMinLatency>
-			<mMaxLatency>1354605401</mMaxLatency>
+			<mMinLatency>-729153175</mMinLatency>
+			<mMaxLatency>-729153175</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -5153,8 +5153,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>20</mMinTripCount>
 			<mMaxTripCount>20</mMaxTripCount>
-			<mMinLatency>1354605400</mMinLatency>
-			<mMaxLatency>1354605400</mMaxLatency>
+			<mMinLatency>-729153176</mMinLatency>
+			<mMaxLatency>-729153176</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -5200,8 +5200,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>998</mMinTripCount>
 			<mMaxTripCount>998</mMaxTripCount>
-			<mMinLatency>67730268</mMinLatency>
-			<mMaxLatency>67730268</mMaxLatency>
+			<mMinLatency>178290704</mMinLatency>
+			<mMaxLatency>178290704</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -5224,7 +5224,7 @@
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
 			<mMinLatency>0</mMinLatency>
-			<mMaxLatency>0</mMaxLatency>
+			<mMaxLatency>4</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -5246,8 +5246,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>998</mMinTripCount>
 			<mMaxTripCount>998</mMaxTripCount>
-			<mMinLatency>67864</mMinLatency>
-			<mMaxLatency>67864</mMaxLatency>
+			<mMinLatency>178642</mMinLatency>
+			<mMaxLatency>178642</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -5396,29 +5396,29 @@
 		<item>
 			<first>24</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>25</first>
 			<second>
-				<first>2</first>
-				<second>0</second>
+				<first>3</first>
+				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>26</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>27</first>
 			<second>
-				<first>2</first>
-				<second>0</second>
+				<first>3</first>
+				<second>3</second>
 			</second>
 		</item>
 		<item>
@@ -5431,413 +5431,413 @@
 		<item>
 			<first>29</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>30</first>
 			<second>
-				<first>2</first>
-				<second>0</second>
+				<first>3</first>
+				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>31</first>
 			<second>
-				<first>2</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>33</first>
 			<second>
-				<first>3</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>34</first>
 			<second>
-				<first>3</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>36</first>
 			<second>
-				<first>3</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>38</first>
 			<second>
-				<first>3</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>39</first>
 			<second>
-				<first>3</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>40</first>
 			<second>
-				<first>3</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
-				<first>3</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>42</first>
 			<second>
-				<first>3</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>43</first>
 			<second>
-				<first>13</first>
+				<first>36</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>44</first>
 			<second>
-				<first>13</first>
+				<first>37</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
-				<first>13</first>
+				<first>37</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>46</first>
 			<second>
-				<first>18</first>
+				<first>50</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>47</first>
 			<second>
-				<first>28</first>
+				<first>79</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
-				<first>28</first>
+				<first>79</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
-				<first>3</first>
+				<first>9</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
-				<first>3</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>51</first>
 			<second>
-				<first>3</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>52</first>
 			<second>
-				<first>3</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>53</first>
 			<second>
-				<first>3</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
-				<first>18</first>
+				<first>50</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>55</first>
 			<second>
-				<first>18</first>
+				<first>51</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>56</first>
 			<second>
-				<first>18</first>
+				<first>51</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
-				<first>18</first>
+				<first>50</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
-				<first>33</first>
+				<first>93</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
-				<first>33</first>
+				<first>93</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
-				<first>3</first>
+				<first>9</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
-				<first>7</first>
-				<second>4</second>
+				<first>13</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>62</first>
 			<second>
-				<first>8</first>
+				<first>21</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>63</first>
 			<second>
-				<first>8</first>
+				<first>22</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
-				<first>8</first>
+				<first>22</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>65</first>
 			<second>
-				<first>8</first>
+				<first>23</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>66</first>
 			<second>
-				<first>8</first>
+				<first>23</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>67</first>
 			<second>
-				<first>18</first>
+				<first>50</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>68</first>
 			<second>
-				<first>23</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>69</first>
 			<second>
-				<first>23</first>
+				<first>65</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>70</first>
 			<second>
-				<first>18</first>
+				<first>50</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>71</first>
 			<second>
-				<first>38</first>
+				<first>107</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>72</first>
 			<second>
-				<first>38</first>
+				<first>107</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>73</first>
 			<second>
-				<first>8</first>
+				<first>23</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>74</first>
 			<second>
-				<first>12</first>
-				<second>4</second>
+				<first>27</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>75</first>
 			<second>
-				<first>13</first>
+				<first>37</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>76</first>
 			<second>
-				<first>17</first>
-				<second>4</second>
+				<first>41</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>77</first>
 			<second>
-				<first>18</first>
+				<first>51</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>78</first>
 			<second>
-				<first>22</first>
-				<second>4</second>
+				<first>55</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>79</first>
 			<second>
-				<first>23</first>
+				<first>65</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>80</first>
 			<second>
-				<first>27</first>
-				<second>4</second>
+				<first>69</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>81</first>
 			<second>
-				<first>28</first>
+				<first>79</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>82</first>
 			<second>
-				<first>32</first>
-				<second>4</second>
+				<first>83</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>83</first>
 			<second>
-				<first>33</first>
+				<first>93</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>84</first>
 			<second>
-				<first>37</first>
-				<second>4</second>
+				<first>97</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>85</first>
 			<second>
-				<first>38</first>
+				<first>107</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>86</first>
 			<second>
-				<first>42</first>
-				<second>4</second>
+				<first>111</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>87</first>
 			<second>
-				<first>47</first>
-				<second>21</second>
+				<first>125</first>
+				<second>58</second>
 			</second>
 		</item>
 		<item>
 			<first>88</first>
 			<second>
-				<first>69</first>
+				<first>184</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>89</first>
 			<second>
-				<first>70</first>
+				<first>185</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>91</first>
 			<second>
-				<first>3</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -5891,28 +5891,28 @@
 			<first>32</first>
 			<second>
 				<first>2</first>
-				<second>2</second>
+				<second>6</second>
 			</second>
 		</item>
 		<item>
 			<first>37</first>
 			<second>
-				<first>3</first>
-				<second>3</second>
+				<first>7</first>
+				<second>7</second>
 			</second>
 		</item>
 		<item>
 			<first>90</first>
 			<second>
-				<first>3</first>
-				<second>70</second>
+				<first>7</first>
+				<second>185</second>
 			</second>
 		</item>
 		<item>
 			<first>92</first>
 			<second>
-				<first>3</first>
-				<second>3</second>
+				<first>7</first>
+				<second>7</second>
 			</second>
 		</item>
 		<item>

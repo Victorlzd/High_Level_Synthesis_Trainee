@@ -1,7 +1,8 @@
-operator_int_div6bkb
-operator_int_div6bkb
-operator_int_div6bkb
-operator_int_div6bkb
-operator_int_div6bkb
-operator_int_div6bkb
+lut_div3_chunk_r0
+lut_div3_chunk_r1
+lut_div3_chunk_q0
+lut_div3_chunk_q1
+lut_div3_chunk_q2
+lut_div3_chunk_q3
+lut_div3_chunk
 operator_int_div6

@@ -14,21 +14,27 @@ namespace ap_rtl {
 
 const sc_logic div2::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic div2::ap_const_logic_0 = sc_dt::Log_0;
-const sc_lv<2> div2::ap_ST_fsm_state1 = "1";
-const sc_lv<2> div2::ap_ST_fsm_state2 = "10";
+const sc_lv<8> div2::ap_ST_fsm_state1 = "1";
+const sc_lv<8> div2::ap_ST_fsm_state2 = "10";
+const sc_lv<8> div2::ap_ST_fsm_state3 = "100";
+const sc_lv<8> div2::ap_ST_fsm_state4 = "1000";
+const sc_lv<8> div2::ap_ST_fsm_state5 = "10000";
+const sc_lv<8> div2::ap_ST_fsm_state6 = "100000";
+const sc_lv<8> div2::ap_ST_fsm_state7 = "1000000";
+const sc_lv<8> div2::ap_ST_fsm_state8 = "10000000";
 const sc_lv<32> div2::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_lv<32> div2::ap_const_lv32_3F000000 = "111111000000000000000000000000";
-const sc_lv<32> div2::ap_const_lv32_1 = "1";
+const sc_lv<32> div2::ap_const_lv32_7 = "111";
 const bool div2::ap_const_boolean_1 = true;
 
 div2::div2(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    div2_fmul_32ns_32bkb_U1 = new div2_fmul_32ns_32bkb<1,2,32,32,32>("div2_fmul_32ns_32bkb_U1");
+    div2_fmul_32ns_32bkb_U1 = new div2_fmul_32ns_32bkb<1,8,32,32,32>("div2_fmul_32ns_32bkb_U1");
     div2_fmul_32ns_32bkb_U1->clk(ap_clk);
     div2_fmul_32ns_32bkb_U1->reset(ap_rst);
     div2_fmul_32ns_32bkb_U1->din0(a);
     div2_fmul_32ns_32bkb_U1->din1(ap_var_for_const0);
     div2_fmul_32ns_32bkb_U1->ce(ap_var_for_const1);
-    div2_fmul_32ns_32bkb_U1->dout(grp_fu_28_p2);
+    div2_fmul_32ns_32bkb_U1->dout(grp_fu_20_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -37,22 +43,22 @@ div2::div2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_ap_CS_fsm_state1);
     sensitive << ( ap_CS_fsm );
 
-    SC_METHOD(thread_ap_CS_fsm_state2);
+    SC_METHOD(thread_ap_CS_fsm_state8);
     sensitive << ( ap_CS_fsm );
 
     SC_METHOD(thread_ap_done);
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state8 );
 
     SC_METHOD(thread_ap_idle);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state8 );
 
     SC_METHOD(thread_ap_return);
-    sensitive << ( grp_fu_28_p2 );
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( grp_fu_20_p2 );
+    sensitive << ( ap_CS_fsm_state8 );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_start );
@@ -66,7 +72,7 @@ div2::div2(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_THREAD(thread_ap_var_for_const0);
 
-    ap_CS_fsm = "01";
+    ap_CS_fsm = "00000001";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "div2_sc_trace_" << apTFileNum ++;
@@ -87,8 +93,8 @@ div2::div2(sc_module_name name) : sc_module(name), mVcdFile(0) {
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, grp_fu_28_p2, "grp_fu_28_p2");
-    sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
+    sc_trace(mVcdFile, grp_fu_20_p2, "grp_fu_20_p2");
+    sc_trace(mVcdFile, ap_CS_fsm_state8, "ap_CS_fsm_state8");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
@@ -128,12 +134,12 @@ void div2::thread_ap_CS_fsm_state1() {
     ap_CS_fsm_state1 = ap_CS_fsm.read()[0];
 }
 
-void div2::thread_ap_CS_fsm_state2() {
-    ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
+void div2::thread_ap_CS_fsm_state8() {
+    ap_CS_fsm_state8 = ap_CS_fsm.read()[7];
 }
 
 void div2::thread_ap_done() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read())) {
         ap_done = ap_const_logic_1;
     } else {
         ap_done = ap_const_logic_0;
@@ -150,7 +156,7 @@ void div2::thread_ap_idle() {
 }
 
 void div2::thread_ap_ready() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read())) {
         ap_ready = ap_const_logic_1;
     } else {
         ap_ready = ap_const_logic_0;
@@ -158,23 +164,41 @@ void div2::thread_ap_ready() {
 }
 
 void div2::thread_ap_return() {
-    ap_return = grp_fu_28_p2.read();
+    ap_return = grp_fu_20_p2.read();
 }
 
 void div2::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 1 : 
-            if ((esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
                 ap_NS_fsm = ap_ST_fsm_state2;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state1;
             }
             break;
         case 2 : 
+            ap_NS_fsm = ap_ST_fsm_state3;
+            break;
+        case 4 : 
+            ap_NS_fsm = ap_ST_fsm_state4;
+            break;
+        case 8 : 
+            ap_NS_fsm = ap_ST_fsm_state5;
+            break;
+        case 16 : 
+            ap_NS_fsm = ap_ST_fsm_state6;
+            break;
+        case 32 : 
+            ap_NS_fsm = ap_ST_fsm_state7;
+            break;
+        case 64 : 
+            ap_NS_fsm = ap_ST_fsm_state8;
+            break;
+        case 128 : 
             ap_NS_fsm = ap_ST_fsm_state1;
             break;
         default : 
-            ap_NS_fsm = "XX";
+            ap_NS_fsm = "XXXXXXXX";
             break;
     }
 }

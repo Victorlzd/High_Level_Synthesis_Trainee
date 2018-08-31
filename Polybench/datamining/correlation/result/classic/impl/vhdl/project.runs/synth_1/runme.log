@@ -1,0 +1,1373 @@
+
+*** Running vivado
+    with args -log kernel_correlation.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_correlation.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source kernel_correlation.tcl -notrace
+Command: synth_design -top kernel_correlation -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20715 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.805 ; gain = 83.895 ; free physical = 927 ; free virtual = 11013
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kernel_correlation' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:48]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:530]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:533]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:536]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:538]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:540]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:542]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:546]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:548]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:550]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:552]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:556]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:558]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:560]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:563]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:567]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:569]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:573]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:581]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:588]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:592]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:600]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:607]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:609]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:613]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:617]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:625]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:631]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:639]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:642]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:644]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:648]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:661]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:665]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:669]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:675]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:678]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:682]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:691]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:695]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:701]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:709]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:715]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:731]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:733]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:735]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:737]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:739]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:741]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:743]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:745]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:747]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:749]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:751]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:753]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:757]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:759]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:761]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:763]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:765]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:769]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:771]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:775]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:777]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:779]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:792]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlatiobkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiobkb.vhd:11' bound to instance 'kernel_correlatiobkb_U1' of component 'kernel_correlatiobkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:905]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlatiobkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiobkb.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlation_ap_dadddsub_12_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dadddsub_12_no_dsp_64/synth/kernel_correlation_ap_dadddsub_12_no_dsp_64.vhd:59' bound to instance 'kernel_correlation_ap_dadddsub_12_no_dsp_64_u' of component 'kernel_correlation_ap_dadddsub_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiobkb.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlation_ap_dadddsub_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dadddsub_12_no_dsp_64/synth/kernel_correlation_ap_dadddsub_12_no_dsp_64.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 1 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 12 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dadddsub_12_no_dsp_64/synth/kernel_correlation_ap_dadddsub_12_no_dsp_64.vhd:209]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlation_ap_dadddsub_12_no_dsp_64' (26#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dadddsub_12_no_dsp_64/synth/kernel_correlation_ap_dadddsub_12_no_dsp_64.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlatiobkb' (27#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiobkb.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 18 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlatiocud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiocud.vhd:11' bound to instance 'kernel_correlatiocud_U2' of component 'kernel_correlatiocud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:921]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlatiocud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiocud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 18 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlation_ap_dmul_16_max_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dmul_16_max_dsp_64/synth/kernel_correlation_ap_dmul_16_max_dsp_64.vhd:59' bound to instance 'kernel_correlation_ap_dmul_16_max_dsp_64_u' of component 'kernel_correlation_ap_dmul_16_max_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiocud.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlation_ap_dmul_16_max_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dmul_16_max_dsp_64/synth/kernel_correlation_ap_dmul_16_max_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 16 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dmul_16_max_dsp_64/synth/kernel_correlation_ap_dmul_16_max_dsp_64.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlation_ap_dmul_16_max_dsp_64' (35#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dmul_16_max_dsp_64/synth/kernel_correlation_ap_dmul_16_max_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlatiocud' (36#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiocud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 59 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlatiodEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiodEe.vhd:11' bound to instance 'kernel_correlatiodEe_U3' of component 'kernel_correlatiodEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:936]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlatiodEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiodEe.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 59 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlation_ap_ddiv_57_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_ddiv_57_no_dsp_64/synth/kernel_correlation_ap_ddiv_57_no_dsp_64.vhd:59' bound to instance 'kernel_correlation_ap_ddiv_57_no_dsp_64_u' of component 'kernel_correlation_ap_ddiv_57_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiodEe.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlation_ap_ddiv_57_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_ddiv_57_no_dsp_64/synth/kernel_correlation_ap_ddiv_57_no_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 1 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 57 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_ddiv_57_no_dsp_64/synth/kernel_correlation_ap_ddiv_57_no_dsp_64.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlation_ap_ddiv_57_no_dsp_64' (41#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_ddiv_57_no_dsp_64/synth/kernel_correlation_ap_ddiv_57_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlatiodEe' (42#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiodEe.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlatioeOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatioeOg.vhd:11' bound to instance 'kernel_correlatioeOg_U4' of component 'kernel_correlatioeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:951]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlatioeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatioeOg.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlation_ap_dcmp_2_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dcmp_2_no_dsp_64/synth/kernel_correlation_ap_dcmp_2_no_dsp_64.vhd:59' bound to instance 'kernel_correlation_ap_dcmp_2_no_dsp_64_u' of component 'kernel_correlation_ap_dcmp_2_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatioeOg.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlation_ap_dcmp_2_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dcmp_2_no_dsp_64/synth/kernel_correlation_ap_dcmp_2_no_dsp_64.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 1 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dcmp_2_no_dsp_64/synth/kernel_correlation_ap_dcmp_2_no_dsp_64.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlation_ap_dcmp_2_no_dsp_64' (45#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dcmp_2_no_dsp_64/synth/kernel_correlation_ap_dcmp_2_no_dsp_64.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlatioeOg' (46#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatioeOg.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 59 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlatiofYi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiofYi.vhd:11' bound to instance 'kernel_correlatiofYi_U5' of component 'kernel_correlatiofYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:967]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlatiofYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiofYi.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 59 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlation_ap_dsqrt_57_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/synth/kernel_correlation_ap_dsqrt_57_no_dsp_64.vhd:59' bound to instance 'kernel_correlation_ap_dsqrt_57_no_dsp_64_u' of component 'kernel_correlation_ap_dsqrt_57_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiofYi.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlation_ap_dsqrt_57_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/synth/kernel_correlation_ap_dsqrt_57_no_dsp_64.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 1 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 57 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/synth/kernel_correlation_ap_dsqrt_57_no_dsp_64.vhd:199]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlation_ap_dsqrt_57_no_dsp_64' (51#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_correlation_ap_dsqrt_57_no_dsp_64/synth/kernel_correlation_ap_dsqrt_57_no_dsp_64.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlatiofYi' (52#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiofYi.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 11 - type: integer 
+	Parameter din1_WIDTH bound to: 21 - type: integer 
+	Parameter din2_WIDTH bound to: 10 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlatiog8j' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:60' bound to instance 'kernel_correlatiog8j_U6' of component 'kernel_correlatiog8j' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:982]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlatiog8j' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:78]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 11 - type: integer 
+	Parameter din1_WIDTH bound to: 21 - type: integer 
+	Parameter din2_WIDTH bound to: 10 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_correlatiog8j_DSP48_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:12' bound to instance 'kernel_correlatiog8j_DSP48_0_U' of component 'kernel_correlatiog8j_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'kernel_correlatiog8j_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlatiog8j_DSP48_0' (53#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlatiog8j' (54#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'kernel_correlation' (55#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:48]
+WARNING: [Synth 8-3331] design kernel_correlatiog8j_DSP48_0 has unconnected port rst
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op__parameterized0 has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op__parameterized0 has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op__parameterized0 has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op__parameterized0 has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op__parameterized0 has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized201 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized201 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized201 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized77 has unconnected port B[26]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized114 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized114 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized114 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized114 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized114 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized199 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized199 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized199 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized2 has unconnected port NORMALIZE[1]
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized2 has unconnected port FIXED_POINT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized2 has unconnected port FIX_MANT_SIGN
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized2 has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized197 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized197 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized197 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized197 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized197 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SINIT
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[10]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[9]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[8]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[7]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[6]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[5]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[4]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[3]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[2]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[1]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_OUT[0]
+WARNING: [Synth 8-3331] design renorm_and_round_logic__parameterized2 has unconnected port EXP_INC_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized185 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized185 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized185 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized446 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized446 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized446 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SINIT
+WARNING: [Synth 8-3331] design special_detect__parameterized0 has unconnected port A[63]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized444 has unconnected port SCLR
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1509.789 ; gain = 299.879 ; free physical = 856 ; free virtual = 10926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.789 ; gain = 299.879 ; free physical = 885 ; free virtual = 10956
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.789 ; gain = 299.879 ; free physical = 885 ; free virtual = 10956
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 10083 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.xdc]
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 43 instances were transformed.
+  FDE => FDRE: 43 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.58 . Memory (MB): peak = 2059.719 ; gain = 10.000 ; free physical = 979 ; free virtual = 11004
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:01:05 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1170 ; free virtual = 11235
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:01:05 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1170 ; free virtual = 11235
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:01:05 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1170 ; free virtual = 11234
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "op_tdata" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3936] Found unconnected internal register 'p_reg_reg' and it is trimmed from '48' to '21' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:48]
+WARNING: [Synth 8-3936] Found unconnected internal register 'm_reg_reg' and it is trimmed from '43' to '21' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:40]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a_reg_reg' and it is trimmed from '25' to '21' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element m_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element m_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_31_reg_1029_reg' and it is trimmed from '21' to '20' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:1317]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_730_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_667_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond8_fu_461_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond7_fu_482_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond6_fu_509_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond5_fu_531_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_fu_610_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_622_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "exitcond1_fu_703_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "notlhs_fu_575_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "notrhs_fu_581_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exitcond_fu_730_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_667_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond8_fu_461_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond7_fu_482_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond6_fu_509_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond5_fu_531_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_fu_610_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_622_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "exitcond1_fu_703_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "notlhs_fu_575_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "notrhs_fu_581_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "grp_fu_398_opcode" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:32 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1262 ; free virtual = 11328
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_DEL' (delay__parameterized8) to 'kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized14) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized14) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_DEL' (delay__parameterized8) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatioeOg_U4/kernel_correlation_ap_dcmp_2_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_DELAY' (delay__parameterized14) to 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/NORMALIZE_DEL' (delay__parameterized8) to 'kernel_correlatiofYi_U5/kernel_correlation_ap_dsqrt_57_no_dsp_64_u/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/NORMALIZE_RND1_DEL'
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |flt_div_mant                                   |           1|     23706|
+|2     |flt_div__GB1                                   |           1|      2292|
+|3     |floating_point_v7_1_6_viv__parameterized3__GC0 |           1|        58|
+|4     |kernel_correlatiodEe__GC0                      |           1|       321|
+|5     |kernel_correlation__GC0                        |           1|     27668|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SQRT_OP.SPD.OP/i_mant_calc.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SQRT_OP.SPD.OP/i_mant_calc.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3936] Found unconnected internal register 'kernel_correlatiog8j_U6/kernel_correlatiog8j_DSP48_0_U/p_reg_reg' and it is trimmed from '21' to '20' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:48]
+WARNING: [Synth 8-3936] Found unconnected internal register 'kernel_correlatiog8j_U6/kernel_correlatiog8j_DSP48_0_U/m_reg_reg' and it is trimmed from '21' to '20' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:40]
+WARNING: [Synth 8-3936] Found unconnected internal register 'kernel_correlatiog8j_U6/kernel_correlatiog8j_DSP48_0_U/a_reg_reg' and it is trimmed from '21' to '20' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_26_reg_994_reg' and it is trimmed from '21' to '20' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlation.vhd:994]
+INFO: [Synth 8-5546] ROM "exitcond8_fu_461_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond7_fu_482_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond6_fu_509_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond5_fu_531_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_622_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_fu_610_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "exitcond1_fu_703_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exitcond2_fu_667_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_730_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs_fu_575_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "notrhs_fu_581_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element kernel_correlatiog8j_U6/kernel_correlatiog8j_DSP48_0_U/m_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element kernel_correlatiog8j_U6/kernel_correlatiog8j_DSP48_0_U/m_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element kernel_correlatiog8j_U6/kernel_correlatiog8j_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element kernel_correlatiog8j_U6/kernel_correlatiog8j_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/kernel_correlatiog8j.vhd:39]
+INFO: [Synth 8-3886] merging instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/MSB_DEL/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OPi_8_1/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OPi_8_1 /\ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OPi_8_1 /\ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OPi_8_1 /\EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_correlatiodEe_U3/kernel_correlation_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OPi_8_1 /\EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/opcode_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/opcode_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/opcode_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/opcode_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[34] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[35] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[38] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[39] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[42] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[43] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[46] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[47] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[50] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[51] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[52] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[54] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[55] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[56] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[57] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[58] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[59] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[60] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatioeOg_U4/din1_buf1_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiobkb_U1/opcode_buf1_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_8_0/next_mul8_reg_948_reg[0]' (FDE) to 'i_8_0/phi_mul7_cast_reg_943_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/next_mul8_reg_948_reg[1]' (FDE) to 'i_8_0/phi_mul7_cast_reg_943_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatiocud_U2/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatiofYi_U5/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatioeOg_U4/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_8_0/\kernel_correlatiobkb_U1/ce_r_reg )
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[0]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[1]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[2]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[3]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[4]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[5]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[6]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[7]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[8]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/tmp_cast_reg_786_reg[9]' (FDE) to 'i_8_0/mean_addr_reg_791_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[55]' (FDE) to 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'i_8_0/kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[54]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiobkb_U1/kernel_correlation_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/FRAC_ADDSUB/LOGIC_ADD.FRAC_ADDSUB/DIST_DEL/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/NORM_SHIFT/MUX_LOOP[0].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/LOGIC.RND2/CARRYS_Q_DEL.NOT_FAST_OP.CARRY_DEL/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/FLAGS_REG.IV_OP_REG/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/FLAGS_REG.NOT_LATE_UPDATE_GEN.UNDERFLOW_reg) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/OP/FLAGS_REG.NOT_LATE_UPDATE_GEN.OVERFLOW_reg) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[17]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[17]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/A_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'i_8_0/kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/B_IN_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8_0/\kernel_correlatiocud_U2/kernel_correlation_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][5] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][3]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][2]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (DSP48_E1.DSP_LOGIC_ADDERS.RND_1/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (DSP48_E1.DSP_LOGIC_ADDERS.RND_1/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[6]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (DSP48_E1.DSP_LOGIC_ADDERS.RND_0/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (DSP48_E1.DSP_LOGIC_ADDERS.RND_0/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[6]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[9]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[6]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[5]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[3]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[2]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[1]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][8]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][7]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][6]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][5]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][4]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][3]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][2]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (RT[0].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[1]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[0].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[2]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[1]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[2].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[2].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[2]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[6]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[6].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[6].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[6]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[8].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[9]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[8].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[10]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[9]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[10].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[11]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[10].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[10]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[12]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[11]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[12].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[13]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[12].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[12]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[13].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[14]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[13].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[13]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[14].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[15]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[14].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[14]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[15].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[16]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[15].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[15]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[16].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[17]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[16].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[16]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[17].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[18]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[17].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[17]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[18].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[19]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[18].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[18]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[20]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[19]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[20].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[21]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[20].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[20]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[21].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[22]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[21].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[21]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[22].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[22].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[22]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Synth 8-3332] Sequential element (RT[23].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]) is unused and will be removed from module flt_sqrt_mant.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:02:08 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1194 ; free virtual = 11278
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |flt_div_mant                                   |           1|     19030|
+|2     |flt_div__GB1                                   |           1|      1615|
+|3     |floating_point_v7_1_6_viv__parameterized3__GC0 |           1|        58|
+|4     |kernel_correlatiodEe__GC0                      |           1|       128|
+|5     |kernel_correlation__GC0                        |           1|     23894|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:49 ; elapsed = 00:02:19 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1054 ; free virtual = 11143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:02:20 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1041 ; free virtual = 11130
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |flt_div_mant                                   |           1|     19030|
+|2     |flt_div__GB1                                   |           1|      1615|
+|3     |floating_point_v7_1_6_viv__parameterized3__GC0 |           1|        58|
+|4     |kernel_correlatiodEe__GC0                      |           1|       128|
+|5     |kernel_correlation__GC0                        |           1|     23894|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:59 ; elapsed = 00:02:28 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1034 ; free virtual = 11122
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:30 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1031 ; free virtual = 11120
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:30 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1031 ; free virtual = 11120
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:04 ; elapsed = 00:02:34 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1023 ; free virtual = 11111
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:02:34 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1023 ; free virtual = 11111
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:05 ; elapsed = 00:02:34 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1020 ; free virtual = 11109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:05 ; elapsed = 00:02:34 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1020 ; free virtual = 11109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    88|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     2|
+|4     |DSP48E1_2 |     2|
+|5     |DSP48E1_3 |     2|
+|6     |DSP48E1_4 |     3|
+|7     |DSP48E1_5 |     1|
+|8     |DSP48E1_7 |     1|
+|9     |LUT1      |   136|
+|10    |LUT2      |   732|
+|11    |LUT3      |  4505|
+|12    |LUT4      |   539|
+|13    |LUT5      |   361|
+|14    |LUT6      |   678|
+|15    |MUXCY     |  5043|
+|16    |MUXF7     |    10|
+|17    |MUXF8     |     5|
+|18    |SRL16E    |   255|
+|19    |SRLC32E   |   142|
+|20    |XORCY     |  4955|
+|21    |FDE       |    42|
+|22    |FDRE      | 13256|
+|23    |FDSE      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:05 ; elapsed = 00:02:34 . Memory (MB): peak = 2059.719 ; gain = 849.809 ; free physical = 1020 ; free virtual = 11109
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 228 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:47 ; elapsed = 00:02:03 . Memory (MB): peak = 2059.719 ; gain = 299.879 ; free physical = 1090 ; free virtual = 11178
+Synthesis Optimization Complete : Time (s): cpu = 00:02:05 ; elapsed = 00:02:35 . Memory (MB): peak = 2059.727 ; gain = 849.809 ; free physical = 1090 ; free virtual = 11178
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10155 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1401 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 1359 instances
+  FDE => FDRE: 42 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+567 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:15 ; elapsed = 00:02:44 . Memory (MB): peak = 2059.727 ; gain = 861.375 ; free physical = 1098 ; free virtual = 11187
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/datamining/correlation/result/classic/impl/vhdl/project.runs/synth_1/kernel_correlation.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2083.730 ; gain = 24.004 ; free physical = 1092 ; free virtual = 11187
+INFO: [runtcl-4] Executing : report_utilization -file kernel_correlation_utilization_synth.rpt -pb kernel_correlation_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2083.730 ; gain = 0.000 ; free physical = 1091 ; free virtual = 11185
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 28 14:48:26 2018...

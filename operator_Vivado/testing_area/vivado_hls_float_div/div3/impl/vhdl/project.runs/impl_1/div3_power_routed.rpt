@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Fri Aug  3 16:51:15 2018
+| Date             : Fri Aug 31 11:57:22 2018
 | Host             : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command          : report_power -file div3_power_routed.rpt -pb div3_power_summary_routed.pb -rpx div3_power_routed.rpx
 | Design           : div3
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.112        |
+| Total On-Chip Power (W)  | 0.230        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.002        |
+| Dynamic (W)              | 0.120        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 2.5          |
-| Max Ambient (C)          | 84.7         |
-| Junction Temperature (C) | 25.3         |
+| Max Ambient (C)          | 84.4         |
+| Junction Temperature (C) | 25.6         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,19 +49,20 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     1184 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      680 |    101400 |            0.67 |
-|   CARRY4       |    <0.001 |      194 |     25350 |            0.77 |
-|   Register     |    <0.001 |       34 |    202800 |            0.02 |
-|   Others       |     0.000 |      255 |       --- |             --- |
-| Signals        |    <0.001 |      872 |       --- |             --- |
-| Static Power   |     0.110 |          |           |                 |
-| Total          |     0.112 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.060 |        3 |       --- |             --- |
+| Slice Logic             |     0.033 |     2077 |       --- |             --- |
+|   LUT as Logic          |     0.023 |      678 |    101400 |            0.67 |
+|   CARRY4                |     0.005 |      194 |     25350 |            0.77 |
+|   Register              |     0.003 |      835 |    202800 |            0.41 |
+|   LUT as Shift Register |    <0.001 |       35 |     35000 |            0.10 |
+|   Others                |     0.000 |      335 |       --- |             --- |
+| Signals                 |     0.027 |      991 |       --- |             --- |
+| Static Power            |     0.110 |          |           |                 |
+| Total                   |     0.230 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -70,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.043 |       0.002 |      0.040 |
+| Vccint    |       1.000 |     0.160 |       0.120 |      0.041 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -127,7 +128,7 @@ Table of Contents
 +--------+--------+-----------------+
 | Clock  | Domain | Constraint (ns) |
 +--------+--------+-----------------+
-| ap_clk | ap_clk |            60.0 |
+| ap_clk | ap_clk |             2.5 |
 +--------+--------+-----------------+
 
 
@@ -140,70 +141,218 @@ Table of Contents
 +-----------------------------------------------------+-----------+
 | Name                                                | Power (W) |
 +-----------------------------------------------------+-----------+
-| div3                                                |     0.002 |
-|   div3_fdiv_32ns_32bkb_U1                           |     0.002 |
-|     div3_ap_fdiv_0_no_dsp_32_u                      |     0.002 |
-|       U0                                            |     0.002 |
-|         i_synth                                     |     0.002 |
-|           DIV_OP.SPD.OP                             |     0.002 |
-|             EXP                                     |    <0.001 |
-|             MANT_DIV                                |     0.002 |
-|               RT[0].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[10].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[11].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[12].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[13].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[14].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[15].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[16].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[17].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[18].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[19].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[1].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[20].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[21].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[22].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[23].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[24].ADDSUB                         |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
+| div3                                                |     0.120 |
+|   div3_fdiv_32ns_32bkb_U1                           |     0.118 |
+|     div3_ap_fdiv_28_no_dsp_32_u                     |     0.115 |
+|       U0                                            |     0.115 |
+|         i_synth                                     |     0.115 |
+|           DIV_OP.SPD.OP                             |     0.115 |
+|             EXP                                     |     0.006 |
+|               COND_DET_A                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ONE_DEL         |    <0.001 |
+|                   i_pipe                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL        |    <0.001 |
+|                   i_pipe                            |    <0.001 |
+|                 MANT_LUTS.CHUNK_IS_ZERO_DEL         |    <0.001 |
+|                   i_pipe                            |    <0.001 |
+|               EXP_PRE_RND_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               EXP_SIG_DEL                           |     0.002 |
+|                 i_pipe                              |     0.002 |
+|               FLOW_DEC_DEL                          |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               FLOW_UP_DEL                           |     0.000 |
+|                 i_pipe                              |     0.000 |
+|               IP_SIGN_DELAY                         |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               PROD_DELAY                            |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               SIGN_UP_DELAY                         |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               SIG_DELAY                             |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               STATE_DEC_DELAY                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               STATE_DELAY                           |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               STATE_UP_DELAY                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|             MANT_DIV                                |     0.103 |
+|               RT[0].ADDSUB                          |     0.002 |
+|                 ADDSUB                              |     0.002 |
+|                   Q_DEL                             |     0.002 |
+|                     i_pipe                          |     0.002 |
+|               RT[0].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[10].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[10].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[11].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[11].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[12].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[12].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[13].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[13].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[14].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[14].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[15].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[15].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[16].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[16].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[17].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[17].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[18].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[18].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[19].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[19].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[1].ADDSUB                          |     0.003 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[1].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[1].Q_DEL                           |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[20].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[20].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[21].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[21].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[22].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[22].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[23].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[23].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[24].ADDSUB                         |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[24].MANT_DEL                       |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[24].Q_DEL                          |     0.002 |
+|                 i_pipe                              |     0.002 |
 |               RT[25].ADDSUB                         |    <0.001 |
 |                 ADDSUB                              |    <0.001 |
-|               RT[2].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[3].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[4].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[5].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[6].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[7].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[8].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|               RT[9].ADDSUB                          |    <0.001 |
-|                 ADDSUB                              |    <0.001 |
-|             ROUND                                   |    <0.001 |
+|                   Q_DEL                             |    <0.001 |
+|                     i_pipe                          |    <0.001 |
+|               RT[25].Q_DEL                          |     0.003 |
+|                 i_pipe                              |     0.003 |
+|               RT[2].ADDSUB                          |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[2].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[2].Q_DEL                           |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[3].ADDSUB                          |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[3].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[4].ADDSUB                          |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[4].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[5].ADDSUB                          |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[5].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[6].ADDSUB                          |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[6].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[7].ADDSUB                          |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[7].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[8].ADDSUB                          |     0.005 |
+|                 ADDSUB                              |     0.004 |
+|                   Q_DEL                             |     0.004 |
+|                     i_pipe                          |     0.004 |
+|               RT[8].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               RT[9].ADDSUB                          |     0.004 |
+|                 ADDSUB                              |     0.003 |
+|                   Q_DEL                             |     0.003 |
+|                     i_pipe                          |     0.003 |
+|               RT[9].MANT_DEL                        |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|             OP                                      |     0.002 |
+|             ROUND                                   |     0.005 |
 |               EXP_ADD.ADD                           |    <0.001 |
-|               LOGIC.RND1                            |    <0.001 |
-|               LOGIC.RND2                            |    <0.001 |
+|               EXP_IN_DELAY.EXP_IN_DEL               |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               EXP_IN_DELAY.EXP_OFF_OP_DEL           |    <0.001 |
+|                 i_pipe                              |    <0.001 |
+|               LOGIC.RND1                            |     0.001 |
+|                 Q_DEL                               |     0.001 |
+|                   i_pipe                            |     0.001 |
+|               LOGIC.RND2                            |     0.001 |
+|                 Q_DEL                               |     0.001 |
+|                   i_pipe                            |     0.001 |
 |               RND_BIT_GEN                           |    <0.001 |
 |                 NORM_1_OR_0.STRUCT_REQ.GENERAL.RND1 |    <0.001 |
 +-----------------------------------------------------+-----------+

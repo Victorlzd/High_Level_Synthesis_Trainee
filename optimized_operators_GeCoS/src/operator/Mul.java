@@ -175,15 +175,15 @@ public class Mul {
 			CompositeBlock subnorm_compute = GecosUserBlockFactory.CompositeBlock();
 			
 			Instruction xf_times_mul;
-			if(arbitrary_sized_int_mul_by_constant(ps,mul,size_xf) != null) 
-			{
-				xf_times_mul = GecosUserInstructionFactory.call(arbitrary_sized_int_mul_by_constant(ps,mul,size_xf), GecosUserInstructionFactory.symbref(xf_symbol));
-			}
-			else
-			{
+			//if(arbitrary_sized_int_mul_by_constant(ps,mul,size_xf) != null) 
+			//{
+			//	xf_times_mul = GecosUserInstructionFactory.call(arbitrary_sized_int_mul_by_constant(ps,mul,size_xf), GecosUserInstructionFactory.symbref(xf_symbol));
+			//}
+			//else
+			//{
 				xf_times_mul = GecosUserInstructionFactory.set(xf_symbol, GecosUserInstructionFactory.mul(
 						GecosUserInstructionFactory.symbref(mant_symbol), GecosUserInstructionFactory.Int(mul)));
-			}
+			//}
 			Instruction xf_set_xf_times_mul = GecosUserInstructionFactory.set(xf_symbol, xf_times_mul);
 			BasicBlock subnorm_bb = GecosUserBlockFactory.BBlock(xf_set_xf_times_mul);
 			

@@ -1,0 +1,1124 @@
+
+*** Running vivado
+    with args -log kernel_fdtd_2d_optimized.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_fdtd_2d_optimized.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source kernel_fdtd_2d_optimized.tcl -notrace
+Command: synth_design -top kernel_fdtd_2d_optimized -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26427 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.809 ; gain = 82.895 ; free physical = 2186 ; free virtual = 9551
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_optimized' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:50]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:343]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:346]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:349]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:351]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:353]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:358]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:360]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:362]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:364]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:366]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:368]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:370]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:372]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:375]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:378]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:380]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:384]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:390]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:393]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:395]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:399]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:402]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:406]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:412]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:414]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:419]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:424]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:427]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:437]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:441]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:450]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:454]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:460]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:465]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:472]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:475]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:485]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:489]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:498]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:502]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:506]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:510]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:514]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:518]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:520]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:527]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:530]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:532]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:540]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:545]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:550]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:557]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:567]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:569]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:571]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:573]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:575]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:577]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:579]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:581]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:583]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:585]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:587]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:589]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:591]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:593]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:595]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:597]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:599]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:601]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:603]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:605]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:607]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:611]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:613]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:615]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:617]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:619]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:621]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:623]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opbkb.vhd:11' bound to instance 'kernel_fdtd_2d_opbkb_U1' of component 'kernel_fdtd_2d_opbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:768]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_opbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opbkb.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd:59' bound to instance 'kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u' of component 'kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opbkb.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 1 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 12 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd:209]
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64' (26#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_opbkb' (27#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opbkb.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 18 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opcud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opcud.vhd:11' bound to instance 'kernel_fdtd_2d_opcud_U2' of component 'kernel_fdtd_2d_opcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:784]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_opcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opcud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 18 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd:59' bound to instance 'kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u' of component 'kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opcud.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 16 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64' (35#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64/synth/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_opcud' (36#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opcud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opdEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opdEe.vhd:13' bound to instance 'kernel_fdtd_2d_opdEe_U3' of component 'kernel_fdtd_2d_opdEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:799]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_opdEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opdEe.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_opdEe' (37#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opdEe.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opeOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opeOg.vhd:13' bound to instance 'kernel_fdtd_2d_opeOg_U4' of component 'kernel_fdtd_2d_opeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:815]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_opeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opeOg.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_opeOg' (38#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opeOg.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opdEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opdEe.vhd:13' bound to instance 'kernel_fdtd_2d_opdEe_U5' of component 'kernel_fdtd_2d_opdEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:831]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opeOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opeOg.vhd:13' bound to instance 'kernel_fdtd_2d_opeOg_U6' of component 'kernel_fdtd_2d_opeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:847]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opfYi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:52' bound to instance 'kernel_fdtd_2d_opfYi_U7' of component 'kernel_fdtd_2d_opfYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:863]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_opfYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:68]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opfYi_DSP48_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:6' bound to instance 'kernel_fdtd_2d_opfYi_DSP48_0_U' of component 'kernel_fdtd_2d_opfYi_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'kernel_fdtd_2d_opfYi_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_opfYi_DSP48_0' (39#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_opfYi' (40#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:68]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opfYi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:52' bound to instance 'kernel_fdtd_2d_opfYi_U8' of component 'kernel_fdtd_2d_opfYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:878]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_fdtd_2d_opfYi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:52' bound to instance 'kernel_fdtd_2d_opfYi_U9' of component 'kernel_fdtd_2d_opfYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:893]
+INFO: [Synth 8-256] done synthesizing module 'kernel_fdtd_2d_optimized' (41#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:50]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opfYi_DSP48_0 has unconnected port rst
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[53]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[52]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[51]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[50]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[49]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[48]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[47]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[46]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[45]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[44]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[43]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[42]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[41]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[40]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[39]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[38]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[37]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[36]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[35]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[34]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[33]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[32]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[31]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[30]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[29]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[28]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[27]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[26]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[25]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[24]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[23]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[22]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[21]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[20]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[19]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[18]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[17]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[16]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[15]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[14]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[13]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[12]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[11]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[10]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[9]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[8]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[7]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[6]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[5]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[4]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[3]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opeOg has unconnected port din1[2]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[51]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[50]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[49]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[48]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[47]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[46]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[45]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[44]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[43]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[42]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[41]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[40]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[39]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[38]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[37]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[36]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[35]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[34]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[33]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[32]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[31]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[30]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[29]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[28]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[27]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[26]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[25]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[24]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[23]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[22]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[21]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[20]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[19]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[18]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[17]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[16]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[15]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[14]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[13]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[12]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[11]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[10]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[9]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[8]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[7]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[6]
+WARNING: [Synth 8-3331] design kernel_fdtd_2d_opdEe has unconnected port din1[5]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1419.105 ; gain = 209.191 ; free physical = 2158 ; free virtual = 9518
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1419.105 ; gain = 209.191 ; free physical = 2167 ; free virtual = 9527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1419.105 ; gain = 209.191 ; free physical = 2167 ; free virtual = 9527
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 525 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.xdc]
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 36 instances were transformed.
+  FDE => FDRE: 36 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1758.605 ; gain = 1.000 ; free physical = 1817 ; free virtual = 9182
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 1758.605 ; gain = 548.691 ; free physical = 1952 ; free virtual = 9322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 1758.605 ; gain = 548.691 ; free physical = 1952 ; free virtual = 9322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 1758.605 ; gain = 548.691 ; free physical = 1954 ; free virtual = 9324
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:37]
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_V_1_reg_1087_reg' and it is trimmed from '54' to '52' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:1179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_V_3_reg_1208_reg' and it is trimmed from '54' to '52' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:1189]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond7_fu_361_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond6_fu_378_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond5_fu_395_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_628_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_640_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_859_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_874_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_497_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i_fu_481_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i_9_fu_577_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i1_fu_808_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond7_fu_361_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond6_fu_378_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond5_fu_395_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_628_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_640_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_859_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_874_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_497_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i_fu_481_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i_9_fu_577_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i1_fu_808_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "grp_fu_322_opcode" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:52 . Memory (MB): peak = 1758.605 ; gain = 548.691 ; free physical = 1875 ; free virtual = 9248
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_DEL' (delay__parameterized8) to 'kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'kernel_fdtd_2d_opfYi_U8/kernel_fdtd_2d_opfYi_DSP48_0_U/b_reg_reg[10:0]' into 'kernel_fdtd_2d_opfYi_U7/kernel_fdtd_2d_opfYi_DSP48_0_U/b_reg_reg[10:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:37]
+INFO: [Synth 8-4471] merging register 'kernel_fdtd_2d_opfYi_U9/kernel_fdtd_2d_opfYi_DSP48_0_U/b_reg_reg[10:0]' into 'kernel_fdtd_2d_opfYi_U7/kernel_fdtd_2d_opfYi_DSP48_0_U/b_reg_reg[10:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U8/kernel_fdtd_2d_opfYi_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U9/kernel_fdtd_2d_opfYi_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:37]
+INFO: [Synth 8-5546] ROM "exitcond4_fu_414_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond5_fu_395_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_640_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_628_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_874_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_859_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond6_fu_378_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i1_fu_808_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i_fu_481_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_i_9_fu_577_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_497_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U7/kernel_fdtd_2d_opfYi_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U9/kernel_fdtd_2d_opfYi_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U8/kernel_fdtd_2d_opfYi_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U7/kernel_fdtd_2d_opfYi_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U9/kernel_fdtd_2d_opfYi_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U7/kernel_fdtd_2d_opfYi_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_fdtd_2d_opfYi_U8/kernel_fdtd_2d_opfYi_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_opfYi.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element tmp_2_reg_974_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/kernel_fdtd_2d_optimized.vhd:1280]
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][0]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][0]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][1]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][1]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][2]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][2]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][3]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][3]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][4]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][4]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][5]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][5]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][6]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][6]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][7]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][7]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][8]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][8]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][9]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][9]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][10]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][10]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][11]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][11]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][12]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][12]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][13]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][13]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][14]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][14]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][15]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][15]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][16]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][16]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][17]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][17]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][18]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][18]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][19]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][19]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][20]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][20]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][21]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][21]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][22]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][22]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][23]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][23]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][24]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][24]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][25]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][25]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][25]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][25]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][26]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][26]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][26]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][26]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][27]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][27]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][27]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][27]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][28]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][28]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][29]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][29]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][29]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][29]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][30]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][30]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][31]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][31]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][32]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][32]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][32]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][32]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][33]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][33]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][33]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][33]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][34]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][34]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][34]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][34]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][35]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][35]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][35]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][35]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][36]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][36]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][36]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][36]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][37]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][37]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][37]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][37]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][38]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][38]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][38]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][38]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][39]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][39]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][39]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][39]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][40]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][40]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][40]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][40]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][41]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][41]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][41]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][41]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][42]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][42]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][42]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][42]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][43]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][43]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][43]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][43]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][44]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][44]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][44]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][44]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][45]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][45]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][45]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][45]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][46]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][46]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][46]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][46]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][47]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][47]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][47]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][47]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][48]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][48]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][48]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][48]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U3/dout_array_reg[0][49]' (FDRE) to 'kernel_fdtd_2d_opeOg_U4/dout_array_reg[0][49]'
+INFO: [Synth 8-3886] merging instance 'kernel_fdtd_2d_opdEe_U5/dout_array_reg[0][49]' (FDRE) to 'kernel_fdtd_2d_opeOg_U6/dout_array_reg[0][49]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[32] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[33] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[37] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[40] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[41] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[44] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[45] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[48] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[52] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[53] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[54] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[55] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[56] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[57] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[58] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[59] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[60] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/din1_buf1_reg[63] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opcud_U2/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opbkb_U1/opcode_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_fdtd_2d_opbkb_U1/ce_r_reg )
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/ce_r_reg) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[63]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[62]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[61]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[60]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[59]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[58]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[57]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[56]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[55]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[54]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[53]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[52]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[51]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[50]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[49]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[48]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[47]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[46]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[45]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[44]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[43]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[42]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[41]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[40]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[39]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[38]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[37]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[36]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[35]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[34]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[33]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[32]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[31]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[30]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[29]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[28]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[27]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[26]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[25]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[24]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[23]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[22]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[21]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[20]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[19]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[18]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[17]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[16]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[15]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[14]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[13]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[12]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[11]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[10]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[9]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[8]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[7]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[6]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[5]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[4]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[3]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[2]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[1]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/dout_r_reg[0]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opbkb_U1/opcode_buf1_reg[1]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/ce_r_reg) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[63]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[62]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[61]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[60]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[59]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[58]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[57]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[56]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[55]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[54]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[53]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[52]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[51]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[50]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[49]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[48]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[47]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[46]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[45]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[44]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[43]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[42]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[41]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[40]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[39]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[38]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[37]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[36]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[35]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[34]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[33]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[32]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_fdtd_2d_opcud_U2/dout_r_reg[31]) is unused and will be removed from module kernel_fdtd_2d_optimized.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opbkb_U1/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.first_q_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_fdtd_2d_opcud_U2/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64_u /U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][9] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:01 . Memory (MB): peak = 1758.605 ; gain = 548.691 ; free physical = 1832 ; free virtual = 9220
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:11 . Memory (MB): peak = 1758.605 ; gain = 548.691 ; free physical = 1747 ; free virtual = 9122
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:13 . Memory (MB): peak = 1774.621 ; gain = 564.707 ; free physical = 1734 ; free virtual = 9108
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:15 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1727 ; free virtual = 9107
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1721 ; free virtual = 9103
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1721 ; free virtual = 9103
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1718 ; free virtual = 9100
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1718 ; free virtual = 9100
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1718 ; free virtual = 9100
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1718 ; free virtual = 9100
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    58|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     2|
+|4     |DSP48E1_2 |     2|
+|5     |DSP48E1_3 |     2|
+|6     |DSP48E1_4 |     3|
+|7     |DSP48E1_5 |     1|
+|8     |DSP48E1_6 |     1|
+|9     |DSP48E1_7 |     2|
+|10    |LUT1      |    32|
+|11    |LUT2      |   348|
+|12    |LUT3      |   623|
+|13    |LUT4      |   308|
+|14    |LUT5      |   402|
+|15    |LUT6      |   623|
+|16    |MUXCY     |   282|
+|17    |MUXF7     |    10|
+|18    |MUXF8     |     5|
+|19    |SRL16E    |   318|
+|20    |XORCY     |   167|
+|21    |FDE       |    36|
+|22    |FDRE      |  3825|
+|23    |FDSE      |    25|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 1782.629 ; gain = 572.715 ; free physical = 1718 ; free virtual = 9100
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 641 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1782.629 ; gain = 233.215 ; free physical = 1794 ; free virtual = 9174
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 1782.637 ; gain = 572.715 ; free physical = 1794 ; free virtual = 9174
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 572 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 126 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 90 instances
+  FDE => FDRE: 36 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+431 Infos, 218 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:20 . Memory (MB): peak = 1782.637 ; gain = 584.281 ; free physical = 1819 ; free virtual = 9199
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/kernel_fdtd_2d_optimized.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file kernel_fdtd_2d_optimized_utilization_synth.rpt -pb kernel_fdtd_2d_optimized_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1806.641 ; gain = 0.000 ; free physical = 1817 ; free virtual = 9201
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 22:19:36 2018...

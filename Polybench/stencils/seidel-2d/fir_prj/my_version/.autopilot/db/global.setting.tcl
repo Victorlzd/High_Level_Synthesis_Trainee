@@ -1,6 +1,6 @@
 
-set TopModule "kernel_seidel_2d_my_version"
-set ClockPeriod "10.000000"
+set TopModule "kernel_seidel_2d_optimized"
+set ClockPeriod "2.500000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}

@@ -80,7 +80,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1055844141", "EstimateLatencyMax" : "1055844141",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2589830021", "EstimateLatencyMax" : "2589830021",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -104,14 +104,14 @@ set ArgLastReadFirstWriteLatency {
 	kernel_jacobi_2d_imper {
 		tsteps {Type I LastRead -1 FirstWrite -1}
 		n {Type I LastRead -1 FirstWrite -1}
-		A {Type IO LastRead 18 FirstWrite 7}
-		B {Type IO LastRead 4 FirstWrite 49}}}
+		A {Type IO LastRead 51 FirstWrite 71}
+		B {Type IO LastRead 8 FirstWrite 69}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1055844141", "Max" : "1055844141"}
-	, {"Name" : "Interval", "Min" : "1055844142", "Max" : "1055844142"}
+	{"Name" : "Latency", "Min" : "2589830021", "Max" : "2589830021"}
+	, {"Name" : "Interval", "Min" : "-1705137274", "Max" : "-1705137274"}
 ]}
 
 set PipelineEnableSignalInfo {[

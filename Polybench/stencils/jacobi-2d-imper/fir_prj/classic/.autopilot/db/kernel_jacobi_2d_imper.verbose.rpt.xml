@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'kernel_jacobi_2d_imper'" level="0">
-<item name = "Date">Wed Aug 22 14:39:59 2018
+<item name = "Date">Fri Aug 31 21:41:41 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">fir_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.288, 1.25</column>
+<column name="ap_clk">2.50, 3.171, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1055844141, 1055844141, 1055844141, 1055844141, none</column>
+<column name="">2589830021, 2589830021, 2589830021, 2589830021, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,11 +35,11 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">1055844140, 1055844140, 52792207, -, -, 20, no</column>
-<column name=" + Loop 1.1">47810188, 47810188, 47906, -, -, 998, no</column>
-<column name="  ++ Loop 1.1.1">47904, 47904, 48, -, -, 998, no</column>
-<column name=" + Loop 1.2">4982016, 4982016, 4992, -, -, 998, no</column>
-<column name="  ++ Loop 1.2.1">4990, 4990, 5, -, -, 998, no</column>
+<column name="- Loop 1">2589830020, 2589830020, 129491501, -, -, 20, no</column>
+<column name=" + Loop 1.1">63750244, 63750244, 63878, -, -, 998, no</column>
+<column name="  ++ Loop 1.1.1">63872, 63872, 64, -, -, 998, no</column>
+<column name=" + Loop 1.2">65741254, 65741254, 65873, -, -, 998, no</column>
+<column name="  ++ Loop 1.2.1">65868, 65868, 66, -, -, 998, no</column>
 </table>
 </item>
 </section>
@@ -54,20 +54,20 @@
 <column name="DSP">-, 4, -, -</column>
 <column name="Expression">-, -, 0, 342</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, 3, 2693, 4023</column>
+<column name="Instance">-, 0, 7385, 4345</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 390</column>
-<column name="Register">-, -, 573, -</column>
+<column name="Multiplexer">-, -, -, 774</column>
+<column name="Register">-, -, 801, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
-<specialColumn name="Utilization (%)">0, 1, 1, 4</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, 4, 5</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="kernel_jacobi_2d_bkb_U1">kernel_jacobi_2d_bkb, 0, 3, 445, 781</column>
-<column name="kernel_jacobi_2d_cud_U2">kernel_jacobi_2d_cud, 0, 0, 2248, 3242</column>
+<column name="kernel_jacobi_2d_bkb_U1">kernel_jacobi_2d_bkb, 0, 0, 1225, 821</column>
+<column name="kernel_jacobi_2d_cud_U2">kernel_jacobi_2d_cud, 0, 0, 6160, 3524</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -88,24 +88,24 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_2_fu_217_p2">+, 0, 0, 17, 10, 1</column>
-<column name="i_3_fu_350_p2">+, 0, 0, 17, 10, 1</column>
-<column name="j_2_fu_287_p2">+, 0, 0, 17, 10, 1</column>
-<column name="j_3_fu_344_p2">+, 0, 0, 17, 10, 1</column>
-<column name="t_1_fu_201_p2">+, 0, 0, 15, 5, 1</column>
-<column name="tmp_13_fu_262_p2">+, 0, 0, 27, 20, 20</column>
-<column name="tmp_14_fu_277_p2">+, 0, 0, 27, 20, 20</column>
-<column name="tmp_15_fu_297_p2">+, 0, 0, 27, 20, 20</column>
-<column name="tmp_16_fu_334_p2">+, 0, 0, 27, 20, 20</column>
-<column name="tmp_3_fu_227_p2">+, 0, 0, 17, 10, 2</column>
-<column name="tmp_7_fu_247_p2">+, 0, 0, 27, 20, 20</column>
-<column name="tmp_8_fu_267_p2">+, 0, 0, 17, 10, 2</column>
+<column name="i_2_fu_214_p2">+, 0, 0, 17, 10, 1</column>
+<column name="i_3_fu_340_p2">+, 0, 0, 17, 10, 1</column>
+<column name="j_2_fu_275_p2">+, 0, 0, 17, 10, 1</column>
+<column name="j_3_fu_334_p2">+, 0, 0, 17, 10, 1</column>
+<column name="t_1_fu_202_p2">+, 0, 0, 15, 5, 1</column>
+<column name="tmp_12_fu_262_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_14_fu_270_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_15_fu_292_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_16_fu_329_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_3_fu_220_p2">+, 0, 0, 17, 10, 2</column>
+<column name="tmp_7_fu_252_p2">+, 0, 0, 27, 20, 20</column>
+<column name="tmp_8_fu_242_p2">+, 0, 0, 17, 10, 2</column>
 <column name="tmp_9_fu_257_p2">+, 0, 0, 27, 20, 20</column>
-<column name="exitcond1_fu_314_p2">icmp, 0, 0, 13, 10, 6</column>
-<column name="exitcond2_fu_237_p2">icmp, 0, 0, 13, 10, 6</column>
-<column name="exitcond3_fu_207_p2">icmp, 0, 0, 13, 10, 6</column>
-<column name="exitcond4_fu_195_p2">icmp, 0, 0, 11, 5, 5</column>
-<column name="exitcond_fu_324_p2">icmp, 0, 0, 13, 10, 6</column>
+<column name="exitcond1_fu_309_p2">icmp, 0, 0, 13, 10, 6</column>
+<column name="exitcond2_fu_236_p2">icmp, 0, 0, 13, 10, 6</column>
+<column name="exitcond3_fu_208_p2">icmp, 0, 0, 13, 10, 6</column>
+<column name="exitcond4_fu_196_p2">icmp, 0, 0, 11, 5, 5</column>
+<column name="exitcond_fu_319_p2">icmp, 0, 0, 13, 10, 6</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -113,42 +113,48 @@
 <column name="A_address0">21, 4, 20, 80</column>
 <column name="A_address1">21, 4, 20, 80</column>
 <column name="B_address0">15, 3, 20, 60</column>
-<column name="ap_NS_fsm">249, 58, 1, 58</column>
-<column name="grp_fu_173_p0">15, 3, 64, 192</column>
-<column name="grp_fu_173_p1">15, 3, 64, 192</column>
-<column name="i_1_reg_150">9, 2, 10, 20</column>
-<column name="i_reg_128">9, 2, 10, 20</column>
-<column name="j_1_reg_162">9, 2, 10, 20</column>
+<column name="ap_NS_fsm">633, 142, 1, 142</column>
+<column name="grp_fu_174_p0">15, 3, 64, 192</column>
+<column name="grp_fu_174_p1">15, 3, 64, 192</column>
+<column name="i_1_reg_151">9, 2, 10, 20</column>
+<column name="i_reg_127">9, 2, 10, 20</column>
+<column name="j_1_reg_163">9, 2, 10, 20</column>
 <column name="j_reg_139">9, 2, 10, 20</column>
-<column name="reg_182">9, 2, 64, 128</column>
-<column name="t_reg_117">9, 2, 5, 10</column>
+<column name="reg_183">9, 2, 64, 128</column>
+<column name="t_reg_116">9, 2, 5, 10</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="A_load_1_reg_451">64, 0, 64, 0</column>
-<column name="ap_CS_fsm">57, 0, 57, 0</column>
-<column name="i_1_reg_150">10, 0, 10, 0</column>
-<column name="i_2_reg_398">10, 0, 10, 0</column>
-<column name="i_reg_128">10, 0, 10, 0</column>
-<column name="j_1_reg_162">10, 0, 10, 0</column>
-<column name="j_2_reg_441">10, 0, 10, 0</column>
-<column name="j_3_reg_502">10, 0, 10, 0</column>
+<column name="A_load_1_reg_482">64, 0, 64, 0</column>
+<column name="B_load_reg_548">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">141, 0, 141, 0</column>
+<column name="i_1_reg_151">10, 0, 10, 0</column>
+<column name="i_2_reg_385">10, 0, 10, 0</column>
+<column name="i_reg_127">10, 0, 10, 0</column>
+<column name="j_1_reg_163">10, 0, 10, 0</column>
+<column name="j_2_reg_456">10, 0, 10, 0</column>
+<column name="j_3_reg_528">10, 0, 10, 0</column>
 <column name="j_reg_139">10, 0, 10, 0</column>
-<column name="reg_182">64, 0, 64, 0</column>
-<column name="reg_189">64, 0, 64, 0</column>
-<column name="t_1_reg_383">5, 0, 5, 0</column>
-<column name="t_reg_117">5, 0, 5, 0</column>
-<column name="tmp_12_reg_471">64, 0, 64, 0</column>
-<column name="tmp_13_reg_431">20, 0, 20, 0</column>
-<column name="tmp_15_reg_446">20, 0, 20, 0</column>
-<column name="tmp_18_cast_reg_416">20, 0, 64, 44</column>
-<column name="tmp_1_reg_391">20, 0, 20, 0</column>
-<column name="tmp_23_cast_reg_492">20, 0, 64, 44</column>
-<column name="tmp_2_reg_403">20, 0, 20, 0</column>
-<column name="tmp_4_reg_408">20, 0, 20, 0</column>
-<column name="tmp_6_reg_484">20, 0, 20, 0</column>
-<column name="tmp_9_reg_426">20, 0, 20, 0</column>
+<column name="reg_183">64, 0, 64, 0</column>
+<column name="reg_190">64, 0, 64, 0</column>
+<column name="t_1_reg_377">5, 0, 5, 0</column>
+<column name="t_reg_116">5, 0, 5, 0</column>
+<column name="tmp_12_reg_446">20, 0, 20, 0</column>
+<column name="tmp_13_reg_553">64, 0, 64, 0</column>
+<column name="tmp_14_reg_451">20, 0, 20, 0</column>
+<column name="tmp_15_reg_477">20, 0, 20, 0</column>
+<column name="tmp_16_reg_523">20, 0, 20, 0</column>
+<column name="tmp_18_cast_reg_462">20, 0, 64, 44</column>
+<column name="tmp_1_reg_411">20, 0, 20, 0</column>
+<column name="tmp_23_cast_reg_538">20, 0, 64, 44</column>
+<column name="tmp_2_reg_418">20, 0, 20, 0</column>
+<column name="tmp_3_reg_391">10, 0, 10, 0</column>
+<column name="tmp_4_reg_423">20, 0, 20, 0</column>
+<column name="tmp_6_reg_515">20, 0, 20, 0</column>
+<column name="tmp_7_reg_436">20, 0, 20, 0</column>
+<column name="tmp_8_reg_431">10, 0, 10, 0</column>
+<column name="tmp_9_reg_441">20, 0, 20, 0</column>
 </table>
 </item>
 </section>

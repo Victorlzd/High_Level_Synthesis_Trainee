@@ -26,7 +26,7 @@ SC_MODULE(kernel_fdtd_2d_dmcud) {
 
 
 
-    ACMP_dmul<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_dmul_U;
+    ACMP_dmul<ID, 18, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_dmul_U;
 
     SC_CTOR(kernel_fdtd_2d_dmcud):  ACMP_dmul_U ("ACMP_dmul_U") {
         ACMP_dmul_U.clk(clk);

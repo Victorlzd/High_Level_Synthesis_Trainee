@@ -1,0 +1,701 @@
+
+*** Running vivado
+    with args -log int_32_mul3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source int_32_mul3.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source int_32_mul3.tcl -notrace
+Command: synth_design -top int_32_mul3 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16117 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.355 ; gain = 80.895 ; free physical = 327 ; free virtual = 11827
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'int_32_mul3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:53]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:56]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:97]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_80' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:35]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:65]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mebkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:78' bound to instance 'mem_0_U' of component 'lut_mul3_chunk_mebkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:185]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mebkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:91]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mebkb_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:12' bound to instance 'lut_mul3_chunk_mebkb_rom_U' of component 'lut_mul3_chunk_mebkb_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mebkb_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mebkb_rom' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mebkb' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mebkb.vhd:91]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mecud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:73' bound to instance 'mem_1_U' of component 'lut_mul3_chunk_mecud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mecud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mecud_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:12' bound to instance 'lut_mul3_chunk_mecud_rom_U' of component 'lut_mul3_chunk_mecud_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mecud_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mecud_rom' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mecud' (4#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mecud.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_medEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:75' bound to instance 'mem_2_U' of component 'lut_mul3_chunk_medEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_medEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_medEe_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:12' bound to instance 'lut_mul3_chunk_medEe_rom_U' of component 'lut_mul3_chunk_medEe_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_medEe_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_medEe_rom' (5#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_medEe' (6#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_medEe.vhd:88]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meeOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:72' bound to instance 'mem_3_U' of component 'lut_mul3_chunk_meeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meeOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meeOg_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:12' bound to instance 'lut_mul3_chunk_meeOg_rom_U' of component 'lut_mul3_chunk_meeOg_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meeOg_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meeOg_rom' (7#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meeOg' (8#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meeOg.vhd:85]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mefYi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:70' bound to instance 'mem_4_U' of component 'lut_mul3_chunk_mefYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:233]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mefYi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mefYi_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:12' bound to instance 'lut_mul3_chunk_mefYi_rom_U' of component 'lut_mul3_chunk_mefYi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mefYi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mefYi_rom' (9#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mefYi' (10#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mefYi.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meg8j' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:69' bound to instance 'mem_5_U' of component 'lut_mul3_chunk_meg8j' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meg8j' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meg8j_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:12' bound to instance 'lut_mul3_chunk_meg8j_rom_U' of component 'lut_mul3_chunk_meg8j_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meg8j_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meg8j_rom' (11#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meg8j' (12#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meg8j.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mehbi' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:69' bound to instance 'mem_6_U' of component 'lut_mul3_chunk_mehbi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mehbi' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_mehbi_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:12' bound to instance 'lut_mul3_chunk_mehbi_rom_U' of component 'lut_mul3_chunk_mehbi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_mehbi_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mehbi_rom' (13#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_mehbi' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_mehbi.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meibs' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:69' bound to instance 'mem_7_U' of component 'lut_mul3_chunk_meibs' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:269]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meibs' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_mul3_chunk_meibs_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:12' bound to instance 'lut_mul3_chunk_meibs_rom_U' of component 'lut_mul3_chunk_meibs_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_mul3_chunk_meibs_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meibs_rom' (15#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk_meibs' (16#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk_meibs.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'lut_mul3_chunk' (17#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:25]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_101' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:146]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_122' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:157]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_143' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:168]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_164' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:179]
+INFO: [Synth 8-3491] module 'lut_mul3_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/lut_mul3_chunk.vhd:12' bound to instance 'grp_lut_mul3_chunk_fu_185' of component 'lut_mul3_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'int_32_mul3' (18#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.vhd:25]
+WARNING: [Synth 8-3331] design lut_mul3_chunk_meibs has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mehbi has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_meg8j has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mefYi has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_meeOg has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_medEe has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mecud has unconnected port reset
+WARNING: [Synth 8-3331] design lut_mul3_chunk_mebkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 339 ; free virtual = 11841
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 339 ; free virtual = 11840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 339 ; free virtual = 11840
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/int_32_mul3.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1659.473 ; gain = 0.000 ; free physical = 122 ; free virtual = 11583
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 200 ; free virtual = 11659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 200 ; free virtual = 11659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 201 ; free virtual = 11660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 187 ; free virtual = 11651
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input     32 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 6     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 54    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 12    
+	   4 Input      2 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module int_32_mul3 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input     32 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module lut_mul3_chunk_mebkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_mecud_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_medEe_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_meeOg_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_mefYi_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_meg8j_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_mehbi_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk_meibs_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module lut_mul3_chunk 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_2_U/lut_mul3_chunk_medEe_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_3_U/lut_mul3_chunk_meeOg_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_4_U/lut_mul3_chunk_mefYi_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_5_U/lut_mul3_chunk_meg8j_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_6_U/lut_mul3_chunk_mehbi_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/mem_7_U/lut_mul3_chunk_meibs_rom_U/q0_reg[0]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[7]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[6]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[5]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[4]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[3]) is unused and will be removed from module int_32_mul3.
+WARNING: [Synth 8-3332] Sequential element (grp_lut_mul3_chunk_fu_80/ap_return_preg_reg[2]) is unused and will be removed from module int_32_mul3.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 173 ; free virtual = 11640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|lut_mul3_chunk_mebkb_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_mecud_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_medEe_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_meeOg_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_mefYi_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_meg8j_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_mehbi_rom | p_0_out    | 64x1          | LUT            | 
+|lut_mul3_chunk_meibs_rom | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
+|int_32_mul3              | p_0_out    | 64x1          | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 135 ; free virtual = 11511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11511
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 153 ; free virtual = 11510
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    10|
+|2     |LUT2   |    18|
+|3     |LUT3   |    50|
+|4     |LUT4   |    16|
+|5     |LUT5   |     6|
+|6     |LUT6   |    28|
+|7     |FDRE   |   129|
+|8     |FDSE   |     7|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------------+----------------------------+------+
+|      |Instance                         |Module                      |Cells |
++------+---------------------------------+----------------------------+------+
+|1     |top                              |                            |   264|
+|2     |  grp_lut_mul3_chunk_fu_101      |lut_mul3_chunk              |    39|
+|3     |    mem_0_U                      |lut_mul3_chunk_mebkb_57     |     2|
+|4     |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_72 |     2|
+|5     |    mem_1_U                      |lut_mul3_chunk_mecud_58     |     3|
+|6     |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_71 |     3|
+|7     |    mem_2_U                      |lut_mul3_chunk_medEe_59     |     3|
+|8     |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_70 |     3|
+|9     |    mem_3_U                      |lut_mul3_chunk_meeOg_60     |     3|
+|10    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_69 |     3|
+|11    |    mem_4_U                      |lut_mul3_chunk_mefYi_61     |     3|
+|12    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_68 |     3|
+|13    |    mem_5_U                      |lut_mul3_chunk_meg8j_62     |     3|
+|14    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_67 |     3|
+|15    |    mem_6_U                      |lut_mul3_chunk_mehbi_63     |     2|
+|16    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_66 |     2|
+|17    |    mem_7_U                      |lut_mul3_chunk_meibs_64     |     3|
+|18    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_65 |     3|
+|19    |  grp_lut_mul3_chunk_fu_122      |lut_mul3_chunk_0            |    48|
+|20    |    mem_0_U                      |lut_mul3_chunk_mebkb_41     |     3|
+|21    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_56 |     3|
+|22    |    mem_1_U                      |lut_mul3_chunk_mecud_42     |     4|
+|23    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_55 |     4|
+|24    |    mem_2_U                      |lut_mul3_chunk_medEe_43     |     5|
+|25    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_54 |     5|
+|26    |    mem_3_U                      |lut_mul3_chunk_meeOg_44     |     4|
+|27    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_53 |     4|
+|28    |    mem_4_U                      |lut_mul3_chunk_mefYi_45     |     4|
+|29    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_52 |     4|
+|30    |    mem_5_U                      |lut_mul3_chunk_meg8j_46     |     4|
+|31    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_51 |     4|
+|32    |    mem_6_U                      |lut_mul3_chunk_mehbi_47     |     5|
+|33    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_50 |     5|
+|34    |    mem_7_U                      |lut_mul3_chunk_meibs_48     |     6|
+|35    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_49 |     6|
+|36    |  grp_lut_mul3_chunk_fu_143      |lut_mul3_chunk_1            |    34|
+|37    |    mem_0_U                      |lut_mul3_chunk_mebkb_25     |     1|
+|38    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_40 |     1|
+|39    |    mem_1_U                      |lut_mul3_chunk_mecud_26     |     2|
+|40    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_39 |     2|
+|41    |    mem_2_U                      |lut_mul3_chunk_medEe_27     |     3|
+|42    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_38 |     3|
+|43    |    mem_3_U                      |lut_mul3_chunk_meeOg_28     |     3|
+|44    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_37 |     3|
+|45    |    mem_4_U                      |lut_mul3_chunk_mefYi_29     |     3|
+|46    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_36 |     3|
+|47    |    mem_5_U                      |lut_mul3_chunk_meg8j_30     |     3|
+|48    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_35 |     3|
+|49    |    mem_6_U                      |lut_mul3_chunk_mehbi_31     |     2|
+|50    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_34 |     2|
+|51    |    mem_7_U                      |lut_mul3_chunk_meibs_32     |     3|
+|52    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_33 |     3|
+|53    |  grp_lut_mul3_chunk_fu_164      |lut_mul3_chunk_2            |    44|
+|54    |    mem_0_U                      |lut_mul3_chunk_mebkb_9      |     3|
+|55    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_24 |     3|
+|56    |    mem_1_U                      |lut_mul3_chunk_mecud_10     |     9|
+|57    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_23 |     9|
+|58    |    mem_2_U                      |lut_mul3_chunk_medEe_11     |     3|
+|59    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom_22 |     3|
+|60    |    mem_3_U                      |lut_mul3_chunk_meeOg_12     |     3|
+|61    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom_21 |     3|
+|62    |    mem_4_U                      |lut_mul3_chunk_mefYi_13     |     3|
+|63    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom_20 |     3|
+|64    |    mem_5_U                      |lut_mul3_chunk_meg8j_14     |     3|
+|65    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom_19 |     3|
+|66    |    mem_6_U                      |lut_mul3_chunk_mehbi_15     |     3|
+|67    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom_18 |     3|
+|68    |    mem_7_U                      |lut_mul3_chunk_meibs_16     |     4|
+|69    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom_17 |     4|
+|70    |  grp_lut_mul3_chunk_fu_185      |lut_mul3_chunk_3            |    44|
+|71    |    mem_0_U                      |lut_mul3_chunk_mebkb_5      |     2|
+|72    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom_8  |     2|
+|73    |    mem_1_U                      |lut_mul3_chunk_mecud_6      |     3|
+|74    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom_7  |     3|
+|75    |    mem_2_U                      |lut_mul3_chunk_medEe        |     3|
+|76    |      lut_mul3_chunk_medEe_rom_U |lut_mul3_chunk_medEe_rom    |     3|
+|77    |    mem_3_U                      |lut_mul3_chunk_meeOg        |     4|
+|78    |      lut_mul3_chunk_meeOg_rom_U |lut_mul3_chunk_meeOg_rom    |     4|
+|79    |    mem_4_U                      |lut_mul3_chunk_mefYi        |     5|
+|80    |      lut_mul3_chunk_mefYi_rom_U |lut_mul3_chunk_mefYi_rom    |     5|
+|81    |    mem_5_U                      |lut_mul3_chunk_meg8j        |     4|
+|82    |      lut_mul3_chunk_meg8j_rom_U |lut_mul3_chunk_meg8j_rom    |     4|
+|83    |    mem_6_U                      |lut_mul3_chunk_mehbi        |     5|
+|84    |      lut_mul3_chunk_mehbi_rom_U |lut_mul3_chunk_mehbi_rom    |     5|
+|85    |    mem_7_U                      |lut_mul3_chunk_meibs        |     4|
+|86    |      lut_mul3_chunk_meibs_rom_U |lut_mul3_chunk_meibs_rom    |     4|
+|87    |  grp_lut_mul3_chunk_fu_80       |lut_mul3_chunk_4            |    13|
+|88    |    mem_0_U                      |lut_mul3_chunk_mebkb        |     3|
+|89    |      lut_mul3_chunk_mebkb_rom_U |lut_mul3_chunk_mebkb_rom    |     3|
+|90    |    mem_1_U                      |lut_mul3_chunk_mecud        |     3|
+|91    |      lut_mul3_chunk_mecud_rom_U |lut_mul3_chunk_mecud_rom    |     3|
++------+---------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.473 ; gain = 474.012 ; free physical = 154 ; free virtual = 11509
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1659.473 ; gain = 126.520 ; free physical = 209 ; free virtual = 11564
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.480 ; gain = 474.012 ; free physical = 209 ; free virtual = 11564
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+142 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 1659.480 ; gain = 474.125 ; free physical = 205 ; free virtual = 11561
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/int_mul3/result/solution1/impl/vhdl/project.runs/synth_1/int_32_mul3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file int_32_mul3_utilization_synth.rpt -pb int_32_mul3_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1683.484 ; gain = 0.000 ; free physical = 203 ; free virtual = 11560
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 23 12:25:03 2018...

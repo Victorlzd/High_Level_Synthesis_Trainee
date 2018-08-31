@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Fri Aug  3 14:49:05 2018
+| Date         : Fri Aug 31 15:34:04 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_methodology -file operator_double_div7_methodology_drc_routed.rpt -pb operator_double_div7_methodology_drc_routed.pb -rpx operator_double_div7_methodology_drc_routed.rpx
 | Design       : operator_double_div7
@@ -23,46 +23,15 @@ Table of Contents
           Floorplan: checkpoint_operator_double_div7
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 139
+             Violations found: 133
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-16 | Warning  | Large setup violation         | 6          |
 | TIMING-18 | Warning  | Missing input or output delay | 133        |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-16#1 Warning
-Large setup violation  
-There is a large setup violation of -1.183 ns between tmp_1_reg_804_reg[0]_replica_1/C (clocked by ap_clk) and p_Repl2_s_reg_142_reg[5]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#2 Warning
-Large setup violation  
-There is a large setup violation of -1.249 ns between tmp_1_reg_804_reg[0]_replica_1/C (clocked by ap_clk) and p_Repl2_s_reg_142_reg[3]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#3 Warning
-Large setup violation  
-There is a large setup violation of -1.446 ns between tmp_1_reg_804_reg[0]_replica_1/C (clocked by ap_clk) and p_Repl2_s_reg_142_reg[4]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#4 Warning
-Large setup violation  
-There is a large setup violation of -1.652 ns between tmp_1_reg_804_reg[0]_replica_1/C (clocked by ap_clk) and p_Repl2_s_reg_142_reg[1]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -1.758 ns between tmp_1_reg_804_reg[0]_replica_1/C (clocked by ap_clk) and p_Repl2_s_reg_142_reg[2]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -1.773 ns between tmp_1_reg_804_reg[0]_replica_1/C (clocked by ap_clk) and p_Repl2_s_reg_142_reg[0]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on ap_rst relative to clock(s) ap_clk

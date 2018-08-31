@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/impl/vhdl/project.runs/synth_1'
+HD_PWD='/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log kernel_jacobi_1d_imper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_1d_imper.tcl
+EAStep vivado -log kernel_jacobi_1d_imper_optimized.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_1d_imper_optimized.tcl

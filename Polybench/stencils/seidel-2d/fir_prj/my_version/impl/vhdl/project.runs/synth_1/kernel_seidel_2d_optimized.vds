@@ -1,0 +1,1066 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug 31 22:00:21 2018
+# Process ID: 22173
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log kernel_seidel_2d_optimized.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_seidel_2d_optimized.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/kernel_seidel_2d_optimized.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source kernel_seidel_2d_optimized.tcl -notrace
+Command: synth_design -top kernel_seidel_2d_optimized -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22181 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1292.809 ; gain = 82.895 ; free physical = 2460 ; free virtual = 9609
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kernel_seidel_2d_optimized' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:33]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:263]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:266]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:269]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:271]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:273]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:275]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:277]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:279]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:281]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:283]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:287]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:291]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:295]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:300]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:304]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:312]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:317]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:319]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:325]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:328]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:333]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:337]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:339]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:342]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:344]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:347]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:349]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:351]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:354]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:356]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:359]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:362]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:365]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:369]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:371]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:373]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:375]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:377]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:380]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:391]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:403]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:411]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:415]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:421]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:425]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:429]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:436]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:444]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:456]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:458]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:460]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:462]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:464]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:466]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:468]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:470]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:472]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:474]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:476]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:478]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:480]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:482]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:484]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:486]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:490]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:492]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:494]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:496]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:498]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:500]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:502]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:504]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-3491] module 'int_57_div9' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:12' bound to instance 'grp_int_57_div9_fu_206' of component 'int_57_div9' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:622]
+INFO: [Synth 8-638] synthesizing module 'int_57_div9' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:148]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:151]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:154]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:159]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:161]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:163]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:165]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:167]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:169]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:171]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:173]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:175]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:177]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:179]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:181]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:183]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:185]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:187]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:189]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:191]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:193]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:195]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:197]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:199]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:201]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:203]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:205]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:207]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3491] module 'lut_div9_chunk' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:12' bound to instance 'grp_lut_div9_chunk_fu_142' of component 'lut_div9_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:359]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:27]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r0.vhd:77' bound to instance 'r0_U' of component 'lut_div9_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r0.vhd:90]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r0.vhd:12' bound to instance 'lut_div9_chunk_r0_rom_U' of component 'lut_div9_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r0.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r0_rom' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r0' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r0.vhd:90]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r1.vhd:73' bound to instance 'r1_U' of component 'lut_div9_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r1.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r1.vhd:12' bound to instance 'lut_div9_chunk_r1_rom_U' of component 'lut_div9_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r1.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r1_rom' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r1' (4#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r1.vhd:86]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r2' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r2.vhd:71' bound to instance 'r2_U' of component 'lut_div9_chunk_r2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r2.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r2_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r2.vhd:12' bound to instance 'lut_div9_chunk_r2_rom_U' of component 'lut_div9_chunk_r2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r2.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r2_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r2.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r2_rom' (5#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r2' (6#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r2.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r3' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r3.vhd:71' bound to instance 'r3_U' of component 'lut_div9_chunk_r3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r3' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r3.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_r3_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r3.vhd:12' bound to instance 'lut_div9_chunk_r3_rom_U' of component 'lut_div9_chunk_r3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r3.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_r3_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r3.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r3_rom' (7#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r3.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_r3' (8#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_r3.vhd:84]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q0.vhd:70' bound to instance 'q0_U' of component 'lut_div9_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q0.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q0_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q0.vhd:12' bound to instance 'lut_div9_chunk_q0_rom_U' of component 'lut_div9_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q0.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q0_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q0.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q0_rom' (9#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q0.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q0' (10#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q0.vhd:83]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q1' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q1.vhd:69' bound to instance 'q1_U' of component 'lut_div9_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q1' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q1.vhd:82]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'lut_div9_chunk_q1_rom' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q1.vhd:12' bound to instance 'lut_div9_chunk_q1_rom_U' of component 'lut_div9_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q1.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'lut_div9_chunk_q1_rom' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q1.vhd:27]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q1_rom' (11#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk_q1' (12#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk_q1.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'lut_div9_chunk' (13#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/lut_div9_chunk.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'int_57_div9' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/int_57_div9.vhd:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_bkb.vhd:11' bound to instance 'kernel_seidel_2d_bkb_U10' of component 'kernel_seidel_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:633]
+INFO: [Synth 8-638] synthesizing module 'kernel_seidel_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_bkb.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64/synth/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64.vhd:59' bound to instance 'kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u' of component 'kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_bkb.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64/synth/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 12 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64/synth/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64' (40#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.srcs/sources_1/ip/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64/synth/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'kernel_seidel_2d_bkb' (41#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_bkb.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_cud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_cud.vhd:13' bound to instance 'kernel_seidel_2d_cud_U11' of component 'kernel_seidel_2d_cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:648]
+INFO: [Synth 8-638] synthesizing module 'kernel_seidel_2d_cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_cud.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'kernel_seidel_2d_cud' (42#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_cud.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter din0_WIDTH bound to: 57 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 57 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_dEe.vhd:13' bound to instance 'kernel_seidel_2d_dEe_U12' of component 'kernel_seidel_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:664]
+INFO: [Synth 8-638] synthesizing module 'kernel_seidel_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_dEe.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 57 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 57 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'kernel_seidel_2d_dEe' (43#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_dEe.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_eOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:52' bound to instance 'kernel_seidel_2d_eOg_U13' of component 'kernel_seidel_2d_eOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:680]
+INFO: [Synth 8-638] synthesizing module 'kernel_seidel_2d_eOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:68]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_eOg_DSP48_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:6' bound to instance 'kernel_seidel_2d_eOg_DSP48_0_U' of component 'kernel_seidel_2d_eOg_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'kernel_seidel_2d_eOg_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'kernel_seidel_2d_eOg_DSP48_0' (44#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'kernel_seidel_2d_eOg' (45#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:68]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_eOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:52' bound to instance 'kernel_seidel_2d_eOg_U14' of component 'kernel_seidel_2d_eOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:695]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_seidel_2d_eOg' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:52' bound to instance 'kernel_seidel_2d_eOg_U15' of component 'kernel_seidel_2d_eOg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:710]
+INFO: [Synth 8-256] done synthesizing module 'kernel_seidel_2d_optimized' (46#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:33]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_eOg_DSP48_0 has unconnected port rst
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[56]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[55]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[54]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[53]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[52]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[51]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[50]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[49]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[48]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[47]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[46]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[45]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[44]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[43]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[42]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[41]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[40]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[39]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[38]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[37]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[36]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[35]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[34]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[33]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[32]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[31]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[30]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[29]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[28]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[27]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[26]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[25]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[24]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[23]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[22]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[21]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[20]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[19]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[18]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[17]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[16]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[15]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[14]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[13]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[12]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_dEe has unconnected port din1[11]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[51]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[50]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[49]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[48]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[47]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[46]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[45]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[44]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[43]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[42]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[41]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[40]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[39]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[38]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[37]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[36]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[35]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[34]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[33]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[32]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[31]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[30]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[29]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[28]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[27]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[26]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[25]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[24]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[23]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[22]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[21]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[20]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[19]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[18]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[17]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[16]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[15]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[14]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[13]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[12]
+WARNING: [Synth 8-3331] design kernel_seidel_2d_cud has unconnected port din1[11]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized99 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized99 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized99 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SCLR
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1403.434 ; gain = 193.520 ; free physical = 2430 ; free virtual = 9581
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1403.434 ; gain = 193.520 ; free physical = 2458 ; free virtual = 9609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1403.434 ; gain = 193.520 ; free physical = 2458 ; free virtual = 9609
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 396 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.xdc]
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 33 instances were transformed.
+  FDE => FDRE: 33 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1719.918 ; gain = 0.000 ; free physical = 2144 ; free virtual = 9294
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1719.918 ; gain = 510.004 ; free physical = 2263 ; free virtual = 9414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1719.918 ; gain = 510.004 ; free physical = 2263 ; free virtual = 9414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1719.918 ; gain = 510.004 ; free physical = 2265 ; free virtual = 9416
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:37]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond2_fu_239_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_251_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_279_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp3_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "icmp_fu_418_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_2_i_fu_520_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_i_fu_447_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_239_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_251_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_279_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp3_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "icmp_fu_418_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_2_i_fu_520_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_i_fu_447_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "shift_V_i_cast_cast_fu_440_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "xf_V_7_fu_548_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:43 . Memory (MB): peak = 1719.918 ; gain = 510.004 ; free physical = 2261 ; free virtual = 9413
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_DEL' (delay__parameterized8) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_RND1_DEL'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'kernel_seidel_2d_eOg_U14/kernel_seidel_2d_eOg_DSP48_0_U/b_reg_reg[10:0]' into 'kernel_seidel_2d_eOg_U13/kernel_seidel_2d_eOg_DSP48_0_U/b_reg_reg[10:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:37]
+INFO: [Synth 8-4471] merging register 'kernel_seidel_2d_eOg_U15/kernel_seidel_2d_eOg_DSP48_0_U/b_reg_reg[10:0]' into 'kernel_seidel_2d_eOg_U13/kernel_seidel_2d_eOg_DSP48_0_U/b_reg_reg[10:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U14/kernel_seidel_2d_eOg_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U15/kernel_seidel_2d_eOg_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:37]
+INFO: [Synth 8-5546] ROM "exitcond_fu_279_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_251_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_2_i_fu_520_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp3_fu_434_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_3_i_fu_447_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U13/kernel_seidel_2d_eOg_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U14/kernel_seidel_2d_eOg_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U15/kernel_seidel_2d_eOg_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U13/kernel_seidel_2d_eOg_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U14/kernel_seidel_2d_eOg_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg_645_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_optimized.vhd:821]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U13/kernel_seidel_2d_eOg_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_seidel_2d_eOg_U15/kernel_seidel_2d_eOg_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/kernel_seidel_2d_eOg.vhd:36]
+INFO: [Synth 8-3886] merging instance 'shift_V_reg_875_reg[0]' (FDE) to 'shift_V_1_reg_880_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_dEe_U12/dout_array_reg[0][56] )
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_reg[0][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_reg[0][0]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_dEe_U12/dout_array_reg[0][54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_dEe_U12/dout_array_reg[0][55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_dEe_U12/dout_array_reg[0][52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_dEe_U12/dout_array_reg[0][53] )
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][50]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][50]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][51]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][51]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][48]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][48]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][49]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][49]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][46]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][46]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][47]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][47]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][44]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][44]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][45]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][45]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][42]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][42]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][43]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][43]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][40]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][40]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][41]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][41]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][38]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][38]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][39]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][39]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][36]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][36]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][37]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][37]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][34]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][34]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][35]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][35]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][32]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][32]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][33]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][33]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][30]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][31]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][28]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][29]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][29]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][26]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][26]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][27]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][27]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][24]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][25]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][25]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][22]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][23]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][20]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][21]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][18]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][19]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][16]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][17]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][14]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][15]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][12]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][13]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][10]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][11]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][8]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][9]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][6]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][7]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][4]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][5]' (FDRE) to 'kernel_seidel_2d_cud_U11/dout_array_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_reg[0][2]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][7]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][6]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][9]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][8]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][10]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_reg[0][3]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][5]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][4]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][3]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][2]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/din1_cast_array_reg[0][0]' (FDRE) to 'kernel_seidel_2d_dEe_U12/din1_cast_array_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][7]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][6]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][9]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][8]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][5]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][4]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][3]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][2]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][0]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].din1_cast_array_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][7]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][6]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][5]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][4]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][3]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][2]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][0]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[2].din1_cast_array_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][5]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[3].din1_cast_array_reg[3][5]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][4]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[3].din1_cast_array_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][3]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[3].din1_cast_array_reg[3][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][2]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[3].din1_cast_array_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[3].din1_cast_array_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][0]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[3].din1_cast_array_reg[3][0]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][3]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[4].din1_cast_array_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][2]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[4].din1_cast_array_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[4].din1_cast_array_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][0]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[4].din1_cast_array_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[5].din1_cast_array_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][0]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[5].din1_cast_array_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'shift_V_i_cast_cast_reg_854_reg[0]' (FDE) to 'shift_V_i_cast_cast_reg_854_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_seidel_2d_bkb_U10/ce_r_reg )
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/q_chunk_V_1_reg_654_reg[1]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/q_chunk_V_1_reg_654_reg[0]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/q_chunk_V_reg_649_reg[1]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/q_chunk_V_reg_649_reg[0]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/tmp_26_reg_644_reg[0]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/ap_return_preg_reg[56]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/ap_return_preg_reg[55]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/ap_return_preg_reg[54]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/ap_return_preg_reg[53]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (grp_int_57_div9_fu_206/ap_return_preg_reg[52]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/ce_r_reg) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[63]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[62]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[61]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[60]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[59]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[58]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[57]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[56]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[55]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[54]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[53]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[52]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[51]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[50]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[49]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[48]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[47]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[46]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[45]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[44]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[43]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[42]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[41]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[40]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[39]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[38]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[37]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[36]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[35]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[34]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[33]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[32]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[31]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[30]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[29]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[28]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[27]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[26]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[25]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[24]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[23]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[22]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[21]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[20]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[19]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[18]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[17]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[16]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[15]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[14]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[13]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[12]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[11]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[10]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[9]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[8]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[7]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[6]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[5]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[4]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[3]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[2]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[1]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_bkb_U10/dout_r_reg[0]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[1].din1_cast_array_reg[1][10]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][10]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][9]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[2].din1_cast_array_reg[2][8]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][10]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][9]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][8]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][7]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[3].din1_cast_array_reg[3][6]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][10]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][9]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][8]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][7]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][6]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][5]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[4].din1_cast_array_reg[4][4]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][10]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][9]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][8]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][7]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][6]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][5]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][4]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][3]) is unused and will be removed from module kernel_seidel_2d_optimized.
+WARNING: [Synth 8-3332] Sequential element (kernel_seidel_2d_cud_U11/dout_array_loop[5].din1_cast_array_reg[5][2]) is unused and will be removed from module kernel_seidel_2d_optimized.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[55]' (FDE) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[54]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_seidel_2d_bkb_U10/kernel_seidel_2d_optimized_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3886] merging instance 'kernel_seidel_2d_cud_U11/dout_array_loop[1].dout_array_reg[1][1]' (FDRE) to 'kernel_seidel_2d_dEe_U12/dout_array_loop[1].dout_array_reg[1][1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 1719.918 ; gain = 510.004 ; free physical = 2228 ; free virtual = 9386
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:59 . Memory (MB): peak = 1719.918 ; gain = 510.004 ; free physical = 2079 ; free virtual = 9237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1738.941 ; gain = 529.027 ; free physical = 2071 ; free virtual = 9228
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:02 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    79|
+|2     |DSP48E1   |     2|
+|3     |DSP48E1_1 |     1|
+|4     |LUT1      |    23|
+|5     |LUT2      |   259|
+|6     |LUT3      |   433|
+|7     |LUT4      |   250|
+|8     |LUT5      |   352|
+|9     |LUT6      |   794|
+|10    |MUXCY     |   217|
+|11    |MUXF7     |    12|
+|12    |MUXF8     |     5|
+|13    |SRL16E    |    52|
+|14    |XORCY     |   121|
+|15    |FDE       |    33|
+|16    |FDRE      |  2927|
+|17    |FDSE      |    16|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1746.949 ; gain = 537.035 ; free physical = 2073 ; free virtual = 9231
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 431 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1746.949 ; gain = 220.551 ; free physical = 2150 ; free virtual = 9307
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 1746.957 ; gain = 537.035 ; free physical = 2150 ; free virtual = 9307
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 470 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 92 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 59 instances
+  FDE => FDRE: 33 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+413 Infos, 222 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:05 . Memory (MB): peak = 1746.957 ; gain = 548.602 ; free physical = 2152 ; free virtual = 9310
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/my_version/impl/vhdl/project.runs/synth_1/kernel_seidel_2d_optimized.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file kernel_seidel_2d_optimized_utilization_synth.rpt -pb kernel_seidel_2d_optimized_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1770.961 ; gain = 0.000 ; free physical = 2149 ; free virtual = 9308
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 22:01:36 2018...

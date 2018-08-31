@@ -25,7 +25,9 @@ public class Build_operators {
 		ProcedureSet ps = File_builder.create_ps();
 		
 		// add method call here
-		Div.build_float_div_by_constant(ps, 3, false);
+		Div.build_float_div_by_constant(ps, 2, true);
+		Mul.build_float_mul_by_constant(ps, 7, true);
+		Div.build_float_div_by_constant(ps, 10, true);
 		
 		return File_builder.add_files(project);		
 	}

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Fri Aug  3 10:39:19 2018
+| Date             : Fri Aug 31 16:08:49 2018
 | Host             : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command          : report_power -file operator_float_div9_power_routed.rpt -pb operator_float_div9_power_summary_routed.pb -rpx operator_float_div9_power_routed.rpx
 | Design           : operator_float_div9
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.115        |
+| Total On-Chip Power (W)  | 0.127        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.005        |
+| Dynamic (W)              | 0.017        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 2.5          |
 | Max Ambient (C)          | 84.7         |
@@ -52,16 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |      334 |       --- |             --- |
-|   LUT as Logic |     0.002 |      229 |    101400 |            0.23 |
-|   Register     |    <0.001 |       62 |    202800 |            0.03 |
+| Clocks         |     0.015 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |      781 |       --- |             --- |
+|   LUT as Logic |     0.001 |      357 |    101400 |            0.35 |
+|   Register     |    <0.001 |      382 |    202800 |            0.19 |
 |   CARRY4       |    <0.001 |        9 |     25350 |            0.04 |
-|   F7/F8 Muxes  |    <0.001 |        2 |    101400 |           <0.01 |
-|   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.002 |      251 |       --- |             --- |
+|   Others       |     0.000 |       11 |       --- |             --- |
+| Signals        |     0.001 |      439 |       --- |             --- |
 | Static Power   |     0.110 |          |           |                 |
-| Total          |     0.115 |          |           |                 |
+| Total          |     0.127 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.045 |       0.005 |      0.040 |
+| Vccint    |       1.000 |     0.058 |       0.017 |      0.040 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -128,7 +127,7 @@ Table of Contents
 +--------+--------+-----------------+
 | Clock  | Domain | Constraint (ns) |
 +--------+--------+-----------------+
-| ap_clk | ap_clk |            10.0 |
+| ap_clk | ap_clk |             2.5 |
 +--------+--------+-----------------+
 
 
@@ -138,10 +137,25 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------+-----------+
-| Name                | Power (W) |
-+---------------------+-----------+
-| operator_float_div9 |     0.005 |
-+---------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| operator_float_div9           |     0.017 |
+|   grp_lut_div9_chunk_fu_124   |     0.003 |
+|     q0_U                      |    <0.001 |
+|       lut_div9_chunk_q0_rom_U |    <0.001 |
+|     q1_U                      |    <0.001 |
+|       lut_div9_chunk_q1_rom_U |    <0.001 |
+|     r0_U                      |    <0.001 |
+|       lut_div9_chunk_r0_rom_U |    <0.001 |
+|     r1_U                      |    <0.001 |
+|       lut_div9_chunk_r1_rom_U |    <0.001 |
+|     r2_U                      |    <0.001 |
+|       lut_div9_chunk_r2_rom_U |    <0.001 |
+|     r3_U                      |    <0.001 |
+|       lut_div9_chunk_r3_rom_U |    <0.001 |
+|   operator_float_dibkb_U9     |     0.003 |
+|   operator_float_dicud_U10    |     0.002 |
++-------------------------------+-----------+
 
 

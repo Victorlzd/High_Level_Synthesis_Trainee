@@ -65,8 +65,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
+					<item>10</item>
 					<item>11</item>
-					<item>12</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -78,11 +78,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>7</id>
+						<id>6</id>
 						<name>tmp</name>
 						<fileName>test.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area</fileDirectory>
-						<lineNumber>4</lineNumber>
+						<lineNumber>3</lineNumber>
 						<contextFuncName>div2</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -97,7 +97,7 @@
 											<first>test.cpp</first>
 											<second>div2</second>
 										</first>
-										<second>4</second>
+										<second>3</second>
 									</item>
 								</second>
 							</item>
@@ -111,24 +111,24 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>13</item>
-					<item>15</item>
+					<item>12</item>
+					<item>14</item>
 				</oprand_edges>
 				<opcode>fmul</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>9.94</m_delay>
+				<m_delay>1.98</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_4">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>8</id>
+						<id>7</id>
 						<name></name>
 						<fileName>test.cpp</fileName>
 						<fileDirectory>/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area</fileDirectory>
-						<lineNumber>4</lineNumber>
+						<lineNumber>3</lineNumber>
 						<contextFuncName>div2</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -143,7 +143,7 @@
 											<first>test.cpp</first>
 											<second>div2</second>
 										</first>
-										<second>4</second>
+										<second>3</second>
 									</item>
 								</second>
 							</item>
@@ -157,7 +157,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>16</item>
+					<item>15</item>
 				</oprand_edges>
 				<opcode>ret</opcode>
 				<m_Display>0</m_Display>
@@ -173,7 +173,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>14</id>
+						<id>13</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -199,7 +199,7 @@
 			<item class_id="18" tracking_level="1" version="0" object_id="_6">
 				<Obj>
 					<type>3</type>
-					<id>9</id>
+					<id>8</id>
 					<name>div2</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -217,8 +217,8 @@
 					<count>3</count>
 					<item_version>0</item_version>
 					<item>5</item>
+					<item>6</item>
 					<item>7</item>
-					<item>8</item>
 				</node_objs>
 			</item>
 		</blocks>
@@ -226,31 +226,31 @@
 			<count>4</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_7">
-				<id>12</id>
+				<id>11</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
 				<sink_obj>5</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_8">
-				<id>13</id>
+				<id>12</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
-				<sink_obj>7</sink_obj>
+				<sink_obj>6</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_9">
-				<id>15</id>
+				<id>14</id>
 				<edge_type>1</edge_type>
-				<source_obj>14</source_obj>
-				<sink_obj>7</sink_obj>
+				<source_obj>13</source_obj>
+				<sink_obj>6</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_10">
-				<id>16</id>
+				<id>15</id>
 				<edge_type>1</edge_type>
-				<source_obj>7</source_obj>
-				<sink_obj>8</sink_obj>
+				<source_obj>6</source_obj>
+				<sink_obj>7</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
@@ -269,14 +269,14 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>9</item>
+				<item>8</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>1</mMinLatency>
-			<mMaxLatency>1</mMaxLatency>
+			<mMinLatency>7</mMinLatency>
+			<mMaxLatency>7</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -294,16 +294,16 @@
 			</second>
 		</item>
 		<item>
-			<first>7</first>
+			<first>6</first>
 			<second>
 				<first>0</first>
-				<second>1</second>
+				<second>7</second>
 			</second>
 		</item>
 		<item>
-			<first>8</first>
+			<first>7</first>
 			<second>
-				<first>1</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -312,45 +312,22 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="30" tracking_level="0" version="0">
-			<first>9</first>
+			<first>8</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
-				<second>1</second>
+				<second>7</second>
 			</second>
 		</item>
 	</bblk_ent_exit>
 	<regions class_id="32" tracking_level="0" version="0">
-		<count>1</count>
+		<count>0</count>
 		<item_version>0</item_version>
-		<item class_id="33" tracking_level="1" version="0" object_id="_12">
-			<region_name>div2</region_name>
-			<basic_blocks>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>9</item>
-			</basic_blocks>
-			<nodes>
-				<count>7</count>
-				<item_version>0</item_version>
-				<item>2</item>
-				<item>3</item>
-				<item>4</item>
-				<item>5</item>
-				<item>6</item>
-				<item>7</item>
-				<item>8</item>
-			</nodes>
-			<anchor_node>-1</anchor_node>
-			<region_type>2</region_type>
-			<interval>0</interval>
-			<pipe_depth>0</pipe_depth>
-		</item>
 	</regions>
-	<dp_fu_nodes class_id="34" tracking_level="0" version="0">
+	<dp_fu_nodes class_id="33" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes>
-	<dp_fu_nodes_expression class_id="35" tracking_level="0" version="0">
+	<dp_fu_nodes_expression class_id="34" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes_expression>
@@ -366,7 +343,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</return_ports>
-	<dp_mem_port_nodes class_id="36" tracking_level="0" version="0">
+	<dp_mem_port_nodes class_id="35" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_mem_port_nodes>
@@ -386,11 +363,11 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_regname_phi>
-	<dp_port_io_nodes class_id="37" tracking_level="0" version="0">
+	<dp_port_io_nodes class_id="36" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_port_io_nodes>
-	<port2core class_id="38" tracking_level="0" version="0">
+	<port2core class_id="37" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</port2core>

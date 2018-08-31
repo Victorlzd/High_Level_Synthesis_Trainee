@@ -145,8 +145,8 @@ extern "C" {
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/fdtd-2d/fir_prj/my_version/.autopilot/db/fdtd-2d.pragma.1.cpp" 2
-# 1 "my_version/fdtd-2d.cpp"
-# 1 "my_version/fdtd-2d.cpp" 1
+# 1 "fdtd-2d.cpp"
+# 1 "fdtd-2d.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -291,7 +291,7 @@ extern "C" {
 }
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "my_version/fdtd-2d.cpp" 2
+# 1 "fdtd-2d.cpp" 2
 
 
 
@@ -1154,7 +1154,7 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 # 942 "/usr/include/stdio.h" 3 4
 }
-# 9 "my_version/fdtd-2d.cpp" 2
+# 9 "fdtd-2d.cpp" 2
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
 extern "C" {
@@ -2516,7 +2516,7 @@ extern void swab (const void *__restrict __from, void *__restrict __to,
     ssize_t __n) throw () __attribute__ ((__nonnull__ (1, 2)));
 # 1154 "/usr/include/unistd.h" 3 4
 }
-# 10 "my_version/fdtd-2d.cpp" 2
+# 10 "fdtd-2d.cpp" 2
 # 1 "/usr/include/string.h" 1 3 4
 # 27 "/usr/include/string.h" 3 4
 extern "C" {
@@ -2842,7 +2842,7 @@ extern void *memfrob (void *__s, size_t __n) throw () __attribute__ ((__nonnull_
 extern char *basename (const char *__filename) throw () __attribute__ ((__nonnull__ (1)));
 # 658 "/usr/include/string.h" 3 4
 }
-# 11 "my_version/fdtd-2d.cpp" 2
+# 11 "fdtd-2d.cpp" 2
 # 1 "/usr/include/math.h" 1 3 4
 # 28 "/usr/include/math.h" 3 4
 extern "C" {
@@ -3851,7 +3851,7 @@ struct __exception
 extern int matherr (struct __exception *__exc) throw ();
 # 534 "/usr/include/math.h" 3 4
 }
-# 12 "my_version/fdtd-2d.cpp" 2
+# 12 "fdtd-2d.cpp" 2
 
 
 # 1 "./polybench.h" 1
@@ -5001,12 +5001,12 @@ extern int getloadavg (double __loadavg[], int __nelem)
 # 27 "./polybench.h" 2
 # 199 "./polybench.h"
 extern void* polybench_alloc_data(unsigned long long int n, int elt_size);
-# 15 "my_version/fdtd-2d.cpp" 2
+# 15 "fdtd-2d.cpp" 2
 
 
 
-# 1 "my_version/fdtd-2d.h" 1
-# 19 "my_version/fdtd-2d.cpp" 2
+# 1 "./fdtd-2d.h" 1
+# 19 "fdtd-2d.cpp" 2
 
 # 1 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h" 1
 # 63 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h"
@@ -29261,7 +29261,7 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 
 }
 # 69 "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_int.h" 2
-# 21 "my_version/fdtd-2d.cpp" 2
+# 21 "fdtd-2d.cpp" 2
 
 union fix_to_double {
  double d;
@@ -29319,58 +29319,54 @@ void rebuild_double(ap_uint<1> s, ap_uint<11> exp, ap_uint<52> mant, double * ou
 }
 
 double operator_double_div2(double in) {
- {
-  ap_uint<1> s;
-  ap_uint<11> exp;
-  ap_uint<52> mant;
-  ap_uint<11> new_exp;
-  ap_uint<52> new_mant;
-  ap_uint<55> xf;
-  double out;
-  ap_uint<11> shift;
-  ap_uint<11> div_exp;
+ ap_uint<1> s;
+ ap_uint<11> exp;
+ ap_uint<52> mant;
+ ap_uint<11> new_exp;
+ ap_uint<52> new_mant;
+ ap_uint<55> xf;
+ double out;
+ ap_uint<11> shift;
+ ap_uint<11> div_exp;
 
-  decompose_double(in, &s, &exp, &mant);
-  new_exp = exp;
-  new_mant = mant;
-  shift = 0;
-  div_exp = 1;
-  xf = mant;
-  if (mant < 0)
-   div_exp = 2;
-  if (exp != 2047)
-   if (div_exp > exp)
-    new_exp = 0;
-   else
-    new_exp = exp - div_exp;
-  if (exp != 2047) {
-   if (exp == 0)
-    shift = 1;
-   else
-    if (div_exp >= exp)
-     if (2 >= exp)
-      shift = 2 - exp;
-     else
-      shift = exp - 2;
-    else
-     shift = div_exp - 1;
-   if (exp != 0)
-    xf.set(52);
+ decompose_double(in, &s, &exp, &mant);
+ new_exp = exp;
+ new_mant = mant;
+ shift = 0;
+ div_exp = 1;
+ xf = mant;
+ if (mant < 0)
+  div_exp = 2;
+ if (div_exp > exp)
+  new_exp = 0;
+ else
+  new_exp = exp - div_exp;
+ if (exp == 0)
+  shift = 1;
+ else
+  if (div_exp >= exp)
    if (2 >= exp)
-    xf = xf >> shift;
+    shift = 2 - exp;
    else
-    xf = xf << shift;
-   xf = xf + 0;
-   new_mant = operator_int_55_div1(xf);
-  }
-  rebuild_double(s, new_exp, new_mant, &out);
-  return out;
+    shift = exp - 2;
+  else
+   shift = div_exp - 1;
+ if (2 >= exp)
+  xf = xf >> shift;
+ else
+  xf = xf << shift;
+ if (exp != 0)
+  xf.set(52);
+ xf = xf + 0;
+ new_mant = operator_int_55_div1(xf);
+ if (exp == 2047) {
+  new_mant = mant;
+  new_exp = exp;
  }
+ rebuild_double(s, new_exp, new_mant, &out);
+ return out;
 }
-
-
-
-
+# 133 "fdtd-2d.cpp"
 static
 void init_array (int tmax,
    int nx,
@@ -29398,7 +29394,7 @@ void init_array (int tmax,
 
 
 
-void kernel_fdtd_2d(int tmax,
+void kernel_fdtd_2d_optimized(int tmax,
       int nx,
       int ny,
       double ex[1000 + 0][1000 + 0],
@@ -29422,6 +29418,39 @@ void kernel_fdtd_2d(int tmax,
       for (i = 0; i < 1000; i++)
        for (j = 1; j < 1000; j++)
          ex[i][j] = ex[i][j] - operator_double_div2(hz[i][j]-hz[i][j-1]);
+
+      for (i = 0; i < 1000 - 1; i++)
+       for (j = 0; j < 1000 - 1; j++)
+         hz[i][j] = hz[i][j] - 0.7 *(ex[i][j+1] - ex[i][j] + ey[i+1][j] - ey[i][j]);
+    }
+
+#pragma endscop
+}
+
+void kernel_fdtd_2d(int tmax,
+      int nx,
+      int ny,
+      double ex[1000 + 0][1000 + 0],
+      double ey[1000 + 0][1000 + 0],
+      double hz[1000 + 0][1000 + 0],
+      double _fict_[50 + 0])
+{_ssdm_SpecArrayDimSize(ex, 1000);_ssdm_SpecArrayDimSize(ey, 1000);_ssdm_SpecArrayDimSize(hz, 1000);_ssdm_SpecArrayDimSize(_fict_, 50);
+  int t, i, j;
+
+#pragma scop
+
+ for(t = 0; t < 50; t++)
+    {
+      for (j = 0; j < 1000; j++)
+       ey[0][j] = _fict_[t];
+
+      for (i = 1; i < 1000; i++)
+       for (j = 0; j < 1000; j++)
+         ey[i][j] = ey[i][j] - 0.5*(hz[i][j]-hz[i-1][j]);
+
+      for (i = 0; i < 1000; i++)
+       for (j = 1; j < 1000; j++)
+         ex[i][j] = ex[i][j] - 0.5*(hz[i][j]-hz[i][j-1]);
 
       for (i = 0; i < 1000 - 1; i++)
        for (j = 0; j < 1000 - 1; j++)

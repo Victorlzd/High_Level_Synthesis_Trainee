@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kernel_fdtd_2d_optimized'" level="0">
+<item name = "Date">Fri Aug 31 22:17:28 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">fir_prj</item>
+<item name = "Solution">my_version</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">2.50, 2.292, 0.31</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">8538303751, 8538303751, 8538303751, 8538303751, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">8538303750, 8538303750, 170766075, -, -, 50, no</column>
+<column name=" + Loop 1.1">5000, 5000, 5, -, -, 1000, no</column>
+<column name=" + Loop 1.2">43961994, 43961994, 44006, -, -, 999, no</column>
+<column name="  ++ Loop 1.2.1">44000, 44000, 44, -, -, 1000, no</column>
+<column name=" + Loop 1.3">44957000, 44957000, 44957, -, -, 1000, no</column>
+<column name="  ++ Loop 1.3.1">44955, 44955, 45, -, -, 999, no</column>
+<column name=" + Loop 1.4">81842076, 81842076, 81924, -, -, 999, no</column>
+<column name="  ++ Loop 1.4.1">81918, 81918, 82, -, -, 999, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

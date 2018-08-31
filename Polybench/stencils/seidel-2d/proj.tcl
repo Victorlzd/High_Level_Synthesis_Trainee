@@ -14,7 +14,7 @@ add_files seidel-2d.h
 add_files polybench.h
 open_solution -reset 	"my_version"
 set_part {xc7k160tfbg484-1} -tool vivado
-create_clock -period 10 -name default
+create_clock -period 2.5 -name default
 #source "./fir_prj/solution1/directives.tcl"
 #csim_design -clean -compiler gcc
 csynth_design
@@ -28,9 +28,9 @@ set_top kernel_seidel_2d
 add_files seidel-2d.cpp
 add_files seidel-2d.h
 add_files polybench.h
-open_solution -reset 	"c"lassic
+open_solution -reset 	"classic"
 set_part {xc7k160tfbg484-1} -tool vivado
-create_clock -period 10 -name default
+create_clock -period 2.5 -name default
 #source "./fir_prj/solution1/directives.tcl"
 #csim_design -clean -compiler gcc
 csynth_design

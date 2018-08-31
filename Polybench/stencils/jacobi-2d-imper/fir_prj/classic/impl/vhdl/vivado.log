@@ -1,0 +1,1872 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug 31 21:41:56 2018
+# Process ID: 27566
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl
+# Command line: vivado -notrace -mode batch -source run_vivado.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/vivado.log
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64'...
+[Fri Aug 31 21:42:07 2018] Launched synth_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/synth_1/runme.log
+[Fri Aug 31 21:42:07 2018] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log kernel_jacobi_2d_imper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_2d_imper.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source kernel_jacobi_2d_imper.tcl -notrace
+Command: synth_design -top kernel_jacobi_2d_imper -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27673 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1292.809 ; gain = 82.895 ; free physical = 3667 ; free virtual = 9660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_imper' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:238]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:241]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:244]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:246]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:248]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:250]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:254]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:258]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:262]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:267]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:271]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:279]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:282]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:286]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:288]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:291]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:294]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:301]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:303]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:307]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:309]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:311]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:313]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:315]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:320]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:322]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:325]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:333]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:336]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:340]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:342]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:348]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:352]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:358]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:360]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:362]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:364]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:366]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:368]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:370]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:372]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:374]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:376]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:380]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:382]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:384]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:386]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:388]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_bkb.vhd:11' bound to instance 'kernel_jacobi_2d_bkb_U1' of component 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:461]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_bkb.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 14 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64.vhd:59' bound to instance 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u' of component 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_bkb.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 12 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64' (26#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_bkb' (27#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_bkb.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 59 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_cud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_cud.vhd:11' bound to instance 'kernel_jacobi_2d_cud_U2' of component 'kernel_jacobi_2d_cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:476]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_cud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_cud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 59 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64.vhd:59' bound to instance 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u' of component 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_cud.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 1 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 57 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64' (33#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.srcs/sources_1/ip/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64/synth/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_cud' (34#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_cud.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:52' bound to instance 'kernel_jacobi_2d_dEe_U3' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:491]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:68]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe_DSP48_0' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:6' bound to instance 'kernel_jacobi_2d_dEe_DSP48_0_U' of component 'kernel_jacobi_2d_dEe_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'kernel_jacobi_2d_dEe_DSP48_0' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_dEe_DSP48_0' (35#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_dEe' (36#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:68]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:52' bound to instance 'kernel_jacobi_2d_dEe_U4' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:506]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:52' bound to instance 'kernel_jacobi_2d_dEe_U5' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:521]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_jacobi_2d_dEe' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:52' bound to instance 'kernel_jacobi_2d_dEe_U6' of component 'kernel_jacobi_2d_dEe' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:536]
+INFO: [Synth 8-256] done synthesizing module 'kernel_jacobi_2d_imper' (37#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:38]
+WARNING: [Synth 8-3331] design kernel_jacobi_2d_dEe_DSP48_0 has unconnected port rst
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port B[10]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized136 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized136 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized136 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized132 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized132 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized132 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized132 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized132 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized134 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized134 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized134 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port NORMALIZE[1]
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port FIXED_POINT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port FIX_MANT_SIGN
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized103 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized130 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized130 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized130 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized130 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized130 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized128 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized128 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized128 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized126 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized126 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized126 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized124 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized124 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized124 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized122 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized122 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized122 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized120 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized120 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized120 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized118 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized118 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized118 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized116 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized116 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized116 has unconnected port SINIT
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1415.434 ; gain = 205.520 ; free physical = 3628 ; free virtual = 9630
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.434 ; gain = 205.520 ; free physical = 3637 ; free virtual = 9639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.434 ; gain = 205.520 ; free physical = 3637 ; free virtual = 9639
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 6413 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.xdc]
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 34 instances were transformed.
+  FDE => FDRE: 34 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1786.879 ; gain = 6.000 ; free physical = 3293 ; free virtual = 9296
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3448 ; free virtual = 9445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3448 ; free virtual = 9445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3451 ; free virtual = 9447
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond4_fu_196_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_208_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_236_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_309_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_319_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3448 ; free virtual = 9448
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_DEL' (delay__parameterized8) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized14) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized14) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_DEL' (delay__parameterized8) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_RND1_DEL'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'kernel_jacobi_2d_cud_U2/ce_r_reg' into 'kernel_jacobi_2d_bkb_U1/ce_r_reg' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_cud.vhd:73]
+INFO: [Synth 8-4471] merging register 'kernel_jacobi_2d_dEe_U4/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg[10:0]' into 'kernel_jacobi_2d_dEe_U3/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg[10:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+INFO: [Synth 8-4471] merging register 'kernel_jacobi_2d_dEe_U5/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg[10:0]' into 'kernel_jacobi_2d_dEe_U3/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg[10:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+INFO: [Synth 8-4471] merging register 'kernel_jacobi_2d_dEe_U6/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg[10:0]' into 'kernel_jacobi_2d_dEe_U3/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg[10:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_cud_U2/ce_r_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_cud.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U4/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U5/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U6/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+INFO: [Synth 8-5546] ROM "exitcond_fu_319_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_309_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_236_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_208_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U3/kernel_jacobi_2d_dEe_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U5/kernel_jacobi_2d_dEe_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U6/kernel_jacobi_2d_dEe_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U4/kernel_jacobi_2d_dEe_DSP48_0_U/p_reg_tmp_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U3/kernel_jacobi_2d_dEe_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U5/kernel_jacobi_2d_dEe_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element tmp_3_reg_391_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.vhd:653]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U3/kernel_jacobi_2d_dEe_DSP48_0_U/b_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U4/kernel_jacobi_2d_dEe_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element kernel_jacobi_2d_dEe_U6/kernel_jacobi_2d_dEe_DSP48_0_U/a_reg_reg was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_dEe.vhd:36]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[51] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[61] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/din1_buf1_reg[63] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\kernel_jacobi_2d_bkb_U1/ce_r_reg )
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/ce_r_reg) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (ap_CS_fsm_reg[104]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[63]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[62]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[61]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[60]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[59]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[58]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[57]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[56]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[55]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[54]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[53]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[52]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[51]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[50]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[49]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[48]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[47]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[46]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[45]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[44]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[43]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[42]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[41]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[40]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[39]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[38]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[37]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[36]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[35]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[34]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[33]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[32]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[31]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[30]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[29]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[28]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[27]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[26]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[25]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[24]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[23]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[22]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[21]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[20]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[19]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[18]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[17]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[16]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[15]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[14]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[13]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[12]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[11]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[10]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[9]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[8]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[7]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[6]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[5]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[4]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[3]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[2]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[1]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_bkb_U1/dout_r_reg[0]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[63]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[62]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[61]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[60]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[59]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[58]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[57]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[56]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[55]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[54]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[53]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[52]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[51]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[50]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[49]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[48]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[47]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[46]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[45]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[44]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[43]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[42]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[41]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[40]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[39]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[38]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[37]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[36]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[35]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[34]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[33]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[32]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[31]) is unused and will be removed from module kernel_jacobi_2d_imper.
+WARNING: [Synth 8-3332] Sequential element (kernel_jacobi_2d_cud_U2/din1_buf1_reg[30]) is unused and will be removed from module kernel_jacobi_2d_imper.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[55]' (FDE) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[54]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_bkb_U1/kernel_jacobi_2d_imper_ap_dadd_12_no_dsp_64_u /U0/i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/MSB_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u /U0/i_synth/\DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:57 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3408 ; free virtual = 9416
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:07 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3263 ; free virtual = 9271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:09 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3241 ; free virtual = 9249
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/EXP/NORMALIZE_UP_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[2].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[1]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:14 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3242 ; free virtual = 9250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3242 ; free virtual = 9250
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:16 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3243 ; free virtual = 9251
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:17 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3231 ; free virtual = 9239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:17 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3231 ; free virtual = 9239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:18 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3230 ; free virtual = 9239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:18 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3230 ; free virtual = 9239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    50|
+|2     |DSP48E1   |     2|
+|3     |DSP48E1_1 |     2|
+|4     |LUT1      |    16|
+|5     |LUT2      |   455|
+|6     |LUT3      |  2985|
+|7     |LUT4      |   149|
+|8     |LUT5      |   318|
+|9     |LUT6      |   421|
+|10    |MUXCY     |  3198|
+|11    |MUXF7     |    10|
+|12    |MUXF8     |     5|
+|13    |SRL16E    |    61|
+|14    |SRLC32E   |    92|
+|15    |XORCY     |  3156|
+|16    |FDE       |    34|
+|17    |FDRE      |  8061|
+|18    |FDSE      |     5|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:18 . Memory (MB): peak = 1786.879 ; gain = 576.965 ; free physical = 3230 ; free virtual = 9239
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 481 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:53 . Memory (MB): peak = 1786.879 ; gain = 205.520 ; free physical = 3301 ; free virtual = 9310
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:18 . Memory (MB): peak = 1786.887 ; gain = 576.965 ; free physical = 3301 ; free virtual = 9310
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6457 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 881 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 847 instances
+  FDE => FDRE: 34 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+252 Infos, 223 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:24 . Memory (MB): peak = 1796.879 ; gain = 598.523 ; free physical = 3290 ; free virtual = 9294
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/synth_1/kernel_jacobi_2d_imper.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1820.891 ; gain = 24.012 ; free physical = 3283 ; free virtual = 9292
+INFO: [runtcl-4] Executing : report_utilization -file kernel_jacobi_2d_imper_utilization_synth.rpt -pb kernel_jacobi_2d_imper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1820.891 ; gain = 0.000 ; free physical = 3283 ; free virtual = 9291
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 21:43:46 2018...
+[Fri Aug 31 21:43:46 2018] synth_1 finished
+wait_on_run: Time (s): cpu = 00:01:15 ; elapsed = 00:01:39 . Memory (MB): peak = 1281.875 ; gain = 0.000 ; free physical = 3980 ; free virtual = 9979
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k160tfbg484-1
+INFO: [Netlist 29-17] Analyzing 917 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/kernel_jacobi_2d_imper.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:25 . Memory (MB): peak = 1611.219 ; gain = 329.344 ; free physical = 3611 ; free virtual = 9611
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1611.219 ; gain = 0.000 ; free physical = 3606 ; free virtual = 9606
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 2109.801 ; gain = 498.582 ; free physical = 3213 ; free virtual = 9213
+INFO: [Timing 38-480] Writing timing data to binary archive.
+[Fri Aug 31 21:44:40 2018] Launched impl_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2161.965 ; gain = 52.164 ; free physical = 3199 ; free virtual = 9203
+[Fri Aug 31 21:44:40 2018] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log kernel_jacobi_2d_imper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_jacobi_2d_imper.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source kernel_jacobi_2d_imper.tcl -notrace
+Command: open_checkpoint /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1183.348 ; gain = 0.000 ; free physical = 3049 ; free virtual = 9053
+INFO: [Netlist 29-17] Analyzing 917 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.2 (64-bit) build 2258646
+open_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:46 . Memory (MB): peak = 1999.965 ; gain = 816.617 ; free physical = 2264 ; free virtual = 8269
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2034.980 ; gain = 35.016 ; free physical = 2257 ; free virtual = 8262
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: cb1781de
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2257 ; free virtual = 8262
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: ffe838ec
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.72 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2301 ; free virtual = 8306
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1a8feabbd
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2299 ; free virtual = 8304
+INFO: [Opt 31-389] Phase Constant propagation created 2650 cells and removed 5593 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1aa9e77d4
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2295 ; free virtual = 8303
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 85 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1aa9e77d4
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2295 ; free virtual = 8303
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 7655d7c9
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2297 ; free virtual = 8304
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 7655d7c9
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2291 ; free virtual = 8303
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2291 ; free virtual = 8303
+Ending Logic Optimization Task | Checksum: 7655d7c9
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2291 ; free virtual = 8303
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 7655d7c9
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2291 ; free virtual = 8303
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 7655d7c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2034.980 ; gain = 0.000 ; free physical = 2291 ; free virtual = 8303
+INFO: [Common 17-83] Releasing license: Implementation
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2034.980 ; gain = 35.016 ; free physical = 2291 ; free virtual = 8303
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2058.992 ; gain = 24.012 ; free physical = 2292 ; free virtual = 8311
+INFO: [runtcl-4] Executing : report_drc -file kernel_jacobi_2d_imper_drc_opted.rpt -pb kernel_jacobi_2d_imper_drc_opted.pb -rpx kernel_jacobi_2d_imper_drc_opted.rpx
+Command: report_drc -file kernel_jacobi_2d_imper_drc_opted.rpt -pb kernel_jacobi_2d_imper_drc_opted.pb -rpx kernel_jacobi_2d_imper_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2078.301 ; gain = 0.000 ; free physical = 2261 ; free virtual = 8278
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 3dcf8f61
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2078.301 ; gain = 0.000 ; free physical = 2261 ; free virtual = 8278
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2078.301 ; gain = 0.000 ; free physical = 2261 ; free virtual = 8278
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: eba5f6a0
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2078.301 ; gain = 0.000 ; free physical = 2256 ; free virtual = 8272
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 18b83800f
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2082.941 ; gain = 4.641 ; free physical = 2241 ; free virtual = 8257
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 18b83800f
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2082.941 ; gain = 4.641 ; free physical = 2241 ; free virtual = 8257
+Phase 1 Placer Initialization | Checksum: 18b83800f
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2082.941 ; gain = 4.641 ; free physical = 2240 ; free virtual = 8256
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 130fdade3
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2118.957 ; gain = 40.656 ; free physical = 2235 ; free virtual = 8251
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2126.961 ; gain = 0.000 ; free physical = 2224 ; free virtual = 8238
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1d9dcc247
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2224 ; free virtual = 8238
+Phase 2 Global Placement | Checksum: 188a246b4
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2225 ; free virtual = 8239
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 188a246b4
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2225 ; free virtual = 8239
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2456c56a9
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:11 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2220 ; free virtual = 8234
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 17ae30d8c
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2220 ; free virtual = 8234
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 188947416
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2220 ; free virtual = 8234
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 188947416
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2220 ; free virtual = 8234
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 1ab13cf2f
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2220 ; free virtual = 8233
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 1fba3c370
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2216 ; free virtual = 8229
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 21272bcf8
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2216 ; free virtual = 8229
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 21272bcf8
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2216 ; free virtual = 8229
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 2013664db
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:13 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2215 ; free virtual = 8229
+Phase 3 Detail Placement | Checksum: 2013664db
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:13 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2215 ; free virtual = 8229
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1f109167a
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1f109167a
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2224 ; free virtual = 8235
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.145. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1f20a265f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2223 ; free virtual = 8234
+Phase 4.1 Post Commit Optimization | Checksum: 1f20a265f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2223 ; free virtual = 8234
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1f20a265f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2224 ; free virtual = 8235
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1f20a265f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2224 ; free virtual = 8235
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 182381265
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2225 ; free virtual = 8236
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 182381265
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2225 ; free virtual = 8236
+Ending Placer Task | Checksum: dfac4142
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2245 ; free virtual = 8256
+INFO: [Common 17-83] Releasing license: Implementation
+50 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): peak = 2126.961 ; gain = 48.660 ; free physical = 2245 ; free virtual = 8256
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.80 . Memory (MB): peak = 2126.961 ; gain = 0.000 ; free physical = 2222 ; free virtual = 8247
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file kernel_jacobi_2d_imper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2126.961 ; gain = 0.000 ; free physical = 2224 ; free virtual = 8240
+INFO: [runtcl-4] Executing : report_utilization -file kernel_jacobi_2d_imper_utilization_placed.rpt -pb kernel_jacobi_2d_imper_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2126.961 ; gain = 0.000 ; free physical = 2234 ; free virtual = 8250
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file kernel_jacobi_2d_imper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2126.961 ; gain = 0.000 ; free physical = 2234 ; free virtual = 8250
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2126.961 ; gain = 0.000 ; free physical = 2236 ; free virtual = 8252
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.145 | TNS=-0.958 |
+Phase 1 Physical Synthesis Initialization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2126.961 ; gain = 0.000 ; free physical = 2226 ; free virtual = 8242
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.145 | TNS=-0.958 |
+
+Phase 2 Fanout Optimization
+INFO: [Physopt 32-76] Pass 1. Identified 21 candidate nets for fanout optimization.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q_0[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[28].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[32].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[2].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[49].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[27].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[31].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[45].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[46].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[23].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[5].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 4 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2146.957 ; gain = 0.000 ; free physical = 2221 ; free virtual = 8237
+Phase 2 Fanout Optimization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2221 ; free virtual = 8237
+
+Phase 3 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 10 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[54].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/RND_BIT_GEN/a_ip[2].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/RND_BIT_GEN/p_2_out
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/first_q[24].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/CARRY_IN.  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/first_q[20].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[20]
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q_0[53].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[53]
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ADDSUB/ADDSUB/Q_DEL/i_pipe/a_xor_b_sub[1].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ADDSUB/ADDSUB/Q_DEL/i_pipe/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/first_q[23].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]
+INFO: [Physopt 32-662] Processed net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/first_q[25].  Did not re-place instance kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/LOGIC.RND2/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[25]
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2146.957 ; gain = 0.000 ; free physical = 2222 ; free virtual = 8237
+Phase 3 Placement Based Optimization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 4 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring () optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 4 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2146.957 ; gain = 0.000 ; free physical = 2222 ; free virtual = 8237
+Phase 4 Rewire | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 5 Critical Cell Optimization
+INFO: [Physopt 32-46] Identified 27 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[26].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[7].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[8].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[25].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net i_1_reg_151[9]_i_1_n_4 was not replicated.
+INFO: [Physopt 32-571] Net i_reg_127[6] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_dEe_U4/kernel_jacobi_2d_dEe_DSP48_0_U/p_reg_reg_2 was not replicated.
+INFO: [Physopt 32-571] Net i_reg_127[2] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[24].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[47].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net i_reg_127[1] was not replicated.
+INFO: [Physopt 32-571] Net i_reg_127[0] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[21].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[37].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[34].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[30].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[44].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[40].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[39].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net i_reg_127[5] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[52].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[41].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[51].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-571] Net kernel_jacobi_2d_cud_U2/kernel_jacobi_2d_imper_ap_ddiv_57_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/Q_DEL/i_pipe/first_q[53] was not replicated.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 5 Critical Cell Optimization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 6 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 6 DSP Register Optimization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 7 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 7 BRAM Register Optimization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 8 URAM Register Optimization
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 8 URAM Register Optimization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 9 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 9 Shift Register Optimization | Checksum: 13d5fbd10
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 10 Critical Pin Optimization
+INFO: [Physopt 32-606] Identified 2 candidate nets for critical-pin optimization.
+INFO: [Physopt 32-608] Optimized 2 nets.  Swapped 19 pins.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 2 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 19 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.070 | TNS=-0.319 |
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2146.957 ; gain = 0.000 ; free physical = 2222 ; free virtual = 8237
+Phase 10 Critical Pin Optimization | Checksum: 1be1b3235
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 11 Very High Fanout Optimization
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 11 Very High Fanout Optimization | Checksum: 1be1b3235
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+
+Phase 12 BRAM Enable Optimization
+Phase 12 BRAM Enable Optimization | Checksum: 1be1b3235
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2222 ; free virtual = 8237
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2146.957 ; gain = 0.000 ; free physical = 2224 ; free virtual = 8240
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.070 | TNS=-0.319 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:02  |
+|  Placement Based    |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Rewire             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Cell      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register       |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register     |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Pin       |          0.075  |          0.640  |            0  |              0  |                     2  |           0  |           1  |  00:00:00  |
+|  Very High Fanout   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Enable        |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |          0.075  |          0.640  |            0  |              0  |                     2  |           0  |          11  |  00:00:03  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Physical Synthesis Task | Checksum: 1e6420641
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2224 ; free virtual = 8240
+INFO: [Common 17-83] Releasing license: Implementation
+137 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2146.957 ; gain = 19.996 ; free physical = 2230 ; free virtual = 8246
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.54 . Memory (MB): peak = 2146.957 ; gain = 0.000 ; free physical = 2225 ; free virtual = 8253
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: db5c5756 ConstDB: 0 ShapeSum: d25f6683 RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "ap_clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "ap_rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[37]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[37]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[63]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[63]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[63]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[63]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[34]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[34]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[42]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[42]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[58]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[58]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[32]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[32]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[36]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[36]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[36]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[36]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[37]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[37]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[46]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[46]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[46]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[46]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[61]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[61]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[61]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[61]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[39]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[39]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[39]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[39]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[54]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[54]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[54]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[54]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[56]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[56]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[56]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[56]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[34]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[34]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[40]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[40]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[40]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[40]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[42]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[42]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[44]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[44]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[44]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[44]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[32]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[32]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[38]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[38]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[38]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[38]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[33]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[33]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[60]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[60]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[33]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[33]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[49]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[49]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[49]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[49]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[51]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[51]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[51]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[51]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[58]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[58]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[47]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[47]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[47]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[47]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[53]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[53]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[53]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[53]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[62]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[62]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[62]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[62]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q1[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q1[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A_q0[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A_q0[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+INFO: [Common 17-14] Message 'Route 35-198' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1 Build RT Design | Checksum: b7547dc5
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2312.781 ; gain = 165.824 ; free physical = 2027 ; free virtual = 8048
+Post Restoration Checksum: NetGraph: 7393b25f NumContArr: 43c0cb66 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: b7547dc5
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2312.781 ; gain = 165.824 ; free physical = 2027 ; free virtual = 8048
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: b7547dc5
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2328.781 ; gain = 181.824 ; free physical = 2009 ; free virtual = 8030
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: b7547dc5
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2328.781 ; gain = 181.824 ; free physical = 2009 ; free virtual = 8030
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1c92cead3
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 2006 ; free virtual = 8028
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.015  | TNS=0.000  | WHS=0.057  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 1983db459
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 2002 ; free virtual = 8024
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1699b2d7a
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1997 ; free virtual = 8018
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 280
+ Number of Nodes with overlaps = 57
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.178 | TNS=-0.827 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 10a5b9a41
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:22 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1990 ; free virtual = 8011
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.103 | TNS=-0.976 | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1c36644f7
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1990 ; free virtual = 8011
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.090 | TNS=-0.299 | WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 176d1c43d
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1990 ; free virtual = 8011
+Phase 4 Rip-up And Reroute | Checksum: 176d1c43d
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1990 ; free virtual = 8011
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 176d1c43d
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1990 ; free virtual = 8012
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.090 | TNS=-0.299 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 16ae86da5
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 16ae86da5
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+Phase 5 Delay and Skew Optimization | Checksum: 16ae86da5
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1bb3a4eac
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.090 | TNS=-0.299 | WHS=0.083  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1bb3a4eac
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+Phase 6 Post Hold Fix | Checksum: 1bb3a4eac
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.540906 %
+  Global Horizontal Routing Utilization  = 0.6211 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 59.4595%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 52.2523%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 50%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 41.1765%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 17e0e108d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 17e0e108d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:24 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1987 ; free virtual = 8008
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 17067064b
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1987 ; free virtual = 8008
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.090 | TNS=-0.299 | WHS=0.083  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 17067064b
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 1988 ; free virtual = 8009
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 2014 ; free virtual = 8035
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+154 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:26 . Memory (MB): peak = 2340.602 ; gain = 193.645 ; free physical = 2014 ; free virtual = 8035
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.57 . Memory (MB): peak = 2340.602 ; gain = 0.000 ; free physical = 1994 ; free virtual = 8029
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file kernel_jacobi_2d_imper_drc_routed.rpt -pb kernel_jacobi_2d_imper_drc_routed.pb -rpx kernel_jacobi_2d_imper_drc_routed.rpx
+Command: report_drc -file kernel_jacobi_2d_imper_drc_routed.rpt -pb kernel_jacobi_2d_imper_drc_routed.pb -rpx kernel_jacobi_2d_imper_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file kernel_jacobi_2d_imper_methodology_drc_routed.rpt -pb kernel_jacobi_2d_imper_methodology_drc_routed.pb -rpx kernel_jacobi_2d_imper_methodology_drc_routed.rpx
+Command: report_methodology -file kernel_jacobi_2d_imper_methodology_drc_routed.rpt -pb kernel_jacobi_2d_imper_methodology_drc_routed.pb -rpx kernel_jacobi_2d_imper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-2d-imper/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_jacobi_2d_imper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file kernel_jacobi_2d_imper_power_routed.rpt -pb kernel_jacobi_2d_imper_power_summary_routed.pb -rpx kernel_jacobi_2d_imper_power_routed.rpx
+Command: report_power -file kernel_jacobi_2d_imper_power_routed.rpt -pb kernel_jacobi_2d_imper_power_summary_routed.pb -rpx kernel_jacobi_2d_imper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+166 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file kernel_jacobi_2d_imper_route_status.rpt -pb kernel_jacobi_2d_imper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file kernel_jacobi_2d_imper_timing_summary_routed.rpt -pb kernel_jacobi_2d_imper_timing_summary_routed.pb -rpx kernel_jacobi_2d_imper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file kernel_jacobi_2d_imper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file kernel_jacobi_2d_imper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file kernel_jacobi_2d_imper_bus_skew_routed.rpt -pb kernel_jacobi_2d_imper_bus_skew_routed.pb -rpx kernel_jacobi_2d_imper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 21:47:14 2018...
+[Fri Aug 31 21:47:14 2018] impl_1 finished
+wait_on_run: Time (s): cpu = 00:03:11 ; elapsed = 00:02:34 . Memory (MB): peak = 2165.965 ; gain = 4.000 ; free physical = 3186 ; free virtual = 9218
+INFO: [Netlist 29-17] Analyzing 917 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2321.285 ; gain = 0.000 ; free physical = 3032 ; free virtual = 9065
+Restored from archive | CPU: 0.410000 secs | Memory: 8.381210 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2321.285 ; gain = 0.000 ; free physical = 3032 ; free virtual = 9065
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  SRLC32E => SRL16E: 16 instances
+
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_utilization: Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.65 . Memory (MB): peak = 2397.312 ; gain = 65.027 ; free physical = 3011 ; free virtual = 9044
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             fir_prj
+Solution:            classic
+Device target:       xc7k160tfbg484-1
+Report date:         Fri Aug 31 21:47:20 CEST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:         1415
+LUT:           4253
+FF:            5214
+DSP:              4
+BRAM:             0
+SRL:            132
+#=== Final timing ===
+CP required:    2.500
+CP achieved post-synthesis:    2.990
+CP achieved post-implementation:    2.590
+Timing not met
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 21:47:20 2018...

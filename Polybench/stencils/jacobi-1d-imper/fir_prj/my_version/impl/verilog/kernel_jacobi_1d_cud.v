@@ -10,69 +10,75 @@
 
 module kernel_jacobi_1d_cud
 #(parameter
-    ID         = 16,
-    NUM_STAGE  = 5,
-    din0_WIDTH = 64,
-    din1_WIDTH = 64,
-    dout_WIDTH = 64
+    ID = 1,             // core ID, unused in RTL
+    din0_WIDTH = 52,   // data bitwidth
+    din1_WIDTH = 52,     // shift control bitwidth
+    dout_WIDTH = 52,   // output bitwidth
+    OP = 1,             // opcode: 0-shl, 1-lshr, 2-ashr
+    NUM_STAGE = 7       // stage number
 )(
     input  wire                  clk,
     input  wire                  reset,
     input  wire                  ce,
     input  wire [din0_WIDTH-1:0] din0,
-    input  wire [din1_WIDTH-1:0] din1,
-    output wire [dout_WIDTH-1:0] dout
+    input  wire [din0_WIDTH-1:0] din1,
+    output reg  [dout_WIDTH-1:0] dout
 );
+
+//------------------------Parameter----------------------
+localparam K = 1+((din1_WIDTH - 1)/NUM_STAGE);
+localparam LATENCY = NUM_STAGE -1;
+
 //------------------------Local signal-------------------
-wire                  aclk;
-wire                  aclken;
-wire                  a_tvalid;
-wire [63:0]           a_tdata;
-wire                  b_tvalid;
-wire [63:0]           b_tdata;
-wire                  r_tvalid;
-wire [63:0]           r_tdata;
-reg  [din0_WIDTH-1:0] din0_buf1;
-reg  [din1_WIDTH-1:0] din1_buf1;
-reg                   ce_r;
-wire [dout_WIDTH-1:0] dout_i;
-reg  [dout_WIDTH-1:0] dout_r;
-//------------------------Instantiation------------------
-kernel_jacobi_1d_imper_ap_dadd_3_full_dsp_64 kernel_jacobi_1d_imper_ap_dadd_3_full_dsp_64_u (
-    .aclk                 ( aclk ),
-    .aclken               ( aclken ),
-    .s_axis_a_tvalid      ( a_tvalid ),
-    .s_axis_a_tdata       ( a_tdata ),
-    .s_axis_b_tvalid      ( b_tvalid ),
-    .s_axis_b_tdata       ( b_tdata ),
-    .m_axis_result_tvalid ( r_tvalid ),
-    .m_axis_result_tdata  ( r_tdata )
-);
+reg  [dout_WIDTH-1:0] dout_array[LATENCY-1:0];
+reg  [din1_WIDTH-1:0] din1_cast_array[LATENCY-1:0];
+wire [din1_WIDTH-1:0] din1_cast;
+wire [din1_WIDTH-1:0] din1_mask;
+
 //------------------------Body---------------------------
-assign aclk     = clk;
-assign aclken   = ce_r;
-assign a_tvalid = 1'b1;
-assign a_tdata  = din0_buf1;
-assign b_tvalid = 1'b1;
-assign b_tdata  = din1_buf1;
-assign dout_i   = r_tdata;
-
 always @(posedge clk) begin
-    if (ce) begin
-        din0_buf1 <= din0;
-        din1_buf1 <= din1;
+    if (reset == 1'b1) begin
+        dout_array[0] <= {din0_WIDTH{1'b0}};
+        din1_cast_array[0] <= {din1_WIDTH{1'b0}};
+    end else if (ce) begin
+        case (OP)
+            0: dout_array[0] <= din0<<(din1_cast&(din1_mask<<(LATENCY*K)));
+            1: dout_array[0] <= din0>>(din1_cast&(din1_mask<<(LATENCY*K)));
+            2: dout_array[0] <= $signed(din0)>>>(din1_cast&(din1_mask<<(LATENCY*K)));
+            default: dout_array[0] <= dout_array[0];
+        endcase
+        din1_cast_array[0] <= din1_cast;
     end
 end
 
-always @ (posedge clk) begin
-    ce_r <= ce;
-end
-
-always @ (posedge clk) begin
-    if (ce_r) begin
-        dout_r <= dout_i;
+genvar i;
+generate for (i=1; i<LATENCY; i=i+1) begin:pipeshift
+    always @(posedge clk) begin
+        if (reset == 1'b1) begin
+            dout_array[i] <= {din0_WIDTH{1'b0}};
+            din1_cast_array[i] <= {din1_WIDTH{1'b0}};
+        end else if (ce) begin
+            case (OP)
+                0: dout_array[i] <= dout_array[i-1]<<(din1_cast_array[i-1]&(din1_mask<<((LATENCY-i)*K)));
+                1: dout_array[i] <= dout_array[i-1]>>(din1_cast_array[i-1]&(din1_mask<<((LATENCY-i)*K)));
+                2: dout_array[i] <= $signed(dout_array[i-1])>>>(din1_cast_array[i-1]&(din1_mask<<((LATENCY-i)*K)));
+                default: dout_array[i] <= dout_array[i];
+            endcase
+            din1_cast_array[i] <= din1_cast_array[i-1];
+        end
     end
+end endgenerate
+
+always @(*) begin
+    case (OP)
+        0: dout = dout_array[LATENCY-1]<<(din1_cast_array[LATENCY-1]&din1_mask);
+        1: dout = dout_array[LATENCY-1]>>(din1_cast_array[LATENCY-1]&din1_mask);
+        2: dout = $signed(dout_array[LATENCY-1])>>>(din1_cast_array[LATENCY-1]&din1_mask);
+        default: dout = {dout_WIDTH{1'b0}};
+    endcase
 end
 
-assign dout = ce_r?dout_i:dout_r;
+assign din1_mask = {{(din1_WIDTH-K){1'b0}},{K{1'b1}}};
+assign din1_cast = $unsigned(din1[din1_WIDTH-1:0]);
+
 endmodule

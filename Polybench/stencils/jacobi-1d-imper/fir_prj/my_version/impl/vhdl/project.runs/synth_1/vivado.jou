@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Aug  7 14:04:24 2018
-# Process ID: 31778
-# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/impl/vhdl/project.runs/synth_1
-# Command line: vivado -log kernel_jacobi_1d_imper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_1d_imper.tcl
-# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/impl/vhdl/project.runs/synth_1/kernel_jacobi_1d_imper.vds
-# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/classique/impl/vhdl/project.runs/synth_1/vivado.jou
+# Start of session at: Fri Aug 31 20:45:51 2018
+# Process ID: 28808
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log kernel_jacobi_1d_imper_optimized.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel_jacobi_1d_imper_optimized.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1/kernel_jacobi_1d_imper_optimized.vds
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/jacobi-1d-imper/fir_prj/my_version/impl/vhdl/project.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source kernel_jacobi_1d_imper.tcl -notrace
+source kernel_jacobi_1d_imper_optimized.tcl -notrace

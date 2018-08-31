@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="operator_double_div5" xd:componentRef="operator_double_div5" xd:initiationInterval="2" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="operator_double_div5" xd:componentRef="operator_double_div5" xd:initiationInterval="69" xd:clockPeriod="2.500" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:returnValue xd:interfaceRef="ap_return" xd:busTypeRef="register" xd:dataWidth="64"/>
   <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
   <xd:arg xd:name="in" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="64"/>
-  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
-  <xd:resourceEstimates xd:LUT="18895" xd:FF="122" xd:BRAM="0" xd:DSP="0"/>
+  <xd:latencyEstimates xd:best-case="68" xd:worst-case="68" xd:average-case="68"/>
+  <xd:resourceEstimates xd:LUT="1684" xd:FF="1499" xd:BRAM="0" xd:DSP="0"/>
 </xd:acceleratorMap>

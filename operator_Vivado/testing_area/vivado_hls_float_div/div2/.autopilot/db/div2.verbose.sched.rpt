@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'div2'
 ================================================================
-* Date:           Fri Aug  3 16:43:49 2018
+* Date:           Fri Aug 31 12:02:39 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        vivado_hls_float_div
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  12.00|     9.943|        1.50|
+    |ap_clk  |   2.50|     1.983|        0.31|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |    1|    1|    1|    1|   none  |
+    |    7|    7|    7|    7|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -65,7 +65,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 2
+* Number of FSM states : 8
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -73,35 +73,88 @@ IsGatedGlobalClock: 0
 1 --> 
 	2  / true
 2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 9.94>
-ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%a_read = call float @_ssdm_op_Read.ap_auto.float(float %a) nounwind"   --->   Operation 3 'read' 'a_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 4 [2/2] (9.94ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:4]   --->   Operation 4 'fmul' 'tmp' <Predicate = true> <Delay = 9.94> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 1> <II = 1> <Delay = 9.94> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 1 <SV = 0> <Delay = 1.98>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%a_read = call float @_ssdm_op_Read.ap_auto.float(float %a) nounwind"   --->   Operation 9 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [8/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 10 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 2 <SV = 1> <Delay = 9.94>
-ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %a) nounwind, !map !8"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float 0.000000e+00) nounwind, !map !14"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @div2_str) nounwind"   --->   Operation 7 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [test.cpp:3]   --->   Operation 8 'speclatency' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 9 [1/2] (9.94ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:4]   --->   Operation 9 'fmul' 'tmp' <Predicate = true> <Delay = 9.94> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 1> <II = 1> <Delay = 9.94> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 10 [1/1] (0.00ns)   --->   "ret float %tmp" [test.cpp:4]   --->   Operation 10 'ret' <Predicate = true> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 1.98>
+ST_2 : Operation 11 [7/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 11 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.98>
+ST_3 : Operation 12 [6/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 12 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.98>
+ST_4 : Operation 13 [5/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 13 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.98>
+ST_5 : Operation 14 [4/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 14 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.98>
+ST_6 : Operation 15 [3/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 15 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.98>
+ST_7 : Operation 16 [2/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 16 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 1.98>
+ST_8 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %a) nounwind, !map !8"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float 0.000000e+00) nounwind, !map !14"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @div2_str) nounwind"   --->   Operation 19 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 20 [1/8] (1.98ns)   --->   "%tmp = fmul float %a_read, 5.000000e-01" [test.cpp:3]   --->   Operation 20 'fmul' 'tmp' <Predicate = true> <Delay = 1.98> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 21 [1/1] (0.00ns)   --->   "ret float %tmp" [test.cpp:3]   --->   Operation 21 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 12ns, clock uncertainty: 1.5ns.
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
 
- <State 1>: 9.94ns
+ <State 1>: 1.98ns
 The critical path consists of the following:
 	wire read on port 'a' [5]  (0 ns)
-	'fmul' operation ('tmp', test.cpp:4) [7]  (9.94 ns)
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
 
- <State 2>: 9.94ns
+ <State 2>: 1.98ns
 The critical path consists of the following:
-	'fmul' operation ('tmp', test.cpp:4) [7]  (9.94 ns)
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
+
+ <State 3>: 1.98ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
+
+ <State 4>: 1.98ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
+
+ <State 5>: 1.98ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
+
+ <State 6>: 1.98ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
+
+ <State 7>: 1.98ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
+
+ <State 8>: 1.98ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', test.cpp:3) [6]  (1.98 ns)
 
 
 ============================================================
@@ -114,6 +167,12 @@ N/A
   - Chain level:
 	State 1
 	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
 
 
 ============================================================

@@ -21,7 +21,7 @@ set C_modelArgList {
 	{ ex double 64 regular {array 1000000 { 2 1 } 3 1 }  }
 	{ ey double 64 regular {array 1000000 { 2 3 } 3 1 }  }
 	{ hz double 64 regular {array 1000000 { 1 2 } 3 1 }  }
-	{ p_fict_s double 64 regular {array 50 { 1 3 } 1 1 }  }
+	{ p_fict_s double 64 regular {array 50 { 1 3 } 2 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "tmax", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "tmax","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
@@ -110,7 +110,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3645251601", "EstimateLatencyMax" : "3645251601",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "9437403751", "EstimateLatencyMax" : "9437403751",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -137,16 +137,16 @@ set ArgLastReadFirstWriteLatency {
 		tmax {Type I LastRead -1 FirstWrite -1}
 		nx {Type I LastRead -1 FirstWrite -1}
 		ny {Type I LastRead -1 FirstWrite -1}
-		ex {Type IO LastRead 15 FirstWrite 24}
-		ey {Type IO LastRead 16 FirstWrite 3}
-		hz {Type IO LastRead 26 FirstWrite 35}
+		ex {Type IO LastRead 39 FirstWrite 57}
+		ey {Type IO LastRead 42 FirstWrite 5}
+		hz {Type IO LastRead 72 FirstWrite 90}
 		p_fict_s {Type I LastRead 2 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3645251601", "Max" : "3645251601"}
-	, {"Name" : "Interval", "Min" : "-649715694", "Max" : "-649715694"}
+	{"Name" : "Latency", "Min" : "9437403751", "Max" : "9437403751"}
+	, {"Name" : "Interval", "Min" : "847469160", "Max" : "847469160"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -182,4 +182,5 @@ set memoryLoadLatencyList {
 	{ ex 3 }
 	{ ey 3 }
 	{ hz 3 }
+	{ p_fict_s 2 }
 }

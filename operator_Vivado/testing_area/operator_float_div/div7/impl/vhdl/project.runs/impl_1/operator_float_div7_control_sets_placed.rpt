@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Fri Aug  3 10:35:06 2018
+| Date         : Fri Aug 31 16:04:25 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file operator_float_div7_control_sets_placed.rpt
 | Design       : operator_float_div7
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     3 |
-| Unused register locations in slices containing registers |    14 |
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    24 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,9 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|    16+ |            3 |
+|      8 |            1 |
+|     12 |            2 |
+|    16+ |            9 |
 +--------+--------------+
 
 
@@ -44,24 +46,33 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              50 |           14 |
+| No           | No                    | No                     |              54 |           13 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              80 |           13 |
+| No           | Yes                   | No                     |             324 |           45 |
+| Yes          | No                    | No                     |             298 |           48 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              36 |            7 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------+------------------------------+------------------+------------------+----------------+
-| Clock Signal |         Enable Signal        | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------+------------------------------+------------------+------------------+----------------+
-|  ap_clk      | ap_NS_fsm1                   |                  |                4 |             20 |
-|  ap_clk      |                              |                  |               14 |             50 |
-|  ap_clk      | agg_result_V_i2_i1_reg_78620 |                  |                9 |             60 |
-+--------------+------------------------------+------------------+------------------+----------------+
++--------------+------------------------------------------------------------+------------------------------+------------------+----------------+
+| Clock Signal |                        Enable Signal                       |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------------------------+------------------------------+------------------+----------------+
+|  ap_clk      | ap_CS_fsm_state8                                           | xf_V_reg_588[23]             |                2 |              8 |
+|  ap_clk      | grp_lut_div7_chunk_fu_102/q2_U/lut_div7_chunk_q2_rom_U/ce0 |                              |                4 |             12 |
+|  ap_clk      | ap_CS_fsm_state3                                           | shift_V_4_reg_547[7]_i_1_n_0 |                2 |             12 |
+|  ap_clk      | ap_CS_fsm_state2                                           | shift_V_3_reg_542            |                3 |             16 |
+|  ap_clk      | ap_CS_fsm_state3                                           |                              |                5 |             22 |
+|  ap_clk      | ap_CS_fsm_state8                                           |                              |                7 |             46 |
+|  ap_clk      | tmp_2_reg_5780                                             |                              |                6 |             46 |
+|  ap_clk      |                                                            |                              |               13 |             54 |
+|  ap_clk      | ap_CS_fsm_state9                                           |                              |                8 |             54 |
+|  ap_clk      | tmp_13_reg_5830                                            |                              |                8 |             54 |
+|  ap_clk      | ap_NS_fsm115_out                                           |                              |               10 |             64 |
+|  ap_clk      |                                                            | ap_rst                       |               45 |            324 |
++--------------+------------------------------------------------------------+------------------------------+------------------+----------------+
 
 

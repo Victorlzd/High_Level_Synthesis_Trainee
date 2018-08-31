@@ -4,10 +4,10 @@ set id 1
 set name kernel_fdtd_2d_dabkb
 set corename simcore_dadddsub
 set op dadddsub
-set stage_num 5
+set stage_num 14
 set max_latency -1
 set registered_input 1
-set impl_style full_dsp
+set impl_style no_dsp
 set Futype4reduceCEFanout 1
 set clk_width 1
 set clk_signed 0
@@ -62,7 +62,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 set op dadddsub
-set corename DAddSub
+set corename DAddSub_nodsp
 if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
@@ -101,7 +101,7 @@ set id 2
 set name kernel_fdtd_2d_dmcud
 set corename simcore_dmul
 set op dmul
-set stage_num 5
+set stage_num 18
 set max_latency -1
 set registered_input 1
 set impl_style max_dsp
@@ -192,13 +192,19 @@ set id 3
 set name kernel_fdtd_2d_mudEe
 set corename simcore_mul
 set op mul
-set stage_num 1
+set stage_num 4
 set max_latency -1
 set registered_input 1
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
 set in0_width 10
 set in0_signed 0
 set in1_width 11
 set in1_signed 0
+set ce_width 1
+set ce_signed 0
 set out_width 20
 set exp i0*i1
 set arg_lists {i0 {10 0 +} i1 {11 0 +} p {20 0 +} acc {0} }
@@ -216,10 +222,16 @@ eval "ap_gen_simcore_mul { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
     out_width ${out_width} \
     exp ${exp} \
     arg_lists {${arg_lists}} \
@@ -250,10 +262,16 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
     out_width ${out_width} \
     exp ${exp} \
     arg_lists {${arg_lists}} \

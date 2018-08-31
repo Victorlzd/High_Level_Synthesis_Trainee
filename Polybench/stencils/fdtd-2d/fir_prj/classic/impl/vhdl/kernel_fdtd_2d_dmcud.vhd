@@ -11,7 +11,7 @@ use ieee.std_logic_1164.all;
 entity kernel_fdtd_2d_dmcud is
     generic (
         ID         : integer := 2;
-        NUM_STAGE  : integer := 5;
+        NUM_STAGE  : integer := 18;
         din0_WIDTH : integer := 64;
         din1_WIDTH : integer := 64;
         dout_WIDTH : integer := 64
@@ -28,7 +28,7 @@ end entity;
 
 architecture arch of kernel_fdtd_2d_dmcud is
     --------------------- Component ---------------------
-    component kernel_fdtd_2d_ap_dmul_3_max_dsp_64 is
+    component kernel_fdtd_2d_ap_dmul_16_max_dsp_64 is
         port (
             aclk                 : in  std_logic;
             aclken               : in  std_logic;
@@ -56,7 +56,7 @@ architecture arch of kernel_fdtd_2d_dmcud is
     signal dout_r    : std_logic_vector(dout_WIDTH-1 downto 0);
 begin
     --------------------- Instantiation -----------------
-    kernel_fdtd_2d_ap_dmul_3_max_dsp_64_u : component kernel_fdtd_2d_ap_dmul_3_max_dsp_64
+    kernel_fdtd_2d_ap_dmul_16_max_dsp_64_u : component kernel_fdtd_2d_ap_dmul_16_max_dsp_64
     port map (
         aclk                 => aclk,
         aclken               => aclken,

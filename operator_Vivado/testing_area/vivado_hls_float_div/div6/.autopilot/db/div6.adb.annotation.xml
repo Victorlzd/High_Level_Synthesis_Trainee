@@ -1,7 +1,0 @@
-<annotationInfo>
-<item  id="7" filename="test.cpp" linenumber="4" name="tmp" contextFuncName="div2" moduleName="div2" rtlName="div2_fmul_32ns_32bkb_U1" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"&gt;&lt;\/item&gt;
-<item  id="7" filename="test.cpp" linenumber="10" name="tmp" contextFuncName="div3" moduleName="div3" rtlName="div3_fdiv_32ns_32bkb_U1" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"&gt;&lt;\/item&gt;
-<item  id="7" filename="test.cpp" linenumber="16" name="tmp" contextFuncName="div4" moduleName="div4" rtlName="div4_fmul_32ns_32bkb_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"&gt;&lt;\/item&gt;
-<item  id="7" filename="test.cpp" linenumber="22" name="tmp" contextFuncName="div5" moduleName="div5" rtlName="div5_fdiv_32ns_32bkb_U1" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"&gt;&lt;\/item&gt;
-<item  id="7" filename="test.cpp" linenumber="28" name="tmp" contextFuncName="div6" moduleName="div6" rtlName="div6_fdiv_32ns_32bkb_U1" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area"><\/item>
-</annotationInfo>

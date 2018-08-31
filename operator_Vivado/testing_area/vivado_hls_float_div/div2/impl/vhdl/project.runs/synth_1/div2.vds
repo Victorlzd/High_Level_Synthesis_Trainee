@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Aug  3 16:44:16 2018
-# Process ID: 17560
+# Start of session at: Fri Aug 31 12:03:06 2018
+# Process ID: 28321
 # Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.runs/synth_1
 # Command line: vivado -log div2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source div2.tcl
 # Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.runs/synth_1/div2.vds
@@ -15,28 +15,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17578 
+INFO: Helper process launched with PID 28337 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1292.305 ; gain = 82.895 ; free physical = 1651 ; free virtual = 9011
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1292.816 ; gain = 82.895 ; free physical = 1690 ; free virtual = 9704
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'div2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:25]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:38]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:41]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:44]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:47]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:50]
 	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter NUM_STAGE bound to: 8 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'div2_fmul_32ns_32bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2_fmul_32ns_32bkb.vhd:11' bound to instance 'div2_fmul_32ns_32bkb_U1' of component 'div2_fmul_32ns_32bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:67]
+INFO: [Synth 8-3491] module 'div2_fmul_32ns_32bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2_fmul_32ns_32bkb.vhd:11' bound to instance 'div2_fmul_32ns_32bkb_U1' of component 'div2_fmul_32ns_32bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:73]
 INFO: [Synth 8-638] synthesizing module 'div2_fmul_32ns_32bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2_fmul_32ns_32bkb.vhd:29]
 	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter NUM_STAGE bound to: 8 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'div2_ap_fmul_0_max_dsp_32' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_0_max_dsp_32/synth/div2_ap_fmul_0_max_dsp_32.vhd:59' bound to instance 'div2_ap_fmul_0_max_dsp_32_u' of component 'div2_ap_fmul_0_max_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2_fmul_32ns_32bkb.vhd:55]
-INFO: [Synth 8-638] synthesizing module 'div2_ap_fmul_0_max_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_0_max_dsp_32/synth/div2_ap_fmul_0_max_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'div2_ap_fmul_6_max_dsp_32' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_6_max_dsp_32/synth/div2_ap_fmul_6_max_dsp_32.vhd:59' bound to instance 'div2_ap_fmul_6_max_dsp_32_u' of component 'div2_ap_fmul_6_max_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2_fmul_32ns_32bkb.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'div2_ap_fmul_6_max_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_6_max_dsp_32/synth/div2_ap_fmul_6_max_dsp_32.vhd:72]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_HAS_ADD bound to: 0 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -65,7 +65,7 @@ INFO: [Synth 8-638] synthesizing module 'div2_ap_fmul_0_max_dsp_32' [/home/duaze
 	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
 	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
-	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 6 - type: integer 
 	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
 	Parameter C_MULT_USAGE bound to: 3 - type: integer 
 	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
@@ -79,7 +79,7 @@ INFO: [Synth 8-638] synthesizing module 'div2_ap_fmul_0_max_dsp_32' [/home/duaze
 	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
 	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
 	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
-	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
 	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
 	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
 	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
@@ -107,36 +107,35 @@ INFO: [Synth 8-638] synthesizing module 'div2_ap_fmul_0_max_dsp_32' [/home/duaze
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_0_max_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_0_max_dsp_32/synth/div2_ap_fmul_0_max_dsp_32.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'div2_ap_fmul_0_max_dsp_32' (16#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_0_max_dsp_32/synth/div2_ap_fmul_0_max_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_6_max_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_6_max_dsp_32/synth/div2_ap_fmul_6_max_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'div2_ap_fmul_6_max_dsp_32' (16#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.srcs/sources_1/ip/div2_ap_fmul_6_max_dsp_32/synth/div2_ap_fmul_6_max_dsp_32.vhd:72]
 INFO: [Synth 8-256] done synthesizing module 'div2_fmul_32ns_32bkb' (17#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2_fmul_32ns_32bkb.vhd:29]
 INFO: [Synth 8-256] done synthesizing module 'div2' (18#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/div2.vhd:25]
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
-WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port CLK
-WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port CE
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CLK
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CE
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SCLR
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SSET
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CLK
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CE
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SCLR
@@ -152,68 +151,69 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnec
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port SCLR
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port SSET
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port SINIT
-WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized1 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SINIT
 WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port CE
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SCLR
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SSET
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port CE
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SCLR
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SSET
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized0 has unconnected port CARRYS_OUT[2]
+WARNING: [Synth 8-3331] design carry_chain__parameterized0 has unconnected port CARRYS_OUT[1]
+WARNING: [Synth 8-3331] design carry_chain__parameterized0 has unconnected port CARRYS_OUT[0]
 WARNING: [Synth 8-3331] design compare_eq_im has unconnected port CARRYS_OUT[0]
 WARNING: [Synth 8-3331] design special_detect has unconnected port A[31]
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SINIT
-WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized0 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CE
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1385.930 ; gain = 176.520 ; free physical = 1645 ; free virtual = 9008
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1387.441 ; gain = 177.520 ; free physical = 1679 ; free virtual = 9701
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -226,12 +226,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1385.930 ; gain = 176.520 ; free physical = 1646 ; free virtual = 9009
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1387.441 ; gain = 177.520 ; free physical = 1681 ; free virtual = 9702
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1385.930 ; gain = 176.520 ; free physical = 1646 ; free virtual = 9009
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1387.441 ; gain = 177.520 ; free physical = 1681 ; free virtual = 9702
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7k160tfbg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -245,25 +245,26 @@ Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 3 instances were transformed.
+  FDE => FDRE: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1623.430 ; gain = 0.000 ; free physical = 1363 ; free virtual = 8732
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1623.934 ; gain = 0.000 ; free physical = 1415 ; free virtual = 9433
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1623.430 ; gain = 414.020 ; free physical = 1446 ; free virtual = 8811
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 1623.934 ; gain = 414.012 ; free physical = 1495 ; free virtual = 9513
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1623.430 ; gain = 414.020 ; free physical = 1446 ; free virtual = 8811
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 1623.934 ; gain = 414.012 ; free physical = 1495 ; free virtual = 9513
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for div2_fmul_32ns_32bkb_U1/div2_ap_fmul_0_max_dsp_32_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1623.430 ; gain = 414.020 ; free physical = 1445 ; free virtual = 8811
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 1623.934 ; gain = 414.012 ; free physical = 1497 ; free virtual = 9515
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
@@ -276,10 +277,10 @@ INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.430 ; gain = 414.020 ; free physical = 1437 ; free virtual = 8803
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 1623.934 ; gain = 414.012 ; free physical = 1488 ; free virtual = 9506
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_0_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_0_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
-INFO: [Synth 8-223] decloning instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_0_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_0_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -385,8 +386,19 @@ WARNING: [Synth 8-3332] Sequential element (div2_fmul_32ns_32bkb_U1/dout_r_reg[2
 WARNING: [Synth 8-3332] Sequential element (div2_fmul_32ns_32bkb_U1/dout_r_reg[1]) is unused and will be removed from module div2.
 WARNING: [Synth 8-3332] Sequential element (div2_fmul_32ns_32bkb_U1/dout_r_reg[0]) is unused and will be removed from module div2.
 WARNING: [Synth 8-3332] Sequential element (div2_fmul_32ns_32bkb_U1/din1_buf1_reg[31]) is unused and will be removed from module div2.
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div2_fmul_32ns_32bkb_U1/div2_ap_fmul_6_max_dsp_32_u /U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:42 . Memory (MB): peak = 1639.445 ; gain = 430.035 ; free physical = 1422 ; free virtual = 8789
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 1639.949 ; gain = 430.027 ; free physical = 1477 ; free virtual = 9497
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -398,13 +410,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 1697.445 ; gain = 488.035 ; free physical = 1224 ; free virtual = 8613
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:51 . Memory (MB): peak = 1687.949 ; gain = 478.027 ; free physical = 1269 ; free virtual = 9300
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 1708.461 ; gain = 499.051 ; free physical = 1223 ; free virtual = 8611
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:51 . Memory (MB): peak = 1688.949 ; gain = 479.027 ; free physical = 1268 ; free virtual = 9299
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -416,7 +428,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1222 ; free virtual = 8609
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -440,7 +452,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1221 ; free virtual = 8610
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -453,7 +465,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1221 ; free virtual = 8610
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -465,25 +477,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1220 ; free virtual = 8610
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1220 ; free virtual = 8610
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1220 ; free virtual = 8610
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1220 ; free virtual = 8610
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -502,36 +514,40 @@ Report Cell Usage:
 |1     |DSP48E1   |     1|
 |2     |DSP48E1_1 |     1|
 |3     |DSP48E1_2 |     1|
-|4     |LUT2      |    33|
-|5     |LUT3      |     2|
-|6     |LUT4      |     9|
-|7     |LUT5      |    16|
-|8     |LUT6      |    45|
+|4     |LUT2      |    20|
+|5     |LUT3      |     5|
+|6     |LUT4      |     6|
+|7     |LUT5      |    18|
+|8     |LUT6      |    43|
 |9     |MUXCY     |    16|
-|10    |XORCY     |     8|
-|11    |FDRE      |    34|
+|10    |SRL16E    |     1|
+|11    |XORCY     |     9|
+|12    |FDE       |     3|
+|13    |FDRE      |   164|
+|14    |FDSE      |     1|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.469 ; gain = 500.059 ; free physical = 1220 ; free virtual = 8610
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1708.980 ; gain = 499.059 ; free physical = 1266 ; free virtual = 9297
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 87 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1709.469 ; gain = 262.559 ; free physical = 1286 ; free virtual = 8676
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1709.477 ; gain = 500.059 ; free physical = 1286 ; free virtual = 8676
+Synthesis finished with 0 errors, 0 critical warnings and 86 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1708.980 ; gain = 262.566 ; free physical = 1331 ; free virtual = 9362
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:52 . Memory (MB): peak = 1708.988 ; gain = 499.059 ; free physical = 1331 ; free virtual = 9362
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 4 instances
+  A total of 8 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 5 instances
+  FDE => FDRE: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-78 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
+89 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:54 . Memory (MB): peak = 1709.477 ; gain = 511.625 ; free physical = 1291 ; free virtual = 8681
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:52 . Memory (MB): peak = 1708.988 ; gain = 510.625 ; free physical = 1332 ; free virtual = 9363
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div2/impl/vhdl/project.runs/synth_1/div2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file div2_utilization_synth.rpt -pb div2_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1733.480 ; gain = 0.000 ; free physical = 1287 ; free virtual = 8682
-INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 16:45:20 2018...
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1708.988 ; gain = 0.000 ; free physical = 1333 ; free virtual = 9366
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 12:04:07 2018...

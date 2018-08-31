@@ -1,4 +1,6 @@
-kernel_fdtd_2d_dabkb
-kernel_fdtd_2d_dmcud
-kernel_fdtd_2d_mudEe
-kernel_fdtd_2d
+kernel_fdtd_2d_opbkb
+kernel_fdtd_2d_opcud
+kernel_fdtd_2d_opdEe
+kernel_fdtd_2d_opeOg
+kernel_fdtd_2d_opfYi
+kernel_fdtd_2d_optimized

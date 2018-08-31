@@ -9,31 +9,31 @@
 <ProductFamily>kintex7</ProductFamily>
 <Part>xc7k160tfbg484-1</Part>
 <TopModelName>int_64_div9</TopModelName>
-<TargetClockPeriod>120.00</TargetClockPeriod>
-<ClockUncertainty>15.00</ClockUncertainty>
+<TargetClockPeriod>2.50</TargetClockPeriod>
+<ClockUncertainty>0.31</ClockUncertainty>
 </UserAssignments>
 
 <PerformanceEstimates>
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>104.175</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.906</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>1</Average-caseLatency>
-<Worst-caseLatency>1</Worst-caseLatency>
-<Interval-min>1</Interval-min>
-<Interval-max>1</Interval-max>
+<Best-caseLatency>95</Best-caseLatency>
+<Average-caseLatency>95</Average-caseLatency>
+<Worst-caseLatency>95</Worst-caseLatency>
+<Interval-min>95</Interval-min>
+<Interval-max>95</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<FF>70</FF>
-<LUT>41085</LUT>
 <BRAM_18K>0</BRAM_18K>
+<FF>273</FF>
+<LUT>505</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 <AvailableResources>

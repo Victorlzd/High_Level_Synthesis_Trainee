@@ -1,0 +1,2217 @@
+
+
+================================================================
+== Vivado HLS Report for 'kernel_fdtd_2d_optimized'
+================================================================
+* Date:           Fri Aug 31 22:17:28 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fir_prj
+* Solution:       my_version
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.50|     2.292|        0.31|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------------+------------+------------+------------+---------+
+    |         Latency         |         Interval        | Pipeline|
+    |     min    |     max    |     min    |     max    |   Type  |
+    +------------+------------+------------+------------+---------+
+    |  8538303751|  8538303751|  8538303751|  8538303751|   none  |
+    +------------+------------+------------+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+------------+------------+-----------+-----------+-----------+------+----------+
+        |                 |         Latency         | Iteration |  Initiation Interval  | Trip |          |
+        |    Loop Name    |     min    |     max    |  Latency  |  achieved |   target  | Count| Pipelined|
+        +-----------------+------------+------------+-----------+-----------+-----------+------+----------+
+        |- Loop 1         |  8538303750|  8538303750|  170766075|          -|          -|    50|    no    |
+        | + Loop 1.1      |        5000|        5000|          5|          -|          -|  1000|    no    |
+        | + Loop 1.2      |    43961994|    43961994|      44006|          -|          -|   999|    no    |
+        |  ++ Loop 1.2.1  |       44000|       44000|         44|          -|          -|  1000|    no    |
+        | + Loop 1.3      |    44957000|    44957000|      44957|          -|          -|  1000|    no    |
+        |  ++ Loop 1.3.1  |       44955|       44955|         45|          -|          -|   999|    no    |
+        | + Loop 1.4      |    81842076|    81842076|      81924|          -|          -|   999|    no    |
+        |  ++ Loop 1.4.1  |       81918|       81918|         82|          -|          -|   999|    no    |
+        +-----------------+------------+------------+-----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 189
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond7)
+3 --> 
+	4  / (!exitcond6)
+	8  / (exitcond6)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	3  / true
+8 --> 
+	9  / (!exitcond5)
+	57  / (exitcond5)
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / (!exitcond4)
+	8  / (exitcond4)
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	13  / true
+57 --> 
+	58  / (!exitcond3)
+	103  / (exitcond3)
+58 --> 
+	59  / (!exitcond2)
+	57  / (exitcond2)
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	58  / true
+103 --> 
+	104  / (!exitcond1)
+	2  / (exitcond1)
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / (!exitcond)
+	103  / (exitcond)
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	148  / true
+148 --> 
+	149  / true
+149 --> 
+	150  / true
+150 --> 
+	151  / true
+151 --> 
+	152  / true
+152 --> 
+	153  / true
+153 --> 
+	154  / true
+154 --> 
+	155  / true
+155 --> 
+	156  / true
+156 --> 
+	157  / true
+157 --> 
+	158  / true
+158 --> 
+	159  / true
+159 --> 
+	160  / true
+160 --> 
+	161  / true
+161 --> 
+	162  / true
+162 --> 
+	163  / true
+163 --> 
+	164  / true
+164 --> 
+	165  / true
+165 --> 
+	166  / true
+166 --> 
+	167  / true
+167 --> 
+	168  / true
+168 --> 
+	169  / true
+169 --> 
+	170  / true
+170 --> 
+	171  / true
+171 --> 
+	172  / true
+172 --> 
+	173  / true
+173 --> 
+	174  / true
+174 --> 
+	175  / true
+175 --> 
+	176  / true
+176 --> 
+	177  / true
+177 --> 
+	178  / true
+178 --> 
+	179  / true
+179 --> 
+	180  / true
+180 --> 
+	181  / true
+181 --> 
+	182  / true
+182 --> 
+	183  / true
+183 --> 
+	184  / true
+184 --> 
+	185  / true
+185 --> 
+	186  / true
+186 --> 
+	187  / true
+187 --> 
+	188  / true
+188 --> 
+	189  / true
+189 --> 
+	108  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.06>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %tmax) nounwind, !map !155"   --->   Operation 190 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %nx) nounwind, !map !161"   --->   Operation 191 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %ny) nounwind, !map !165"   --->   Operation 192 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1000000 x double]* %ex) nounwind, !map !169"   --->   Operation 193 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1000000 x double]* %ey) nounwind, !map !175"   --->   Operation 194 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1000000 x double]* %hz) nounwind, !map !179"   --->   Operation 195 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([50 x double]* %p_fict_s) nounwind, !map !183"   --->   Operation 196 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([25 x i8]* @kernel_fdtd_2d_optim) nounwind"   --->   Operation 197 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (1.06ns)   --->   "br label %.loopexit" [fdtd-2d.cpp:172]   --->   Operation 198 'br' <Predicate = true> <Delay = 1.06>
+
+State 2 <SV = 1> <Delay = 1.35>
+ST_2 : Operation 199 [1/1] (0.00ns)   --->   "%t = phi i6 [ 0, %0 ], [ %t_1, %.loopexit.loopexit ]"   --->   Operation 199 'phi' 't' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 200 [1/1] (1.15ns)   --->   "%exitcond7 = icmp eq i6 %t, -14" [fdtd-2d.cpp:172]   --->   Operation 200 'icmp' 'exitcond7' <Predicate = true> <Delay = 1.15> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 201 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 50, i64 50, i64 50) nounwind"   --->   Operation 201 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 202 [1/1] (1.35ns)   --->   "%t_1 = add i6 %t, 1" [fdtd-2d.cpp:172]   --->   Operation 202 'add' 't_1' <Predicate = true> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 203 [1/1] (0.00ns)   --->   "br i1 %exitcond7, label %6, label %.preheader13.preheader" [fdtd-2d.cpp:172]   --->   Operation 203 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 204 [1/1] (0.00ns)   --->   "%tmp = zext i6 %t to i64" [fdtd-2d.cpp:175]   --->   Operation 204 'zext' 'tmp' <Predicate = (!exitcond7)> <Delay = 0.00>
+ST_2 : Operation 205 [1/1] (0.00ns)   --->   "%p_fict_addr = getelementptr [50 x double]* %p_fict_s, i64 0, i64 %tmp" [fdtd-2d.cpp:175]   --->   Operation 205 'getelementptr' 'p_fict_addr' <Predicate = (!exitcond7)> <Delay = 0.00>
+ST_2 : Operation 206 [1/1] (1.06ns)   --->   "br label %.preheader13" [fdtd-2d.cpp:174]   --->   Operation 206 'br' <Predicate = (!exitcond7)> <Delay = 1.06>
+ST_2 : Operation 207 [1/1] (0.00ns)   --->   "ret void" [fdtd-2d.cpp:191]   --->   Operation 207 'ret' <Predicate = (exitcond7)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.41>
+ST_3 : Operation 208 [1/1] (0.00ns)   --->   "%j = phi i10 [ %j_4, %1 ], [ 0, %.preheader13.preheader ]"   --->   Operation 208 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 209 [1/1] (1.29ns)   --->   "%exitcond6 = icmp eq i10 %j, -24" [fdtd-2d.cpp:174]   --->   Operation 209 'icmp' 'exitcond6' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 210 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1000, i64 1000, i64 1000) nounwind"   --->   Operation 210 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 211 [1/1] (1.41ns)   --->   "%j_4 = add i10 %j, 1" [fdtd-2d.cpp:174]   --->   Operation 211 'add' 'j_4' <Predicate = true> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 212 [1/1] (0.00ns)   --->   "br i1 %exitcond6, label %.preheader12.preheader, label %1" [fdtd-2d.cpp:174]   --->   Operation 212 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 213 [3/3] (1.33ns)   --->   "%p_fict_load = load double* %p_fict_addr, align 8" [fdtd-2d.cpp:175]   --->   Operation 213 'load' 'p_fict_load' <Predicate = (!exitcond6)> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_3 : Operation 214 [1/1] (1.06ns)   --->   "br label %.preheader12" [fdtd-2d.cpp:177]   --->   Operation 214 'br' <Predicate = (exitcond6)> <Delay = 1.06>
+
+State 4 <SV = 3> <Delay = 1.33>
+ST_4 : Operation 215 [2/3] (1.33ns)   --->   "%p_fict_load = load double* %p_fict_addr, align 8" [fdtd-2d.cpp:175]   --->   Operation 215 'load' 'p_fict_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 5 <SV = 4> <Delay = 1.33>
+ST_5 : Operation 216 [1/3] (1.33ns)   --->   "%p_fict_load = load double* %p_fict_addr, align 8" [fdtd-2d.cpp:175]   --->   Operation 216 'load' 'p_fict_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 6 <SV = 5> <Delay = 1.33>
+ST_6 : Operation 217 [1/1] (0.00ns)   --->   "%tmp_s = zext i10 %j to i64" [fdtd-2d.cpp:175]   --->   Operation 217 'zext' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 218 [1/1] (0.00ns)   --->   "%ey_addr = getelementptr [1000000 x double]* %ey, i64 0, i64 %tmp_s" [fdtd-2d.cpp:175]   --->   Operation 218 'getelementptr' 'ey_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 219 [2/2] (1.33ns)   --->   "store double %p_fict_load, double* %ey_addr, align 8" [fdtd-2d.cpp:175]   --->   Operation 219 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 7 <SV = 6> <Delay = 1.33>
+ST_7 : Operation 220 [1/2] (1.33ns)   --->   "store double %p_fict_load, double* %ey_addr, align 8" [fdtd-2d.cpp:175]   --->   Operation 220 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_7 : Operation 221 [1/1] (0.00ns)   --->   "br label %.preheader13" [fdtd-2d.cpp:174]   --->   Operation 221 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 3> <Delay = 1.41>
+ST_8 : Operation 222 [1/1] (0.00ns)   --->   "%i = phi i10 [ %i_3, %3 ], [ 1, %.preheader12.preheader ]"   --->   Operation 222 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 223 [1/1] (1.29ns)   --->   "%exitcond5 = icmp eq i10 %i, -24" [fdtd-2d.cpp:177]   --->   Operation 223 'icmp' 'exitcond5' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 224 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 999, i64 999, i64 999) nounwind"   --->   Operation 224 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 225 [1/1] (0.00ns)   --->   "br i1 %exitcond5, label %.preheader10.preheader, label %.preheader11.preheader" [fdtd-2d.cpp:177]   --->   Operation 225 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 226 [1/1] (1.41ns)   --->   "%tmp_2 = add i10 %i, -1" [fdtd-2d.cpp:179]   --->   Operation 226 'add' 'tmp_2' <Predicate = (!exitcond5)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 227 [1/1] (1.06ns)   --->   "br label %.preheader10"   --->   Operation 227 'br' <Predicate = (exitcond5)> <Delay = 1.06>
+
+State 9 <SV = 4> <Delay = 1.82>
+ST_9 : Operation 228 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i10 %i to i20" [fdtd-2d.cpp:179]   --->   Operation 228 'zext' 'tmp_1_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 229 [4/4] (1.82ns)   --->   "%tmp_1 = mul i20 %tmp_1_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 229 'mul' 'tmp_1' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 230 [1/1] (0.00ns)   --->   "%tmp_3_cast = zext i10 %tmp_2 to i20" [fdtd-2d.cpp:179]   --->   Operation 230 'zext' 'tmp_3_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 231 [4/4] (1.82ns)   --->   "%tmp_3 = mul i20 %tmp_3_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 231 'mul' 'tmp_3' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 5> <Delay = 1.82>
+ST_10 : Operation 232 [3/4] (1.82ns)   --->   "%tmp_1 = mul i20 %tmp_1_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 232 'mul' 'tmp_1' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 233 [3/4] (1.82ns)   --->   "%tmp_3 = mul i20 %tmp_3_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 233 'mul' 'tmp_3' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 6> <Delay = 1.82>
+ST_11 : Operation 234 [2/4] (1.82ns)   --->   "%tmp_1 = mul i20 %tmp_1_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 234 'mul' 'tmp_1' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 235 [2/4] (1.82ns)   --->   "%tmp_3 = mul i20 %tmp_3_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 235 'mul' 'tmp_3' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 12 <SV = 7> <Delay = 1.06>
+ST_12 : Operation 236 [1/4] (0.00ns)   --->   "%tmp_1 = mul i20 %tmp_1_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 236 'mul' 'tmp_1' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 237 [1/4] (0.00ns)   --->   "%tmp_3 = mul i20 %tmp_3_cast, 1000" [fdtd-2d.cpp:179]   --->   Operation 237 'mul' 'tmp_3' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 238 [1/1] (1.06ns)   --->   "br label %.preheader11" [fdtd-2d.cpp:178]   --->   Operation 238 'br' <Predicate = true> <Delay = 1.06>
+
+State 13 <SV = 8> <Delay = 1.56>
+ST_13 : Operation 239 [1/1] (0.00ns)   --->   "%j_1 = phi i10 [ %j_5, %2 ], [ 0, %.preheader11.preheader ]"   --->   Operation 239 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 240 [1/1] (1.29ns)   --->   "%exitcond4 = icmp eq i10 %j_1, -24" [fdtd-2d.cpp:178]   --->   Operation 240 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 241 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1000, i64 1000, i64 1000) nounwind"   --->   Operation 241 'speclooptripcount' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 242 [1/1] (1.41ns)   --->   "%j_5 = add i10 %j_1, 1" [fdtd-2d.cpp:178]   --->   Operation 242 'add' 'j_5' <Predicate = true> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 243 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %3, label %2" [fdtd-2d.cpp:178]   --->   Operation 243 'br' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 244 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i10 %j_1 to i20" [fdtd-2d.cpp:179]   --->   Operation 244 'zext' 'tmp_5_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_13 : Operation 245 [1/1] (1.56ns)   --->   "%tmp_4 = add i20 %tmp_5_cast, %tmp_1" [fdtd-2d.cpp:179]   --->   Operation 245 'add' 'tmp_4' <Predicate = (!exitcond4)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 246 [1/1] (1.56ns)   --->   "%tmp_5 = add i20 %tmp_5_cast, %tmp_3" [fdtd-2d.cpp:179]   --->   Operation 246 'add' 'tmp_5' <Predicate = (!exitcond4)> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 247 [1/1] (1.41ns)   --->   "%i_3 = add i10 %i, 1" [fdtd-2d.cpp:177]   --->   Operation 247 'add' 'i_3' <Predicate = (exitcond4)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 248 [1/1] (0.00ns)   --->   "br label %.preheader12" [fdtd-2d.cpp:177]   --->   Operation 248 'br' <Predicate = (exitcond4)> <Delay = 0.00>
+
+State 14 <SV = 9> <Delay = 1.33>
+ST_14 : Operation 249 [1/1] (0.00ns)   --->   "%tmp_25_cast = zext i20 %tmp_4 to i64" [fdtd-2d.cpp:179]   --->   Operation 249 'zext' 'tmp_25_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 250 [1/1] (0.00ns)   --->   "%ey_addr_1 = getelementptr [1000000 x double]* %ey, i64 0, i64 %tmp_25_cast" [fdtd-2d.cpp:179]   --->   Operation 250 'getelementptr' 'ey_addr_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 251 [1/1] (0.00ns)   --->   "%hz_addr = getelementptr [1000000 x double]* %hz, i64 0, i64 %tmp_25_cast" [fdtd-2d.cpp:179]   --->   Operation 251 'getelementptr' 'hz_addr' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 252 [1/1] (0.00ns)   --->   "%tmp_28_cast = zext i20 %tmp_5 to i64" [fdtd-2d.cpp:179]   --->   Operation 252 'zext' 'tmp_28_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 253 [1/1] (0.00ns)   --->   "%hz_addr_1 = getelementptr [1000000 x double]* %hz, i64 0, i64 %tmp_28_cast" [fdtd-2d.cpp:179]   --->   Operation 253 'getelementptr' 'hz_addr_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 254 [4/4] (1.33ns)   --->   "%hz_load = load double* %hz_addr, align 8" [fdtd-2d.cpp:179]   --->   Operation 254 'load' 'hz_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_14 : Operation 255 [4/4] (1.33ns)   --->   "%hz_load_1 = load double* %hz_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 255 'load' 'hz_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 15 <SV = 10> <Delay = 1.33>
+ST_15 : Operation 256 [3/4] (1.33ns)   --->   "%hz_load = load double* %hz_addr, align 8" [fdtd-2d.cpp:179]   --->   Operation 256 'load' 'hz_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_15 : Operation 257 [3/4] (1.33ns)   --->   "%hz_load_1 = load double* %hz_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 257 'load' 'hz_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 16 <SV = 11> <Delay = 1.33>
+ST_16 : Operation 258 [2/4] (1.33ns)   --->   "%hz_load = load double* %hz_addr, align 8" [fdtd-2d.cpp:179]   --->   Operation 258 'load' 'hz_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_16 : Operation 259 [2/4] (1.33ns)   --->   "%hz_load_1 = load double* %hz_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 259 'load' 'hz_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 17 <SV = 12> <Delay = 1.33>
+ST_17 : Operation 260 [1/4] (1.33ns)   --->   "%hz_load = load double* %hz_addr, align 8" [fdtd-2d.cpp:179]   --->   Operation 260 'load' 'hz_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_17 : Operation 261 [1/4] (1.33ns)   --->   "%hz_load_1 = load double* %hz_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 261 'load' 'hz_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 18 <SV = 13> <Delay = 2.12>
+ST_18 : Operation 262 [14/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 262 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 14> <Delay = 2.12>
+ST_19 : Operation 263 [13/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 263 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 15> <Delay = 2.12>
+ST_20 : Operation 264 [12/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 264 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 16> <Delay = 2.12>
+ST_21 : Operation 265 [11/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 265 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 17> <Delay = 2.12>
+ST_22 : Operation 266 [10/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 266 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 18> <Delay = 2.12>
+ST_23 : Operation 267 [9/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 267 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 19> <Delay = 2.12>
+ST_24 : Operation 268 [8/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 268 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 20> <Delay = 2.12>
+ST_25 : Operation 269 [7/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 269 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 21> <Delay = 2.12>
+ST_26 : Operation 270 [6/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 270 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 22> <Delay = 2.12>
+ST_27 : Operation 271 [5/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 271 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 23> <Delay = 2.12>
+ST_28 : Operation 272 [4/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 272 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 24> <Delay = 2.12>
+ST_29 : Operation 273 [3/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 273 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 25> <Delay = 2.12>
+ST_30 : Operation 274 [2/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 274 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 26> <Delay = 2.12>
+ST_31 : Operation 275 [1/14] (2.12ns)   --->   "%in_assign = fsub double %hz_load, %hz_load_1" [fdtd-2d.cpp:179]   --->   Operation 275 'dsub' 'in_assign' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 27> <Delay = 1.94>
+ST_32 : Operation 276 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast double %in_assign to i64" [fdtd-2d.cpp:45->fdtd-2d.cpp:88->fdtd-2d.cpp:179]   --->   Operation 276 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 277 [1/1] (0.00ns)   --->   "%p_Repl2_2 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_s, i32 63)" [fdtd-2d.cpp:46->fdtd-2d.cpp:88->fdtd-2d.cpp:179]   --->   Operation 277 'bitselect' 'p_Repl2_2' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 278 [1/1] (0.00ns)   --->   "%new_exp_V_1 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62) nounwind" [fdtd-2d.cpp:47->fdtd-2d.cpp:88->fdtd-2d.cpp:179]   --->   Operation 278 'partselect' 'new_exp_V_1' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 279 [1/1] (0.00ns)   --->   "%new_mant_V_1 = trunc i64 %p_Val2_s to i52" [fdtd-2d.cpp:48->fdtd-2d.cpp:88->fdtd-2d.cpp:179]   --->   Operation 279 'trunc' 'new_mant_V_1' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 280 [1/1] (1.32ns)   --->   "%tmp_i = icmp eq i11 %new_exp_V_1, 0" [fdtd-2d.cpp:96->fdtd-2d.cpp:179]   --->   Operation 280 'icmp' 'tmp_i' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 281 [1/1] (0.00ns)   --->   "%tmp_11 = call i10 @_ssdm_op_PartSelect.i10.i64.i32.i32(i64 %p_Val2_s, i32 53, i32 62)" [fdtd-2d.cpp:103->fdtd-2d.cpp:179]   --->   Operation 281 'partselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 282 [1/1] (1.29ns)   --->   "%icmp = icmp ne i10 %tmp_11, 0" [fdtd-2d.cpp:103->fdtd-2d.cpp:179]   --->   Operation 282 'icmp' 'icmp' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 283 [1/1] (0.00ns)   --->   "%tmp_6 = call i2 @_ssdm_op_PartSelect.i2.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 53)" [fdtd-2d.cpp:105->fdtd-2d.cpp:179]   --->   Operation 283 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 284 [1/1] (1.00ns)   --->   "%shift_V_i_cast = sub i2 -2, %tmp_6" [fdtd-2d.cpp:105->fdtd-2d.cpp:179]   --->   Operation 284 'sub' 'shift_V_i_cast' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 285 [1/1] (0.00ns) (grouped into LUT with out node p_0272_2_i)   --->   "%p_shift_V_i = zext i1 %tmp_i to i2" [fdtd-2d.cpp:96->fdtd-2d.cpp:179]   --->   Operation 285 'zext' 'p_shift_V_i' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 286 [1/1] (0.00ns) (grouped into LUT with out node p_0272_2_i)   --->   "%tmp_7 = or i1 %tmp_i, %icmp" [fdtd-2d.cpp:96->fdtd-2d.cpp:179]   --->   Operation 286 'or' 'tmp_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 287 [1/1] (0.62ns) (out node of the LUT)   --->   "%p_0272_2_i = select i1 %tmp_7, i2 %p_shift_V_i, i2 %shift_V_i_cast" [fdtd-2d.cpp:96->fdtd-2d.cpp:179]   --->   Operation 287 'select' 'p_0272_2_i' <Predicate = true> <Delay = 0.62> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 33 <SV = 28> <Delay = 2.29>
+ST_33 : Operation 288 [1/1] (0.00ns)   --->   "%xf_V_i_cast = zext i52 %new_mant_V_1 to i54" [fdtd-2d.cpp:93->fdtd-2d.cpp:179]   --->   Operation 288 'zext' 'xf_V_i_cast' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 289 [1/1] (0.00ns)   --->   "%tmp_7_i_cast1 = zext i2 %p_0272_2_i to i54" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 289 'zext' 'tmp_7_i_cast1' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 290 [1/1] (0.00ns)   --->   "%tmp_7_i_cast = zext i2 %p_0272_2_i to i52" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 290 'zext' 'tmp_7_i_cast' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 291 [7/7] (2.29ns)   --->   "%r_V = lshr i52 %new_mant_V_1, %tmp_7_i_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 291 'lshr' 'r_V' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 292 [7/7] (2.29ns)   --->   "%r_V_1 = shl i54 %xf_V_i_cast, %tmp_7_i_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 292 'shl' 'r_V_1' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 29> <Delay = 2.29>
+ST_34 : Operation 293 [6/7] (2.29ns)   --->   "%r_V = lshr i52 %new_mant_V_1, %tmp_7_i_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 293 'lshr' 'r_V' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 294 [6/7] (2.29ns)   --->   "%r_V_1 = shl i54 %xf_V_i_cast, %tmp_7_i_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 294 'shl' 'r_V_1' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 30> <Delay = 2.29>
+ST_35 : Operation 295 [5/7] (2.29ns)   --->   "%r_V = lshr i52 %new_mant_V_1, %tmp_7_i_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 295 'lshr' 'r_V' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 296 [5/7] (2.29ns)   --->   "%r_V_1 = shl i54 %xf_V_i_cast, %tmp_7_i_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 296 'shl' 'r_V_1' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 31> <Delay = 2.29>
+ST_36 : Operation 297 [4/7] (2.29ns)   --->   "%r_V = lshr i52 %new_mant_V_1, %tmp_7_i_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 297 'lshr' 'r_V' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 298 [4/7] (2.29ns)   --->   "%r_V_1 = shl i54 %xf_V_i_cast, %tmp_7_i_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 298 'shl' 'r_V_1' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 32> <Delay = 2.29>
+ST_37 : Operation 299 [4/4] (1.33ns)   --->   "%ey_load = load double* %ey_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 299 'load' 'ey_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_37 : Operation 300 [3/7] (2.29ns)   --->   "%r_V = lshr i52 %new_mant_V_1, %tmp_7_i_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 300 'lshr' 'r_V' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 301 [3/7] (2.29ns)   --->   "%r_V_1 = shl i54 %xf_V_i_cast, %tmp_7_i_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 301 'shl' 'r_V_1' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 33> <Delay = 2.29>
+ST_38 : Operation 302 [3/4] (1.33ns)   --->   "%ey_load = load double* %ey_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 302 'load' 'ey_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_38 : Operation 303 [2/7] (2.29ns)   --->   "%r_V = lshr i52 %new_mant_V_1, %tmp_7_i_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 303 'lshr' 'r_V' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 304 [2/7] (2.29ns)   --->   "%r_V_1 = shl i54 %xf_V_i_cast, %tmp_7_i_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 304 'shl' 'r_V_1' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 34> <Delay = 2.29>
+ST_39 : Operation 305 [2/4] (1.33ns)   --->   "%ey_load = load double* %ey_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 305 'load' 'ey_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_39 : Operation 306 [1/7] (2.29ns)   --->   "%r_V = lshr i52 %new_mant_V_1, %tmp_7_i_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:179]   --->   Operation 306 'lshr' 'r_V' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 307 [1/7] (2.29ns)   --->   "%r_V_1 = shl i54 %xf_V_i_cast, %tmp_7_i_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 307 'shl' 'r_V_1' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 35> <Delay = 2.06>
+ST_40 : Operation 308 [1/4] (1.33ns)   --->   "%ey_load = load double* %ey_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 308 'load' 'ey_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_40 : Operation 309 [1/1] (1.42ns)   --->   "%new_exp_V = add i11 -1, %new_exp_V_1" [fdtd-2d.cpp:99->fdtd-2d.cpp:179]   --->   Operation 309 'add' 'new_exp_V' <Predicate = true> <Delay = 1.42> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 310 [1/1] (1.32ns)   --->   "%tmp_6_i = icmp ult i11 %new_exp_V_1, 3" [fdtd-2d.cpp:110->fdtd-2d.cpp:179]   --->   Operation 310 'icmp' 'tmp_6_i' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 311 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_s)   --->   "%tmp_13 = trunc i54 %r_V_1 to i52" [fdtd-2d.cpp:113->fdtd-2d.cpp:179]   --->   Operation 311 'trunc' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 312 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_s)   --->   "%xf_V = select i1 %tmp_6_i, i52 %r_V, i52 %tmp_13" [fdtd-2d.cpp:110->fdtd-2d.cpp:179]   --->   Operation 312 'select' 'xf_V' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_40 : Operation 313 [1/1] (1.32ns)   --->   "%tmp_i_9 = icmp eq i11 %new_exp_V_1, -1" [fdtd-2d.cpp:118->fdtd-2d.cpp:179]   --->   Operation 313 'icmp' 'tmp_i_9' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 314 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_1)   --->   "%p_i = select i1 %tmp_i_9, i11 -1, i11 0" [fdtd-2d.cpp:118->fdtd-2d.cpp:179]   --->   Operation 314 'select' 'p_i' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_40 : Operation 315 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_1)   --->   "%tmp_1_i = or i1 %tmp_i_9, %tmp_i" [fdtd-2d.cpp:118->fdtd-2d.cpp:179]   --->   Operation 315 'or' 'tmp_1_i' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 316 [1/1] (0.63ns) (out node of the LUT)   --->   "%p_Repl2_1 = select i1 %tmp_1_i, i11 %p_i, i11 %new_exp_V" [fdtd-2d.cpp:118->fdtd-2d.cpp:179]   --->   Operation 316 'select' 'p_Repl2_1' <Predicate = true> <Delay = 0.63> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_40 : Operation 317 [1/1] (0.70ns) (out node of the LUT)   --->   "%p_Repl2_s = select i1 %tmp_i_9, i52 %new_mant_V_1, i52 %xf_V" [fdtd-2d.cpp:118->fdtd-2d.cpp:179]   --->   Operation 317 'select' 'p_Repl2_s' <Predicate = true> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 41 <SV = 36> <Delay = 2.12>
+ST_41 : Operation 318 [1/1] (0.00ns)   --->   "%p_Result_s = call i64 @_ssdm_op_BitConcatenate.i64.i1.i11.i52(i1 %p_Repl2_2, i11 %p_Repl2_1, i52 %p_Repl2_s) nounwind" [fdtd-2d.cpp:72->fdtd-2d.cpp:122->fdtd-2d.cpp:179]   --->   Operation 318 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 319 [1/1] (0.00ns)   --->   "%out = bitcast i64 %p_Result_s to double" [fdtd-2d.cpp:73->fdtd-2d.cpp:122->fdtd-2d.cpp:179]   --->   Operation 319 'bitcast' 'out' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 320 [14/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 320 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 37> <Delay = 2.12>
+ST_42 : Operation 321 [13/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 321 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 38> <Delay = 2.12>
+ST_43 : Operation 322 [12/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 322 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 39> <Delay = 2.12>
+ST_44 : Operation 323 [11/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 323 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 40> <Delay = 2.12>
+ST_45 : Operation 324 [10/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 324 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 41> <Delay = 2.12>
+ST_46 : Operation 325 [9/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 325 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 42> <Delay = 2.12>
+ST_47 : Operation 326 [8/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 326 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 43> <Delay = 2.12>
+ST_48 : Operation 327 [7/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 327 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 44> <Delay = 2.12>
+ST_49 : Operation 328 [6/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 328 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 45> <Delay = 2.12>
+ST_50 : Operation 329 [5/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 329 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 46> <Delay = 2.12>
+ST_51 : Operation 330 [4/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 330 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 47> <Delay = 2.12>
+ST_52 : Operation 331 [3/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 331 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 48> <Delay = 2.12>
+ST_53 : Operation 332 [2/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 332 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 49> <Delay = 2.12>
+ST_54 : Operation 333 [1/14] (2.12ns)   --->   "%tmp_8 = fsub double %ey_load, %out" [fdtd-2d.cpp:179]   --->   Operation 333 'dsub' 'tmp_8' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 50> <Delay = 1.33>
+ST_55 : Operation 334 [2/2] (1.33ns)   --->   "store double %tmp_8, double* %ey_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 334 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 56 <SV = 51> <Delay = 1.33>
+ST_56 : Operation 335 [1/2] (1.33ns)   --->   "store double %tmp_8, double* %ey_addr_1, align 8" [fdtd-2d.cpp:179]   --->   Operation 335 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_56 : Operation 336 [1/1] (0.00ns)   --->   "br label %.preheader11" [fdtd-2d.cpp:178]   --->   Operation 336 'br' <Predicate = true> <Delay = 0.00>
+
+State 57 <SV = 4> <Delay = 1.56>
+ST_57 : Operation 337 [1/1] (0.00ns)   --->   "%i_1 = phi i10 [ %i_5, %.preheader10.loopexit ], [ 0, %.preheader10.preheader ]"   --->   Operation 337 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 338 [1/1] (0.00ns)   --->   "%phi_mul = phi i20 [ %next_mul, %.preheader10.loopexit ], [ 0, %.preheader10.preheader ]"   --->   Operation 338 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 339 [1/1] (1.56ns)   --->   "%next_mul = add i20 %phi_mul, 1000"   --->   Operation 339 'add' 'next_mul' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 340 [1/1] (1.29ns)   --->   "%exitcond3 = icmp eq i10 %i_1, -24" [fdtd-2d.cpp:181]   --->   Operation 340 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 341 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1000, i64 1000, i64 1000) nounwind"   --->   Operation 341 'speclooptripcount' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 342 [1/1] (1.41ns)   --->   "%i_5 = add i10 %i_1, 1" [fdtd-2d.cpp:181]   --->   Operation 342 'add' 'i_5' <Predicate = true> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 343 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.preheader8.preheader, label %.preheader9.preheader" [fdtd-2d.cpp:181]   --->   Operation 343 'br' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 344 [1/1] (1.06ns)   --->   "br label %.preheader9" [fdtd-2d.cpp:182]   --->   Operation 344 'br' <Predicate = (!exitcond3)> <Delay = 1.06>
+ST_57 : Operation 345 [1/1] (1.06ns)   --->   "br label %.preheader8"   --->   Operation 345 'br' <Predicate = (exitcond3)> <Delay = 1.06>
+
+State 58 <SV = 5> <Delay = 1.41>
+ST_58 : Operation 346 [1/1] (0.00ns)   --->   "%j_2 = phi i10 [ %j_6, %4 ], [ 1, %.preheader9.preheader ]"   --->   Operation 346 'phi' 'j_2' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 347 [1/1] (1.29ns)   --->   "%exitcond2 = icmp eq i10 %j_2, -24" [fdtd-2d.cpp:182]   --->   Operation 347 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 348 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 999, i64 999, i64 999) nounwind"   --->   Operation 348 'speclooptripcount' 'empty_11' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 349 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader10.loopexit, label %4" [fdtd-2d.cpp:182]   --->   Operation 349 'br' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 350 [1/1] (1.41ns)   --->   "%tmp_12 = add i10 -1, %j_2" [fdtd-2d.cpp:183]   --->   Operation 350 'add' 'tmp_12' <Predicate = (!exitcond2)> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 351 [1/1] (0.00ns)   --->   "br label %.preheader10"   --->   Operation 351 'br' <Predicate = (exitcond2)> <Delay = 0.00>
+
+State 59 <SV = 6> <Delay = 1.56>
+ST_59 : Operation 352 [1/1] (0.00ns)   --->   "%tmp_11_cast = zext i10 %j_2 to i20" [fdtd-2d.cpp:183]   --->   Operation 352 'zext' 'tmp_11_cast' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 353 [1/1] (1.56ns)   --->   "%tmp_10 = add i20 %tmp_11_cast, %phi_mul" [fdtd-2d.cpp:183]   --->   Operation 353 'add' 'tmp_10' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 354 [1/1] (0.00ns)   --->   "%tmp_13_cast = zext i10 %tmp_12 to i20" [fdtd-2d.cpp:183]   --->   Operation 354 'zext' 'tmp_13_cast' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 355 [1/1] (1.56ns)   --->   "%tmp_14 = add i20 %tmp_13_cast, %phi_mul" [fdtd-2d.cpp:183]   --->   Operation 355 'add' 'tmp_14' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 356 [1/1] (1.41ns)   --->   "%j_6 = add i10 1, %j_2" [fdtd-2d.cpp:182]   --->   Operation 356 'add' 'j_6' <Predicate = true> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 7> <Delay = 1.33>
+ST_60 : Operation 357 [1/1] (0.00ns)   --->   "%tmp_31_cast = zext i20 %tmp_10 to i64" [fdtd-2d.cpp:183]   --->   Operation 357 'zext' 'tmp_31_cast' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 358 [1/1] (0.00ns)   --->   "%ex_addr = getelementptr [1000000 x double]* %ex, i64 0, i64 %tmp_31_cast" [fdtd-2d.cpp:183]   --->   Operation 358 'getelementptr' 'ex_addr' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 359 [1/1] (0.00ns)   --->   "%hz_addr_2 = getelementptr [1000000 x double]* %hz, i64 0, i64 %tmp_31_cast" [fdtd-2d.cpp:183]   --->   Operation 359 'getelementptr' 'hz_addr_2' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 360 [4/4] (1.33ns)   --->   "%hz_load_2 = load double* %hz_addr_2, align 8" [fdtd-2d.cpp:183]   --->   Operation 360 'load' 'hz_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_60 : Operation 361 [1/1] (0.00ns)   --->   "%tmp_32_cast = zext i20 %tmp_14 to i64" [fdtd-2d.cpp:183]   --->   Operation 361 'zext' 'tmp_32_cast' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 362 [1/1] (0.00ns)   --->   "%hz_addr_3 = getelementptr [1000000 x double]* %hz, i64 0, i64 %tmp_32_cast" [fdtd-2d.cpp:183]   --->   Operation 362 'getelementptr' 'hz_addr_3' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 363 [4/4] (1.33ns)   --->   "%hz_load_3 = load double* %hz_addr_3, align 8" [fdtd-2d.cpp:183]   --->   Operation 363 'load' 'hz_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 61 <SV = 8> <Delay = 1.33>
+ST_61 : Operation 364 [3/4] (1.33ns)   --->   "%hz_load_2 = load double* %hz_addr_2, align 8" [fdtd-2d.cpp:183]   --->   Operation 364 'load' 'hz_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_61 : Operation 365 [3/4] (1.33ns)   --->   "%hz_load_3 = load double* %hz_addr_3, align 8" [fdtd-2d.cpp:183]   --->   Operation 365 'load' 'hz_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 62 <SV = 9> <Delay = 1.33>
+ST_62 : Operation 366 [2/4] (1.33ns)   --->   "%hz_load_2 = load double* %hz_addr_2, align 8" [fdtd-2d.cpp:183]   --->   Operation 366 'load' 'hz_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_62 : Operation 367 [2/4] (1.33ns)   --->   "%hz_load_3 = load double* %hz_addr_3, align 8" [fdtd-2d.cpp:183]   --->   Operation 367 'load' 'hz_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 63 <SV = 10> <Delay = 1.33>
+ST_63 : Operation 368 [1/4] (1.33ns)   --->   "%hz_load_2 = load double* %hz_addr_2, align 8" [fdtd-2d.cpp:183]   --->   Operation 368 'load' 'hz_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_63 : Operation 369 [1/4] (1.33ns)   --->   "%hz_load_3 = load double* %hz_addr_3, align 8" [fdtd-2d.cpp:183]   --->   Operation 369 'load' 'hz_load_3' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 64 <SV = 11> <Delay = 2.12>
+ST_64 : Operation 370 [14/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 370 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 12> <Delay = 2.12>
+ST_65 : Operation 371 [13/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 371 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 13> <Delay = 2.12>
+ST_66 : Operation 372 [12/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 372 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 14> <Delay = 2.12>
+ST_67 : Operation 373 [11/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 373 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 15> <Delay = 2.12>
+ST_68 : Operation 374 [10/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 374 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 16> <Delay = 2.12>
+ST_69 : Operation 375 [9/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 375 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 17> <Delay = 2.12>
+ST_70 : Operation 376 [8/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 376 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 18> <Delay = 2.12>
+ST_71 : Operation 377 [7/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 377 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 19> <Delay = 2.12>
+ST_72 : Operation 378 [6/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 378 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 20> <Delay = 2.12>
+ST_73 : Operation 379 [5/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 379 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 21> <Delay = 2.12>
+ST_74 : Operation 380 [4/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 380 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 22> <Delay = 2.12>
+ST_75 : Operation 381 [3/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 381 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 23> <Delay = 2.12>
+ST_76 : Operation 382 [2/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 382 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 24> <Delay = 2.12>
+ST_77 : Operation 383 [1/14] (2.12ns)   --->   "%in_assign_1 = fsub double %hz_load_2, %hz_load_3" [fdtd-2d.cpp:183]   --->   Operation 383 'dsub' 'in_assign_1' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 78 <SV = 25> <Delay = 1.94>
+ST_78 : Operation 384 [1/1] (0.00ns)   --->   "%p_Val2_2 = bitcast double %in_assign_1 to i64" [fdtd-2d.cpp:45->fdtd-2d.cpp:88->fdtd-2d.cpp:183]   --->   Operation 384 'bitcast' 'p_Val2_2' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 385 [1/1] (0.00ns)   --->   "%p_Repl2_5 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_2, i32 63)" [fdtd-2d.cpp:46->fdtd-2d.cpp:88->fdtd-2d.cpp:183]   --->   Operation 385 'bitselect' 'p_Repl2_5' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 386 [1/1] (0.00ns)   --->   "%new_exp_V_3 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_2, i32 52, i32 62) nounwind" [fdtd-2d.cpp:47->fdtd-2d.cpp:88->fdtd-2d.cpp:183]   --->   Operation 386 'partselect' 'new_exp_V_3' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 387 [1/1] (0.00ns)   --->   "%new_mant_V_3 = trunc i64 %p_Val2_2 to i52" [fdtd-2d.cpp:48->fdtd-2d.cpp:88->fdtd-2d.cpp:183]   --->   Operation 387 'trunc' 'new_mant_V_3' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 388 [1/1] (1.32ns)   --->   "%tmp_i6 = icmp eq i11 %new_exp_V_3, 0" [fdtd-2d.cpp:96->fdtd-2d.cpp:183]   --->   Operation 388 'icmp' 'tmp_i6' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_78 : Operation 389 [1/1] (0.00ns)   --->   "%tmp_18 = call i10 @_ssdm_op_PartSelect.i10.i64.i32.i32(i64 %p_Val2_2, i32 53, i32 62)" [fdtd-2d.cpp:103->fdtd-2d.cpp:183]   --->   Operation 389 'partselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 390 [1/1] (1.29ns)   --->   "%icmp5 = icmp ne i10 %tmp_18, 0" [fdtd-2d.cpp:103->fdtd-2d.cpp:183]   --->   Operation 390 'icmp' 'icmp5' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_78 : Operation 391 [1/1] (0.00ns)   --->   "%tmp_15 = call i2 @_ssdm_op_PartSelect.i2.i64.i32.i32(i64 %p_Val2_2, i32 52, i32 53)" [fdtd-2d.cpp:105->fdtd-2d.cpp:183]   --->   Operation 391 'partselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 392 [1/1] (1.00ns)   --->   "%shift_V_i9_cast = sub i2 -2, %tmp_15" [fdtd-2d.cpp:105->fdtd-2d.cpp:183]   --->   Operation 392 'sub' 'shift_V_i9_cast' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_78 : Operation 393 [1/1] (0.00ns) (grouped into LUT with out node p_0272_2_i1)   --->   "%p_shift_V_i1 = zext i1 %tmp_i6 to i2" [fdtd-2d.cpp:96->fdtd-2d.cpp:183]   --->   Operation 393 'zext' 'p_shift_V_i1' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 394 [1/1] (0.00ns) (grouped into LUT with out node p_0272_2_i1)   --->   "%tmp_17 = or i1 %tmp_i6, %icmp5" [fdtd-2d.cpp:96->fdtd-2d.cpp:183]   --->   Operation 394 'or' 'tmp_17' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_78 : Operation 395 [1/1] (0.62ns) (out node of the LUT)   --->   "%p_0272_2_i1 = select i1 %tmp_17, i2 %p_shift_V_i1, i2 %shift_V_i9_cast" [fdtd-2d.cpp:96->fdtd-2d.cpp:183]   --->   Operation 395 'select' 'p_0272_2_i1' <Predicate = true> <Delay = 0.62> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 79 <SV = 26> <Delay = 2.29>
+ST_79 : Operation 396 [1/1] (0.00ns)   --->   "%xf_V_i5_cast = zext i52 %new_mant_V_3 to i54" [fdtd-2d.cpp:93->fdtd-2d.cpp:183]   --->   Operation 396 'zext' 'xf_V_i5_cast' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 397 [1/1] (0.00ns)   --->   "%tmp_7_i13_cast1 = zext i2 %p_0272_2_i1 to i54" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 397 'zext' 'tmp_7_i13_cast1' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 398 [1/1] (0.00ns)   --->   "%tmp_7_i13_cast = zext i2 %p_0272_2_i1 to i52" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 398 'zext' 'tmp_7_i13_cast' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 399 [7/7] (2.29ns)   --->   "%r_V_2 = lshr i52 %new_mant_V_3, %tmp_7_i13_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 399 'lshr' 'r_V_2' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 400 [7/7] (2.29ns)   --->   "%r_V_3 = shl i54 %xf_V_i5_cast, %tmp_7_i13_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 400 'shl' 'r_V_3' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 80 <SV = 27> <Delay = 2.29>
+ST_80 : Operation 401 [6/7] (2.29ns)   --->   "%r_V_2 = lshr i52 %new_mant_V_3, %tmp_7_i13_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 401 'lshr' 'r_V_2' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 402 [6/7] (2.29ns)   --->   "%r_V_3 = shl i54 %xf_V_i5_cast, %tmp_7_i13_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 402 'shl' 'r_V_3' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 81 <SV = 28> <Delay = 2.29>
+ST_81 : Operation 403 [5/7] (2.29ns)   --->   "%r_V_2 = lshr i52 %new_mant_V_3, %tmp_7_i13_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 403 'lshr' 'r_V_2' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_81 : Operation 404 [5/7] (2.29ns)   --->   "%r_V_3 = shl i54 %xf_V_i5_cast, %tmp_7_i13_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 404 'shl' 'r_V_3' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 82 <SV = 29> <Delay = 2.29>
+ST_82 : Operation 405 [4/7] (2.29ns)   --->   "%r_V_2 = lshr i52 %new_mant_V_3, %tmp_7_i13_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 405 'lshr' 'r_V_2' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_82 : Operation 406 [4/7] (2.29ns)   --->   "%r_V_3 = shl i54 %xf_V_i5_cast, %tmp_7_i13_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 406 'shl' 'r_V_3' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 30> <Delay = 2.29>
+ST_83 : Operation 407 [4/4] (1.33ns)   --->   "%ex_load = load double* %ex_addr, align 8" [fdtd-2d.cpp:183]   --->   Operation 407 'load' 'ex_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_83 : Operation 408 [3/7] (2.29ns)   --->   "%r_V_2 = lshr i52 %new_mant_V_3, %tmp_7_i13_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 408 'lshr' 'r_V_2' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_83 : Operation 409 [3/7] (2.29ns)   --->   "%r_V_3 = shl i54 %xf_V_i5_cast, %tmp_7_i13_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 409 'shl' 'r_V_3' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 31> <Delay = 2.29>
+ST_84 : Operation 410 [3/4] (1.33ns)   --->   "%ex_load = load double* %ex_addr, align 8" [fdtd-2d.cpp:183]   --->   Operation 410 'load' 'ex_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_84 : Operation 411 [2/7] (2.29ns)   --->   "%r_V_2 = lshr i52 %new_mant_V_3, %tmp_7_i13_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 411 'lshr' 'r_V_2' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 412 [2/7] (2.29ns)   --->   "%r_V_3 = shl i54 %xf_V_i5_cast, %tmp_7_i13_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 412 'shl' 'r_V_3' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 85 <SV = 32> <Delay = 2.29>
+ST_85 : Operation 413 [2/4] (1.33ns)   --->   "%ex_load = load double* %ex_addr, align 8" [fdtd-2d.cpp:183]   --->   Operation 413 'load' 'ex_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_85 : Operation 414 [1/7] (2.29ns)   --->   "%r_V_2 = lshr i52 %new_mant_V_3, %tmp_7_i13_cast" [fdtd-2d.cpp:111->fdtd-2d.cpp:183]   --->   Operation 414 'lshr' 'r_V_2' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 415 [1/7] (2.29ns)   --->   "%r_V_3 = shl i54 %xf_V_i5_cast, %tmp_7_i13_cast1" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 415 'shl' 'r_V_3' <Predicate = true> <Delay = 2.29> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 6> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 33> <Delay = 2.06>
+ST_86 : Operation 416 [1/4] (1.33ns)   --->   "%ex_load = load double* %ex_addr, align 8" [fdtd-2d.cpp:183]   --->   Operation 416 'load' 'ex_load' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_86 : Operation 417 [1/1] (1.42ns)   --->   "%new_exp_V_2 = add i11 -1, %new_exp_V_3" [fdtd-2d.cpp:99->fdtd-2d.cpp:183]   --->   Operation 417 'add' 'new_exp_V_2' <Predicate = true> <Delay = 1.42> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 418 [1/1] (1.32ns)   --->   "%tmp_6_i1 = icmp ult i11 %new_exp_V_3, 3" [fdtd-2d.cpp:110->fdtd-2d.cpp:183]   --->   Operation 418 'icmp' 'tmp_6_i1' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 419 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_3)   --->   "%tmp_24 = trunc i54 %r_V_3 to i52" [fdtd-2d.cpp:113->fdtd-2d.cpp:183]   --->   Operation 419 'trunc' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_86 : Operation 420 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_3)   --->   "%xf_V_6 = select i1 %tmp_6_i1, i52 %r_V_2, i52 %tmp_24" [fdtd-2d.cpp:110->fdtd-2d.cpp:183]   --->   Operation 420 'select' 'xf_V_6' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_86 : Operation 421 [1/1] (1.32ns)   --->   "%tmp_i1 = icmp eq i11 %new_exp_V_3, -1" [fdtd-2d.cpp:118->fdtd-2d.cpp:183]   --->   Operation 421 'icmp' 'tmp_i1' <Predicate = true> <Delay = 1.32> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 422 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_4)   --->   "%p_i1 = select i1 %tmp_i1, i11 -1, i11 0" [fdtd-2d.cpp:118->fdtd-2d.cpp:183]   --->   Operation 422 'select' 'p_i1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_86 : Operation 423 [1/1] (0.00ns) (grouped into LUT with out node p_Repl2_4)   --->   "%tmp_1_i1 = or i1 %tmp_i1, %tmp_i6" [fdtd-2d.cpp:118->fdtd-2d.cpp:183]   --->   Operation 423 'or' 'tmp_1_i1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 424 [1/1] (0.63ns) (out node of the LUT)   --->   "%p_Repl2_4 = select i1 %tmp_1_i1, i11 %p_i1, i11 %new_exp_V_2" [fdtd-2d.cpp:118->fdtd-2d.cpp:183]   --->   Operation 424 'select' 'p_Repl2_4' <Predicate = true> <Delay = 0.63> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_86 : Operation 425 [1/1] (0.70ns) (out node of the LUT)   --->   "%p_Repl2_3 = select i1 %tmp_i1, i52 %new_mant_V_3, i52 %xf_V_6" [fdtd-2d.cpp:118->fdtd-2d.cpp:183]   --->   Operation 425 'select' 'p_Repl2_3' <Predicate = true> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 87 <SV = 34> <Delay = 2.12>
+ST_87 : Operation 426 [1/1] (0.00ns)   --->   "%p_Result_1 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i11.i52(i1 %p_Repl2_5, i11 %p_Repl2_4, i52 %p_Repl2_3) nounwind" [fdtd-2d.cpp:72->fdtd-2d.cpp:122->fdtd-2d.cpp:183]   --->   Operation 426 'bitconcatenate' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 427 [1/1] (0.00ns)   --->   "%out_1 = bitcast i64 %p_Result_1 to double" [fdtd-2d.cpp:73->fdtd-2d.cpp:122->fdtd-2d.cpp:183]   --->   Operation 427 'bitcast' 'out_1' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 428 [14/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 428 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 35> <Delay = 2.12>
+ST_88 : Operation 429 [13/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 429 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 89 <SV = 36> <Delay = 2.12>
+ST_89 : Operation 430 [12/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 430 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 90 <SV = 37> <Delay = 2.12>
+ST_90 : Operation 431 [11/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 431 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 91 <SV = 38> <Delay = 2.12>
+ST_91 : Operation 432 [10/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 432 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 92 <SV = 39> <Delay = 2.12>
+ST_92 : Operation 433 [9/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 433 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 93 <SV = 40> <Delay = 2.12>
+ST_93 : Operation 434 [8/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 434 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 94 <SV = 41> <Delay = 2.12>
+ST_94 : Operation 435 [7/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 435 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 95 <SV = 42> <Delay = 2.12>
+ST_95 : Operation 436 [6/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 436 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 96 <SV = 43> <Delay = 2.12>
+ST_96 : Operation 437 [5/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 437 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 97 <SV = 44> <Delay = 2.12>
+ST_97 : Operation 438 [4/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 438 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 98 <SV = 45> <Delay = 2.12>
+ST_98 : Operation 439 [3/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 439 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 99 <SV = 46> <Delay = 2.12>
+ST_99 : Operation 440 [2/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 440 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 100 <SV = 47> <Delay = 2.12>
+ST_100 : Operation 441 [1/14] (2.12ns)   --->   "%tmp_16 = fsub double %ex_load, %out_1" [fdtd-2d.cpp:183]   --->   Operation 441 'dsub' 'tmp_16' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 101 <SV = 48> <Delay = 1.33>
+ST_101 : Operation 442 [2/2] (1.33ns)   --->   "store double %tmp_16, double* %ex_addr, align 8" [fdtd-2d.cpp:183]   --->   Operation 442 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 102 <SV = 49> <Delay = 1.33>
+ST_102 : Operation 443 [1/2] (1.33ns)   --->   "store double %tmp_16, double* %ex_addr, align 8" [fdtd-2d.cpp:183]   --->   Operation 443 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_102 : Operation 444 [1/1] (0.00ns)   --->   "br label %.preheader9" [fdtd-2d.cpp:182]   --->   Operation 444 'br' <Predicate = true> <Delay = 0.00>
+
+State 103 <SV = 5> <Delay = 1.56>
+ST_103 : Operation 445 [1/1] (0.00ns)   --->   "%i_2 = phi i10 [ %i_4, %.preheader8.loopexit ], [ 0, %.preheader8.preheader ]"   --->   Operation 445 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_103 : Operation 446 [1/1] (0.00ns)   --->   "%phi_mul1 = phi i20 [ %next_mul2, %.preheader8.loopexit ], [ 0, %.preheader8.preheader ]"   --->   Operation 446 'phi' 'phi_mul1' <Predicate = true> <Delay = 0.00>
+ST_103 : Operation 447 [1/1] (1.56ns)   --->   "%next_mul2 = add i20 %phi_mul1, 1000"   --->   Operation 447 'add' 'next_mul2' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_103 : Operation 448 [1/1] (1.29ns)   --->   "%exitcond1 = icmp eq i10 %i_2, -25" [fdtd-2d.cpp:185]   --->   Operation 448 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_103 : Operation 449 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 999, i64 999, i64 999) nounwind"   --->   Operation 449 'speclooptripcount' 'empty_12' <Predicate = true> <Delay = 0.00>
+ST_103 : Operation 450 [1/1] (1.41ns)   --->   "%i_4 = add i10 %i_2, 1" [fdtd-2d.cpp:187]   --->   Operation 450 'add' 'i_4' <Predicate = true> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_103 : Operation 451 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader.preheader" [fdtd-2d.cpp:185]   --->   Operation 451 'br' <Predicate = true> <Delay = 0.00>
+ST_103 : Operation 452 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 452 'br' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 104 <SV = 6> <Delay = 1.82>
+ST_104 : Operation 453 [1/1] (0.00ns)   --->   "%tmp_10_cast = zext i10 %i_4 to i20" [fdtd-2d.cpp:187]   --->   Operation 453 'zext' 'tmp_10_cast' <Predicate = true> <Delay = 0.00>
+ST_104 : Operation 454 [4/4] (1.82ns)   --->   "%tmp_9 = mul i20 %tmp_10_cast, 1000" [fdtd-2d.cpp:187]   --->   Operation 454 'mul' 'tmp_9' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 105 <SV = 7> <Delay = 1.82>
+ST_105 : Operation 455 [3/4] (1.82ns)   --->   "%tmp_9 = mul i20 %tmp_10_cast, 1000" [fdtd-2d.cpp:187]   --->   Operation 455 'mul' 'tmp_9' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 106 <SV = 8> <Delay = 1.82>
+ST_106 : Operation 456 [2/4] (1.82ns)   --->   "%tmp_9 = mul i20 %tmp_10_cast, 1000" [fdtd-2d.cpp:187]   --->   Operation 456 'mul' 'tmp_9' <Predicate = true> <Delay = 1.82> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 107 <SV = 9> <Delay = 1.06>
+ST_107 : Operation 457 [1/4] (0.00ns)   --->   "%tmp_9 = mul i20 %tmp_10_cast, 1000" [fdtd-2d.cpp:187]   --->   Operation 457 'mul' 'tmp_9' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_107 : Operation 458 [1/1] (1.06ns)   --->   "br label %.preheader" [fdtd-2d.cpp:186]   --->   Operation 458 'br' <Predicate = true> <Delay = 1.06>
+
+State 108 <SV = 10> <Delay = 1.41>
+ST_108 : Operation 459 [1/1] (0.00ns)   --->   "%j_3 = phi i10 [ %j_7, %5 ], [ 0, %.preheader.preheader ]"   --->   Operation 459 'phi' 'j_3' <Predicate = true> <Delay = 0.00>
+ST_108 : Operation 460 [1/1] (1.29ns)   --->   "%exitcond = icmp eq i10 %j_3, -25" [fdtd-2d.cpp:186]   --->   Operation 460 'icmp' 'exitcond' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 461 [1/1] (0.00ns)   --->   "%empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 999, i64 999, i64 999) nounwind"   --->   Operation 461 'speclooptripcount' 'empty_13' <Predicate = true> <Delay = 0.00>
+ST_108 : Operation 462 [1/1] (1.41ns)   --->   "%j_7 = add i10 %j_3, 1" [fdtd-2d.cpp:187]   --->   Operation 462 'add' 'j_7' <Predicate = true> <Delay = 1.41> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 463 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.preheader8.loopexit, label %5" [fdtd-2d.cpp:186]   --->   Operation 463 'br' <Predicate = true> <Delay = 0.00>
+ST_108 : Operation 464 [1/1] (0.00ns)   --->   "br label %.preheader8"   --->   Operation 464 'br' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 109 <SV = 11> <Delay = 1.56>
+ST_109 : Operation 465 [1/1] (0.00ns)   --->   "%tmp_17_cast = zext i10 %j_3 to i20" [fdtd-2d.cpp:187]   --->   Operation 465 'zext' 'tmp_17_cast' <Predicate = true> <Delay = 0.00>
+ST_109 : Operation 466 [1/1] (1.56ns)   --->   "%tmp_25 = add i20 %phi_mul1, %tmp_17_cast" [fdtd-2d.cpp:187]   --->   Operation 466 'add' 'tmp_25' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 467 [1/1] (1.56ns)   --->   "%tmp_26 = add i20 %tmp_9, %tmp_17_cast" [fdtd-2d.cpp:187]   --->   Operation 467 'add' 'tmp_26' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 468 [1/1] (0.00ns)   --->   "%tmp_18_cast = zext i10 %j_7 to i20" [fdtd-2d.cpp:187]   --->   Operation 468 'zext' 'tmp_18_cast' <Predicate = true> <Delay = 0.00>
+ST_109 : Operation 469 [1/1] (1.56ns)   --->   "%tmp_27 = add i20 %phi_mul1, %tmp_18_cast" [fdtd-2d.cpp:187]   --->   Operation 469 'add' 'tmp_27' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 110 <SV = 12> <Delay = 1.33>
+ST_110 : Operation 470 [1/1] (0.00ns)   --->   "%tmp_33_cast = zext i20 %tmp_25 to i64" [fdtd-2d.cpp:187]   --->   Operation 470 'zext' 'tmp_33_cast' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 471 [1/1] (0.00ns)   --->   "%ex_addr_2 = getelementptr [1000000 x double]* %ex, i64 0, i64 %tmp_33_cast" [fdtd-2d.cpp:187]   --->   Operation 471 'getelementptr' 'ex_addr_2' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 472 [1/1] (0.00ns)   --->   "%tmp_35_cast = zext i20 %tmp_27 to i64" [fdtd-2d.cpp:187]   --->   Operation 472 'zext' 'tmp_35_cast' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 473 [1/1] (0.00ns)   --->   "%ex_addr_1 = getelementptr [1000000 x double]* %ex, i64 0, i64 %tmp_35_cast" [fdtd-2d.cpp:187]   --->   Operation 473 'getelementptr' 'ex_addr_1' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 474 [4/4] (1.33ns)   --->   "%ex_load_1 = load double* %ex_addr_1, align 8" [fdtd-2d.cpp:187]   --->   Operation 474 'load' 'ex_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_110 : Operation 475 [4/4] (1.33ns)   --->   "%ex_load_2 = load double* %ex_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 475 'load' 'ex_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 111 <SV = 13> <Delay = 1.33>
+ST_111 : Operation 476 [3/4] (1.33ns)   --->   "%ex_load_1 = load double* %ex_addr_1, align 8" [fdtd-2d.cpp:187]   --->   Operation 476 'load' 'ex_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_111 : Operation 477 [3/4] (1.33ns)   --->   "%ex_load_2 = load double* %ex_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 477 'load' 'ex_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 112 <SV = 14> <Delay = 1.33>
+ST_112 : Operation 478 [2/4] (1.33ns)   --->   "%ex_load_1 = load double* %ex_addr_1, align 8" [fdtd-2d.cpp:187]   --->   Operation 478 'load' 'ex_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_112 : Operation 479 [2/4] (1.33ns)   --->   "%ex_load_2 = load double* %ex_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 479 'load' 'ex_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 113 <SV = 15> <Delay = 1.33>
+ST_113 : Operation 480 [1/4] (1.33ns)   --->   "%ex_load_1 = load double* %ex_addr_1, align 8" [fdtd-2d.cpp:187]   --->   Operation 480 'load' 'ex_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_113 : Operation 481 [1/4] (1.33ns)   --->   "%ex_load_2 = load double* %ex_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 481 'load' 'ex_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 114 <SV = 16> <Delay = 2.12>
+ST_114 : Operation 482 [14/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 482 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 115 <SV = 17> <Delay = 2.12>
+ST_115 : Operation 483 [13/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 483 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 116 <SV = 18> <Delay = 2.12>
+ST_116 : Operation 484 [12/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 484 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 117 <SV = 19> <Delay = 2.12>
+ST_117 : Operation 485 [11/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 485 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 118 <SV = 20> <Delay = 2.12>
+ST_118 : Operation 486 [10/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 486 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 119 <SV = 21> <Delay = 2.12>
+ST_119 : Operation 487 [9/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 487 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 120 <SV = 22> <Delay = 2.12>
+ST_120 : Operation 488 [8/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 488 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 121 <SV = 23> <Delay = 2.12>
+ST_121 : Operation 489 [7/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 489 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 122 <SV = 24> <Delay = 2.12>
+ST_122 : Operation 490 [6/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 490 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 123 <SV = 25> <Delay = 2.12>
+ST_123 : Operation 491 [5/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 491 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 124 <SV = 26> <Delay = 2.12>
+ST_124 : Operation 492 [1/1] (0.00ns)   --->   "%tmp_34_cast = zext i20 %tmp_26 to i64" [fdtd-2d.cpp:187]   --->   Operation 492 'zext' 'tmp_34_cast' <Predicate = true> <Delay = 0.00>
+ST_124 : Operation 493 [1/1] (0.00ns)   --->   "%ey_addr_2 = getelementptr [1000000 x double]* %ey, i64 0, i64 %tmp_34_cast" [fdtd-2d.cpp:187]   --->   Operation 493 'getelementptr' 'ey_addr_2' <Predicate = true> <Delay = 0.00>
+ST_124 : Operation 494 [4/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 494 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_124 : Operation 495 [4/4] (1.33ns)   --->   "%ey_load_1 = load double* %ey_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 495 'load' 'ey_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 125 <SV = 27> <Delay = 2.12>
+ST_125 : Operation 496 [3/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 496 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_125 : Operation 497 [3/4] (1.33ns)   --->   "%ey_load_1 = load double* %ey_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 497 'load' 'ey_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 126 <SV = 28> <Delay = 2.12>
+ST_126 : Operation 498 [2/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 498 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_126 : Operation 499 [2/4] (1.33ns)   --->   "%ey_load_1 = load double* %ey_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 499 'load' 'ey_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 127 <SV = 29> <Delay = 2.12>
+ST_127 : Operation 500 [1/14] (2.12ns)   --->   "%tmp_19 = fsub double %ex_load_1, %ex_load_2" [fdtd-2d.cpp:187]   --->   Operation 500 'dsub' 'tmp_19' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_127 : Operation 501 [1/4] (1.33ns)   --->   "%ey_load_1 = load double* %ey_addr_2, align 8" [fdtd-2d.cpp:187]   --->   Operation 501 'load' 'ey_load_1' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 128 <SV = 30> <Delay = 2.12>
+ST_128 : Operation 502 [14/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 502 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 129 <SV = 31> <Delay = 2.12>
+ST_129 : Operation 503 [13/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 503 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 130 <SV = 32> <Delay = 2.12>
+ST_130 : Operation 504 [12/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 504 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 131 <SV = 33> <Delay = 2.12>
+ST_131 : Operation 505 [11/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 505 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 132 <SV = 34> <Delay = 2.12>
+ST_132 : Operation 506 [10/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 506 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 133 <SV = 35> <Delay = 2.12>
+ST_133 : Operation 507 [9/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 507 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 134 <SV = 36> <Delay = 2.12>
+ST_134 : Operation 508 [8/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 508 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 135 <SV = 37> <Delay = 2.12>
+ST_135 : Operation 509 [7/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 509 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 136 <SV = 38> <Delay = 2.12>
+ST_136 : Operation 510 [6/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 510 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 137 <SV = 39> <Delay = 2.12>
+ST_137 : Operation 511 [5/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 511 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 138 <SV = 40> <Delay = 2.12>
+ST_138 : Operation 512 [1/1] (0.00ns)   --->   "%ey_addr_3 = getelementptr [1000000 x double]* %ey, i64 0, i64 %tmp_33_cast" [fdtd-2d.cpp:187]   --->   Operation 512 'getelementptr' 'ey_addr_3' <Predicate = true> <Delay = 0.00>
+ST_138 : Operation 513 [1/1] (0.00ns)   --->   "%hz_addr_4 = getelementptr [1000000 x double]* %hz, i64 0, i64 %tmp_33_cast" [fdtd-2d.cpp:187]   --->   Operation 513 'getelementptr' 'hz_addr_4' <Predicate = true> <Delay = 0.00>
+ST_138 : Operation 514 [4/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 514 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_138 : Operation 515 [4/4] (1.33ns)   --->   "%ey_load_2 = load double* %ey_addr_3, align 8" [fdtd-2d.cpp:187]   --->   Operation 515 'load' 'ey_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 139 <SV = 41> <Delay = 2.12>
+ST_139 : Operation 516 [3/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 516 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_139 : Operation 517 [3/4] (1.33ns)   --->   "%ey_load_2 = load double* %ey_addr_3, align 8" [fdtd-2d.cpp:187]   --->   Operation 517 'load' 'ey_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 140 <SV = 42> <Delay = 2.12>
+ST_140 : Operation 518 [2/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 518 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_140 : Operation 519 [2/4] (1.33ns)   --->   "%ey_load_2 = load double* %ey_addr_3, align 8" [fdtd-2d.cpp:187]   --->   Operation 519 'load' 'ey_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 141 <SV = 43> <Delay = 2.12>
+ST_141 : Operation 520 [1/14] (2.12ns)   --->   "%tmp_20 = fadd double %tmp_19, %ey_load_1" [fdtd-2d.cpp:187]   --->   Operation 520 'dadd' 'tmp_20' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_141 : Operation 521 [1/4] (1.33ns)   --->   "%ey_load_2 = load double* %ey_addr_3, align 8" [fdtd-2d.cpp:187]   --->   Operation 521 'load' 'ey_load_2' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 142 <SV = 44> <Delay = 2.12>
+ST_142 : Operation 522 [14/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 522 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 143 <SV = 45> <Delay = 2.12>
+ST_143 : Operation 523 [13/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 523 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 144 <SV = 46> <Delay = 2.12>
+ST_144 : Operation 524 [12/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 524 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 145 <SV = 47> <Delay = 2.12>
+ST_145 : Operation 525 [11/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 525 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 146 <SV = 48> <Delay = 2.12>
+ST_146 : Operation 526 [10/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 526 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 147 <SV = 49> <Delay = 2.12>
+ST_147 : Operation 527 [9/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 527 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 148 <SV = 50> <Delay = 2.12>
+ST_148 : Operation 528 [8/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 528 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 149 <SV = 51> <Delay = 2.12>
+ST_149 : Operation 529 [7/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 529 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 150 <SV = 52> <Delay = 2.12>
+ST_150 : Operation 530 [6/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 530 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 151 <SV = 53> <Delay = 2.12>
+ST_151 : Operation 531 [5/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 531 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 152 <SV = 54> <Delay = 2.12>
+ST_152 : Operation 532 [4/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 532 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 153 <SV = 55> <Delay = 2.12>
+ST_153 : Operation 533 [3/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 533 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 154 <SV = 56> <Delay = 2.12>
+ST_154 : Operation 534 [2/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 534 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 155 <SV = 57> <Delay = 2.12>
+ST_155 : Operation 535 [1/14] (2.12ns)   --->   "%tmp_21 = fsub double %tmp_20, %ey_load_2" [fdtd-2d.cpp:187]   --->   Operation 535 'dsub' 'tmp_21' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 156 <SV = 58> <Delay = 1.97>
+ST_156 : Operation 536 [18/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 536 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 157 <SV = 59> <Delay = 1.97>
+ST_157 : Operation 537 [17/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 537 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 158 <SV = 60> <Delay = 1.97>
+ST_158 : Operation 538 [16/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 538 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 159 <SV = 61> <Delay = 1.97>
+ST_159 : Operation 539 [15/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 539 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 160 <SV = 62> <Delay = 1.97>
+ST_160 : Operation 540 [14/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 540 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 161 <SV = 63> <Delay = 1.97>
+ST_161 : Operation 541 [13/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 541 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 162 <SV = 64> <Delay = 1.97>
+ST_162 : Operation 542 [12/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 542 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 163 <SV = 65> <Delay = 1.97>
+ST_163 : Operation 543 [11/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 543 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 164 <SV = 66> <Delay = 1.97>
+ST_164 : Operation 544 [10/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 544 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 165 <SV = 67> <Delay = 1.97>
+ST_165 : Operation 545 [9/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 545 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 166 <SV = 68> <Delay = 1.97>
+ST_166 : Operation 546 [8/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 546 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 167 <SV = 69> <Delay = 1.97>
+ST_167 : Operation 547 [7/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 547 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 168 <SV = 70> <Delay = 1.97>
+ST_168 : Operation 548 [6/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 548 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 169 <SV = 71> <Delay = 1.97>
+ST_169 : Operation 549 [5/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 549 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 170 <SV = 72> <Delay = 1.97>
+ST_170 : Operation 550 [4/4] (1.33ns)   --->   "%hz_load_4 = load double* %hz_addr_4, align 8" [fdtd-2d.cpp:187]   --->   Operation 550 'load' 'hz_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_170 : Operation 551 [4/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 551 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 171 <SV = 73> <Delay = 1.97>
+ST_171 : Operation 552 [3/4] (1.33ns)   --->   "%hz_load_4 = load double* %hz_addr_4, align 8" [fdtd-2d.cpp:187]   --->   Operation 552 'load' 'hz_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_171 : Operation 553 [3/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 553 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 172 <SV = 74> <Delay = 1.97>
+ST_172 : Operation 554 [2/4] (1.33ns)   --->   "%hz_load_4 = load double* %hz_addr_4, align 8" [fdtd-2d.cpp:187]   --->   Operation 554 'load' 'hz_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_172 : Operation 555 [2/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 555 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 173 <SV = 75> <Delay = 1.97>
+ST_173 : Operation 556 [1/4] (1.33ns)   --->   "%hz_load_4 = load double* %hz_addr_4, align 8" [fdtd-2d.cpp:187]   --->   Operation 556 'load' 'hz_load_4' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_173 : Operation 557 [1/18] (1.97ns)   --->   "%tmp_22 = fmul double %tmp_21, 7.000000e-01" [fdtd-2d.cpp:187]   --->   Operation 557 'dmul' 'tmp_22' <Predicate = true> <Delay = 1.97> <Core = "DMul">   --->   Core 110 'DMul' <Latency = 17> <II = 1> <Delay = 1.97> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 174 <SV = 76> <Delay = 2.12>
+ST_174 : Operation 558 [14/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 558 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 175 <SV = 77> <Delay = 2.12>
+ST_175 : Operation 559 [13/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 559 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 176 <SV = 78> <Delay = 2.12>
+ST_176 : Operation 560 [12/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 560 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 177 <SV = 79> <Delay = 2.12>
+ST_177 : Operation 561 [11/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 561 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 178 <SV = 80> <Delay = 2.12>
+ST_178 : Operation 562 [10/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 562 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 179 <SV = 81> <Delay = 2.12>
+ST_179 : Operation 563 [9/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 563 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 180 <SV = 82> <Delay = 2.12>
+ST_180 : Operation 564 [8/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 564 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 181 <SV = 83> <Delay = 2.12>
+ST_181 : Operation 565 [7/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 565 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 182 <SV = 84> <Delay = 2.12>
+ST_182 : Operation 566 [6/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 566 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 183 <SV = 85> <Delay = 2.12>
+ST_183 : Operation 567 [5/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 567 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 184 <SV = 86> <Delay = 2.12>
+ST_184 : Operation 568 [4/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 568 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 185 <SV = 87> <Delay = 2.12>
+ST_185 : Operation 569 [3/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 569 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 186 <SV = 88> <Delay = 2.12>
+ST_186 : Operation 570 [2/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 570 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 187 <SV = 89> <Delay = 2.12>
+ST_187 : Operation 571 [1/14] (2.12ns)   --->   "%tmp_23 = fsub double %hz_load_4, %tmp_22" [fdtd-2d.cpp:187]   --->   Operation 571 'dsub' 'tmp_23' <Predicate = true> <Delay = 2.12> <Core = "DAddSub_nodsp">   --->   Core 139 'DAddSub_nodsp' <Latency = 13> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 188 <SV = 90> <Delay = 1.33>
+ST_188 : Operation 572 [2/2] (1.33ns)   --->   "store double %tmp_23, double* %hz_addr_4, align 8" [fdtd-2d.cpp:187]   --->   Operation 572 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+
+State 189 <SV = 91> <Delay = 1.33>
+ST_189 : Operation 573 [1/2] (1.33ns)   --->   "store double %tmp_23, double* %hz_addr_4, align 8" [fdtd-2d.cpp:187]   --->   Operation 573 'store' <Predicate = true> <Delay = 1.33> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 3> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1000000> <RAM>
+ST_189 : Operation 574 [1/1] (0.00ns)   --->   "br label %.preheader" [fdtd-2d.cpp:186]   --->   Operation 574 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
+
+ <State 1>: 1.06ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('t') with incoming values : ('t', fdtd-2d.cpp:172) [18]  (1.06 ns)
+
+ <State 2>: 1.36ns
+The critical path consists of the following:
+	'phi' operation ('t') with incoming values : ('t', fdtd-2d.cpp:172) [18]  (0 ns)
+	'add' operation ('t', fdtd-2d.cpp:172) [21]  (1.36 ns)
+
+ <State 3>: 1.42ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', fdtd-2d.cpp:174) [28]  (0 ns)
+	'add' operation ('j', fdtd-2d.cpp:174) [31]  (1.42 ns)
+
+ <State 4>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('p_fict_load', fdtd-2d.cpp:175) on array 'p_fict_s' [34]  (1.33 ns)
+
+ <State 5>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('p_fict_load', fdtd-2d.cpp:175) on array 'p_fict_s' [34]  (1.33 ns)
+
+ <State 6>: 1.33ns
+The critical path consists of the following:
+	'getelementptr' operation ('ey_addr', fdtd-2d.cpp:175) [36]  (0 ns)
+	'store' operation (fdtd-2d.cpp:175) of variable 'p_fict_load', fdtd-2d.cpp:175 on array 'ey' [37]  (1.33 ns)
+
+ <State 7>: 1.33ns
+The critical path consists of the following:
+	'store' operation (fdtd-2d.cpp:175) of variable 'p_fict_load', fdtd-2d.cpp:175 on array 'ey' [37]  (1.33 ns)
+
+ <State 8>: 1.42ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fdtd-2d.cpp:177) [42]  (0 ns)
+	'add' operation ('tmp_2', fdtd-2d.cpp:179) [49]  (1.42 ns)
+
+ <State 9>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_1', fdtd-2d.cpp:179) [48]  (1.82 ns)
+
+ <State 10>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_1', fdtd-2d.cpp:179) [48]  (1.82 ns)
+
+ <State 11>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_1', fdtd-2d.cpp:179) [48]  (1.82 ns)
+
+ <State 12>: 1.06ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', fdtd-2d.cpp:178) [54]  (1.06 ns)
+
+ <State 13>: 1.56ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', fdtd-2d.cpp:178) [54]  (0 ns)
+	'add' operation ('tmp_4', fdtd-2d.cpp:179) [61]  (1.56 ns)
+
+ <State 14>: 1.33ns
+The critical path consists of the following:
+	'getelementptr' operation ('hz_addr', fdtd-2d.cpp:179) [64]  (0 ns)
+	'load' operation ('hz_load', fdtd-2d.cpp:179) on array 'hz' [69]  (1.33 ns)
+
+ <State 15>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('hz_load', fdtd-2d.cpp:179) on array 'hz' [69]  (1.33 ns)
+
+ <State 16>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('hz_load', fdtd-2d.cpp:179) on array 'hz' [69]  (1.33 ns)
+
+ <State 17>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('hz_load', fdtd-2d.cpp:179) on array 'hz' [69]  (1.33 ns)
+
+ <State 18>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 19>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 20>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 21>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 22>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 23>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 24>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 25>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 26>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 27>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 28>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 29>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 30>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 31>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:179) [71]  (2.12 ns)
+
+ <State 32>: 1.95ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_i', fdtd-2d.cpp:96->fdtd-2d.cpp:179) [77]  (1.33 ns)
+	'select' operation ('p_0272_2_i', fdtd-2d.cpp:96->fdtd-2d.cpp:179) [85]  (0.62 ns)
+
+ <State 33>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', fdtd-2d.cpp:113->fdtd-2d.cpp:179) [90]  (2.29 ns)
+
+ <State 34>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:179) [89]  (2.29 ns)
+
+ <State 35>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:179) [89]  (2.29 ns)
+
+ <State 36>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:179) [89]  (2.29 ns)
+
+ <State 37>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:179) [89]  (2.29 ns)
+
+ <State 38>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:179) [89]  (2.29 ns)
+
+ <State 39>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:179) [89]  (2.29 ns)
+
+ <State 40>: 2.06ns
+The critical path consists of the following:
+	'add' operation ('new_exp.V', fdtd-2d.cpp:99->fdtd-2d.cpp:179) [78]  (1.43 ns)
+	'select' operation ('__Repl2__', fdtd-2d.cpp:118->fdtd-2d.cpp:179) [96]  (0.633 ns)
+
+ <State 41>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 42>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 43>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 44>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 45>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 46>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 47>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 48>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 49>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 50>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 51>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 52>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 53>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 54>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_8', fdtd-2d.cpp:179) [100]  (2.12 ns)
+
+ <State 55>: 1.33ns
+The critical path consists of the following:
+	'store' operation (fdtd-2d.cpp:179) of variable 'tmp_8', fdtd-2d.cpp:179 on array 'ey' [101]  (1.33 ns)
+
+ <State 56>: 1.33ns
+The critical path consists of the following:
+	'store' operation (fdtd-2d.cpp:179) of variable 'tmp_8', fdtd-2d.cpp:179 on array 'ey' [101]  (1.33 ns)
+
+ <State 57>: 1.56ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [110]  (0 ns)
+	'add' operation ('next_mul') [111]  (1.56 ns)
+
+ <State 58>: 1.42ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', fdtd-2d.cpp:182) [119]  (0 ns)
+	'add' operation ('tmp_12', fdtd-2d.cpp:183) [131]  (1.42 ns)
+
+ <State 59>: 1.56ns
+The critical path consists of the following:
+	'add' operation ('tmp_10', fdtd-2d.cpp:183) [125]  (1.56 ns)
+
+ <State 60>: 1.33ns
+The critical path consists of the following:
+	'getelementptr' operation ('hz_addr_2', fdtd-2d.cpp:183) [128]  (0 ns)
+	'load' operation ('hz_load_2', fdtd-2d.cpp:183) on array 'hz' [130]  (1.33 ns)
+
+ <State 61>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('hz_load_2', fdtd-2d.cpp:183) on array 'hz' [130]  (1.33 ns)
+
+ <State 62>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('hz_load_2', fdtd-2d.cpp:183) on array 'hz' [130]  (1.33 ns)
+
+ <State 63>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('hz_load_2', fdtd-2d.cpp:183) on array 'hz' [130]  (1.33 ns)
+
+ <State 64>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 65>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 66>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 67>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 68>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 69>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 70>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 71>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 72>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 73>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 74>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 75>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 76>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 77>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('in', fdtd-2d.cpp:183) [137]  (2.12 ns)
+
+ <State 78>: 1.95ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_i6', fdtd-2d.cpp:96->fdtd-2d.cpp:183) [143]  (1.33 ns)
+	'select' operation ('p_0272_2_i1', fdtd-2d.cpp:96->fdtd-2d.cpp:183) [151]  (0.62 ns)
+
+ <State 79>: 2.29ns
+The critical path consists of the following:
+	'shl' operation ('r.V', fdtd-2d.cpp:113->fdtd-2d.cpp:183) [156]  (2.29 ns)
+
+ <State 80>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:183) [155]  (2.29 ns)
+
+ <State 81>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:183) [155]  (2.29 ns)
+
+ <State 82>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:183) [155]  (2.29 ns)
+
+ <State 83>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:183) [155]  (2.29 ns)
+
+ <State 84>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:183) [155]  (2.29 ns)
+
+ <State 85>: 2.29ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', fdtd-2d.cpp:111->fdtd-2d.cpp:183) [155]  (2.29 ns)
+
+ <State 86>: 2.06ns
+The critical path consists of the following:
+	'add' operation ('new_exp.V', fdtd-2d.cpp:99->fdtd-2d.cpp:183) [144]  (1.43 ns)
+	'select' operation ('__Repl2__', fdtd-2d.cpp:118->fdtd-2d.cpp:183) [162]  (0.633 ns)
+
+ <State 87>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 88>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 89>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 90>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 91>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 92>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 93>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 94>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 95>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 96>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 97>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 98>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 99>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 100>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_16', fdtd-2d.cpp:183) [166]  (2.12 ns)
+
+ <State 101>: 1.33ns
+The critical path consists of the following:
+	'store' operation (fdtd-2d.cpp:183) of variable 'tmp_16', fdtd-2d.cpp:183 on array 'ex' [167]  (1.33 ns)
+
+ <State 102>: 1.33ns
+The critical path consists of the following:
+	'store' operation (fdtd-2d.cpp:183) of variable 'tmp_16', fdtd-2d.cpp:183 on array 'ex' [167]  (1.33 ns)
+
+ <State 103>: 1.56ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul1') with incoming values : ('next_mul2') [176]  (0 ns)
+	'add' operation ('next_mul2') [177]  (1.56 ns)
+
+ <State 104>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_9', fdtd-2d.cpp:187) [184]  (1.82 ns)
+
+ <State 105>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_9', fdtd-2d.cpp:187) [184]  (1.82 ns)
+
+ <State 106>: 1.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_9', fdtd-2d.cpp:187) [184]  (1.82 ns)
+
+ <State 107>: 1.06ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', fdtd-2d.cpp:187) [187]  (1.06 ns)
+
+ <State 108>: 1.42ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', fdtd-2d.cpp:187) [187]  (0 ns)
+	'add' operation ('j', fdtd-2d.cpp:187) [190]  (1.42 ns)
+
+ <State 109>: 1.56ns
+The critical path consists of the following:
+	'add' operation ('tmp_25', fdtd-2d.cpp:187) [194]  (1.56 ns)
+
+ <State 110>: 1.33ns
+The critical path consists of the following:
+	'getelementptr' operation ('ex_addr_2', fdtd-2d.cpp:187) [196]  (0 ns)
+	'load' operation ('ex_load_2', fdtd-2d.cpp:187) on array 'ex' [208]  (1.33 ns)
+
+ <State 111>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('ex_load_1', fdtd-2d.cpp:187) on array 'ex' [207]  (1.33 ns)
+
+ <State 112>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('ex_load_1', fdtd-2d.cpp:187) on array 'ex' [207]  (1.33 ns)
+
+ <State 113>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('ex_load_1', fdtd-2d.cpp:187) on array 'ex' [207]  (1.33 ns)
+
+ <State 114>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 115>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 116>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 117>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 118>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 119>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 120>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 121>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 122>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 123>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 124>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 125>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 126>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 127>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_19', fdtd-2d.cpp:187) [209]  (2.12 ns)
+
+ <State 128>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 129>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 130>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 131>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 132>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 133>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 134>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 135>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 136>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 137>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 138>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 139>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 140>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 141>: 2.12ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', fdtd-2d.cpp:187) [211]  (2.12 ns)
+
+ <State 142>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 143>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 144>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 145>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 146>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 147>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 148>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 149>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 150>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 151>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 152>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 153>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 154>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 155>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_21', fdtd-2d.cpp:187) [213]  (2.12 ns)
+
+ <State 156>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 157>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 158>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 159>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 160>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 161>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 162>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 163>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 164>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 165>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 166>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 167>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 168>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 169>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 170>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 171>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 172>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 173>: 1.98ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_22', fdtd-2d.cpp:187) [214]  (1.98 ns)
+
+ <State 174>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 175>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 176>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 177>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 178>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 179>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 180>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 181>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 182>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 183>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 184>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 185>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 186>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 187>: 2.12ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_23', fdtd-2d.cpp:187) [215]  (2.12 ns)
+
+ <State 188>: 1.33ns
+The critical path consists of the following:
+	'store' operation (fdtd-2d.cpp:187) of variable 'tmp_23', fdtd-2d.cpp:187 on array 'hz' [216]  (1.33 ns)
+
+ <State 189>: 1.33ns
+The critical path consists of the following:
+	'store' operation (fdtd-2d.cpp:187) of variable 'tmp_23', fdtd-2d.cpp:187 on array 'hz' [216]  (1.33 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+	State 153
+	State 154
+	State 155
+	State 156
+	State 157
+	State 158
+	State 159
+	State 160
+	State 161
+	State 162
+	State 163
+	State 164
+	State 165
+	State 166
+	State 167
+	State 168
+	State 169
+	State 170
+	State 171
+	State 172
+	State 173
+	State 174
+	State 175
+	State 176
+	State 177
+	State 178
+	State 179
+	State 180
+	State 181
+	State 182
+	State 183
+	State 184
+	State 185
+	State 186
+	State 187
+	State 188
+	State 189
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

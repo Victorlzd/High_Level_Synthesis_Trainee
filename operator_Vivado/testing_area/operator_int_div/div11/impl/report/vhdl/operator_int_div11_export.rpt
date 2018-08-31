@@ -4,17 +4,17 @@ Implementation tool: Xilinx Vivado v.2018.2
 Project:             operator_int_div
 Solution:            div11
 Device target:       xc7k160tfbg484-1
-Report date:         Thu Aug 02 15:53:15 CEST 2018
+Report date:         Fri Aug 31 16:47:58 CEST 2018
 
 #=== Post-Implementation Resource usage ===
-SLICE:           17
-LUT:             61
-FF:              38
+SLICE:           41
+LUT:            114
+FF:             115
 DSP:              0
 BRAM:             0
 SRL:              0
 #=== Final timing ===
-CP required:    10.000
-CP achieved post-synthesis:    5.846
-CP achieved post-implementation:    6.387
+CP required:    2.500
+CP achieved post-synthesis:    2.793
+CP achieved post-implementation:    2.388
 Timing met

@@ -21,15 +21,15 @@ const sc_lv<32> operator_long_div9::ap_const_lv32_1 = "1";
 const bool operator_long_div9::ap_const_boolean_1 = true;
 
 operator_long_div9::operator_long_div9(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    grp_int_64_div9_fu_28 = new int_64_div9("grp_int_64_div9_fu_28");
-    grp_int_64_div9_fu_28->ap_clk(ap_clk);
-    grp_int_64_div9_fu_28->ap_rst(ap_rst);
-    grp_int_64_div9_fu_28->ap_start(grp_int_64_div9_fu_28_ap_start);
-    grp_int_64_div9_fu_28->ap_done(grp_int_64_div9_fu_28_ap_done);
-    grp_int_64_div9_fu_28->ap_idle(grp_int_64_div9_fu_28_ap_idle);
-    grp_int_64_div9_fu_28->ap_ready(grp_int_64_div9_fu_28_ap_ready);
-    grp_int_64_div9_fu_28->in_V(in_r);
-    grp_int_64_div9_fu_28->ap_return(grp_int_64_div9_fu_28_ap_return);
+    grp_int_64_div9_fu_32 = new int_64_div9("grp_int_64_div9_fu_32");
+    grp_int_64_div9_fu_32->ap_clk(ap_clk);
+    grp_int_64_div9_fu_32->ap_rst(ap_rst);
+    grp_int_64_div9_fu_32->ap_start(grp_int_64_div9_fu_32_ap_start);
+    grp_int_64_div9_fu_32->ap_done(grp_int_64_div9_fu_32_ap_done);
+    grp_int_64_div9_fu_32->ap_idle(grp_int_64_div9_fu_32_ap_idle);
+    grp_int_64_div9_fu_32->ap_ready(grp_int_64_div9_fu_32_ap_ready);
+    grp_int_64_div9_fu_32->in_V(in_r);
+    grp_int_64_div9_fu_32->ap_return(grp_int_64_div9_fu_32_ap_return);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -42,7 +42,7 @@ operator_long_div9::operator_long_div9(sc_module_name name) : sc_module(name), m
     sensitive << ( ap_CS_fsm );
 
     SC_METHOD(thread_ap_done);
-    sensitive << ( grp_int_64_div9_fu_28_ap_done );
+    sensitive << ( grp_int_64_div9_fu_32_ap_done );
     sensitive << ( ap_CS_fsm_state2 );
 
     SC_METHOD(thread_ap_idle);
@@ -50,29 +50,29 @@ operator_long_div9::operator_long_div9(sc_module_name name) : sc_module(name), m
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( grp_int_64_div9_fu_28_ap_done );
+    sensitive << ( grp_int_64_div9_fu_32_ap_done );
     sensitive << ( ap_CS_fsm_state2 );
 
     SC_METHOD(thread_ap_return);
-    sensitive << ( grp_int_64_div9_fu_28_ap_done );
-    sensitive << ( grp_int_64_div9_fu_28_ap_return );
+    sensitive << ( grp_int_64_div9_fu_32_ap_done );
+    sensitive << ( grp_int_64_div9_fu_32_ap_return );
     sensitive << ( ap_CS_fsm_state2 );
 
-    SC_METHOD(thread_grp_int_64_div9_fu_28_ap_start);
-    sensitive << ( grp_int_64_div9_fu_28_ap_start_reg );
+    SC_METHOD(thread_grp_int_64_div9_fu_32_ap_start);
+    sensitive << ( grp_int_64_div9_fu_32_ap_start_reg );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( grp_int_64_div9_fu_28_ap_done );
+    sensitive << ( grp_int_64_div9_fu_32_ap_done );
     sensitive << ( ap_CS_fsm_state2 );
 
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
 
     ap_CS_fsm = "01";
-    grp_int_64_div9_fu_28_ap_start_reg = SC_LOGIC_0;
+    grp_int_64_div9_fu_32_ap_start_reg = SC_LOGIC_0;
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "operator_long_div9_sc_trace_" << apTFileNum ++;
@@ -93,12 +93,12 @@ operator_long_div9::operator_long_div9(sc_module_name name) : sc_module(name), m
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, grp_int_64_div9_fu_28_ap_start, "grp_int_64_div9_fu_28_ap_start");
-    sc_trace(mVcdFile, grp_int_64_div9_fu_28_ap_done, "grp_int_64_div9_fu_28_ap_done");
-    sc_trace(mVcdFile, grp_int_64_div9_fu_28_ap_idle, "grp_int_64_div9_fu_28_ap_idle");
-    sc_trace(mVcdFile, grp_int_64_div9_fu_28_ap_ready, "grp_int_64_div9_fu_28_ap_ready");
-    sc_trace(mVcdFile, grp_int_64_div9_fu_28_ap_return, "grp_int_64_div9_fu_28_ap_return");
-    sc_trace(mVcdFile, grp_int_64_div9_fu_28_ap_start_reg, "grp_int_64_div9_fu_28_ap_start_reg");
+    sc_trace(mVcdFile, grp_int_64_div9_fu_32_ap_start, "grp_int_64_div9_fu_32_ap_start");
+    sc_trace(mVcdFile, grp_int_64_div9_fu_32_ap_done, "grp_int_64_div9_fu_32_ap_done");
+    sc_trace(mVcdFile, grp_int_64_div9_fu_32_ap_idle, "grp_int_64_div9_fu_32_ap_idle");
+    sc_trace(mVcdFile, grp_int_64_div9_fu_32_ap_ready, "grp_int_64_div9_fu_32_ap_ready");
+    sc_trace(mVcdFile, grp_int_64_div9_fu_32_ap_return, "grp_int_64_div9_fu_32_ap_return");
+    sc_trace(mVcdFile, grp_int_64_div9_fu_32_ap_start_reg, "grp_int_64_div9_fu_32_ap_start_reg");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
@@ -116,7 +116,7 @@ operator_long_div9::~operator_long_div9() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete grp_int_64_div9_fu_28;
+    delete grp_int_64_div9_fu_32;
 }
 
 void operator_long_div9::thread_ap_clk_no_reset_() {
@@ -126,13 +126,13 @@ void operator_long_div9::thread_ap_clk_no_reset_() {
         ap_CS_fsm = ap_NS_fsm.read();
     }
     if ( ap_rst.read() == ap_const_logic_1) {
-        grp_int_64_div9_fu_28_ap_start_reg = ap_const_logic_0;
+        grp_int_64_div9_fu_32_ap_start_reg = ap_const_logic_0;
     } else {
         if ((esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1) && 
              esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
-            grp_int_64_div9_fu_28_ap_start_reg = ap_const_logic_1;
-        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_int_64_div9_fu_28_ap_ready.read())) {
-            grp_int_64_div9_fu_28_ap_start_reg = ap_const_logic_0;
+            grp_int_64_div9_fu_32_ap_start_reg = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_int_64_div9_fu_32_ap_ready.read())) {
+            grp_int_64_div9_fu_32_ap_start_reg = ap_const_logic_0;
         }
     }
 }
@@ -146,7 +146,7 @@ void operator_long_div9::thread_ap_CS_fsm_state2() {
 }
 
 void operator_long_div9::thread_ap_done() {
-    if ((esl_seteq<1,1,1>(grp_int_64_div9_fu_28_ap_done.read(), ap_const_logic_1) && 
+    if ((esl_seteq<1,1,1>(grp_int_64_div9_fu_32_ap_done.read(), ap_const_logic_1) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
         ap_done = ap_const_logic_1;
     } else {
@@ -164,7 +164,7 @@ void operator_long_div9::thread_ap_idle() {
 }
 
 void operator_long_div9::thread_ap_ready() {
-    if ((esl_seteq<1,1,1>(grp_int_64_div9_fu_28_ap_done.read(), ap_const_logic_1) && 
+    if ((esl_seteq<1,1,1>(grp_int_64_div9_fu_32_ap_done.read(), ap_const_logic_1) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
         ap_ready = ap_const_logic_1;
     } else {
@@ -173,11 +173,11 @@ void operator_long_div9::thread_ap_ready() {
 }
 
 void operator_long_div9::thread_ap_return() {
-    ap_return = grp_int_64_div9_fu_28_ap_return.read();
+    ap_return = grp_int_64_div9_fu_32_ap_return.read();
 }
 
-void operator_long_div9::thread_grp_int_64_div9_fu_28_ap_start() {
-    grp_int_64_div9_fu_28_ap_start = grp_int_64_div9_fu_28_ap_start_reg.read();
+void operator_long_div9::thread_grp_int_64_div9_fu_32_ap_start() {
+    grp_int_64_div9_fu_32_ap_start = grp_int_64_div9_fu_32_ap_start_reg.read();
 }
 
 void operator_long_div9::thread_ap_NS_fsm() {
@@ -190,7 +190,7 @@ void operator_long_div9::thread_ap_NS_fsm() {
             }
             break;
         case 2 : 
-            if ((esl_seteq<1,1,1>(grp_int_64_div9_fu_28_ap_done.read(), ap_const_logic_1) && esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
+            if ((esl_seteq<1,1,1>(grp_int_64_div9_fu_32_ap_done.read(), ap_const_logic_1) && esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
                 ap_NS_fsm = ap_ST_fsm_state1;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state2;

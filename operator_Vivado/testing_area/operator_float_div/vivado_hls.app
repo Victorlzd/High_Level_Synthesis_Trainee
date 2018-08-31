@@ -1,4 +1,4 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="operator_float_div" top="operator_float_div4">
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="operator_float_div" top="operator_float_div11">
     <includePaths/>
     <libraryFlag/>
     <files>
@@ -6,7 +6,7 @@
         <file name="test.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions>
-        <solution name="div4" status=""/>
+        <solution name="div11" status=""/>
     </solutions>
 </AutoPilot:project>
 

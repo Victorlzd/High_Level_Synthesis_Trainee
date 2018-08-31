@@ -8,7 +8,7 @@
 #
 # Settings for Vivado implementation flow
 #
-set top_module kernel_seidel_2d_my_version
+set top_module kernel_seidel_2d_optimized
 set language vhdl
 set family kintex7
 set device xc7k160t

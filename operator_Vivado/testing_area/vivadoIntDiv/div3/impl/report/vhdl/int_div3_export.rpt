@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             vivadoIntDiv
+Solution:            div3
+Device target:       xc7k160tfbg484-1
+Report date:         Fri Aug 31 14:58:42 CEST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:           61
+LUT:            144
+FF:             219
+DSP:              4
+BRAM:             0
+SRL:              9
+#=== Final timing ===
+CP required:    2.500
+CP achieved post-synthesis:    2.263
+CP achieved post-implementation:    2.326
+Timing met

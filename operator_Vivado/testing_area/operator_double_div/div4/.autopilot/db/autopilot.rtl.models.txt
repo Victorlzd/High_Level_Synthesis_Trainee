@@ -1,1 +1,3 @@
+operator_double_dbkb
+operator_double_dcud
 operator_double_div4

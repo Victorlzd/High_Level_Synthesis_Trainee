@@ -1,89 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;test.cpp&apos; ..."/>
-	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from test.cpp:1:
-test.cpp:6600:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:6679:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:6734:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:6813:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:6889:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:6968:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7047:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7123:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7203:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7269:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7348:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7403:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7479:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7558:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7634:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7710:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7789:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-test.cpp:7866:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
-   else
-   ^
-18 warnings generated.\n"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:10:09 ; elapsed = 00:16:47 . Memory (MB): peak = 629.367 ; gain = 256.758 ; free physical = 1795 ; free virtual = 9063"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:10:09 ; elapsed = 00:16:47 . Memory (MB): peak = 629.367 ; gain = 256.758 ; free physical = 1795 ; free virtual = 9063"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:09:11 ; elapsed = 00:16:27 . Memory (MB): peak = 693.188 ; gain = 320.582 ; free physical = 2131 ; free virtual = 9714"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:09:11 ; elapsed = 00:16:27 . Memory (MB): peak = 693.188 ; gain = 320.582 ; free physical = 2131 ; free virtual = 9714"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:10:10 ; elapsed = 00:16:48 . Memory (MB): peak = 629.441 ; gain = 256.832 ; free physical = 1779 ; free virtual = 9051"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:09:12 ; elapsed = 00:16:28 . Memory (MB): peak = 693.188 ; gain = 320.582 ; free physical = 2125 ; free virtual = 9714"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;lut_div3_chunk&apos; into &apos;int_56_div3&apos; (test.cpp:6854) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;decompose_double&apos; into &apos;operator_double_div6&apos; (test.cpp:6878) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;operator_int_56_div3&apos; into &apos;operator_double_div6&apos; (test.cpp:6909) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;rebuild_double&apos; into &apos;operator_double_div6&apos; (test.cpp:6911) automatically."/>
-	<Message severity="WARNING" prefix="[SYNCHK 200-23]" key="SYNCHK_VAR_INDEX_RANGE_359" tag="" content="test.cpp:6853: variable-indexed range selection may cause suboptimal QoR."/>
-	<Message severity="INFO" prefix="[SYNCHK 200-10]" key="SYNCHK_SYNCHK_SUMMARY_377" tag="" content="0 error(s), 1 warning(s)."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:10:10 ; elapsed = 00:16:48 . Memory (MB): peak = 629.457 ; gain = 256.848 ; free physical = 1761 ; free virtual = 9030"/>
-	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_325" tag="" content="Unrolling loop &apos;Loop-1&apos; (test.cpp:6850) in function &apos;int_56_div3&apos; completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;lut_r0_div3&apos; into &apos;lut_div3_chunk&apos; (test.cpp:1401) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;lut_r1_div3&apos; into &apos;lut_div3_chunk&apos; (test.cpp:1402) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;lut_q0_div3&apos; into &apos;lut_div3_chunk&apos; (test.cpp:1403) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;lut_q1_div3&apos; into &apos;lut_div3_chunk&apos; (test.cpp:1404) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;lut_q2_div3&apos; into &apos;lut_div3_chunk&apos; (test.cpp:1405) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;lut_q3_div3&apos; into &apos;lut_div3_chunk&apos; (test.cpp:1406) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;int_56_div3&apos; into &apos;operator_int_56_div3&apos; (test.cpp:6862) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;decompose_double&apos; into &apos;operator_double_div6&apos; (test.cpp:6878) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;operator_int_56_div3&apos; into &apos;operator_double_div6&apos; (test.cpp:6909) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;rebuild_double&apos; into &apos;operator_double_div6&apos; (test.cpp:6911) automatically."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock to (test.cpp:6891:7) in function &apos;operator_double_div6&apos;... converting 3 basic blocks."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (test.cpp:6892:8) to (test.cpp:6910:3) in function &apos;operator_double_div6&apos;... converting 9 basic blocks."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:10:11 ; elapsed = 00:16:49 . Memory (MB): peak = 756.609 ; gain = 384.000 ; free physical = 1715 ; free virtual = 8986"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:10:11 ; elapsed = 00:16:49 . Memory (MB): peak = 756.609 ; gain = 384.000 ; free physical = 1742 ; free virtual = 9013"/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;decompose_double&apos; into &apos;operator_double_div6&apos; (test.cpp:549) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;operator_int_56_div3&apos; into &apos;operator_double_div6&apos; (test.cpp:578) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;rebuild_double&apos; into &apos;operator_double_div6&apos; (test.cpp:583) automatically."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:09:13 ; elapsed = 00:16:28 . Memory (MB): peak = 693.188 ; gain = 320.582 ; free physical = 2123 ; free virtual = 9712"/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;int_56_div3&apos; into &apos;operator_int_56_div3&apos; (test.cpp:534) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;decompose_double&apos; into &apos;operator_double_div6&apos; (test.cpp:549) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;operator_int_56_div3&apos; into &apos;operator_double_div6&apos; (test.cpp:578) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;rebuild_double&apos; into &apos;operator_double_div6&apos; (test.cpp:583) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock to (test.cpp:584:3) in function &apos;operator_double_div6&apos;... converting 9 basic blocks."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:09:13 ; elapsed = 00:16:28 . Memory (MB): peak = 693.188 ; gain = 320.582 ; free physical = 2079 ; free virtual = 9670"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:09:13 ; elapsed = 00:16:28 . Memory (MB): peak = 693.188 ; gain = 320.582 ; free physical = 2078 ; free virtual = 9668"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;operator_double_div6&apos; ..."/>
 	<Message severity="WARNING" prefix="[SYN 201-107]" key="SYN_PORT_NAME_ILLEGAL_593" tag="" content="Renaming port name &apos;operator_double_div6/in&apos; to &apos;operator_double_div6/in_r&apos; to avoid the conflict with HDL keywords or other object names."/>
@@ -92,51 +25,53 @@ test.cpp:7866:4: warning: add explicit braces to avoid dangling else [-Wdangling
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 275.46 seconds; current allocated memory: 339.198 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 255.76 seconds; current allocated memory: 286.719 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.09 seconds; current allocated memory: 339.592 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.09 seconds; current allocated memory: 286.826 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;operator_double_div6&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
-	<Message severity="WARNING" prefix="[SCHED 204-21]" key="SCHED_DELAY_EXCEEDED_76" tag="SDX,TIMING,SCHEDULE" content="Estimated clock period (29.069ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns)."/>
+	<Message severity="WARNING" prefix="[SCHED 204-21]" key="SCHED_DELAY_EXCEEDED_76" tag="SDX,TIMING,SCHEDULE" content="Estimated clock period (2.292ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.3125ns, effective delay budget: 2.1875ns)."/>
 	<Message severity="WARNING" prefix="[SCHED 204-21]" key="SCHED_DELAY_EXCEEDED_74" tag="SDX" content="The critical path consists of the following:
-	&apos;call&apos; operation (&apos;call_ret_6_i_i&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	&apos;call&apos; operation (&apos;call_ret_7_i_i&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	&apos;call&apos; operation (&apos;call_ret_8_i_i&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	&apos;call&apos; operation (&apos;call_ret_9_i_i&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	&apos;call&apos; operation (&apos;call_ret_i_i_7&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	&apos;call&apos; operation (&apos;call_ret_10_i_i&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	&apos;call&apos; operation (&apos;call_ret_11_i_i&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	&apos;call&apos; operation (&apos;call_ret_12_i_i&apos;, test.cpp:6854-&gt;test.cpp:6862-&gt;test.cpp:6909) to &apos;lut_div3_chunk&apos; (3.5 ns)
-	multiplexor before &apos;phi&apos; operation (&apos;mant.V&apos;) with incoming values : (&apos;ssdm_int&lt;52 + 1024 * 0, false&gt;.V&apos;, test.cpp:6547-&gt;test.cpp:6878) (&apos;new_mant.V&apos;, test.cpp:6909) (1.06 ns)"/>
+	&apos;shl&apos; operation (&apos;r.V&apos;, test.cpp:574) (2.29 ns)"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.26 seconds; current allocated memory: 339.871 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.16 seconds; current allocated memory: 287.306 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.13 seconds; current allocated memory: 340.248 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.22 seconds; current allocated memory: 287.854 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;lut_div3_chunk&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;operator_double_div6_mux_646_1_1_1&apos; to &apos;operator_double_dbkb&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;operator_double_dbkb&apos;: 6 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;lut_div3_chunk&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.2 seconds; current allocated memory: 341.384 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.17 seconds; current allocated memory: 288.100 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;operator_double_div6&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;operator_double_div6/in_r&apos; to &apos;ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;operator_double_div6&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;operator_double_div6_lshr_52ns_11ns_52_7_1&apos; to &apos;operator_double_dbkb&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;operator_double_div6_shl_56ns_11ns_56_7_1&apos; to &apos;operator_double_dcud&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;operator_double_dbkb&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;operator_double_dcud&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;operator_double_div6&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.15 seconds; current allocated memory: 342.790 MB."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:10:13 ; elapsed = 00:16:51 . Memory (MB): peak = 756.609 ; gain = 384.000 ; free physical = 1734 ; free virtual = 9017"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.19 seconds; current allocated memory: 289.691 MB."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lut_div3_chunk_r0_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lut_div3_chunk_r1_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lut_div3_chunk_q0_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lut_div3_chunk_q1_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lut_div3_chunk_q2_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lut_div3_chunk_q3_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-286]" key="RTMG_286_1800" tag="" content="Generating pipelined shifter : &apos;operator_double_dbkb&apos;"/>
+	<Message severity="INFO" prefix="[RTMG 210-286]" key="RTMG_286_1800" tag="" content="Generating pipelined shifter : &apos;operator_double_dcud&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:09:15 ; elapsed = 00:16:30 . Memory (MB): peak = 693.188 ; gain = 320.582 ; free physical = 2081 ; free virtual = 9675"/>
 	<Message severity="INFO" prefix="[SYSC 207-301]" key="SYSC_301_1065" tag="" content="Generating SystemC RTL for operator_double_div6."/>
 	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for operator_double_div6."/>
 	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for operator_double_div6."/>

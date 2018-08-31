@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'operator_long_div9'" level="0">
-<item name = "Date">Fri Aug  3 11:54:46 2018
+<item name = "Date">Fri Aug 31 17:04:32 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">operator_long_div</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">120.00, 104.175, 15.00</column>
+<column name="ap_clk">2.50, 2.906, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 2, 2, 2, none</column>
+<column name="">96, 96, 96, 96, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_int_64_div9_fu_28">int_64_div9, 1, 1, 1, 1, none</column>
+<column name="grp_int_64_div9_fu_32">int_64_div9, 95, 95, 95, 95, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,19 +50,19 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, -, -</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, -, 70, 41085</column>
+<column name="Instance">0, -, 273, 505</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 15</column>
 <column name="Register">-, -, 3, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, 40</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_int_64_div9_fu_28">int_64_div9, 0, 0, 70, 41085</column>
+<column name="grp_int_64_div9_fu_32">int_64_div9, 0, 0, 273, 505</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -89,7 +89,7 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">2, 0, 2, 0</column>
-<column name="grp_int_64_div9_fu_28_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_int_64_div9_fu_32_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

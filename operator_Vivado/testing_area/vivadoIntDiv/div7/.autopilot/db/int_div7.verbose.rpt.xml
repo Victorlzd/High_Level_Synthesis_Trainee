@@ -1,0 +1,121 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'int_div7'" level="0">
+<item name = "Date">Fri Aug 31 15:02:30 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">vivadoIntDiv</item>
+<item name = "Solution">div7</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">2.50, 2.001, 0.31</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">9, 9, 9, 9, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 175</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 4, 263, 19</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 50</column>
+<column name="Register">-, -, 235, -</column>
+<specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="int_div7_mul_32s_bkb_U1">int_div7_mul_32s_bkb, 0, 4, 263, 19</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="neg_mul_fu_60_p2">-, 0, 0, 72, 1, 65</column>
+<column name="neg_ti_fu_88_p2">-, 0, 0, 39, 1, 32</column>
+<column name="ap_return">select, 0, 0, 32, 1, 32</column>
+<column name="tmp_3_fu_81_p3">select, 0, 0, 32, 1, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">50, 11, 1, 11</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">10, 0, 10, 0</column>
+<column name="mul_reg_110">65, 0, 65, 0</column>
+<column name="neg_mul_reg_120">65, 0, 65, 0</column>
+<column name="neg_ti_reg_130">32, 0, 32, 0</column>
+<column name="tmp_2_reg_125">32, 0, 32, 0</column>
+<column name="tmp_4_reg_104">1, 0, 1, 0</column>
+<column name="tmp_6_reg_115">30, 0, 30, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, int_div7, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, int_div7, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, int_div7, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, int_div7, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, int_div7, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, int_div7, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, int_div7, return value</column>
+<column name="a">in, 32, ap_none, a, scalar</column>
+</table>
+</item>
+</section>
+</profile>

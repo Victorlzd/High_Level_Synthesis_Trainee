@@ -4,11 +4,126 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 
-open_project -reset int_mul
-set_top operator_int_mul11
+
+open_project -reset operator_long_div
+set_top div
 add_files test.cpp
 add_files -tb test_bench.cpp
-open_solution -reset 	"mul11"
+open_solution -reset 	"vivado_hls"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
+exit
+open_project -reset operator_long_div
+set_top operator_long_div3
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div3"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
+
+open_project -reset operator_long_div
+set_top operator_long_div4
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div4"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+#csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+#export_design -flow impl -rtl vhdl -format ip_catalog
+
+
+open_project -reset operator_long_div
+set_top operator_long_div5
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div5"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
+
+open_project -reset operator_long_div
+set_top operator_long_div6
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div6"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
+
+open_project -reset operator_long_div
+set_top operator_long_div7
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div7"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
+
+open_project -reset operator_long_div
+set_top operator_long_div9
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div9"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
+
+
+open_project -reset operator_long_div
+set_top operator_long_div10
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div10"
+#set_directive_latency -max=1 operator_long_div11
+set_part {xc7k160tfbg484-1} -tool vivado
+create_clock -period 2.5 -name default
+#source "./fir_prj/solution1/directives.tcl"
+#csim_design -clean -compiler gcc
+csynth_design
+#cosim_design -O -compiler gcc -rtl vhdl
+export_design -flow impl -rtl vhdl -format ip_catalog
+
+open_project -reset operator_long_div
+set_top operator_long_div11
+add_files test.cpp
+add_files -tb test_bench.cpp
+open_solution -reset 	"div11"
 #set_directive_latency -max=1 operator_long_div11
 set_part {xc7k160tfbg484-1} -tool vivado
 create_clock -period 2.5 -name default

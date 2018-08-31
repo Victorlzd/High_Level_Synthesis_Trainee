@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Fri Aug  3 14:48:32 2018
+| Date         : Fri Aug 31 15:33:30 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file operator_double_div7_control_sets_placed.rpt
 | Design       : operator_double_div7
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |    12 |
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    32 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,9 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            1 |
-|    16+ |            3 |
+|      8 |            1 |
+|     12 |            1 |
+|    16+ |           10 |
 +--------+--------------+
 
 
@@ -45,25 +46,33 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             110 |           38 |
+| No           | No                    | No                     |             124 |           28 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               2 |            1 |
-| Yes          | No                    | No                     |             110 |           29 |
+| No           | Yes                   | No                     |            1010 |          132 |
+| Yes          | No                    | No                     |             648 |          106 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              22 |            2 |
+| Yes          | Yes                   | No                     |              26 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------+-----------------------------------------+-------------------------------+------------------+----------------+
-| Clock Signal |              Enable Signal              |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+--------------+-----------------------------------------+-------------------------------+------------------+----------------+
-|  ap_clk      |                                         | ap_rst                        |                1 |              2 |
-|  ap_clk      | ap_NS_fsm1                              | p_Repl2_1_reg_808[10]_i_1_n_0 |                2 |             22 |
-|  ap_clk      |                                         |                               |               38 |            110 |
-|  ap_clk      | q_chunk_V_ret2_6_i_i_reg_838[2]_i_1_n_0 |                               |               29 |            110 |
-+--------------+-----------------------------------------+-------------------------------+------------------+----------------+
++--------------+------------------------------------------------------------+-------------------------------+------------------+----------------+
+| Clock Signal |                        Enable Signal                       |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------------------------+-------------------------------+------------------+----------------+
+|  ap_clk      | ap_CS_fsm_state11                                          | xf_V_7_reg_790[53]            |                1 |              8 |
+|  ap_clk      | grp_lut_div7_chunk_fu_146/q2_U/lut_div7_chunk_q2_rom_U/ce0 |                               |                6 |             12 |
+|  ap_clk      | ap_CS_fsm_state3                                           | shift_V_4_reg_749[10]_i_1_n_0 |                2 |             18 |
+|  ap_clk      | ap_CS_fsm_state3                                           |                               |                5 |             28 |
+|  ap_clk      | ap_CS_fsm_state2                                           |                               |                8 |             46 |
+|  ap_clk      | ap_CS_fsm_state11                                          |                               |               14 |            104 |
+|  ap_clk      | r_V_20_reg_7800                                            |                               |               16 |            104 |
+|  ap_clk      | ap_CS_fsm_state12                                          |                               |               19 |            112 |
+|  ap_clk      | r_V_21_reg_7850                                            |                               |               16 |            112 |
+|  ap_clk      | ap_NS_fsm120_out                                           |                               |               22 |            130 |
+|  ap_clk      |                                                            |                               |               31 |            136 |
+|  ap_clk      |                                                            | ap_rst                        |              132 |           1010 |
++--------------+------------------------------------------------------------+-------------------------------+------------------+----------------+
 
 

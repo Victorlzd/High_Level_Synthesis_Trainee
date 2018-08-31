@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Thu Aug  2 15:52:42 2018
+| Date         : Fri Aug 31 16:47:23 2018
 | Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file operator_int_div11_control_sets_placed.rpt
 | Design       : operator_int_div11
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     2 |
-| Unused register locations in slices containing registers |     4 |
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |    14 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,9 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      4 |            1 |
-|    16+ |            1 |
+|      8 |            1 |
+|     12 |            2 |
+|    16+ |            3 |
 +--------+--------------+
 
 
@@ -45,23 +46,27 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            1 |
+| No           | No                    | No                     |              60 |           12 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              72 |           13 |
+| No           | Yes                   | No                     |              70 |           14 |
+| Yes          | No                    | No                     |              84 |           13 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              12 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------+---------------+------------------+------------------+----------------+
-| Clock Signal | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------+---------------+------------------+------------------+----------------+
-|  ap_clk      |               |                  |                1 |              4 |
-|  ap_clk      | ap_NS_fsm1    |                  |               13 |             72 |
-+--------------+---------------+------------------+------------------+----------------+
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
+| Clock Signal |                         Enable Signal                        | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
+|  ap_clk      | grp_lut_div11_chunk_fu_98/E[0]                               |                  |                2 |              8 |
+|  ap_clk      | grp_lut_div11_chunk_fu_98/q1_U/lut_div11_chunk_q1_rom_U/ce0  |                  |                2 |             12 |
+|  ap_clk      | grp_lut_div11_chunk_fu_98/grp_lut_div11_chunk_fu_98_ap_ready | ap_rst           |                1 |             12 |
+|  ap_clk      |                                                              |                  |               12 |             60 |
+|  ap_clk      | ap_NS_fsm114_out                                             |                  |                9 |             64 |
+|  ap_clk      |                                                              | ap_rst           |               14 |             70 |
++--------------+--------------------------------------------------------------+------------------+------------------+----------------+
 
 

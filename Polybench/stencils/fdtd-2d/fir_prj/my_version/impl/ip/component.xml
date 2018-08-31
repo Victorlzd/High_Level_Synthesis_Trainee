@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>hls</spirit:library>
-  <spirit:name>kernel_fdtd_2d</spirit:name>
+  <spirit:name>kernel_fdtd_2d_optimized</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -509,7 +509,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:displayName>Verilog Synthesis</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>kernel_fdtd_2d</spirit:modelName>
+        <spirit:modelName>kernel_fdtd_2d_optimized</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -519,7 +519,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>87d77965</spirit:value>
+            <spirit:value>9b591322</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -528,7 +528,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>kernel_fdtd_2d</spirit:modelName>
+        <spirit:modelName>kernel_fdtd_2d_optimized</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -538,7 +538,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>06a435d6</spirit:value>
+            <spirit:value>3c9804f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -547,7 +547,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:displayName>VHDL Synthesis</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>kernel_fdtd_2d</spirit:modelName>
+        <spirit:modelName>kernel_fdtd_2d_optimized</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -557,7 +557,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>49ab5b42</spirit:value>
+            <spirit:value>db0aea62</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -566,7 +566,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:displayName>VHDL Simulation</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>kernel_fdtd_2d</spirit:modelName>
+        <spirit:modelName>kernel_fdtd_2d_optimized</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -576,7 +576,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7ac285de</spirit:value>
+            <spirit:value>1ea12865</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1139,32 +1139,40 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dmul_3_max_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>constraints/kernel_fdtd_2d_ooc.xdc</spirit:name>
+        <spirit:name>constraints/kernel_fdtd_2d_optimized_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d_dabkb.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d_dmcud.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d_mudEe.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opdEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opeOg.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opfYi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_optimized.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1181,32 +1189,42 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d_dabkb.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d_dmcud.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d_mudEe.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opdEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/kernel_fdtd_2d.v</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opeOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_opfYi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/kernel_fdtd_2d_optimized.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dmul_3_max_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1224,34 +1242,42 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dmul_3_max_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>constraints/kernel_fdtd_2d_ooc.xdc</spirit:name>
+        <spirit:name>constraints/kernel_fdtd_2d_optimized_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d_dabkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opbkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d_dmcud.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opcud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d_mudEe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opdEe.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opeOg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_4d187f64</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opfYi.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_optimized.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_42f2f754</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1267,32 +1293,42 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d_dabkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opbkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d_dmcud.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opcud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d_mudEe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opdEe.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/kernel_fdtd_2d.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opeOg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dadddsub_3_full_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_opfYi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/kernel_fdtd_2d_ap_dmul_3_max_dsp_64.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/kernel_fdtd_2d_optimized.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dmul_16_max_dsp_64.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/kernel_fdtd_2d_optimized_ap_dadddsub_12_no_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1324,7 +1360,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/kernel_fdtd_2d_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/kernel_fdtd_2d_optimized_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_bdef2832</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -1343,11 +1379,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">kernel_fdtd_2d_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">kernel_fdtd_2d_optimized_v1_0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="2">10</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="2">2.5</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -1359,7 +1395,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">3245651601</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">8538303751</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -1374,17 +1410,17 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       <xilinx:taxonomies>
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>Kernel_fdtd_2d</xilinx:displayName>
+      <xilinx:displayName>Kernel_fdtd_2d_optimized</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1808071501</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-08-07T13:02:09Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1808312217</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-08-31T20:17:47Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4f5056d7"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="85897d0c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0252a309"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="5f96b818"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="af9ea157"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="30199773"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

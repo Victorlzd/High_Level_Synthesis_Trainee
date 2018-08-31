@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Aug  3 14:24:53 2018
-# Process ID: 5067
+# Start of session at: Fri Aug 31 15:10:15 2018
+# Process ID: 20682
 # Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/synth_1
 # Command line: vivado -log operator_double_div2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_double_div2.tcl
 # Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/synth_1/operator_double_div2.vds
@@ -15,17 +15,150 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5070 
+INFO: Helper process launched with PID 20688 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.355 ; gain = 80.895 ; free physical = 147 ; free virtual = 8744
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.363 ; gain = 80.895 ; free physical = 1558 ; free virtual = 9462
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'operator_double_div2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:25]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:47]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:50]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'operator_double_div2' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:55]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:58]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:69]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:73]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:87]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+INFO: [Synth 8-3491] module 'operator_double_dbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:13' bound to instance 'operator_double_dbkb_U1' of component 'operator_double_dbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'operator_double_dbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'operator_double_dbkb' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+INFO: [Synth 8-3491] module 'operator_double_dcud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:13' bound to instance 'operator_double_dcud_U2' of component 'operator_double_dcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'operator_double_dcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'operator_double_dcud' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'operator_double_div2' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:25]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[53]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[52]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[51]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[50]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[49]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[48]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[47]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[46]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[45]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[44]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[43]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[42]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[41]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[40]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[39]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[38]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[37]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[36]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[35]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[34]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[33]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[32]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[31]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[30]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[29]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[28]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[27]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[26]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[25]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[24]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[23]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[22]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[21]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[20]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[19]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[18]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[17]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[16]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[15]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[14]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[13]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[12]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[11]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[10]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[9]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[8]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[7]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[6]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[5]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[4]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[3]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[2]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[51]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[50]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[49]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[48]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[47]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[46]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[45]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[44]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[43]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[42]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[41]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[40]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[39]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[38]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[37]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[36]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[35]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[34]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[33]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[32]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[31]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[30]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[29]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[28]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[27]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[26]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[25]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[24]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[23]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[22]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[21]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[20]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[19]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[18]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[17]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[16]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[15]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[14]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[13]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[12]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[11]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[10]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[9]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[8]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[7]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[6]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[5]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[4]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 188 ; free virtual = 8756
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 1571 ; free virtual = 9476
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -38,10 +171,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 189 ; free virtual = 8757
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 1570 ; free virtual = 9475
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.980 ; gain = 126.520 ; free physical = 189 ; free virtual = 8757
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 1570 ; free virtual = 9475
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k160tfbg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -55,29 +188,30 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1628.457 ; gain = 0.000 ; free physical = 139 ; free virtual = 8488
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1659.473 ; gain = 0.000 ; free physical = 1308 ; free virtual = 9235
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1628.457 ; gain = 442.996 ; free physical = 212 ; free virtual = 8562
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1390 ; free virtual = 9313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1628.457 ; gain = 442.996 ; free physical = 212 ; free virtual = 8562
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1390 ; free virtual = 9314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1628.457 ; gain = 442.996 ; free physical = 213 ; free virtual = 8563
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1392 ; free virtual = 9315
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_V_1_reg_264_reg' and it is trimmed from '54' to '52' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:202]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5546] ROM "tmp_fu_149_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_1_fu_84_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "icmp_fu_100_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_s_fu_168_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_fu_72_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_88_p2" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1628.457 ; gain = 442.996 ; free physical = 204 ; free virtual = 8554
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1382 ; free virtual = 9306
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -93,17 +227,18 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               52 Bit    Registers := 1     
+	               54 Bit    Registers := 6     
+	               52 Bit    Registers := 9     
 	               11 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 13    
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     53 Bit        Muxes := 1     
 	   2 Input     52 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
 	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -118,18 +253,28 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               52 Bit    Registers := 1     
+	               52 Bit    Registers := 3     
 	               11 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     53 Bit        Muxes := 1     
 	   2 Input     52 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
 	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
+Module operator_double_dbkb 
+Detailed RTL Component Info : 
++---Registers : 
+	               52 Bit    Registers := 6     
+	                2 Bit    Registers := 6     
+Module operator_double_dcud 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 6     
+	                2 Bit    Registers := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -146,12 +291,94 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "icmp_fu_100_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_1_fu_84_p2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_fu_149_p2" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3332] Sequential element (p_0274_2_reg_275_reg[1]) is unused and will be removed from module operator_double_div2.
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/din1_cast_array_reg[0][1:0]' into 'operator_double_dbkb_U1/din1_cast_array_reg[0][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:62]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[1].din1_cast_array_reg[1][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[1].din1_cast_array_reg[1][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[2].din1_cast_array_reg[2][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[2].din1_cast_array_reg[2][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[3].din1_cast_array_reg[3][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[3].din1_cast_array_reg[3][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[4].din1_cast_array_reg[4][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[4].din1_cast_array_reg[4][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[5].din1_cast_array_reg[5][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[5].din1_cast_array_reg[5][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/din1_cast_array_reg[0] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[1].din1_cast_array_reg[1] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[2].din1_cast_array_reg[2] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[3].din1_cast_array_reg[3] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[4].din1_cast_array_reg[4] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[5].din1_cast_array_reg[5] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-5546] ROM "tmp_s_fu_168_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_fu_72_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_88_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_reg[0][51:0]' into 'operator_double_dcud_U2/dout_array_reg[0][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:61]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[1].dout_array_reg[1][51:0]' into 'operator_double_dcud_U2/dout_array_loop[1].dout_array_reg[1][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[2].dout_array_reg[2][51:0]' into 'operator_double_dcud_U2/dout_array_loop[2].dout_array_reg[2][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[3].dout_array_reg[3][51:0]' into 'operator_double_dcud_U2/dout_array_loop[3].dout_array_reg[3][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[4].dout_array_reg[4][51:0]' into 'operator_double_dcud_U2/dout_array_loop[4].dout_array_reg[4][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_reg[0] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[1].dout_array_reg[1] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[2].dout_array_reg[2] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[3].dout_array_reg[3] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[4].dout_array_reg[4] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[5].din1_cast_array_reg[5][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][53]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][52]) is unused and will be removed from module operator_double_div2.
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][0]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][1]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][2]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][3]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][4]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][5]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][5]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][6]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][6]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][7]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][8]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][8]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][9]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][10]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][10]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][11]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][11]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][12]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][12]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][13]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][13]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][14]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][15]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][15]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][16]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][16]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][17]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][17]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][18]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][18]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][19]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][19]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][20]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][20]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][21]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][21]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][22]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][22]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][23]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][23]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][24]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][24]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][25]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][26]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][26]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][27]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][28]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][28]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][29]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][29]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][30]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][30]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][31]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][31]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][32]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][32]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][33]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][33]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][34]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][34]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][35]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][35]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][36]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][36]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][37]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][37]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][38]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][38]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][39]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][39]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][40]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][40]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][41]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][41]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][42]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][42]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][43]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][43]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][44]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][44]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][45]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][45]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][46]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][46]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][47]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][47]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][48]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][48]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][49]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][49]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][50]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][50]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][51]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][51]'
+WARNING: [Synth 8-3332] Sequential element (p_0272_2_reg_238_reg[1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/din1_cast_array_reg[0][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[1].din1_cast_array_reg[1][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[2].din1_cast_array_reg[2][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[3].din1_cast_array_reg[3][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[4].din1_cast_array_reg[4][1]) is unused and will be removed from module operator_double_div2.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1628.457 ; gain = 442.996 ; free physical = 189 ; free virtual = 8543
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1367 ; free virtual = 9293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -163,13 +390,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1628.457 ; gain = 442.996 ; free physical = 129 ; free virtual = 8413
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1221 ; free virtual = 9158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 169 ; free virtual = 8413
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1220 ; free virtual = 9157
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -181,7 +408,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 168 ; free virtual = 8411
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1220 ; free virtual = 9157
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -205,7 +432,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 170 ; free virtual = 8412
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -218,7 +445,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 170 ; free virtual = 8412
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -230,25 +457,40 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 170 ; free virtual = 8412
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 170 ; free virtual = 8412
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 170 ; free virtual = 8412
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 170 ; free virtual = 8412
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|operator_double_div2 | operator_double_dbkb_U1/dout_array_loop[5].din1_cast_array_reg[5][0] | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|operator_double_div2 | operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][0]      | 6      | 52    | YES          | NO                 | YES               | 52     | 0       | 
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -261,29 +503,33 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT2 |     2|
-|2     |LUT3 |     1|
-|3     |LUT4 |    11|
-|4     |LUT5 |     7|
-|5     |LUT6 |    57|
-|6     |FDRE |    69|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT2   |    57|
+|2     |LUT3   |   104|
+|3     |LUT4   |     9|
+|4     |LUT5   |    59|
+|5     |LUT6   |     8|
+|6     |SRL16E |    53|
+|7     |FDRE   |   289|
+|8     |FDSE   |     1|
++------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   147|
-+------+---------+-------+------+
++------+--------------------------+---------------------+------+
+|      |Instance                  |Module               |Cells |
++------+--------------------------+---------------------+------+
+|1     |top                       |                     |   580|
+|2     |  operator_double_dbkb_U1 |operator_double_dbkb |    60|
+|3     |  operator_double_dcud_U2 |operator_double_dcud |   261|
++------+--------------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.488 ; gain = 461.027 ; free physical = 170 ; free virtual = 8412
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1646.488 ; gain = 144.551 ; free physical = 224 ; free virtual = 8466
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.496 ; gain = 461.027 ; free physical = 224 ; free virtual = 8466
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1659.473 ; gain = 126.520 ; free physical = 1276 ; free virtual = 9211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.480 ; gain = 474.004 ; free physical = 1276 ; free virtual = 9211
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -291,11 +537,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+93 Infos, 121 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1646.496 ; gain = 461.141 ; free physical = 215 ; free virtual = 8462
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.480 ; gain = 474.117 ; free physical = 1270 ; free virtual = 9205
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/synth_1/operator_double_div2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file operator_double_div2_utilization_synth.rpt -pb operator_double_div2_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1670.500 ; gain = 0.000 ; free physical = 213 ; free virtual = 8463
-INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 14:25:39 2018...
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1683.484 ; gain = 0.000 ; free physical = 1267 ; free virtual = 9205
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 15:11:02 2018...

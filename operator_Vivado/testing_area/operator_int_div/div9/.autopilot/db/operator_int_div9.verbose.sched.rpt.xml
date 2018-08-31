@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'operator_int_div9'" level="0">
-<item name = "Date">Thu Aug  2 15:36:31 2018
+<item name = "Date">Fri Aug 31 16:36:56 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">operator_int_div</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">35.00, 31.977, 4.38</column>
+<column name="ap_clk">2.50, 1.595, 0.31</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 1, 1, 1, none</column>
+<column name="">47, 47, 47, 47, none</column>
 </table>
 </item>
 <item name = "Detail">

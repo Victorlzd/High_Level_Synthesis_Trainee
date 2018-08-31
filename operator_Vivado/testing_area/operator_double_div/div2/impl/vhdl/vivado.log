@@ -1,0 +1,1182 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug 31 15:10:05 2018
+# Process ID: 20590
+# Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl
+# Command line: vivado -notrace -mode batch -source run_vivado.tcl
+# Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/vivado.log
+# Journal file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace
+[Fri Aug 31 15:10:14 2018] Launched synth_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/synth_1/runme.log
+[Fri Aug 31 15:10:14 2018] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log operator_double_div2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source operator_double_div2.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source operator_double_div2.tcl -notrace
+Command: synth_design -top operator_double_div2 -part xc7k160tfbg484-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20688 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1266.363 ; gain = 80.895 ; free physical = 1558 ; free virtual = 9462
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'operator_double_div2' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:55]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:58]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:69]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:73]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:87]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+INFO: [Synth 8-3491] module 'operator_double_dbkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:13' bound to instance 'operator_double_dbkb_U1' of component 'operator_double_dbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'operator_double_dbkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 52 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 52 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'operator_double_dbkb' (1#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+INFO: [Synth 8-3491] module 'operator_double_dcud' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:13' bound to instance 'operator_double_dcud_U2' of component 'operator_double_dcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'operator_double_dcud' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'operator_double_dcud' (2#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'operator_double_div2' (3#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:25]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[53]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[52]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[51]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[50]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[49]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[48]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[47]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[46]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[45]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[44]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[43]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[42]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[41]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[40]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[39]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[38]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[37]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[36]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[35]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[34]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[33]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[32]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[31]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[30]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[29]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[28]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[27]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[26]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[25]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[24]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[23]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[22]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[21]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[20]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[19]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[18]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[17]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[16]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[15]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[14]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[13]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[12]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[11]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[10]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[9]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[8]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[7]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[6]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[5]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[4]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[3]
+WARNING: [Synth 8-3331] design operator_double_dcud has unconnected port din1[2]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[51]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[50]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[49]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[48]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[47]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[46]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[45]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[44]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[43]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[42]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[41]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[40]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[39]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[38]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[37]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[36]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[35]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[34]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[33]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[32]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[31]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[30]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[29]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[28]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[27]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[26]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[25]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[24]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[23]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[22]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[21]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[20]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[19]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[18]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[17]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[16]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[15]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[14]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[13]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[12]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[11]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[10]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[9]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[8]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[7]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[6]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[5]
+WARNING: [Synth 8-3331] design operator_double_dbkb has unconnected port din1[4]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 1571 ; free virtual = 9476
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 1570 ; free virtual = 9475
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.988 ; gain = 126.520 ; free physical = 1570 ; free virtual = 9475
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1659.473 ; gain = 0.000 ; free physical = 1308 ; free virtual = 9235
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1390 ; free virtual = 9313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1390 ; free virtual = 9314
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1392 ; free virtual = 9315
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_V_1_reg_264_reg' and it is trimmed from '54' to '52' bits. [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.vhd:202]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_s_fu_168_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_fu_72_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_88_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1382 ; free virtual = 9306
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               54 Bit    Registers := 6     
+	               52 Bit    Registers := 9     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 13    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     52 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module operator_double_div2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               52 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     52 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module operator_double_dbkb 
+Detailed RTL Component Info : 
++---Registers : 
+	               52 Bit    Registers := 6     
+	                2 Bit    Registers := 6     
+Module operator_double_dcud 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 6     
+	                2 Bit    Registers := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/din1_cast_array_reg[0][1:0]' into 'operator_double_dbkb_U1/din1_cast_array_reg[0][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:62]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[1].din1_cast_array_reg[1][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[1].din1_cast_array_reg[1][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[2].din1_cast_array_reg[2][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[2].din1_cast_array_reg[2][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[3].din1_cast_array_reg[3][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[3].din1_cast_array_reg[3][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[4].din1_cast_array_reg[4][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[4].din1_cast_array_reg[4][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-4471] merging register 'operator_double_dcud_U2/dout_array_loop[5].din1_cast_array_reg[5][1:0]' into 'operator_double_dbkb_U1/dout_array_loop[5].din1_cast_array_reg[5][1:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/din1_cast_array_reg[0] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[1].din1_cast_array_reg[1] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[2].din1_cast_array_reg[2] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[3].din1_cast_array_reg[3] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[4].din1_cast_array_reg[4] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dcud_U2/dout_array_loop[5].din1_cast_array_reg[5] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dcud.vhd:84]
+INFO: [Synth 8-5546] ROM "tmp_s_fu_168_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_fu_72_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "icmp_fu_88_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_reg[0][51:0]' into 'operator_double_dcud_U2/dout_array_reg[0][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:61]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[1].dout_array_reg[1][51:0]' into 'operator_double_dcud_U2/dout_array_loop[1].dout_array_reg[1][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[2].dout_array_reg[2][51:0]' into 'operator_double_dcud_U2/dout_array_loop[2].dout_array_reg[2][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[3].dout_array_reg[3][51:0]' into 'operator_double_dcud_U2/dout_array_loop[3].dout_array_reg[3][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+INFO: [Synth 8-4471] merging register 'operator_double_dbkb_U1/dout_array_loop[4].dout_array_reg[4][51:0]' into 'operator_double_dcud_U2/dout_array_loop[4].dout_array_reg[4][51:0]' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_reg[0] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[1].dout_array_reg[1] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[2].dout_array_reg[2] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[3].dout_array_reg[3] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element operator_double_dbkb_U1/dout_array_loop[4].dout_array_reg[4] was removed.  [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_dbkb.vhd:83]
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[5].din1_cast_array_reg[5][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][53]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][52]) is unused and will be removed from module operator_double_div2.
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][0]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][1]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][2]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][3]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][4]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][5]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][5]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][6]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][6]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][7]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][8]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][8]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][9]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][10]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][10]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][11]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][11]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][12]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][12]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][13]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][13]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][14]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][14]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][15]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][15]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][16]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][16]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][17]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][17]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][18]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][18]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][19]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][19]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][20]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][20]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][21]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][21]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][22]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][22]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][23]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][23]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][24]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][24]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][25]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][26]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][26]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][27]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][28]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][28]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][29]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][29]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][30]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][30]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][31]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][31]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][32]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][32]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][33]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][33]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][34]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][34]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][35]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][35]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][36]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][36]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][37]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][37]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][38]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][38]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][39]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][39]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][40]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][40]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][41]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][41]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][42]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][42]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][43]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][43]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][44]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][44]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][45]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][45]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][46]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][46]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][47]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][47]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][48]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][48]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][49]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][49]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][50]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][50]'
+INFO: [Synth 8-3886] merging instance 'operator_double_dbkb_U1/dout_array_loop[5].dout_array_reg[5][51]' (FDR) to 'operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][51]'
+WARNING: [Synth 8-3332] Sequential element (p_0272_2_reg_238_reg[1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/din1_cast_array_reg[0][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[1].din1_cast_array_reg[1][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[2].din1_cast_array_reg[2][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[3].din1_cast_array_reg[3][1]) is unused and will be removed from module operator_double_div2.
+WARNING: [Synth 8-3332] Sequential element (operator_double_dbkb_U1/dout_array_loop[4].din1_cast_array_reg[4][1]) is unused and will be removed from module operator_double_div2.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1367 ; free virtual = 9293
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1221 ; free virtual = 9158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1220 ; free virtual = 9157
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1220 ; free virtual = 9157
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|operator_double_div2 | operator_double_dbkb_U1/dout_array_loop[5].din1_cast_array_reg[5][0] | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|operator_double_div2 | operator_double_dcud_U2/dout_array_loop[5].dout_array_reg[5][0]      | 6      | 52    | YES          | NO                 | YES               | 52     | 0       | 
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT2   |    57|
+|2     |LUT3   |   104|
+|3     |LUT4   |     9|
+|4     |LUT5   |    59|
+|5     |LUT6   |     8|
+|6     |SRL16E |    53|
+|7     |FDRE   |   289|
+|8     |FDSE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------+---------------------+------+
+|      |Instance                  |Module               |Cells |
++------+--------------------------+---------------------+------+
+|1     |top                       |                     |   580|
+|2     |  operator_double_dbkb_U1 |operator_double_dbkb |    60|
+|3     |  operator_double_dcud_U2 |operator_double_dcud |   261|
++------+--------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.473 ; gain = 474.004 ; free physical = 1222 ; free virtual = 9156
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1659.473 ; gain = 126.520 ; free physical = 1276 ; free virtual = 9211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1659.480 ; gain = 474.004 ; free physical = 1276 ; free virtual = 9211
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+93 Infos, 121 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1659.480 ; gain = 474.117 ; free physical = 1270 ; free virtual = 9205
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/synth_1/operator_double_div2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file operator_double_div2_utilization_synth.rpt -pb operator_double_div2_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1683.484 ; gain = 0.000 ; free physical = 1267 ; free virtual = 9205
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 15:11:02 2018...
+[Fri Aug 31 15:11:02 2018] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1185.465 ; gain = 0.000 ; free physical = 1830 ; free virtual = 9765
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k160tfbg484-1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.xdc]
+Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/operator_double_div2.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1488.809 ; gain = 303.344 ; free physical = 1535 ; free virtual = 9477
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1488.809 ; gain = 0.000 ; free physical = 1531 ; free virtual = 9474
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.391 ; gain = 524.582 ; free physical = 1132 ; free virtual = 9085
+INFO: [Timing 38-480] Writing timing data to binary archive.
+[Fri Aug 31 15:11:47 2018] Launched impl_1...
+Run output will be captured here: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/runme.log
+[Fri Aug 31 15:11:47 2018] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log operator_double_div2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source operator_double_div2.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source operator_double_div2.tcl -notrace
+Command: open_checkpoint /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1183.336 ; gain = 0.000 ; free physical = 960 ; free virtual = 8925
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k160tfbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.2 (64-bit) build 2258646
+open_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:45 . Memory (MB): peak = 1983.945 ; gain = 800.609 ; free physical = 150 ; free virtual = 8120
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2029.961 ; gain = 46.016 ; free physical = 138 ; free virtual = 8109
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 138 ; free virtual = 8109
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+Ending Logic Optimization Task | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 201 ; free virtual = 8172
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 200 ; free virtual = 8172
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 123cf0c88
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 200 ; free virtual = 8172
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file operator_double_div2_drc_opted.rpt -pb operator_double_div2_drc_opted.pb -rpx operator_double_div2_drc_opted.rpx
+Command: report_drc -file operator_double_div2_drc_opted.rpt -pb operator_double_div2_drc_opted.pb -rpx operator_double_div2_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 168 ; free virtual = 8141
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 7177344a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 168 ; free virtual = 8141
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 168 ; free virtual = 8141
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b7da4cd1
+
+Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.80 . Memory (MB): peak = 2029.961 ; gain = 0.000 ; free physical = 162 ; free virtual = 8135
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 19f36550e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2056.984 ; gain = 27.023 ; free physical = 160 ; free virtual = 8133
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 19f36550e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2056.984 ; gain = 27.023 ; free physical = 160 ; free virtual = 8133
+Phase 1 Placer Initialization | Checksum: 19f36550e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2056.984 ; gain = 27.023 ; free physical = 160 ; free virtual = 8133
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 16cc9a3fa
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2080.996 ; gain = 51.035 ; free physical = 157 ; free virtual = 8130
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2105.008 ; gain = 0.000 ; free physical = 141 ; free virtual = 8117
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: ffaa01f8
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 141 ; free virtual = 8117
+Phase 2 Global Placement | Checksum: 17aa6e31e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 141 ; free virtual = 8117
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 17aa6e31e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 141 ; free virtual = 8117
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 22c6d770e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 139 ; free virtual = 8115
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2003008d9
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 139 ; free virtual = 8115
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 25390e1d1
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 139 ; free virtual = 8115
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 130abd0a5
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 138 ; free virtual = 8112
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 19c0eff69
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 138 ; free virtual = 8112
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 19c0eff69
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 138 ; free virtual = 8112
+Phase 3 Detail Placement | Checksum: 19c0eff69
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 138 ; free virtual = 8112
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 191c0dec2
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 191c0dec2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 138 ; free virtual = 8113
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.778. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 18f8151a6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 138 ; free virtual = 8113
+Phase 4.1 Post Commit Optimization | Checksum: 18f8151a6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 138 ; free virtual = 8113
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 18f8151a6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 139 ; free virtual = 8114
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 18f8151a6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 139 ; free virtual = 8114
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 19faa0c63
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 139 ; free virtual = 8114
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 19faa0c63
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 139 ; free virtual = 8114
+Ending Placer Task | Checksum: f9c6c9ed
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.008 ; gain = 75.047 ; free physical = 157 ; free virtual = 8132
+INFO: [Common 17-83] Releasing license: Implementation
+48 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2105.008 ; gain = 0.000 ; free physical = 155 ; free virtual = 8130
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file operator_double_div2_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2105.008 ; gain = 0.000 ; free physical = 138 ; free virtual = 8116
+INFO: [runtcl-4] Executing : report_utilization -file operator_double_div2_utilization_placed.rpt -pb operator_double_div2_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2105.008 ; gain = 0.000 ; free physical = 151 ; free virtual = 8129
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file operator_double_div2_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2105.008 ; gain = 0.000 ; free physical = 169 ; free virtual = 8146
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2105.008 ; gain = 0.000 ; free physical = 165 ; free virtual = 8144
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: d6784d4e ConstDB: 0 ShapeSum: 234e7c9f RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "ap_clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "in_r[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[34]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[34]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[56]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[56]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[57]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[57]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[52]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[52]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[53]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[53]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[54]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[54]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[38]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[38]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[37]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[37]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[33]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[33]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[42]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[42]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[44]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[44]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[36]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[36]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[32]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[32]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[35]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[35]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[43]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[43]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[47]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[47]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[48]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[48]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[49]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[49]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[50]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[50]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[51]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[51]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[63]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[63]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[45]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[45]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[46]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[46]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[62]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[62]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[60]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[60]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[55]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[55]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[58]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[58]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[59]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[59]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[61]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[61]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[39]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[39]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[40]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[40]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r[41]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r[41]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: 189b10184
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2252.824 ; gain = 147.816 ; free physical = 164 ; free virtual = 7932
+Post Restoration Checksum: NetGraph: d7fa35db NumContArr: b1b6cba9 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 189b10184
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2252.824 ; gain = 147.816 ; free physical = 164 ; free virtual = 7932
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 189b10184
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2268.824 ; gain = 163.816 ; free physical = 145 ; free virtual = 7914
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 189b10184
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2268.824 ; gain = 163.816 ; free physical = 145 ; free virtual = 7914
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: cdee1c52
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 144 ; free virtual = 7913
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.891  | TNS=0.000  | WHS=0.036  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 10ff40eb3
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 143 ; free virtual = 7913
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1ddd9aae6
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 134 ; free virtual = 7908
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.596  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 13feeb042
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+Phase 4 Rip-up And Reroute | Checksum: 13feeb042
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 13feeb042
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 13feeb042
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+Phase 5 Delay and Skew Optimization | Checksum: 13feeb042
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1531b20a2
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.596  | TNS=0.000  | WHS=0.049  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1531b20a2
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+Phase 6 Post Hold Fix | Checksum: 1531b20a2
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0160073 %
+  Global Horizontal Routing Utilization  = 0.0162404 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 2067aa90e
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2279.645 ; gain = 174.637 ; free physical = 133 ; free virtual = 7907
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 2067aa90e
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2281.645 ; gain = 176.637 ; free physical = 132 ; free virtual = 7906
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 21b547c23
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:19 . Memory (MB): peak = 2281.645 ; gain = 176.637 ; free physical = 132 ; free virtual = 7906
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.596  | TNS=0.000  | WHS=0.049  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 21b547c23
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:19 . Memory (MB): peak = 2281.645 ; gain = 176.637 ; free physical = 133 ; free virtual = 7907
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:19 . Memory (MB): peak = 2281.645 ; gain = 176.637 ; free physical = 155 ; free virtual = 7930
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+71 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2281.645 ; gain = 176.637 ; free physical = 155 ; free virtual = 7930
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2281.645 ; gain = 0.000 ; free physical = 147 ; free virtual = 7922
+INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file operator_double_div2_drc_routed.rpt -pb operator_double_div2_drc_routed.pb -rpx operator_double_div2_drc_routed.rpx
+Command: report_drc -file operator_double_div2_drc_routed.rpt -pb operator_double_div2_drc_routed.pb -rpx operator_double_div2_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file operator_double_div2_methodology_drc_routed.rpt -pb operator_double_div2_methodology_drc_routed.pb -rpx operator_double_div2_methodology_drc_routed.rpx
+Command: report_methodology -file operator_double_div2_methodology_drc_routed.rpt -pb operator_double_div2_methodology_drc_routed.pb -rpx operator_double_div2_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/operator_double_div/div2/impl/vhdl/project.runs/impl_1/operator_double_div2_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file operator_double_div2_power_routed.rpt -pb operator_double_div2_power_summary_routed.pb -rpx operator_double_div2_power_routed.rpx
+Command: report_power -file operator_double_div2_power_routed.rpt -pb operator_double_div2_power_summary_routed.pb -rpx operator_double_div2_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+83 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file operator_double_div2_route_status.rpt -pb operator_double_div2_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file operator_double_div2_timing_summary_routed.rpt -pb operator_double_div2_timing_summary_routed.pb -rpx operator_double_div2_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file operator_double_div2_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file operator_double_div2_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file operator_double_div2_bus_skew_routed.rpt -pb operator_double_div2_bus_skew_routed.pb -rpx operator_double_div2_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 15:13:19 2018...
+[Fri Aug 31 15:13:19 2018] impl_1 finished
+wait_on_run: Time (s): cpu = 00:01:21 ; elapsed = 00:01:32 . Memory (MB): peak = 2060.555 ; gain = 4.000 ; free physical = 1293 ; free virtual = 9031
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2186.883 ; gain = 0.000 ; free physical = 1198 ; free virtual = 8934
+Restored from archive | CPU: 0.050000 secs | Memory: 0.515373 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2186.883 ; gain = 0.000 ; free physical = 1198 ; free virtual = 8934
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2242.910 ; gain = 56.027 ; free physical = 1211 ; free virtual = 8947
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             operator_double_div
+Solution:            div2
+Device target:       xc7k160tfbg484-1
+Report date:         Fri Aug 31 15:13:20 CEST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:          117
+LUT:            289
+FF:             290
+DSP:              0
+BRAM:             0
+SRL:             53
+#=== Final timing ===
+CP required:    2.500
+CP achieved post-synthesis:    1.529
+CP achieved post-implementation:    1.903
+Timing met
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 15:13:20 2018...

@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log kernel_seidel_2d_my_version.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_seidel_2d_my_version.tcl -notrace" );
+         "-log kernel_seidel_2d_optimized.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_seidel_2d_optimized.tcl -notrace" );
 
 
 

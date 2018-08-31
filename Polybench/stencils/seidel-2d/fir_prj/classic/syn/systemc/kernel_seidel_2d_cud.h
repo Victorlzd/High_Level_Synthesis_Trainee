@@ -26,7 +26,7 @@ SC_MODULE(kernel_seidel_2d_cud) {
 
 
 
-    ACMP_ddiv<ID, 22, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_ddiv_U;
+    ACMP_ddiv<ID, 59, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_ddiv_U;
 
     SC_CTOR(kernel_seidel_2d_cud):  ACMP_ddiv_U ("ACMP_ddiv_U") {
         ACMP_ddiv_U.clk(clk);

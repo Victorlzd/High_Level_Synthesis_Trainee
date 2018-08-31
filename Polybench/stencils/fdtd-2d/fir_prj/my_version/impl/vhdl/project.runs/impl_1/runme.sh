@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log kernel_fdtd_2d.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_fdtd_2d.tcl -notrace
+EAStep vivado -log kernel_fdtd_2d_optimized.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kernel_fdtd_2d_optimized.tcl -notrace
 
 

@@ -1,0 +1,230 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kernel_jacobi_1d_imper_optimized'" level="0">
+<item name = "Date">Fri Aug 31 20:45:21 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">fir_prj</item>
+<item name = "Solution">my_version</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">2.50, 2.344, 0.31</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">89982301, 89982301, 89982301, 89982301, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_lut_div3_chunk_fu_234">lut_div3_chunk, 1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">89982300, 89982300, 899823, -, -, 100, no</column>
+<column name=" + Loop 1.1">859828, 859828, 86, -, -, 9998, no</column>
+<column name=" + Loop 1.2">39992, 39992, 4, -, -, 9998, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 542</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 0, 2283, 1734</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 528</column>
+<column name="Register">-, -, 883, -</column>
+<specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 2</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="kernel_jacobi_1d_bkb_U9">kernel_jacobi_1d_bkb, 0, 0, 1225, 821</column>
+<column name="kernel_jacobi_1d_cud_U10">kernel_jacobi_1d_cud, 0, 0, 522, 437</column>
+<column name="kernel_jacobi_1d_dEe_U11">kernel_jacobi_1d_dEe, 0, 0, 522, 437</column>
+<column name="grp_lut_div3_chunk_fu_234">lut_div3_chunk, 0, 0, 14, 39</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_1_fu_310_p2">+, 0, 0, 21, 1, 14</column>
+<column name="j_1_fu_769_p2">+, 0, 0, 21, 14, 1</column>
+<column name="shift_V_1_fu_396_p2">+, 0, 0, 18, 2, 11</column>
+<column name="t_1_fu_283_p2">+, 0, 0, 15, 7, 1</column>
+<column name="tmp_fu_295_p2">+, 0, 0, 21, 2, 14</column>
+<column name="xf_V_8_fu_526_p2">+, 0, 0, 62, 1, 55</column>
+<column name="new_exp_V_fu_406_p2">-, 0, 0, 18, 11, 11</column>
+<column name="shift_V_fu_390_p2">-, 0, 0, 18, 1, 11</column>
+<column name="sel_tmp3_i_fu_420_p2">and, 0, 0, 6, 1, 1</column>
+<column name="sel_tmp7_i_fu_443_p2">and, 0, 0, 6, 1, 1</column>
+<column name="exitcond1_fu_289_p2">icmp, 0, 0, 13, 14, 14</column>
+<column name="exitcond2_fu_277_p2">icmp, 0, 0, 11, 7, 6</column>
+<column name="exitcond_fu_758_p2">icmp, 0, 0, 13, 14, 14</column>
+<column name="icmp_fu_384_p2">icmp, 0, 0, 13, 10, 1</column>
+<column name="tmp_1_i_fu_402_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="tmp_2_i_fu_455_p2">icmp, 0, 0, 13, 11, 2</column>
+<column name="tmp_3_i_fu_362_p2">icmp, 0, 0, 13, 11, 1</column>
+<column name="tmp_4_i_fu_368_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="sel_tmp2_demorgan_i_fu_410_p2">or, 0, 0, 6, 1, 1</column>
+<column name="tmp_6_i_fu_468_p2">or, 0, 0, 6, 1, 1</column>
+<column name="p_Repl2_1_fu_474_p3">select, 0, 0, 11, 1, 11</column>
+<column name="p_Repl2_s_fu_740_p3">select, 0, 0, 52, 1, 52</column>
+<column name="p_i_fu_460_p3">select, 0, 0, 2, 1, 2</column>
+<column name="shift_V_2_fu_425_p3">select, 0, 0, 11, 1, 11</column>
+<column name="shift_V_3_fu_431_p3">select, 0, 0, 11, 1, 1</column>
+<column name="shift_V_4_fu_448_p3">select, 0, 0, 11, 1, 11</column>
+<column name="shift_V_i_cast_cast_fu_354_p3">select, 0, 0, 2, 1, 1</column>
+<column name="xf_V_5_fu_520_p3">select, 0, 0, 55, 1, 55</column>
+<column name="xf_V_7_fu_505_p3">select, 0, 0, 55, 1, 55</column>
+<column name="sel_tmp2_i_fu_414_p2">xor, 0, 0, 6, 1, 2</column>
+<column name="sel_tmp6_i_fu_438_p2">xor, 0, 0, 6, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="A_address0">15, 3, 14, 42</column>
+<column name="A_address1">15, 3, 14, 42</column>
+<column name="B_address0">15, 3, 14, 42</column>
+<column name="ap_NS_fsm">349, 79, 1, 79</column>
+<column name="grp_fu_253_p0">15, 3, 64, 192</column>
+<column name="grp_fu_253_p1">15, 3, 64, 192</column>
+<column name="grp_lut_div3_chunk_fu_234_d_V">62, 15, 4, 60</column>
+<column name="grp_lut_div3_chunk_fu_234_r_in_V">15, 3, 2, 6</column>
+<column name="i_reg_211">9, 2, 14, 28</column>
+<column name="j_reg_223">9, 2, 14, 28</column>
+<column name="t_reg_200">9, 2, 7, 14</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="A_load_1_reg_806">64, 0, 64, 0</column>
+<column name="B_load_reg_1083">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">78, 0, 78, 0</column>
+<column name="call_ret10_i_i_i_reg_1040_0">4, 0, 4, 0</column>
+<column name="call_ret11_i_i_i_reg_1045_0">4, 0, 4, 0</column>
+<column name="call_ret12_i_i_i_reg_1050_0">4, 0, 4, 0</column>
+<column name="call_ret13_i_i_i_reg_1055_0">4, 0, 4, 0</column>
+<column name="call_ret2_i_i_i_reg_1000_0">4, 0, 4, 0</column>
+<column name="call_ret3_i_i_i_reg_1005_0">4, 0, 4, 0</column>
+<column name="call_ret4_i_i_i_reg_1010_0">4, 0, 4, 0</column>
+<column name="call_ret5_i_i_i_reg_1015_0">4, 0, 4, 0</column>
+<column name="call_ret6_i_i_i_reg_1020_0">4, 0, 4, 0</column>
+<column name="call_ret7_i_i_i_reg_1025_0">4, 0, 4, 0</column>
+<column name="call_ret8_i_i_i_reg_1030_0">4, 0, 4, 0</column>
+<column name="call_ret9_i_i_i_reg_1035_0">4, 0, 4, 0</column>
+<column name="d_chunk_V_10_reg_975">4, 0, 4, 0</column>
+<column name="d_chunk_V_11_reg_980">4, 0, 4, 0</column>
+<column name="d_chunk_V_12_reg_985">4, 0, 4, 0</column>
+<column name="d_chunk_V_13_reg_990">4, 0, 4, 0</column>
+<column name="d_chunk_V_1_reg_930">4, 0, 4, 0</column>
+<column name="d_chunk_V_2_reg_935">4, 0, 4, 0</column>
+<column name="d_chunk_V_3_reg_940">4, 0, 4, 0</column>
+<column name="d_chunk_V_4_reg_945">4, 0, 4, 0</column>
+<column name="d_chunk_V_5_reg_950">4, 0, 4, 0</column>
+<column name="d_chunk_V_6_reg_955">4, 0, 4, 0</column>
+<column name="d_chunk_V_7_reg_960">4, 0, 4, 0</column>
+<column name="d_chunk_V_8_reg_965">4, 0, 4, 0</column>
+<column name="d_chunk_V_9_reg_970">4, 0, 4, 0</column>
+<column name="d_chunk_V_reg_995">3, 0, 4, 1</column>
+<column name="grp_lut_div3_chunk_fu_234_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_811">14, 0, 14, 0</column>
+<column name="i_reg_211">14, 0, 14, 0</column>
+<column name="icmp_reg_862">1, 0, 1, 0</column>
+<column name="j_1_reg_1078">14, 0, 14, 0</column>
+<column name="j_reg_223">14, 0, 14, 0</column>
+<column name="new_exp_V_1_reg_827">11, 0, 11, 0</column>
+<column name="new_mant_V_1_reg_834">52, 0, 52, 0</column>
+<column name="p_Repl2_1_reg_889">11, 0, 11, 0</column>
+<column name="p_Repl2_2_reg_822">1, 0, 1, 0</column>
+<column name="p_Repl2_s_reg_1060">52, 0, 52, 0</column>
+<column name="p_Result_i_i_i_reg_925">3, 0, 3, 0</column>
+<column name="r_V_15_reg_909">52, 0, 52, 0</column>
+<column name="r_V_16_reg_914">55, 0, 55, 0</column>
+<column name="reg_261">64, 0, 64, 0</column>
+<column name="reg_267">64, 0, 64, 0</column>
+<column name="reg_272">2, 0, 2, 0</column>
+<column name="shift_V_1_reg_873">11, 0, 11, 0</column>
+<column name="shift_V_4_reg_878">11, 0, 11, 0</column>
+<column name="shift_V_i_cast_cast_reg_841">2, 0, 11, 9</column>
+<column name="shift_V_reg_868">11, 0, 11, 0</column>
+<column name="t_1_reg_778">7, 0, 7, 0</column>
+<column name="t_reg_200">7, 0, 7, 0</column>
+<column name="tmp_2_i_reg_884">1, 0, 1, 0</column>
+<column name="tmp_3_i_reg_848">1, 0, 1, 0</column>
+<column name="tmp_3_reg_796">14, 0, 64, 50</column>
+<column name="tmp_4_i_reg_856">1, 0, 1, 0</column>
+<column name="tmp_8_reg_1068">14, 0, 64, 50</column>
+<column name="tmp_reg_786">14, 0, 14, 0</column>
+<column name="xf_V_7_reg_919">55, 0, 55, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, kernel_jacobi_1d_imper_optimized, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, kernel_jacobi_1d_imper_optimized, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, kernel_jacobi_1d_imper_optimized, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, kernel_jacobi_1d_imper_optimized, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, kernel_jacobi_1d_imper_optimized, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, kernel_jacobi_1d_imper_optimized, return value</column>
+<column name="tsteps">in, 32, ap_none, tsteps, scalar</column>
+<column name="n">in, 32, ap_none, n, scalar</column>
+<column name="A_address0">out, 14, ap_memory, A, array</column>
+<column name="A_ce0">out, 1, ap_memory, A, array</column>
+<column name="A_q0">in, 64, ap_memory, A, array</column>
+<column name="A_address1">out, 14, ap_memory, A, array</column>
+<column name="A_ce1">out, 1, ap_memory, A, array</column>
+<column name="A_we1">out, 1, ap_memory, A, array</column>
+<column name="A_d1">out, 64, ap_memory, A, array</column>
+<column name="A_q1">in, 64, ap_memory, A, array</column>
+<column name="B_address0">out, 14, ap_memory, B, array</column>
+<column name="B_ce0">out, 1, ap_memory, B, array</column>
+<column name="B_we0">out, 1, ap_memory, B, array</column>
+<column name="B_d0">out, 64, ap_memory, B, array</column>
+<column name="B_q0">in, 64, ap_memory, B, array</column>
+</table>
+</item>
+</section>
+</profile>

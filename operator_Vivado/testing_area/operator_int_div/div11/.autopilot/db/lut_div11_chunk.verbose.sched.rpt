@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'lut_div11_chunk'
 ================================================================
-* Date:           Thu Aug  2 15:49:43 2018
+* Date:           Fri Aug 31 16:44:25 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        operator_int_div
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|     1.958|        1.25|
+    |ap_clk  |   2.50|     1.332|        0.31|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |    0|    0|    0|    0|   none  |
+    |    1|    1|    1|    1|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -53,7 +53,7 @@ IsCombinational: 0
 IsDatapathOnly: 0
 HasWiredReturn: 1
 HasMFsm: 0
-HasVarLatency: 0
+HasVarLatency: 1
 IsPipeline: 0
 IsRtlPipelined: 0
 IsInstanceOverlapped: 0
@@ -65,41 +65,63 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 1
+* Number of FSM states : 2
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 
+	2  / true
+2 --> 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 1.95>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%r_in_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %r_in_V)"   --->   Operation 2 'read' 'r_in_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%d_V_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %d_V)"   --->   Operation 3 'read' 'd_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_Result_8 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %r_in_V_read, i2 %d_V_read)" [test.cpp:5149->test.cpp:6358]   --->   Operation 4 'bitconcatenate' 'p_Result_8' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (1.95ns)   --->   "%agg_result_V_i = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i1 true, i1 false, i6 %p_Result_8)" [test.cpp:5149->test.cpp:6358]   --->   Operation 5 'mux' 'agg_result_V_i' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 6 [1/1] (1.95ns)   --->   "%agg_result_V_i2 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i6 %p_Result_8)" [test.cpp:5149->test.cpp:6358]   --->   Operation 6 'mux' 'agg_result_V_i2' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 7 [1/1] (1.95ns)   --->   "%agg_result_V_i4 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 false, i6 %p_Result_8)" [test.cpp:5149->test.cpp:6358]   --->   Operation 7 'mux' 'agg_result_V_i4' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 8 [1/1] (1.95ns)   --->   "%agg_result_V_i6 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i6 %p_Result_8)" [test.cpp:5149->test.cpp:6358]   --->   Operation 8 'mux' 'agg_result_V_i6' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_Result_s = call i4 @_ssdm_op_BitConcatenate.i4.i1.i1.i1.i1(i1 %agg_result_V_i6, i1 %agg_result_V_i4, i1 %agg_result_V_i2, i1 %agg_result_V_i)" [test.cpp:6361]   --->   Operation 9 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (1.95ns)   --->   "%agg_result_V_i8 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i6 %p_Result_8)" [test.cpp:5149->test.cpp:6358]   --->   Operation 10 'mux' 'agg_result_V_i8' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 11 [1/1] (1.95ns)   --->   "%agg_result_V_i1 = call i1 @_ssdm_op_Mux.ap_auto.64i1.i6(i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 true, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i1 false, i6 %p_Result_8)" [test.cpp:5149->test.cpp:6358]   --->   Operation 11 'mux' 'agg_result_V_i1' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_Result_1 = call i2 @_ssdm_op_BitConcatenate.i2.i1.i1(i1 %agg_result_V_i1, i1 %agg_result_V_i8)" [test.cpp:6363]   --->   Operation 12 'bitconcatenate' 'p_Result_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i2, i4 } undef, i2 %p_Result_1, 0" [test.cpp:6364]   --->   Operation 13 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i2, i4 } %mrv, i4 %p_Result_s, 1" [test.cpp:6364]   --->   Operation 14 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "ret { i2, i4 } %mrv_1" [test.cpp:6364]   --->   Operation 15 'ret' <Predicate = true> <Delay = 0.00>
+State 1 <SV = 0> <Delay = 1.33>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%r_in_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %r_in_V)"   --->   Operation 3 'read' 'r_in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%d_V_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %d_V)"   --->   Operation 4 'read' 'd_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_Result_3 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %r_in_V_read, i2 %d_V_read)" [test.cpp:419]   --->   Operation 5 'bitconcatenate' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp = zext i6 %p_Result_3 to i64" [test.cpp:420]   --->   Operation 6 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%r0_addr = getelementptr [64 x i1]* @r0, i64 0, i64 %tmp" [test.cpp:420]   --->   Operation 7 'getelementptr' 'r0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (1.33ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [test.cpp:420]   --->   Operation 8 'load' 'r0_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%r1_addr = getelementptr [64 x i1]* @r1, i64 0, i64 %tmp" [test.cpp:421]   --->   Operation 9 'getelementptr' 'r1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (1.33ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [test.cpp:421]   --->   Operation 10 'load' 'r1_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%r2_addr = getelementptr [64 x i1]* @r2, i64 0, i64 %tmp" [test.cpp:422]   --->   Operation 11 'getelementptr' 'r2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (1.33ns)   --->   "%r2_load = load i1* %r2_addr, align 1" [test.cpp:422]   --->   Operation 12 'load' 'r2_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%r3_addr = getelementptr [64 x i1]* @r3, i64 0, i64 %tmp" [test.cpp:423]   --->   Operation 13 'getelementptr' 'r3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (1.33ns)   --->   "%r3_load = load i1* %r3_addr, align 1" [test.cpp:423]   --->   Operation 14 'load' 'r3_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%q0_addr = getelementptr [64 x i1]* @q0, i64 0, i64 %tmp" [test.cpp:424]   --->   Operation 15 'getelementptr' 'q0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (1.33ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [test.cpp:424]   --->   Operation 16 'load' 'q0_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%q1_addr = getelementptr [64 x i1]* @q1, i64 0, i64 %tmp" [test.cpp:425]   --->   Operation 17 'getelementptr' 'q1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (1.33ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [test.cpp:425]   --->   Operation 18 'load' 'q1_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+
+State 2 <SV = 1> <Delay = 1.33>
+ST_2 : Operation 19 [1/2] (1.33ns)   --->   "%r0_load = load i1* %r0_addr, align 1" [test.cpp:420]   --->   Operation 19 'load' 'r0_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 20 [1/2] (1.33ns)   --->   "%r1_load = load i1* %r1_addr, align 1" [test.cpp:421]   --->   Operation 20 'load' 'r1_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 21 [1/2] (1.33ns)   --->   "%r2_load = load i1* %r2_addr, align 1" [test.cpp:422]   --->   Operation 21 'load' 'r2_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 22 [1/2] (1.33ns)   --->   "%r3_load = load i1* %r3_addr, align 1" [test.cpp:423]   --->   Operation 22 'load' 'r3_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%p_Result_s = call i4 @_ssdm_op_BitConcatenate.i4.i1.i1.i1.i1(i1 %r3_load, i1 %r2_load, i1 %r1_load, i1 %r0_load)" [test.cpp:423]   --->   Operation 23 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/2] (1.33ns)   --->   "%q0_load = load i1* %q0_addr, align 1" [test.cpp:424]   --->   Operation 24 'load' 'q0_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 25 [1/2] (1.33ns)   --->   "%q1_load = load i1* %q1_addr, align 1" [test.cpp:425]   --->   Operation 25 'load' 'q1_load' <Predicate = true> <Delay = 1.33> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 64> <ROM>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%p_Result_1 = call i2 @_ssdm_op_BitConcatenate.i2.i1.i1(i1 %q1_load, i1 %q0_load)" [test.cpp:425]   --->   Operation 26 'bitconcatenate' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i2, i4 } undef, i2 %p_Result_1, 0" [test.cpp:426]   --->   Operation 27 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i2, i4 } %mrv, i4 %p_Result_s, 1" [test.cpp:426]   --->   Operation 28 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "ret { i2, i4 } %mrv_1" [test.cpp:426]   --->   Operation 29 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 10ns, clock uncertainty: 1.25ns.
+Target clock period: 2.5ns, clock uncertainty: 0.312ns.
 
- <State 1>: 1.96ns
+ <State 1>: 1.33ns
 The critical path consists of the following:
-	wire read on port 'r_in_V' [3]  (0 ns)
-	'mux' operation ('agg_result_V_i', test.cpp:5149->test.cpp:6358) [6]  (1.96 ns)
+	wire read on port 'r_in_V' [9]  (0 ns)
+	'getelementptr' operation ('q1_addr', test.cpp:425) [24]  (0 ns)
+	'load' operation ('q1_load', test.cpp:425) on array 'q1' [25]  (1.33 ns)
+
+ <State 2>: 1.33ns
+The critical path consists of the following:
+	'load' operation ('r0_load', test.cpp:420) on array 'r0' [14]  (1.33 ns)
 
 
 ============================================================
@@ -111,6 +133,7 @@ N/A
  - Input state : 
   - Chain level:
 	State 1
+	State 2
 
 
 ============================================================

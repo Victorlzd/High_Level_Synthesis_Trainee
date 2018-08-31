@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Aug  3 16:55:54 2018
-# Process ID: 29591
+# Start of session at: Fri Aug 31 12:06:51 2018
+# Process ID: 32742
 # Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.runs/synth_1
 # Command line: vivado -log div5.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source div5.tcl
 # Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.runs/synth_1/div5.vds
@@ -15,28 +15,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 29595 
+INFO: Helper process launched with PID 32749 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.305 ; gain = 82.895 ; free physical = 1703 ; free virtual = 8926
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1292.809 ; gain = 82.895 ; free physical = 1634 ; free virtual = 9685
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'div5' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:25]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:38]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:41]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:44]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:66]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:69]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:72]
 	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter NUM_STAGE bound to: 30 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'div5_fdiv_32ns_32bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5_fdiv_32ns_32bkb.vhd:11' bound to instance 'div5_fdiv_32ns_32bkb_U1' of component 'div5_fdiv_32ns_32bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:67]
+INFO: [Synth 8-3491] module 'div5_fdiv_32ns_32bkb' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5_fdiv_32ns_32bkb.vhd:11' bound to instance 'div5_fdiv_32ns_32bkb_U1' of component 'div5_fdiv_32ns_32bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:95]
 INFO: [Synth 8-638] synthesizing module 'div5_fdiv_32ns_32bkb' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5_fdiv_32ns_32bkb.vhd:29]
 	Parameter ID bound to: 1 - type: integer 
-	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter NUM_STAGE bound to: 30 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'div5_ap_fdiv_0_no_dsp_32' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_0_no_dsp_32/synth/div5_ap_fdiv_0_no_dsp_32.vhd:59' bound to instance 'div5_ap_fdiv_0_no_dsp_32_u' of component 'div5_ap_fdiv_0_no_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5_fdiv_32ns_32bkb.vhd:55]
-INFO: [Synth 8-638] synthesizing module 'div5_ap_fdiv_0_no_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_0_no_dsp_32/synth/div5_ap_fdiv_0_no_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'div5_ap_fdiv_28_no_dsp_32' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_28_no_dsp_32/synth/div5_ap_fdiv_28_no_dsp_32.vhd:59' bound to instance 'div5_ap_fdiv_28_no_dsp_32_u' of component 'div5_ap_fdiv_28_no_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5_fdiv_32ns_32bkb.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'div5_ap_fdiv_28_no_dsp_32' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_28_no_dsp_32/synth/div5_ap_fdiv_28_no_dsp_32.vhd:72]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_HAS_ADD bound to: 0 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -65,7 +65,7 @@ INFO: [Synth 8-638] synthesizing module 'div5_ap_fdiv_0_no_dsp_32' [/home/duazel
 	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
 	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
-	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 28 - type: integer 
 	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
 	Parameter C_MULT_USAGE bound to: 0 - type: integer 
 	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
@@ -79,7 +79,7 @@ INFO: [Synth 8-638] synthesizing module 'div5_ap_fdiv_0_no_dsp_32' [/home/duazel
 	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
 	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
 	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
-	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
 	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
 	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
 	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
@@ -107,113 +107,113 @@ INFO: [Synth 8-638] synthesizing module 'div5_ap_fdiv_0_no_dsp_32' [/home/duazel
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_0_no_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_0_no_dsp_32/synth/div5_ap_fdiv_0_no_dsp_32.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'div5_ap_fdiv_0_no_dsp_32' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_0_no_dsp_32/synth/div5_ap_fdiv_0_no_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_28_no_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_28_no_dsp_32/synth/div5_ap_fdiv_28_no_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'div5_ap_fdiv_28_no_dsp_32' (14#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.srcs/sources_1/ip/div5_ap_fdiv_28_no_dsp_32/synth/div5_ap_fdiv_28_no_dsp_32.vhd:72]
 INFO: [Synth 8-256] done synthesizing module 'div5_fdiv_32ns_32bkb' (15#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5_fdiv_32ns_32bkb.vhd:29]
 INFO: [Synth 8-256] done synthesizing module 'div5' (16#1) [/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/div5.vhd:25]
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SINIT
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
 WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SINIT
 WARNING: [Synth 8-3331] design carry_chain__parameterized3 has unconnected port B[7]
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SINIT
-WARNING: [Synth 8-3331] design flt_round_bit has unconnected port NORMALIZE[1]
-WARNING: [Synth 8-3331] design flt_round_bit has unconnected port FIXED_POINT
-WARNING: [Synth 8-3331] design flt_round_bit has unconnected port FIX_MANT_SIGN
-WARNING: [Synth 8-3331] design flt_round_bit has unconnected port SIGN
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SINIT
-WARNING: [Synth 8-3331] design special_detect has unconnected port A[31]
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SINIT
-WARNING: [Synth 8-3331] design flt_div_exp has unconnected port ROUND_EXP_INC
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CLK
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CE
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SCLR
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SSET
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SINIT
-WARNING: [Synth 8-3331] design carry_chain has unconnected port B[24]
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized1 has unconnected port SINIT
-WARNING: [Synth 8-3331] design flt_div_mant has unconnected port D_MANT[23]
-WARNING: [Synth 8-3331] design flt_div_mant has unconnected port ND
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized57 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized57 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized57 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_bit has unconnected port NORMALIZE[1]
+WARNING: [Synth 8-3331] design flt_round_bit has unconnected port FIXED_POINT
+WARNING: [Synth 8-3331] design flt_round_bit has unconnected port FIX_MANT_SIGN
+WARNING: [Synth 8-3331] design flt_round_bit has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SINIT
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SCLR
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SSET
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SINIT
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv has unconnected port CLK
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv has unconnected port CE
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv has unconnected port SCLR
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv has unconnected port SSET
-WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv has unconnected port SINIT
-WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv has unconnected port m_axis_result_tuser[0]
-WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv has unconnected port m_axis_result_tlast
-WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv has unconnected port aclken
-WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv has unconnected port aresetn
-WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv has unconnected port s_axis_a_tuser[0]
-WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv has unconnected port s_axis_a_tlast
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized27 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized21 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design special_detect has unconnected port A[31]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SSET
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1381.930 ; gain = 172.520 ; free physical = 1744 ; free virtual = 8949
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1384.434 ; gain = 174.520 ; free physical = 1635 ; free virtual = 9686
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -226,12 +226,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1381.930 ; gain = 172.520 ; free physical = 1745 ; free virtual = 8949
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1384.434 ; gain = 174.520 ; free physical = 1637 ; free virtual = 9689
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1381.930 ; gain = 172.520 ; free physical = 1745 ; free virtual = 8949
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1384.434 ; gain = 174.520 ; free physical = 1637 ; free virtual = 9689
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 1340 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1342 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7k160tfbg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -245,25 +245,26 @@ Finished Parsing XDC File [/home/duazel/Documents/stage3IF/High_Level_Synthesis_
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1 instances were transformed.
+  FDE => FDRE: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1692.438 ; gain = 0.000 ; free physical = 1489 ; free virtual = 8697
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1700.934 ; gain = 0.000 ; free physical = 1352 ; free virtual = 9404
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:42 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1567 ; free virtual = 8770
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1442 ; free virtual = 9494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:42 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1567 ; free virtual = 8770
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1442 ; free virtual = 9494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:43 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1568 ; free virtual = 8772
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1444 ; free virtual = 9496
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
@@ -277,65 +278,12 @@ INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:43 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1549 ; free virtual = 8761
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1433 ; free virtual = 9486
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[2].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[3].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[4].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[5].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[6].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[7].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[8].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[21].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[22].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[23].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[24].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].ND_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[25].ND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[2].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[3].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[4].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[5].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[6].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[7].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[8].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[20].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[21].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[22].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[23].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[24].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[0].MANT_DEL' (delay) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[25].MANT_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/IP_SIGN_DELAY' (delay__parameterized4) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/SIGN_UP_DELAY'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized2) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_DEL' (delay__parameterized13) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_RND1_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized9) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
-INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized9) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_0_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized22) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized22) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized22) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_DEL' (delay__parameterized26) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/NORMALIZE_RND1_DEL'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -440,8 +388,85 @@ WARNING: [Synth 8-3332] Sequential element (div5_fdiv_32ns_32bkb_U1/dout_r_reg[2
 WARNING: [Synth 8-3332] Sequential element (div5_fdiv_32ns_32bkb_U1/dout_r_reg[1]) is unused and will be removed from module div5.
 WARNING: [Synth 8-3332] Sequential element (div5_fdiv_32ns_32bkb_U1/dout_r_reg[0]) is unused and will be removed from module div5.
 WARNING: [Synth 8-3332] Sequential element (div5_fdiv_32ns_32bkb_U1/din1_buf1_reg[31]) is unused and will be removed from module div5.
+INFO: [Synth 8-3886] merging instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/MSB_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/NORMALIZE_UP_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[2].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u /U0/i_synth/\DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u /U0/i_synth/\DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u /U0/i_synth/\DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\div5_fdiv_32ns_32bkb_U1/div5_ap_fdiv_28_no_dsp_32_u /U0/i_synth/\DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[10].pipe_reg[10][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[11].pipe_reg[11][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[13].pipe_reg[13][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[14].pipe_reg[14][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[15].pipe_reg[15][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[16].pipe_reg[16][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[17].pipe_reg[17][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[18].pipe_reg[18][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[19].pipe_reg[19][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[20].pipe_reg[20][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[21].pipe_reg[21][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[22].pipe_reg[22][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[23].pipe_reg[23][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[24].pipe_reg[24][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/SIGN_RND_DEL/i_pipe/opt_has_pipe.i_pipe[25].pipe_reg[25][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[10].pipe_reg[10][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[11].pipe_reg[11][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[13].pipe_reg[13][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[14].pipe_reg[14][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[15].pipe_reg[15][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[16].pipe_reg[16][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[17].pipe_reg[17][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[18].pipe_reg[18][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[19].pipe_reg[19][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[20].pipe_reg[20][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[21].pipe_reg[21][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[22].pipe_reg[22][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[23].pipe_reg[23][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[24].pipe_reg[24][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[25].pipe_reg[25][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[26].pipe_reg[26][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[10].pipe_reg[10][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[11].pipe_reg[11][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[13].pipe_reg[13][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[14].pipe_reg[14][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[15].pipe_reg[15][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[16].pipe_reg[16][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[17].pipe_reg[17][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/DIV_BY_ZERO_DEL/i_pipe/opt_has_pipe.i_pipe[18].pipe_reg[18][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1540 ; free virtual = 8747
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:41 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1420 ; free virtual = 9476
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -453,13 +478,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1415 ; free virtual = 8617
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:49 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1299 ; free virtual = 9355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1414 ; free virtual = 8616
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:49 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1294 ; free virtual = 9349
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -471,7 +496,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1413 ; free virtual = 8615
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:50 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1292 ; free virtual = 9348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -495,7 +520,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1413 ; free virtual = 8615
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1295 ; free virtual = 9350
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -508,7 +533,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1413 ; free virtual = 8615
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1294 ; free virtual = 9350
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -520,25 +545,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1412 ; free virtual = 8614
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1294 ; free virtual = 9349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1412 ; free virtual = 8614
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1294 ; free virtual = 9349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1412 ; free virtual = 8614
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1294 ; free virtual = 9349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1412 ; free virtual = 8614
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1294 ; free virtual = 9349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -551,41 +576,46 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |CARRY4 |     3|
-|2     |LUT1   |     8|
-|3     |LUT2   |   112|
-|4     |LUT3   |   601|
-|5     |LUT4   |    29|
-|6     |LUT5   |     5|
-|7     |LUT6   |    12|
-|8     |MUXCY  |   658|
-|9     |XORCY  |   657|
-|10    |FDRE   |    34|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     3|
+|2     |LUT1    |     2|
+|3     |LUT2    |   149|
+|4     |LUT3    |   580|
+|5     |LUT4    |    11|
+|6     |LUT5    |    16|
+|7     |LUT6    |    19|
+|8     |MUXCY   |   658|
+|9     |SRL16E  |    15|
+|10    |SRLC32E |    22|
+|11    |XORCY   |   683|
+|12    |FDE     |     1|
+|13    |FDRE    |  1446|
+|14    |FDSE    |     1|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.438 ; gain = 483.027 ; free physical = 1413 ; free virtual = 8615
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.934 ; gain = 491.020 ; free physical = 1294 ; free virtual = 9349
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 106 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 1692.438 ; gain = 172.520 ; free physical = 1465 ; free virtual = 8667
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1692.445 ; gain = 483.027 ; free physical = 1465 ; free virtual = 8667
+Synthesis finished with 0 errors, 0 critical warnings and 94 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1700.934 ; gain = 174.520 ; free physical = 1347 ; free virtual = 9403
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1700.941 ; gain = 491.020 ; free physical = 1347 ; free virtual = 9403
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1318 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1345 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 191 instances were transformed.
+  A total of 192 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 191 instances
+  FDE => FDRE: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-133 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
+157 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:56 . Memory (MB): peak = 1692.445 ; gain = 494.594 ; free physical = 1461 ; free virtual = 8684
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:53 . Memory (MB): peak = 1700.941 ; gain = 502.586 ; free physical = 1342 ; free virtual = 9397
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/operator_Vivado/testing_area/vivado_hls_float_div/div5/impl/vhdl/project.runs/synth_1/div5.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file div5_utilization_synth.rpt -pb div5_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1716.449 ; gain = 0.000 ; free physical = 1459 ; free virtual = 8684
-INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 16:56:59 2018...
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1700.941 ; gain = 0.000 ; free physical = 1341 ; free virtual = 9398
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 12:07:52 2018...

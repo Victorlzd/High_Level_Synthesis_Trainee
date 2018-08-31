@@ -1,6 +1,6 @@
 
 set TopModule "kernel_jacobi_2d_imper"
-set ClockPeriod "10.000000"
+set ClockPeriod "2.500000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}

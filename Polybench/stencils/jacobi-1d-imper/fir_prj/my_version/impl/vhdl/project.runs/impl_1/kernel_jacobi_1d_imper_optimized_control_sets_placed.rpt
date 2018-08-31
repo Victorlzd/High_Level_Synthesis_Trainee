@@ -1,0 +1,110 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Aug 31 20:50:11 2018
+| Host         : duazel-portable running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file kernel_jacobi_1d_imper_optimized_control_sets_placed.rpt
+| Design       : kernel_jacobi_1d_imper_optimized
+| Device       : xc7k160t
+-------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    43 |
+| Unused register locations in slices containing registers |    42 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |           15 |
+|     12 |            1 |
+|     14 |            2 |
+|    16+ |           25 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            2056 |          227 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            1420 |          192 |
+| Yes          | No                    | No                     |            1524 |          223 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              70 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                        Enable Signal                       |                                                                                                            Set/Reset Signal                                                                                                            | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[23]                            |                                                                                                                                                                                                                                        |                2 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[21]                            |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[51] |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[19]                            |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[17]                            |                                                                                                                                                                                                                                        |                2 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[15]                            |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[13]                            |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/LZE/ENCODE[0].MUX_Z/OP_DEL/i_pipe/opt_has_pipe.first_q_reg[52]                                      |                1 |              8 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/LZE/ENCODE[0].MUX_Z/OP_DEL/i_pipe/first_q[1]                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[25]                            |                                                                                                                                                                                                                                        |                2 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[11]                            |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[3]                             |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[5]                             |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[9]                             |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[7]                             |                                                                                                                                                                                                                                        |                1 |              8 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/q3_U/lut_div3_chunk_q3_rom_U/ce0 |                                                                                                                                                                                                                                        |                4 |             12 |
+|  ap_clk      | ap_CS_fsm_state2                                           |                                                                                                                                                                                                                                        |                1 |             14 |
+|  ap_clk      | ap_NS_fsm1                                                 | t_reg_200                                                                                                                                                                                                                              |                2 |             14 |
+|  ap_clk      | tmp_reg_7860                                               |                                                                                                                                                                                                                                        |                4 |             28 |
+|  ap_clk      | A_we1                                                      | ap_NS_fsm115_out                                                                                                                                                                                                                       |                2 |             28 |
+|  ap_clk      | B_we0                                                      | i_reg_2110                                                                                                                                                                                                                             |                5 |             28 |
+|  ap_clk      | ap_CS_fsm_state17                                          |                                                                                                                                                                                                                                        |                5 |             28 |
+|  ap_clk      | ap_CS_fsm_state4                                           |                                                                                                                                                                                                                                        |                6 |             28 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/LZE/ZERO_DET_CC_1/norm_dist_skew[1]                                                                 |                5 |             32 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/LZE/ZERO_DET_CC_1/opt_has_pipe.first_q_reg[40]                                                      |                3 |             32 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ABS_DELAY/i_pipe/first_q[5]                                                                    |                3 |             32 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/ABS_DELAY/i_pipe/opt_has_pipe.first_q_reg[54]                                                  |                3 |             32 |
+|  ap_clk      | ap_CS_fsm_state36                                          |                                                                                                                                                                                                                                        |                8 |             46 |
+|  ap_clk      | j_1_reg_10780                                              |                                                                                                                                                                                                                                        |                7 |             56 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/op_state[5]                                                            |               13 |            102 |
+|  ap_clk      | grp_lut_div3_chunk_fu_234/D[27]                            |                                                                                                                                                                                                                                        |               11 |            104 |
+|  ap_clk      |                                                            | kernel_jacobi_1d_bkb_U9/kernel_jacobi_1d_imper_optimized_ap_dadd_12_no_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/COND_DET_A/EXP_DET_LUT.EXP_ALL_ZERO_DEL/i_pipe/opt_has_pipe.first_q_reg[24]                          |               16 |            104 |
+|  ap_clk      | ap_CS_fsm_state44                                          |                                                                                                                                                                                                                                        |               13 |            104 |
+|  ap_clk      | r_V_15_reg_9090                                            |                                                                                                                                                                                                                                        |               14 |            104 |
+|  ap_clk      | ap_CS_fsm_state45                                          |                                                                                                                                                                                                                                        |               15 |            110 |
+|  ap_clk      | r_V_16_reg_9140                                            |                                                                                                                                                                                                                                        |               16 |            110 |
+|  ap_clk      | ap_CS_fsm_state77                                          |                                                                                                                                                                                                                                        |               12 |            128 |
+|  ap_clk      | ap_CS_fsm_state6                                           |                                                                                                                                                                                                                                        |               24 |            128 |
+|  ap_clk      | reg_2610                                                   |                                                                                                                                                                                                                                        |               19 |            128 |
+|  ap_clk      | reg_2670                                                   |                                                                                                                                                                                                                                        |               18 |            128 |
+|  ap_clk      | ap_CS_fsm_state35                                          |                                                                                                                                                                                                                                        |               31 |            172 |
+|  ap_clk      |                                                            | ap_rst                                                                                                                                                                                                                                 |              146 |           1062 |
+|  ap_clk      |                                                            |                                                                                                                                                                                                                                        |              238 |           2158 |
++--------------+------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

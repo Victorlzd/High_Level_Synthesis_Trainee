@@ -11,7 +11,7 @@
 module div2_fmul_32ns_32bkb
 #(parameter
     ID         = 1,
-    NUM_STAGE  = 2,
+    NUM_STAGE  = 8,
     din0_WIDTH = 32,
     din1_WIDTH = 32,
     dout_WIDTH = 32
@@ -24,6 +24,8 @@ module div2_fmul_32ns_32bkb
     output wire [dout_WIDTH-1:0] dout
 );
 //------------------------Local signal-------------------
+wire                  aclk;
+wire                  aclken;
 wire                  a_tvalid;
 wire [31:0]           a_tdata;
 wire                  b_tvalid;
@@ -36,7 +38,9 @@ reg                   ce_r;
 wire [dout_WIDTH-1:0] dout_i;
 reg  [dout_WIDTH-1:0] dout_r;
 //------------------------Instantiation------------------
-div2_ap_fmul_0_max_dsp_32 div2_ap_fmul_0_max_dsp_32_u (
+div2_ap_fmul_6_max_dsp_32 div2_ap_fmul_6_max_dsp_32_u (
+    .aclk                 ( aclk ),
+    .aclken               ( aclken ),
     .s_axis_a_tvalid      ( a_tvalid ),
     .s_axis_a_tdata       ( a_tdata ),
     .s_axis_b_tvalid      ( b_tvalid ),
@@ -45,6 +49,8 @@ div2_ap_fmul_0_max_dsp_32 div2_ap_fmul_0_max_dsp_32_u (
     .m_axis_result_tdata  ( r_tdata )
 );
 //------------------------Body---------------------------
+assign aclk     = clk;
+assign aclken   = ce_r;
 assign a_tvalid = 1'b1;
 assign a_tdata  = din0_buf1;
 assign b_tvalid = 1'b1;

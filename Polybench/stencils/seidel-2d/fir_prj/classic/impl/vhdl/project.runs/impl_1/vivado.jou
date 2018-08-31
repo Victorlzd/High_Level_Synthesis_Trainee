@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Aug  8 16:38:19 2018
-# Process ID: 8341
+# Start of session at: Fri Aug 31 22:07:57 2018
+# Process ID: 2254
 # Current directory: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/classic/impl/vhdl/project.runs/impl_1
 # Command line: vivado -log kernel_seidel_2d.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source kernel_seidel_2d.tcl -notrace
 # Log file: /home/duazel/Documents/stage3IF/High_Level_Synthesis_Trainee/Polybench/stencils/seidel-2d/fir_prj/classic/impl/vhdl/project.runs/impl_1/kernel_seidel_2d.vdi

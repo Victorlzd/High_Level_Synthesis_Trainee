@@ -1,8 +1,8 @@
-operator_int_div1bkb
-operator_int_div1bkb
-operator_int_div1bkb
-operator_int_div1bkb
-operator_int_div1bkb
-operator_int_div1bkb
+lut_div11_chunk_r0
+lut_div11_chunk_r1
+lut_div11_chunk_r2
+lut_div11_chunk_r3
+lut_div11_chunk_q0
+lut_div11_chunk_q1
 lut_div11_chunk
 operator_int_div11

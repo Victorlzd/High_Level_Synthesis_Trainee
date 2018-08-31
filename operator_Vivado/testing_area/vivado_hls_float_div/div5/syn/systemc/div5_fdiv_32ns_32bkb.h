@@ -26,7 +26,7 @@ SC_MODULE(div5_fdiv_32ns_32bkb) {
 
 
 
-    ACMP_fdiv<ID, 2, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fdiv_U;
+    ACMP_fdiv<ID, 30, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fdiv_U;
 
     SC_CTOR(div5_fdiv_32ns_32bkb):  ACMP_fdiv_U ("ACMP_fdiv_U") {
         ACMP_fdiv_U.clk(clk);

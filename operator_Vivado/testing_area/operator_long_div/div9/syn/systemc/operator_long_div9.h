@@ -37,15 +37,15 @@ struct operator_long_div9 : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    int_64_div9* grp_int_64_div9_fu_28;
+    int_64_div9* grp_int_64_div9_fu_32;
     sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_logic > grp_int_64_div9_fu_28_ap_start;
-    sc_signal< sc_logic > grp_int_64_div9_fu_28_ap_done;
-    sc_signal< sc_logic > grp_int_64_div9_fu_28_ap_idle;
-    sc_signal< sc_logic > grp_int_64_div9_fu_28_ap_ready;
-    sc_signal< sc_lv<64> > grp_int_64_div9_fu_28_ap_return;
-    sc_signal< sc_logic > grp_int_64_div9_fu_28_ap_start_reg;
+    sc_signal< sc_logic > grp_int_64_div9_fu_32_ap_start;
+    sc_signal< sc_logic > grp_int_64_div9_fu_32_ap_done;
+    sc_signal< sc_logic > grp_int_64_div9_fu_32_ap_idle;
+    sc_signal< sc_logic > grp_int_64_div9_fu_32_ap_ready;
+    sc_signal< sc_lv<64> > grp_int_64_div9_fu_32_ap_return;
+    sc_signal< sc_logic > grp_int_64_div9_fu_32_ap_start_reg;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
@@ -63,7 +63,7 @@ struct operator_long_div9 : public sc_module {
     void thread_ap_idle();
     void thread_ap_ready();
     void thread_ap_return();
-    void thread_grp_int_64_div9_fu_28_ap_start();
+    void thread_grp_int_64_div9_fu_32_ap_start();
     void thread_ap_NS_fsm();
     void thread_hdltv_gen();
 };
